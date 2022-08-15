@@ -1,0 +1,33 @@
+{
+    "name": "rc-tracks-editor",
+    "version": "0.0.0",
+    "description": "An editor to build a RC track using the tiles from jsconan/rc-tracks/scale-64",
+    "license": "GPL-3.0",
+    "author": "Jean-Sébastien CONAN",
+    "homepage": "https://github.com/jsconan/rc-tracks-editor#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jsconan/rc-tracks-editor.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jsconan/rc-tracks-editor/issues"
+    },
+    "keywords": [
+        "rc",
+        "track",
+        "editor"
+    ],
+    "type": "module",
+    "scripts": {
+        "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore --ignore-path .eslintignore .",
+        "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+        "spell": "cspell lint '**/*.{js,md}'"
+    },
+    "devDependencies": {
+        "cspell": "^6.6.1",
+        "eslint": "^8.22.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-es": "^4.1.0",
+        "prettier": "^2.7.1"
+    }
+}
