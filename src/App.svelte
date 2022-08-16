@@ -4,12 +4,14 @@
 
     import config from './config.js';
     import StraightTile from './tiles/StraightTile.svelte';
+    import CurvedTile from './tiles/CurvedTile.svelte';
 
     const tiles = {
-        straight: StraightTile
+        straight: StraightTile,
+        curved: CurvedTile
     };
 
-    const tileset = ['straight', 'straight'];
+    const tileset = ['straight', 'straight', 'curved'];
 </script>
 
 <main>
