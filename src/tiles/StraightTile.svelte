@@ -19,13 +19,8 @@
     const halfBarrier = barrierWidth / 2;
     const colors = ['even', 'odd'];
 
-    const viewportWidth = width;
-    const viewportHeight = width;
-    const viewportX = 0;
-    const viewportY = 0;
-
-    const x = viewportX + tileX;
-    const y = viewportY + tileY + tilePadding;
+    const x = tileX;
+    const y = tileY + tilePadding;
 
     function* chunks() {
         const barrierLength = tileLength / barrierChunks;
@@ -47,14 +42,12 @@
     }
 </script>
 
-<svg viewBox="{viewportX} {viewportY} {viewportWidth} {viewportHeight}" width={viewportWidth} height={viewportHeight}>
-    <g class="tile straight-tile">
-        <rect class="ground" {x} {y} {width} {height} />
-        {#each [...chunks()] as { color, x1, y1, x2, y2 }}
-            <line class="barrier {color}" {x1} {y1} {x2} {y2} stroke-width={barrierWidth} />
-        {/each}
-    </g>
-</svg>
+<g class="tile straight-tile">
+    <rect class="ground" {x} {y} {width} {height} />
+    {#each [...chunks()] as { color, x1, y1, x2, y2 }}
+        <line class="barrier {color}" {x1} {y1} {x2} {y2} stroke-width={barrierWidth} />
+    {/each}
+</g>
 
 <style>
     .ground {

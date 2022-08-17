@@ -19,7 +19,6 @@
     export let tileX = 0;
     export let tileY = 0;
 
-    const width = tileLength * tileRatio;
     const tilePadding = (tileLength - tileWidth) / 2;
     const halfBarrier = barrierWidth / 2;
     const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
@@ -28,13 +27,8 @@
     const startAngle = RIGHT_ANGLE - curveAngle;
     const colors = ['even', 'odd'];
 
-    const viewportWidth = width;
-    const viewportHeight = width;
-    const viewportX = 0;
-    const viewportY = 0;
-
-    const outerStartX = viewportX + tileX;
-    const outerStartY = viewportY + tileY + tilePadding;
+    const outerStartX = tileX;
+    const outerStartY = tileY + tilePadding;
     const bottomLine = outerStartY + outerRadius;
     const outerEndX = outerStartX + cos(startAngle) * outerRadius;
     const outerEndY = bottomLine - sin(startAngle) * outerRadius;
@@ -75,31 +69,21 @@
     }
 </script>
 
-<svg viewBox="{viewportX} {viewportY} {viewportWidth} {viewportHeight}" width={viewportWidth} height={viewportHeight}>
-    <g class="tile curved-tile">
-        <path
-            class="ground"
-            d="M {outerStartX} {outerStartY}
+<g class="tile curved-tile">
+    <path
+        class="ground"
+        d="M {outerStartX} {outerStartY}
                A {outerRadius} {outerRadius} 0 0 1 {outerEndX} {outerEndY}
                L {innerStartX} {innerStartY}
                A {innerRadius} {innerRadius} 0 0 0 {innerEndX} {innerEndY}"
-        />
-        {#each [...outerChunks()] as { color, radius, x1, y1, x2, y2 }}
-            <path
-                class="barrier {color}"
-                stroke-width={barrierWidth}
-                d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}"
-            />
-        {/each}
-        {#each [...innerChunks()] as { color, radius, x1, y1, x2, y2 }}
-            <path
-                class="barrier {color}"
-                stroke-width={barrierWidth}
-                d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}"
-            />
-        {/each}
-    </g>
-</svg>
+    />
+    {#each [...outerChunks()] as { color, radius, x1, y1, x2, y2 }}
+        <path class="barrier {color}" stroke-width={barrierWidth} d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}" />
+    {/each}
+    {#each [...innerChunks()] as { color, radius, x1, y1, x2, y2 }}
+        <path class="barrier {color}" stroke-width={barrierWidth} d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}" />
+    {/each}
+</g>
 
 <style>
     .ground {

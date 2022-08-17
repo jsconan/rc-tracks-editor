@@ -12,22 +12,39 @@
     };
 
     const tileset = ['straight', 'curved'];
+
+    const barrierChunks = config.barrierChunks;
+    const barrierWidth = config.barrierWidth;
+    const tileLength = config.trackSectionLength;
+    const tileWidth = config.trackSectionWidth;
+    const tileRatio = 1;
 </script>
 
-<main>
-    {#each tileset as tile}
+<svg>
+    {#each tileset as tile, i}
         <svelte:component
             this={tiles[tile]}
-            barrierChunks={config.barrierChunks}
-            barrierWidth={config.barrierWidth}
-            tileLength={config.trackSectionLength}
-            tileWidth={config.trackSectionWidth}
-            tileRatio={1}
-            tileX={0}
+            {barrierChunks}
+            {barrierWidth}
+            {tileLength}
+            {tileWidth}
+            {tileRatio}
+            tileX={i * tileLength * tileRatio}
             tileY={0}
         />
     {/each}
-</main>
+</svg>
 
 <style>
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    :global(html, body, #app) {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
 </style>
