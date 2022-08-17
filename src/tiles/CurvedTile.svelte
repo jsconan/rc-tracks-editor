@@ -3,6 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import {
+        getCurveAngle,
         getCurveInnerBarrierChunks,
         getCurveInnerRadius,
         getCurveOuterBarrierChunks,
@@ -10,62 +11,66 @@
     } from '../helpers/track.js';
     import { RIGHT_ANGLE, cos, sin } from '../helpers/maths.js';
 
-    export let length;
-    export let width;
     export let barrierChunks;
     export let barrierWidth;
-    export let ratio = 1;
+    export let tileLength;
+    export let tileWidth;
+    export let tileRatio = 1;
+    export let tileX = 0;
+    export let tileY = 0;
 
-    const tileLength = length * ratio;
-    const tileWidth = width;
-    const tilePadding = (length - width) / 2;
+    const width = tileLength * tileRatio;
+    const tilePadding = (tileLength - tileWidth) / 2;
     const halfBarrier = barrierWidth / 2;
-    const innerRadius = getCurveInnerRadius(length, width, ratio);
-    const outerRadius = getCurveOuterRadius(length, width, ratio);
-    const curveAngle = RIGHT_ANGLE;
+    const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
+    const outerRadius = getCurveOuterRadius(tileLength, tileWidth, tileRatio);
+    const curveAngle = getCurveAngle(tileRatio);
+    const startAngle = RIGHT_ANGLE - curveAngle;
     const colors = ['even', 'odd'];
 
-    const viewportWidth = tileLength;
-    const viewportHeight = tileLength;
+    const viewportWidth = width;
+    const viewportHeight = width;
     const viewportX = 0;
     const viewportY = 0;
 
-    const x = 0;
-    const y = tilePadding;
-
-    const outerX = tileLength - tilePadding;
-    const outerY = tileLength - tilePadding;
-    const innerX = -innerRadius;
-    const innerY = -innerRadius;
+    const outerStartX = viewportX + tileX;
+    const outerStartY = viewportY + tileY + tilePadding;
+    const bottomLine = outerStartY + outerRadius;
+    const outerEndX = outerStartX + cos(startAngle) * outerRadius;
+    const outerEndY = bottomLine - sin(startAngle) * outerRadius;
+    const innerStartX = outerStartX + cos(startAngle) * innerRadius;
+    const innerStartY = bottomLine - sin(startAngle) * innerRadius;
+    const innerEndX = outerStartX;
+    const innerEndY = bottomLine - innerRadius;
 
     function chunkPosition(i, j, radius, angle) {
-        const a1 = 270 + angle * i;
+        const a1 = startAngle + angle * i;
         const a2 = a1 + angle;
-        const x1 = cos(a1) * radius;
-        const y1 = sin(a1) * radius + tileLength;
-        const x2 = cos(a2) * radius;
-        const y2 = sin(a2) * radius + tileLength;
+        const x1 = outerStartX + cos(a1) * radius;
+        const y1 = bottomLine - sin(a1) * radius;
+        const x2 = outerStartX + cos(a2) * radius;
+        const y2 = bottomLine - sin(a2) * radius;
         const color = colors[(i + j) % 2];
 
         return { color, radius, angle, x1, y1, x2, y2 };
     }
 
     function* innerChunks() {
-        const lineChunks = getCurveInnerBarrierChunks(barrierChunks, ratio);
+        const lineChunks = getCurveInnerBarrierChunks(barrierChunks, tileRatio);
         const radius = innerRadius + halfBarrier;
         const angle = curveAngle / lineChunks;
 
         for (let nextIndex = 0; nextIndex < lineChunks; nextIndex++) {
-            yield chunkPosition(nextIndex, 1, radius, angle);
+            yield chunkPosition(nextIndex, 0, radius, angle);
         }
     }
     function* outerChunks() {
-        const lineChunks = getCurveOuterBarrierChunks(barrierChunks, ratio);
+        const lineChunks = getCurveOuterBarrierChunks(barrierChunks, tileRatio);
         const radius = outerRadius - halfBarrier;
         const angle = curveAngle / lineChunks;
 
         for (let nextIndex = 0; nextIndex < lineChunks; nextIndex++) {
-            yield chunkPosition(nextIndex, 0, radius, angle);
+            yield chunkPosition(nextIndex, 1, radius, angle);
         }
     }
 </script>
@@ -74,18 +79,26 @@
     <g class="tile curved-tile">
         <path
             class="ground"
-            d="M {x} {y}
-               a {outerRadius} {outerRadius} 0 0 1 {outerX} {outerY}
-               h {-tileWidth}
-               a {innerRadius} {innerRadius} 0 0 0 {innerX} {innerY}"
+            d="M {outerStartX} {outerStartY}
+               A {outerRadius} {outerRadius} 0 0 1 {outerEndX} {outerEndY}
+               L {innerStartX} {innerStartY}
+               A {innerRadius} {innerRadius} 0 0 0 {innerEndX} {innerEndY}"
         />
+        {#each [...outerChunks()] as { color, radius, x1, y1, x2, y2 }}
+            <path
+                class="barrier {color}"
+                stroke-width={barrierWidth}
+                d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}"
+            />
+        {/each}
+        {#each [...innerChunks()] as { color, radius, x1, y1, x2, y2 }}
+            <path
+                class="barrier {color}"
+                stroke-width={barrierWidth}
+                d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}"
+            />
+        {/each}
     </g>
-    {#each [...outerChunks()] as { color, radius, x1, y1, x2, y2 }}
-        <path class="barrier {color}" stroke-width={barrierWidth} d="M {x1} {y1} A {radius} {radius} 0 0 1 {x2} {y2}" />
-    {/each}
-    {#each [...innerChunks()] as { color, radius, x1, y1, x2, y2 }}
-        <path class="barrier {color}" stroke-width={barrierWidth} d="M {x1} {y1} A {radius} {radius} 0 0 1 {x2} {y2}" />
-    {/each}
 </svg>
 
 <style>

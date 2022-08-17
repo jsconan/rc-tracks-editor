@@ -11,18 +11,20 @@
         curved: CurvedTile
     };
 
-    const tileset = ['straight', 'straight', 'curved'];
+    const tileset = ['straight', 'curved'];
 </script>
 
 <main>
     {#each tileset as tile}
         <svelte:component
             this={tiles[tile]}
-            length={config.trackSectionLength}
-            width={config.trackSectionWidth}
-            barrierWidth={config.barrierWidth}
             barrierChunks={config.barrierChunks}
-            ratio={1}
+            barrierWidth={config.barrierWidth}
+            tileLength={config.trackSectionLength}
+            tileWidth={config.trackSectionWidth}
+            tileRatio={1}
+            tileX={0}
+            tileY={0}
         />
     {/each}
 </main>

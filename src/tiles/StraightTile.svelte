@@ -4,30 +4,32 @@
 
     import { getStraightBarrierChunks } from '../helpers/track.js';
 
-    export let length;
-    export let width;
     export let barrierChunks;
     export let barrierWidth;
-    export let ratio = 1;
+    export let tileLength;
+    export let tileWidth;
+    export let tileRatio = 1;
+    export let tileX = 0;
+    export let tileY = 0;
 
-    const tileLength = length * ratio;
-    const tileWidth = width;
-    const tilePadding = (length - width) / 2;
+    const width = tileLength * tileRatio;
+    const height = tileWidth;
+    const tilePadding = (tileLength - tileWidth) / 2;
     const laneWidth = tileWidth - barrierWidth;
     const halfBarrier = barrierWidth / 2;
     const colors = ['even', 'odd'];
 
-    const viewportWidth = tileLength;
-    const viewportHeight = tileLength;
+    const viewportWidth = width;
+    const viewportHeight = width;
     const viewportX = 0;
     const viewportY = 0;
 
-    const x = 0;
-    const y = tilePadding;
+    const x = viewportX + tileX;
+    const y = viewportY + tileY + tilePadding;
 
     function* chunks() {
-        const barrierLength = length / barrierChunks;
-        const lineChunks = getStraightBarrierChunks(barrierChunks, ratio);
+        const barrierLength = tileLength / barrierChunks;
+        const lineChunks = getStraightBarrierChunks(barrierChunks, tileRatio);
         const allChunks = lineChunks * 2;
 
         for (let nextIndex = 0; nextIndex < allChunks; nextIndex++) {
@@ -47,7 +49,7 @@
 
 <svg viewBox="{viewportX} {viewportY} {viewportWidth} {viewportHeight}" width={viewportWidth} height={viewportHeight}>
     <g class="tile straight-tile">
-        <rect class="ground" {x} {y} width={tileLength} height={tileWidth} />
+        <rect class="ground" {x} {y} {width} {height} />
         {#each [...chunks()] as { color, x1, y1, x2, y2 }}
             <line class="barrier {color}" {x1} {y1} {x2} {y2} stroke-width={barrierWidth} />
         {/each}

@@ -121,7 +121,7 @@ export const getStraightBarrierChunks = (barrierChunks, ratio = 1) => barrierChu
  * @returns {number}
  */
 export const getCurveInnerBarrierChunks = (barrierChunks, ratio = 1) =>
-    ratio < 1 ? 1 : (barrierChunks / (ratio < 2 ? 2 : 1)) * ratio;
+    ratio < 1 ? 1 : barrierChunks / (ratio < 2 ? 2 : 1);
 
 /**
  * Computes the number of barrier chunks for an outer curved section given the ratio.
@@ -129,7 +129,7 @@ export const getCurveInnerBarrierChunks = (barrierChunks, ratio = 1) =>
  * @param {number} [ratio] - The size factor.
  * @returns {number}
  */
-export const getCurveOuterBarrierChunks = (barrierChunks, ratio = 1) => (barrierChunks / (ratio < 1 ? 2 : 1)) * ratio;
+export const getCurveOuterBarrierChunks = (barrierChunks, ratio = 1) => barrierChunks / (ratio < 1 ? 2 : 1);
 
 /**
  * Computes the number of barrier chunks for the straight sides of large curve track.
