@@ -5,46 +5,80 @@
     import config from './config.js';
     import StraightTile from './tiles/StraightTile.svelte';
     import CurvedTile from './tiles/CurvedTile.svelte';
+    import Tileset from './tiles/Tileset.svelte';
 
-    const tiles = {
-        straight: StraightTile,
-        curved: CurvedTile
-    };
-
-    const tileset = ['straight', 'curved'];
+    const tileset = [
+        {
+            tile: StraightTile,
+            ratio: 1,
+            angle: 0
+        },
+        {
+            tile: StraightTile,
+            ratio: 1,
+            angle: 90
+        },
+        {
+            tile: CurvedTile,
+            ratio: 1,
+            angle: 0
+        },
+        {
+            tile: CurvedTile,
+            ratio: 1,
+            angle: 90
+        },
+        {
+            tile: CurvedTile,
+            ratio: 1,
+            angle: 180
+        },
+        {
+            tile: CurvedTile,
+            ratio: 1,
+            angle: 270
+        },
+        {
+            tile: CurvedTile,
+            ratio: 2,
+            angle: 0
+        },
+        {
+            tile: CurvedTile,
+            ratio: 2,
+            angle: 45
+        }
+    ];
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
     const tileLength = config.trackSectionLength;
     const tileWidth = config.trackSectionWidth;
-    const tileRatio = 1;
+
+    function* tiles() {
+        let tileX = 0;
+        let tileY = 0;
+
+        for (const item of tileset) {
+            const { tile, ratio, angle } = item;
+            yield { tile, tileRatio: ratio, tileAngle: angle, tileX, tileY };
+            tileX += tileLength * ratio;
+        }
+    }
 </script>
 
-<svg>
-    {#each tileset as tile, i}
+<Tileset>
+    {#each [...tiles()] as { tile, tileRatio, tileAngle, tileX, tileY }}
         <svelte:component
-            this={tiles[tile]}
+            this={tile}
             {barrierChunks}
             {barrierWidth}
             {tileLength}
             {tileWidth}
             {tileRatio}
-            tileX={i * tileLength * tileRatio}
-            tileY={0}
+            {tileAngle}
+            {tileX}
+            {tileY}
         />
     {/each}
-</svg>
-
-<style>
-    svg {
-        width: 100%;
-        height: 100%;
-    }
-    :global(html, body, #app) {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-    }
-</style>
+</Tileset>
