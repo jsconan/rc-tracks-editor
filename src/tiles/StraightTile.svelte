@@ -9,6 +9,7 @@
     export let tileLength;
     export let tileWidth;
     export let tileRatio = 1;
+    export let tileAngle = 0;
     export let tileX = 0;
     export let tileY = 0;
 
@@ -21,6 +22,8 @@
 
     const x = tileX;
     const y = tileY + tilePadding;
+    const cx = x + width / 2;
+    const cy = y + height / 2;
 
     function* chunks() {
         const barrierLength = tileLength / barrierChunks;
@@ -42,7 +45,7 @@
     }
 </script>
 
-<g class="tile straight-tile">
+<g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})">
     <rect class="ground" {x} {y} {width} {height} />
     {#each [...chunks()] as { color, x1, y1, x2, y2 }}
         <line class="barrier {color}" {x1} {y1} {x2} {y2} stroke-width={barrierWidth} />
@@ -50,13 +53,4 @@
 </g>
 
 <style>
-    .ground {
-        fill: #444;
-    }
-    .even {
-        stroke: #eec;
-    }
-    .odd {
-        stroke: #c24;
-    }
 </style>

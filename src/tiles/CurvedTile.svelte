@@ -16,9 +16,12 @@
     export let tileLength;
     export let tileWidth;
     export let tileRatio = 1;
+    export let tileAngle = 0;
     export let tileX = 0;
     export let tileY = 0;
 
+    const width = tileLength * tileRatio;
+    const height = tileWidth;
     const tilePadding = (tileLength - tileWidth) / 2;
     const halfBarrier = barrierWidth / 2;
     const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
@@ -27,8 +30,13 @@
     const startAngle = RIGHT_ANGLE - curveAngle;
     const colors = ['even', 'odd'];
 
-    const outerStartX = tileX;
-    const outerStartY = tileY + tilePadding;
+    const x = tileX;
+    const y = tileY + tilePadding;
+    const cx = x + width / 2;
+    const cy = y + height / 2;
+
+    const outerStartX = x;
+    const outerStartY = y;
     const bottomLine = outerStartY + outerRadius;
     const outerEndX = outerStartX + cos(startAngle) * outerRadius;
     const outerEndY = bottomLine - sin(startAngle) * outerRadius;
@@ -69,13 +77,13 @@
     }
 </script>
 
-<g class="tile curved-tile">
+<g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
     <path
         class="ground"
         d="M {outerStartX} {outerStartY}
-               A {outerRadius} {outerRadius} 0 0 1 {outerEndX} {outerEndY}
-               L {innerStartX} {innerStartY}
-               A {innerRadius} {innerRadius} 0 0 0 {innerEndX} {innerEndY}"
+           A {outerRadius} {outerRadius} 0 0 1 {outerEndX} {outerEndY}
+           L {innerStartX} {innerStartY}
+           A {innerRadius} {innerRadius} 0 0 0 {innerEndX} {innerEndY}"
     />
     {#each [...outerChunks()] as { color, radius, x1, y1, x2, y2 }}
         <path class="barrier {color}" stroke-width={barrierWidth} d="M {x1} {y1} A {radius} {radius} 0 0 0 {x2} {y2}" />
@@ -86,16 +94,7 @@
 </g>
 
 <style>
-    .ground {
-        fill: #444;
-    }
     .barrier {
         fill: none;
-    }
-    .even {
-        stroke: #eec;
-    }
-    .odd {
-        stroke: #c24;
     }
 </style>
