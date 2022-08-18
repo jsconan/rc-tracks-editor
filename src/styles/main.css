@@ -1,0 +1,21 @@
+html,
+body,
+#app {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ground {
+    fill: #444;
+}
+
+.even {
+    stroke: #eec;
+}
+
+.odd {
+    stroke: #c24;
+}
