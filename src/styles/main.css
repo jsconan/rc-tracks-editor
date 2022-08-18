@@ -12,6 +12,10 @@ body,
     fill: #444;
 }
 
+.barrier-chunk {
+    fill: none;
+}
+
 .even {
     stroke: #eec;
 }
