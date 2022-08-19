@@ -5,6 +5,7 @@
     import config from './config.js';
     import StraightTile from './tiles/StraightTile.svelte';
     import CurvedTile from './tiles/CurvedTile.svelte';
+    import CurvedTileEnlarged from './tiles/CurvedTileEnlarged.svelte';
     import Tileset from './tiles/Tileset.svelte';
 
     const tileset = [
@@ -14,9 +15,9 @@
             angle: 0
         },
         {
-            tile: StraightTile,
+            tile: CurvedTileEnlarged,
             ratio: 1,
-            angle: 90
+            angle: 0
         },
         {
             tile: CurvedTile,
@@ -25,28 +26,18 @@
         },
         {
             tile: CurvedTile,
-            ratio: 1,
-            angle: 90
-        },
-        {
-            tile: CurvedTile,
-            ratio: 1,
-            angle: 180
-        },
-        {
-            tile: CurvedTile,
-            ratio: 1,
-            angle: 270
-        },
-        {
-            tile: CurvedTile,
             ratio: 2,
             angle: 0
         },
         {
             tile: CurvedTile,
-            ratio: 2,
-            angle: 45
+            ratio: 3,
+            angle: 0
+        },
+        {
+            tile: CurvedTile,
+            ratio: 4,
+            angle: 0
         }
     ];
 
@@ -62,7 +53,7 @@
         for (const item of tileset) {
             const { tile, ratio, angle } = item;
             yield { tile, tileRatio: ratio, tileAngle: angle, tileX, tileY };
-            tileX += tileLength * ratio;
+            tileX += tileLength;
         }
     }
 </script>
