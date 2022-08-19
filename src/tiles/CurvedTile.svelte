@@ -22,7 +22,6 @@
     export let tileY = 0;
 
     const tilePadding = (tileLength - tileWidth) / 2;
-    const laneWidth = tileWidth - barrierWidth;
     const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
     const outerRadius = getCurveOuterRadius(tileLength, tileWidth, tileRatio);
     const innerChunks = getCurveInnerBarrierChunks(barrierChunks, tileRatio);
@@ -34,13 +33,6 @@
     const cx = tileX + tileLength / 2;
     const cy = tileY + tileLength / 2;
 
-    const innerBarrierRadius = innerRadius;
-    const innerBarrierX = x;
-    const innerBarrierY = y;
-    const outerBarrierRadius = outerRadius - barrierWidth;
-    const outerBarrierX = x + laneWidth;
-    const outerBarrierY = y;
-
     const curveX = x - innerRadius;
     const curveY = y;
     const innerCurveStartX = x;
@@ -51,6 +43,13 @@
     const outerCurveStartY = curveY + sin(curveAngle) * outerRadius;
     const outerCurveEndX = x + tileWidth;
     const outerCurveEndY = y;
+
+    const innerBarrierRadius = innerRadius;
+    const innerBarrierX = innerCurveStartX;
+    const innerBarrierY = innerCurveStartY;
+    const outerBarrierRadius = outerRadius - barrierWidth;
+    const outerBarrierX = outerCurveEndX - barrierWidth;
+    const outerBarrierY = outerCurveEndY;
 </script>
 
 <g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
