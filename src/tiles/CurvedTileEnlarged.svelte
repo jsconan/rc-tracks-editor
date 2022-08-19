@@ -57,10 +57,10 @@
     const outerBarrierRadius = outerRadius - barrierWidth;
     const outerBarrierX = outerCurveEndX - barrierWidth;
     const outerBarrierY = outerCurveEndY;
-    const verticalBarrierX = rightSideEndX - barrierWidth;
-    const verticalBarrierY = rightSideEndY;
     const horizontalBarrierX = leftSideEndX;
     const horizontalBarrierY = leftSideEndY - barrierWidth;
+    const verticalBarrierX = rightSideEndX - barrierWidth;
+    const verticalBarrierY = rightSideEndY;
 </script>
 
 <g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
@@ -74,31 +74,22 @@
            L {rightSideEndX} {rightSideEndY}"
     />
     <CurvedBarrier
-        chunks={outerChunks}
-        width={barrierWidth}
-        radius={outerBarrierRadius}
-        angle={curveAngle}
-        x={outerBarrierX}
-        y={outerBarrierY}
-        shift={0}
-    />
-    <CurvedBarrier
         chunks={innerChunks}
         width={barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
         x={innerBarrierX}
         y={innerBarrierY}
-        shift={1}
-    />
-    <StraightBarrier
-        chunks={sideChunks}
-        width={barrierWidth}
-        length={barrierLength}
-        x={verticalBarrierX}
-        y={verticalBarrierY}
         shift={0}
-        vertical={true}
+    />
+    <CurvedBarrier
+        chunks={outerChunks}
+        width={barrierWidth}
+        radius={outerBarrierRadius}
+        angle={curveAngle}
+        x={outerBarrierX}
+        y={outerBarrierY}
+        shift={1}
     />
     <StraightBarrier
         chunks={sideChunks}
@@ -106,6 +97,16 @@
         length={barrierLength}
         x={horizontalBarrierX}
         y={horizontalBarrierY}
+        shift={0}
+        vertical={false}
+    />
+    <StraightBarrier
+        chunks={sideChunks}
+        width={barrierWidth}
+        length={barrierLength}
+        x={verticalBarrierX}
+        y={verticalBarrierY}
         shift={1}
+        vertical={true}
     />
 </g>

@@ -61,21 +61,21 @@
            A {outerRadius} {outerRadius} 0 0 0 {outerCurveEndX} {outerCurveEndY}"
     />
     <CurvedBarrier
-        chunks={outerChunks}
-        width={barrierWidth}
-        radius={outerBarrierRadius}
-        angle={curveAngle}
-        x={outerBarrierX}
-        y={outerBarrierY}
-        shift={0}
-    />
-    <CurvedBarrier
         chunks={innerChunks}
         width={barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
         x={innerBarrierX}
         y={innerBarrierY}
+        shift={0}
+    />
+    <CurvedBarrier
+        chunks={outerChunks}
+        width={barrierWidth}
+        radius={outerBarrierRadius}
+        angle={curveAngle}
+        x={outerBarrierX}
+        y={outerBarrierY}
         shift={1}
     />
 </g>

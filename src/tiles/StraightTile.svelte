@@ -14,23 +14,24 @@
     export let tileX = 0;
     export let tileY = 0;
 
-    const width = tileLength * tileRatio;
-    const height = tileWidth;
+    const width = tileWidth;
+    const height = tileLength * tileRatio;
     const barrierLength = tileLength / barrierChunks;
     const tilePadding = (tileLength - tileWidth) / 2;
     const laneWidth = tileWidth - barrierWidth;
     const sideChunks = getStraightBarrierChunks(barrierChunks, tileRatio);
 
-    const x = tileX;
-    const y = tileY + tilePadding;
-    const y1 = y;
-    const y2 = y + laneWidth;
+    const x = tileX + tilePadding;
+    const y = tileY;
+    const x1 = x;
+    const x2 = x + laneWidth;
     const cx = x + width / 2;
     const cy = y + height / 2;
+    const vertical = true;
 </script>
 
 <g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})">
     <rect class="ground" {x} {y} {width} {height} />
-    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} {x} y={y1} shift={0} />
-    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} {x} y={y2} shift={1} />
+    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} x={x1} {y} shift={0} {vertical} />
+    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} x={x2} {y} shift={1} {vertical} />
 </g>
