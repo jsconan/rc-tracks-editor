@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { getTrackSectionWidth, getTrackSectionLength, getBarrierLength } from './helpers/track.js';
+import { getTrackSectionWidth, getTrackSectionLength } from './helpers/track.js';
 
 /**
  * The dimensions and constraints of a track element
@@ -69,15 +69,6 @@ const config = {
     trackSectionWidth: 0,
 
     /**
-     * The length of a barrier chunk.
-     *
-     * DO NOT MODIFY! This value will be generated from the compute() method.
-     *
-     * @type {number}
-     */
-    barrierLength: 0,
-
-    /**
      * Generate values from the base configuration.
      * The generated values are: `trackSectionLength`, `trackSectionWidth`, `barrierLength`.
      * @returns {object} - Returns the configuration.
@@ -85,7 +76,6 @@ const config = {
     compute() {
         this.trackSectionLength = getTrackSectionLength(this.trackLaneWidth, this.barrierWidth);
         this.trackSectionWidth = getTrackSectionWidth(this.trackLaneWidth, this.barrierWidth);
-        this.barrierLength = getBarrierLength(this.trackLaneWidth, this.barrierWidth, this.barrierChunks);
         return this;
     }
 };

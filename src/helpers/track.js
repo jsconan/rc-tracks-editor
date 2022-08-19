@@ -44,16 +44,6 @@ export const getTrackSectionLength = (laneWidth, barrierWidth) =>
 export const getTrackLaneWidth = (width, barrierWidth) => width - barrierWidth * 2;
 
 /**
- * Computes the length of a barrier chunk.
- * @param {number} laneWidth - The width of a track lane.
- * @param {number} barrierWidth - The width of the barriers.
- * @param {number} barrierChunks - The {number} barriers per track section.
- * @returns {number}
- */
-export const getBarrierLength = (laneWidth, barrierWidth, barrierChunks) =>
-    getTrackSectionLength(laneWidth, barrierWidth) / barrierChunks;
-
-/**
  * Computes the angle of a curve with respect to the ratio.
  * @param {number} ratio - The ratio of the curve.
  * @returns {number}
