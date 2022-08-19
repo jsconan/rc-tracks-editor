@@ -21,54 +21,62 @@
     export let tileX = 0;
     export let tileY = 0;
 
-    const width = tileLength * tileRatio;
+    const tilePadding = (tileLength - tileWidth) / 2;
+    const laneWidth = tileWidth - barrierWidth;
     const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
     const outerRadius = getCurveOuterRadius(tileLength, tileWidth, tileRatio);
     const innerChunks = getCurveInnerBarrierChunks(barrierChunks, tileRatio);
     const outerChunks = getCurveOuterBarrierChunks(barrierChunks, tileRatio);
     const curveAngle = getCurveAngle(tileRatio);
 
-    const x = tileX;
+    const x = tileX + tilePadding;
     const y = tileY;
-    const cx = x + width / 2;
-    const cy = y + width / 2;
+    const cx = tileX + tileLength / 2;
+    const cy = tileY + tileLength / 2;
 
-    const innerStartX = x + innerRadius;
-    const innerStartY = y;
-    const innerEndX = x + cos(curveAngle) * innerRadius;
-    const innerEndY = y + sin(curveAngle) * innerRadius;
-    const outerStartX = x + cos(curveAngle) * outerRadius;
-    const outerStartY = y + sin(curveAngle) * outerRadius;
-    const outerEndX = x + outerRadius;
-    const outerEndY = y;
+    const innerBarrierRadius = innerRadius;
+    const innerBarrierX = x;
+    const innerBarrierY = y;
+    const outerBarrierRadius = outerRadius - barrierWidth;
+    const outerBarrierX = x + laneWidth;
+    const outerBarrierY = y;
+
+    const curveX = x - innerRadius;
+    const curveY = y;
+    const innerCurveStartX = x;
+    const innerCurveStartY = y;
+    const innerCurveEndX = curveX + cos(curveAngle) * innerRadius;
+    const innerCurveEndY = curveY + sin(curveAngle) * innerRadius;
+    const outerCurveStartX = curveX + cos(curveAngle) * outerRadius;
+    const outerCurveStartY = curveY + sin(curveAngle) * outerRadius;
+    const outerCurveEndX = x + tileWidth;
+    const outerCurveEndY = y;
 </script>
 
 <g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
     <path
         class="ground"
-        d="M {innerStartX} {innerStartY}
-           A {innerRadius} {innerRadius} 0 0 1 {innerEndX} {innerEndY}
-           L {outerStartX} {outerStartY}
-           A {outerRadius} {outerRadius} 0 0 0 {outerEndX} {outerEndY}"
+        d="M {innerCurveStartX} {innerCurveStartY}
+           A {innerRadius} {innerRadius} 0 0 1 {innerCurveEndX} {innerCurveEndY}
+           L {outerCurveStartX} {outerCurveStartY}
+           A {outerRadius} {outerRadius} 0 0 0 {outerCurveEndX} {outerCurveEndY}"
     />
     <CurvedBarrier
-        barrierChunks={outerChunks}
-        {barrierWidth}
-        curveRadius={outerRadius}
-        {curveAngle}
-        {x}
-        {y}
+        chunks={outerChunks}
+        width={barrierWidth}
+        radius={outerBarrierRadius}
+        angle={curveAngle}
+        x={outerBarrierX}
+        y={outerBarrierY}
         shift={0}
-        inner={false}
     />
     <CurvedBarrier
-        barrierChunks={innerChunks}
-        {barrierWidth}
-        curveRadius={innerRadius}
-        {curveAngle}
-        {x}
-        {y}
+        chunks={innerChunks}
+        width={barrierWidth}
+        radius={innerBarrierRadius}
+        angle={curveAngle}
+        x={innerBarrierX}
+        y={innerBarrierY}
         shift={1}
-        inner={true}
     />
 </g>
