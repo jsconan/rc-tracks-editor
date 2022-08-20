@@ -2,6 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { alternateBarrierColor } from '../helpers/colors';
     import StraightElement from './StraightElement.svelte';
 
     export let chunks;
@@ -12,11 +13,9 @@
     export let shift = 0;
     export let vertical = false;
 
-    const colors = ['even', 'odd'];
-
     function* segments() {
         for (let i = 0; i < chunks; i++) {
-            const color = colors[(i + shift) % 2];
+            const color = alternateBarrierColor(i + shift);
             const d = i * length;
 
             const x = vertical ? left : left + d;
