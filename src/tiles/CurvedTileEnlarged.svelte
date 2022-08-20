@@ -22,6 +22,7 @@
     export let tileAngle = 0;
     export let tileX = 0;
     export let tileY = 0;
+    export let filter;
 
     const barrierLength = tileLength / barrierChunks;
     const tilePadding = (tileLength - tileWidth) / 2;
@@ -63,7 +64,7 @@
     const verticalBarrierY = rightSideEndY;
 </script>
 
-<g class="tile curved-tile-enlarged" transform="rotate({tileAngle} {cx} {cy})">
+<g class="tile curved-tile-enlarged" transform="rotate({tileAngle} {cx} {cy})" {filter}>
     <path
         class="ground"
         d="M {innerCurveStartX} {innerCurveStartY}

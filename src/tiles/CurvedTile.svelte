@@ -20,6 +20,7 @@
     export let tileAngle = 0;
     export let tileX = 0;
     export let tileY = 0;
+    export let filter;
 
     const tilePadding = (tileLength - tileWidth) / 2;
     const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
@@ -43,7 +44,7 @@
     const outerBarrierY = y;
 </script>
 
-<g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
+<g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})" {filter}>
     <CurvedElement
         class="ground"
         cx={curveX}

@@ -4,6 +4,9 @@
 </script>
 
 <svg>
+    <defs>
+        <slot name="defs" />
+    </defs>
     <slot />
 </svg>
 

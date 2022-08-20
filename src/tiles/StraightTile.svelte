@@ -14,6 +14,7 @@
     export let tileAngle = 0;
     export let tileX = 0;
     export let tileY = 0;
+    export let filter;
 
     const width = tileWidth;
     const height = tileLength * tileRatio;
@@ -33,7 +34,7 @@
     const vertical = true;
 </script>
 
-<g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})">
+<g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})" {filter}>
     <StraightElement class="ground" {x} {y} {width} {height} />
     <StraightBarrier
         chunks={sideChunks}
