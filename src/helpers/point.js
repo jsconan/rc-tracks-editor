@@ -17,27 +17,15 @@
  */
 
 /**
- * A right angle in degrees.
- * @type {number}
+ * @typedef {object} point
+ * @property {number} x - The X-coordinate of the point.
+ * @property {number} y - The Y-coordinate of the point.
  */
-export const RIGHT_ANGLE = 90;
 
 /**
- * A straight angle in degrees.
- * @type {number}
+ * Produces a point object from the given coordinates.
+ * @param {number} x - The X-coordinate.
+ * @param {number} y - The X-coordinate.
+ * @returns {point}
  */
-export const STRAIGHT_ANGLE = 180;
-
-/**
- * Computes the cosine from an angle given in degrees.
- * @param {number} degree - The angle given in degrees.
- * @returns {number}
- */
-export const cos = degree => Math.cos((degree * Math.PI) / STRAIGHT_ANGLE);
-
-/**
- * Computes the sine from an angle given in degrees.
- * @param {number} degree - The angle given in degrees.
- * @returns {number}
- */
-export const sin = degree => Math.sin((degree * Math.PI) / STRAIGHT_ANGLE);
+export const getPoint = (x, y) => ({ x, y });
