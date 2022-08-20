@@ -2,7 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { cos, sin } from '../helpers/maths.js';
+    import { getPoint } from '../helpers/point';
+    import { polar } from '../helpers/polar';
 
     let cls = void 0;
     export { cls as class };
@@ -14,27 +15,22 @@
     export let angle = 1;
     export let start = 0;
 
-    const r1 = radius;
-    const r2 = r1 + width;
-    const a1 = start;
-    const a2 = start + angle;
+    const innerRadius = radius;
+    const outerRadius = radius + width;
+    const end = start + angle;
+    const center = getPoint(cx, cy);
 
-    const x1 = cx + cos(a1) * r1;
-    const y1 = cy + sin(a1) * r1;
-    const x2 = cx + cos(a2) * r1;
-    const y2 = cy + sin(a2) * r1;
-
-    const x3 = cx + cos(a2) * r2;
-    const y3 = cy + sin(a2) * r2;
-    const x4 = cx + cos(a1) * r2;
-    const y4 = cy + sin(a1) * r2;
+    const p1 = polar(innerRadius, start, center);
+    const p2 = polar(innerRadius, end, center);
+    const p3 = polar(outerRadius, end, center);
+    const p4 = polar(outerRadius, start, center);
 </script>
 
 <path
     class={cls}
     {style}
-    d="M {x1} {y1}
-       A {r1} {r1} 0 0 1 {x2} {y2}
-       L {x3} {y3}
-       A {r2} {r2} 0 0 0 {x4} {y4}"
+    d="M {p1.x} {p1.y}
+       A {innerRadius} {innerRadius} 0 0 1 {p2.x} {p2.y}
+       L {p3.x} {p3.y}
+       A {outerRadius} {outerRadius} 0 0 0 {p4.x} {p4.y}"
 />

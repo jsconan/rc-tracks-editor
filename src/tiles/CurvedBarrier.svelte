@@ -14,8 +14,8 @@
 
     const colors = ['even', 'odd'];
     const chunkAngle = angle / chunks;
-    const curveX = left - radius;
-    const curveY = top;
+    const cx = left - radius;
+    const cy = top;
 
     function* segments() {
         for (let i = 0; i < chunks; i++) {
@@ -29,14 +29,6 @@
 
 <g class="barrier curved-barrier">
     {#each [...segments()] as { color, start }}
-        <CurvedElement
-            class="barrier-chunk {color}"
-            cx={curveX}
-            cy={curveY}
-            {width}
-            {radius}
-            angle={chunkAngle}
-            {start}
-        />
+        <CurvedElement class="barrier-chunk {color}" {cx} {cy} {width} {radius} angle={chunkAngle} {start} />
     {/each}
 </g>
