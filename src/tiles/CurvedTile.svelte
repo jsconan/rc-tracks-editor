@@ -65,8 +65,8 @@
         width={barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
-        x={innerBarrierX}
-        y={innerBarrierY}
+        left={innerBarrierX}
+        top={innerBarrierY}
         shift={0}
     />
     <CurvedBarrier
@@ -74,8 +74,8 @@
         width={barrierWidth}
         radius={outerBarrierRadius}
         angle={curveAngle}
-        x={outerBarrierX}
-        y={outerBarrierY}
+        left={outerBarrierX}
+        top={outerBarrierY}
         shift={1}
     />
 </g>

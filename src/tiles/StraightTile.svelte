@@ -32,6 +32,22 @@
 
 <g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})">
     <rect class="ground" {x} {y} {width} {height} />
-    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} x={x1} {y} shift={0} {vertical} />
-    <StraightBarrier chunks={sideChunks} width={barrierWidth} length={barrierLength} x={x2} {y} shift={1} {vertical} />
+    <StraightBarrier
+        chunks={sideChunks}
+        width={barrierWidth}
+        length={barrierLength}
+        left={x1}
+        top={y}
+        shift={0}
+        {vertical}
+    />
+    <StraightBarrier
+        chunks={sideChunks}
+        width={barrierWidth}
+        length={barrierLength}
+        left={x2}
+        top={y}
+        shift={1}
+        {vertical}
+    />
 </g>

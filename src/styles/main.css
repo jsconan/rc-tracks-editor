@@ -1,3 +1,9 @@
+:root {
+    --color-ground: #444;
+    --color-even: #eec;
+    --color-odd: #c24;
+}
+
 html,
 body,
 #app {
@@ -9,17 +15,13 @@ body,
 }
 
 .ground {
-    fill: #444;
-}
-
-.barrier-chunk {
-    fill: none;
+    fill: var(--color-ground);
 }
 
 .even {
-    stroke: #eec;
+    fill: var(--color-even);
 }
 
 .odd {
-    stroke: #c24;
+    fill: var(--color-odd);
 }
