@@ -9,8 +9,8 @@
         getCurveOuterBarrierChunks,
         getCurveOuterRadius
     } from '../helpers/track.js';
-    import { cos, sin } from '../helpers/maths.js';
     import CurvedBarrier from './CurvedBarrier.svelte';
+    import CurvedElement from './CurvedElement.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -35,30 +35,23 @@
 
     const curveX = x - innerRadius;
     const curveY = y;
-    const innerCurveStartX = x;
-    const innerCurveStartY = y;
-    const innerCurveEndX = curveX + cos(curveAngle) * innerRadius;
-    const innerCurveEndY = curveY + sin(curveAngle) * innerRadius;
-    const outerCurveStartX = curveX + cos(curveAngle) * outerRadius;
-    const outerCurveStartY = curveY + sin(curveAngle) * outerRadius;
-    const outerCurveEndX = x + tileWidth;
-    const outerCurveEndY = y;
-
     const innerBarrierRadius = innerRadius;
-    const innerBarrierX = innerCurveStartX;
-    const innerBarrierY = innerCurveStartY;
+    const innerBarrierX = x;
+    const innerBarrierY = y;
     const outerBarrierRadius = outerRadius - barrierWidth;
-    const outerBarrierX = outerCurveEndX - barrierWidth;
-    const outerBarrierY = outerCurveEndY;
+    const outerBarrierX = x + tileWidth - barrierWidth;
+    const outerBarrierY = y;
 </script>
 
 <g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
-    <path
+    <CurvedElement
         class="ground"
-        d="M {innerCurveStartX} {innerCurveStartY}
-           A {innerRadius} {innerRadius} 0 0 1 {innerCurveEndX} {innerCurveEndY}
-           L {outerCurveStartX} {outerCurveStartY}
-           A {outerRadius} {outerRadius} 0 0 0 {outerCurveEndX} {outerCurveEndY}"
+        cx={curveX}
+        cy={curveY}
+        width={tileWidth}
+        radius={innerRadius}
+        angle={curveAngle}
+        start={0}
     />
     <CurvedBarrier
         chunks={innerChunks}

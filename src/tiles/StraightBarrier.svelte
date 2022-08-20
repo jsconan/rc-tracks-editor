@@ -2,6 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import StraightElement from './StraightElement.svelte';
+
     export let chunks;
     export let width;
     export let length;
@@ -29,6 +31,6 @@
 
 <g class="barrier straight-barrier">
     {#each [...segments()] as { color, x, y, w, h }}
-        <rect class="barrier-chunk {color}" {x} {y} width={w} height={h} />
+        <StraightElement class="barrier-chunk {color}" {x} {y} width={w} height={h} />
     {/each}
 </g>

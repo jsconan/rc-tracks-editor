@@ -4,6 +4,7 @@
 
     import { getStraightBarrierChunks } from '../helpers/track.js';
     import StraightBarrier from './StraightBarrier.svelte';
+    import StraightElement from './StraightElement.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -24,20 +25,22 @@
     const x = tileX + tilePadding;
     const y = tileY;
     const x1 = x;
+    const y1 = y;
     const x2 = x + laneWidth;
+    const y2 = y;
     const cx = x + width / 2;
     const cy = y + height / 2;
     const vertical = true;
 </script>
 
 <g class="tile straight-tile" transform="rotate({tileAngle} {cx} {cy})">
-    <rect class="ground" {x} {y} {width} {height} />
+    <StraightElement class="ground" {x} {y} {width} {height} />
     <StraightBarrier
         chunks={sideChunks}
         width={barrierWidth}
         length={barrierLength}
         left={x1}
-        top={y}
+        top={y1}
         shift={0}
         {vertical}
     />
@@ -46,7 +49,7 @@
         width={barrierWidth}
         length={barrierLength}
         left={x2}
-        top={y}
+        top={y2}
         shift={1}
         {vertical}
     />
