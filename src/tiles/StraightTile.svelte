@@ -3,8 +3,8 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getStraightBarrierChunks } from '../helpers/track.js';
-    import StraightBarrier from './StraightBarrier.svelte';
-    import StraightElement from './StraightElement.svelte';
+    import StraightBarrier from '../elements/StraightBarrier.svelte';
+    import StraightElement from '../elements/StraightElement.svelte';
 
     export let barrierChunks;
     export let barrierWidth;

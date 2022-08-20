@@ -11,8 +11,8 @@
         getEnlargedCurveSide,
         getEnlargedCurveSideBarrierChunks
     } from '../helpers/track.js';
-    import CurvedBarrier from './CurvedBarrier.svelte';
-    import StraightBarrier from './StraightBarrier.svelte';
+    import CurvedBarrier from '../elements/CurvedBarrier.svelte';
+    import StraightBarrier from '../elements/StraightBarrier.svelte';
 
     export let barrierChunks;
     export let barrierWidth;

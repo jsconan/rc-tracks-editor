@@ -9,8 +9,8 @@
         getCurveOuterBarrierChunks,
         getCurveOuterRadius
     } from '../helpers/track.js';
-    import CurvedBarrier from './CurvedBarrier.svelte';
-    import CurvedElement from './CurvedElement.svelte';
+    import CurvedBarrier from '../elements/CurvedBarrier.svelte';
+    import CurvedElement from '../elements/CurvedElement.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
