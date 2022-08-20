@@ -63,7 +63,7 @@
     const verticalBarrierY = rightSideEndY;
 </script>
 
-<g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})">
+<g class="tile curved-tile-enlarged" transform="rotate({tileAngle} {cx} {cy})">
     <path
         class="ground"
         d="M {innerCurveStartX} {innerCurveStartY}
