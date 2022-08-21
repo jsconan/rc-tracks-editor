@@ -229,6 +229,25 @@ export class Vector2D {
     }
 
     /**
+     * Computes the angle between of the vector and another vector.
+     * @param {Vector2D} vector - The other vector to compute the angle.
+     * @returns {number} - The angle between the 2 vectors.
+     */
+    angleWith(vector) {
+        return Math.acos(this.dot(vector) / (this.length() * vector.length()));
+    }
+
+    /**
+     * Projects the vector on another vector.
+     * @param {Vector2D} vector - The other vector to project on.
+     * @returns {Vector2D} - A new vector resulting of the projection.
+     */
+    projectOn(vector) {
+        const normalized = vector.normalize();
+        return normalized.mulScalar(this.dot(normalized));
+    }
+
+    /**
      * Rotates the vector around the origin by the given angle.
      * @param {number} angle - The rotation angle, given in radians.
      * @returns {Vector2D} - A new vector rotated by the given angle.
@@ -343,6 +362,30 @@ export class Vector2D {
      */
     static fromObject(object = {}) {
         return new Vector2D(object.x, object.y);
+    }
+
+    /**
+     * Computes the point at the intersection of two lines.
+     * Each line is defined by two points.
+     * If the lines cannot intersect (i.e. are parallel), it returns `null`.
+     *
+     * @param {Vector2D} a1 - A first point on the first line.
+     * @param {Vector2D} b1 - A second point on the first line.
+     * @param {Vector2D} a2 - A first point on the second line.
+     * @param {Vector2D} b2 - A second point on the second line.
+     * @returns {Vector2D} - The point at the intersection, or null if there is none.
+     */
+    static intersect(a1, b1, a2, b2) {
+        const i = b1.sub(a1);
+        const j = b2.sub(a2);
+        const n = i.cross(j);
+
+        if (n) {
+            const k = -(a1.x * j.y - a2.x * j.y - j.x * a1.y + j.x * a2.y) / n;
+            return new Vector2D(a1.x + k * i.x, a1.y + k * i.y);
+        }
+
+        return null;
     }
 }
 

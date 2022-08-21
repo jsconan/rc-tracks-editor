@@ -295,6 +295,25 @@ describe('vector', () => {
             const v = new Vector2D(x, y);
             expect(v.angle()).toBe((angle / 180) * Math.PI);
         });
+
+        it('the angle between 2 vectors', () => {
+            const v1 = new Vector2D(0, 4);
+            const v2 = new Vector2D(4, 4);
+            expect(v1.angleWith(v2)).toBeCloseTo(Math.PI / 4, 5);
+        });
+    });
+
+    it('can project the coordinates on another vector', () => {
+        const v1 = new Vector2D(4, 7);
+        const v2 = new Vector2D(8, 4);
+        const v3 = v1.projectOn(v2);
+
+        expect(v1.x).toBe(4);
+        expect(v1.y).toBe(7);
+
+        expect(v3).not.toBe(v1);
+        expect(v3.x).toBe(6);
+        expect(v3.y).toBe(3);
     });
 
     describe('can rotate', () => {
@@ -513,6 +532,32 @@ describe('vector', () => {
                 const v2 = Vector2D.fromObject();
 
                 expect(v1).not.toBe(v2);
+            });
+        });
+
+        describe('intersect', () => {
+            describe('which compute the point at the intersection of 2 lines', () => {
+                it('crossing lines', () => {
+                    const p1 = new Vector2D(405, 0);
+                    const p2 = new Vector2D(405, 10);
+                    const p3 = new Vector2D(324, 81);
+                    const p4 = new Vector2D(314, 81);
+                    const v = Vector2D.intersect(p1, p2, p3, p4);
+
+                    expect(v).toBeInstanceOf(Vector2D);
+                    expect(v.x).toBe(405);
+                    expect(v.y).toBe(81);
+                });
+
+                it('parallel lines', () => {
+                    const p1 = new Vector2D(0, 0);
+                    const p2 = new Vector2D(10, 10);
+                    const p3 = new Vector2D(10, 0);
+                    const p4 = new Vector2D(20, 10);
+                    const v = Vector2D.intersect(p1, p2, p3, p4);
+
+                    expect(v).toBeNull();
+                });
             });
         });
     });
