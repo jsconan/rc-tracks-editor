@@ -51,12 +51,54 @@ export class Vector2D {
     }
 
     /**
+     * Sets the X-coordinate of the vector.
+     * @param {number} x - The X-coordinate of the vector.
+     */
+    setX(x) {
+        this.x = x;
+
+        return this;
+    }
+
+    /**
+     * Sets the Y-coordinate of the vector.
+     * @param {number} y - The Y-coordinate of the vector.
+     */
+    setY(y) {
+        this.y = y;
+
+        return this;
+    }
+
+    /**
      * Copies the coordinates of another vector.
      * @param {Vector2D} vector
      * @returns {Vector2D}
      */
     copy(vector) {
         this.x = vector.x;
+        this.y = vector.y;
+
+        return this;
+    }
+
+    /**
+     * Copies the X-coordinate of another vector.
+     * @param {Vector2D} vector
+     * @returns {Vector2D}
+     */
+    copyX(vector) {
+        this.x = vector.x;
+
+        return this;
+    }
+
+    /**
+     * Copies the Y-coordinate of another vector.
+     * @param {Vector2D} vector
+     * @returns {Vector2D}
+     */
+    copyY(vector) {
         this.y = vector.y;
 
         return this;
@@ -72,12 +114,48 @@ export class Vector2D {
     }
 
     /**
+     * Adds the X-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addX(vector) {
+        return new Vector2D(this.x + vector.x, this.y);
+    }
+
+    /**
+     * Adds the Y-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addY(vector) {
+        return new Vector2D(this.x, this.y + vector.y);
+    }
+
+    /**
      * Adds a scalar value to the coordinates.
      * @param {number} scalar - The scalar value to add.
      * @returns {Vector2D} - A new vector resulting of the addition.
      */
     addScalar(scalar) {
         return new Vector2D(this.x + scalar, this.y + scalar);
+    }
+
+    /**
+     * Adds a scalar value to the X-coordinate.
+     * @param {number} scalar - The scalar value to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addScalarX(scalar) {
+        return new Vector2D(this.x + scalar, this.y);
+    }
+
+    /**
+     * Adds a scalar value to the Y-coordinate.
+     * @param {number} scalar - The scalar value to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addScalarY(scalar) {
+        return new Vector2D(this.x, this.y + scalar);
     }
 
     /**
@@ -90,12 +168,48 @@ export class Vector2D {
     }
 
     /**
+     * Subtracts the X-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subX(vector) {
+        return new Vector2D(this.x - vector.x, this.y);
+    }
+
+    /**
+     * Subtracts the Y-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subY(vector) {
+        return new Vector2D(this.x, this.y - vector.y);
+    }
+
+    /**
      * Subtracts a scalar value from the coordinates.
      * @param {number} scalar - The scalar value to subtract.
      * @returns {Vector2D} - A new vector resulting of the subtraction.
      */
     subScalar(scalar) {
         return new Vector2D(this.x - scalar, this.y - scalar);
+    }
+
+    /**
+     * Subtracts a scalar value from the X-coordinate.
+     * @param {number} scalar - The scalar value to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subScalarX(scalar) {
+        return new Vector2D(this.x - scalar, this.y);
+    }
+
+    /**
+     * Subtracts a scalar value from the Y-coordinate.
+     * @param {number} scalar - The scalar value to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subScalarY(scalar) {
+        return new Vector2D(this.x, this.y - scalar);
     }
 
     /**
@@ -108,12 +222,48 @@ export class Vector2D {
     }
 
     /**
+     * Multiplies by the X-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulX(vector) {
+        return new Vector2D(this.x * vector.x, this.y);
+    }
+
+    /**
+     * Multiplies by the Y-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulY(vector) {
+        return new Vector2D(this.x, this.y * vector.y);
+    }
+
+    /**
      * Multiplies the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to multiply by.
      * @returns {Vector2D} - A new vector resulting of the multiplication.
      */
     mulScalar(scalar) {
         return new Vector2D(this.x * scalar, this.y * scalar);
+    }
+
+    /**
+     * Multiplies the X-coordinate by a scalar value.
+     * @param {number} scalar - The scalar value to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulScalarX(scalar) {
+        return new Vector2D(this.x * scalar, this.y);
+    }
+
+    /**
+     * Multiplies the Y-coordinate by a scalar value.
+     * @param {number} scalar - The scalar value to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulScalarY(scalar) {
+        return new Vector2D(this.x, this.y * scalar);
     }
 
     /**
@@ -126,12 +276,48 @@ export class Vector2D {
     }
 
     /**
+     * Divides by the X-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divX(vector) {
+        return new Vector2D(this.x / vector.x, this.y);
+    }
+
+    /**
+     * Divides by the Y-coordinate of another vector.
+     * @param {Vector2D} vector - The other vector to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divY(vector) {
+        return new Vector2D(this.x, this.y / vector.y);
+    }
+
+    /**
      * Divides the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to divide by.
      * @returns {Vector2D} - A new vector resulting of the division.
      */
     divScalar(scalar) {
         return new Vector2D(this.x / scalar, this.y / scalar);
+    }
+
+    /**
+     * Divides the X-coordinate by a scalar value.
+     * @param {number} scalar - The scalar value to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divScalarX(scalar) {
+        return new Vector2D(this.x / scalar, this.y);
+    }
+
+    /**
+     * Divides the Y-coordinate by a scalar value.
+     * @param {number} scalar - The scalar value to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divScalarY(scalar) {
+        return new Vector2D(this.x, this.y / scalar);
     }
 
     /**
