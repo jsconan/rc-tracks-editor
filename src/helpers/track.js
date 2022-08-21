@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { RIGHT_ANGLE } from './maths';
+import { RIGHT_ANGLE } from './trigo.js';
 
 /**
  * Computes the overall width of a track section.

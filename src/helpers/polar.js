@@ -16,8 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { cos, sin } from './maths';
-import { getPoint } from './point';
+import { cos, sin } from './trigo.js';
+import { getPoint } from './point.js';
 
 /**
  * Computes the X-coordinate of a polar point given a radius and an angle.

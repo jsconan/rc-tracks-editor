@@ -16,8 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { cos, sin } from './maths';
-import { getPoint } from './point';
+import { cos, sin } from './trigo.js';
+import { getPoint } from './point.js';
 
 /**
  * Rotates a point around the origin by the given angle.

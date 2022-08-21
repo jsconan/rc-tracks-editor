@@ -29,15 +29,29 @@ export const RIGHT_ANGLE = 90;
 export const STRAIGHT_ANGLE = 180;
 
 /**
+ * Converts an angle given in degrees to radians.
+ * @param {number} angle - The angle given in degrees.
+ * @returns {number} - The angle converted to radians.
+ */
+export const deg2rad = angle => (angle * Math.PI) / STRAIGHT_ANGLE;
+
+/**
+ * Converts an angle given in radians to degrees.
+ * @param {number} angle - The angle given in radians.
+ * @returns {number} - The angle converted to degrees.
+ */
+export const rad2deg = angle => (angle * STRAIGHT_ANGLE) / Math.PI;
+
+/**
  * Computes the cosine from an angle given in degrees.
  * @param {number} degree - The angle given in degrees.
  * @returns {number}
  */
-export const cos = degree => Math.cos((degree * Math.PI) / STRAIGHT_ANGLE);
+export const cos = degree => Math.cos(deg2rad(degree));
 
 /**
  * Computes the sine from an angle given in degrees.
  * @param {number} degree - The angle given in degrees.
  * @returns {number}
  */
-export const sin = degree => Math.sin((degree * Math.PI) / STRAIGHT_ANGLE);
+export const sin = degree => Math.sin(deg2rad(degree));
