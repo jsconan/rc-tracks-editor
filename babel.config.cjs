@@ -16,10 +16,31 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+module.exports = function babelConfig(api) {
+    const minNodeVersion = '14';
+    const shouldPrintComment = val => /Copyright|License/.test(val);
+    const ignore = [];
+    const presets = [
+        [
+            '@babel/preset-env',
+            {
+                targets: {
+                    node: minNodeVersion
+                }
+            }
+        ]
+    ];
+    const plugins = ['babel-plugin-transform-vite-meta-env'];
 
-// https://vitejs.dev/config/
-export default defineConfig({
-    plugins: [svelte()]
-});
+    if (!api.env('test')) {
+        ignore.push('**/*.spec.js');
+    }
+    api.cache(true);
+
+    return {
+        shouldPrintComment,
+        presets,
+        plugins,
+        ignore
+    };
+};

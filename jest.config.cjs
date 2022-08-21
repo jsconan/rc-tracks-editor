@@ -16,10 +16,17 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
-
-// https://vitejs.dev/config/
-export default defineConfig({
-    plugins: [svelte()]
-});
+module.exports = {
+    verbose: true,
+    transform: {
+        '^.+\\.js$': 'babel-jest',
+        '^.+\\.svelte$': 'svelte-jester',
+        '.+\\.(css|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub'
+    },
+    moduleFileExtensions: ['svelte', 'js'],
+    testMatch: ['**/*.spec.js'],
+    testEnvironment: 'jsdom',
+    coverageDirectory: '.coverage',
+    testPathIgnorePatterns: ['/node_modules/', '/__fixtures__/'],
+    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']
+};
