@@ -29,18 +29,24 @@ export const RIGHT_ANGLE = 90;
 export const STRAIGHT_ANGLE = 180;
 
 /**
+ * The number of degrees per radian.
+ * @type {number}
+ */
+const degreesPerRadian = 180 / Math.PI;
+
+/**
  * Converts an angle given in degrees to radians.
  * @param {number} angle - The angle given in degrees.
  * @returns {number} - The angle converted to radians.
  */
-export const deg2rad = angle => (angle * Math.PI) / STRAIGHT_ANGLE;
+export const deg2rad = angle => angle / degreesPerRadian;
 
 /**
  * Converts an angle given in radians to degrees.
  * @param {number} angle - The angle given in radians.
  * @returns {number} - The angle converted to degrees.
  */
-export const rad2deg = angle => (angle * STRAIGHT_ANGLE) / Math.PI;
+export const rad2deg = angle => angle * degreesPerRadian;
 
 /**
  * Computes the cosine from an angle given in degrees.
