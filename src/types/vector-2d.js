@@ -51,26 +51,6 @@ export class Vector2D {
     }
 
     /**
-     * Sets the X-coordinate of the vector.
-     * @param {number} x - The X-coordinate of the vector.
-     */
-    setX(x) {
-        this.x = x;
-
-        return this;
-    }
-
-    /**
-     * Sets the Y-coordinate of the vector.
-     * @param {number} y - The Y-coordinate of the vector.
-     */
-    setY(y) {
-        this.y = y;
-
-        return this;
-    }
-
-    /**
      * Copies the coordinates of another vector.
      * @param {Vector2D} vector
      * @returns {Vector2D}
@@ -83,347 +63,99 @@ export class Vector2D {
     }
 
     /**
-     * Copies the X-coordinate of another vector.
-     * @param {Vector2D} vector
-     * @returns {Vector2D}
-     */
-    copyX(vector) {
-        this.x = vector.x;
-
-        return this;
-    }
-
-    /**
-     * Copies the Y-coordinate of another vector.
-     * @param {Vector2D} vector
-     * @returns {Vector2D}
-     */
-    copyY(vector) {
-        this.y = vector.y;
-
-        return this;
-    }
-
-    /**
      * Adds the coordinates of another vector.
      * @param {Vector2D} vector - The other vector to add.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the addition.
      */
     add(vector) {
-        this.x += vector.x;
-        this.y += vector.y;
-
-        return this;
-    }
-
-    /**
-     * Adds the X-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to add.
-     * @returns {Vector2D}
-     */
-    addX(vector) {
-        this.x += vector.x;
-
-        return this;
-    }
-
-    /**
-     * Adds the Y-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to add.
-     * @returns {Vector2D}
-     */
-    addY(vector) {
-        this.y += vector.y;
-
-        return this;
+        return new Vector2D(this.x + vector.x, this.y + vector.y);
     }
 
     /**
      * Adds a scalar value to the coordinates.
      * @param {number} scalar - The scalar value to add.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the addition.
      */
     addScalar(scalar) {
-        this.x += scalar;
-        this.y += scalar;
-
-        return this;
-    }
-
-    /**
-     * Adds a scalar value to the X-coordinate.
-     * @param {number} scalar - The scalar value to add.
-     * @returns {Vector2D}
-     */
-    addScalarX(scalar) {
-        this.x += scalar;
-
-        return this;
-    }
-
-    /**
-     * Adds a scalar value to the Y-coordinate.
-     * @param {number} scalar - The scalar value to add.
-     * @returns {Vector2D}
-     */
-    addScalarY(scalar) {
-        this.y += scalar;
-
-        return this;
+        return new Vector2D(this.x + scalar, this.y + scalar);
     }
 
     /**
      * Subtracts the coordinates of another vector.
      * @param {Vector2D} vector - The other vector to subtract.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
      */
     sub(vector) {
-        this.x -= vector.x;
-        this.y -= vector.y;
-
-        return this;
-    }
-
-    /**
-     * Subtracts the X-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to subtract.
-     * @returns {Vector2D}
-     */
-    subX(vector) {
-        this.x -= vector.x;
-
-        return this;
-    }
-
-    /**
-     * Subtracts the Y-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to subtract.
-     * @returns {Vector2D}
-     */
-    subY(vector) {
-        this.y -= vector.y;
-
-        return this;
+        return new Vector2D(this.x - vector.x, this.y - vector.y);
     }
 
     /**
      * Subtracts a scalar value from the coordinates.
      * @param {number} scalar - The scalar value to subtract.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
      */
     subScalar(scalar) {
-        this.x -= scalar;
-        this.y -= scalar;
-
-        return this;
-    }
-
-    /**
-     * Subtracts a scalar value from the X-coordinate.
-     * @param {number} scalar - The scalar value to subtract.
-     * @returns {Vector2D}
-     */
-    subScalarX(scalar) {
-        this.x -= scalar;
-
-        return this;
-    }
-
-    /**
-     * Subtracts a scalar value from the Y-coordinate.
-     * @param {number} scalar - The scalar value to subtract.
-     * @returns {Vector2D}
-     */
-    subScalarY(scalar) {
-        this.y -= scalar;
-
-        return this;
+        return new Vector2D(this.x - scalar, this.y - scalar);
     }
 
     /**
      * Multiplies by the coordinates of another vector.
      * @param {Vector2D} vector - The other vector to multiply by.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
      */
     mul(vector) {
-        this.x *= vector.x;
-        this.y *= vector.y;
-
-        return this;
-    }
-
-    /**
-     * Multiplies by the X-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to multiply by.
-     * @returns {Vector2D}
-     */
-    mulX(vector) {
-        this.x *= vector.x;
-
-        return this;
-    }
-
-    /**
-     * Multiplies by the Y-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to multiply by.
-     * @returns {Vector2D}
-     */
-    mulY(vector) {
-        this.y *= vector.y;
-
-        return this;
+        return new Vector2D(this.x * vector.x, this.y * vector.y);
     }
 
     /**
      * Multiplies the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to multiply by.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
      */
     mulScalar(scalar) {
-        this.x *= scalar;
-        this.y *= scalar;
-
-        return this;
-    }
-
-    /**
-     * Multiplies the X-coordinate by a scalar value.
-     * @param {number} scalar - The scalar value to multiply by.
-     * @returns {Vector2D}
-     */
-    mulScalarX(scalar) {
-        this.x *= scalar;
-
-        return this;
-    }
-
-    /**
-     * Multiplies the Y-coordinate by a scalar value.
-     * @param {number} scalar - The scalar value to multiply by.
-     * @returns {Vector2D}
-     */
-    mulScalarY(scalar) {
-        this.y *= scalar;
-
-        return this;
+        return new Vector2D(this.x * scalar, this.y * scalar);
     }
 
     /**
      * Divides by the coordinates of another vector.
      * @param {Vector2D} vector - The other vector to divide by.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the division.
      */
     div(vector) {
-        this.x /= vector.x;
-        this.y /= vector.y;
-
-        return this;
-    }
-
-    /**
-     * Divides by the X-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to divide by.
-     * @returns {Vector2D}
-     */
-    divX(vector) {
-        this.x /= vector.x;
-
-        return this;
-    }
-
-    /**
-     * Divides by the Y-coordinate of another vector.
-     * @param {Vector2D} vector - The other vector to divide by.
-     * @returns {Vector2D}
-     */
-    divY(vector) {
-        this.y /= vector.y;
-
-        return this;
+        return new Vector2D(this.x / vector.x, this.y / vector.y);
     }
 
     /**
      * Divides the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to divide by.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector resulting of the division.
      */
     divScalar(scalar) {
-        this.x /= scalar;
-        this.y /= scalar;
-
-        return this;
+        return new Vector2D(this.x / scalar, this.y / scalar);
     }
 
     /**
-     * Divides the X-coordinate by a scalar value.
-     * @param {number} scalar - The scalar value to divide by.
-     * @returns {Vector2D}
+     * Negates the coordinates.
+     * @returns {Vector2D} - A new vector with negated coordinates.
      */
-    divScalarX(scalar) {
-        this.x /= scalar;
-
-        return this;
-    }
-
-    /**
-     * Divides the Y-coordinate by a scalar value.
-     * @param {number} scalar - The scalar value to divide by.
-     * @returns {Vector2D}
-     */
-    divScalarY(scalar) {
-        this.y /= scalar;
-
-        return this;
-    }
-
-    /**
-     * Inverts the coordinates.
-     * @returns {Vector2D}
-     */
-    invert() {
-        this.x = -this.x;
-        this.y = -this.y;
-
-        return this;
-    }
-
-    /**
-     * Inverts the X-coordinates.
-     * @returns {Vector2D}
-     */
-    invertX() {
-        this.x = -this.x;
-
-        return this;
-    }
-
-    /**
-     * Inverts the Y-coordinates.
-     * @returns {Vector2D}
-     */
-    invertY() {
-        this.y = -this.y;
-
-        return this;
+    negate() {
+        return new Vector2D(-this.x, -this.y);
     }
 
     /**
      * Creates an orthogonal vector of the current vector.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector perpendicular to the source one.
      */
-    normal() {
-        return this.set(this.y, -this.x);
+    ortho() {
+        return new Vector2D(this.y, -this.x);
     }
 
     /**
      * Rounds the coordinates.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector with rounded coordinates.
      */
     round() {
-        this.x = Math.round(this.x);
-        this.y = Math.round(this.y);
-
-        return this;
+        return new Vector2D(Math.round(this.x), Math.round(this.y));
     }
 
     /**
@@ -437,25 +169,22 @@ export class Vector2D {
     /**
      * Normalizes the vector, so that its length is 1.
      * If the vector is null, it will be normalized to [1, 0].
-     * @returns {Vector2D}
+     * @returns {Vector2D} - The normalized vector.
      */
     normalize() {
         const l = this.length();
 
         if (l) {
-            this.divScalar(l);
-        } else {
-            this.x = 1;
-            this.y = 0;
+            return this.divScalar(l);
         }
 
-        return this;
+        return new Vector2D(1, 0);
     }
 
     /**
      * Changes the length of the vector.
      * @param {number} length - The new length for the vector.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - The extended vector.
      */
     extend(length) {
         return this.normalize().mulScalar(length);
@@ -464,7 +193,7 @@ export class Vector2D {
     /**
      * Computes the dot product with another vector.
      * @param {Vector2D} vector - The other vector for the dot product.
-     * @returns {number}
+     * @returns {number} - The result of the dot product.
      */
     dot(vector) {
         return this.x * vector.x + this.y * vector.y;
@@ -473,7 +202,7 @@ export class Vector2D {
     /**
      * Computes the cross product with another vector.
      * @param {Vector2D} vector - The other vector for the cross product.
-     * @returns {number}
+     * @returns {number} - The result of the cross product.
      */
     cross(vector) {
         return this.x * vector.y - this.y * vector.x;
@@ -482,7 +211,7 @@ export class Vector2D {
     /**
      * Computes the euclidean distance to another vector.
      * @param {Vector2D} vector - The other vector for the distance.
-     * @returns {number}
+     * @returns {number} - The distance between the 2 vectors.
      */
     distance(vector) {
         const dx = this.x - vector.x;
@@ -493,7 +222,7 @@ export class Vector2D {
 
     /**
      * Computes the angle of the vector toward the X-axis.
-     * @returns {number}
+     * @returns {number} - The angle of the vector.
      */
     angle() {
         return Math.atan2(this.y, this.x);
@@ -502,22 +231,19 @@ export class Vector2D {
     /**
      * Rotates the vector around the origin by the given angle.
      * @param {number} angle - The rotation angle, given in radians.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector rotated by the given angle.
      */
     rotate(angle) {
         const x = this.x * Math.cos(angle) - this.y * Math.sin(angle);
         const y = this.x * Math.sin(angle) + this.y * Math.cos(angle);
 
-        this.x = x;
-        this.y = y;
-
-        return this;
+        return new Vector2D(x, y);
     }
 
     /**
      * Rotates the vector around the origin to the given angle.
      * @param {number} angle - The target angle, given in radians.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector rotated to the given angle.
      */
     rotateTo(angle) {
         return this.rotate(angle - this.angle());
@@ -527,68 +253,35 @@ export class Vector2D {
      * Rotates the vector around the given center by the given angle.
      * @param {number} angle - The rotation angle, given in radians.
      * * @param {Vector2D} center - The coordinates of the center.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector rotated by the given angle.
      */
     rotateAround(angle, center) {
-        const v = this.clone();
-
-        v.sub(center);
-        v.rotate(angle);
-        v.add(center);
-
-        this.x = v.x;
-        this.y = v.y;
-
-        return this;
+        return this.sub(center).rotate(angle).add(center);
     }
 
     /**
      * Rotates the vector around the given center to the given angle.
      * @param {number} angle - The target angle, given in radians.
      * * @param {Vector2D} center - The coordinates of the center.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector rotated to the given angle.
      */
     rotateAroundTo(angle, center) {
-        const v = this.clone();
-
-        v.sub(center);
-        v.rotate(angle - v.angle());
-        v.add(center);
-
-        this.x = v.x;
-        this.y = v.y;
-
-        return this;
+        const v = this.sub(center);
+        return v.rotate(angle - v.angle()).add(center);
     }
 
     /**
      * Checks whether or nor the vector equals another.
      * @param {Vector2D} vector
-     * @returns {boolean}
+     * @returns {boolean} - `true` if the vectors are equal.
      */
     equals(vector) {
         return this.x === vector.x && this.y === vector.y;
     }
 
     /**
-     * Creates a normalized copy of the vector.
-     * @returns {Vector2D}
-     */
-    toNorm() {
-        return this.clone().normalize();
-    }
-
-    /**
-     * Creates a perpendicular copy of the vector.
-     * @returns {Vector2D}
-     */
-    toNormal() {
-        return this.clone().normal();
-    }
-
-    /**
      * Converts the vector to a string
-     * @returns {string}
+     * @returns {string} - The string representation of the vector.
      */
     toString() {
         return `x: ${this.x}, y: ${this.y}`;
@@ -596,7 +289,7 @@ export class Vector2D {
 
     /**
      * Converts the vector to an array
-     * @returns {Array}
+     * @returns {Array} - The array representation of the vector.
      */
     toArray() {
         return [this.x, this.y];
@@ -604,7 +297,7 @@ export class Vector2D {
 
     /**
      * Converts the vector to an object
-     * @returns {object}
+     * @returns {object} - The object representation of the vector.
      */
     toObject() {
         return { x: this.x, y: this.y };
@@ -614,7 +307,7 @@ export class Vector2D {
      * Creates a vector from the given cartesian coordinates.
      * @param {number} x - The X-coordinate of the vector.
      * @param {number} y - The Y-coordinate of the vector.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static vector(x = 0, y = 0) {
         return new Vector2D(x, y);
@@ -625,7 +318,7 @@ export class Vector2D {
      * @param {number} radius - The radius coordinate.
      * @param {number} angle - The angle coordinate, given in radians.
      * @param {Vector2D} center - The coordinates of the center.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static polar(radius = 0, angle = 0, center = Vector2D.origin) {
         const x = center.x + Math.cos(angle) * radius;
@@ -637,7 +330,7 @@ export class Vector2D {
     /**
      * Creates a vector from the cartesian coordinates given as an array.
      * @param {number[]} array - The cartesian coordinates of the form [x, y].
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static fromArray(array = []) {
         return new Vector2D(array[0], array[1]);
@@ -646,7 +339,7 @@ export class Vector2D {
     /**
      * Creates a vector from the cartesian coordinates given as an object.
      * @param {object} object - The cartesian coordinates of the form {x, y}.
-     * @returns {Vector2D}
+     * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static fromObject(object = {}) {
         return new Vector2D(object.x, object.y);
