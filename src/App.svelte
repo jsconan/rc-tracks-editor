@@ -65,7 +65,6 @@
             tileX += tileLength;
         }
     }
-    console.log(tileset.length * tileLength);
 </script>
 
 <Tileset x={0} y={-50} viewWidth={1000} viewHeight={300} width="100%" height="100%">
@@ -83,5 +82,35 @@
             {tileY}
             {filter}
         />
+        <g style="opacity: .5">
+            {#if tileRatio == 1}
+                <svelte:component
+                    this={tile}
+                    {barrierChunks}
+                    {barrierWidth}
+                    {tileLength}
+                    {tileWidth}
+                    {tileRatio}
+                    tileAngle={tileAngle + 90}
+                    {tileX}
+                    {tileY}
+                    {filter}
+                />
+            {/if}
+            {#if tileRatio > 1}
+                <svelte:component
+                    this={tile}
+                    {barrierChunks}
+                    {barrierWidth}
+                    {tileLength}
+                    {tileWidth}
+                    {tileRatio}
+                    tileAngle={tileAngle + 90 + (90 / tileRatio) * (tileRatio - 1)}
+                    {tileX}
+                    {tileY}
+                    {filter}
+                />
+            {/if}
+        </g>
     {/each}
 </Tileset>

@@ -11,6 +11,7 @@
     } from '../helpers/track.js';
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
+    import { Vector2D } from '../types/vector-2d.js';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -31,8 +32,6 @@
 
     const x = tileX + tilePadding;
     const y = tileY;
-    const cx = tileX + tileLength / 2;
-    const cy = tileY + tileLength / 2;
 
     const curveX = x - innerRadius;
     const curveY = y;
@@ -42,6 +41,18 @@
     const outerBarrierRadius = outerRadius - barrierWidth;
     const outerBarrierX = x + tileWidth - barrierWidth;
     const outerBarrierY = y;
+
+    const curveCenter = new Vector2D(curveX, curveY);
+    const middle = innerRadius + tileWidth / 2;
+
+    const p1 = Vector2D.polar(middle, 0, curveCenter);
+    const p2 = p1.addScalarY(10);
+    const p3 = Vector2D.polar(middle, curveAngle, curveCenter);
+    const p4 = p3.add(Vector2D.polar(10, curveAngle + 90));
+    const c = Vector2D.intersect(p1, p2, p3, p4);
+
+    const cx = c.x;
+    const cy = c.y;
 </script>
 
 <g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})" {filter}>
