@@ -539,13 +539,13 @@ describe('vector', () => {
             [0, 10, 90]
         ])('the angle of the vector [%s, %s]', (x, y, angle) => {
             const v = new Vector2D(x, y);
-            expect(v.angle()).toBe((angle / 180) * Math.PI);
+            expect(v.angle()).toBe(angle);
         });
 
         it('the angle between 2 vectors', () => {
             const v1 = new Vector2D(0, 4);
             const v2 = new Vector2D(4, 4);
-            expect(v1.angleWith(v2)).toBeCloseTo(Math.PI / 4, 5);
+            expect(v1.angleWith(v2)).toBeCloseTo(45, 5);
         });
     });
 
@@ -565,7 +565,7 @@ describe('vector', () => {
     describe('can rotate', () => {
         it('the coordinates around the origin', () => {
             const v1 = new Vector2D(10, 10);
-            const v2 = v1.rotate(Math.PI / 2);
+            const v2 = v1.rotate(90);
 
             expect(v1.x).toBe(10);
             expect(v1.y).toBe(10);
@@ -577,7 +577,7 @@ describe('vector', () => {
 
         it('the coordinates around the origin to the target angle', () => {
             const v1 = new Vector2D(10, 0);
-            const v2 = v1.rotateTo(Math.PI / 2);
+            const v2 = v1.rotateTo(90);
 
             expect(v1.x).toBe(10);
             expect(v1.y).toBe(0);
@@ -590,7 +590,7 @@ describe('vector', () => {
         it('the coordinates around a given center', () => {
             const c = new Vector2D(5, 5);
             const v1 = new Vector2D(10, 10);
-            const v2 = v1.rotateAround(Math.PI / 2, c);
+            const v2 = v1.rotateAround(90, c);
 
             expect(v1.x).toBe(10);
             expect(v1.y).toBe(10);
@@ -603,7 +603,7 @@ describe('vector', () => {
         it('the coordinates around a given center to the target angle', () => {
             const c = new Vector2D(5, 5);
             const v1 = new Vector2D(10, 0);
-            const v2 = v1.rotateAroundTo(Math.PI / 2, c);
+            const v2 = v1.rotateAroundTo(90, c);
 
             expect(v1.x).toBe(10);
             expect(v1.y).toBe(0);
@@ -644,23 +644,23 @@ describe('vector', () => {
     });
 
     describe('has a static property', () => {
-        describe('origin', () => {
+        describe('ORIGIN', () => {
             it('which is a vector', () => {
-                expect(Vector2D.origin).toBeInstanceOf(Vector2D);
+                expect(Vector2D.ORIGIN).toBeInstanceOf(Vector2D);
             });
 
             it('which represents the origin', () => {
-                expect(Vector2D.origin.x).toBe(0);
-                expect(Vector2D.origin.y).toBe(0);
+                expect(Vector2D.ORIGIN.x).toBe(0);
+                expect(Vector2D.ORIGIN.y).toBe(0);
             });
 
             it('which is a pure constant', () => {
                 // trick to prevent VSCode from complaining about const re-assign
-                expect(() => (Vector2D['ori' + 'gin'] = true)).toThrow();
-                expect(() => (Vector2D.origin.x = 1)).toThrow();
-                expect(() => (Vector2D.origin.y = 1)).toThrow();
-                expect(Vector2D.origin.x).toBe(0);
-                expect(Vector2D.origin.y).toBe(0);
+                expect(() => (Vector2D['ORI' + 'GIN'] = true)).toThrow();
+                expect(() => (Vector2D.ORIGIN.x = 1)).toThrow();
+                expect(() => (Vector2D.ORIGIN.y = 1)).toThrow();
+                expect(Vector2D.ORIGIN.x).toBe(0);
+                expect(Vector2D.ORIGIN.y).toBe(0);
             });
         });
 
@@ -683,7 +683,7 @@ describe('vector', () => {
                 });
             });
 
-            it('which create a different instance on each call', () => {
+            it('which creates a different instance on each call', () => {
                 const v1 = Vector2D.vector();
                 const v2 = Vector2D.vector();
 
@@ -702,7 +702,7 @@ describe('vector', () => {
                 });
 
                 it('at the given polar coordinates', () => {
-                    const v = Vector2D.polar(10, Math.PI);
+                    const v = Vector2D.polar(10, 180);
 
                     expect(v).toBeInstanceOf(Vector2D);
                     expect(v.x).toBe(-10);
@@ -711,7 +711,7 @@ describe('vector', () => {
 
                 it('at the given polar coordinates around the given center', () => {
                     const c = new Vector2D(10, 10);
-                    const v = Vector2D.polar(10, Math.PI / 2, c);
+                    const v = Vector2D.polar(10, 90, c);
 
                     expect(v).toBeInstanceOf(Vector2D);
                     expect(v.x).toBe(10);
@@ -719,7 +719,7 @@ describe('vector', () => {
                 });
             });
 
-            it('which create a different instance on each call', () => {
+            it('which creates a different instance on each call', () => {
                 const v1 = Vector2D.polar();
                 const v2 = Vector2D.polar();
 
@@ -746,7 +746,7 @@ describe('vector', () => {
                 });
             });
 
-            it('which create a different instance on each call', () => {
+            it('which creates a different instance on each call', () => {
                 const v1 = Vector2D.fromArray();
                 const v2 = Vector2D.fromArray();
 
@@ -773,11 +773,37 @@ describe('vector', () => {
                 });
             });
 
-            it('which create a different instance on each call', () => {
+            it('which creates a different instance on each call', () => {
                 const v1 = Vector2D.fromObject();
                 const v2 = Vector2D.fromObject();
 
                 expect(v1).not.toBe(v2);
+            });
+        });
+
+        describe('toRadians', () => {
+            it('which is a function', () => {
+                expect(Vector2D.toRadians).toEqual(expect.any(Function));
+            });
+
+            it('which converts degrees to radians', () => {
+                expect(Vector2D.toRadians(90)).toBe(Math.PI / 2);
+                expect(Vector2D.toRadians(180)).toBe(Math.PI);
+                expect(Vector2D.toRadians(270)).toBe((Math.PI / 2) * 3);
+                expect(Vector2D.toRadians(360)).toBe(Math.PI * 2);
+            });
+        });
+
+        describe('toDegrees', () => {
+            it('which is a function', () => {
+                expect(Vector2D.toDegrees).toEqual(expect.any(Function));
+            });
+
+            it('which converts radians to degrees', () => {
+                expect(Vector2D.toDegrees(Math.PI / 2)).toBe(90);
+                expect(Vector2D.toDegrees(Math.PI)).toBe(180);
+                expect(Vector2D.toDegrees((Math.PI / 2) * 3)).toBe(270);
+                expect(Vector2D.toDegrees(Math.PI * 2)).toBe(360);
             });
         });
 

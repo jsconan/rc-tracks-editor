@@ -408,19 +408,19 @@ export class Vector2D {
 
     /**
      * Computes the angle of the vector toward the X-axis.
-     * @returns {number} - The angle of the vector.
+     * @returns {number} - The angle of the vector, in degrees.
      */
     angle() {
-        return Math.atan2(this.y, this.x);
+        return Vector2D.toDegrees(Math.atan2(this.y, this.x));
     }
 
     /**
      * Computes the angle between of the vector and another vector.
      * @param {Vector2D} vector - The other vector to compute the angle.
-     * @returns {number} - The angle between the 2 vectors.
+     * @returns {number} - The angle between the 2 vectors, in degrees.
      */
     angleWith(vector) {
-        return Math.acos(this.dot(vector) / (this.length() * vector.length()));
+        return Vector2D.toDegrees(Math.acos(this.dot(vector) / (this.length() * vector.length())));
     }
 
     /**
@@ -435,19 +435,20 @@ export class Vector2D {
 
     /**
      * Rotates the vector around the origin by the given angle.
-     * @param {number} angle - The rotation angle, given in radians.
+     * @param {number} angle - The rotation angle, given in degrees.
      * @returns {Vector2D} - A new vector rotated by the given angle.
      */
     rotate(angle) {
-        const x = this.x * Math.cos(angle) - this.y * Math.sin(angle);
-        const y = this.x * Math.sin(angle) + this.y * Math.cos(angle);
+        const rad = Vector2D.toRadians(angle);
+        const x = this.x * Math.cos(rad) - this.y * Math.sin(rad);
+        const y = this.x * Math.sin(rad) + this.y * Math.cos(rad);
 
         return new Vector2D(x, y);
     }
 
     /**
      * Rotates the vector around the origin to the given angle.
-     * @param {number} angle - The target angle, given in radians.
+     * @param {number} angle - The target angle, given in degrees.
      * @returns {Vector2D} - A new vector rotated to the given angle.
      */
     rotateTo(angle) {
@@ -456,7 +457,7 @@ export class Vector2D {
 
     /**
      * Rotates the vector around the given center by the given angle.
-     * @param {number} angle - The rotation angle, given in radians.
+     * @param {number} angle - The rotation angle, given in degrees.
      * * @param {Vector2D} center - The coordinates of the center.
      * @returns {Vector2D} - A new vector rotated by the given angle.
      */
@@ -466,7 +467,7 @@ export class Vector2D {
 
     /**
      * Rotates the vector around the given center to the given angle.
-     * @param {number} angle - The target angle, given in radians.
+     * @param {number} angle - The target angle, given in degrees.
      * * @param {Vector2D} center - The coordinates of the center.
      * @returns {Vector2D} - A new vector rotated to the given angle.
      */
@@ -521,13 +522,14 @@ export class Vector2D {
     /**
      * Creates a vector from the given polar coordinates.
      * @param {number} radius - The radius coordinate.
-     * @param {number} angle - The angle coordinate, given in radians.
+     * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
-    static polar(radius = 0, angle = 0, center = Vector2D.origin) {
-        const x = center.x + Math.cos(angle) * radius;
-        const y = center.y + Math.sin(angle) * radius;
+    static polar(radius = 0, angle = 0, center = Vector2D.ORIGIN) {
+        const rad = Vector2D.toRadians(angle);
+        const x = center.x + Math.cos(rad) * radius;
+        const y = center.y + Math.sin(rad) * radius;
 
         return new Vector2D(x, y);
     }
@@ -573,17 +575,78 @@ export class Vector2D {
 
         return null;
     }
+
+    /**
+     * Converts an angle given in degrees to radians.
+     * @param {number} angle - The angle given in degrees.
+     * @returns {number} - The angle converted to radians.
+     */
+    static toRadians(angle) {
+        return angle / Vector2D.DEGREES_PER_RADIANS;
+    }
+
+    /**
+     * Converts an angle given in radians to degrees.
+     * @param {number} angle - The angle given in radians.
+     * @returns {number} - The angle converted to degrees.
+     */
+    static toDegrees(angle) {
+        return angle * Vector2D.DEGREES_PER_RADIANS;
+    }
 }
 
 /**
  * Represents the origin of cartesian coordinates as a vector.
- * @type {Vector2D}
- * @property {Vector2D} Vector2D.origin
+ * @constant {Vector2D} Vector2D.ORIGIN
  */
-Object.defineProperty(Vector2D, 'origin', {
+Object.defineProperty(Vector2D, 'ORIGIN', {
     value: new Vector2D(),
     writable: false,
     enumerable: true,
     configurable: true
 });
-Object.freeze(Vector2D.origin);
+Object.freeze(Vector2D.ORIGIN);
+
+/**
+ * A right angle in degrees.
+ * @constant {number} Vector2D.RIGHT_ANGLE
+ */
+Object.defineProperty(Vector2D, 'RIGHT_ANGLE', {
+    value: 90,
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
+
+/**
+ * A straight angle in degrees.
+ * @constant {number} Vector2D.STRAIGHT_ANGLE
+ */
+Object.defineProperty(Vector2D, 'STRAIGHT_ANGLE', {
+    value: 180,
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
+
+/**
+ * Degrees in a circle.
+ * @constant {number} Vector2D.DEGREES
+ */
+Object.defineProperty(Vector2D, 'DEGREES', {
+    value: 360,
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
+
+/**
+ * The number of degrees per radian.
+ * @constant {number} Vector2D.DEGREES_PER_RADIANS
+ */
+Object.defineProperty(Vector2D, 'DEGREES_PER_RADIANS', {
+    value: 180 / Math.PI,
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
