@@ -2,8 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { getPoint } from '../helpers/point';
-    import { polar } from '../helpers/polar';
+    import { Vector2D } from '../types/vector-2d';
 
     let cls = void 0;
     export { cls as class };
@@ -18,12 +17,12 @@
     const innerRadius = radius;
     const outerRadius = radius + width;
     const end = start + angle;
-    const center = getPoint(cx, cy);
+    const center = new Vector2D(cx, cy);
 
-    const p1 = polar(innerRadius, start, center);
-    const p2 = polar(innerRadius, end, center);
-    const p3 = polar(outerRadius, end, center);
-    const p4 = polar(outerRadius, start, center);
+    const p1 = Vector2D.polar(innerRadius, start, center);
+    const p2 = Vector2D.polar(innerRadius, end, center);
+    const p3 = Vector2D.polar(outerRadius, end, center);
+    const p4 = Vector2D.polar(outerRadius, start, center);
 </script>
 
 <path
