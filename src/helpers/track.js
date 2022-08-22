@@ -16,8 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { RIGHT_ANGLE } from './trigo.js';
-
 /**
  * Computes the overall width of a track section.
  * @param {number} laneWidth - The width of a track lane.
@@ -48,7 +46,7 @@ export const getTrackLaneWidth = (width, barrierWidth) => width - barrierWidth *
  * @param {number} ratio - The ratio of the curve.
  * @returns {number}
  */
-export const getCurveAngle = ratio => RIGHT_ANGLE / (ratio < 1 ? 1 / ratio : ratio);
+export const getCurveAngle = ratio => 90 / (ratio < 1 ? 1 / ratio : ratio);
 
 /**
  * Computes the inner radius of a curve given the ratio.
