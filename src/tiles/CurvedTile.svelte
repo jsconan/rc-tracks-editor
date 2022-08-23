@@ -11,7 +11,7 @@
     } from '../helpers/track.js';
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
-    import { Vector2D } from '../types/vector-2d.js';
+    import { Vector2D } from '../models/vector-2d.js';
 
     export let barrierChunks;
     export let barrierWidth;
