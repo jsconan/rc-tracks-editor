@@ -2,6 +2,7 @@
     --color-ground: #444;
     --color-even: #eec;
     --color-odd: #c24;
+    --color-control: #2a2;
 }
 
 html,
@@ -12,6 +13,10 @@ body,
     margin: 0;
     height: 100%;
     overflow: hidden;
+}
+
+.control {
+    fill: var(--color-control);
 }
 
 .ground {

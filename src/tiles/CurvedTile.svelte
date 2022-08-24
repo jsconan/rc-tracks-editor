@@ -2,35 +2,33 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import {
-        getCurveAngle,
-        getCurveInnerBarrierChunks,
-        getCurveInnerRadius,
-        getCurveOuterBarrierChunks,
-        getCurveOuterRadius
-    } from '../helpers/track.js';
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
-    import { Vector2D } from '../models/vector-2d.js';
+    import { Tile } from '../models/tile.js';
 
     export let barrierChunks;
     export let barrierWidth;
     export let tileLength;
     export let tileWidth;
     export let tileRatio = 1;
-    export let tileAngle = 0;
+    export let direction = Tile.DIRECTION_RIGHT;
+    export let rotation = 0;
     export let tileX = 0;
     export let tileY = 0;
     export let filter;
 
-    const tilePadding = (tileLength - tileWidth) / 2;
-    const innerRadius = getCurveInnerRadius(tileLength, tileWidth, tileRatio);
-    const outerRadius = getCurveOuterRadius(tileLength, tileWidth, tileRatio);
-    const innerChunks = getCurveInnerBarrierChunks(barrierChunks, tileRatio);
-    const outerChunks = getCurveOuterBarrierChunks(barrierChunks, tileRatio);
-    const curveAngle = getCurveAngle(tileRatio);
+    const tile = new Tile(tileLength, tileWidth, tileRatio, Tile.TYPE_CURVED, direction);
 
-    const x = tileX + tilePadding;
+    const padding = tile.getPadding();
+    const innerRadius = tile.getInnerRadius();
+    const outerRadius = tile.getOuterRadius();
+    const innerChunks = tile.getInnerBarrierChunks(barrierChunks);
+    const outerChunks = tile.getOuterBarrierChunks(barrierChunks);
+    const tileAngle = tile.getDirectionAngle();
+    const curveAngle = tile.getCurveAngle();
+    const center = tile.getCenterCoord(tileX, tileY);
+
+    const x = tileX - tileLength / 2 + padding;
     const y = tileY;
 
     const curveX = x - innerRadius;
@@ -42,20 +40,16 @@
     const outerBarrierX = x + tileWidth - barrierWidth;
     const outerBarrierY = y;
 
-    const curveCenter = new Vector2D(curveX, curveY);
-    const middle = innerRadius + tileWidth / 2;
-
-    const p1 = Vector2D.polar(middle, 0, curveCenter);
-    const p2 = p1.addScalarY(10);
-    const p3 = Vector2D.polar(middle, curveAngle, curveCenter);
-    const p4 = p3.add(Vector2D.polar(10, curveAngle + 90));
-    const c = Vector2D.intersect(p1, p2, p3, p4);
-
-    const cx = c.x;
-    const cy = c.y;
+    const input = tile.getInputCoord(tileX, tileY);
+    const output = tile.getOutputCoord(tileX, tileY, rotation);
+    const centerR = tile.getCenterCoord(tileX, tileY, rotation);
 </script>
 
-<g class="tile curved-tile" transform="rotate({tileAngle} {cx} {cy})" {filter}>
+<g
+    class="tile curved-tile"
+    transform="rotate({rotation} {tileX} {tileY}) rotate({tileAngle} {center.x} {center.y})"
+    {filter}
+>
     <CurvedElement
         class="ground"
         cx={curveX}
@@ -84,3 +78,7 @@
         shift={1}
     />
 </g>
+
+<circle class="control" cx={centerR.x} cy={centerR.y} r="4" />
+<circle class="control" cx={input.x} cy={input.y} r="4" />
+<circle class="control" cx={output.x} cy={output.y} r="4" />

@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { getTrackSectionWidth, getTrackSectionLength } from './helpers/track.js';
+import { Tile } from './models/tile.js';
 
 /**
  * The dimensions and constraints of a track element
@@ -74,8 +74,8 @@ const config = {
      * @returns {object} - Returns the configuration.
      */
     compute() {
-        this.trackSectionLength = getTrackSectionLength(this.trackLaneWidth, this.barrierWidth);
-        this.trackSectionWidth = getTrackSectionWidth(this.trackLaneWidth, this.barrierWidth);
+        this.trackSectionLength = Tile.getTileLength(this.trackLaneWidth, this.barrierWidth);
+        this.trackSectionWidth = Tile.getTileWidth(this.trackLaneWidth, this.barrierWidth);
         return this;
     }
 };

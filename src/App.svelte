@@ -9,42 +9,49 @@
     import CurvedTile from './tiles/CurvedTile.svelte';
     import CurvedTileEnlarged from './tiles/CurvedTileEnlarged.svelte';
     import Tileset from './tiles/Tileset.svelte';
+    import { Tile } from './models/tile';
 
     const tileset = [
         {
             tile: StraightTile,
             ratio: 1,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         },
         {
             tile: CurvedTileEnlarged,
             ratio: 1,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 1,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 2,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 3,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 4,
-            angle: 0,
+            direction: Tile.DIRECTION_RIGHT,
+            rotation: 0,
             selected: false
         }
     ];
@@ -59,17 +66,17 @@
         let tileY = 0;
 
         for (const item of tileset) {
-            const { tile, ratio, angle, selected } = item;
+            const { tile, ratio, direction, rotation, selected } = item;
             const filter = selected ? 'url(#outline)' : void 0;
-            yield { tile, tileRatio: ratio, tileAngle: angle, tileX, tileY, filter };
+            yield { tile, tileRatio: ratio, direction, rotation, tileX, tileY, filter };
             tileX += tileLength;
         }
     }
 </script>
 
-<Tileset x={0} y={-50} viewWidth={1000} viewHeight={300} width="100%" height="100%">
+<Tileset x={-300} y={-300} viewWidth={window.innerWidth} viewHeight={window.innerHeight} width="100%" height="100%">
     <Outline R={0.1} G={1} B={0.1} A={0.9} slot="defs" />
-    {#each [...tiles()] as { tile, tileRatio, tileAngle, tileX, tileY, filter }}
+    {#each [...tiles()] as { tile, tileRatio, direction, rotation, tileX, tileY, filter }}
         <svelte:component
             this={tile}
             {barrierChunks}
@@ -77,40 +84,26 @@
             {tileLength}
             {tileWidth}
             {tileRatio}
-            {tileAngle}
+            {direction}
+            {rotation}
             {tileX}
             {tileY}
             {filter}
         />
-        <g style="opacity: .5">
-            {#if tileRatio == 1}
-                <svelte:component
-                    this={tile}
-                    {barrierChunks}
-                    {barrierWidth}
-                    {tileLength}
-                    {tileWidth}
-                    {tileRatio}
-                    tileAngle={tileAngle + 90}
-                    {tileX}
-                    {tileY}
-                    {filter}
-                />
-            {/if}
-            {#if tileRatio > 1}
-                <svelte:component
-                    this={tile}
-                    {barrierChunks}
-                    {barrierWidth}
-                    {tileLength}
-                    {tileWidth}
-                    {tileRatio}
-                    tileAngle={tileAngle + 90 + (90 / tileRatio) * (tileRatio - 1)}
-                    {tileX}
-                    {tileY}
-                    {filter}
-                />
-            {/if}
-        </g>
+        <!-- <g style="opacity: .5">
+            <svelte:component
+                this={tile}
+                {barrierChunks}
+                {barrierWidth}
+                {tileLength}
+                {tileWidth}
+                {tileRatio}
+                direction={direction == Tile.DIRECTION_RIGHT ? Tile.DIRECTION_LEFT : Tile.DIRECTION_RIGHT}
+                {rotation}
+                {tileX}
+                {tileY}
+                {filter}
+            />
+        </g> -->
     {/each}
 </Tileset>
