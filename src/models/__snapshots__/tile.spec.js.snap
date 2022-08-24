@@ -1,0 +1,1731 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile can build a tile with the given direction 1`] = `
+Tile {
+  "direction": 1,
+  "length": 110,
+  "ratio": 3,
+  "type": "curved",
+  "width": 90,
+}
+`;
+
+exports[`Tile can build a tile with the given ratio 1`] = `
+Tile {
+  "direction": 0,
+  "length": 110,
+  "ratio": 3,
+  "type": "straight",
+  "width": 90,
+}
+`;
+
+exports[`Tile can build a tile with the given size 1`] = `
+Tile {
+  "direction": 0,
+  "length": 110,
+  "ratio": 1,
+  "type": "straight",
+  "width": 90,
+}
+`;
+
+exports[`Tile can build a tile with the given type 1`] = `
+Tile {
+  "direction": 0,
+  "length": 110,
+  "ratio": 3,
+  "type": "curved",
+  "width": 90,
+}
+`;
+
+exports[`Tile can compute the actual length for a curved tile enlarged with a ratio of 0.5 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile enlarged with a ratio of 1 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile enlarged with a ratio of 2 1`] = `220`;
+
+exports[`Tile can compute the actual length for a curved tile enlarged with a ratio of 3 1`] = `330`;
+
+exports[`Tile can compute the actual length for a curved tile enlarged with a ratio of 4 1`] = `440`;
+
+exports[`Tile can compute the actual length for a curved tile with a ratio of 0.5 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile with a ratio of 1 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile with a ratio of 2 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile with a ratio of 3 1`] = `110`;
+
+exports[`Tile can compute the actual length for a curved tile with a ratio of 4 1`] = `110`;
+
+exports[`Tile can compute the actual length for a straight tile with a ratio of 0.5 1`] = `55`;
+
+exports[`Tile can compute the actual length for a straight tile with a ratio of 1 1`] = `110`;
+
+exports[`Tile can compute the actual length for a straight tile with a ratio of 2 1`] = `220`;
+
+exports[`Tile can compute the actual length for a straight tile with a ratio of 3 1`] = `330`;
+
+exports[`Tile can compute the actual length for a straight tile with a ratio of 4 1`] = `440`;
+
+exports[`Tile can compute the actual width for a curved tile enlarged with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile enlarged with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile enlarged with a ratio of 2 1`] = `180`;
+
+exports[`Tile can compute the actual width for a curved tile enlarged with a ratio of 3 1`] = `270`;
+
+exports[`Tile can compute the actual width for a curved tile enlarged with a ratio of 4 1`] = `360`;
+
+exports[`Tile can compute the actual width for a curved tile with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile with a ratio of 2 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile with a ratio of 3 1`] = `90`;
+
+exports[`Tile can compute the actual width for a curved tile with a ratio of 4 1`] = `90`;
+
+exports[`Tile can compute the actual width for a straight tile with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the actual width for a straight tile with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the actual width for a straight tile with a ratio of 2 1`] = `90`;
+
+exports[`Tile can compute the actual width for a straight tile with a ratio of 3 1`] = `90`;
+
+exports[`Tile can compute the actual width for a straight tile with a ratio of 4 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile enlarged with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile enlarged with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile enlarged with a ratio of 2 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile enlarged with a ratio of 3 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile enlarged with a ratio of 4 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile with a ratio of 0.5 1`] = `45`;
+
+exports[`Tile can compute the angle of the curve for a curved tile with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the angle of the curve for a curved tile with a ratio of 2 1`] = `45`;
+
+exports[`Tile can compute the angle of the curve for a curved tile with a ratio of 3 1`] = `30`;
+
+exports[`Tile can compute the angle of the curve for a curved tile with a ratio of 4 1`] = `22.5`;
+
+exports[`Tile can compute the angle of the curve for a straight tile with a ratio of 0.5 1`] = `180`;
+
+exports[`Tile can compute the angle of the curve for a straight tile with a ratio of 1 1`] = `180`;
+
+exports[`Tile can compute the angle of the curve for a straight tile with a ratio of 2 1`] = `180`;
+
+exports[`Tile can compute the angle of the curve for a straight tile with a ratio of 3 1`] = `180`;
+
+exports[`Tile can compute the angle of the curve for a straight tile with a ratio of 4 1`] = `180`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile enlarged with a ratio of 0.5 1`] = `10`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile enlarged with a ratio of 1 1`] = `10`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile enlarged with a ratio of 2 1`] = `120`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile enlarged with a ratio of 3 1`] = `230`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile enlarged with a ratio of 4 1`] = `340`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile with a ratio of 0.5 1`] = `10`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile with a ratio of 1 1`] = `10`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile with a ratio of 2 1`] = `120`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile with a ratio of 3 1`] = `230`;
+
+exports[`Tile can compute the inner radius of the curve for a curved tile with a ratio of 4 1`] = `340`;
+
+exports[`Tile can compute the number of chunks by side for a curved tile enlarged with a ratio of 0.5 1`] = `2`;
+
+exports[`Tile can compute the number of chunks by side for a curved tile enlarged with a ratio of 1 1`] = `2`;
+
+exports[`Tile can compute the number of chunks by side for a curved tile enlarged with a ratio of 2 1`] = `4`;
+
+exports[`Tile can compute the number of chunks by side for a curved tile enlarged with a ratio of 3 1`] = `6`;
+
+exports[`Tile can compute the number of chunks by side for a curved tile enlarged with a ratio of 4 1`] = `8`;
+
+exports[`Tile can compute the number of chunks by side for a straight tile with a ratio of 0.5 1`] = `2`;
+
+exports[`Tile can compute the number of chunks by side for a straight tile with a ratio of 1 1`] = `4`;
+
+exports[`Tile can compute the number of chunks by side for a straight tile with a ratio of 2 1`] = `8`;
+
+exports[`Tile can compute the number of chunks by side for a straight tile with a ratio of 3 1`] = `12`;
+
+exports[`Tile can compute the number of chunks by side for a straight tile with a ratio of 4 1`] = `16`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile enlarged with a ratio of 0.5 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile enlarged with a ratio of 1 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile enlarged with a ratio of 2 1`] = `8`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile enlarged with a ratio of 3 1`] = `12`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile enlarged with a ratio of 4 1`] = `16`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile with a ratio of 0.5 1`] = `1`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile with a ratio of 1 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile with a ratio of 2 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile with a ratio of 3 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the inner curve for a curved tile with a ratio of 4 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile enlarged with a ratio of 0.5 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile enlarged with a ratio of 1 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile enlarged with a ratio of 2 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile enlarged with a ratio of 3 1`] = `6`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile enlarged with a ratio of 4 1`] = `8`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile with a ratio of 0.5 1`] = `2`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile with a ratio of 1 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile with a ratio of 2 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile with a ratio of 3 1`] = `4`;
+
+exports[`Tile can compute the number of chunks for the outer curve for a curved tile with a ratio of 4 1`] = `4`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile enlarged with a ratio of 0.5 1`] = `45`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile enlarged with a ratio of 1 1`] = `45`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile enlarged with a ratio of 2 1`] = `100`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile enlarged with a ratio of 3 1`] = `155`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile enlarged with a ratio of 4 1`] = `210`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile with a ratio of 0.5 1`] = `100`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile with a ratio of 1 1`] = `100`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile with a ratio of 2 1`] = `210`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile with a ratio of 3 1`] = `320`;
+
+exports[`Tile can compute the outer radius of the curve for a curved tile with a ratio of 4 1`] = `430`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile enlarged with a ratio of 0.5 1`] = `55`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile enlarged with a ratio of 1 1`] = `55`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile enlarged with a ratio of 2 1`] = `110`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile enlarged with a ratio of 3 1`] = `165`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile enlarged with a ratio of 4 1`] = `220`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile with a ratio of 0.5 1`] = `0`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile with a ratio of 1 1`] = `0`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile with a ratio of 2 1`] = `0`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile with a ratio of 3 1`] = `0`;
+
+exports[`Tile can compute the outer side of the curve for a curved tile with a ratio of 4 1`] = `0`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": -65,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 165,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 375,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": -175,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 275,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 485,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": -285,
+  "y": 100.00000000000003,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 385,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": -65,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 165,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 375,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": -175,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 275,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 485,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": -285,
+  "y": 100.00000000000003,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile enlarged oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 385,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 122.78174593052023,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 77.21825406947977,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 22.781745930520216,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 168.34523779156066,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": 31.654762208439337,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 68.34523779156069,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 173.68602791855866,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": 26.313972081441335,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 73.6860279185587,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 176.58126144116827,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": 23.418738558831734,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 76.58126144116827,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 122.78174593052023,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 77.21825406947977,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 22.781745930520216,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 168.34523779156066,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": 31.654762208439337,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 68.34523779156069,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 173.68602791855866,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": 26.313972081441335,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 73.6860279185587,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 176.58126144116827,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": 23.418738558831734,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a curved tile oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 76.58126144116827,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 127.5,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 72.5,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 27.5,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 210,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 2 2`] = `
+Vector2D {
+  "x": -10,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 110,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 3 2`] = `
+Vector2D {
+  "x": -65,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 165,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 320,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 4 2`] = `
+Vector2D {
+  "x": -120,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the center point for a straight tile with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 220,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile enlarged oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a curved tile oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 1 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 2 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 3 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the input point for a straight tile with a ratio of 4 2`] = `
+Vector2D {
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 265,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": -65,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 165,
+  "y": 165,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 375,
+  "y": 375,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": -175,
+  "y": 375,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 275,
+  "y": 275,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 485,
+  "y": 485,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": -285,
+  "y": 485,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 385,
+  "y": 385,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": -65,
+  "y": 265,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": -65,
+  "y": -65,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": -165,
+  "y": 165,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": -175,
+  "y": 375,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": -175,
+  "y": -175,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": -275,
+  "y": 275,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": -285,
+  "y": 485,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": -285,
+  "y": -285,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile enlarged oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": -385,
+  "y": 385,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 116.10912703473988,
+  "y": 138.89087296526012,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 61.109127034739885,
+  "y": 116.10912703473988,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 16.109127034739892,
+  "y": 38.890872965260115,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 148.32738110421968,
+  "y": 216.67261889578035,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": -16.672618895780346,
+  "y": 148.32738110421968,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 48.32738110421967,
+  "y": 116.67261889578035,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 136.84301395927935,
+  "y": 237.49999999999997,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": -37.49999999999997,
+  "y": 136.84301395927935,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 36.84301395927935,
+  "y": 137.49999999999997,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 129.3063799831546,
+  "y": 247.3331214605596,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": -47.333121460559596,
+  "y": 129.3063799831546,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 29.306379983154613,
+  "y": 147.3331214605596,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 83.89087296526012,
+  "y": 138.89087296526012,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 61.109127034739885,
+  "y": 83.89087296526012,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": -16.109127034739885,
+  "y": 38.89087296526011,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 51.672618895780346,
+  "y": 216.67261889578032,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": -16.672618895780317,
+  "y": 51.67261889578035,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": -48.327381104219654,
+  "y": 116.67261889578033,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 63.15698604072065,
+  "y": 237.49999999999997,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": -37.49999999999997,
+  "y": 63.15698604072066,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": -36.84301395927935,
+  "y": 137.49999999999997,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 70.69362001684539,
+  "y": 247.33312146055957,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": -47.33312146055957,
+  "y": 70.6936200168454,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a curved tile oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": -29.306379983154613,
+  "y": 147.33312146055957,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 1 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 210,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 1 2`] = `
+Vector2D {
+  "x": -10,
+  "y": 100,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 1 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 110,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 2 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 320,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 2 2`] = `
+Vector2D {
+  "x": -120,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 2 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 220,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 3 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 430,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 3 2`] = `
+Vector2D {
+  "x": -230,
+  "y": 100.00000000000001,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 3 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 330,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 4 1`] = `
+Vector2D {
+  "x": 100,
+  "y": 540,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 4 2`] = `
+Vector2D {
+  "x": -340,
+  "y": 100.00000000000003,
+}
+`;
+
+exports[`Tile can compute the position of the output point for a straight tile with a ratio of 4 3`] = `
+Vector2D {
+  "x": 0,
+  "y": 440,
+}
+`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the left with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the left with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the left with a ratio of 2 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the left with a ratio of 3 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the left with a ratio of 4 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the right with a ratio of 0.5 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the right with a ratio of 1 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the right with a ratio of 2 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the right with a ratio of 3 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile enlarged oriented to the right with a ratio of 4 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the left with a ratio of 0.5 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the left with a ratio of 1 1`] = `90`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the left with a ratio of 2 1`] = `135`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the left with a ratio of 3 1`] = `150`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the left with a ratio of 4 1`] = `157.5`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the right with a ratio of 0.5 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the right with a ratio of 1 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the right with a ratio of 2 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the right with a ratio of 3 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a curved tile oriented to the right with a ratio of 4 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a straight tile with a ratio of 0.5 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a straight tile with a ratio of 1 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a straight tile with a ratio of 2 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a straight tile with a ratio of 3 1`] = `0`;
+
+exports[`Tile can compute the rotation angle of the direction for a straight tile with a ratio of 4 1`] = `0`;
+
+exports[`Tile can compute the width padding for a curved tile enlarged with a ratio of 0.5 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile enlarged with a ratio of 1 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile enlarged with a ratio of 2 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile enlarged with a ratio of 3 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile enlarged with a ratio of 4 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile with a ratio of 0.5 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile with a ratio of 1 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile with a ratio of 2 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile with a ratio of 3 1`] = `10`;
+
+exports[`Tile can compute the width padding for a curved tile with a ratio of 4 1`] = `10`;
+
+exports[`Tile can compute the width padding for a straight tile with a ratio of 0.5 1`] = `10`;
+
+exports[`Tile can compute the width padding for a straight tile with a ratio of 1 1`] = `10`;
+
+exports[`Tile can compute the width padding for a straight tile with a ratio of 2 1`] = `10`;
+
+exports[`Tile can compute the width padding for a straight tile with a ratio of 3 1`] = `10`;
+
+exports[`Tile can compute the width padding for a straight tile with a ratio of 4 1`] = `10`;
