@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from './vector-2d';
+import { Vector2D } from './vector-2d.js';
 
 /**
  * Represents a track tile.
@@ -102,11 +102,7 @@ export class Tile {
             return 90;
         }
 
-        if (this.ratio < 1) {
-            return 90 * this.ratio;
-        }
-
-        return 90 / this.ratio;
+        return Tile.getCurveAngle(this.ratio);
     }
 
     /**
@@ -300,6 +296,19 @@ export class Tile {
      */
     static getLaneWidth(width, barrierWidth) {
         return width - barrierWidth * 2;
+    }
+
+    /**
+     * Computes the angle of the curve with respect to the tile ratio.
+     * @param {number} ratio - The size factor relative to a track section. 1 means the tile fit 1 tile section in each direction.
+     * @returns {number}
+     */
+    static getCurveAngle(ratio = 1) {
+        if (ratio < 1) {
+            return 90 * ratio;
+        }
+
+        return 90 / ratio;
     }
 }
 

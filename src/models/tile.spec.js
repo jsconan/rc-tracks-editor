@@ -16,8 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Tile } from './tile';
-import { Vector2D } from './vector-2d';
+import { Tile } from './tile.js';
+import { Vector2D } from './vector-2d.js';
 
 const tileX = 100;
 const tileY = 100;
@@ -516,6 +516,17 @@ describe('Tile', () => {
         describe('getLaneWidth', () => {
             it('which computes the width of a lane knowing the width of a tile and its barrier', () => {
                 expect(Tile.getLaneWidth(tileWidth, barrierWidth)).toBe(laneWidth);
+            });
+        });
+
+        describe('getCurveAngle', () => {
+            it('which computes the angle of the curve with respect of the size ratio', () => {
+                expect(Tile.getCurveAngle()).toBe(90);
+                expect(Tile.getCurveAngle(0.5)).toBe(45);
+                expect(Tile.getCurveAngle(1)).toBe(90);
+                expect(Tile.getCurveAngle(2)).toBe(45);
+                expect(Tile.getCurveAngle(3)).toBe(30);
+                expect(Tile.getCurveAngle(4)).toBe(22.5);
             });
         });
     });
