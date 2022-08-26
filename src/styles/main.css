@@ -1,8 +1,28 @@
 :root {
+    /* layout */
+    --color-fg-dark: rgba(255, 255, 255, 0.87);
+    --color-bg-dark: #242424;
+
+    --color-fg-light: #242424;
+    --color-bg-light: rgba(255, 255, 255, 0.87);
+
+    /* track tiles */
     --color-ground: #444;
     --color-even: #eec;
     --color-odd: #c24;
     --color-control: #2a2;
+
+    /* default scheme */
+    color-scheme: light dark;
+    color: var(--color-fg-dark);
+    background-color: var(--color-bg-dark);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: var(--color-fg-light);
+        background-color: var(--color-bg-light);
+    }
 }
 
 html,
