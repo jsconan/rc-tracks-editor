@@ -4,41 +4,37 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import StraightBarrier from '../elements/StraightBarrier.svelte';
-    import { Tile } from '../models/tile.js';
+    import { CurvedTileEnlargedModel } from '../models/curved-tile-enlarged-model.js';
 
     export let barrierChunks;
     export let barrierWidth;
-    export let tileLength;
-    export let tileWidth;
-    export let tileRatio = 1;
-    export let direction = Tile.DIRECTION_RIGHT;
+    export let laneWidth;
+    export let ratio = 1;
+    export let direction = CurvedTileEnlargedModel.DIRECTION_RIGHT;
     export let rotation = 0;
-    export let tileX = 0;
-    export let tileY = 0;
+    export let x = 0;
+    export let y = 0;
     export let filter;
 
-    const tile = new Tile(tileLength, tileWidth, tileRatio, Tile.TYPE_ENLARGED_CURVE, direction);
-    const barrierLength = tileLength / barrierChunks;
-    const padding = tile.getPadding();
+    const tile = new CurvedTileEnlargedModel(laneWidth, barrierWidth, barrierChunks, ratio);
+    const barrierLength = tile.length / barrierChunks;
     const side = tile.getCurveSide();
     const innerRadius = tile.getInnerRadius();
     const outerRadius = tile.getOuterRadius();
-    const sideChunks = tile.getSideBarrierChunks(barrierChunks);
-    const innerChunks = tile.getInnerBarrierChunks(barrierChunks);
-    const outerChunks = tile.getOuterBarrierChunks(barrierChunks);
-    const tileAngle = tile.getDirectionAngle();
+    const sideChunks = tile.getSideBarrierChunks();
+    const innerChunks = tile.getInnerBarrierChunks();
+    const outerChunks = tile.getOuterBarrierChunks();
+    const tileAngle = tile.getDirectionAngle(direction);
     const curveAngle = tile.getCurveAngle();
-    const center = tile.getCenterCoord(tileX, tileY);
+    const curveCenter = tile.getCurveCenter(x, y);
+    const center = tile.getCenterCoord(x, y);
 
-    const x = tileX - tileLength / 2 + padding;
-    const y = tileY;
-
-    const innerCurveStartX = x;
-    const innerCurveStartY = y;
+    const innerCurveStartX = curveCenter.x + innerRadius;
+    const innerCurveStartY = curveCenter.y;
     const innerCurveEndX = innerCurveStartX - innerRadius;
     const innerCurveEndY = innerCurveStartY + innerRadius;
     const leftSideEndX = innerCurveEndX;
-    const leftSideEndY = innerCurveEndY + tileWidth;
+    const leftSideEndY = innerCurveEndY + tile.width;
     const outerCurveStartX = leftSideEndX + side;
     const outerCurveStartY = leftSideEndY;
     const outerCurveEndX = outerCurveStartX + outerRadius;
@@ -57,14 +53,14 @@
     const verticalBarrierX = rightSideEndX - barrierWidth;
     const verticalBarrierY = rightSideEndY;
 
-    const input = tile.getInputCoord(tileX, tileY);
-    const output = tile.getOutputCoord(tileX, tileY, rotation);
-    const centerR = tile.getCenterCoord(tileX, tileY, rotation);
+    const input = tile.getInputCoord(x, y);
+    const output = tile.getOutputCoord(direction, x, y, rotation);
+    const centerR = tile.getCenterCoord(x, y, rotation);
 </script>
 
 <g
     class="tile curved-tile-enlarged"
-    transform="rotate({rotation} {tileX} {tileY}) rotate({tileAngle} {center.x} {center.y})"
+    transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
     {filter}
 >
     <path

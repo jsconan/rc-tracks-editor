@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { alternateBarrierColor } from '../helpers/colors';
+    import { alternateBarrierColor } from '../helpers/colors.js';
     import StraightElement from './StraightElement.svelte';
 
     export let chunks;

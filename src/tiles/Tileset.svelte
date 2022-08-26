@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { defined } from '../helpers/types';
+    import { defined } from '../helpers/types.js';
 
     export let x = 0;
     export let y = 0;

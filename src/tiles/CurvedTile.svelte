@@ -4,57 +4,46 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
-    import { Tile } from '../models/tile.js';
+    import { CurvedTileModel } from '../models/curved-tile-model.js';
 
     export let barrierChunks;
     export let barrierWidth;
-    export let tileLength;
-    export let tileWidth;
-    export let tileRatio = 1;
-    export let direction = Tile.DIRECTION_RIGHT;
+    export let laneWidth;
+    export let ratio = 1;
+    export let direction = CurvedTileModel.DIRECTION_RIGHT;
     export let rotation = 0;
-    export let tileX = 0;
-    export let tileY = 0;
+    export let x = 0;
+    export let y = 0;
     export let filter;
 
-    const tile = new Tile(tileLength, tileWidth, tileRatio, Tile.TYPE_CURVED, direction);
-
-    const padding = tile.getPadding();
+    const tile = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
     const innerRadius = tile.getInnerRadius();
     const outerRadius = tile.getOuterRadius();
-    const innerChunks = tile.getInnerBarrierChunks(barrierChunks);
-    const outerChunks = tile.getOuterBarrierChunks(barrierChunks);
-    const tileAngle = tile.getDirectionAngle();
+    const innerChunks = tile.getInnerBarrierChunks();
+    const outerChunks = tile.getOuterBarrierChunks();
+    const tileAngle = tile.getDirectionAngle(direction);
     const curveAngle = tile.getCurveAngle();
-    const center = tile.getCenterCoord(tileX, tileY);
+    const curveCenter = tile.getCurveCenter(x, y);
+    const center = tile.getCenterCoord(x, y);
 
-    const x = tileX - tileLength / 2 + padding;
-    const y = tileY;
-
-    const curveX = x - innerRadius;
-    const curveY = y;
     const innerBarrierRadius = innerRadius;
-    const innerBarrierX = x;
-    const innerBarrierY = y;
+    const innerBarrierX = curveCenter.x + innerBarrierRadius;
+    const innerBarrierY = curveCenter.y;
     const outerBarrierRadius = outerRadius - barrierWidth;
-    const outerBarrierX = x + tileWidth - barrierWidth;
-    const outerBarrierY = y;
+    const outerBarrierX = curveCenter.x + outerBarrierRadius;
+    const outerBarrierY = curveCenter.y;
 
-    const input = tile.getInputCoord(tileX, tileY);
-    const output = tile.getOutputCoord(tileX, tileY, rotation);
-    const centerR = tile.getCenterCoord(tileX, tileY, rotation);
+    const input = tile.getInputCoord(x, y);
+    const output = tile.getOutputCoord(direction, x, y, rotation);
+    const centerR = tile.getCenterCoord(x, y, rotation);
 </script>
 
-<g
-    class="tile curved-tile"
-    transform="rotate({rotation} {tileX} {tileY}) rotate({tileAngle} {center.x} {center.y})"
-    {filter}
->
+<g class="tile curved-tile" transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})" {filter}>
     <CurvedElement
         class="ground"
-        cx={curveX}
-        cy={curveY}
-        width={tileWidth}
+        cx={curveCenter.x}
+        cy={curveCenter.y}
+        width={tile.width}
         radius={innerRadius}
         angle={curveAngle}
         start={0}

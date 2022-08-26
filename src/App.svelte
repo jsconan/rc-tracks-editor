@@ -9,48 +9,62 @@
     import CurvedTile from './tiles/CurvedTile.svelte';
     import CurvedTileEnlarged from './tiles/CurvedTileEnlarged.svelte';
     import Tileset from './tiles/Tileset.svelte';
-    import { Tile } from './models/tile';
+    import { TileModel } from './models/tile-model.js';
 
     const tileset = [
         {
             tile: StraightTile,
             ratio: 1,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
+            rotation: 0,
+            selected: false
+        },
+        {
+            tile: StraightTile,
+            ratio: 2,
+            direction: TileModel.DIRECTION_RIGHT,
+            rotation: 0,
+            selected: false
+        },
+        {
+            tile: StraightTile,
+            ratio: 3,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         },
         {
             tile: CurvedTileEnlarged,
             ratio: 1,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 1,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 2,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 3,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         },
         {
             tile: CurvedTile,
             ratio: 4,
-            direction: Tile.DIRECTION_RIGHT,
+            direction: TileModel.DIRECTION_RIGHT,
             rotation: 0,
             selected: false
         }
@@ -58,52 +72,35 @@
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
-    const tileLength = config.trackSectionLength;
-    const tileWidth = config.trackSectionWidth;
+    const laneWidth = config.trackLaneWidth;
 
     function* tiles() {
-        let tileX = 0;
-        let tileY = 0;
+        let x = 0;
+        let y = 0;
 
         for (const item of tileset) {
             const { tile, ratio, direction, rotation, selected } = item;
             const filter = selected ? 'url(#outline)' : void 0;
-            yield { tile, tileRatio: ratio, direction, rotation, tileX, tileY, filter };
-            tileX += tileLength;
+            yield { tile, ratio, direction, rotation, x, y, filter };
+            x += config.trackSectionLength;
         }
     }
 </script>
 
 <Tileset x={-300} y={-300} viewWidth={window.innerWidth} viewHeight={window.innerHeight} width="100%" height="100%">
     <Outline R={0.1} G={1} B={0.1} A={0.9} slot="defs" />
-    {#each [...tiles()] as { tile, tileRatio, direction, rotation, tileX, tileY, filter }}
+    {#each [...tiles()] as { tile, ratio, direction, rotation, x, y, filter }}
         <svelte:component
             this={tile}
             {barrierChunks}
             {barrierWidth}
-            {tileLength}
-            {tileWidth}
-            {tileRatio}
+            {laneWidth}
+            {ratio}
             {direction}
             {rotation}
-            {tileX}
-            {tileY}
+            {x}
+            {y}
             {filter}
         />
-        <!-- <g style="opacity: .5">
-            <svelte:component
-                this={tile}
-                {barrierChunks}
-                {barrierWidth}
-                {tileLength}
-                {tileWidth}
-                {tileRatio}
-                direction={direction == Tile.DIRECTION_RIGHT ? Tile.DIRECTION_LEFT : Tile.DIRECTION_RIGHT}
-                {rotation}
-                {tileX}
-                {tileY}
-                {filter}
-            />
-        </g> -->
     {/each}
 </Tileset>
