@@ -7,11 +7,12 @@
     export let G = 0;
     export let B = 0;
     export let A = 1;
+    export let width = 5;
 </script>
 
 <filter {id} filterUnits="userSpaceOnUse">
     <feMorphology operator="dilate" in="SourceAlpha" radius="0" result="inner" />
-    <feMorphology operator="dilate" in="SourceAlpha" radius="6" result="outer" />
+    <feMorphology operator="dilate" in="SourceAlpha" radius={width} result="outer" />
     <feComposite in="inner" in2="outer" operator="xor" result="outline" />
     <feColorMatrix
         type="matrix"

@@ -20,20 +20,6 @@
             selected: false
         },
         {
-            tile: StraightTile,
-            ratio: 2,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: StraightTile,
-            ratio: 3,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
             tile: CurvedTileEnlarged,
             ratio: 1,
             direction: TileModel.DIRECTION_RIGHT,
@@ -88,7 +74,7 @@
 </script>
 
 <Tileset x={-300} y={-300} viewWidth={window.innerWidth} viewHeight={window.innerHeight} width="100%" height="100%">
-    <Outline R={0.1} G={1} B={0.1} A={0.9} slot="defs" />
+    <Outline R={0.2} G={0.9} B={0.4} A={0.9} width={6} slot="defs" />
     {#each [...tiles()] as { tile, ratio, direction, rotation, x, y, filter }}
         <svelte:component
             this={tile}
