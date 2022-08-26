@@ -72,7 +72,7 @@
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
-    const laneWidth = config.trackLaneWidth;
+    const laneWidth = config.laneWidth;
 
     function* tiles() {
         let x = 0;
@@ -82,7 +82,7 @@
             const { tile, ratio, direction, rotation, selected } = item;
             const filter = selected ? 'url(#outline)' : void 0;
             yield { tile, ratio, direction, rotation, x, y, filter };
-            x += config.trackSectionLength;
+            x += TileModel.getTileLength(laneWidth, barrierWidth);
         }
     }
 </script>

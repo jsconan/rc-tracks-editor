@@ -16,13 +16,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Tile } from './models/tile.js';
-
 /**
  * The dimensions and constraints of a track element
  * @type {object}
  */
-const config = {
+export default {
     /**
      * The width of the track lane (the distance between the barriers).
      *
@@ -30,7 +28,7 @@ const config = {
      *
      * @type {number}
      */
-    trackLaneWidth: 120,
+    laneWidth: 120,
 
     /**
      * The width of the barriers.
@@ -48,36 +46,5 @@ const config = {
      *
      * @type {number}
      */
-    barrierChunks: 4,
-
-    /**
-     * The overall length of a track section (size of a tile in the track).
-     *
-     * DO NOT MODIFY! This value will be generated from the compute() method.
-     *
-     * @type {number}
-     */
-    trackSectionLength: 0,
-
-    /**
-     * The overall width of a track section (size of a tile in the track).
-     *
-     * DO NOT MODIFY! This value will be generated from the compute() method.
-     *
-     * @type {number}
-     */
-    trackSectionWidth: 0,
-
-    /**
-     * Generate values from the base configuration.
-     * The generated values are: `trackSectionLength`, `trackSectionWidth`, `barrierLength`.
-     * @returns {object} - Returns the configuration.
-     */
-    compute() {
-        this.trackSectionLength = Tile.getTileLength(this.trackLaneWidth, this.barrierWidth);
-        this.trackSectionWidth = Tile.getTileWidth(this.trackLaneWidth, this.barrierWidth);
-        return this;
-    }
+    barrierChunks: 4
 };
-
-export default config.compute();
