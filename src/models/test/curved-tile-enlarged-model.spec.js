@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CurvedTileEnlargedModel } from './curved-tile-enlarged-model.js';
+import { CurvedTileEnlargedModel } from '../curved-tile-enlarged-model.js';
 
 const tileX = 100;
 const tileY = 100;

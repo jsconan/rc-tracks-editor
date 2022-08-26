@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CurvedTileModel } from './curved-tile-model.js';
+import { CurvedTileModel } from '../curved-tile-model.js';
 
 const tileX = 100;
 const tileY = 100;

@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { defined } from './types.js';
+import { defined } from '../types.js';
 
 describe('defined', () => {
     it.each([void 0])('tells if a value is not defined (%s)', value => {

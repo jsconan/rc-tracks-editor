@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from './vector-2d.js';
+import { Vector2D } from '../vector-2d.js';
 
 describe('vector', () => {
     it('is a class', () => {
