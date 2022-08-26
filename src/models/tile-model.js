@@ -103,7 +103,7 @@ export class TileModel {
      * @returns {number}
      */
     getCurveAngle() {
-        return 180;
+        return 0;
     }
 
     /**

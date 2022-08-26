@@ -52,19 +52,19 @@ exports[`StraightTileModel can compute the actual width of the tile with a ratio
 
 exports[`StraightTileModel can compute the actual width of the tile with a ratio of 4 1`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of -1 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of -1 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 0 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 0 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 0.5 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 0.5 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 1 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 1 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 2 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 2 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 3 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 3 1`] = `0`;
 
-exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 4 1`] = `180`;
+exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 4 1`] = `0`;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of -1 1`] = `
 Vector2D {
