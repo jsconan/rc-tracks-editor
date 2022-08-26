@@ -15,6 +15,7 @@
     export let x = 0;
     export let y = 0;
     export let filter;
+    export let id = void 0;
 
     const tile = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
     const innerRadius = tile.getInnerRadius();
@@ -38,7 +39,12 @@
     const centerR = tile.getCenterCoord(x, y, rotation);
 </script>
 
-<g class="tile curved-tile" transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})" {filter}>
+<g
+    class="tile curved-tile"
+    transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
+    {filter}
+    {id}
+>
     <CurvedElement
         class="ground"
         cx={curveCenter.x}

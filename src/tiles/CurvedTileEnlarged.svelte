@@ -15,6 +15,7 @@
     export let x = 0;
     export let y = 0;
     export let filter;
+    export let id = void 0;
 
     const tile = new CurvedTileEnlargedModel(laneWidth, barrierWidth, barrierChunks, ratio);
     const barrierLength = tile.length / barrierChunks;
@@ -62,6 +63,7 @@
     class="tile curved-tile-enlarged"
     transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
     {filter}
+    {id}
 >
     <path
         class="ground"
