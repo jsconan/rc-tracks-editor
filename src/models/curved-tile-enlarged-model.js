@@ -24,14 +24,14 @@ import { TileModel } from './tile-model.js';
  */
 export class CurvedTileEnlargedModel extends TileModel {
     /**
-     * Represents a tile with the given size.
-     * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
-     * @param {number} barrierWidth - The width of the barriers.
-     * @param {number} barrierChunks - The number of barrier chunks per section.
-     * @param {number} ratio - The size factor relative to a track section. 1 means the tile fit 1 tile section in each direction.
+     * Sets the size factor relative to a track section.
+     * 1 means the tile fits 1 tile section in each direction.
+     * @param {number} ratio - The size factor relative to a track section.
+     * @returns {CurvedTileEnlargedModel} - Chains the instance.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks, ratio = 1) {
-        super(laneWidth, barrierWidth, barrierChunks, Math.max(1, ratio));
+    setRatio(ratio) {
+        this.ratio = Math.max(1, Math.floor(Math.abs(ratio)));
+        return this;
     }
 
     /**

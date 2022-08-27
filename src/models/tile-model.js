@@ -23,21 +23,62 @@ import { Vector2D } from './vector-2d.js';
  */
 export class TileModel {
     /**
-     * Represents a tile with the given size.
+     * Represents a tile with the given size constraints.
      * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
      * @param {number} barrierWidth - The width of the barriers.
      * @param {number} barrierChunks - The number of barrier chunks per section.
-     * @param {number} ratio - The size factor relative to a track section. 1 means the tile fit 1 tile section in each direction.
+     * @param {number} ratio - The size factor relative to a track section. 1 means the tile fits 1 tile section in each direction.
      */
     constructor(laneWidth, barrierWidth, barrierChunks, ratio = 1) {
-        this.laneWidth = laneWidth;
-        this.barrierWidth = barrierWidth;
-        this.barrierChunks = barrierChunks;
-        this.ratio = Math.abs(ratio || 1);
+        this.setLaneWidth(laneWidth);
+        this.setBarrierWidth(barrierWidth);
+        this.setBarrierChunks(barrierChunks);
+        this.setRatio(ratio);
 
         this.length = TileModel.getTileLength(laneWidth, barrierWidth);
         this.width = TileModel.getTileWidth(laneWidth, barrierWidth);
         this.padding = (this.length - this.width) / 2;
+    }
+
+    /**
+     * Sets the width of the track lane (the distance between the barriers).
+     * @param {number} laneWidth - The width of the track lane.
+     * @returns {TileModel} - Chains the instance.
+     */
+    setLaneWidth(laneWidth) {
+        this.laneWidth = Math.abs(laneWidth);
+        return this;
+    }
+
+    /**
+     * Sets the width of the barriers.
+     * @param {number} barrierWidth - The width of the barriers.
+     * @returns {TileModel} - Chains the instance.
+     */
+    setBarrierWidth(barrierWidth) {
+        this.barrierWidth = Math.abs(barrierWidth);
+        return this;
+    }
+
+    /**
+     * Sets the number of barrier chunks per section.
+     * @param {number} barrierChunks - The number of barrier chunks per section.
+     * @returns {TileModel} - Chains the instance.
+     */
+    setBarrierChunks(barrierChunks) {
+        this.barrierChunks = Math.abs(Math.round(barrierChunks) || 1);
+        return this;
+    }
+
+    /**
+     * Sets the size factor relative to a track section.
+     * 1 means the tile fits 1 tile section in each direction.
+     * @param {number} ratio - The size factor relative to a track section.
+     * @returns {TileModel} - Chains the instance.
+     */
+    setRatio(ratio) {
+        this.ratio = Math.abs(ratio || 1);
+        return this;
     }
 
     /**

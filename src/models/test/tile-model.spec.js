@@ -20,7 +20,7 @@ import { TileModel } from '../tile-model.js';
 
 const tileX = 100;
 const tileY = 100;
-const tileRatios = [-1, 0, 0.5, 1, 2, 3, 4];
+const tileRatios = [0.5, 1, 2, 3, 4];
 const tileLength = 110;
 const tileWidth = 90;
 const laneWidth = 80;
@@ -51,6 +51,43 @@ describe('TileModel', () => {
             const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
 
             expect(tile.getType()).toBe(TileModel.TYPE);
+        });
+    });
+
+    describe('can set', () => {
+        it('the width of the track lane', () => {
+            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            expect(tile.setLaneWidth(1)).toBe(tile);
+            expect(tile.laneWidth).toBe(1);
+            expect(tile.setLaneWidth(-1).laneWidth).toBe(1);
+        });
+
+        it('the width of a barrier', () => {
+            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            expect(tile.setBarrierWidth(1)).toBe(tile);
+            expect(tile.barrierWidth).toBe(1);
+            expect(tile.setBarrierWidth(-1).barrierWidth).toBe(1);
+        });
+
+        it('the number of a barrier chunks', () => {
+            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            expect(tile.setBarrierChunks(1)).toBe(tile);
+            expect(tile.barrierChunks).toBe(1);
+            expect(tile.setBarrierChunks(-1).barrierChunks).toBe(1);
+            expect(tile.setBarrierChunks(0).barrierChunks).toBe(1);
+            expect(tile.setBarrierChunks(0.1).barrierChunks).toBe(1);
+            expect(tile.setBarrierChunks(1.8).barrierChunks).toBe(2);
+            expect(tile.setBarrierChunks(2.1).barrierChunks).toBe(2);
+        });
+
+        it('the size ratio', () => {
+            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            expect(tile.setRatio(1)).toBe(tile);
+            expect(tile.ratio).toBe(1);
+            expect(tile.setRatio(-1).ratio).toBe(1);
+            expect(tile.setRatio(0).ratio).toBe(1);
+            expect(tile.setRatio(0.5).ratio).toBe(0.5);
+            expect(tile.setRatio(2.5).ratio).toBe(2.5);
         });
     });
 
