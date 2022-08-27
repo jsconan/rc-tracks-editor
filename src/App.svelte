@@ -6,11 +6,11 @@
 
     import config from './config.js';
     import Tileset from './tiles/Tileset.svelte';
-    import { TileModel } from './models/tile-model.js';
-    import { StraightTileModel } from './models/straight-tile-model.js';
-    import { CurvedTileModel } from './models/curved-tile-model.js';
-    import { CurvedTileEnlargedModel } from './models/curved-tile-enlarged-model.js';
-    import { TrackModel } from './models/track-model.js';
+    import TileModel from './models/tile-model.js';
+    import StraightTileModel from './models/straight-tile-model.js';
+    import CurvedTileModel from './models/curved-tile-model.js';
+    import CurvedTileEnlargedModel from './models/curved-tile-enlarged-model.js';
+    import TrackModel from './models/track-model.js';
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;

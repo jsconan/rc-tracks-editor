@@ -19,11 +19,11 @@
 import CurvedTile from '../../tiles/CurvedTile.svelte';
 import CurvedTileEnlarged from '../../tiles/CurvedTileEnlarged.svelte';
 import StraightTile from '../../tiles/StraightTile.svelte';
-import { CurvedTileEnlargedModel } from '../curved-tile-enlarged-model.js';
-import { CurvedTileModel } from '../curved-tile-model.js';
-import { StraightTileModel } from '../straight-tile-model.js';
-import { TileModel } from '../tile-model.js';
-import { TileReferenceModel } from '../tile-reference-model.js';
+import CurvedTileEnlargedModel from '../curved-tile-enlarged-model.js';
+import CurvedTileModel from '../curved-tile-model.js';
+import StraightTileModel from '../straight-tile-model.js';
+import TileModel from '../tile-model.js';
+import TileReferenceModel from '../tile-reference-model.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;

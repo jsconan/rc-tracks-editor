@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from './vector-2d.js';
-import { TileModel } from './tile-model.js';
+import Vector2D from './vector-2d.js';
+import TileModel from './tile-model.js';
 
 /**
  * Represents a track tile for a curve.
  */
-export class CurvedTileModel extends TileModel {
+export default class CurvedTileModel extends TileModel {
     /**
      * Gets the type of tile.
      * @returns {string}

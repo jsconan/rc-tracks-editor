@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { TileModel } from '../tile-model.js';
+import TileModel from '../tile-model.js';
 
 const tileX = 100;
 const tileY = 100;

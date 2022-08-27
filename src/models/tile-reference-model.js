@@ -19,10 +19,10 @@
 import CurvedTile from '../tiles/CurvedTile.svelte';
 import CurvedTileEnlarged from '../tiles/CurvedTileEnlarged.svelte';
 import StraightTile from '../tiles/StraightTile.svelte';
-import { CurvedTileEnlargedModel } from './curved-tile-enlarged-model.js';
-import { CurvedTileModel } from './curved-tile-model.js';
-import { StraightTileModel } from './straight-tile-model.js';
-import { TileModel } from './tile-model.js';
+import CurvedTileEnlargedModel from './curved-tile-enlarged-model.js';
+import CurvedTileModel from './curved-tile-model.js';
+import StraightTileModel from './straight-tile-model.js';
+import TileModel from './tile-model.js';
 
 /**
  * @type {number} - The internal counter for generating unique identifiers.
@@ -72,7 +72,7 @@ const componentsMap = {
 /**
  * Represents a reference to a tile model.
  */
-export class TileReferenceModel {
+export default class TileReferenceModel {
     /**
      * Represents a reference to a tile model with the given specifications.
      * @param {string} type - The type of referenced tile.

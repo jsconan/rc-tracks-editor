@@ -16,12 +16,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from './vector-2d.js';
+import Vector2D from './vector-2d.js';
 
 /**
  * Represents a track tile.
  */
-export class TileModel {
+export default class TileModel {
     /**
      * Represents a tile with the given size constraints.
      * @param {number} laneWidth - The width of the track lane (the distance between the barriers).

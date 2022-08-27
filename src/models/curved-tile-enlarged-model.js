@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from './vector-2d.js';
-import { TileModel } from './tile-model.js';
+import Vector2D from './vector-2d.js';
+import TileModel from './tile-model.js';
 
 /**
  * Represents a track tile for an enlarged curve.
  */
-export class CurvedTileEnlargedModel extends TileModel {
+export default class CurvedTileEnlargedModel extends TileModel {
     /**
      * Sets the size factor relative to a track section.
      * 1 means the tile fits 1 tile section in each direction.

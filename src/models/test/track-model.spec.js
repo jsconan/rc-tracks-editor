@@ -16,10 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CurvedTileModel } from '../curved-tile-model.js';
-import { TileModel } from '../tile-model.js';
-import { TileReferenceModel } from '../tile-reference-model.js';
-import { TrackModel } from '../track-model.js';
+import CurvedTileModel from '../curved-tile-model.js';
+import TileModel from '../tile-model.js';
+import TileReferenceModel from '../tile-reference-model.js';
+import TrackModel from '../track-model.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;

@@ -16,15 +16,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { StraightTileModel } from './straight-tile-model.js';
-import { TileModel } from './tile-model.js';
-import { TileReferenceModel } from './tile-reference-model.js';
-import { Vector2D } from './vector-2d.js';
+import StraightTileModel from './straight-tile-model.js';
+import TileModel from './tile-model.js';
+import TileReferenceModel from './tile-reference-model.js';
+import Vector2D from './vector-2d.js';
 
 /**
  * Represents a track.
  */
-export class TrackModel {
+export default class TrackModel {
     /**
      * Represents a track with the given size constraints.
      * @param {number} laneWidth - The width of the track lane (the distance between the barriers).

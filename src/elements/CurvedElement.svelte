@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { Vector2D } from '../models/vector-2d.js';
+    import Vector2D from '../models/vector-2d.js';
 
     let cls = void 0;
     export { cls as class };

@@ -4,7 +4,7 @@
 
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import StraightElement from '../elements/StraightElement.svelte';
-    import { StraightTileModel } from '../models/straight-tile-model.js';
+    import StraightTileModel from '../models/straight-tile-model.js';
 
     export let barrierChunks;
     export let barrierWidth;

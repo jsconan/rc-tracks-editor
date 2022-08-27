@@ -16,12 +16,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { TileModel } from './tile-model.js';
+import TileModel from './tile-model.js';
 
 /**
  * Represents a straight track tile.
  */
-export class StraightTileModel extends TileModel {
+export default class StraightTileModel extends TileModel {
     /**
      * Gets the type of tile.
      * @returns {string}
