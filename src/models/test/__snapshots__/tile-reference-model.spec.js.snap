@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileReferenceModel can build a reference to a tile with the default specifications 1`] = `
+TileReferenceModel {
+  "direction": 0,
+  "id": "tile-0",
+  "ratio": 1,
+  "type": "straight-tile",
+}
+`;
+
+exports[`TileReferenceModel can build a reference to a tile with the given direction 1`] = `
+TileReferenceModel {
+  "direction": 1,
+  "id": "tile-2",
+  "ratio": 1,
+  "type": "straight-tile",
+}
+`;
+
+exports[`TileReferenceModel can build a reference to a tile with the given ratio 1`] = `
+TileReferenceModel {
+  "direction": 1,
+  "id": "tile-3",
+  "ratio": 2,
+  "type": "straight-tile",
+}
+`;
+
+exports[`TileReferenceModel can build a reference to a tile with the given type 1`] = `
+TileReferenceModel {
+  "direction": 0,
+  "id": "tile-1",
+  "ratio": 1,
+  "type": "straight-tile",
+}
+`;
+
+exports[`TileReferenceModel can build the model for a curved tile 1`] = `
+CurvedTileModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "length": 110,
+  "padding": 10,
+  "ratio": 1,
+  "width": 90,
+}
+`;
+
+exports[`TileReferenceModel can build the model for a curved tile enlarged 1`] = `
+CurvedTileEnlargedModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "length": 110,
+  "padding": 10,
+  "ratio": 1,
+  "width": 90,
+}
+`;
+
+exports[`TileReferenceModel can build the model for a straight tile 1`] = `
+StraightTileModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "length": 110,
+  "padding": 10,
+  "ratio": 1,
+  "width": 90,
+}
+`;
