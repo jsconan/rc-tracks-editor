@@ -1,0 +1,822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackModel can build a track adding tiles at the first position with a particular type 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-14",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-13",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track adding tiles at the first position with the default specifications 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-12",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-11",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track adding tiles at the last position with a particular type 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-10",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track adding tiles at the last position with the default specifications 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-9",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track for rendering using a start position and angle 1`] = `
+Object {
+  "height": 421.1269837220809,
+  "tiles": Array [
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-68",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 45,
+      "type": "straight-tile",
+      "x": 100,
+      "y": 100,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-69",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 45,
+      "type": "curved-tile",
+      "x": 22.218254069479784,
+      "y": 177.78174593052023,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-70",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 135,
+      "type": "straight-tile",
+      "x": -55.56349186104045,
+      "y": 177.78174593052023,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-71",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 135,
+      "type": "curved-tile",
+      "x": -133.3452377915607,
+      "y": 100.00000000000001,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-72",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 225,
+      "type": "straight-tile",
+      "x": -133.3452377915607,
+      "y": 22.218254069479798,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-73",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 225,
+      "type": "curved-tile",
+      "x": -55.563491861040475,
+      "y": -55.56349186104045,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-74",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 315,
+      "type": "straight-tile",
+      "x": 22.218254069479755,
+      "y": -55.56349186104046,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-75",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 315,
+      "type": "curved-tile",
+      "x": 100,
+      "y": 22.21825406947974,
+    },
+  ],
+  "width": 421.1269837220809,
+  "x": -227.2361107568208,
+  "y": -149.45436482630055,
+}
+`;
+
+exports[`TrackModel can build a track for rendering using default position 1`] = `
+Object {
+  "height": 330,
+  "tiles": Array [
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-60",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 0,
+      "type": "straight-tile",
+      "x": 0,
+      "y": 0,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-61",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 0,
+      "type": "curved-tile",
+      "x": 0,
+      "y": 110,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-62",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 90,
+      "type": "straight-tile",
+      "x": -55,
+      "y": 165,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-63",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 90,
+      "type": "curved-tile",
+      "x": -165,
+      "y": 165,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-64",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 180,
+      "type": "straight-tile",
+      "x": -220,
+      "y": 110,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-65",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 180,
+      "type": "curved-tile",
+      "x": -220,
+      "y": 0,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-66",
+      "model": StraightTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 270,
+      "type": "straight-tile",
+      "x": -165,
+      "y": -55.00000000000001,
+    },
+    Object {
+      "component": [Function],
+      "direction": 0,
+      "id": "tile-67",
+      "model": CurvedTileModel {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "length": 110,
+        "padding": 10,
+        "ratio": 1,
+        "width": 90,
+      },
+      "ratio": 1,
+      "rotation": 270,
+      "type": "curved-tile",
+      "x": -55,
+      "y": -55.00000000000003,
+    },
+  ],
+  "width": 330,
+  "x": -275,
+  "y": -110.00000000000003,
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles after a position in the middle 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-54",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-55",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-57",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-56",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles after an inexistent position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-47",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles after the first position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-48",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-50",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-49",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles after the last position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-51",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-52",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-53",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles after with a particular type 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-58",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-59",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles before a position in the middle 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-41",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-44",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-42",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-43",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles before an inexistent position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-34",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles before the first position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-37",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-35",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-36",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles before the last position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-38",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-40",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-39",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track inserting tiles before with a particular type 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-46",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-45",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track removing tiles at inexistent position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-24",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track removing tiles from the end 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-21",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-22",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track removing tiles from the middle 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-18",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-20",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track removing tiles from the start 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-16",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-17",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track replacing tiles at inexistent position 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-33",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track replacing tiles with a tile having a particular type 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-29",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-30",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-32",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track replacing tiles with a tile having default specifications 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-25",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-28",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-27",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can build a track with the given size 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [],
+}
+`;
