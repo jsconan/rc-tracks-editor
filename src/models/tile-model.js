@@ -49,7 +49,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the actual length of the tile with respect to the tile ratio.
+     * Computes the actual length of the tile with respect to the ratio.
      * @returns {number}
      */
     getLength() {
@@ -57,7 +57,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the actual width of the tile with respect to the tile ratio.
+     * Computes the actual width of the tile with respect to the ratio.
      * @returns {number}
      */
     getWidth() {
@@ -65,7 +65,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the rotation angle to give the expected direction to the tile.
+     * Computes the angle for rotating the tile to the expected direction.
      * @param {number} direction - The tile direction.
      * @returns {number}
      * @throws {TypeError} - If the given direction is not valid.
@@ -83,7 +83,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the rotation angle to orient the tile to the right.
+     * Computes the angle for rotating the tile to the right.
      * @returns {number}
      */
     getDirectionAngleRight() {
@@ -91,7 +91,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the rotation angle to orient the tile to the left.
+     * Computes the angle for rotating the tile to the left.
      * @returns {number}
      */
     getDirectionAngleLeft() {
@@ -99,7 +99,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the angle of the curve with respect to the tile ratio.
+     * Computes the angle of the curve with respect to the ratio.
      * @returns {number}
      */
     getCurveAngle() {
@@ -115,7 +115,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the position of the curve center with respect to the tile position.
+     * Computes the coordinates of the curve center with respect to the tile position.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @returns {Vector2D}
@@ -127,7 +127,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the inner radius of the curve with respect to the tile ratio.
+     * Computes the inner radius of the curve with respect to the ratio.
      * @returns {number}
      */
     getInnerRadius() {
@@ -137,7 +137,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the outer radius of the curve with respect to the tile ratio.
+     * Computes the outer radius of the curve with respect to the ratio.
      * @returns {number}
      */
     getOuterRadius() {
@@ -145,7 +145,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the number of barrier chunks on each side with respect to the tile ratio.
+     * Computes the number of barrier chunks on each side with respect to the ratio.
      * @returns {number}
      */
     getSideBarrierChunks() {
@@ -153,7 +153,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the number of barrier chunks for the inner curve with respect to the tile ratio.
+     * Computes the number of barrier chunks for the inner curve with respect to the ratio.
      * @returns {number}
      */
     getInnerBarrierChunks() {
@@ -169,7 +169,7 @@ export class TileModel {
     }
 
     /**
-     * Computes the number of barrier chunks for an outer curve with respect to the tile ratio.
+     * Computes the number of barrier chunks for an outer curve with respect to the ratio.
      * @returns {number}
      */
     getOuterBarrierChunks() {
@@ -181,7 +181,20 @@ export class TileModel {
     }
 
     /**
-     * Computes the coordinates of the input point to the tile.
+     * Computes the coordinates of the center point.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getCenterCoord(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        return start.addScalarY(this.getLength() / 2).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the coordinates of the input point.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @returns {Vector2D}
@@ -191,11 +204,11 @@ export class TileModel {
     }
 
     /**
-     * Computes the coordinates of the output point to the tile with respect to its direction.
+     * Computes the coordinates of the output point with respect to the tile direction.
      * @param {number} direction - The tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
+     * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
      * @throws {TypeError} - If the given direction is not valid.
      */
@@ -215,7 +228,7 @@ export class TileModel {
      * Computes the coordinates of the output point when the tile is oriented to the right.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
+     * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
      */
     getOutputCoordRight(x = 0, y = 0, angle = 0) {
@@ -228,7 +241,7 @@ export class TileModel {
      * Computes the coordinates of the output point when the tile is oriented to the left.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
+     * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
      */
     getOutputCoordLeft(x = 0, y = 0, angle = 0) {
@@ -238,16 +251,40 @@ export class TileModel {
     }
 
     /**
-     * Computes the coordinates of the tile center point.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
-     * @returns {Vector2D}
+     * Computes the angle of the output point with respect to the tile direction.
+     * @param {number} direction - The tile direction.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     * @throws {TypeError} - If the given direction is not valid.
      */
-    getCenterCoord(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
+    getOutputAngle(direction, angle = 0) {
+        switch (direction) {
+            case TileModel.DIRECTION_RIGHT:
+                return this.getOutputAngleRight(angle);
 
-        return start.addScalarY(this.getLength() / 2).rotateAround(angle, start);
+            case TileModel.DIRECTION_LEFT:
+                return this.getOutputAngleLeft(angle);
+        }
+
+        throw new TypeError('A valid direction is needed!');
+    }
+
+    /**
+     * Computes the angle of the output point when the tile is oriented to the right.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     */
+    getOutputAngleRight(angle = 0) {
+        return angle;
+    }
+
+    /**
+     * Computes the angle of the output point when the tile is oriented to the left.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     */
+    getOutputAngleLeft(angle = 0) {
+        return angle;
     }
 
     /**

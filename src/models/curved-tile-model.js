@@ -32,7 +32,7 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the actual length of the tile with respect to the tile ratio.
+     * Computes the actual length of the tile with respect to the ratio.
      * @returns {number}
      */
     getLength() {
@@ -40,7 +40,7 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the actual width of the tile with respect to the tile ratio.
+     * Computes the actual width of the tile with respect to the ratio.
      * @returns {number}
      */
     getWidth() {
@@ -48,7 +48,7 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the rotation angle to orient the tile to the left.
+     * Computes the angle for rotating the tile to the left.
      * @returns {number}
      */
     getDirectionAngleLeft() {
@@ -56,7 +56,7 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the angle of the curve with respect to the tile ratio.
+     * Computes the angle of the curve with respect to the ratio.
      * @returns {number}
      */
     getCurveAngle() {
@@ -64,44 +64,10 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the coordinates of the output point when the tile is oriented to the right.
+     * Computes the coordinates of the center point.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
-     * @returns {Vector2D}
-     */
-    getOutputCoordRight(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-
-        const radius = this.getInnerRadius() + this.width / 2;
-        const curveAngle = this.getCurveAngle();
-        const center = start.subScalarX(radius);
-
-        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
-    }
-
-    /**
-     * Computes the coordinates of the output point when the tile is oriented to the left.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
-     * @returns {Vector2D}
-     */
-    getOutputCoordLeft(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-
-        const radius = this.getInnerRadius() + this.width / 2;
-        const curveAngle = 180 - this.getCurveAngle();
-        const center = start.addScalarX(radius);
-
-        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
-    }
-
-    /**
-     * Computes the coordinates of the tile center point.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle.
+     * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
      */
     getCenterCoord(x = 0, y = 0, angle = 0) {
@@ -119,6 +85,58 @@ export class CurvedTileModel extends TileModel {
         const center = Vector2D.intersect(p1, p2, p3, p4);
 
         return center.rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the coordinates of the output point when the tile is oriented to the right.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getOutputCoordRight(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        const radius = this.getInnerRadius() + this.width / 2;
+        const curveAngle = this.getCurveAngle();
+        const center = start.subScalarX(radius);
+
+        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the coordinates of the output point when the tile is oriented to the left.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getOutputCoordLeft(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        const radius = this.getInnerRadius() + this.width / 2;
+        const curveAngle = 180 - this.getCurveAngle();
+        const center = start.addScalarX(radius);
+
+        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the angle of the output point when the tile is oriented to the right.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     */
+    getOutputAngleRight(angle = 0) {
+        return angle + this.getCurveAngle();
+    }
+
+    /**
+     * Computes the angle of the output point when the tile is oriented to the left.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     */
+    getOutputAngleLeft(angle = 0) {
+        return angle - this.getCurveAngle();
     }
 }
 

@@ -31,7 +31,7 @@ export class StraightTileModel extends TileModel {
     }
 
     /**
-     * Computes the actual width of the tile with respect to the tile ratio.
+     * Computes the actual width of the tile with respect to the ratio.
      * @returns {number}
      */
     getWidth() {

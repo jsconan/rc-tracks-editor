@@ -145,6 +145,16 @@ describe('StraightTileModel', () => {
             });
         });
 
+        describe('the position of the center point for a tile', () => {
+            it.each(tileRatios)('with a ratio of %s', ratio => {
+                const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+
+                expect(tile.getCenterCoord()).toMatchSnapshot();
+                expect(tile.getCenterCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getCenterCoord(tileX, tileY, 90)).toMatchSnapshot();
+            });
+        });
+
         describe('the position of the input point for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
@@ -178,8 +188,6 @@ describe('StraightTileModel', () => {
                 const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
 
                 expect(tile.getOutputCoord(StraightTileModel.DIRECTION_LEFT)).toMatchSnapshot();
-
-                expect(tile.getOutputCoord(StraightTileModel.DIRECTION_LEFT)).toMatchSnapshot();
                 expect(tile.getOutputCoord(StraightTileModel.DIRECTION_LEFT, tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(StraightTileModel.DIRECTION_LEFT, tileX, tileY, 90)).toMatchSnapshot();
 
@@ -189,13 +197,31 @@ describe('StraightTileModel', () => {
             });
         });
 
-        describe('the position of the center point for a tile', () => {
-            it.each(tileRatios)('with a ratio of %s', ratio => {
+        describe('the angle of the output point for a tile', () => {
+            it.each(tileRatios)('not oriented with a ratio of %s', ratio => {
+                const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                expect(() => tile.getOutputAngle(void 0)).toThrow('A valid direction is needed!');
+                expect(() => tile.getOutputAngle(void 0, 90)).toThrow('A valid direction is needed!');
+            });
+
+            it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
 
-                expect(tile.getCenterCoord()).toMatchSnapshot();
-                expect(tile.getCenterCoord(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getCenterCoord(tileX, tileY, 90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(StraightTileModel.DIRECTION_RIGHT)).toMatchSnapshot();
+                expect(tile.getOutputAngle(StraightTileModel.DIRECTION_RIGHT, 90)).toMatchSnapshot();
+
+                expect(tile.getOutputAngleRight()).toMatchSnapshot();
+                expect(tile.getOutputAngleRight(90)).toMatchSnapshot();
+            });
+
+            it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
+                const tile = new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+
+                expect(tile.getOutputAngle(StraightTileModel.DIRECTION_LEFT)).toMatchSnapshot();
+                expect(tile.getOutputAngle(StraightTileModel.DIRECTION_LEFT, 90)).toMatchSnapshot();
+
+                expect(tile.getOutputAngleLeft()).toMatchSnapshot();
+                expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
             });
         });
     });
