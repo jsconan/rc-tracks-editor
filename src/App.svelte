@@ -5,79 +5,52 @@
     import Outline from './filters/Outline.svelte';
 
     import config from './config.js';
-    import StraightTile from './tiles/StraightTile.svelte';
-    import CurvedTile from './tiles/CurvedTile.svelte';
-    import CurvedTileEnlarged from './tiles/CurvedTileEnlarged.svelte';
     import Tileset from './tiles/Tileset.svelte';
     import { TileModel } from './models/tile-model.js';
-
-    const tileset = [
-        {
-            tile: StraightTile,
-            ratio: 1,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: CurvedTileEnlarged,
-            ratio: 1,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: CurvedTile,
-            ratio: 1,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: CurvedTile,
-            ratio: 2,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: CurvedTile,
-            ratio: 3,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        },
-        {
-            tile: CurvedTile,
-            ratio: 4,
-            direction: TileModel.DIRECTION_RIGHT,
-            rotation: 0,
-            selected: false
-        }
-    ];
+    import { StraightTileModel } from './models/straight-tile-model.js';
+    import { CurvedTileModel } from './models/curved-tile-model.js';
+    import { CurvedTileEnlargedModel } from './models/curved-tile-enlarged-model.js';
+    import { TrackModel } from './models/track-model.js';
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
     const laneWidth = config.laneWidth;
 
-    function* tiles() {
-        let x = 0;
-        let y = 0;
+    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-        for (const item of tileset) {
-            const { tile, ratio, direction, rotation, selected } = item;
-            const filter = selected ? 'url(#outline)' : void 0;
-            yield { tile, ratio, direction, rotation, x, y, filter };
-            x += TileModel.getTileLength(laneWidth, barrierWidth);
-        }
-    }
+    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
+    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
+    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+
+    const tileset = track.build(0, 0, -90);
 </script>
 
-<Tileset x={-300} y={-300} viewWidth={window.innerWidth} viewHeight={window.innerHeight} width="100%" height="100%">
+<Tileset x={tileset.x} y={tileset.y} viewWidth={tileset.width} viewHeight={tileset.height} width="100%" height="100%">
     <Outline R={0.2} G={0.9} B={0.4} A={0.9} width={6} slot="defs" />
-    {#each [...tiles()] as { tile, ratio, direction, rotation, x, y, filter }}
+    {#each tileset.tiles as { id, x, y, direction, rotation, ratio, component }}
         <svelte:component
-            this={tile}
+            this={component}
             {barrierChunks}
             {barrierWidth}
             {laneWidth}
@@ -86,7 +59,7 @@
             {rotation}
             {x}
             {y}
-            {filter}
+            {id}
         />
     {/each}
 </Tileset>
