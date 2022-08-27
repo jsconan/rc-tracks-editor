@@ -820,3 +820,45 @@ TrackModel {
   "track": Array [],
 }
 `;
+
+exports[`TrackModel can export to an object 1`] = `
+Array [
+  Object {
+    "direction": 0,
+    "ratio": 1,
+    "type": "curved-tile",
+  },
+]
+`;
+
+exports[`TrackModel can import from an object 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 0,
+      "id": "tile-77",
+      "ratio": 1,
+      "type": "straight-tile",
+    },
+  ],
+}
+`;
+
+exports[`TrackModel can import from an object 2`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "track": Array [
+    TileReferenceModel {
+      "direction": 1,
+      "id": "tile-78",
+      "ratio": 2,
+      "type": "curved-tile",
+    },
+  ],
+}
+`;

@@ -269,4 +269,31 @@ export default class TrackModel {
             tiles
         };
     }
+
+    /**
+     * Exports the model to an object.
+     * @returns {object[]} - An object representation of the model.
+     */
+    export() {
+        return this.track.map(tile => {
+            const { type, direction, ratio } = tile;
+            return { type, direction, ratio };
+        });
+    }
+
+    /**
+     * Imports the model from an object.
+     * The track is emptied before importing, any existing tile will be deleted.
+     * @param {object} data - An object representation of the model.
+     * @returns {TrackModel} - Chains the instance.
+     */
+    import(data) {
+        if (data && data[Symbol.iterator]) {
+            this.track = [];
+            for (const tile of data) {
+                this.track.push(new TileReferenceModel(tile.type, tile.direction, tile.ratio));
+            }
+        }
+        return this;
+    }
 }

@@ -351,4 +351,29 @@ describe('TrackModel', () => {
             });
         });
     });
+
+    it('can export to an object', () => {
+        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        track.addTile(CurvedTileModel.TYPE);
+        expect(track.export()).toMatchSnapshot();
+    });
+
+    it('can import from an object', () => {
+        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const data = [
+            {
+                type: CurvedTileModel.TYPE,
+                direction: TileModel.DIRECTION_LEFT,
+                ratio: 2
+            }
+        ];
+
+        track.addTile();
+
+        expect(track.import({})).toBe(track);
+        expect(track).toMatchSnapshot();
+
+        expect(track.import(data)).toBe(track);
+        expect(track).toMatchSnapshot();
+    });
 });
