@@ -849,25 +849,25 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 1`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 2`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 2`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 1`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 2`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 2`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 1`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 2`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 2`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 1`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 2`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 2`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 1`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 2`] = `0`;
+exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 2`] = `180`;
 
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 0.5 1`] = `0`;
 
