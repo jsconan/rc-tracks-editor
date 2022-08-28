@@ -19,6 +19,10 @@
 import { alternate, alternateBarrierColor } from '../colors.js';
 
 describe('alternate', () => {
+    it('is a function', () => {
+        expect(alternate).toEqual(expect.any(Function));
+    });
+
     it('alternates the values with respect to the given index', () => {
         const list = ['a', 'b', 'c'];
         expect(alternate(0, list)).toBe('a');
@@ -35,6 +39,10 @@ describe('alternate', () => {
 });
 
 describe('alternateBarrierColor', () => {
+    it('is a function', () => {
+        expect(alternateBarrierColor).toEqual(expect.any(Function));
+    });
+
     it('alternates the colors with respect to the given index', () => {
         expect(alternateBarrierColor(0)).toBe('even');
         expect(alternateBarrierColor(1)).toBe('odd');
