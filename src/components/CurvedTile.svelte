@@ -4,20 +4,16 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
-    import CurvedTileModel from '../models/CurvedTileModel.js';
+    import { TILE_DIRECTION_RIGHT } from '../helpers/types';
 
-    export let barrierChunks;
-    export let barrierWidth;
-    export let laneWidth;
-    export let ratio = 1;
-    export let direction = CurvedTileModel.DIRECTION_RIGHT;
+    export let model;
+    export let direction = TILE_DIRECTION_RIGHT;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
-    export let filter;
+    export let filter = void 0;
     export let id = void 0;
 
-    const model = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();
     const innerChunks = model.getInnerBarrierChunks();
@@ -30,7 +26,7 @@
     const innerBarrierRadius = innerRadius;
     const innerBarrierX = curveCenter.x + innerBarrierRadius;
     const innerBarrierY = curveCenter.y;
-    const outerBarrierRadius = outerRadius - barrierWidth;
+    const outerBarrierRadius = outerRadius - model.barrierWidth;
     const outerBarrierX = curveCenter.x + outerBarrierRadius;
     const outerBarrierY = curveCenter.y;
 </script>
@@ -47,7 +43,7 @@
     />
     <CurvedBarrier
         chunks={innerChunks}
-        width={barrierWidth}
+        width={model.barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
         left={innerBarrierX}
@@ -56,7 +52,7 @@
     />
     <CurvedBarrier
         chunks={outerChunks}
-        width={barrierWidth}
+        width={model.barrierWidth}
         radius={outerBarrierRadius}
         angle={curveAngle}
         left={outerBarrierX}
