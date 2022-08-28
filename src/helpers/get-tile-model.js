@@ -22,6 +22,10 @@ import StraightTileModel from '../models/straight-tile-model.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from './types.js';
 
 /**
+ * @typedef {import('../models/tile-model')} TileModel
+ */
+
+/**
  * @type {object} - Maps the types of tile to their respective model.
  * @private
  */
@@ -35,6 +39,6 @@ const modelsMap = {
  * Gets the constructor of the tile model with respect to the given type.
  * @function getTileModel
  * @param {string} type - The type of tile for which get the model.
- * @returns {function} - Returns the constructor of the model or null if it does not exist.
+ * @returns {TileModel} - Returns the constructor of the model or null if it does not exist.
  */
 export default type => modelsMap[type] || null;
