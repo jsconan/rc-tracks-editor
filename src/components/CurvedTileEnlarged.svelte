@@ -5,7 +5,6 @@
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import CurvedTileEnlargedModel from '../models/CurvedTileEnlargedModel.js';
-    import ControlPoints from './ControlPoints.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -108,5 +107,3 @@
         vertical={true}
     />
 </g>
-
-<ControlPoints {model} {direction} {angle} {x} {y} />

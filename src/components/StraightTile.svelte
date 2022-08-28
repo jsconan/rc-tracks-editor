@@ -5,7 +5,6 @@
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import StraightElement from '../elements/StraightElement.svelte';
     import StraightTileModel from '../models/StraightTileModel.js';
-    import ControlPoints from './ControlPoints.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -62,5 +61,3 @@
         {vertical}
     />
 </g>
-
-<ControlPoints {model} {direction} {angle} {x} {y} />

@@ -5,7 +5,6 @@
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
     import CurvedTileModel from '../models/CurvedTileModel.js';
-    import ControlPoints from './ControlPoints.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -65,5 +64,3 @@
         shift={1}
     />
 </g>
-
-<ControlPoints {model} {direction} {angle} {x} {y} />
