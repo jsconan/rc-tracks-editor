@@ -49,14 +49,12 @@
     const horizontalBarrierY = leftSideEndY - model.barrierWidth;
     const verticalBarrierX = rightSideEndX - model.barrierWidth;
     const verticalBarrierY = rightSideEndY;
+
+    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
+    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
 </script>
 
-<g
-    class="tile curved-tile-enlarged"
-    transform="rotate({angle} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
-    {filter}
-    {id}
->
+<g class="tile curved-tile-enlarged" transform="{rotation}{orientation}" {filter} {id}>
     <path
         class="ground"
         d="M {innerCurveStartX} {innerCurveStartY}

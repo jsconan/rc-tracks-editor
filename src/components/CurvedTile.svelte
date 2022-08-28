@@ -29,9 +29,12 @@
     const outerBarrierRadius = outerRadius - model.barrierWidth;
     const outerBarrierX = curveCenter.x + outerBarrierRadius;
     const outerBarrierY = curveCenter.y;
+
+    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
+    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
 </script>
 
-<g class="tile curved-tile" transform="rotate({angle} {x} {y}) rotate({tileAngle} {center.x} {center.y})" {filter} {id}>
+<g class="tile curved-tile" transform="{rotation}{orientation}" {filter} {id}>
     <CurvedElement
         class="ground"
         cx={curveCenter.x}

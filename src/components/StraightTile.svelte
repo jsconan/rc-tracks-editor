@@ -29,14 +29,12 @@
     const leftBarrierY = curveCenter.y;
     const rightBarrierX = curveCenter.x + outerRadius - model.barrierWidth;
     const rightBarrierY = curveCenter.y;
+
+    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
+    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
 </script>
 
-<g
-    class="tile straight-tile"
-    transform="rotate({angle} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
-    {filter}
-    {id}
->
+<g class="tile straight-tile" transform="{rotation}{orientation}" {filter} {id}>
     <StraightElement class="ground" x={leftBarrierX} y={leftBarrierY} {width} {height} />
     <StraightBarrier
         {chunks}
