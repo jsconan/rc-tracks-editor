@@ -48,12 +48,13 @@
     track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
 
     const tileset = track.build(0, 0, -90);
+    console.log(JSON.stringify(track.export()));
 </script>
 
 <Tileset x={tileset.x} y={tileset.y} viewWidth={tileset.width} viewHeight={tileset.height} width="100%" height="100%">
     <Outline R={0.2} G={0.9} B={0.4} A={0.9} width={6} slot="defs" />
     {#each tileset.tiles as { id, x, y, direction, angle, ratio, model, component }}
         <svelte:component this={component} {model} {direction} {angle} {x} {y} {id} />
-        <ControlPoints {model} {direction} {angle} {x} {y} />
+        <!-- <ControlPoints {model} {direction} {angle} {x} {y} /> -->
     {/each}
 </Tileset>
