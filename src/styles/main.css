@@ -51,6 +51,7 @@ body,
 
 .ground {
     fill: var(--color-ground);
+    stroke: var(--color-bg);
 }
 
 .even {
