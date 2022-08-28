@@ -62,7 +62,8 @@
            L {leftSideEndX} {leftSideEndY}
            L {outerCurveStartX} {outerCurveStartY}
            A {outerRadius} {outerRadius} 0 0 0 {outerCurveEndX} {outerCurveEndY}
-           L {rightSideEndX} {rightSideEndY}"
+           L {rightSideEndX} {rightSideEndY}
+           Z"
     />
     <CurvedBarrier
         chunks={innerChunks}

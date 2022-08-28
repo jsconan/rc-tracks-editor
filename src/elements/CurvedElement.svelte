@@ -31,5 +31,6 @@
     d="M {p1.x} {p1.y}
        A {innerRadius} {innerRadius} 0 0 1 {p2.x} {p2.y}
        L {p3.x} {p3.y}
-       A {outerRadius} {outerRadius} 0 0 0 {p4.x} {p4.y}"
+       A {outerRadius} {outerRadius} 0 0 0 {p4.x} {p4.y}
+       Z"
 />
