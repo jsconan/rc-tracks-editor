@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
 import Vector2D from './vector-2d.js';
 
 /**
@@ -86,7 +87,8 @@ export default class TileModel {
      * @returns {string}
      */
     getType() {
-        return TileModel.TYPE;
+        // @ts-expect-error
+        return this.constructor.TYPE;
     }
 
     /**
@@ -377,29 +379,29 @@ export default class TileModel {
  * @constant {string} TileModel.TYPE
  */
 Object.defineProperty(TileModel, 'TYPE', {
-    value: 'tile',
+    value: DEFAULT_TILE_TYPE,
     writable: false,
     enumerable: true,
     configurable: true
 });
 
 /**
- * Direction to the right.
+ * Tile oriented to the right.
  * @constant {number} TileModel.DIRECTION_RIGHT
  */
 Object.defineProperty(TileModel, 'DIRECTION_RIGHT', {
-    value: 0,
+    value: TILE_DIRECTION_RIGHT,
     writable: false,
     enumerable: true,
     configurable: true
 });
 
 /**
- * Direction to the left.
+ * Tile oriented to the left.
  * @constant {number} TileModel.DIRECTION_LEFT
  */
 Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
-    value: 1,
+    value: TILE_DIRECTION_LEFT,
     writable: false,
     enumerable: true,
     configurable: true

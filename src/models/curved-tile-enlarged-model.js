@@ -16,8 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import Vector2D from './vector-2d.js';
+import { CURVED_TILE_ENLARGED_TYPE } from '../helpers/types.js';
 import TileModel from './tile-model.js';
+import Vector2D from './vector-2d.js';
 
 /**
  * Represents a track tile for an enlarged curve.
@@ -32,14 +33,6 @@ export default class CurvedTileEnlargedModel extends TileModel {
     setRatio(ratio) {
         this.ratio = Math.max(1, Math.floor(Math.abs(ratio)));
         return this;
-    }
-
-    /**
-     * Gets the type of tile.
-     * @returns {string}
-     */
-    getType() {
-        return CurvedTileEnlargedModel.TYPE;
     }
 
     /**
@@ -165,7 +158,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
  * @constant {string} CurvedTileEnlargedModel.TYPE
  */
 Object.defineProperty(CurvedTileEnlargedModel, 'TYPE', {
-    value: 'curved-tile-enlarged',
+    value: CURVED_TILE_ENLARGED_TYPE,
     writable: false,
     enumerable: true,
     configurable: true

@@ -16,21 +16,14 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import Vector2D from './vector-2d.js';
+import { CURVED_TILE_TYPE } from '../helpers/types.js';
 import TileModel from './tile-model.js';
+import Vector2D from './vector-2d.js';
 
 /**
  * Represents a track tile for a curve.
  */
 export default class CurvedTileModel extends TileModel {
-    /**
-     * Gets the type of tile.
-     * @returns {string}
-     */
-    getType() {
-        return CurvedTileModel.TYPE;
-    }
-
     /**
      * Computes the actual length of the tile with respect to the ratio.
      * @returns {number}
@@ -145,7 +138,7 @@ export default class CurvedTileModel extends TileModel {
  * @constant {string} CurvedTileModel.TYPE
  */
 Object.defineProperty(CurvedTileModel, 'TYPE', {
-    value: 'curved-tile',
+    value: CURVED_TILE_TYPE,
     writable: false,
     enumerable: true,
     configurable: true

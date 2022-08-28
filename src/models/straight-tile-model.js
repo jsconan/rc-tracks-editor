@@ -16,20 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { STRAIGHT_TILE_TYPE } from '../helpers/types.js';
 import TileModel from './tile-model.js';
 
 /**
  * Represents a straight track tile.
  */
 export default class StraightTileModel extends TileModel {
-    /**
-     * Gets the type of tile.
-     * @returns {string}
-     */
-    getType() {
-        return StraightTileModel.TYPE;
-    }
-
     /**
      * Computes the actual width of the tile with respect to the ratio.
      * @returns {number}
@@ -44,7 +37,7 @@ export default class StraightTileModel extends TileModel {
  * @constant {string} StraightTileModel.TYPE
  */
 Object.defineProperty(StraightTileModel, 'TYPE', {
-    value: 'straight-tile',
+    value: STRAIGHT_TILE_TYPE,
     writable: false,
     enumerable: true,
     configurable: true
