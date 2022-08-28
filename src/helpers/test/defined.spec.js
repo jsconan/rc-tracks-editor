@@ -16,9 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/**
- * Checks if a value is defined.
- * @param {*} value - The value to check.
- * @returns {boolean} - Returns `true` if the value is defined.
- */
-export const defined = value => 'undefined' !== typeof value;
+import defined from '../defined.js';
+
+describe('defined', () => {
+    it('is a function', () => {
+        expect(defined).toEqual(expect.any(Function));
+    });
+
+    it.each([void 0])('tells if a value is not defined (%s)', value => {
+        expect(defined(value)).toBeFalsy();
+    });
+
+    it.each([0, null, {}, [], false])('tells if a value is defined (%s)', value => {
+        expect(defined(value)).toBeTruthy();
+    });
+});

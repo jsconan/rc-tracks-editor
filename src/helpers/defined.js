@@ -16,14 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { defined } from '../types.js';
-
-describe('defined', () => {
-    it.each([void 0])('tells if a value is not defined (%s)', value => {
-        expect(defined(value)).toBeFalsy();
-    });
-
-    it.each([0, null, {}, [], false])('tells if a value is defined (%s)', value => {
-        expect(defined(value)).toBeTruthy();
-    });
-});
+/**
+ * Checks if a value is defined.
+ * @function defined
+ * @param {*} value - The value to check.
+ * @returns {boolean} - Returns `true` if the value is defined.
+ */
+export default value => 'undefined' !== typeof value;
