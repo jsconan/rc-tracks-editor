@@ -16,10 +16,46 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import StraightTileModel from './straight-tile-model.js';
-import TileModel from './tile-model.js';
+import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
 import TileReferenceModel from './tile-reference-model.js';
 import Vector2D from './vector-2d.js';
+
+/**
+ * @typedef {import('./tile-model')} TileModel
+ */
+
+/**
+ * @typedef {import('svelte').SvelteComponent} SvelteComponent
+ */
+
+/**
+ * @typedef {object} tileExport - Represents an exported tile reference.
+ * @property {string} type - The type of tile.
+ * @property {number} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
+ */
+
+/**
+ * @typedef {object} tile - Represents a tile ready to be rendered.
+ * @property {string} id - The identifier of the tile.
+ * @property {string} type - The type of tile.
+ * @property {number} x - The left coordinate of the tile.
+ * @property {number} y - The top coordinate of the tile.
+ * @property {number} direction - The direction of the tile.
+ * @property {number} rotation - The rotation angle of the tile.
+ * @property {number} ratio - The size ratio of the tile.
+ * @property {TileModel} model - The tile model with respect to its type.
+ * @property {SvelteComponent} component - The constructor of the component.
+ */
+
+/**
+ * @typedef {object} track - Represents a track ready to be rendered.
+ * @property {number} x - The left coordinate of the track.
+ * @property {number} y - The top coordinate of the track.
+ * @property {number} width - The width of the track.
+ * @property {number} height - The height of the track.
+ * @property {tile[]} tiles - The list of tiles.
+ */
 
 /**
  * Represents a track.
@@ -68,13 +104,13 @@ export default class TrackModel {
     /**
      * Add a tile to the track, at the last position.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    addTile(type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    addTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
         this.track.push(tile);
 
@@ -84,13 +120,13 @@ export default class TrackModel {
     /**
      * Add a tile to the track, at the first position.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    addFirstTile(type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    addFirstTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
         this.track.unshift(tile);
 
@@ -125,13 +161,13 @@ export default class TrackModel {
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    replaceTile(id, type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    replaceTile(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
@@ -150,13 +186,13 @@ export default class TrackModel {
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    insertBefore(id, type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
@@ -179,13 +215,13 @@ export default class TrackModel {
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile after which add another tile.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    insertAfter(id, type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
@@ -202,27 +238,6 @@ export default class TrackModel {
 
         return null;
     }
-
-    /**
-     * @typedef {object} tile - Represents a tile ready to be rendered.
-     * @property {string} id - The identifier of the tile.
-     * @property {number} x - The left coordinate of the tile.
-     * @property {number} y - The top coordinate of the tile.
-     * @property {number} direction - The direction of the tile.
-     * @property {number} rotation - The rotation angle of the tile.
-     * @property {number} ratio - The size ratio of the tile.
-     * @property {TileModel} model - The tile model with respect to its type.
-     * @property {function} component - The constructor of the component.
-     */
-
-    /**
-     * @typedef {object} track - Represents a track ready to be rendered.
-     * @property {number} x - The left coordinate of the track.
-     * @property {number} y - The top coordinate of the track.
-     * @property {number} width - The width of the track.
-     * @property {number} height - The height of the track.
-     * @property {tile[]} tiles - The list of tiles.
-     */
 
     /**
      * Builds the track for rendering, computing the coordinates of each tile.
@@ -272,7 +287,7 @@ export default class TrackModel {
 
     /**
      * Exports the model to an object.
-     * @returns {object[]} - An object representation of the model.
+     * @returns {tileExport[]} - An object representation of the model.
      */
     export() {
         return this.track.map(tile => {
@@ -284,7 +299,7 @@ export default class TrackModel {
     /**
      * Imports the model from an object.
      * The track is emptied before importing, any existing tile will be deleted.
-     * @param {object} data - An object representation of the model.
+     * @param {tileExport[]} data - An iterable object containing a representation of the model.
      * @returns {TrackModel} - Chains the instance.
      */
     import(data) {

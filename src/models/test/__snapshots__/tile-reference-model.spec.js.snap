@@ -3,7 +3,7 @@
 exports[`TileReferenceModel can build a reference to a tile with the default specifications 1`] = `
 TileReferenceModel {
   "direction": 0,
-  "id": "tile-0",
+  "id": "id-0",
   "ratio": 1,
   "type": "straight-tile",
 }
@@ -12,7 +12,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given direction 1`] = `
 TileReferenceModel {
   "direction": 1,
-  "id": "tile-2",
+  "id": "id-2",
   "ratio": 1,
   "type": "straight-tile",
 }
@@ -21,7 +21,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given ratio 1`] = `
 TileReferenceModel {
   "direction": 1,
-  "id": "tile-3",
+  "id": "id-3",
   "ratio": 2,
   "type": "straight-tile",
 }
@@ -30,7 +30,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given type 1`] = `
 TileReferenceModel {
   "direction": 0,
-  "id": "tile-1",
+  "id": "id-1",
   "ratio": 1,
   "type": "straight-tile",
 }

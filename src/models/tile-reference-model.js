@@ -16,58 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTile from '../tiles/CurvedTile.svelte';
-import CurvedTileEnlarged from '../tiles/CurvedTileEnlarged.svelte';
-import StraightTile from '../tiles/StraightTile.svelte';
-import CurvedTileEnlargedModel from './curved-tile-enlarged-model.js';
-import CurvedTileModel from './curved-tile-model.js';
-import StraightTileModel from './straight-tile-model.js';
-import TileModel from './tile-model.js';
+import getTileComponent from '../helpers/get-tile-component.js';
+import getTileModel from '../helpers/get-tile-model.js';
+import { isDirectionValid, isTypeValid, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
+import uid from '../helpers/uid.js';
 
 /**
- * @type {number} - The internal counter for generating unique identifiers.
- * @private
+ * @typedef {import('./tile-model')} TileModel
  */
-let counter = 0;
 
 /**
- * Generates a unique identifier for a tile.
- * @returns {string} - Returns a unique identifier for the tile.
- * @private
+ * @typedef {import('svelte').SvelteComponent} SvelteComponent
  */
-const uid = () => `tile-${counter++}`;
-
-/**
- * @type {string[]} - The list of allowed tile types.
- * @private
- */
-const allowedTypes = [StraightTileModel.TYPE, CurvedTileModel.TYPE, CurvedTileEnlargedModel.TYPE];
-
-/**
- * @type {number[]} - The list of allowed tile directions.
- * @private
- */
-const allowedDirection = [TileModel.DIRECTION_RIGHT, TileModel.DIRECTION_LEFT];
-
-/**
- * @type {object} - Maps the types of tile to their respective model.
- * @private
- */
-const modelsMap = {
-    [StraightTileModel.TYPE]: StraightTileModel,
-    [CurvedTileModel.TYPE]: CurvedTileModel,
-    [CurvedTileEnlargedModel.TYPE]: CurvedTileEnlargedModel
-};
-
-/**
- * @type {object} - Maps the types of tile to their respective component.
- * @private
- */
-const componentsMap = {
-    [StraightTileModel.TYPE]: StraightTile,
-    [CurvedTileModel.TYPE]: CurvedTile,
-    [CurvedTileEnlargedModel.TYPE]: CurvedTileEnlarged
-};
 
 /**
  * Represents a reference to a tile model.
@@ -76,12 +36,12 @@ export default class TileReferenceModel {
     /**
      * Represents a reference to a tile model with the given specifications.
      * @param {string} type - The type of referenced tile.
-     * @param {number} direction - The direction of the tile, it can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
+     * @param {number} direction - The direction of the tile, it can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    constructor(type = StraightTileModel.TYPE, direction = TileModel.DIRECTION_RIGHT, ratio = 1) {
+    constructor(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         this.id = uid();
         this.setType(type);
         this.setDirection(direction);
@@ -95,7 +55,7 @@ export default class TileReferenceModel {
      * @throws {TypeError} - If the given type is not valid.
      */
     setType(type) {
-        if (!allowedTypes.includes(type)) {
+        if (!isTypeValid(type)) {
             throw new TypeError('A valid type of tile is needed!');
         }
 
@@ -111,7 +71,7 @@ export default class TileReferenceModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     setDirection(direction) {
-        if (!allowedDirection.includes(direction)) {
+        if (!isDirectionValid(direction)) {
             throw new TypeError('A valid direction is needed!');
         }
 
@@ -138,15 +98,16 @@ export default class TileReferenceModel {
      * @returns {TileModel} - Returns a tile model of the expected type.
      */
     getModel(laneWidth, barrierWidth, barrierChunks) {
-        const Model = modelsMap[this.type];
+        const Model = getTileModel(this.type);
+        // @ts-expect-error
         return new Model(laneWidth, barrierWidth, barrierChunks, this.ratio);
     }
 
     /**
      * Gets the component constructor of the tile with respect to the stored reference.
-     * @returns {function} - Returns the constructor of the component.
+     * @returns {SvelteComponent} - Returns the constructor of the component.
      */
     getComponent() {
-        return componentsMap[this.type];
+        return getTileComponent(this.type);
     }
 }
