@@ -18,15 +18,15 @@
 
 /**
  * Tile oriented to the right.
- * @type {number}
+ * @type {string}
  */
-export const TILE_DIRECTION_RIGHT = 0;
+export const TILE_DIRECTION_RIGHT = 'right';
 
 /**
  * Tile oriented to the left.
- * @type {number}
+ * @type {string}
  */
-export const TILE_DIRECTION_LEFT = 1;
+export const TILE_DIRECTION_LEFT = 'left';
 
 /**
  * Type for a default tile.
@@ -53,7 +53,7 @@ export const CURVED_TILE_TYPE = 'curved-tile';
 export const CURVED_TILE_ENLARGED_TYPE = 'curved-tile-enlarged';
 
 /**
- * @type {number[]} - The list of allowed tile directions.
+ * @type {string[]} - The list of allowed tile directions.
  * @private
  */
 const allowedDirection = [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT];

@@ -7,13 +7,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-14",
       "ratio": 2,
       "type": "curved-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-13",
       "ratio": 1,
       "type": "straight-tile",
@@ -29,13 +29,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-12",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-11",
       "ratio": 1,
       "type": "straight-tile",
@@ -51,7 +51,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-10",
       "ratio": 2,
       "type": "curved-tile",
@@ -67,7 +67,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-9",
       "ratio": 1,
       "type": "straight-tile",
@@ -83,7 +83,7 @@ Object {
     Object {
       "angle": 45,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-68",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -102,7 +102,7 @@ Object {
     Object {
       "angle": 45,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-69",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -121,7 +121,7 @@ Object {
     Object {
       "angle": 135,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-70",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -140,7 +140,7 @@ Object {
     Object {
       "angle": 135,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-71",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -159,7 +159,7 @@ Object {
     Object {
       "angle": 225,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-72",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -178,7 +178,7 @@ Object {
     Object {
       "angle": 225,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-73",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -197,7 +197,7 @@ Object {
     Object {
       "angle": 315,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-74",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -216,7 +216,7 @@ Object {
     Object {
       "angle": 315,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-75",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -246,7 +246,7 @@ Object {
     Object {
       "angle": 0,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-60",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -265,7 +265,7 @@ Object {
     Object {
       "angle": 0,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-61",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -284,7 +284,7 @@ Object {
     Object {
       "angle": 90,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-62",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -303,7 +303,7 @@ Object {
     Object {
       "angle": 90,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-63",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -322,7 +322,7 @@ Object {
     Object {
       "angle": 180,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-64",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -341,7 +341,7 @@ Object {
     Object {
       "angle": 180,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-65",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -360,7 +360,7 @@ Object {
     Object {
       "angle": 270,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-66",
       "model": StraightTileModel {
         "barrierChunks": 4,
@@ -379,7 +379,7 @@ Object {
     Object {
       "angle": 270,
       "component": [Function],
-      "direction": 0,
+      "direction": "right",
       "id": "id-67",
       "model": CurvedTileModel {
         "barrierChunks": 4,
@@ -409,25 +409,25 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-54",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-55",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-57",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-56",
       "ratio": 1,
       "type": "straight-tile",
@@ -443,7 +443,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-47",
       "ratio": 1,
       "type": "straight-tile",
@@ -459,19 +459,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-48",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-50",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-49",
       "ratio": 1,
       "type": "straight-tile",
@@ -487,19 +487,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-51",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-52",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-53",
       "ratio": 1,
       "type": "straight-tile",
@@ -515,13 +515,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-58",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-59",
       "ratio": 2,
       "type": "curved-tile",
@@ -537,25 +537,25 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-41",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-44",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-42",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-43",
       "ratio": 1,
       "type": "straight-tile",
@@ -571,7 +571,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-34",
       "ratio": 1,
       "type": "straight-tile",
@@ -587,19 +587,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-37",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-35",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-36",
       "ratio": 1,
       "type": "straight-tile",
@@ -615,19 +615,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-38",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-40",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-39",
       "ratio": 1,
       "type": "straight-tile",
@@ -643,13 +643,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-46",
       "ratio": 2,
       "type": "curved-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-45",
       "ratio": 1,
       "type": "straight-tile",
@@ -665,7 +665,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-24",
       "ratio": 1,
       "type": "straight-tile",
@@ -681,13 +681,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-21",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-22",
       "ratio": 1,
       "type": "straight-tile",
@@ -703,13 +703,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-18",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-20",
       "ratio": 1,
       "type": "straight-tile",
@@ -725,13 +725,13 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-16",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-17",
       "ratio": 1,
       "type": "straight-tile",
@@ -747,7 +747,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-33",
       "ratio": 1,
       "type": "straight-tile",
@@ -763,19 +763,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-29",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-30",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-32",
       "ratio": 2,
       "type": "curved-tile",
@@ -791,19 +791,19 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-25",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-28",
       "ratio": 1,
       "type": "straight-tile",
     },
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-27",
       "ratio": 1,
       "type": "straight-tile",
@@ -824,7 +824,7 @@ TrackModel {
 exports[`TrackModel can export to an object 1`] = `
 Array [
   Object {
-    "direction": 0,
+    "direction": "right",
     "ratio": 1,
     "type": "curved-tile",
   },
@@ -838,7 +838,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 0,
+      "direction": "right",
       "id": "id-77",
       "ratio": 1,
       "type": "straight-tile",
@@ -854,7 +854,7 @@ TrackModel {
   "laneWidth": 80,
   "track": Array [
     TileReferenceModel {
-      "direction": 1,
+      "direction": "left",
       "id": "id-78",
       "ratio": 2,
       "type": "curved-tile",

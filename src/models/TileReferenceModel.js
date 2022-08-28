@@ -36,7 +36,7 @@ export default class TileReferenceModel {
     /**
      * Represents a reference to a tile model with the given specifications.
      * @param {string} type - The type of referenced tile.
-     * @param {number} direction - The direction of the tile, it can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, it can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
@@ -66,7 +66,7 @@ export default class TileReferenceModel {
     /**
      * Sets the direction of the tile.
      * It can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
-     * @param {number} direction - The direction of the tile.
+     * @param {string} direction - The direction of the tile.
      * @returns {TileReferenceModel} - Chains the instance.
      * @throws {TypeError} - If the given direction is not valid.
      */

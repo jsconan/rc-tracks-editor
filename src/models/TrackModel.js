@@ -31,7 +31,7 @@ import Vector2D from './Vector2D.js';
 /**
  * @typedef {object} tileExport - Represents an exported tile reference.
  * @property {string} type - The type of tile.
- * @property {number} direction - The direction of the tile.
+ * @property {string} direction - The direction of the tile.
  * @property {number} ratio - The size ratio of the tile.
  */
 
@@ -41,7 +41,7 @@ import Vector2D from './Vector2D.js';
  * @property {string} type - The type of tile.
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
- * @property {number} direction - The direction of the tile.
+ * @property {string} direction - The direction of the tile.
  * @property {number} angle - The rotation angle of the tile.
  * @property {number} ratio - The size ratio of the tile.
  * @property {TileModel} model - The tile model with respect to its type.
@@ -104,7 +104,7 @@ export default class TrackModel {
     /**
      * Add a tile to the track, at the last position.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
@@ -120,7 +120,7 @@ export default class TrackModel {
     /**
      * Add a tile to the track, at the first position.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
@@ -161,7 +161,7 @@ export default class TrackModel {
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
@@ -186,7 +186,7 @@ export default class TrackModel {
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.
@@ -215,7 +215,7 @@ export default class TrackModel {
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile after which add another tile.
      * @param {string} type - The type of tile to add.
-     * @param {number} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {string} - Returns the unique identifier of the added tile.
      * @throws {TypeError} - If the given type is not valid.

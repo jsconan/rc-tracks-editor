@@ -109,7 +109,7 @@ export default class TileModel {
 
     /**
      * Computes the angle for rotating the tile to the expected direction.
-     * @param {number} direction - The tile direction.
+     * @param {string} direction - The tile direction.
      * @returns {number}
      * @throws {TypeError} - If the given direction is not valid.
      */
@@ -248,7 +248,7 @@ export default class TileModel {
 
     /**
      * Computes the coordinates of the output point with respect to the tile direction.
-     * @param {number} direction - The tile direction.
+     * @param {string} direction - The tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
@@ -295,7 +295,7 @@ export default class TileModel {
 
     /**
      * Computes the angle of the output point with respect to the tile direction.
-     * @param {number} direction - The tile direction.
+     * @param {string} direction - The tile direction.
      * @param {number} angle - The rotation angle of the tile.
      * @returns {number}
      * @throws {TypeError} - If the given direction is not valid.
@@ -387,7 +387,7 @@ Object.defineProperty(TileModel, 'TYPE', {
 
 /**
  * Tile oriented to the right.
- * @constant {number} TileModel.DIRECTION_RIGHT
+ * @constant {string} TileModel.DIRECTION_RIGHT
  */
 Object.defineProperty(TileModel, 'DIRECTION_RIGHT', {
     value: TILE_DIRECTION_RIGHT,
@@ -398,7 +398,7 @@ Object.defineProperty(TileModel, 'DIRECTION_RIGHT', {
 
 /**
  * Tile oriented to the left.
- * @constant {number} TileModel.DIRECTION_LEFT
+ * @constant {string} TileModel.DIRECTION_LEFT
  */
 Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
     value: TILE_DIRECTION_LEFT,

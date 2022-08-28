@@ -36,7 +36,7 @@ describe('isDirectionValid', () => {
         expect(isDirectionValid(direction)).toBeTruthy();
     });
 
-    it.each([-1, 2, 'left', 'right'])('tells the direction "%s" is not valid', direction => {
+    it.each([-1, 0, 1, 2])('tells the direction "%s" is not valid', direction => {
         expect(isDirectionValid(direction)).toBeFalsy();
     });
 });
