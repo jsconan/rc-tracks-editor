@@ -42,7 +42,7 @@ import Vector2D from './Vector2D.js';
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
  * @property {number} direction - The direction of the tile.
- * @property {number} rotation - The rotation angle of the tile.
+ * @property {number} angle - The rotation angle of the tile.
  * @property {number} ratio - The size ratio of the tile.
  * @property {TileModel} model - The tile model with respect to its type.
  * @property {SvelteComponent} component - The constructor of the component.
@@ -251,20 +251,20 @@ export default class TrackModel {
         const topLeft = new Vector2D();
         const bottomRight = new Vector2D();
         let position = new Vector2D(startX, startY);
-        let rotation = startAngle;
+        let angle = startAngle;
 
         for (const tile of this.track) {
             const component = tile.getComponent();
             const model = tile.getModel(this.laneWidth, this.barrierWidth, this.barrierChunks);
-            const center = model.getCenterCoord(position.x, position.y, rotation);
+            const center = model.getCenterCoord(position.x, position.y, angle);
             const middle = model.getLength() / 2;
             const { id, type, direction, ratio } = tile;
             const { x, y } = position;
 
-            tiles.push({ id, type, x, y, direction, rotation, ratio, model, component });
+            tiles.push({ id, type, x, y, direction, angle, ratio, model, component });
 
-            position = model.getOutputCoord(direction, x, y, rotation);
-            rotation = model.getOutputAngle(direction, rotation);
+            position = model.getOutputCoord(direction, x, y, angle);
+            angle = model.getOutputAngle(direction, angle);
 
             topLeft.x = Math.min(topLeft.x, center.x - middle);
             topLeft.y = Math.min(topLeft.y, center.y - middle);

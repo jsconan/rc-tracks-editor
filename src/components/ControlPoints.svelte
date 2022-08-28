@@ -6,14 +6,14 @@
 
     export let model;
     export let direction = TILE_DIRECTION_RIGHT;
-    export let rotation = 0;
+    export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let r = 5;
 
     const input = model.getInputCoord(x, y);
-    const output = model.getOutputCoord(direction, x, y, rotation);
-    const center = model.getCenterCoord(x, y, rotation);
+    const output = model.getOutputCoord(direction, x, y, angle);
+    const center = model.getCenterCoord(x, y, angle);
 </script>
 
 <g class="control">

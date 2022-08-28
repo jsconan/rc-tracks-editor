@@ -12,7 +12,7 @@
     export let laneWidth;
     export let ratio = 1;
     export let direction = StraightTileModel.DIRECTION_RIGHT;
-    export let rotation = 0;
+    export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter;
@@ -38,7 +38,7 @@
 
 <g
     class="tile straight-tile"
-    transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
+    transform="rotate({angle} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
     {filter}
     {id}
 >
@@ -63,4 +63,4 @@
     />
 </g>
 
-<ControlPoints {model} {direction} {rotation} {x} {y} />
+<ControlPoints {model} {direction} {angle} {x} {y} />

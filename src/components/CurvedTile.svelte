@@ -12,7 +12,7 @@
     export let laneWidth;
     export let ratio = 1;
     export let direction = CurvedTileModel.DIRECTION_RIGHT;
-    export let rotation = 0;
+    export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter;
@@ -36,12 +36,7 @@
     const outerBarrierY = curveCenter.y;
 </script>
 
-<g
-    class="tile curved-tile"
-    transform="rotate({rotation} {x} {y}) rotate({tileAngle} {center.x} {center.y})"
-    {filter}
-    {id}
->
+<g class="tile curved-tile" transform="rotate({angle} {x} {y}) rotate({tileAngle} {center.x} {center.y})" {filter} {id}>
     <CurvedElement
         class="ground"
         cx={curveCenter.x}
@@ -71,4 +66,4 @@
     />
 </g>
 
-<ControlPoints {model} {direction} {rotation} {x} {y} />
+<ControlPoints {model} {direction} {angle} {x} {y} />
