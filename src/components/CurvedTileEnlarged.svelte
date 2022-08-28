@@ -5,6 +5,7 @@
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import CurvedTileEnlargedModel from '../models/CurvedTileEnlargedModel.js';
+    import ControlPoints from './ControlPoints.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -17,25 +18,25 @@
     export let filter;
     export let id = void 0;
 
-    const tile = new CurvedTileEnlargedModel(laneWidth, barrierWidth, barrierChunks, ratio);
-    const barrierLength = tile.length / barrierChunks;
-    const side = tile.getCurveSide();
-    const innerRadius = tile.getInnerRadius();
-    const outerRadius = tile.getOuterRadius();
-    const sideChunks = tile.getSideBarrierChunks();
-    const innerChunks = tile.getInnerBarrierChunks();
-    const outerChunks = tile.getOuterBarrierChunks();
-    const tileAngle = tile.getDirectionAngle(direction);
-    const curveAngle = tile.getCurveAngle();
-    const curveCenter = tile.getCurveCenter(x, y);
-    const center = tile.getCenterCoord(x, y);
+    const model = new CurvedTileEnlargedModel(laneWidth, barrierWidth, barrierChunks, ratio);
+    const barrierLength = model.length / barrierChunks;
+    const side = model.getCurveSide();
+    const innerRadius = model.getInnerRadius();
+    const outerRadius = model.getOuterRadius();
+    const sideChunks = model.getSideBarrierChunks();
+    const innerChunks = model.getInnerBarrierChunks();
+    const outerChunks = model.getOuterBarrierChunks();
+    const tileAngle = model.getDirectionAngle(direction);
+    const curveAngle = model.getCurveAngle();
+    const curveCenter = model.getCurveCenter(x, y);
+    const center = model.getCenterCoord(x, y);
 
     const innerCurveStartX = curveCenter.x + innerRadius;
     const innerCurveStartY = curveCenter.y;
     const innerCurveEndX = innerCurveStartX - innerRadius;
     const innerCurveEndY = innerCurveStartY + innerRadius;
     const leftSideEndX = innerCurveEndX;
-    const leftSideEndY = innerCurveEndY + tile.width;
+    const leftSideEndY = innerCurveEndY + model.width;
     const outerCurveStartX = leftSideEndX + side;
     const outerCurveStartY = leftSideEndY;
     const outerCurveEndX = outerCurveStartX + outerRadius;
@@ -53,10 +54,6 @@
     const horizontalBarrierY = leftSideEndY - barrierWidth;
     const verticalBarrierX = rightSideEndX - barrierWidth;
     const verticalBarrierY = rightSideEndY;
-
-    const input = tile.getInputCoord(x, y);
-    const output = tile.getOutputCoord(direction, x, y, rotation);
-    const centerR = tile.getCenterCoord(x, y, rotation);
 </script>
 
 <g
@@ -112,6 +109,4 @@
     />
 </g>
 
-<circle class="control" cx={centerR.x} cy={centerR.y} r="4" />
-<circle class="control" cx={input.x} cy={input.y} r="4" />
-<circle class="control" cx={output.x} cy={output.y} r="4" />
+<ControlPoints {model} {direction} {rotation} {x} {y} />

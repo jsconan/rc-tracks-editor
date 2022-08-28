@@ -5,6 +5,7 @@
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
     import CurvedTileModel from '../models/CurvedTileModel.js';
+    import ControlPoints from './ControlPoints.svelte';
 
     export let barrierChunks;
     export let barrierWidth;
@@ -17,15 +18,15 @@
     export let filter;
     export let id = void 0;
 
-    const tile = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-    const innerRadius = tile.getInnerRadius();
-    const outerRadius = tile.getOuterRadius();
-    const innerChunks = tile.getInnerBarrierChunks();
-    const outerChunks = tile.getOuterBarrierChunks();
-    const tileAngle = tile.getDirectionAngle(direction);
-    const curveAngle = tile.getCurveAngle();
-    const curveCenter = tile.getCurveCenter(x, y);
-    const center = tile.getCenterCoord(x, y);
+    const model = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+    const innerRadius = model.getInnerRadius();
+    const outerRadius = model.getOuterRadius();
+    const innerChunks = model.getInnerBarrierChunks();
+    const outerChunks = model.getOuterBarrierChunks();
+    const tileAngle = model.getDirectionAngle(direction);
+    const curveAngle = model.getCurveAngle();
+    const curveCenter = model.getCurveCenter(x, y);
+    const center = model.getCenterCoord(x, y);
 
     const innerBarrierRadius = innerRadius;
     const innerBarrierX = curveCenter.x + innerBarrierRadius;
@@ -33,10 +34,6 @@
     const outerBarrierRadius = outerRadius - barrierWidth;
     const outerBarrierX = curveCenter.x + outerBarrierRadius;
     const outerBarrierY = curveCenter.y;
-
-    const input = tile.getInputCoord(x, y);
-    const output = tile.getOutputCoord(direction, x, y, rotation);
-    const centerR = tile.getCenterCoord(x, y, rotation);
 </script>
 
 <g
@@ -49,7 +46,7 @@
         class="ground"
         cx={curveCenter.x}
         cy={curveCenter.y}
-        width={tile.width}
+        width={model.width}
         radius={innerRadius}
         angle={curveAngle}
         start={0}
@@ -74,6 +71,4 @@
     />
 </g>
 
-<circle class="control" cx={centerR.x} cy={centerR.y} r="4" />
-<circle class="control" cx={input.x} cy={input.y} r="4" />
-<circle class="control" cx={output.x} cy={output.y} r="4" />
+<ControlPoints {model} {direction} {rotation} {x} {y} />
