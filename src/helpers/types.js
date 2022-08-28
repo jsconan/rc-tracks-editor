@@ -17,13 +17,13 @@
  */
 
 /**
- * Tile oriented the right.
+ * Tile oriented to the right.
  * @type {number}
  */
 export const TILE_DIRECTION_RIGHT = 0;
 
 /**
- * Tile oriented the left.
+ * Tile oriented to the left.
  * @type {number}
  */
 export const TILE_DIRECTION_LEFT = 1;
