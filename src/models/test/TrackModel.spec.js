@@ -16,10 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTileModel from '../curved-tile-model.js';
-import TileModel from '../tile-model.js';
-import TileReferenceModel from '../tile-reference-model.js';
-import TrackModel from '../track-model.js';
+import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../../helpers/types.js';
+import TileReferenceModel from '../TileReferenceModel.js';
+import TrackModel from '../TrackModel.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -89,7 +88,7 @@ describe('TrackModel', () => {
                 it('with a particular type', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+                    const id = track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -111,7 +110,7 @@ describe('TrackModel', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
                     track.addTile();
-                    const id = track.addFirstTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+                    const id = track.addFirstTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -183,7 +182,7 @@ describe('TrackModel', () => {
                 track.addTile();
                 track.addTile();
                 const id = track.addTile();
-                const newId = track.replaceTile(id, CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+                const newId = track.replaceTile(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(newId).toEqual(expect.any(String));
                 expect(newId).not.toBe(id);
@@ -251,7 +250,7 @@ describe('TrackModel', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
                     const id = track.addTile();
-                    const newId = track.insertBefore(id, CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+                    const newId = track.insertBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -310,7 +309,7 @@ describe('TrackModel', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
                     const id = track.addTile();
-                    const newId = track.insertAfter(id, CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+                    const newId = track.insertAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -324,13 +323,13 @@ describe('TrackModel', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
 
                 expect(track.build()).toMatchSnapshot();
             });
@@ -339,13 +338,13 @@ describe('TrackModel', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
                 track.addTile();
-                track.addTile(CurvedTileModel.TYPE);
+                track.addTile(CURVED_TILE_TYPE);
 
                 expect(track.build(100, 100, 45)).toMatchSnapshot();
             });
@@ -354,7 +353,7 @@ describe('TrackModel', () => {
 
     it('can export to an object', () => {
         const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
-        track.addTile(CurvedTileModel.TYPE);
+        track.addTile(CURVED_TILE_TYPE);
         expect(track.export()).toMatchSnapshot();
     });
 
@@ -362,14 +361,15 @@ describe('TrackModel', () => {
         const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
         const data = [
             {
-                type: CurvedTileModel.TYPE,
-                direction: TileModel.DIRECTION_LEFT,
+                type: CURVED_TILE_TYPE,
+                direction: TILE_DIRECTION_LEFT,
                 ratio: 2
             }
         ];
 
         track.addTile();
 
+        // @ts-expect-error
         expect(track.import({})).toBe(track);
         expect(track).toMatchSnapshot();
 

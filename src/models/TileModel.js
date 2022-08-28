@@ -17,7 +17,7 @@
  */
 
 import { DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
-import Vector2D from './vector-2d.js';
+import Vector2D from './Vector2D.js';
 
 /**
  * Represents a track tile.

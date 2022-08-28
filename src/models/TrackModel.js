@@ -17,11 +17,11 @@
  */
 
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
-import TileReferenceModel from './tile-reference-model.js';
-import Vector2D from './vector-2d.js';
+import TileReferenceModel from './TileReferenceModel.js';
+import Vector2D from './Vector2D.js';
 
 /**
- * @typedef {import('./tile-model')} TileModel
+ * @typedef {import('./TileModel')} TileModel
  */
 
 /**

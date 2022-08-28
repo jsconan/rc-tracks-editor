@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import getTileComponent from '../helpers/get-tile-component.js';
-import getTileModel from '../helpers/get-tile-model.js';
+import getTileComponent from '../helpers/getTileComponent.js';
+import getTileModel from '../helpers/getTileModel.js';
 import { isDirectionValid, isTypeValid, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
 import uid from '../helpers/uid.js';
 
 /**
- * @typedef {import('./tile-model')} TileModel
+ * @typedef {import('./TileModel')} TileModel
  */
 
 /**

@@ -16,14 +16,20 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT
+} from '../../helpers/types';
 import CurvedTile from '../../tiles/CurvedTile.svelte';
 import CurvedTileEnlarged from '../../tiles/CurvedTileEnlarged.svelte';
 import StraightTile from '../../tiles/StraightTile.svelte';
-import CurvedTileEnlargedModel from '../curved-tile-enlarged-model.js';
-import CurvedTileModel from '../curved-tile-model.js';
-import StraightTileModel from '../straight-tile-model.js';
-import TileModel from '../tile-model.js';
-import TileReferenceModel from '../tile-reference-model.js';
+import CurvedTileModel from '../CurvedTileModel.js';
+import CurvedTileEnlargedModel from '../CurvedTileEnlargedModel.js';
+import StraightTileModel from '../StraightTileModel.js';
+import TileReferenceModel from '../TileReferenceModel.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -43,21 +49,21 @@ describe('TileReferenceModel', () => {
         });
 
         it('with the given type', () => {
-            const ref = new TileReferenceModel(StraightTileModel.TYPE);
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
         });
 
         it('with the given direction', () => {
-            const ref = new TileReferenceModel(StraightTileModel.TYPE, TileModel.DIRECTION_LEFT);
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT);
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
         });
 
         it('with the given ratio', () => {
-            const ref = new TileReferenceModel(StraightTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
@@ -65,7 +71,7 @@ describe('TileReferenceModel', () => {
 
         it('but throws error', () => {
             expect(() => new TileReferenceModel('')).toThrow('A valid type of tile is needed!');
-            expect(() => new TileReferenceModel(StraightTileModel.TYPE, -1)).toThrow('A valid direction is needed!');
+            expect(() => new TileReferenceModel(STRAIGHT_TILE_TYPE, -1)).toThrow('A valid direction is needed!');
         });
     });
 
@@ -73,18 +79,18 @@ describe('TileReferenceModel', () => {
         it('the type of tile', () => {
             const ref = new TileReferenceModel();
 
-            expect(ref.type).toBe(StraightTileModel.TYPE);
-            expect(ref.setType(CurvedTileModel.TYPE)).toBe(ref);
-            expect(ref.type).toBe(CurvedTileModel.TYPE);
+            expect(ref.type).toBe(STRAIGHT_TILE_TYPE);
+            expect(ref.setType(CURVED_TILE_TYPE)).toBe(ref);
+            expect(ref.type).toBe(CURVED_TILE_TYPE);
             expect(() => ref.setType('')).toThrow('A valid type of tile is needed!');
         });
 
         it('the direction of the tile', () => {
             const ref = new TileReferenceModel();
 
-            expect(ref.direction).toBe(TileModel.DIRECTION_RIGHT);
-            expect(ref.setDirection(TileModel.DIRECTION_LEFT)).toBe(ref);
-            expect(ref.direction).toBe(TileModel.DIRECTION_LEFT);
+            expect(ref.direction).toBe(TILE_DIRECTION_RIGHT);
+            expect(ref.setDirection(TILE_DIRECTION_LEFT)).toBe(ref);
+            expect(ref.direction).toBe(TILE_DIRECTION_LEFT);
             expect(() => ref.setDirection(-1)).toThrow('A valid direction is needed!');
         });
 
@@ -102,7 +108,7 @@ describe('TileReferenceModel', () => {
 
     describe('can build the model for', () => {
         it('a straight tile', () => {
-            const ref = new TileReferenceModel(StraightTileModel.TYPE);
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
             const tile = ref.getModel(laneWidth, barrierWidth, barrierChunks);
 
             expect(tile).toBeInstanceOf(StraightTileModel);
@@ -110,7 +116,7 @@ describe('TileReferenceModel', () => {
         });
 
         it('a curved tile', () => {
-            const ref = new TileReferenceModel(CurvedTileModel.TYPE);
+            const ref = new TileReferenceModel(CURVED_TILE_TYPE);
             const tile = ref.getModel(laneWidth, barrierWidth, barrierChunks);
 
             expect(tile).toBeInstanceOf(CurvedTileModel);
@@ -118,7 +124,7 @@ describe('TileReferenceModel', () => {
         });
 
         it('a curved tile enlarged', () => {
-            const ref = new TileReferenceModel(CurvedTileEnlargedModel.TYPE);
+            const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
             const tile = ref.getModel(laneWidth, barrierWidth, barrierChunks);
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
@@ -128,19 +134,19 @@ describe('TileReferenceModel', () => {
 
     describe('can get the component for', () => {
         it('a straight tile', () => {
-            const ref = new TileReferenceModel(StraightTileModel.TYPE);
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
 
             expect(ref.getComponent()).toBe(StraightTile);
         });
 
         it('a curved tile', () => {
-            const ref = new TileReferenceModel(CurvedTileModel.TYPE);
+            const ref = new TileReferenceModel(CURVED_TILE_TYPE);
 
             expect(ref.getComponent()).toBe(CurvedTile);
         });
 
         it('a curved tile enlarged', () => {
-            const ref = new TileReferenceModel(CurvedTileEnlargedModel.TYPE);
+            const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
 
             expect(ref.getComponent()).toBe(CurvedTileEnlarged);
         });

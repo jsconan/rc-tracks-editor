@@ -6,11 +6,14 @@
 
     import config from './config.js';
     import Tileset from './tiles/Tileset.svelte';
-    import TileModel from './models/tile-model.js';
-    import StraightTileModel from './models/straight-tile-model.js';
-    import CurvedTileModel from './models/curved-tile-model.js';
-    import CurvedTileEnlargedModel from './models/curved-tile-enlarged-model.js';
-    import TrackModel from './models/track-model.js';
+    import TrackModel from './models/TrackModel.js';
+    import {
+        CURVED_TILE_ENLARGED_TYPE,
+        CURVED_TILE_TYPE,
+        STRAIGHT_TILE_TYPE,
+        TILE_DIRECTION_LEFT,
+        TILE_DIRECTION_RIGHT
+    } from './helpers/types';
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
@@ -18,30 +21,30 @@
 
     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 2);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_RIGHT, 3);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
-    track.addTile(CurvedTileModel.TYPE, TileModel.DIRECTION_LEFT, 4);
-    track.addTile(StraightTileModel.TYPE, TileModel.DIRECTION_LEFT);
-    track.addTile(CurvedTileEnlargedModel.TYPE, TileModel.DIRECTION_LEFT);
+    track.addTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, 3);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, 3);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, 3);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
+    track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
+    track.addTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT);
+    track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
 
     const tileset = track.build(0, 0, -90);
 </script>

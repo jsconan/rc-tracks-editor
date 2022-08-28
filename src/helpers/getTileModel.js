@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTileEnlargedModel from '../models/curved-tile-enlarged-model.js';
-import CurvedTileModel from '../models/curved-tile-model.js';
-import StraightTileModel from '../models/straight-tile-model.js';
+import CurvedTileEnlargedModel from '../models/CurvedTileEnlargedModel.js';
+import CurvedTileModel from '../models/CurvedTileModel.js';
+import StraightTileModel from '../models/StraightTileModel.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from './types.js';
 
 /**
- * @typedef {import('../models/tile-model')} TileModel
+ * @typedef {import('../models/TileModel')} TileModel
  */
 
 /**

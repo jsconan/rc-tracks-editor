@@ -4,7 +4,7 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import StraightBarrier from '../elements/StraightBarrier.svelte';
-    import CurvedTileEnlargedModel from '../models/curved-tile-enlarged-model.js';
+    import CurvedTileEnlargedModel from '../models/CurvedTileEnlargedModel.js';
 
     export let barrierChunks;
     export let barrierWidth;

@@ -17,8 +17,8 @@
  */
 
 import { CURVED_TILE_TYPE } from '../helpers/types.js';
-import TileModel from './tile-model.js';
-import Vector2D from './vector-2d.js';
+import TileModel from './TileModel.js';
+import Vector2D from './Vector2D.js';
 
 /**
  * Represents a track tile for a curve.

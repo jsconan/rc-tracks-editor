@@ -17,7 +17,7 @@
  */
 
 import { STRAIGHT_TILE_TYPE } from '../helpers/types.js';
-import TileModel from './tile-model.js';
+import TileModel from './TileModel.js';
 
 /**
  * Represents a straight track tile.

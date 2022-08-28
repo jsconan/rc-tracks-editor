@@ -16,29 +16,29 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTile from '../../models/curved-tile-model.js';
-import CurvedTileEnlarged from '../../models/curved-tile-enlarged-model.js';
-import StraightTile from '../../models/straight-tile-model.js';
-import getTileModel from '../get-tile-model.js';
+import CurvedTile from '../../tiles/CurvedTile.svelte';
+import CurvedTileEnlarged from '../../tiles/CurvedTileEnlarged.svelte';
+import StraightTile from '../../tiles/StraightTile.svelte';
+import getTileComponent from '../getTileComponent.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, DEFAULT_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../types.js';
 
-describe('getTileModel', () => {
+describe('getTileComponent', () => {
     it('is a function', () => {
-        expect(getTileModel).toEqual(expect.any(Function));
+        expect(getTileComponent).toEqual(expect.any(Function));
     });
 
     it.each([
         [STRAIGHT_TILE_TYPE, StraightTile],
         [CURVED_TILE_TYPE, CurvedTile],
         [CURVED_TILE_ENLARGED_TYPE, CurvedTileEnlarged]
-    ])('get the expected model for the type "%s"', (type, model) => {
-        expect(getTileModel(type)).toBe(model);
+    ])('get the expected component for the type "%s"', (type, component) => {
+        expect(getTileComponent(type)).toBe(component);
     });
 
     it.each([
         [DEFAULT_TILE_TYPE, null],
         ['', null]
-    ])('get null for an unknown type "%s"', (type, model) => {
-        expect(getTileModel(type)).toBe(model);
+    ])('get null for an unknown type "%s"', (type, component) => {
+        expect(getTileComponent(type)).toBe(component);
     });
 });
