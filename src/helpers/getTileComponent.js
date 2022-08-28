@@ -16,9 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTile from '../tiles/CurvedTile.svelte';
-import CurvedTileEnlarged from '../tiles/CurvedTileEnlarged.svelte';
-import StraightTile from '../tiles/StraightTile.svelte';
+import CurvedTile from '../components/CurvedTile.svelte';
+import CurvedTileEnlarged from '../components/CurvedTileEnlarged.svelte';
+import StraightTile from '../components/StraightTile.svelte';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from './types.js';
 
 /**

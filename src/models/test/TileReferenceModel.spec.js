@@ -23,9 +23,9 @@ import {
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
 } from '../../helpers/types';
-import CurvedTile from '../../tiles/CurvedTile.svelte';
-import CurvedTileEnlarged from '../../tiles/CurvedTileEnlarged.svelte';
-import StraightTile from '../../tiles/StraightTile.svelte';
+import CurvedTileComponent from '../../components/CurvedTile.svelte';
+import CurvedTileEnlargedComponent from '../../components/CurvedTileEnlarged.svelte';
+import StraightTileComponent from '../../components/StraightTile.svelte';
 import CurvedTileModel from '../CurvedTileModel.js';
 import CurvedTileEnlargedModel from '../CurvedTileEnlargedModel.js';
 import StraightTileModel from '../StraightTileModel.js';
@@ -136,19 +136,19 @@ describe('TileReferenceModel', () => {
         it('a straight tile', () => {
             const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
 
-            expect(ref.getComponent()).toBe(StraightTile);
+            expect(ref.getComponent()).toBe(StraightTileComponent);
         });
 
         it('a curved tile', () => {
             const ref = new TileReferenceModel(CURVED_TILE_TYPE);
 
-            expect(ref.getComponent()).toBe(CurvedTile);
+            expect(ref.getComponent()).toBe(CurvedTileComponent);
         });
 
         it('a curved tile enlarged', () => {
             const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
 
-            expect(ref.getComponent()).toBe(CurvedTileEnlarged);
+            expect(ref.getComponent()).toBe(CurvedTileEnlargedComponent);
         });
     });
 });

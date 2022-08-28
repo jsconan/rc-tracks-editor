@@ -5,7 +5,7 @@
     import Outline from './filters/Outline.svelte';
 
     import config from './config.js';
-    import Tileset from './tiles/Tileset.svelte';
+    import Tileset from './components/Tileset.svelte';
     import TrackModel from './models/TrackModel.js';
     import {
         CURVED_TILE_ENLARGED_TYPE,
