@@ -19,7 +19,7 @@
 import CurvedTile from '../../tiles/CurvedTile.svelte';
 import CurvedTileEnlarged from '../../tiles/CurvedTileEnlarged.svelte';
 import StraightTile from '../../tiles/StraightTile.svelte';
-import getTileComponent from '../get-tile-components.js';
+import getTileComponent from '../get-tile-component.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, DEFAULT_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../types.js';
 
 describe('getTileComponent', () => {
