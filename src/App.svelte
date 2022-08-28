@@ -15,6 +15,7 @@
         TILE_DIRECTION_LEFT,
         TILE_DIRECTION_RIGHT
     } from './helpers/types';
+    import data from './data/tracks.json';
 
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
@@ -46,6 +47,8 @@
     track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
     track.addTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT);
     track.addTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+
+    // track.import(data.square);
 
     const tileset = track.build(0, 0, -90);
     console.log(JSON.stringify(track.export()));
