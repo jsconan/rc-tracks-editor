@@ -34,7 +34,7 @@ const viewHeight = 300;
 const width = 100;
 const height = 150;
 
-describe('StraightTile', () => {
+describe('Sketch', () => {
     it('renders with default values', () => {
         const { container } = render(Sketch);
 

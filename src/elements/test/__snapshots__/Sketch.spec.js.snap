@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StraightTile renders with default values 1`] = `
+exports[`Sketch renders with default values 1`] = `
 <body>
   <div>
     <svg>
@@ -10,7 +10,7 @@ exports[`StraightTile renders with default values 1`] = `
 </body>
 `;
 
-exports[`StraightTile renders with the given element in slots 1`] = `
+exports[`Sketch renders with the given element in slots 1`] = `
 <body>
   <div>
     <svg>
@@ -34,7 +34,7 @@ exports[`StraightTile renders with the given element in slots 1`] = `
 </body>
 `;
 
-exports[`StraightTile renders with the parameters width and height 1`] = `
+exports[`Sketch renders with the parameters width and height 1`] = `
 <body>
   <div>
     <svg
@@ -48,7 +48,7 @@ exports[`StraightTile renders with the parameters width and height 1`] = `
 </body>
 `;
 
-exports[`StraightTile renders with the parameters x, y, viewWidth, and viewHeight 1`] = `
+exports[`Sketch renders with the parameters x, y, viewWidth, and viewHeight 1`] = `
 <body>
   <div>
     <svg
@@ -60,7 +60,7 @@ exports[`StraightTile renders with the parameters x, y, viewWidth, and viewHeigh
 </body>
 `;
 
-exports[`StraightTile renders with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+exports[`Sketch renders with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -74,7 +74,7 @@ exports[`StraightTile renders with the parameters x, y, viewWidth, viewHeight, w
 </body>
 `;
 
-exports[`StraightTile renders with the parameters x, y, width, and height 1`] = `
+exports[`Sketch renders with the parameters x, y, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -88,7 +88,7 @@ exports[`StraightTile renders with the parameters x, y, width, and height 1`] = 
 </body>
 `;
 
-exports[`StraightTile updates with the parameters width and height 1`] = `
+exports[`Sketch updates with the parameters width and height 1`] = `
 <body>
   <div>
     <svg
@@ -102,7 +102,7 @@ exports[`StraightTile updates with the parameters width and height 1`] = `
 </body>
 `;
 
-exports[`StraightTile updates with the parameters width and height 2`] = `
+exports[`Sketch updates with the parameters width and height 2`] = `
 <body>
   <div>
     <svg>
@@ -112,7 +112,7 @@ exports[`StraightTile updates with the parameters width and height 2`] = `
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeight 1`] = `
+exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 1`] = `
 <body>
   <div>
     <svg
@@ -124,7 +124,7 @@ exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeigh
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeight 2`] = `
+exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 2`] = `
 <body>
   <div>
     <svg>
@@ -134,7 +134,7 @@ exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeigh
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -148,7 +148,7 @@ exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, w
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, width, and height 2`] = `
+exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, and height 2`] = `
 <body>
   <div>
     <svg>
@@ -158,7 +158,7 @@ exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, w
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, width, and height 1`] = `
+exports[`Sketch updates with the parameters x, y, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -172,7 +172,7 @@ exports[`StraightTile updates with the parameters x, y, width, and height 1`] = 
 </body>
 `;
 
-exports[`StraightTile updates with the parameters x, y, width, and height 2`] = `
+exports[`Sketch updates with the parameters x, y, width, and height 2`] = `
 <body>
   <div>
     <svg>
