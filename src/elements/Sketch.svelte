@@ -11,11 +11,10 @@
     export let width = void 0;
     export let height = void 0;
 
-    let viewBox;
+    const hasViewBox = () =>
+        (defined(viewWidth) || Number.isFinite(width)) && (defined(viewHeight) || Number.isFinite(height));
 
-    $: if ((defined(viewWidth) || Number.isFinite(width)) && (defined(viewHeight) || Number.isFinite(height))) {
-        viewBox = `${x} ${y} ${viewWidth || width} ${viewHeight || height}`;
-    }
+    $: viewBox = hasViewBox() ? `${x} ${y} ${viewWidth || width} ${viewHeight || height}` : void 0;
 </script>
 
 <svg {viewBox} {width} {height}>
