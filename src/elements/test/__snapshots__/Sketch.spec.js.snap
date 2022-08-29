@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StraightTile renders with default values 1`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given element in slots 1`] = `
+<body>
+  <div>
+    <svg>
+      <defs>
+        <circle
+          cx="5"
+          cy="5"
+          id="circle"
+          r="10"
+          slot="defs"
+        />
+      </defs>
+      <rect
+        height="50"
+        width="100"
+        x="10"
+        y="10"
+      />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the parameters width and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="0 0 100 150"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the parameters x, y, viewWidth, and viewHeight 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="100 150 200 300"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 200 300"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the parameters x, y, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 100 150"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters width and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="0 0 100 150"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters width and height 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeight 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="100 150 200 300"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, viewWidth, and viewHeight 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 200 300"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, viewWidth, viewHeight, width, and height 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 100 150"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates with the parameters x, y, width, and height 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
