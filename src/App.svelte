@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import Outline from './filters/Outline.svelte';
+    import OutlineFilter from './filters/OutlineFilter.svelte';
 
     import config from './config.js';
     import ControlPoints from './components/ControlPoints.svelte';
@@ -55,7 +55,7 @@
 </script>
 
 <Sketch x={track.x} y={track.y} viewWidth={track.width} viewHeight={track.height} width="100%" height="100%">
-    <Outline R={0.2} G={0.9} B={0.4} A={0.9} width={6} slot="defs" />
+    <OutlineFilter R={0.2} G={0.9} B={0.4} A={0.9} width={6} slot="defs" />
     {#each track.tiles as { id, x, y, direction, angle, model, component }}
         <svelte:component this={component} {model} {direction} {angle} {x} {y} {id} />
         <!-- <ControlPoints {model} {direction} {angle} {x} {y} /> -->
