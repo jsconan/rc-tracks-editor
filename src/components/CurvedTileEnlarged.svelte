@@ -15,6 +15,8 @@
     export let id = void 0;
 
     const barrierLength = model.length / model.barrierChunks;
+    const barrierWidth = model.barrierWidth;
+    const width = model.width;
     const side = model.getCurveSide();
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();
@@ -31,7 +33,7 @@
     const innerCurveEndX = innerCurveStartX - innerRadius;
     const innerCurveEndY = innerCurveStartY + innerRadius;
     const leftSideEndX = innerCurveEndX;
-    const leftSideEndY = innerCurveEndY + model.width;
+    const leftSideEndY = innerCurveEndY + width;
     const outerCurveStartX = leftSideEndX + side;
     const outerCurveStartY = leftSideEndY;
     const outerCurveEndX = outerCurveStartX + outerRadius;
@@ -42,19 +44,20 @@
     const innerBarrierRadius = innerRadius;
     const innerBarrierX = innerCurveStartX;
     const innerBarrierY = innerCurveStartY;
-    const outerBarrierRadius = outerRadius - model.barrierWidth;
-    const outerBarrierX = outerCurveEndX - model.barrierWidth;
+    const outerBarrierRadius = outerRadius - barrierWidth;
+    const outerBarrierX = outerCurveEndX - barrierWidth;
     const outerBarrierY = outerCurveEndY;
     const horizontalBarrierX = leftSideEndX;
-    const horizontalBarrierY = leftSideEndY - model.barrierWidth;
-    const verticalBarrierX = rightSideEndX - model.barrierWidth;
+    const horizontalBarrierY = leftSideEndY - barrierWidth;
+    const verticalBarrierX = rightSideEndX - barrierWidth;
     const verticalBarrierY = rightSideEndY;
 
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
     $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
+    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
 </script>
 
-<g class="tile curved-tile-enlarged" transform="{rotation}{orientation}" {filter} {id}>
+<g class="tile curved-tile-enlarged" {transform} {filter} {id}>
     <path
         class="ground"
         d="M {innerCurveStartX} {innerCurveStartY}
@@ -67,7 +70,7 @@
     />
     <CurvedBarrier
         chunks={innerChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
         left={innerBarrierX}
@@ -76,7 +79,7 @@
     />
     <CurvedBarrier
         chunks={outerChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         radius={outerBarrierRadius}
         angle={curveAngle}
         left={outerBarrierX}
@@ -85,7 +88,7 @@
     />
     <StraightBarrier
         chunks={sideChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         length={barrierLength}
         left={horizontalBarrierX}
         top={horizontalBarrierY}
@@ -94,7 +97,7 @@
     />
     <StraightBarrier
         chunks={sideChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         length={barrierLength}
         left={verticalBarrierX}
         top={verticalBarrierY}
