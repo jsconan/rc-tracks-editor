@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OutlineFilter renders with default values 1`] = `
+<body>
+  <div>
+    <filter
+      filterUnits="userSpaceOnUse"
+      id="outline"
+    >
+      <femorphology
+        in="SourceAlpha"
+        operator="dilate"
+        radius="0"
+        result="inner"
+      />
+      <femorphology
+        in="SourceAlpha"
+        operator="dilate"
+        radius="5"
+        result="outer"
+      />
+      <fecomposite
+        in="inner"
+        in2="outer"
+        operator="xor"
+        result="outline"
+      />
+      <fecolormatrix
+        in="outline"
+        result="coloredOutline"
+        type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0"
+      />
+      <fecomposite
+        in="coloredOutline"
+        in2="SourceGraphic"
+        operator="over"
+        result="output"
+      />
+    </filter>
+  </div>
+</body>
+`;
+
+exports[`OutlineFilter renders with the given parameters 1`] = `
+<body>
+  <div>
+    <filter
+      filterUnits="userSpaceOnUse"
+      id="select"
+    >
+      <femorphology
+        in="SourceAlpha"
+        operator="dilate"
+        radius="0"
+        result="inner"
+      />
+      <femorphology
+        in="SourceAlpha"
+        operator="dilate"
+        radius="10"
+        result="outer"
+      />
+      <fecomposite
+        in="inner"
+        in2="outer"
+        operator="xor"
+        result="outline"
+      />
+      <fecolormatrix
+        in="outline"
+        result="coloredOutline"
+        type="matrix"
+        values="1 0 0 0 0.1
+                0 1 0 0 0.2
+                0 0 1 0 0.3
+                0 0 0 0.4 0"
+      />
+      <fecomposite
+        in="coloredOutline"
+        in2="SourceGraphic"
+        operator="over"
+        result="output"
+      />
+    </filter>
+  </div>
+</body>
+`;
