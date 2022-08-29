@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StraightBarrier renders with default values 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="0"
+        y="0"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="25"
+        y="0"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="50"
+        y="0"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="75"
+        y="0"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier renders with the given parameters and shift=0 and vertical=false 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="100"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="125"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="150"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="175"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier renders with the given parameters and shift=0 and vertical=true 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="125"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="150"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="175"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier renders with the given parameters and shift=1 and vertical=false 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="100"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="125"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="150"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="175"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier renders with the given parameters and shift=1 and vertical=true 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="100"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="125"
+      />
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="150"
+      />
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="175"
+      />
+    </g>
+  </div>
+</body>
+`;
