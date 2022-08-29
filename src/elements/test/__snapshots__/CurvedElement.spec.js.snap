@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurvedElement renders with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M 1 0
+       A 1 1 0 0 1 0.9998476951563913 0.01745240643728351
+       L 1.9996953903127825 0.03490481287456702
+       A 2 2 0 0 0 2 0
+       Z"
+    />
+  </div>
+</body>
+`;
+
+exports[`CurvedElement renders with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      class="tile"
+      d="M 125 193.30127018922192
+       A 50 50 0 0 1 100 200
+       L 100.00000000000001 280
+       A 130 130 0 0 0 165 262.583302491977
+       Z"
+      style="fill: #444;"
+    />
+  </div>
+</body>
+`;
