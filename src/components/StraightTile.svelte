@@ -23,22 +23,24 @@
     const curveCenter = model.getCurveCenter(x, y);
     const center = model.getCenterCoord(x, y);
     const barrierLength = model.length / model.barrierChunks;
+    const barrierWidth = model.barrierWidth;
     const vertical = true;
 
     const leftBarrierX = curveCenter.x + innerRadius;
     const leftBarrierY = curveCenter.y;
-    const rightBarrierX = curveCenter.x + outerRadius - model.barrierWidth;
+    const rightBarrierX = curveCenter.x + outerRadius - barrierWidth;
     const rightBarrierY = curveCenter.y;
 
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
     $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
+    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
 </script>
 
-<g class="tile straight-tile" transform="{rotation}{orientation}" {filter} {id}>
+<g class="tile straight-tile" {transform} {filter} {id}>
     <StraightElement class="ground" x={leftBarrierX} y={leftBarrierY} {width} {height} />
     <StraightBarrier
         {chunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         length={barrierLength}
         left={leftBarrierX}
         top={leftBarrierY}
@@ -47,7 +49,7 @@
     />
     <StraightBarrier
         {chunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         length={barrierLength}
         left={rightBarrierX}
         top={rightBarrierY}

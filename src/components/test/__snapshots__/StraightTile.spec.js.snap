@@ -1,0 +1,1072 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StraightTile renders with default values 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="-45"
+        y="0"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="0"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="27.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="55"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="82.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="0"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="27.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="55"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="82.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the left with an angle of 0˚ and a ratio of 1 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform="rotate(180 100 205)"
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the left with an angle of 45˚ and a ratio of 1 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform="rotate(45 100 150)rotate(180 100 205)"
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 0˚ and a ratio of 0.5 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="55"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 0˚ and a ratio of 1 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 0˚ and a ratio of 2 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="220"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="342.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="342.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 0˚ and a ratio of 3 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="330"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="342.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="370"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="397.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="425"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="452.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="342.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="370"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="397.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="425"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="452.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 0˚ and a ratio of 4 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="440"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="342.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="370"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="397.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="425"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="452.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="480"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="507.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="535"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="562.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="260"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="287.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="315"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="342.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="370"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="397.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="425"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="452.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="480"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="507.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="535"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="562.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightTile renders with the given parameters for a tile oriented to the right with an angle of 45˚ and a ratio of 1 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      filter="select"
+      id="tile"
+      transform="rotate(45 100 150)"
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+      </g>
+    </g>
+  </div>
+</body>
+`;
