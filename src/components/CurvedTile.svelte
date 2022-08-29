@@ -22,31 +22,34 @@
     const curveAngle = model.getCurveAngle();
     const curveCenter = model.getCurveCenter(x, y);
     const center = model.getCenterCoord(x, y);
+    const barrierWidth = model.barrierWidth;
+    const width = model.width;
 
     const innerBarrierRadius = innerRadius;
     const innerBarrierX = curveCenter.x + innerBarrierRadius;
     const innerBarrierY = curveCenter.y;
-    const outerBarrierRadius = outerRadius - model.barrierWidth;
+    const outerBarrierRadius = outerRadius - barrierWidth;
     const outerBarrierX = curveCenter.x + outerBarrierRadius;
     const outerBarrierY = curveCenter.y;
 
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
     $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
+    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
 </script>
 
-<g class="tile curved-tile" transform="{rotation}{orientation}" {filter} {id}>
+<g class="tile curved-tile" {transform} {filter} {id}>
     <CurvedElement
         class="ground"
         cx={curveCenter.x}
         cy={curveCenter.y}
-        width={model.width}
+        {width}
         radius={innerRadius}
         angle={curveAngle}
         start={0}
     />
     <CurvedBarrier
         chunks={innerChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         radius={innerBarrierRadius}
         angle={curveAngle}
         left={innerBarrierX}
@@ -55,7 +58,7 @@
     />
     <CurvedBarrier
         chunks={outerChunks}
-        width={model.barrierWidth}
+        width={barrierWidth}
         radius={outerBarrierRadius}
         angle={curveAngle}
         left={outerBarrierX}
