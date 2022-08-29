@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StraightElement renders with default values 1`] = `
+<body>
+  <div>
+    <rect
+      height="1"
+      width="1"
+      x="0"
+      y="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement renders with the given parameters 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="100"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
