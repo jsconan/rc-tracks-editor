@@ -25,7 +25,6 @@
 
     trackModel.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
     trackModel.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
-    trackModel.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
     trackModel.appendTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
     trackModel.appendTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
     trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT);
@@ -45,8 +44,8 @@
     trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
     trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
     trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 4);
-    trackModel.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT);
-    trackModel.appendTile(CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT);
+    trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+    trackModel.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
     // trackModel.import(data.square);
 
