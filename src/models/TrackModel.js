@@ -16,9 +16,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { derived } from 'svelte/store';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
 import TileReferenceModel from './TileReferenceModel.js';
 import Vector2D from './Vector2D.js';
+import List from '../stores/List.js';
 
 /**
  * @typedef {import('./TileModel')} TileModel
@@ -55,7 +57,19 @@ import Vector2D from './Vector2D.js';
  * @property {number} width - The width of the track.
  * @property {number} height - The height of the track.
  * @property {tile[]} tiles - The list of tiles.
+ * @property {object} stats - An object listing the stats for the track.
  */
+
+/**
+ * Update the number of identified types.
+ * @param {object} stats - The receiver for the stats.
+ * @param {string} type - The type to count.
+ * @param {number} diff - The amount to add for the identified type.
+ * @private
+ */
+function updateStats(stats, type, diff = 1) {
+    stats[type] = Math.max(0, (stats[type] || 0) + diff);
+}
 
 /**
  * Represents a track.
@@ -71,7 +85,18 @@ export default class TrackModel {
         this.laneWidth = laneWidth;
         this.barrierWidth = barrierWidth;
         this.barrierChunks = barrierChunks;
-        this.track = [];
+        this.tiles = new List();
+        this.stats = {};
+
+        const { subscribe } = derived(this.tiles, () => this);
+
+        /**
+         * Adds a subscriber that will be notified each time the list is modified.
+         * @function subscribe
+         * @param {function} subscriber - A callback that will receive notifications when the list is changed.
+         * @returns {function} - Return a callback for removing the subscription.
+         */
+        this.subscribe = subscribe;
     }
 
     /**
@@ -80,7 +105,7 @@ export default class TrackModel {
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
     getTileIndex(id) {
-        return this.track.findIndex(tile => tile.id === id);
+        return this.tiles.find(tile => tile.id === id);
     }
 
     /**
@@ -98,7 +123,7 @@ export default class TrackModel {
      * @returns {TileReferenceModel} - The referenced tile, or `null` if it does not exist.
      */
     getTileAt(index) {
-        return this.track[index] || null;
+        return this.tiles.get(index) || null;
     }
 
     /**
@@ -110,9 +135,11 @@ export default class TrackModel {
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    addTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
-        this.track.push(tile);
+
+        updateStats(this.stats, type);
+        this.tiles.add(tile);
 
         return tile.id;
     }
@@ -126,9 +153,11 @@ export default class TrackModel {
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    addFirstTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
-        this.track.unshift(tile);
+
+        updateStats(this.stats, type);
+        this.tiles.insert(0, tile);
 
         return tile.id;
     }
@@ -145,15 +174,9 @@ export default class TrackModel {
             return false;
         }
 
-        if (index === 0) {
-            this.track.shift();
-        } else if (index === this.track.length - 1) {
-            this.track.pop();
-        } else {
-            this.track.splice(index, 1);
-        }
+        updateStats(this.stats, this.tiles.get(index).type, -1);
 
-        return true;
+        return this.tiles.delete(index) > 0;
     }
 
     /**
@@ -173,7 +196,10 @@ export default class TrackModel {
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            this.track[index] = tile;
+            updateStats(this.stats, this.tiles.get(index).type, -1);
+            updateStats(this.stats, type);
+
+            this.tiles.set(index, tile);
 
             return tile.id;
         }
@@ -192,17 +218,14 @@ export default class TrackModel {
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    insertTileBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            if (index === 0) {
-                this.track.unshift(tile);
-            } else {
-                this.track.splice(index, 0, tile);
-            }
+            updateStats(this.stats, type);
+            this.tiles.insert(index, tile);
 
             return tile.id;
         }
@@ -221,17 +244,14 @@ export default class TrackModel {
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    insertTileAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            if (index === this.track.length - 1) {
-                this.track.push(tile);
-            } else {
-                this.track.splice(index + 1, 0, tile);
-            }
+            updateStats(this.stats, type);
+            this.tiles.insert(index + 1, tile);
 
             return tile.id;
         }
@@ -247,13 +267,13 @@ export default class TrackModel {
      * @returns {track}
      */
     build(startX = 0, startY = 0, startAngle = 0) {
-        const tiles = [];
         const topLeft = new Vector2D();
         const bottomRight = new Vector2D();
         let position = new Vector2D(startX, startY);
         let angle = startAngle;
 
-        for (const tile of this.track) {
+        const stats = {};
+        const tiles = this.tiles.map(tile => {
             const component = tile.getComponent();
             const model = tile.getModel(this.laneWidth, this.barrierWidth, this.barrierChunks);
             const center = model.getCenterCoord(position.x, position.y, angle);
@@ -261,7 +281,9 @@ export default class TrackModel {
             const { id, type, direction, ratio } = tile;
             const { x, y } = position;
 
-            tiles.push({ id, type, x, y, direction, angle, ratio, model, component });
+            const specs = { id, type, x, y, direction, angle, ratio, model, component };
+
+            updateStats(stats, type);
 
             position = model.getOutputCoord(direction, x, y, angle);
             angle = model.getOutputAngle(direction, angle);
@@ -271,18 +293,14 @@ export default class TrackModel {
 
             bottomRight.x = Math.max(bottomRight.x, center.x + middle);
             bottomRight.y = Math.max(bottomRight.y, center.y + middle);
-        }
+
+            return specs;
+        });
 
         const { x, y } = topLeft;
         const { x: width, y: height } = bottomRight.sub(topLeft);
 
-        return {
-            x,
-            y,
-            width,
-            height,
-            tiles
-        };
+        return { x, y, width, height, tiles, stats };
     }
 
     /**
@@ -290,7 +308,7 @@ export default class TrackModel {
      * @returns {tileExport[]} - An object representation of the model.
      */
     export() {
-        return this.track.map(tile => {
+        return this.tiles.map(tile => {
             const { type, direction, ratio } = tile;
             return { type, direction, ratio };
         });
@@ -303,12 +321,43 @@ export default class TrackModel {
      * @returns {TrackModel} - Chains the instance.
      */
     import(data) {
-        if (data && data[Symbol.iterator]) {
-            this.track = [];
-            for (const tile of data) {
-                this.track.push(new TileReferenceModel(tile.type, tile.direction, tile.ratio));
-            }
+        if (!data || !data[Symbol.iterator]) {
+            return this;
         }
+
+        const dataIterator = data[Symbol.iterator]();
+        const loadIterator = {
+            next: () => {
+                let { done, value } = dataIterator.next();
+
+                if (!done) {
+                    const { type, direction, ratio } = value || {};
+                    value = new TileReferenceModel(type, direction, ratio);
+                    updateStats(this.stats, type);
+                }
+
+                return { done, value };
+            },
+
+            [Symbol.iterator]() {
+                return this;
+            }
+        };
+
+        this.stats = {};
+        this.tiles.load(loadIterator);
+
+        return this;
+    }
+
+    /**
+     * Removes all tiles.
+     * @returns {TrackModel} - Chains the instance.
+     */
+    clear() {
+        this.stats = {};
+        this.tiles.clear();
+
         return this;
     }
 }

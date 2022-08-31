@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../../helpers/types.js';
+import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers/types.js';
 import TileReferenceModel from '../TileReferenceModel.js';
 import TrackModel from '../TrackModel.js';
 
@@ -32,9 +32,9 @@ describe('TrackModel', () => {
     it('can get the index of a tile in the track', () => {
         const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-        track.addTile();
-        const id = track.addTile();
-        track.addTile();
+        track.appendTile();
+        const id = track.appendTile();
+        track.appendTile();
 
         expect(track.getTileIndex(id)).toBe(1);
         expect(track.getTileIndex('id')).toBe(-1);
@@ -44,11 +44,11 @@ describe('TrackModel', () => {
         it('by its identifier', () => {
             const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-            track.addTile();
-            const id = track.addTile();
-            track.addTile();
+            track.appendTile();
+            const id = track.appendTile();
+            track.appendTile();
 
-            expect(track.getTile(id)).toBe(track.track[1]);
+            expect(track.getTile(id)).toBe(track.tiles.get(1));
             expect(track.getTile(id)).toBeInstanceOf(TileReferenceModel);
             expect(track.getTile('id')).toBeNull();
         });
@@ -56,11 +56,11 @@ describe('TrackModel', () => {
         it('by its index', () => {
             const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-            track.addTile();
-            track.addTile();
-            track.addTile();
+            track.appendTile();
+            track.appendTile();
+            track.appendTile();
 
-            expect(track.getTileAt(1)).toBe(track.track[1]);
+            expect(track.getTileAt(1)).toBe(track.tiles.get(1));
             expect(track.getTileAt(1)).toBeInstanceOf(TileReferenceModel);
             expect(track.getTileAt(3)).toBeNull();
         });
@@ -79,7 +79,7 @@ describe('TrackModel', () => {
                 it('with the default specifications', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile();
+                    const id = track.appendTile();
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -88,7 +88,7 @@ describe('TrackModel', () => {
                 it('with a particular type', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = track.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -99,8 +99,8 @@ describe('TrackModel', () => {
                 it('with the default specifications', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addFirstTile();
+                    track.appendTile();
+                    const id = track.prependTile();
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -109,8 +109,8 @@ describe('TrackModel', () => {
                 it('with a particular type', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addFirstTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    track.appendTile();
+                    const id = track.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
                     expect(track).toMatchSnapshot();
@@ -122,9 +122,9 @@ describe('TrackModel', () => {
             it('from the start', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                const id = track.addTile();
-                track.addTile();
-                track.addTile();
+                const id = track.appendTile();
+                track.appendTile();
+                track.appendTile();
 
                 expect(track.removeTile(id)).toBeTruthy();
                 expect(track).toMatchSnapshot();
@@ -133,9 +133,9 @@ describe('TrackModel', () => {
             it('from the middle', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                const id = track.addTile();
-                track.addTile();
+                track.appendTile();
+                const id = track.appendTile();
+                track.appendTile();
 
                 expect(track.removeTile(id)).toBeTruthy();
                 expect(track).toMatchSnapshot();
@@ -144,9 +144,9 @@ describe('TrackModel', () => {
             it('from the end', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                track.addTile();
-                const id = track.addTile();
+                track.appendTile();
+                track.appendTile();
+                const id = track.appendTile();
 
                 expect(track.removeTile(id)).toBeTruthy();
                 expect(track).toMatchSnapshot();
@@ -155,7 +155,7 @@ describe('TrackModel', () => {
             it('at inexistent position', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
+                track.appendTile();
 
                 expect(track.removeTile('id')).toBeFalsy();
                 expect(track).toMatchSnapshot();
@@ -166,9 +166,9 @@ describe('TrackModel', () => {
             it('with a tile having default specifications', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                const id = track.addTile();
-                track.addTile();
+                track.appendTile();
+                const id = track.appendTile();
+                track.appendTile();
                 const newId = track.replaceTile(id);
 
                 expect(newId).toEqual(expect.any(String));
@@ -179,9 +179,9 @@ describe('TrackModel', () => {
             it('with a tile having a particular type', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                track.addTile();
-                const id = track.addTile();
+                track.appendTile();
+                track.appendTile();
+                const id = track.appendTile();
                 const newId = track.replaceTile(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(newId).toEqual(expect.any(String));
@@ -192,7 +192,7 @@ describe('TrackModel', () => {
             it('at inexistent position', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
+                track.appendTile();
                 expect(track.replaceTile('id')).toBeNull();
                 expect(track).toMatchSnapshot();
             });
@@ -203,18 +203,18 @@ describe('TrackModel', () => {
                 it('an inexistent position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
+                    track.appendTile();
 
-                    expect(track.insertBefore('id')).toBeNull();
+                    expect(track.insertTileBefore('id')).toBeNull();
                     expect(track).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile();
-                    track.addTile();
-                    const newId = track.insertBefore(id);
+                    const id = track.appendTile();
+                    track.appendTile();
+                    const newId = track.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -224,9 +224,9 @@ describe('TrackModel', () => {
                 it('the last position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addTile();
-                    const newId = track.insertBefore(id);
+                    track.appendTile();
+                    const id = track.appendTile();
+                    const newId = track.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -236,10 +236,10 @@ describe('TrackModel', () => {
                 it('a position in the middle', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addTile();
-                    track.addTile();
-                    const newId = track.insertBefore(id);
+                    track.appendTile();
+                    const id = track.appendTile();
+                    track.appendTile();
+                    const newId = track.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -249,8 +249,8 @@ describe('TrackModel', () => {
                 it('with a particular type', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile();
-                    const newId = track.insertBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = track.appendTile();
+                    const newId = track.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -262,18 +262,18 @@ describe('TrackModel', () => {
                 it('an inexistent position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
+                    track.appendTile();
 
-                    expect(track.insertAfter('id')).toBeNull();
+                    expect(track.insertTileAfter('id')).toBeNull();
                     expect(track).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile();
-                    track.addTile();
-                    const newId = track.insertAfter(id);
+                    const id = track.appendTile();
+                    track.appendTile();
+                    const newId = track.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -283,9 +283,9 @@ describe('TrackModel', () => {
                 it('the last position', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addTile();
-                    const newId = track.insertAfter(id);
+                    track.appendTile();
+                    const id = track.appendTile();
+                    const newId = track.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -295,10 +295,10 @@ describe('TrackModel', () => {
                 it('a position in the middle', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    track.addTile();
-                    const id = track.addTile();
-                    track.addTile();
-                    const newId = track.insertAfter(id);
+                    track.appendTile();
+                    const id = track.appendTile();
+                    track.appendTile();
+                    const newId = track.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -308,8 +308,8 @@ describe('TrackModel', () => {
                 it('with a particular type', () => {
                     const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                    const id = track.addTile();
-                    const newId = track.insertAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = track.appendTile();
+                    const newId = track.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
@@ -322,14 +322,14 @@ describe('TrackModel', () => {
             it('using default position', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
 
                 expect(track.build()).toMatchSnapshot();
             });
@@ -337,14 +337,14 @@ describe('TrackModel', () => {
             it('using a start position and angle', () => {
                 const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
 
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
-                track.addTile();
-                track.addTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
+                track.appendTile();
+                track.appendTile(CURVED_TILE_TYPE);
 
                 expect(track.build(100, 100, 45)).toMatchSnapshot();
             });
@@ -353,7 +353,8 @@ describe('TrackModel', () => {
 
     it('can export to an object', () => {
         const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
-        track.addTile(CURVED_TILE_TYPE);
+        track.appendTile(CURVED_TILE_TYPE);
+
         expect(track.export()).toMatchSnapshot();
     });
 
@@ -363,11 +364,17 @@ describe('TrackModel', () => {
             {
                 type: CURVED_TILE_TYPE,
                 direction: TILE_DIRECTION_LEFT,
-                ratio: 2
+                ratio: 1
+            },
+            null,
+            {
+                type: CURVED_TILE_TYPE,
+                direction: TILE_DIRECTION_RIGHT,
+                ratio: 1
             }
         ];
 
-        track.addTile();
+        track.appendTile();
 
         // @ts-expect-error
         expect(track.import({})).toBe(track);
@@ -375,5 +382,39 @@ describe('TrackModel', () => {
 
         expect(track.import(data)).toBe(track);
         expect(track).toMatchSnapshot();
+    });
+
+    it('can clear the list', () => {
+        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        track.appendTile(CURVED_TILE_TYPE);
+
+        expect(track.clear()).toBe(track);
+        expect(track).toMatchSnapshot();
+    });
+
+    it('can notify changes', () => {
+        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+
+        const callback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(track);
+            expect(value).toMatchSnapshot();
+        });
+
+        const unsubscribe = track.subscribe(callback); // callback called
+
+        const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
+        const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
+        track.removeTile(id1); // callback called
+        const id3 = track.replaceTile(id2); // callback called
+        track.insertTileBefore(id3); // callback called
+        track.insertTileAfter(id3); // callback called
+        const data = track.export();
+        track.clear(); // callback called
+        track.import(data); // callback called
+
+        unsubscribe();
+        track.appendTile();
+
+        expect(callback).toHaveBeenCalledTimes(9);
     });
 });

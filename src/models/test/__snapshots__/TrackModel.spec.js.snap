@@ -5,20 +5,29 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-14",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-13",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 1,
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-14",
+        "ratio": 2,
+        "type": "curved-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-13",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -27,20 +36,28 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-12",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-11",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-12",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-11",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -49,14 +66,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-10",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-10",
+        "ratio": 2,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -65,20 +90,32 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-9",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-9",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
 exports[`TrackModel can build a track for rendering using a start position and angle 1`] = `
 Object {
   "height": 421.1269837220809,
+  "stats": Object {
+    "curved-tile": 4,
+    "straight-tile": 4,
+  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -242,6 +279,10 @@ Object {
 exports[`TrackModel can build a track for rendering using default position 1`] = `
 Object {
   "height": 330,
+  "stats": Object {
+    "curved-tile": 4,
+    "straight-tile": 4,
+  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -407,32 +448,40 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-54",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-55",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-57",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-56",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-54",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-55",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-57",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-56",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -441,14 +490,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-47",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-47",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -457,26 +514,34 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-48",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-50",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-49",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-48",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-50",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-49",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -485,26 +550,34 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-51",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-52",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-53",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-51",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-52",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-53",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -513,20 +586,29 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-58",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-59",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 1,
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-58",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-59",
+        "ratio": 2,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -535,32 +617,40 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-41",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-44",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-42",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-43",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-41",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-44",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-42",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-43",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -569,14 +659,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-34",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-34",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -585,26 +683,34 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-37",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-35",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-36",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-37",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-35",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-36",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -613,26 +719,34 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-38",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-40",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-39",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-38",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-40",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-39",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -641,20 +755,29 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-46",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-45",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 1,
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-46",
+        "ratio": 2,
+        "type": "curved-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-45",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -663,14 +786,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-24",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-24",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -679,20 +810,28 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-21",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-22",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-21",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-22",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -701,20 +840,28 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-18",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-20",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-18",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-20",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -723,20 +870,28 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-16",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-17",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-16",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-17",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -745,14 +900,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-33",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-33",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -761,26 +924,35 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-29",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-30",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-32",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 1,
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-29",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-30",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-32",
+        "ratio": 2,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -789,26 +961,34 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-25",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-28",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-27",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-25",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-28",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-27",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -817,7 +997,28 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [],
+  "stats": Object {},
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can clear the list 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {},
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -836,14 +1037,22 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "right",
-      "id": "id-77",
-      "ratio": 1,
-      "type": "straight-tile",
-    },
-  ],
+  "stats": Object {
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-77",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
 
@@ -852,13 +1061,271 @@ TrackModel {
   "barrierChunks": 4,
   "barrierWidth": 5,
   "laneWidth": 80,
-  "track": Array [
-    TileReferenceModel {
-      "direction": "left",
-      "id": "id-78",
-      "ratio": 2,
-      "type": "curved-tile",
-    },
-  ],
+  "stats": Object {
+    "curved-tile": 2,
+    "undefined": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "left",
+        "id": "id-78",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-79",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-80",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 1`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {},
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 2`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-82",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 3`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-83",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-82",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 4`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-83",
+        "ratio": 1,
+        "type": "curved-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 5`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 0,
+    "straight-tile": 1,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-84",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 6`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 0,
+    "straight-tile": 2,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-85",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-84",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 7`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "curved-tile": 0,
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-85",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-84",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-86",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 8`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {},
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TrackModel can notify changes 9`] = `
+TrackModel {
+  "barrierChunks": 4,
+  "barrierWidth": 5,
+  "laneWidth": 80,
+  "stats": Object {
+    "straight-tile": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-87",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-88",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-89",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
 }
 `;
