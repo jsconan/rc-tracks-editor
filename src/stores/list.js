@@ -133,8 +133,8 @@ export default class List {
      * @param {*} value  - The value to insert at the index.
      * @returns {List} - Chains the list.
      */
-    insert(index, value) {
-        this.list.splice(index, 0, value);
+    insert(index, ...value) {
+        this.list.splice(index, 0, ...value);
 
         return this.notify();
     }
@@ -144,8 +144,8 @@ export default class List {
      * @param {*} value  - The value to add.
      * @returns {List} - Chains the list.
      */
-    add(value) {
-        this.list.push(value);
+    add(...value) {
+        this.list.push(...value);
 
         return this.notify();
     }
@@ -153,10 +153,11 @@ export default class List {
     /**
      * Removes a value from the given index.
      * @param {number} index - The index from where remove the value.
-     * @returns {boolean} - Returns `true` if the value was deleted, or `false`.
+     * @param {number} count - The number of values to remove from the index.
+     * @returns {number} - The number of deleted values.
      */
-    delete(index) {
-        const deleted = this.list.splice(index, 1).length > 0;
+    delete(index, count = 1) {
+        const deleted = this.list.splice(index, count).length;
 
         if (deleted) {
             this.notify();

@@ -1,38 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`list can add a value to the list 1`] = `
+exports[`list can add values to the list 1`] = `
 Array [
   1,
   2,
   3,
   4,
+  5,
 ]
 `;
 
-exports[`list can insert a value at a particular index 1`] = `
+exports[`list can insert values at a particular index 1`] = `
 Array [
   1,
   4,
-  2,
-  3,
-]
-`;
-
-exports[`list can insert a value at the beginning 1`] = `
-Array [
-  4,
-  1,
+  5,
   2,
   3,
 ]
 `;
 
-exports[`list can insert a value at the end 1`] = `
+exports[`list can insert values at the beginning 1`] = `
+Array [
+  4,
+  5,
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`list can insert values at the end 1`] = `
 Array [
   1,
   2,
   3,
   4,
+  5,
 ]
 `;
 
@@ -108,10 +112,9 @@ Array [
 ]
 `;
 
-exports[`list can remove a value from a particular index 1`] = `
+exports[`list can remove values from a particular index 1`] = `
 Array [
   1,
-  3,
 ]
 `;
 

@@ -149,13 +149,13 @@ describe('list', () => {
         expect([...list]).toMatchSnapshot();
     });
 
-    describe('can insert a value', () => {
+    describe('can insert values', () => {
         it('at a particular index', () => {
             const list = new List(source);
 
             expect(list.insert).toEqual(expect.any(Function));
 
-            expect(list.insert(1, 4)).toBe(list);
+            expect(list.insert(1, 4, 5)).toBe(list);
             expect([...list]).toMatchSnapshot();
         });
 
@@ -164,7 +164,7 @@ describe('list', () => {
 
             expect(list.insert).toEqual(expect.any(Function));
 
-            expect(list.insert(0, 4)).toBe(list);
+            expect(list.insert(0, 4, 5)).toBe(list);
             expect([...list]).toMatchSnapshot();
         });
 
@@ -173,27 +173,27 @@ describe('list', () => {
 
             expect(list.insert).toEqual(expect.any(Function));
 
-            expect(list.insert(3, 4)).toBe(list);
+            expect(list.insert(3, 4, 5)).toBe(list);
             expect([...list]).toMatchSnapshot();
         });
     });
 
-    it('can add a value to the list', () => {
+    it('can add values to the list', () => {
         const list = new List(source);
 
         expect(list.add).toEqual(expect.any(Function));
 
-        expect(list.add(4)).toBe(list);
+        expect(list.add(4, 5)).toBe(list);
         expect([...list]).toMatchSnapshot();
     });
 
-    it('can remove a value from a particular index', () => {
+    it('can remove values from a particular index', () => {
         const list = new List(source);
 
         expect(list.delete).toEqual(expect.any(Function));
 
-        expect(list.delete(1)).toBeTruthy();
-        expect(list.delete(2)).toBeFalsy();
+        expect(list.delete(1, 2)).toBe(2);
+        expect(list.delete(2)).toBe(0);
         expect([...list]).toMatchSnapshot();
     });
 
