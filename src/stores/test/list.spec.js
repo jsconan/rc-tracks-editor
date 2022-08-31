@@ -16,35 +16,27 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import listFactory from '../list';
+import List from '../List.js';
 
 const source = [1, 2, 3];
 
 describe('list', () => {
-    it('is a factory', () => {
-        expect(listFactory).toEqual(expect.any(Function));
-    });
-
-    it('is a creates object', () => {
-        expect(listFactory()).toEqual(expect.any(Object));
-    });
-
-    it('is a creates unique object', () => {
-        expect(listFactory()).not.toBe(listFactory());
+    it('is a class', () => {
+        expect(List).toEqual(expect.any(Function));
     });
 
     it('can be initialized with a source', () => {
-        expect([...listFactory()]).toEqual([]);
-        expect([...listFactory(source)]).toEqual(source);
+        expect([...new List()]).toEqual([]);
+        expect([...new List(source)]).toEqual(source);
     });
 
     it('has a length', () => {
-        expect(listFactory().length).toBe(0);
-        expect(listFactory(source).length).toBe(3);
+        expect(new List().length).toBe(0);
+        expect(new List(source).length).toBe(3);
     });
 
     it('implements the iteration protocol', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list[Symbol.iterator]).toEqual(expect.any(Function));
         expect(list[Symbol.iterator]()).not.toBe(list[Symbol.iterator]());
@@ -52,7 +44,7 @@ describe('list', () => {
     });
 
     it('can produce an iterator', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.values).toEqual(expect.any(Function));
         expect(list.values()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -62,7 +54,7 @@ describe('list', () => {
     });
 
     it('can map its values', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.map).toEqual(expect.any(Function));
 
@@ -83,12 +75,13 @@ describe('list', () => {
     });
 
     it('needs a valid callback to map values', () => {
-        expect(() => listFactory().map()).toThrow('A callback function is expected!');
+        // @ts-expect-error
+        expect(() => new List().map()).toThrow('A callback function is expected!');
     });
 
     describe('can find the index of a particular value', () => {
         it('using a search value', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.find).toEqual(expect.any(Function));
 
@@ -96,7 +89,7 @@ describe('list', () => {
         });
 
         it('using a filter callback', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.find).toEqual(expect.any(Function));
 
@@ -115,7 +108,7 @@ describe('list', () => {
         });
 
         it('but returns -1 if no value match the search ', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.find(4)).toBe(-1);
 
@@ -135,7 +128,7 @@ describe('list', () => {
     });
 
     it('can read a value at a particular index', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.get).toEqual(expect.any(Function));
 
@@ -146,7 +139,7 @@ describe('list', () => {
     });
 
     it('can write a value at a particular index', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.set).toEqual(expect.any(Function));
 
@@ -158,7 +151,7 @@ describe('list', () => {
 
     describe('can insert a value', () => {
         it('at a particular index', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.insert).toEqual(expect.any(Function));
 
@@ -167,7 +160,7 @@ describe('list', () => {
         });
 
         it('at the beginning', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.insert).toEqual(expect.any(Function));
 
@@ -176,7 +169,7 @@ describe('list', () => {
         });
 
         it('at the end', () => {
-            const list = listFactory(source);
+            const list = new List(source);
 
             expect(list.insert).toEqual(expect.any(Function));
 
@@ -186,7 +179,7 @@ describe('list', () => {
     });
 
     it('can add a value to the list', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.add).toEqual(expect.any(Function));
 
@@ -195,7 +188,7 @@ describe('list', () => {
     });
 
     it('can remove a value from a particular index', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.delete).toEqual(expect.any(Function));
 
@@ -205,7 +198,7 @@ describe('list', () => {
     });
 
     it('can clear the list', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.clear).toEqual(expect.any(Function));
 
@@ -215,7 +208,7 @@ describe('list', () => {
     });
 
     it('can load values from another source', () => {
-        const list = listFactory();
+        const list = new List();
 
         expect(list.load).toEqual(expect.any(Function));
 
@@ -227,14 +220,14 @@ describe('list', () => {
     });
 
     it('can export the values to an array', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         expect(list.toArray).toEqual(expect.any(Function));
         expect(list.toArray()).toEqual(source);
     });
 
     it('can notify changes', () => {
-        const list = listFactory(source);
+        const list = new List(source);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(list);
