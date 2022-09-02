@@ -16,9 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTile from '../../models/CurvedTileModel.js';
-import CurvedTileEnlarged from '../../models/CurvedTileEnlargedModel.js';
-import StraightTile from '../../models/StraightTileModel.js';
+import { CurvedTileModel } from '../../models/CurvedTileModel.js';
+import { CurvedTileEnlargedModel } from '../../models/CurvedTileEnlargedModel.js';
+import { StraightTileModel } from '../../models/StraightTileModel.js';
 import getTileModel from '../getTileModel.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, DEFAULT_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../types.js';
 
@@ -28,9 +28,9 @@ describe('getTileModel', () => {
     });
 
     it.each([
-        [STRAIGHT_TILE_TYPE, StraightTile],
-        [CURVED_TILE_TYPE, CurvedTile],
-        [CURVED_TILE_ENLARGED_TYPE, CurvedTileEnlarged]
+        [STRAIGHT_TILE_TYPE, StraightTileModel],
+        [CURVED_TILE_TYPE, CurvedTileModel],
+        [CURVED_TILE_ENLARGED_TYPE, CurvedTileEnlargedModel]
     ])('get the expected model for the type "%s"', (type, model) => {
         expect(getTileModel(type)).toBe(model);
     });

@@ -18,9 +18,9 @@
 
 import { render } from '@testing-library/svelte';
 import ControlPoints from '../ControlPoints.svelte';
-import CurvedTileModel from '../../models/CurvedTileModel';
-import CurvedTileEnlargedModel from '../../models/CurvedTileEnlargedModel';
-import StraightTileModel from '../../models/StraightTileModel';
+import { CurvedTileModel } from '../../models/CurvedTileModel';
+import { CurvedTileEnlargedModel } from '../../models/CurvedTileEnlargedModel';
+import { StraightTileModel } from '../../models/StraightTileModel';
 import {
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,
@@ -28,19 +28,17 @@ import {
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
 } from '../../helpers/types';
+import { TileSpecifications } from '../../models/TileSpecifications.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-
-const straightTileModel = new StraightTileModel(laneWidth, barrierWidth, barrierChunks);
-const curvedTileModel = new CurvedTileModel(laneWidth, barrierWidth, barrierChunks);
-const enlargedTileModel = new CurvedTileEnlargedModel(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('ControlPoints', () => {
     it('renders with default values', () => {
         const props = {
-            model: straightTileModel
+            model: new StraightTileModel(specs)
         };
         const { container } = render(ControlPoints, { props });
 
@@ -48,16 +46,16 @@ describe('ControlPoints', () => {
     });
 
     it.each([
-        [STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT, straightTileModel],
-        [STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT, straightTileModel],
-        [CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, curvedTileModel],
-        [CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, curvedTileModel],
-        [CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_RIGHT, enlargedTileModel],
-        [CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT, enlargedTileModel]
-    ])('renders with the given parameters for a %s oriented to the %s', (type, direction, model) => {
+        [STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT, StraightTileModel],
+        [STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT, StraightTileModel],
+        [CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, CurvedTileModel],
+        [CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, CurvedTileModel],
+        [CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_RIGHT, CurvedTileEnlargedModel],
+        [CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT, CurvedTileEnlargedModel]
+    ])('renders with the given parameters for a %s oriented to the %s', (type, direction, Model) => {
+        const model = new Model(specs, direction);
         const props = {
             model,
-            direction,
             angle: 45,
             x: 100,
             y: 150,

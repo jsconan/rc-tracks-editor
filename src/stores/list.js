@@ -22,7 +22,7 @@ import { writable } from 'svelte/store';
  * Represents an observable list.
  * Each change in the list will be notified to the subscribers.
  */
-export default class List {
+export class List {
     /**
      * Creates an observable list.
      * Each change in the list will be notified to the subscribers.

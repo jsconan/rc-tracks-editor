@@ -22,17 +22,9 @@ import { isDirectionValid, isTypeValid, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT
 import uid from '../helpers/uid.js';
 
 /**
- * @typedef {import('./TileModel')} TileModel
- */
-
-/**
- * @typedef {import('svelte').SvelteComponent} SvelteComponent
- */
-
-/**
  * Represents a reference to a tile model.
  */
-export default class TileReferenceModel {
+export class TileReferenceModel {
     /**
      * Represents a reference to a tile model with the given specifications.
      * @param {string} type - The type of referenced tile.
@@ -92,15 +84,14 @@ export default class TileReferenceModel {
 
     /**
      * Creates the model of the tile with the given size constraints with respect to the stored reference.
-     * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
-     * @param {number} barrierWidth - The width of the barriers.
-     * @param {number} barrierChunks - The number of barrier chunks per section.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
      * @returns {TileModel} - Returns a tile model of the expected type.
+     * @throws {TypeError} - If the given specifications object is not valid.
      */
-    getModel(laneWidth, barrierWidth, barrierChunks) {
+    getModel(specs) {
         const Model = getTileModel(this.type);
         // @ts-expect-error
-        return new Model(laneWidth, barrierWidth, barrierChunks, this.ratio);
+        return new Model(specs, this.direction, this.ratio);
     }
 
     /**
@@ -111,3 +102,15 @@ export default class TileReferenceModel {
         return getTileComponent(this.type);
     }
 }
+
+/**
+ * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
+ */
+
+/**
+ * @typedef {import('./TileModel').TileModel} TileModel
+ */
+
+/**
+ * @typedef {import('svelte').SvelteComponent} SvelteComponent
+ */

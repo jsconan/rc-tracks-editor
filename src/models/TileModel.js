@@ -16,58 +16,83 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
-import Vector2D from './Vector2D.js';
+import { DEFAULT_TILE_TYPE, isDirectionValid, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
+import { TileSpecifications } from './TileSpecifications.js';
+import { Vector2D } from './Vector2D.js';
 
 /**
  * Represents a track tile.
  */
-export default class TileModel {
+export class TileModel {
     /**
      * Represents a tile with the given size constraints.
-     * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
-     * @param {number} barrierWidth - The width of the barriers.
-     * @param {number} barrierChunks - The number of barrier chunks per section.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {string} direction - The direction of the tile.
      * @param {number} ratio - The size factor relative to a track section. 1 means the tile fits 1 tile section in each direction.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks, ratio = 1) {
-        this.setLaneWidth(laneWidth);
-        this.setBarrierWidth(barrierWidth);
-        this.setBarrierChunks(barrierChunks);
+    constructor(specs, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        this.setSpecs(specs);
+        this.setDirection(direction);
         this.setRatio(ratio);
-
-        this.length = TileModel.getTileLength(laneWidth, barrierWidth);
-        this.width = TileModel.getTileWidth(laneWidth, barrierWidth);
-        this.padding = (this.length - this.width) / 2;
     }
 
     /**
-     * Sets the width of the track lane (the distance between the barriers).
-     * @param {number} laneWidth - The width of the track lane.
-     * @returns {TileModel} - Chains the instance.
+     * The type of tile.
+     * @type {string}
      */
-    setLaneWidth(laneWidth) {
-        this.laneWidth = Math.abs(laneWidth);
+    get type() {
+        // @ts-expect-error
+        return this.constructor.TYPE;
+    }
+
+    /**
+     * The actual length of the tile with respect to the ratio.
+     * @type {number}
+     */
+    get length() {
+        return this.specs.length * this.ratio;
+    }
+
+    /**
+     * The actual width of the tile with respect to the ratio.
+     * @type {number}
+     */
+    get width() {
+        return this.specs.width * this.ratio;
+    }
+
+    /**
+     * Sets the specifications for the tiles.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @returns {TileModel} - Chains the instance.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     */
+    setSpecs(specs) {
+        if (!specs || !(specs instanceof TileSpecifications)) {
+            throw new TypeError('A valid specifications object is needed!');
+        }
+
+        this.specs = specs;
+
         return this;
     }
 
     /**
-     * Sets the width of the barriers.
-     * @param {number} barrierWidth - The width of the barriers.
+     * Sets the direction of the tile.
+     * It can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {string} direction - The direction of the tile.
      * @returns {TileModel} - Chains the instance.
+     * @throws {TypeError} - If the given direction is not valid.
      */
-    setBarrierWidth(barrierWidth) {
-        this.barrierWidth = Math.abs(barrierWidth);
-        return this;
-    }
+    setDirection(direction) {
+        if (!isDirectionValid(direction)) {
+            throw new TypeError('A valid direction is needed!');
+        }
 
-    /**
-     * Sets the number of barrier chunks per section.
-     * @param {number} barrierChunks - The number of barrier chunks per section.
-     * @returns {TileModel} - Chains the instance.
-     */
-    setBarrierChunks(barrierChunks) {
-        this.barrierChunks = Math.abs(Math.round(barrierChunks) || 1);
+        this.direction = direction;
+
         return this;
     }
 
@@ -79,50 +104,22 @@ export default class TileModel {
      */
     setRatio(ratio) {
         this.ratio = Math.abs(ratio || 1);
+
         return this;
     }
 
     /**
-     * Gets the type of tile.
-     * @returns {string}
-     */
-    getType() {
-        // @ts-expect-error
-        return this.constructor.TYPE;
-    }
-
-    /**
-     * Computes the actual length of the tile with respect to the ratio.
-     * @returns {number}
-     */
-    getLength() {
-        return this.length * this.ratio;
-    }
-
-    /**
-     * Computes the actual width of the tile with respect to the ratio.
-     * @returns {number}
-     */
-    getWidth() {
-        return this.width * this.ratio;
-    }
-
-    /**
      * Computes the angle for rotating the tile to the expected direction.
-     * @param {string} direction - The tile direction.
      * @returns {number}
-     * @throws {TypeError} - If the given direction is not valid.
      */
-    getDirectionAngle(direction) {
-        switch (direction) {
-            case TileModel.DIRECTION_RIGHT:
+    getDirectionAngle() {
+        switch (this.direction) {
+            case TILE_DIRECTION_RIGHT:
                 return this.getDirectionAngleRight();
 
-            case TileModel.DIRECTION_LEFT:
+            case TILE_DIRECTION_LEFT:
                 return this.getDirectionAngleLeft();
         }
-
-        throw new TypeError('A valid direction is needed!');
     }
 
     /**
@@ -164,7 +161,7 @@ export default class TileModel {
      * @returns {Vector2D}
      */
     getCurveCenter(x = 0, y = 0) {
-        const offset = this.padding - this.getInnerRadius() - this.length / 2;
+        const offset = this.specs.padding - this.getInnerRadius() - this.specs.length / 2;
 
         return new Vector2D(x + offset, y);
     }
@@ -174,9 +171,8 @@ export default class TileModel {
      * @returns {number}
      */
     getInnerRadius() {
-        const padding = (this.length - this.width) / 2;
         const ratio = Math.max(1, this.ratio) - 1;
-        return this.length * ratio + padding;
+        return this.specs.length * ratio + this.specs.padding;
     }
 
     /**
@@ -184,7 +180,7 @@ export default class TileModel {
      * @returns {number}
      */
     getOuterRadius() {
-        return this.width + this.getInnerRadius() - this.getCurveSide();
+        return this.specs.width + this.getInnerRadius() - this.getCurveSide();
     }
 
     /**
@@ -192,7 +188,7 @@ export default class TileModel {
      * @returns {number}
      */
     getSideBarrierChunks() {
-        return this.barrierChunks * this.ratio;
+        return this.specs.barrierChunks * this.ratio;
     }
 
     /**
@@ -205,22 +201,22 @@ export default class TileModel {
         }
 
         if (this.ratio < 2) {
-            return this.barrierChunks / 2;
+            return this.specs.barrierChunks / 2;
         }
 
-        return this.barrierChunks;
+        return this.specs.barrierChunks;
     }
 
     /**
-     * Computes the number of barrier chunks for an outer curve with respect to the ratio.
+     * Computes the number of barrier chunks for the outer curve with respect to the ratio.
      * @returns {number}
      */
     getOuterBarrierChunks() {
         if (this.ratio < 1) {
-            return this.barrierChunks / 2;
+            return this.specs.barrierChunks / 2;
         }
 
-        return this.barrierChunks;
+        return this.specs.barrierChunks;
     }
 
     /**
@@ -233,7 +229,7 @@ export default class TileModel {
     getCenterCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        return start.addScalarY(this.getLength() / 2).rotateAround(angle, start);
+        return start.addScalarY(this.length / 2).rotateAround(angle, start);
     }
 
     /**
@@ -248,23 +244,19 @@ export default class TileModel {
 
     /**
      * Computes the coordinates of the output point with respect to the tile direction.
-     * @param {string} direction - The tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
-     * @throws {TypeError} - If the given direction is not valid.
      */
-    getOutputCoord(direction, x = 0, y = 0, angle = 0) {
-        switch (direction) {
-            case TileModel.DIRECTION_RIGHT:
+    getOutputCoord(x = 0, y = 0, angle = 0) {
+        switch (this.direction) {
+            case TILE_DIRECTION_RIGHT:
                 return this.getOutputCoordRight(x, y, angle);
 
-            case TileModel.DIRECTION_LEFT:
+            case TILE_DIRECTION_LEFT:
                 return this.getOutputCoordLeft(x, y, angle);
         }
-
-        throw new TypeError('A valid direction is needed!');
     }
 
     /**
@@ -277,7 +269,7 @@ export default class TileModel {
     getOutputCoordRight(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        return start.addScalarY(this.getLength()).rotateAround(angle, start);
+        return start.addScalarY(this.length).rotateAround(angle, start);
     }
 
     /**
@@ -290,26 +282,22 @@ export default class TileModel {
     getOutputCoordLeft(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        return start.addScalarY(this.getLength()).rotateAround(angle, start);
+        return start.addScalarY(this.length).rotateAround(angle, start);
     }
 
     /**
      * Computes the angle of the output point with respect to the tile direction.
-     * @param {string} direction - The tile direction.
      * @param {number} angle - The rotation angle of the tile.
      * @returns {number}
-     * @throws {TypeError} - If the given direction is not valid.
      */
-    getOutputAngle(direction, angle = 0) {
-        switch (direction) {
-            case TileModel.DIRECTION_RIGHT:
+    getOutputAngle(angle = 0) {
+        switch (this.direction) {
+            case TILE_DIRECTION_RIGHT:
                 return this.getOutputAngleRight(angle);
 
-            case TileModel.DIRECTION_LEFT:
+            case TILE_DIRECTION_LEFT:
                 return this.getOutputAngleLeft(angle);
         }
-
-        throw new TypeError('A valid direction is needed!');
     }
 
     /**
@@ -328,49 +316,6 @@ export default class TileModel {
      */
     getOutputAngleLeft(angle = 0) {
         return angle;
-    }
-
-    /**
-     * Computes the overall width of a tile knowing the width of its lane and its barrier.
-     * @param {number} laneWidth - The width of a track lane.
-     * @param {number} barrierWidth - The width of the barriers.
-     * @returns {number}
-     */
-    static getTileWidth(laneWidth, barrierWidth) {
-        return laneWidth + barrierWidth * 2;
-    }
-
-    /**
-     * Computes the overall length of a tile knowing the width of its lane and its barrier.
-     * @param {number} laneWidth - The width of a track lane.
-     * @param {number} barrierWidth - The width of the barriers.
-     * @returns {number}
-     */
-    static getTileLength(laneWidth, barrierWidth) {
-        return TileModel.getTileWidth(laneWidth, barrierWidth) + laneWidth / 4;
-    }
-
-    /**
-     * Computes the width of the lane knowing the width of a tile and its barrier.
-     * @param {number} width - The width of a track section.
-     * @param {number} barrierWidth - The width of the barriers.
-     * @returns {number}
-     */
-    static getLaneWidth(width, barrierWidth) {
-        return width - barrierWidth * 2;
-    }
-
-    /**
-     * Computes the angle of the curve with respect to the tile ratio.
-     * @param {number} ratio - The size factor relative to a track section. 1 means the tile fit 1 tile section in each direction.
-     * @returns {number}
-     */
-    static getCurveAngle(ratio = 1) {
-        if (ratio < 1) {
-            return 90 * ratio;
-        }
-
-        return 90 / ratio;
     }
 }
 

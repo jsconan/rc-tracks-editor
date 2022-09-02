@@ -17,18 +17,18 @@
  */
 
 import { STRAIGHT_TILE_TYPE } from '../helpers/types.js';
-import TileModel from './TileModel.js';
+import { TileModel } from './TileModel.js';
 
 /**
  * Represents a straight track tile.
  */
-export default class StraightTileModel extends TileModel {
+export class StraightTileModel extends TileModel {
     /**
-     * Computes the actual width of the tile with respect to the ratio.
-     * @returns {number}
+     * The actual width of the tile with respect to the ratio.
+     * @type {number}
      */
-    getWidth() {
-        return this.width;
+    get width() {
+        return this.specs.width;
     }
 
     /**

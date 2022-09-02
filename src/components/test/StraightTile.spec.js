@@ -18,17 +18,19 @@
 
 import { render } from '@testing-library/svelte';
 import StraightTile from '../StraightTile.svelte';
-import StraightTileModel from '../../models/StraightTileModel';
+import { StraightTileModel } from '../../models/StraightTileModel';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers/types';
+import { TileSpecifications } from '../../models/TileSpecifications.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('StraightTile', () => {
     it('renders with default values', () => {
         const props = {
-            model: new StraightTileModel(laneWidth, barrierWidth, barrierChunks)
+            model: new StraightTileModel(specs)
         };
         const { container } = render(StraightTile, { props });
 
@@ -48,8 +50,7 @@ describe('StraightTile', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new StraightTileModel(laneWidth, barrierWidth, barrierChunks, ratio),
-                direction,
+                model: new StraightTileModel(specs, direction, ratio),
                 angle,
                 x: 100,
                 y: 150,

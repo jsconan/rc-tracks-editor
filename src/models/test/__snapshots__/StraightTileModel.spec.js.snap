@@ -2,47 +2,87 @@
 
 exports[`StraightTileModel can build a tile with the given size 1`] = `
 StraightTileModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
-  "length": 110,
-  "padding": 10,
+  "direction": "right",
   "ratio": 1,
-  "width": 90,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
 }
 `;
 
-exports[`StraightTileModel can build a tile with the given size and ratio 1`] = `
+exports[`StraightTileModel can build a tile with the given size and a ratio of 0.5 1`] = `
 StraightTileModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
-  "length": 110,
-  "padding": 10,
-  "ratio": 3,
-  "width": 90,
+  "direction": "left",
+  "ratio": 0.5,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
 }
 `;
 
-exports[`StraightTileModel can compute the actual length of the tile with a ratio of 0.5 1`] = `55`;
+exports[`StraightTileModel can build a tile with the given size and a ratio of 1 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
+}
+`;
 
-exports[`StraightTileModel can compute the actual length of the tile with a ratio of 1 1`] = `110`;
+exports[`StraightTileModel can build a tile with the given size and a ratio of 2 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "ratio": 2,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
+}
+`;
 
-exports[`StraightTileModel can compute the actual length of the tile with a ratio of 2 1`] = `220`;
+exports[`StraightTileModel can build a tile with the given size and a ratio of 3 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "ratio": 3,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
+}
+`;
 
-exports[`StraightTileModel can compute the actual length of the tile with a ratio of 3 1`] = `330`;
+exports[`StraightTileModel can build a tile with the given size and a ratio of 4 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "ratio": 4,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
+}
+`;
 
-exports[`StraightTileModel can compute the actual length of the tile with a ratio of 4 1`] = `440`;
-
-exports[`StraightTileModel can compute the actual width of the tile with a ratio of 0.5 1`] = `90`;
-
-exports[`StraightTileModel can compute the actual width of the tile with a ratio of 1 1`] = `90`;
-
-exports[`StraightTileModel can compute the actual width of the tile with a ratio of 2 1`] = `90`;
-
-exports[`StraightTileModel can compute the actual width of the tile with a ratio of 3 1`] = `90`;
-
-exports[`StraightTileModel can compute the actual width of the tile with a ratio of 4 1`] = `90`;
+exports[`StraightTileModel can build a tile with the given size and direction 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
+}
+`;
 
 exports[`StraightTileModel can compute the angle of the curve for a tile with a ratio of 0.5 1`] = `0`;
 

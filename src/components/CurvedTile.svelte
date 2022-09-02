@@ -4,10 +4,8 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
-    import { TILE_DIRECTION_RIGHT } from '../helpers/types';
 
     export let model;
-    export let direction = TILE_DIRECTION_RIGHT;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
@@ -18,12 +16,12 @@
     const outerRadius = model.getOuterRadius();
     const innerChunks = model.getInnerBarrierChunks();
     const outerChunks = model.getOuterBarrierChunks();
-    const tileAngle = model.getDirectionAngle(direction);
+    const tileAngle = model.getDirectionAngle();
     const curveAngle = model.getCurveAngle();
     const curveCenter = model.getCurveCenter(x, y);
     const center = model.getCenterCoord(x, y);
-    const barrierWidth = model.barrierWidth;
-    const width = model.width;
+    const barrierWidth = model.specs.barrierWidth;
+    const width = model.specs.width;
 
     const innerBarrierRadius = innerRadius;
     const innerBarrierX = curveCenter.x + innerBarrierRadius;

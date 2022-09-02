@@ -18,17 +18,9 @@
 
 import { derived } from 'svelte/store';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers/types.js';
-import TileReferenceModel from './TileReferenceModel.js';
-import Vector2D from './Vector2D.js';
-import List from '../stores/List.js';
-
-/**
- * @typedef {import('./TileModel')} TileModel
- */
-
-/**
- * @typedef {import('svelte').SvelteComponent} SvelteComponent
- */
+import { TileReferenceModel } from './TileReferenceModel.js';
+import { Vector2D } from './Vector2D.js';
+import { List } from '../stores/List.js';
 
 /**
  * @typedef {object} tileExport - Represents an exported tile reference.
@@ -43,9 +35,7 @@ import List from '../stores/List.js';
  * @property {string} type - The type of tile.
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
- * @property {string} direction - The direction of the tile.
  * @property {number} angle - The rotation angle of the tile.
- * @property {number} ratio - The size ratio of the tile.
  * @property {TileModel} model - The tile model with respect to its type.
  * @property {SvelteComponent} component - The constructor of the component.
  */
@@ -74,17 +64,13 @@ function updateStats(stats, type, diff = 1) {
 /**
  * Represents a track.
  */
-export default class TrackModel {
+export class TrackModel {
     /**
      * Represents a track with the given size constraints.
-     * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
-     * @param {number} barrierWidth - The width of the barriers.
-     * @param {number} barrierChunks - The number of barrier chunks per section.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks) {
-        this.laneWidth = laneWidth;
-        this.barrierWidth = barrierWidth;
-        this.barrierChunks = barrierChunks;
+    constructor(specs) {
+        this.specs = specs;
         this.tiles = new List();
         this.stats = {};
 
@@ -275,18 +261,18 @@ export default class TrackModel {
         const stats = {};
         const tiles = this.tiles.map(tile => {
             const component = tile.getComponent();
-            const model = tile.getModel(this.laneWidth, this.barrierWidth, this.barrierChunks);
+            const model = tile.getModel(this.specs);
             const center = model.getCenterCoord(position.x, position.y, angle);
-            const middle = model.getLength() / 2;
-            const { id, type, direction, ratio } = tile;
+            const middle = model.length / 2;
+            const { id, type } = tile;
             const { x, y } = position;
 
-            const specs = { id, type, x, y, direction, angle, ratio, model, component };
+            const specs = { id, type, x, y, angle, model, component };
 
             updateStats(stats, type);
 
-            position = model.getOutputCoord(direction, x, y, angle);
-            angle = model.getOutputAngle(direction, angle);
+            position = model.getOutputCoord(x, y, angle);
+            angle = model.getOutputAngle(angle);
 
             topLeft.x = Math.min(topLeft.x, center.x - middle);
             topLeft.y = Math.min(topLeft.y, center.y - middle);
@@ -361,3 +347,15 @@ export default class TrackModel {
         return this;
     }
 }
+
+/**
+ * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
+ */
+
+/**
+ * @typedef {import('./TileModel').TileModel} TileModel
+ */
+
+/**
+ * @typedef {import('svelte').SvelteComponent} SvelteComponent
+ */

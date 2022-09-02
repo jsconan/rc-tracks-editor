@@ -2,9 +2,11 @@
 
 exports[`TrackModel can build a track adding tiles at the first position with a particular type 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
     "straight-tile": 1,
@@ -33,9 +35,11 @@ TrackModel {
 
 exports[`TrackModel can build a track adding tiles at the first position with the default specifications 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 2,
   },
@@ -63,9 +67,11 @@ TrackModel {
 
 exports[`TrackModel can build a track adding tiles at the last position with a particular type 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
   },
@@ -87,9 +93,11 @@ TrackModel {
 
 exports[`TrackModel can build a track adding tiles at the last position with the default specifications 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -120,18 +128,16 @@ Object {
     Object {
       "angle": 45,
       "component": [Function],
-      "direction": "right",
       "id": "id-68",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": 100,
       "y": 100,
@@ -139,18 +145,16 @@ Object {
     Object {
       "angle": 45,
       "component": [Function],
-      "direction": "right",
       "id": "id-69",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": 22.218254069479784,
       "y": 177.78174593052023,
@@ -158,18 +162,16 @@ Object {
     Object {
       "angle": 135,
       "component": [Function],
-      "direction": "right",
       "id": "id-70",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": -55.56349186104045,
       "y": 177.78174593052023,
@@ -177,18 +179,16 @@ Object {
     Object {
       "angle": 135,
       "component": [Function],
-      "direction": "right",
       "id": "id-71",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": -133.3452377915607,
       "y": 100.00000000000001,
@@ -196,18 +196,16 @@ Object {
     Object {
       "angle": 225,
       "component": [Function],
-      "direction": "right",
       "id": "id-72",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": -133.3452377915607,
       "y": 22.218254069479798,
@@ -215,18 +213,16 @@ Object {
     Object {
       "angle": 225,
       "component": [Function],
-      "direction": "right",
       "id": "id-73",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": -55.563491861040475,
       "y": -55.56349186104045,
@@ -234,18 +230,16 @@ Object {
     Object {
       "angle": 315,
       "component": [Function],
-      "direction": "right",
       "id": "id-74",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": 22.218254069479755,
       "y": -55.56349186104046,
@@ -253,18 +247,16 @@ Object {
     Object {
       "angle": 315,
       "component": [Function],
-      "direction": "right",
       "id": "id-75",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": 100,
       "y": 22.21825406947974,
@@ -287,18 +279,16 @@ Object {
     Object {
       "angle": 0,
       "component": [Function],
-      "direction": "right",
       "id": "id-60",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -306,18 +296,16 @@ Object {
     Object {
       "angle": 0,
       "component": [Function],
-      "direction": "right",
       "id": "id-61",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": 0,
       "y": 110,
@@ -325,18 +313,16 @@ Object {
     Object {
       "angle": 90,
       "component": [Function],
-      "direction": "right",
       "id": "id-62",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": -55,
       "y": 165,
@@ -344,18 +330,16 @@ Object {
     Object {
       "angle": 90,
       "component": [Function],
-      "direction": "right",
       "id": "id-63",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": -165,
       "y": 165,
@@ -363,18 +347,16 @@ Object {
     Object {
       "angle": 180,
       "component": [Function],
-      "direction": "right",
       "id": "id-64",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": -220,
       "y": 110,
@@ -382,18 +364,16 @@ Object {
     Object {
       "angle": 180,
       "component": [Function],
-      "direction": "right",
       "id": "id-65",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": -220,
       "y": 0,
@@ -401,18 +381,16 @@ Object {
     Object {
       "angle": 270,
       "component": [Function],
-      "direction": "right",
       "id": "id-66",
       "model": StraightTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
@@ -420,18 +398,16 @@ Object {
     Object {
       "angle": 270,
       "component": [Function],
-      "direction": "right",
       "id": "id-67",
       "model": CurvedTileModel {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "length": 110,
-        "padding": 10,
+        "direction": "right",
         "ratio": 1,
-        "width": 90,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
       },
-      "ratio": 1,
       "type": "curved-tile",
       "x": -55,
       "y": -55.00000000000003,
@@ -445,9 +421,11 @@ Object {
 
 exports[`TrackModel can build a track inserting tiles after a position in the middle 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 4,
   },
@@ -487,9 +465,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles after an inexistent position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -511,9 +491,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles after the first position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },
@@ -547,9 +529,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles after the last position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },
@@ -583,9 +567,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles after with a particular type 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
     "straight-tile": 1,
@@ -614,9 +600,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles before a position in the middle 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 4,
   },
@@ -656,9 +644,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles before an inexistent position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -680,9 +670,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles before the first position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },
@@ -716,9 +708,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles before the last position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },
@@ -752,9 +746,11 @@ TrackModel {
 
 exports[`TrackModel can build a track inserting tiles before with a particular type 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
     "straight-tile": 1,
@@ -783,9 +779,11 @@ TrackModel {
 
 exports[`TrackModel can build a track removing tiles at inexistent position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -807,9 +805,11 @@ TrackModel {
 
 exports[`TrackModel can build a track removing tiles from the end 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 2,
   },
@@ -837,9 +837,11 @@ TrackModel {
 
 exports[`TrackModel can build a track removing tiles from the middle 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 2,
   },
@@ -867,9 +869,11 @@ TrackModel {
 
 exports[`TrackModel can build a track removing tiles from the start 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 2,
   },
@@ -897,9 +901,11 @@ TrackModel {
 
 exports[`TrackModel can build a track replacing tiles at inexistent position 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -921,9 +927,11 @@ TrackModel {
 
 exports[`TrackModel can build a track replacing tiles with a tile having a particular type 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
     "straight-tile": 2,
@@ -958,9 +966,11 @@ TrackModel {
 
 exports[`TrackModel can build a track replacing tiles with a tile having default specifications 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },
@@ -994,9 +1004,11 @@ TrackModel {
 
 exports[`TrackModel can build a track with the given size 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {},
   "subscribe": [Function],
   "tiles": List {
@@ -1009,9 +1021,11 @@ TrackModel {
 
 exports[`TrackModel can clear the list 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {},
   "subscribe": [Function],
   "tiles": List {
@@ -1034,9 +1048,11 @@ Array [
 
 exports[`TrackModel can import from an object 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 1,
   },
@@ -1058,9 +1074,11 @@ TrackModel {
 
 exports[`TrackModel can import from an object 2`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 2,
     "undefined": 1,
@@ -1095,9 +1113,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 1`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {},
   "subscribe": [Function],
   "tiles": List {
@@ -1110,9 +1130,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 2`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
   },
@@ -1134,9 +1156,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 3`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 2,
   },
@@ -1164,9 +1188,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 4`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 1,
   },
@@ -1188,9 +1214,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 5`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 0,
     "straight-tile": 1,
@@ -1213,9 +1241,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 6`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 0,
     "straight-tile": 2,
@@ -1244,9 +1274,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 7`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "curved-tile": 0,
     "straight-tile": 3,
@@ -1281,9 +1313,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 8`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {},
   "subscribe": [Function],
   "tiles": List {
@@ -1296,9 +1330,11 @@ TrackModel {
 
 exports[`TrackModel can notify changes 9`] = `
 TrackModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
   "stats": Object {
     "straight-tile": 3,
   },

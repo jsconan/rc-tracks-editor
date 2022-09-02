@@ -16,16 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import TileModel from '../TileModel.js';
+import { TileModel } from '../TileModel.js';
+import { TileSpecifications } from '../TileSpecifications.js';
 
 const tileX = 100;
 const tileY = 100;
 const tileRatios = [0.5, 1, 2, 3, 4];
+const laneWidth = 80;
 const tileLength = 110;
 const tileWidth = 90;
-const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('TileModel', () => {
     it('is a class', () => {
@@ -34,54 +36,66 @@ describe('TileModel', () => {
 
     describe('can build a tile', () => {
         it('with the given size', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            const tile = new TileModel(specs);
 
             expect(tile).toBeInstanceOf(TileModel);
             expect(tile).toMatchSnapshot();
+            expect(tile.type).toBe(TileModel.TYPE);
+            expect(tile.length).toBe(tileLength);
+            expect(tile.width).toBe(tileWidth);
+
+            // @ts-expect-error
+            expect(() => new TileModel({})).toThrow('A valid specifications object is needed!');
         });
 
-        it('with the given size and ratio', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, 3);
+        it('with the given size and direction', () => {
+            const tile = new TileModel(specs, TileModel.DIRECTION_LEFT);
 
             expect(tile).toBeInstanceOf(TileModel);
             expect(tile).toMatchSnapshot();
+            expect(tile.type).toBe(TileModel.TYPE);
+            expect(tile.length).toBe(tileLength);
+            expect(tile.width).toBe(tileWidth);
+
+            expect(() => new TileModel(specs, '')).toThrow('A valid direction is needed!');
         });
 
-        it('of the expected type', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+        it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
+            const tile = new TileModel(specs, TileModel.DIRECTION_LEFT, ratio);
 
-            expect(tile.getType()).toBe(TileModel.TYPE);
+            expect(tile).toBeInstanceOf(TileModel);
+            expect(tile).toMatchSnapshot();
+            expect(tile.type).toBe(TileModel.TYPE);
+            expect(tile.length).toBe(tileLength * ratio);
+            expect(tile.width).toBe(tileWidth * ratio);
         });
     });
 
     describe('can set', () => {
-        it('the width of the track lane', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setLaneWidth(1)).toBe(tile);
-            expect(tile.laneWidth).toBe(1);
-            expect(tile.setLaneWidth(-1).laneWidth).toBe(1);
+        it('the specifications of the tile', () => {
+            const tile = new TileModel(specs);
+            const newSpecs = new TileSpecifications(10, 1, 2);
+
+            expect(tile.specs).toBeInstanceOf(TileSpecifications);
+            expect(tile.specs).not.toBe(newSpecs);
+            expect(tile.setSpecs(newSpecs)).toBe(tile);
+            expect(tile.specs).toBe(newSpecs);
+
+            // @ts-expect-error
+            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
         });
 
-        it('the width of a barrier', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setBarrierWidth(1)).toBe(tile);
-            expect(tile.barrierWidth).toBe(1);
-            expect(tile.setBarrierWidth(-1).barrierWidth).toBe(1);
-        });
+        it('the direction of the tile', () => {
+            const tile = new TileModel(specs);
 
-        it('the number of a barrier chunks', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setBarrierChunks(1)).toBe(tile);
-            expect(tile.barrierChunks).toBe(1);
-            expect(tile.setBarrierChunks(-1).barrierChunks).toBe(1);
-            expect(tile.setBarrierChunks(0).barrierChunks).toBe(1);
-            expect(tile.setBarrierChunks(0.1).barrierChunks).toBe(1);
-            expect(tile.setBarrierChunks(1.8).barrierChunks).toBe(2);
-            expect(tile.setBarrierChunks(2.1).barrierChunks).toBe(2);
+            expect(tile.direction).toBe(TileModel.DIRECTION_RIGHT);
+            expect(tile.setDirection(TileModel.DIRECTION_LEFT)).toBe(tile);
+            expect(tile.direction).toBe(TileModel.DIRECTION_LEFT);
+            expect(() => tile.setDirection('')).toThrow('A valid direction is needed!');
         });
 
         it('the size ratio', () => {
-            const tile = new TileModel(laneWidth, barrierWidth, barrierChunks);
+            const tile = new TileModel(specs);
             expect(tile.setRatio(1)).toBe(tile);
             expect(tile.ratio).toBe(1);
             expect(tile.setRatio(-1).ratio).toBe(1);
@@ -92,56 +106,37 @@ describe('TileModel', () => {
     });
 
     describe('can compute', () => {
-        describe('the actual length of the tile', () => {
-            it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(tile.getLength()).toMatchSnapshot();
-            });
-        });
-
-        describe('the actual width of the tile', () => {
-            it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(tile.getWidth()).toMatchSnapshot();
-            });
-        });
-
         describe('the rotation angle for a tile', () => {
-            it.each(tileRatios)('not oriented with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(() => tile.getDirectionAngle(void 0)).toThrow('A valid direction is needed!');
-            });
-
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(tile.getDirectionAngle(TileModel.DIRECTION_RIGHT)).toMatchSnapshot();
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
+                expect(tile.getDirectionAngle()).toMatchSnapshot();
                 expect(tile.getDirectionAngleRight()).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(tile.getDirectionAngle(TileModel.DIRECTION_LEFT)).toMatchSnapshot();
+                const tile = new TileModel(specs, TileModel.DIRECTION_LEFT, ratio);
+                expect(tile.getDirectionAngle()).toMatchSnapshot();
                 expect(tile.getDirectionAngleLeft()).toMatchSnapshot();
             });
         });
 
         describe('the angle of the curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getCurveAngle()).toMatchSnapshot();
             });
         });
 
         describe('the side of the curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getCurveSide()).toMatchSnapshot();
             });
         });
 
         describe('the center of the curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getCurveCenter()).toMatchSnapshot();
                 expect(tile.getCurveCenter(tileX, tileY)).toMatchSnapshot();
             });
@@ -149,42 +144,42 @@ describe('TileModel', () => {
 
         describe('the inner radius of the curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getInnerRadius()).toMatchSnapshot();
             });
         });
 
         describe('the outer radius of the curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getOuterRadius()).toMatchSnapshot();
             });
         });
 
         describe('the number of chunks by side for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getSideBarrierChunks()).toMatchSnapshot();
             });
         });
 
         describe('the number of chunks for the inner curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getInnerBarrierChunks()).toMatchSnapshot();
             });
         });
 
         describe('the number of chunks for the outer curve for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getOuterBarrierChunks()).toMatchSnapshot();
             });
         });
 
         describe('the position of the center point for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
 
                 expect(tile.getCenterCoord()).toMatchSnapshot();
                 expect(tile.getCenterCoord(tileX, tileY)).toMatchSnapshot();
@@ -194,7 +189,7 @@ describe('TileModel', () => {
 
         describe('the position of the input point for a tile', () => {
             it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
 
                 expect(tile.getInputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getInputCoord()).toMatchSnapshot();
@@ -202,19 +197,12 @@ describe('TileModel', () => {
         });
 
         describe('the position of the output point for a tile', () => {
-            it.each(tileRatios)('not oriented with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(() => tile.getOutputCoord(void 0)).toThrow('A valid direction is needed!');
-                expect(() => tile.getOutputCoord(void 0, tileX, tileY)).toThrow('A valid direction is needed!');
-                expect(() => tile.getOutputCoord(void 0, tileX, tileY, 90)).toThrow('A valid direction is needed!');
-            });
-
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
 
-                expect(tile.getOutputCoord(TileModel.DIRECTION_RIGHT)).toMatchSnapshot();
-                expect(tile.getOutputCoord(TileModel.DIRECTION_RIGHT, tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoord(TileModel.DIRECTION_RIGHT, tileX, tileY, 90)).toMatchSnapshot();
+                expect(tile.getOutputCoord()).toMatchSnapshot();
+                expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
 
                 expect(tile.getOutputCoordRight()).toMatchSnapshot();
                 expect(tile.getOutputCoordRight(tileX, tileY)).toMatchSnapshot();
@@ -222,11 +210,11 @@ describe('TileModel', () => {
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_LEFT, ratio);
 
-                expect(tile.getOutputCoord(TileModel.DIRECTION_LEFT)).toMatchSnapshot();
-                expect(tile.getOutputCoord(TileModel.DIRECTION_LEFT, tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoord(TileModel.DIRECTION_LEFT, tileX, tileY, 90)).toMatchSnapshot();
+                expect(tile.getOutputCoord()).toMatchSnapshot();
+                expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
 
                 expect(tile.getOutputCoordLeft()).toMatchSnapshot();
                 expect(tile.getOutputCoordLeft(tileX, tileY)).toMatchSnapshot();
@@ -235,61 +223,24 @@ describe('TileModel', () => {
         });
 
         describe('the angle of the output point for a tile', () => {
-            it.each(tileRatios)('not oriented with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
-                expect(() => tile.getOutputAngle(void 0)).toThrow('A valid direction is needed!');
-                expect(() => tile.getOutputAngle(void 0, 90)).toThrow('A valid direction is needed!');
-            });
-
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_RIGHT, ratio);
 
-                expect(tile.getOutputAngle(TileModel.DIRECTION_RIGHT)).toMatchSnapshot();
-                expect(tile.getOutputAngle(TileModel.DIRECTION_RIGHT, 90)).toMatchSnapshot();
+                expect(tile.getOutputAngle()).toMatchSnapshot();
+                expect(tile.getOutputAngle(90)).toMatchSnapshot();
 
                 expect(tile.getOutputAngleRight()).toMatchSnapshot();
                 expect(tile.getOutputAngleRight(90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
-                const tile = new TileModel(laneWidth, barrierWidth, barrierChunks, ratio);
+                const tile = new TileModel(specs, TileModel.DIRECTION_LEFT, ratio);
 
-                expect(tile.getOutputAngle(TileModel.DIRECTION_LEFT)).toMatchSnapshot();
-                expect(tile.getOutputAngle(TileModel.DIRECTION_LEFT, 90)).toMatchSnapshot();
+                expect(tile.getOutputAngle()).toMatchSnapshot();
+                expect(tile.getOutputAngle(90)).toMatchSnapshot();
 
                 expect(tile.getOutputAngleLeft()).toMatchSnapshot();
                 expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
-            });
-        });
-    });
-
-    describe('has a static property', () => {
-        describe('getTileModelWidth', () => {
-            it('which computes the width of a tile knowing the width of its lane and its barrier', () => {
-                expect(TileModel.getTileWidth(laneWidth, barrierWidth)).toBe(tileWidth);
-            });
-        });
-
-        describe('getTileModelLength', () => {
-            it('which computes the length of a tile knowing the width of its lane and its barrier', () => {
-                expect(TileModel.getTileLength(laneWidth, barrierWidth)).toBe(tileLength);
-            });
-        });
-
-        describe('getLaneWidth', () => {
-            it('which computes the width of a lane knowing the width of a tile and its barrier', () => {
-                expect(TileModel.getLaneWidth(tileWidth, barrierWidth)).toBe(laneWidth);
-            });
-        });
-
-        describe('getCurveAngle', () => {
-            it('which computes the angle of the curve with respect of the size ratio', () => {
-                expect(TileModel.getCurveAngle()).toBe(90);
-                expect(TileModel.getCurveAngle(0.5)).toBe(45);
-                expect(TileModel.getCurveAngle(1)).toBe(90);
-                expect(TileModel.getCurveAngle(2)).toBe(45);
-                expect(TileModel.getCurveAngle(3)).toBe(30);
-                expect(TileModel.getCurveAngle(4)).toBe(22.5);
             });
         });
     });

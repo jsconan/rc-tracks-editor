@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import List from '../List.js';
+import { List } from '../List.js';
 
 const source = [1, 2, 3];
 

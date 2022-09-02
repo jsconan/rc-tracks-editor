@@ -18,17 +18,19 @@
 
 import { render } from '@testing-library/svelte';
 import CurvedTile from '../CurvedTile.svelte';
-import CurvedTileModel from '../../models/CurvedTileModel';
+import { CurvedTileModel } from '../../models/CurvedTileModel';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers/types';
+import { TileSpecifications } from '../../models/TileSpecifications.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('CurvedTile', () => {
     it('renders with default values', () => {
         const props = {
-            model: new CurvedTileModel(laneWidth, barrierWidth, barrierChunks)
+            model: new CurvedTileModel(specs)
         };
         const { container } = render(CurvedTile, { props });
 
@@ -48,8 +50,7 @@ describe('CurvedTile', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new CurvedTileModel(laneWidth, barrierWidth, barrierChunks, ratio),
-                direction,
+                model: new CurvedTileModel(specs, direction, ratio),
                 angle,
                 x: 100,
                 y: 150,

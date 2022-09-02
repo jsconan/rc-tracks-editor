@@ -22,10 +22,6 @@ import StraightTile from '../components/StraightTile.svelte';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from './types.js';
 
 /**
- * @typedef {import('svelte').SvelteComponent} SvelteComponent
- */
-
-/**
  * @type {object} - Maps the types of tile to their respective component.
  * @private
  */
@@ -42,3 +38,7 @@ const componentsMap = {
  * @returns {SvelteComponent} - Returns the constructor of the component or null if it does not exist.
  */
 export default type => componentsMap[type] || null;
+
+/**
+ * @typedef {import('svelte').SvelteComponent} SvelteComponent
+ */

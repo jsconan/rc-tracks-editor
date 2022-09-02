@@ -17,27 +17,27 @@
  */
 
 import { CURVED_TILE_TYPE } from '../helpers/types.js';
-import TileModel from './TileModel.js';
-import Vector2D from './Vector2D.js';
+import { TileModel } from './TileModel.js';
+import { Vector2D } from './Vector2D.js';
 
 /**
  * Represents a track tile for a curve.
  */
-export default class CurvedTileModel extends TileModel {
+export class CurvedTileModel extends TileModel {
     /**
-     * Computes the actual length of the tile with respect to the ratio.
-     * @returns {number}
+     * The actual length of the tile with respect to the ratio.
+     * @type {number}
      */
-    getLength() {
-        return this.length;
+    get length() {
+        return this.specs.length;
     }
 
     /**
-     * Computes the actual width of the tile with respect to the ratio.
-     * @returns {number}
+     * The actual width of the tile with respect to the ratio.
+     * @type {number}
      */
-    getWidth() {
-        return this.width;
+    get width() {
+        return this.specs.width;
     }
 
     /**
@@ -53,7 +53,11 @@ export default class CurvedTileModel extends TileModel {
      * @returns {number}
      */
     getCurveAngle() {
-        return TileModel.getCurveAngle(this.ratio);
+        if (this.ratio < 1) {
+            return 90 * this.ratio;
+        }
+
+        return 90 / this.ratio;
     }
 
     /**
@@ -68,7 +72,7 @@ export default class CurvedTileModel extends TileModel {
 
         const curveAngle = this.getCurveAngle();
         const curveCenter = this.getCurveCenter().add(start);
-        const radius = this.getInnerRadius() + this.width / 2;
+        const radius = this.getInnerRadius() + this.specs.width / 2;
 
         const p1 = Vector2D.polar(radius, 0, curveCenter);
         const p2 = p1.addScalarY(10);
@@ -90,7 +94,7 @@ export default class CurvedTileModel extends TileModel {
     getOutputCoordRight(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        const radius = this.getInnerRadius() + this.width / 2;
+        const radius = this.getInnerRadius() + this.specs.width / 2;
         const curveAngle = this.getCurveAngle();
         const center = start.subScalarX(radius);
 
@@ -107,7 +111,7 @@ export default class CurvedTileModel extends TileModel {
     getOutputCoordLeft(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        const radius = this.getInnerRadius() + this.width / 2;
+        const radius = this.getInnerRadius() + this.specs.width / 2;
         const curveAngle = 180 - this.getCurveAngle();
         const center = start.addScalarX(radius);
 

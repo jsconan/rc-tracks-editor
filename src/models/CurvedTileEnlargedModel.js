@@ -17,13 +17,13 @@
  */
 
 import { CURVED_TILE_ENLARGED_TYPE } from '../helpers/types.js';
-import TileModel from './TileModel.js';
-import Vector2D from './Vector2D.js';
+import { TileModel } from './TileModel.js';
+import { Vector2D } from './Vector2D.js';
 
 /**
  * Represents a track tile for an enlarged curve.
  */
-export default class CurvedTileEnlargedModel extends TileModel {
+export class CurvedTileEnlargedModel extends TileModel {
     /**
      * Sets the size factor relative to a track section.
      * 1 means the tile fits 1 tile section in each direction.
@@ -56,7 +56,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getCurveSide() {
-        return this.getLength() / 2;
+        return this.length / 2;
     }
 
     /**
@@ -64,7 +64,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getSideBarrierChunks() {
-        return (this.barrierChunks * this.ratio) / 2;
+        return (this.specs.barrierChunks * this.ratio) / 2;
     }
 
     /**
@@ -73,9 +73,9 @@ export default class CurvedTileEnlargedModel extends TileModel {
      */
     getInnerBarrierChunks() {
         if (this.ratio <= 1) {
-            return this.barrierChunks / 2;
+            return this.specs.barrierChunks / 2;
         }
-        return this.barrierChunks * this.ratio;
+        return this.specs.barrierChunks * this.ratio;
     }
 
     /**
@@ -83,7 +83,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getOuterBarrierChunks() {
-        return (this.barrierChunks / 2) * this.ratio;
+        return (this.specs.barrierChunks / 2) * this.ratio;
     }
 
     /**
@@ -95,7 +95,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
      */
     getCenterCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
-        const center = start.addScalarY(this.length * (this.ratio - 0.5));
+        const center = start.addScalarY(this.specs.length * (this.ratio - 0.5));
 
         return center.rotateAround(angle, start);
     }
@@ -110,7 +110,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
     getOutputCoordRight(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        const radius = this.getInnerRadius() + this.width / 2;
+        const radius = this.getInnerRadius() + this.specs.width / 2;
         const curveAngle = this.getCurveAngle();
         const center = start.subScalarX(radius);
 
@@ -127,7 +127,7 @@ export default class CurvedTileEnlargedModel extends TileModel {
     getOutputCoordLeft(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        const radius = this.getInnerRadius() + this.width / 2;
+        const radius = this.getInnerRadius() + this.specs.width / 2;
         const curveAngle = this.getCurveAngle();
         const center = start.addScalarX(radius);
 

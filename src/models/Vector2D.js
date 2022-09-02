@@ -19,7 +19,7 @@
 /**
  * Represents a 2D vector.
  */
-export default class Vector2D {
+export class Vector2D {
     /**
      * Builds a vector from the given cartesian coordinates.
      * @param {number} x - The X-coordinate of the vector.

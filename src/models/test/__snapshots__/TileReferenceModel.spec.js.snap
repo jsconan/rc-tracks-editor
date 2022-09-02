@@ -38,36 +38,36 @@ TileReferenceModel {
 
 exports[`TileReferenceModel can build the model for a curved tile 1`] = `
 CurvedTileModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
-  "length": 110,
-  "padding": 10,
+  "direction": "right",
   "ratio": 1,
-  "width": 90,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
 }
 `;
 
 exports[`TileReferenceModel can build the model for a curved tile enlarged 1`] = `
 CurvedTileEnlargedModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
-  "length": 110,
-  "padding": 10,
+  "direction": "right",
   "ratio": 1,
-  "width": 90,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
 }
 `;
 
 exports[`TileReferenceModel can build the model for a straight tile 1`] = `
 StraightTileModel {
-  "barrierChunks": 4,
-  "barrierWidth": 5,
-  "laneWidth": 80,
-  "length": 110,
-  "padding": 10,
+  "direction": "right",
   "ratio": 1,
-  "width": 90,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+  },
 }
 `;

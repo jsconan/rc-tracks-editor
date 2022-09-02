@@ -16,14 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import CurvedTileEnlargedModel from '../models/CurvedTileEnlargedModel.js';
-import CurvedTileModel from '../models/CurvedTileModel.js';
-import StraightTileModel from '../models/StraightTileModel.js';
+import { CurvedTileEnlargedModel } from '../models/CurvedTileEnlargedModel.js';
+import { CurvedTileModel } from '../models/CurvedTileModel.js';
+import { StraightTileModel } from '../models/StraightTileModel.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from './types.js';
-
-/**
- * @typedef {import('../models/TileModel')} TileModel
- */
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -42,3 +38,7 @@ const modelsMap = {
  * @returns {TileModel} - Returns the constructor of the model or null if it does not exist.
  */
 export default type => modelsMap[type] || null;
+
+/**
+ * @typedef {import('../models/TileModel').TileModel} TileModel
+ */

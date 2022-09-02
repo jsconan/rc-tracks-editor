@@ -4,26 +4,24 @@
 
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import StraightElement from '../elements/StraightElement.svelte';
-    import { TILE_DIRECTION_RIGHT } from '../helpers/types';
 
     export let model;
-    export let direction = TILE_DIRECTION_RIGHT;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
 
-    const width = model.getWidth();
-    const height = model.getLength();
+    const width = model.width;
+    const height = model.length;
     const chunks = model.getSideBarrierChunks();
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();
-    const tileAngle = model.getDirectionAngle(direction);
+    const tileAngle = model.getDirectionAngle();
     const curveCenter = model.getCurveCenter(x, y);
     const center = model.getCenterCoord(x, y);
-    const barrierLength = model.length / model.barrierChunks;
-    const barrierWidth = model.barrierWidth;
+    const barrierLength = model.specs.barrierLength;
+    const barrierWidth = model.specs.barrierWidth;
     const vertical = true;
 
     const leftBarrierX = curveCenter.x + innerRadius;

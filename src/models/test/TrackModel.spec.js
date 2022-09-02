@@ -17,12 +17,14 @@
  */
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers/types.js';
-import TileReferenceModel from '../TileReferenceModel.js';
-import TrackModel from '../TrackModel.js';
+import { TileReferenceModel } from '../TileReferenceModel.js';
+import { TrackModel } from '../TrackModel.js';
+import { TileSpecifications } from '../TileSpecifications.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('TrackModel', () => {
     it('is a class', () => {
@@ -30,7 +32,7 @@ describe('TrackModel', () => {
     });
 
     it('can get the index of a tile in the track', () => {
-        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const track = new TrackModel(specs);
 
         track.appendTile();
         const id = track.appendTile();
@@ -42,7 +44,7 @@ describe('TrackModel', () => {
 
     describe('can get a tile from the track', () => {
         it('by its identifier', () => {
-            const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+            const track = new TrackModel(specs);
 
             track.appendTile();
             const id = track.appendTile();
@@ -54,7 +56,7 @@ describe('TrackModel', () => {
         });
 
         it('by its index', () => {
-            const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+            const track = new TrackModel(specs);
 
             track.appendTile();
             track.appendTile();
@@ -68,7 +70,7 @@ describe('TrackModel', () => {
 
     describe('can build a track', () => {
         it('with the given size', () => {
-            const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+            const track = new TrackModel(specs);
 
             expect(track).toBeInstanceOf(TrackModel);
             expect(track).toMatchSnapshot();
@@ -77,7 +79,7 @@ describe('TrackModel', () => {
         describe('adding tiles', () => {
             describe('at the last position', () => {
                 it('with the default specifications', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile();
 
@@ -86,7 +88,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
@@ -97,7 +99,7 @@ describe('TrackModel', () => {
 
             describe('at the first position', () => {
                 it('with the default specifications', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.prependTile();
@@ -107,7 +109,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -120,7 +122,7 @@ describe('TrackModel', () => {
 
         describe('removing tiles', () => {
             it('from the start', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 const id = track.appendTile();
                 track.appendTile();
@@ -131,7 +133,7 @@ describe('TrackModel', () => {
             });
 
             it('from the middle', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 const id = track.appendTile();
@@ -142,7 +144,7 @@ describe('TrackModel', () => {
             });
 
             it('from the end', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 track.appendTile();
@@ -153,7 +155,7 @@ describe('TrackModel', () => {
             });
 
             it('at inexistent position', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
 
@@ -164,7 +166,7 @@ describe('TrackModel', () => {
 
         describe('replacing tiles', () => {
             it('with a tile having default specifications', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 const id = track.appendTile();
@@ -177,7 +179,7 @@ describe('TrackModel', () => {
             });
 
             it('with a tile having a particular type', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 track.appendTile();
@@ -190,7 +192,7 @@ describe('TrackModel', () => {
             });
 
             it('at inexistent position', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 expect(track.replaceTile('id')).toBeNull();
@@ -201,7 +203,7 @@ describe('TrackModel', () => {
         describe('inserting tiles', () => {
             describe('before', () => {
                 it('an inexistent position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
 
@@ -210,7 +212,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the first position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile();
                     track.appendTile();
@@ -222,7 +224,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the last position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -234,7 +236,7 @@ describe('TrackModel', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -247,7 +249,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile();
                     const newId = track.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -260,7 +262,7 @@ describe('TrackModel', () => {
 
             describe('after', () => {
                 it('an inexistent position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
 
@@ -269,7 +271,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the first position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile();
                     track.appendTile();
@@ -281,7 +283,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the last position', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -293,7 +295,7 @@ describe('TrackModel', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -306,7 +308,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                    const track = new TrackModel(specs);
 
                     const id = track.appendTile();
                     const newId = track.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -320,7 +322,7 @@ describe('TrackModel', () => {
 
         describe('for rendering', () => {
             it('using default position', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 track.appendTile(CURVED_TILE_TYPE);
@@ -335,7 +337,7 @@ describe('TrackModel', () => {
             });
 
             it('using a start position and angle', () => {
-                const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+                const track = new TrackModel(specs);
 
                 track.appendTile();
                 track.appendTile(CURVED_TILE_TYPE);
@@ -352,14 +354,14 @@ describe('TrackModel', () => {
     });
 
     it('can export to an object', () => {
-        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const track = new TrackModel(specs);
         track.appendTile(CURVED_TILE_TYPE);
 
         expect(track.export()).toMatchSnapshot();
     });
 
     it('can import from an object', () => {
-        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const track = new TrackModel(specs);
         const data = [
             {
                 type: CURVED_TILE_TYPE,
@@ -385,7 +387,7 @@ describe('TrackModel', () => {
     });
 
     it('can clear the list', () => {
-        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const track = new TrackModel(specs);
         track.appendTile(CURVED_TILE_TYPE);
 
         expect(track.clear()).toBe(track);
@@ -393,7 +395,7 @@ describe('TrackModel', () => {
     });
 
     it('can notify changes', () => {
-        const track = new TrackModel(laneWidth, barrierWidth, barrierChunks);
+        const track = new TrackModel(specs);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(track);
