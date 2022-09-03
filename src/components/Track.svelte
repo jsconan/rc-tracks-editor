@@ -18,7 +18,7 @@
 </script>
 
 <Sketch {x} {y} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
-    {#each track.tiles as { id, x, y, angle, model, component }}
+    {#each track.tiles as { id, x, y, angle, model, component } (id)}
         <svelte:component this={component} {model} {angle} {x} {y} {id} />
     {/each}
 </Sketch>

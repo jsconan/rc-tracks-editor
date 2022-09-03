@@ -50,6 +50,14 @@
 
     console.log(JSON.stringify(model.export()));
     // model.import(data.square)
+
+    // let index = 0;
+    // const names = Object.keys(data);
+    // setInterval(() => {
+    //     const name = names[index++ % names.length];
+    //     model.import(data[name]);
+    //     console.log(name, JSON.stringify(model.export()));
+    // }, 1000);
 </script>
 
 <Sketch width="100%" height="100%">

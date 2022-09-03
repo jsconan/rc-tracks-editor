@@ -6,6 +6,7 @@ exports[`CurvedBarrier renders with default values 1`] = `
     <g
       class="barrier curved-barrier"
     >
+      
       <path
         class="barrier-chunk even"
         d="M 0 0
@@ -14,6 +15,7 @@ exports[`CurvedBarrier renders with default values 1`] = `
        A 16 16 0 0 0 6 0
        Z"
       />
+      
       <path
         class="barrier-chunk odd"
         d="M -0.1921471959676957 1.9509032201612824
@@ -22,6 +24,7 @@ exports[`CurvedBarrier renders with default values 1`] = `
        A 16 16 0 0 0 5.692564486451687 3.121445152258052
        Z"
       />
+      
       <path
         class="barrier-chunk even"
         d="M -0.7612046748871322 3.826834323650898
@@ -30,6 +33,7 @@ exports[`CurvedBarrier renders with default values 1`] = `
        A 16 16 0 0 0 4.782072520180588 6.1229349178414365
        Z"
       />
+      
       <path
         class="barrier-chunk odd"
         d="M -1.6853038769745474 5.555702330196022
@@ -49,6 +53,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=0 1`] = `
     <g
       class="barrier curved-barrier"
     >
+      
       <path
         class="barrier-chunk even"
         d="M 100 100
@@ -57,6 +62,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=0 1`] = `
        A 16 16 0 0 0 106 100
        Z"
       />
+      
       <path
         class="barrier-chunk odd"
         d="M 99.80785280403231 101.95090322016128
@@ -65,6 +71,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=0 1`] = `
        A 16 16 0 0 0 105.69256448645169 103.12144515225805
        Z"
       />
+      
       <path
         class="barrier-chunk even"
         d="M 99.23879532511287 103.8268343236509
@@ -73,6 +80,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=0 1`] = `
        A 16 16 0 0 0 104.78207252018059 106.12293491784143
        Z"
       />
+      
       <path
         class="barrier-chunk odd"
         d="M 98.31469612302546 105.55570233019603
@@ -92,6 +100,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=1 1`] = `
     <g
       class="barrier curved-barrier"
     >
+      
       <path
         class="barrier-chunk odd"
         d="M 100 100
@@ -100,6 +109,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=1 1`] = `
        A 16 16 0 0 0 106 100
        Z"
       />
+      
       <path
         class="barrier-chunk even"
         d="M 99.80785280403231 101.95090322016128
@@ -108,6 +118,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=1 1`] = `
        A 16 16 0 0 0 105.69256448645169 103.12144515225805
        Z"
       />
+      
       <path
         class="barrier-chunk odd"
         d="M 99.23879532511287 103.8268343236509
@@ -116,6 +127,7 @@ exports[`CurvedBarrier renders with the given parameters and shift=1 1`] = `
        A 16 16 0 0 0 104.78207252018059 106.12293491784143
        Z"
       />
+      
       <path
         class="barrier-chunk even"
         d="M 98.31469612302546 105.55570233019603

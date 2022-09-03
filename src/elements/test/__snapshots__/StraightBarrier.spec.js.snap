@@ -6,6 +6,7 @@ exports[`StraightBarrier renders with default values 1`] = `
     <g
       class="barrier straight-barrier"
     >
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -13,6 +14,7 @@ exports[`StraightBarrier renders with default values 1`] = `
         x="0"
         y="0"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -20,6 +22,7 @@ exports[`StraightBarrier renders with default values 1`] = `
         x="25"
         y="0"
       />
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -27,6 +30,7 @@ exports[`StraightBarrier renders with default values 1`] = `
         x="50"
         y="0"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -45,6 +49,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
     <g
       class="barrier straight-barrier"
     >
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -52,6 +57,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="100"
         y="100"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -59,6 +65,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="125"
         y="100"
       />
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -66,6 +73,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="150"
         y="100"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -84,6 +92,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
     <g
       class="barrier straight-barrier"
     >
+      
       <rect
         class="barrier-chunk even"
         height="25"
@@ -91,6 +100,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="100"
         y="100"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="25"
@@ -98,6 +108,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="100"
         y="125"
       />
+      
       <rect
         class="barrier-chunk even"
         height="25"
@@ -105,6 +116,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
         x="100"
         y="150"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="25"
@@ -123,6 +135,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
     <g
       class="barrier straight-barrier"
     >
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -130,6 +143,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="100"
         y="100"
       />
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -137,6 +151,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="125"
         y="100"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="6"
@@ -144,6 +159,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="150"
         y="100"
       />
+      
       <rect
         class="barrier-chunk even"
         height="6"
@@ -162,6 +178,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
     <g
       class="barrier straight-barrier"
     >
+      
       <rect
         class="barrier-chunk odd"
         height="25"
@@ -169,6 +186,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="100"
         y="100"
       />
+      
       <rect
         class="barrier-chunk even"
         height="25"
@@ -176,6 +194,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="100"
         y="125"
       />
+      
       <rect
         class="barrier-chunk odd"
         height="25"
@@ -183,6 +202,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
         x="100"
         y="150"
       />
+      
       <rect
         class="barrier-chunk even"
         height="25"

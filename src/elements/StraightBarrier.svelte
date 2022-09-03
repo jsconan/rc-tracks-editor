@@ -23,13 +23,13 @@
             const w = vertical ? width : length;
             const h = vertical ? length : width;
 
-            yield { color, x, y, w, h };
+            yield { color, x, y, w, h, i };
         }
     }
 </script>
 
 <g class="barrier straight-barrier">
-    {#each [...segments()] as { color, x, y, w, h }}
+    {#each [...segments()] as { color, x, y, w, h, i } (i)}
         <StraightElement class="barrier-chunk {color}" {x} {y} width={w} height={h} />
     {/each}
 </g>

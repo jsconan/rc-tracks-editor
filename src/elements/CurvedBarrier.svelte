@@ -22,13 +22,13 @@
             const color = alternateBarrierColor(i + shift);
             const start = chunkAngle * i;
 
-            yield { color, start };
+            yield { color, start, i };
         }
     }
 </script>
 
 <g class="barrier curved-barrier">
-    {#each [...segments()] as { color, start }}
+    {#each [...segments()] as { color, start, i } (i)}
         <CurvedElement class="barrier-chunk {color}" {cx} {cy} {width} {radius} angle={chunkAngle} {start} />
     {/each}
 </g>

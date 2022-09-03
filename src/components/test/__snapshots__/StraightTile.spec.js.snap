@@ -17,6 +17,7 @@ exports[`StraightTile renders with default values 1`] = `
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -24,6 +25,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="-45"
           y="0"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -31,6 +33,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="-45"
           y="27.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -38,6 +41,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="-45"
           y="55"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -49,6 +53,7 @@ exports[`StraightTile renders with default values 1`] = `
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -56,6 +61,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="40"
           y="0"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -63,6 +69,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="40"
           y="27.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -70,6 +77,7 @@ exports[`StraightTile renders with default values 1`] = `
           x="40"
           y="55"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -102,6 +110,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -109,6 +118,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -116,6 +126,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -123,6 +134,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -134,6 +146,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -141,6 +154,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -148,6 +162,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -155,6 +170,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -187,6 +203,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -194,6 +211,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -201,6 +219,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -208,6 +227,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -219,6 +239,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -226,6 +247,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -233,6 +255,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -240,6 +263,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -272,6 +296,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -279,6 +304,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -290,6 +316,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -297,6 +324,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -329,6 +357,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -336,6 +365,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -343,6 +373,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -350,6 +381,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -361,6 +393,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -368,6 +401,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -375,6 +409,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -382,6 +417,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -414,6 +450,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -421,6 +458,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -428,6 +466,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -435,6 +474,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -442,6 +482,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -449,6 +490,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="260"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -456,6 +498,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -463,6 +506,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="315"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -474,6 +518,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -481,6 +526,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -488,6 +534,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -495,6 +542,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -502,6 +550,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -509,6 +558,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="260"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -516,6 +566,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -523,6 +574,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="315"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -555,6 +607,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -562,6 +615,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -569,6 +623,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -576,6 +631,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -583,6 +639,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -590,6 +647,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="260"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -597,6 +655,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -604,6 +663,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="315"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -611,6 +671,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="342.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -618,6 +679,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="370"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -625,6 +687,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="397.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -632,6 +695,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="425"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -643,6 +707,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -650,6 +715,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -657,6 +723,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -664,6 +731,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -671,6 +739,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -678,6 +747,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="260"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -685,6 +755,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -692,6 +763,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="315"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -699,6 +771,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="342.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -706,6 +779,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="370"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -713,6 +787,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="397.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -720,6 +795,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="425"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -752,6 +828,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -759,6 +836,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -766,6 +844,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -773,6 +852,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -780,6 +860,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -787,6 +868,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="260"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -794,6 +876,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -801,6 +884,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="315"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -808,6 +892,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="342.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -815,6 +900,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="370"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -822,6 +908,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="397.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -829,6 +916,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="425"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -836,6 +924,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="452.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -843,6 +932,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="480"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -850,6 +940,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="507.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -857,6 +948,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="535"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -868,6 +960,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -875,6 +968,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -882,6 +976,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -889,6 +984,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -896,6 +992,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -903,6 +1000,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="260"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -910,6 +1008,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -917,6 +1016,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="315"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -924,6 +1024,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="342.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -931,6 +1032,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="370"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -938,6 +1040,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="397.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -945,6 +1048,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="425"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -952,6 +1056,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="452.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -959,6 +1064,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="480"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -966,6 +1072,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="507.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -973,6 +1080,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="535"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1005,6 +1113,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1012,6 +1121,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="150"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1019,6 +1129,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1026,6 +1137,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="205"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1037,6 +1149,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1044,6 +1157,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1051,6 +1165,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1058,6 +1173,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"

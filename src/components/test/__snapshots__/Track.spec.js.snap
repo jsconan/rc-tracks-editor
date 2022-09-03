@@ -9,6 +9,7 @@ exports[`Track renders with default values 1`] = `
       y="0"
     >
       <defs />
+      
       <g
         class="tile straight-tile"
         id="id-0"
@@ -24,6 +25,7 @@ exports[`Track renders with default values 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -31,6 +33,7 @@ exports[`Track renders with default values 1`] = `
             x="-45"
             y="0"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -38,6 +41,7 @@ exports[`Track renders with default values 1`] = `
             x="-45"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -45,6 +49,7 @@ exports[`Track renders with default values 1`] = `
             x="-45"
             y="55"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -56,6 +61,7 @@ exports[`Track renders with default values 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -63,6 +69,7 @@ exports[`Track renders with default values 1`] = `
             x="40"
             y="0"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -70,6 +77,7 @@ exports[`Track renders with default values 1`] = `
             x="40"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -77,6 +85,7 @@ exports[`Track renders with default values 1`] = `
             x="40"
             y="55"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -102,6 +111,7 @@ exports[`Track renders with the given parameters 1`] = `
       y="200"
     >
       <defs />
+      
       <g
         class="tile straight-tile"
         id="id-1"
@@ -117,6 +127,7 @@ exports[`Track renders with the given parameters 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -124,6 +135,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="-45"
             y="0"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -131,6 +143,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="-45"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -138,6 +151,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="-45"
             y="55"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -149,6 +163,7 @@ exports[`Track renders with the given parameters 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -156,6 +171,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="40"
             y="0"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -163,6 +179,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="40"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -170,6 +187,7 @@ exports[`Track renders with the given parameters 1`] = `
             x="40"
             y="55"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -195,6 +213,7 @@ exports[`Track update when the model is modified 1`] = `
       y="200"
     >
       <defs />
+      
       <g
         class="tile straight-tile"
         id="id-2"
@@ -210,6 +229,7 @@ exports[`Track update when the model is modified 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -217,6 +237,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-45"
             y="0"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -224,6 +245,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-45"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -231,6 +253,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-45"
             y="55"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -242,6 +265,7 @@ exports[`Track update when the model is modified 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -249,6 +273,7 @@ exports[`Track update when the model is modified 1`] = `
             x="40"
             y="0"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -256,6 +281,7 @@ exports[`Track update when the model is modified 1`] = `
             x="40"
             y="27.5"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -263,6 +289,7 @@ exports[`Track update when the model is modified 1`] = `
             x="40"
             y="55"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -272,6 +299,7 @@ exports[`Track update when the model is modified 1`] = `
           />
         </g>
       </g>
+      
       
       <g
         class="tile straight-tile"
@@ -288,6 +316,7 @@ exports[`Track update when the model is modified 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -295,6 +324,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-155"
             y="6.735557395310443e-15"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -302,6 +332,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-155"
             y="27.500000000000007"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -309,6 +340,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-155"
             y="55.00000000000001"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -320,6 +352,7 @@ exports[`Track update when the model is modified 1`] = `
         <g
           class="barrier straight-barrier"
         >
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -327,6 +360,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-70"
             y="6.735557395310443e-15"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"
@@ -334,6 +368,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-70"
             y="27.500000000000007"
           />
+          
           <rect
             class="barrier-chunk odd"
             height="27.5"
@@ -341,6 +376,7 @@ exports[`Track update when the model is modified 1`] = `
             x="-70"
             y="55.00000000000001"
           />
+          
           <rect
             class="barrier-chunk even"
             height="27.5"

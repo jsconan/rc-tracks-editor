@@ -20,6 +20,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M -45 0
@@ -28,6 +29,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
        A 15 15 0 0 0 -40 0
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -47.928932188134524 7.071067811865475
@@ -40,6 +42,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 40 55
@@ -48,6 +51,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
        A 45 45 0 0 0 45 55
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 28.284271247461902 83.2842712474619
@@ -60,6 +64,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -67,6 +72,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
           x="-55"
           y="95"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -78,6 +84,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -85,6 +92,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
           x="40"
           y="0"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -120,6 +128,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -128,6 +137,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 15 15 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548
@@ -140,6 +150,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 205
@@ -148,6 +159,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 45 45 0 0 0 145 205
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619
@@ -160,6 +172,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -167,6 +180,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="45"
           y="245"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -178,6 +192,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -185,6 +200,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -220,6 +236,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -228,6 +245,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 15 15 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548
@@ -240,6 +258,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 205
@@ -248,6 +267,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 45 45 0 0 0 145 205
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619
@@ -260,6 +280,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -267,6 +288,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="45"
           y="245"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -278,6 +300,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -285,6 +308,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -320,6 +344,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -328,6 +353,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 15 15 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548
@@ -340,6 +366,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 205
@@ -348,6 +375,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 45 45 0 0 0 145 205
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619
@@ -360,6 +388,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -367,6 +396,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="45"
           y="245"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -378,6 +408,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -385,6 +416,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -420,6 +452,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -428,6 +461,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 15 15 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548
@@ -440,6 +474,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 205
@@ -448,6 +483,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 45 45 0 0 0 145 205
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619
@@ -460,6 +496,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -467,6 +504,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="45"
           y="245"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -478,6 +516,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -485,6 +524,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -520,6 +560,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -528,6 +569,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.69423364838765 173.41083864193538
@@ -536,6 +578,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 57.598160050403806 174.38629025201604
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 45.865543901354414 195.92201188381077
@@ -544,6 +587,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 50.48494156391084 197.83542904563623
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 34.77635347630543 216.66842796235227
@@ -552,6 +596,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 38.93370153781815 219.44627912745028
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 19.852813742385706 234.8528137423857
@@ -560,6 +605,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 23.388347648318444 238.38834764831842
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 1.6684279623522684 249.77635347630542
@@ -568,6 +614,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 4.446279127450282 253.93370153781814
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -19.077988116189218 260.8655439013544
@@ -576,6 +623,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 125 125 0 0 0 -17.164570954363768 265.48494156391087
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -41.5891613580646 267.69423364838764
@@ -588,6 +636,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 260
@@ -596,6 +645,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 100 100 0 0 0 145 260
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 132.76855558857224 296.35492607468353
@@ -604,6 +654,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 100 100 0 0 0 137.3879532511287 298.268343236509
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 112.17514421272202 327.175144212722
@@ -612,6 +663,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 100 100 0 0 0 115.71067811865476 330.71067811865476
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 81.35492607468353 347.7685555885722
@@ -624,6 +676,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -631,6 +684,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-65"
           y="355"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -638,6 +692,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-37.5"
           y="355"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -645,6 +700,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-10"
           y="355"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -656,6 +712,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -663,6 +720,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -670,6 +728,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -677,6 +736,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -712,6 +772,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -720,6 +781,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 53.03231811597638 180.02102421061187
@@ -728,6 +790,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 57.98954242284543 180.6736551717121
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 47.162940046485716 209.52838037357978
@@ -736,6 +799,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 51.992569177931045 210.82247559909237
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 37.49229247759595 238.01718944397066
@@ -744,6 +808,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 42.111690140152376 239.9306066057961
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 24.185842870420913 265
@@ -752,6 +817,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 28.515969889343097 267.5
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 7.471268266984083 290.01512867200574
@@ -760,6 +826,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 11.438034968440263 293.05893581704936
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -12.365440327094063 312.6345596729059
@@ -768,6 +835,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 -8.829906421161326 316.17009357883865
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -34.984871327994256 332.4712682669841
@@ -776,6 +844,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 -31.94106418295064 336.43803496844026
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -59.99999999999997 349.18584287042086
@@ -784,6 +853,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 -57.49999999999997 353.51596988934307
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -86.98281055602934 362.4922924775959
@@ -792,6 +862,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 -85.06939339420389 367.1116901401524
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -115.47161962642022 372.1629400464857
@@ -800,6 +871,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 235 235 0 0 0 -114.17752440090763 376.99256917793105
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -144.9789757893881 378.0323181159764
@@ -812,6 +884,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 315
@@ -820,6 +893,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 155 155 0 0 0 145 315
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 134.88887394336024 353.8228567653781
@@ -828,6 +902,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 155 155 0 0 0 139.7185030748056 355.1169519908907
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 119.9038105676658 390
@@ -836,6 +911,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 155 155 0 0 0 124.23393758658801 392.5
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 96.06601717798213 421.06601717798213
@@ -844,6 +920,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 155 155 0 0 0 99.60155108391487 424.60155108391484
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 65.00000000000001 444.9038105676658
@@ -852,6 +929,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 155 155 0 0 0 67.50000000000001 449.233937586588
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 28.822856765378113 459.88887394336024
@@ -864,6 +942,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -871,6 +950,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-175"
           y="465"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -878,6 +958,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-147.5"
           y="465"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -885,6 +966,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-120"
           y="465"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -892,6 +974,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-92.5"
           y="465"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -899,6 +982,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-65"
           y="465"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -910,6 +994,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -917,6 +1002,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -924,6 +1010,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -931,6 +1018,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -938,6 +1026,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -945,6 +1034,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="260"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -980,6 +1070,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -988,6 +1079,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 53.36280706854694 183.3258277120506
@@ -996,6 +1088,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 58.338730701907934 183.8159134136984
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 48.46699533709835 216.33070948548362
@@ -1004,6 +1097,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 53.37092173911452 217.30616109556425
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 40.359714148951014 248.6967902665172
@@ -1012,6 +1106,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 45.14441582761202 250.1482136527895
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 29.119041053837464 280.11236700413053
@@ -1020,6 +1115,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 33.738438716393944 282.025784165956
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 14.853229878440743 310.2748905208392
@@ -1028,6 +1124,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 19.262836200182505 312.6318742049692
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -2.3003318171346336 338.89387922666475
@@ -1036,6 +1133,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 1.8570162443780873 341.67173039176276
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -22.17644585666943 365.69371661563946
@@ -1044,6 +1142,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -18.311393589855754 368.86568303645765
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -44.58369439657383 390.41630560342617
@@ -1052,6 +1151,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -41.048160490641095 393.9518395093589
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -69.30628338436054 412.8235541433305
@@ -1060,6 +1160,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -66.13431696354232 416.68860641014425
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -96.10612077333522 432.69966818286537
@@ -1068,6 +1169,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -93.3282696082372 436.8570162443781
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -124.7251094791608 449.85322987844074
@@ -1076,6 +1178,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -122.36812579503083 454.2628362001825
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -154.88763299586947 464.11904105383746
@@ -1084,6 +1187,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -152.974215834044 468.73843871639394
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -186.3032097334828 475.359714148951
@@ -1092,6 +1196,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -184.8517863472105 480.1444158276121
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -218.66929051451638 483.46699533709835
@@ -1100,6 +1205,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 345 345 0 0 0 -217.69383890443572 488.3709217391145
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M -251.6741722879494 488.36280706854694
@@ -1112,6 +1218,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 370
@@ -1120,6 +1227,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 145 370
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 136.06098248266224 409.9935160133063
@@ -1128,6 +1236,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 140.96490888467838 410.9689676233869
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 124.39530416481378 448.4501036348434
@@ -1136,6 +1245,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 129.0147018273702 450.36352079666887
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 105.45127052202179 483.89189776901844
@@ -1144,6 +1254,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 109.60861858353451 486.66974893411646
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 79.95689014324225 514.9568901432422
@@ -1152,6 +1263,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 83.49242404917499 518.4924240491749
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 48.89189776901847 540.4512705220218
@@ -1160,6 +1272,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 51.669748934116484 544.6086185835345
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 13.450103634843416 559.3953041648138
@@ -1168,6 +1281,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 210 210 0 0 0 15.363520796668865 564.0147018273702
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M -25.006483986693695 571.0609824826622
@@ -1180,6 +1294,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -1187,6 +1302,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-285"
           y="575"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -1194,6 +1310,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-257.5"
           y="575"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -1201,6 +1318,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-230"
           y="575"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -1208,6 +1326,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-202.5"
           y="575"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -1215,6 +1334,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-175"
           y="575"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -1222,6 +1342,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-147.5"
           y="575"
         />
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -1229,6 +1350,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="-120"
           y="575"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -1240,6 +1362,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1247,6 +1370,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1254,6 +1378,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="177.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1261,6 +1386,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="205"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1268,6 +1394,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="232.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1275,6 +1402,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="260"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1282,6 +1410,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="287.5"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1289,6 +1418,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="315"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
@@ -1324,6 +1454,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk even"
           d="M 55 150
@@ -1332,6 +1463,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 15 15 0 0 0 60 150
        Z"
         />
+        
         <path
           class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548
@@ -1344,6 +1476,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier curved-barrier"
       >
+        
         <path
           class="barrier-chunk odd"
           d="M 140 205
@@ -1352,6 +1485,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
        A 45 45 0 0 0 145 205
        Z"
         />
+        
         <path
           class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619
@@ -1364,6 +1498,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk even"
           height="5"
@@ -1371,6 +1506,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="45"
           y="245"
         />
+        
         <rect
           class="barrier-chunk odd"
           height="5"
@@ -1382,6 +1518,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       <g
         class="barrier straight-barrier"
       >
+        
         <rect
           class="barrier-chunk odd"
           height="27.5"
@@ -1389,6 +1526,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
           x="140"
           y="150"
         />
+        
         <rect
           class="barrier-chunk even"
           height="27.5"
