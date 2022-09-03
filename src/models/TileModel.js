@@ -241,16 +241,6 @@ export class TileModel {
     }
 
     /**
-     * Computes the coordinates of the input point.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @returns {Vector2D}
-     */
-    getInputCoord(x = 0, y = 0) {
-        return new Vector2D(x, y);
-    }
-
-    /**
      * Computes the coordinates of the output point with respect to the tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.

@@ -9,13 +9,13 @@ exports[`ControlPoints renders with default values 1`] = `
       <circle
         class="point"
         cx="0"
-        cy="55"
+        cy="0"
         r="5"
       />
       <circle
         class="point"
         cx="0"
-        cy="0"
+        cy="55"
         r="5"
       />
       <circle
@@ -37,14 +37,14 @@ exports[`ControlPoints renders with the given parameters for a curved-tile orien
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle
@@ -66,14 +66,14 @@ exports[`ControlPoints renders with the given parameters for a curved-tile orien
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle
@@ -95,14 +95,14 @@ exports[`ControlPoints renders with the given parameters for a curved-tile-enlar
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle
@@ -124,14 +124,14 @@ exports[`ControlPoints renders with the given parameters for a curved-tile-enlar
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle
@@ -153,14 +153,14 @@ exports[`ControlPoints renders with the given parameters for a straight-tile ori
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle
@@ -182,14 +182,14 @@ exports[`ControlPoints renders with the given parameters for a straight-tile ori
     >
       <circle
         class="point"
-        cx="61.10912703473989"
-        cy="188.89087296526012"
+        cx="100"
+        cy="150"
         r="8"
       />
       <circle
         class="point"
-        cx="100"
-        cy="150"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
         r="8"
       />
       <circle

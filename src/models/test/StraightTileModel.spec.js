@@ -203,15 +203,6 @@ describe('StraightTileModel', () => {
             });
         });
 
-        describe('the position of the input point for a tile', () => {
-            it.each(tileRatios)('with a ratio of %s', ratio => {
-                const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, ratio);
-
-                expect(tile.getInputCoord(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getInputCoord()).toMatchSnapshot();
-            });
-        });
-
         describe('the position of the output point for a tile', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, ratio);
