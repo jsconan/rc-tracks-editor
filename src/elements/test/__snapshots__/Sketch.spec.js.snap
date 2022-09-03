@@ -34,6 +34,46 @@ exports[`Sketch renders with the given element in slots 1`] = `
 </body>
 `;
 
+exports[`Sketch renders with the parameters viewX, viewY, viewWidth, and viewHeight 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="100 150 200 300"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters viewX, viewY, viewWidth, viewHeight, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 200 300"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters viewX, viewY, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 100 150"
+      width="100"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
 exports[`Sketch renders with the parameters width and height 1`] = `
 <body>
   <div>
@@ -48,7 +88,69 @@ exports[`Sketch renders with the parameters width and height 1`] = `
 </body>
 `;
 
-exports[`Sketch renders with the parameters x, y, viewWidth, and viewHeight 1`] = `
+exports[`Sketch renders with the parameters x, y, viewX, viewY, viewWidth, and viewHeight 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="100 150 200 300"
+      x="40"
+      y="50"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters x, y, viewX, viewY, viewWidth, viewHeight, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 200 300"
+      width="100"
+      x="40"
+      y="50"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters x, y, viewX, viewY, width, and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="100 150 100 150"
+      width="100"
+      x="40"
+      y="50"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters x, y, width and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="0 0 100 150"
+      width="100"
+      x="40"
+      y="50"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters viewX, viewY, viewWidth, and viewHeight 1`] = `
 <body>
   <div>
     <svg
@@ -60,7 +162,17 @@ exports[`Sketch renders with the parameters x, y, viewWidth, and viewHeight 1`] 
 </body>
 `;
 
-exports[`Sketch renders with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+exports[`Sketch updates with the parameters viewX, viewY, viewWidth, and viewHeight 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters viewX, viewY, viewWidth, viewHeight, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -74,7 +186,17 @@ exports[`Sketch renders with the parameters x, y, viewWidth, viewHeight, width, 
 </body>
 `;
 
-exports[`Sketch renders with the parameters x, y, width, and height 1`] = `
+exports[`Sketch updates with the parameters viewX, viewY, viewWidth, viewHeight, width, and height 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters viewX, viewY, width, and height 1`] = `
 <body>
   <div>
     <svg
@@ -82,6 +204,16 @@ exports[`Sketch renders with the parameters x, y, width, and height 1`] = `
       viewBox="100 150 100 150"
       width="100"
     >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters viewX, viewY, width, and height 2`] = `
+<body>
+  <div>
+    <svg>
       <defs />
     </svg>
   </div>
@@ -112,11 +244,13 @@ exports[`Sketch updates with the parameters width and height 2`] = `
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 1`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, viewWidth, and viewHeight 1`] = `
 <body>
   <div>
     <svg
       viewBox="100 150 200 300"
+      x="40"
+      y="50"
     >
       <defs />
     </svg>
@@ -124,7 +258,7 @@ exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 1`] 
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 2`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, viewWidth, and viewHeight 2`] = `
 <body>
   <div>
     <svg>
@@ -134,13 +268,15 @@ exports[`Sketch updates with the parameters x, y, viewWidth, and viewHeight 2`] 
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, and height 1`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, viewWidth, viewHeight, width, and height 1`] = `
 <body>
   <div>
     <svg
       height="150"
       viewBox="100 150 200 300"
       width="100"
+      x="40"
+      y="50"
     >
       <defs />
     </svg>
@@ -148,7 +284,7 @@ exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, 
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, and height 2`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, viewWidth, viewHeight, width, and height 2`] = `
 <body>
   <div>
     <svg>
@@ -158,13 +294,15 @@ exports[`Sketch updates with the parameters x, y, viewWidth, viewHeight, width, 
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, width, and height 1`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, width, and height 1`] = `
 <body>
   <div>
     <svg
       height="150"
       viewBox="100 150 100 150"
       width="100"
+      x="40"
+      y="50"
     >
       <defs />
     </svg>
@@ -172,7 +310,33 @@ exports[`Sketch updates with the parameters x, y, width, and height 1`] = `
 </body>
 `;
 
-exports[`Sketch updates with the parameters x, y, width, and height 2`] = `
+exports[`Sketch updates with the parameters x, y, viewX, viewY, width, and height 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters x, y, width and height 1`] = `
+<body>
+  <div>
+    <svg
+      height="150"
+      viewBox="0 0 100 150"
+      width="100"
+      x="40"
+      y="50"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters x, y, width and height 2`] = `
 <body>
   <div>
     <svg>

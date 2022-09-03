@@ -27,8 +27,10 @@ import SketchWithSlot from './SketchWithSlot.svelte';
  */
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-const x = 100;
-const y = 150;
+const x = 40;
+const y = 50;
+const viewX = 100;
+const viewY = 150;
 const viewWidth = 200;
 const viewHeight = 300;
 const width = 100;
@@ -43,9 +45,19 @@ describe('Sketch', () => {
 
     it.each([
         ['width and height', { width, height }],
-        ['x, y, width, and height', { x, y, width, height }],
-        ['x, y, viewWidth, and viewHeight', { x, y, viewWidth, viewHeight }],
-        ['x, y, viewWidth, viewHeight, width, and height', { x, y, viewWidth, viewHeight, width, height }]
+        ['x, y, width and height', { x, y, width, height }],
+        ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
+        ['x, y, viewX, viewY, width, and height', { x, y, viewX, viewY, width, height }],
+        ['viewX, viewY, viewWidth, and viewHeight', { viewX, viewY, viewWidth, viewHeight }],
+        ['x, y, viewX, viewY, viewWidth, and viewHeight', { x, y, viewX, viewY, viewWidth, viewHeight }],
+        [
+            'viewX, viewY, viewWidth, viewHeight, width, and height',
+            { viewX, viewY, viewWidth, viewHeight, width, height }
+        ],
+        [
+            'x, y, viewX, viewY, viewWidth, viewHeight, width, and height',
+            { x, y, viewX, viewY, viewWidth, viewHeight, width, height }
+        ]
     ])('renders with the parameters %s', (title, props) => {
         const { container } = render(Sketch, { props });
 
@@ -54,13 +66,25 @@ describe('Sketch', () => {
 
     it.each([
         ['width and height', { width, height }],
-        ['x, y, width, and height', { x, y, width, height }],
-        ['x, y, viewWidth, and viewHeight', { x, y, viewWidth, viewHeight }],
-        ['x, y, viewWidth, viewHeight, width, and height', { x, y, viewWidth, viewHeight, width, height }]
+        ['x, y, width and height', { x, y, width, height }],
+        ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
+        ['x, y, viewX, viewY, width, and height', { x, y, viewX, viewY, width, height }],
+        ['viewX, viewY, viewWidth, and viewHeight', { viewX, viewY, viewWidth, viewHeight }],
+        ['x, y, viewX, viewY, viewWidth, and viewHeight', { x, y, viewX, viewY, viewWidth, viewHeight }],
+        [
+            'viewX, viewY, viewWidth, viewHeight, width, and height',
+            { viewX, viewY, viewWidth, viewHeight, width, height }
+        ],
+        [
+            'x, y, viewX, viewY, viewWidth, viewHeight, width, and height',
+            { x, y, viewX, viewY, viewWidth, viewHeight, width, height }
+        ]
     ])('updates with the parameters %s', (title, props) => {
         const unset = {
             x: void 0,
             y: void 0,
+            viewX: void 0,
+            viewY: void 0,
             viewWidth: void 0,
             viewHeight: void 0,
             width: void 0,
