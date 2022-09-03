@@ -4,6 +4,7 @@
 
     import StraightBarrier from '../elements/StraightBarrier.svelte';
     import StraightElement from '../elements/StraightElement.svelte';
+    import { StraightTileModel } from '../models/StraightTileModel';
 
     export let model;
     export let angle = 0;
@@ -11,6 +12,10 @@
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
+
+    if (!(model instanceof StraightTileModel)) {
+        throw new TypeError('The model must be an instance of StraightTileModel!');
+    }
 
     const width = model.width;
     const height = model.length;

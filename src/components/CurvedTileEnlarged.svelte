@@ -4,6 +4,7 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import StraightBarrier from '../elements/StraightBarrier.svelte';
+    import { CurvedTileEnlargedModel } from '../models/CurvedTileEnlargedModel';
 
     export let model;
     export let angle = 0;
@@ -11,6 +12,10 @@
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
+
+    if (!(model instanceof CurvedTileEnlargedModel)) {
+        throw new TypeError('The model must be an instance of CurvedTileEnlargedModel!');
+    }
 
     const barrierLength = model.specs.barrierLength;
     const barrierWidth = model.specs.barrierWidth;

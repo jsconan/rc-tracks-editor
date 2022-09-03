@@ -62,4 +62,13 @@ describe('CurvedTileEnlarged', () => {
             expect(container).toMatchSnapshot();
         }
     );
+
+    it('needs a valid model', () => {
+        const props = {
+            model: {}
+        };
+        expect(() => render(CurvedTileEnlarged, { props })).toThrow(
+            'The model must be an instance of CurvedTileEnlargedModel!'
+        );
+    });
 });

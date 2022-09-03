@@ -62,4 +62,11 @@ describe('StraightTile', () => {
             expect(container).toMatchSnapshot();
         }
     );
+
+    it('needs a valid model', () => {
+        const props = {
+            model: {}
+        };
+        expect(() => render(StraightTile, { props })).toThrow('The model must be an instance of StraightTileModel!');
+    });
 });

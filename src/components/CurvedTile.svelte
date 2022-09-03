@@ -4,6 +4,7 @@
 
     import CurvedBarrier from '../elements/CurvedBarrier.svelte';
     import CurvedElement from '../elements/CurvedElement.svelte';
+    import { CurvedTileModel } from '../models/CurvedTileModel';
 
     export let model;
     export let angle = 0;
@@ -11,6 +12,10 @@
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
+
+    if (!(model instanceof CurvedTileModel)) {
+        throw new TypeError('The model must be an instance of CurvedTileModel!');
+    }
 
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();

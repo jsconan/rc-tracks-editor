@@ -65,4 +65,11 @@ describe('ControlPoints', () => {
 
         expect(container).toMatchSnapshot();
     });
+
+    it('needs a valid model', () => {
+        const props = {
+            model: {}
+        };
+        expect(() => render(ControlPoints, { props })).toThrow('The model must be an instance of TileModel!');
+    });
 });
