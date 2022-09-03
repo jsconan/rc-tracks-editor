@@ -34,6 +34,28 @@ describe('CurvedTileModel', () => {
         expect(CurvedTileModel).toEqual(expect.any(Function));
     });
 
+    describe('throws error', () => {
+        it('when trying to create an instance with an invalid specifications object', () => {
+            // @ts-expect-error
+            expect(() => new CurvedTileModel({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to create an instance with an invalid direction', () => {
+            expect(() => new CurvedTileModel(specs, '')).toThrow('A valid direction is needed!');
+        });
+
+        it('when trying to set an invalid specifications object', () => {
+            const tile = new CurvedTileModel(specs);
+            // @ts-expect-error
+            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to set an invalid direction', () => {
+            const tile = new CurvedTileModel(specs);
+            expect(() => tile.setDirection('')).toThrow('A valid direction is needed!');
+        });
+    });
+
     describe('can build a tile', () => {
         it('with the given size', () => {
             const tile = new CurvedTileModel(specs);
@@ -44,9 +66,6 @@ describe('CurvedTileModel', () => {
             expect(tile.id).toBe(`${CurvedTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
-
-            // @ts-expect-error
-            expect(() => new CurvedTileModel({})).toThrow('A valid specifications object is needed!');
         });
 
         it('with the given size and direction', () => {
@@ -58,8 +77,6 @@ describe('CurvedTileModel', () => {
             expect(tile.id).toBe(`${CurvedTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
-
-            expect(() => new CurvedTileModel(specs, '')).toThrow('A valid direction is needed!');
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
@@ -83,9 +100,6 @@ describe('CurvedTileModel', () => {
             expect(tile.specs).not.toBe(newSpecs);
             expect(tile.setSpecs(newSpecs)).toBe(tile);
             expect(tile.specs).toBe(newSpecs);
-
-            // @ts-expect-error
-            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
         });
 
         it('the direction of the tile', () => {
@@ -94,7 +108,6 @@ describe('CurvedTileModel', () => {
             expect(tile.direction).toBe(CurvedTileModel.DIRECTION_RIGHT);
             expect(tile.setDirection(CurvedTileModel.DIRECTION_LEFT)).toBe(tile);
             expect(tile.direction).toBe(CurvedTileModel.DIRECTION_LEFT);
-            expect(() => tile.setDirection('')).toThrow('A valid direction is needed!');
         });
 
         it('the size ratio', () => {

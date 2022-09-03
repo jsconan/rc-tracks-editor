@@ -34,6 +34,28 @@ describe('StraightTileModel', () => {
         expect(StraightTileModel).toEqual(expect.any(Function));
     });
 
+    describe('throws error', () => {
+        it('when trying to create an instance with an invalid specifications object', () => {
+            // @ts-expect-error
+            expect(() => new StraightTileModel({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to create an instance with an invalid direction', () => {
+            expect(() => new StraightTileModel(specs, '')).toThrow('A valid direction is needed!');
+        });
+
+        it('when trying to set an invalid specifications object', () => {
+            const tile = new StraightTileModel(specs);
+            // @ts-expect-error
+            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to set an invalid direction', () => {
+            const tile = new StraightTileModel(specs);
+            expect(() => tile.setDirection('')).toThrow('A valid direction is needed!');
+        });
+    });
+
     describe('can build a tile', () => {
         it('with the given size', () => {
             const tile = new StraightTileModel(specs);
@@ -44,9 +66,6 @@ describe('StraightTileModel', () => {
             expect(tile.id).toBe(`${StraightTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
-
-            // @ts-expect-error
-            expect(() => new StraightTileModel({})).toThrow('A valid specifications object is needed!');
         });
 
         it('with the given size and direction', () => {
@@ -58,8 +77,6 @@ describe('StraightTileModel', () => {
             expect(tile.id).toBe(`${StraightTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
-
-            expect(() => new StraightTileModel(specs, '')).toThrow('A valid direction is needed!');
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
@@ -83,9 +100,6 @@ describe('StraightTileModel', () => {
             expect(tile.specs).not.toBe(newSpecs);
             expect(tile.setSpecs(newSpecs)).toBe(tile);
             expect(tile.specs).toBe(newSpecs);
-
-            // @ts-expect-error
-            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
         });
 
         it('the direction of the tile', () => {
@@ -94,7 +108,6 @@ describe('StraightTileModel', () => {
             expect(tile.direction).toBe(StraightTileModel.DIRECTION_RIGHT);
             expect(tile.setDirection(StraightTileModel.DIRECTION_LEFT)).toBe(tile);
             expect(tile.direction).toBe(StraightTileModel.DIRECTION_LEFT);
-            expect(() => tile.setDirection('')).toThrow('A valid direction is needed!');
         });
 
         it('the size ratio', () => {

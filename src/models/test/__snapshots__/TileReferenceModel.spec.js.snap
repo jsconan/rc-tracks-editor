@@ -3,7 +3,7 @@
 exports[`TileReferenceModel can build a reference to a tile with the default specifications 1`] = `
 TileReferenceModel {
   "direction": "right",
-  "id": "id-0",
+  "id": "id-6",
   "ratio": 1,
   "type": "straight-tile",
 }
@@ -12,7 +12,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given direction 1`] = `
 TileReferenceModel {
   "direction": "left",
-  "id": "id-2",
+  "id": "id-8",
   "ratio": 1,
   "type": "straight-tile",
 }
@@ -21,7 +21,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given ratio 1`] = `
 TileReferenceModel {
   "direction": "left",
-  "id": "id-3",
+  "id": "id-9",
   "ratio": 2,
   "type": "straight-tile",
 }
@@ -30,7 +30,7 @@ TileReferenceModel {
 exports[`TileReferenceModel can build a reference to a tile with the given type 1`] = `
 TileReferenceModel {
   "direction": "right",
-  "id": "id-1",
+  "id": "id-7",
   "ratio": 1,
   "type": "straight-tile",
 }
@@ -80,7 +80,7 @@ Object {
     "y": 138.89087296526012,
   },
   "component": [Function],
-  "id": "id-15",
+  "id": "id-19",
   "model": CurvedTileModel {
     "direction": "right",
     "ratio": 1,
@@ -109,7 +109,7 @@ Object {
     "y": 55,
   },
   "component": [Function],
-  "id": "id-14",
+  "id": "id-18",
   "model": CurvedTileModel {
     "direction": "right",
     "ratio": 1,
@@ -138,7 +138,7 @@ Object {
     "y": 138.89087296526012,
   },
   "component": [Function],
-  "id": "id-17",
+  "id": "id-21",
   "model": CurvedTileEnlargedModel {
     "direction": "right",
     "ratio": 1,
@@ -167,7 +167,7 @@ Object {
     "y": 55,
   },
   "component": [Function],
-  "id": "id-16",
+  "id": "id-20",
   "model": CurvedTileEnlargedModel {
     "direction": "right",
     "ratio": 1,
@@ -196,7 +196,7 @@ Object {
     "y": 138.89087296526012,
   },
   "component": [Function],
-  "id": "id-13",
+  "id": "id-17",
   "model": StraightTileModel {
     "direction": "right",
     "ratio": 1,
@@ -225,7 +225,7 @@ Object {
     "y": 55,
   },
   "component": [Function],
-  "id": "id-12",
+  "id": "id-16",
   "model": StraightTileModel {
     "direction": "right",
     "ratio": 1,
