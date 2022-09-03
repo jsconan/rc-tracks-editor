@@ -109,7 +109,41 @@ export class TileReferenceModel {
     getComponent() {
         return getTileComponent(this.type);
     }
+
+    /**
+     * Computes the coordinates of the tile.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {tileCoord} - The computed coordinates for rendering the tile.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     */
+    build(specs, x = 0, y = 0, angle = 0) {
+        const { id, type } = this;
+        const component = this.getComponent();
+        const model = this.getModel(specs);
+        const outputAngle = model.getOutputAngle(angle);
+        const outputCoord = model.getOutputCoord(x, y, angle);
+        const centerCoord = model.getCenterCoord(x, y, angle);
+
+        return { id, type, x, y, angle, centerCoord, outputCoord, outputAngle, model, component };
+    }
 }
+
+/**
+ * @typedef {object} tileCoord - Represents a tile ready to be rendered.
+ * @property {string} id - The identifier of the tile.
+ * @property {string} type - The type of tile.
+ * @property {number} x - The left coordinate of the tile.
+ * @property {number} y - The top coordinate of the tile.
+ * @property {number} angle - The rotation angle of the tile.
+ * @property {Vector2D} centerCoord - The coordinates of the center of the tile.
+ * @property {Vector2D} outputCoord - The coordinates of the output of the tile.
+ * @property {number} outputAngle - The rotation angle at the output of the tile.
+ * @property {TileModel} model - The tile model with respect to its type.
+ * @property {SvelteComponent} component - The constructor of the component.
+ */
 
 /**
  * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
@@ -117,6 +151,10 @@ export class TileReferenceModel {
 
 /**
  * @typedef {import('./TileModel').TileModel} TileModel
+ */
+
+/**
+ * @typedef {import('./Vector2D').Vector2D} Vector2D
  */
 
 /**

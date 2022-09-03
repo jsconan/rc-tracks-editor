@@ -127,6 +127,10 @@ Object {
   "tiles": Array [
     Object {
       "angle": 45,
+      "centerCoord": Vector2D {
+        "x": 61.10912703473989,
+        "y": 138.89087296526012,
+      },
       "component": [Function],
       "id": "id-68",
       "model": StraightTileModel {
@@ -138,12 +142,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 45,
+      "outputCoord": Vector2D {
+        "x": 22.218254069479784,
+        "y": 177.78174593052023,
+      },
       "type": "straight-tile",
       "x": 100,
       "y": 100,
     },
     Object {
       "angle": 45,
+      "centerCoord": Vector2D {
+        "x": -16.672618895780325,
+        "y": 216.67261889578035,
+      },
       "component": [Function],
       "id": "id-69",
       "model": CurvedTileModel {
@@ -155,12 +168,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 135,
+      "outputCoord": Vector2D {
+        "x": -55.56349186104045,
+        "y": 177.78174593052023,
+      },
       "type": "curved-tile",
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
     Object {
       "angle": 135,
+      "centerCoord": Vector2D {
+        "x": -94.45436482630056,
+        "y": 138.89087296526012,
+      },
       "component": [Function],
       "id": "id-70",
       "model": StraightTileModel {
@@ -172,12 +194,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 135,
+      "outputCoord": Vector2D {
+        "x": -133.3452377915607,
+        "y": 100.00000000000001,
+      },
       "type": "straight-tile",
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
     Object {
       "angle": 135,
+      "centerCoord": Vector2D {
+        "x": -172.2361107568208,
+        "y": 61.10912703473991,
+      },
       "component": [Function],
       "id": "id-71",
       "model": CurvedTileModel {
@@ -189,12 +220,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 225,
+      "outputCoord": Vector2D {
+        "x": -133.3452377915607,
+        "y": 22.218254069479798,
+      },
       "type": "curved-tile",
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
     Object {
       "angle": 225,
+      "centerCoord": Vector2D {
+        "x": -94.45436482630058,
+        "y": -16.672618895780325,
+      },
       "component": [Function],
       "id": "id-72",
       "model": StraightTileModel {
@@ -206,12 +246,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 225,
+      "outputCoord": Vector2D {
+        "x": -55.563491861040475,
+        "y": -55.56349186104045,
+      },
       "type": "straight-tile",
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
     Object {
       "angle": 225,
+      "centerCoord": Vector2D {
+        "x": -16.672618895780367,
+        "y": -94.45436482630056,
+      },
       "component": [Function],
       "id": "id-73",
       "model": CurvedTileModel {
@@ -223,12 +272,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 315,
+      "outputCoord": Vector2D {
+        "x": 22.218254069479755,
+        "y": -55.56349186104046,
+      },
       "type": "curved-tile",
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
     Object {
       "angle": 315,
+      "centerCoord": Vector2D {
+        "x": 61.10912703473988,
+        "y": -16.67261889578036,
+      },
       "component": [Function],
       "id": "id-74",
       "model": StraightTileModel {
@@ -240,12 +298,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 315,
+      "outputCoord": Vector2D {
+        "x": 100,
+        "y": 22.21825406947974,
+      },
       "type": "straight-tile",
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
     Object {
       "angle": 315,
+      "centerCoord": Vector2D {
+        "x": 138.89087296526012,
+        "y": 61.10912703473984,
+      },
       "component": [Function],
       "id": "id-75",
       "model": CurvedTileModel {
@@ -256,6 +323,11 @@ Object {
           "barrierWidth": 5,
           "laneWidth": 80,
         },
+      },
+      "outputAngle": 405,
+      "outputCoord": Vector2D {
+        "x": 100.00000000000003,
+        "y": 99.99999999999997,
       },
       "type": "curved-tile",
       "x": 100,
@@ -278,6 +350,10 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "centerCoord": Vector2D {
+        "x": 0,
+        "y": 55,
+      },
       "component": [Function],
       "id": "id-60",
       "model": StraightTileModel {
@@ -289,12 +365,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 0,
+      "outputCoord": Vector2D {
+        "x": 0,
+        "y": 110,
+      },
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "centerCoord": Vector2D {
+        "x": 0,
+        "y": 165,
+      },
       "component": [Function],
       "id": "id-61",
       "model": CurvedTileModel {
@@ -306,12 +391,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 90,
+      "outputCoord": Vector2D {
+        "x": -55,
+        "y": 165,
+      },
       "type": "curved-tile",
       "x": 0,
       "y": 110,
     },
     Object {
       "angle": 90,
+      "centerCoord": Vector2D {
+        "x": -110,
+        "y": 165,
+      },
       "component": [Function],
       "id": "id-62",
       "model": StraightTileModel {
@@ -323,12 +417,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 90,
+      "outputCoord": Vector2D {
+        "x": -165,
+        "y": 165,
+      },
       "type": "straight-tile",
       "x": -55,
       "y": 165,
     },
     Object {
       "angle": 90,
+      "centerCoord": Vector2D {
+        "x": -220,
+        "y": 165,
+      },
       "component": [Function],
       "id": "id-63",
       "model": CurvedTileModel {
@@ -340,12 +443,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 180,
+      "outputCoord": Vector2D {
+        "x": -220,
+        "y": 110,
+      },
       "type": "curved-tile",
       "x": -165,
       "y": 165,
     },
     Object {
       "angle": 180,
+      "centerCoord": Vector2D {
+        "x": -220,
+        "y": 55,
+      },
       "component": [Function],
       "id": "id-64",
       "model": StraightTileModel {
@@ -357,12 +469,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 180,
+      "outputCoord": Vector2D {
+        "x": -220,
+        "y": 0,
+      },
       "type": "straight-tile",
       "x": -220,
       "y": 110,
     },
     Object {
       "angle": 180,
+      "centerCoord": Vector2D {
+        "x": -220,
+        "y": -55,
+      },
       "component": [Function],
       "id": "id-65",
       "model": CurvedTileModel {
@@ -374,12 +495,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 270,
+      "outputCoord": Vector2D {
+        "x": -165,
+        "y": -55.00000000000001,
+      },
       "type": "curved-tile",
       "x": -220,
       "y": 0,
     },
     Object {
       "angle": 270,
+      "centerCoord": Vector2D {
+        "x": -110,
+        "y": -55.000000000000014,
+      },
       "component": [Function],
       "id": "id-66",
       "model": StraightTileModel {
@@ -391,12 +521,21 @@ Object {
           "laneWidth": 80,
         },
       },
+      "outputAngle": 270,
+      "outputCoord": Vector2D {
+        "x": -55,
+        "y": -55.00000000000003,
+      },
       "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
     },
     Object {
       "angle": 270,
+      "centerCoord": Vector2D {
+        "x": -2.842170943040401e-14,
+        "y": -55.000000000000036,
+      },
       "component": [Function],
       "id": "id-67",
       "model": CurvedTileModel {
@@ -407,6 +546,11 @@ Object {
           "barrierWidth": 5,
           "laneWidth": 80,
         },
+      },
+      "outputAngle": 360,
+      "outputCoord": Vector2D {
+        "x": 7.105427357601002e-15,
+        "y": -3.552713678800501e-14,
       },
       "type": "curved-tile",
       "x": -55,

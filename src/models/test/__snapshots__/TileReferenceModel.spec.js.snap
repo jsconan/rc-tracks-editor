@@ -71,3 +71,177 @@ StraightTileModel {
   },
 }
 `;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile at coordinates [100, 100] and angle 45 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 61.10912703473989,
+    "y": 138.89087296526012,
+  },
+  "component": [Function],
+  "id": "id-15",
+  "model": CurvedTileModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 135,
+  "outputCoord": Vector2D {
+    "x": 22.21825406947977,
+    "y": 100,
+  },
+  "type": "curved-tile",
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile at coordinates [undefined, undefined] and angle undefined 1`] = `
+Object {
+  "angle": 0,
+  "centerCoord": Vector2D {
+    "x": 0,
+    "y": 55,
+  },
+  "component": [Function],
+  "id": "id-14",
+  "model": CurvedTileModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 90,
+  "outputCoord": Vector2D {
+    "x": -55,
+    "y": 55,
+  },
+  "type": "curved-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile enlarged at coordinates [100, 100] and angle 45 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 61.10912703473989,
+    "y": 138.89087296526012,
+  },
+  "component": [Function],
+  "id": "id-17",
+  "model": CurvedTileEnlargedModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 135,
+  "outputCoord": Vector2D {
+    "x": 22.21825406947977,
+    "y": 100,
+  },
+  "type": "curved-tile-enlarged",
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile enlarged at coordinates [undefined, undefined] and angle undefined 1`] = `
+Object {
+  "angle": 0,
+  "centerCoord": Vector2D {
+    "x": 0,
+    "y": 55,
+  },
+  "component": [Function],
+  "id": "id-16",
+  "model": CurvedTileEnlargedModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 90,
+  "outputCoord": Vector2D {
+    "x": -55,
+    "y": 55,
+  },
+  "type": "curved-tile-enlarged",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a straight tile at coordinates [100, 100] and angle 45 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 61.10912703473989,
+    "y": 138.89087296526012,
+  },
+  "component": [Function],
+  "id": "id-13",
+  "model": StraightTileModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 45,
+  "outputCoord": Vector2D {
+    "x": 22.218254069479784,
+    "y": 177.78174593052023,
+  },
+  "type": "straight-tile",
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`TileReferenceModel can compute the coordinates of the tile for a straight tile at coordinates [undefined, undefined] and angle undefined 1`] = `
+Object {
+  "angle": 0,
+  "centerCoord": Vector2D {
+    "x": 0,
+    "y": 55,
+  },
+  "component": [Function],
+  "id": "id-12",
+  "model": StraightTileModel {
+    "direction": "right",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 0,
+  "outputCoord": Vector2D {
+    "x": 0,
+    "y": 110,
+  },
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;

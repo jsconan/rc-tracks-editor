@@ -150,6 +150,41 @@ describe('TileReferenceModel', () => {
         });
     });
 
+    describe('can compute the coordinates of the tile for', () => {
+        it.each([
+            [void 0, void 0, void 0],
+            [100, 100, 45]
+        ])('a straight tile at coordinates [%s, %s] and angle %s', (x, y, angle) => {
+            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
+            expect(ref.build(specs, x, y, angle)).toMatchSnapshot();
+
+            // @ts-expect-error
+            expect(() => ref.build({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it.each([
+            [void 0, void 0, void 0],
+            [100, 100, 45]
+        ])('a curved tile at coordinates [%s, %s] and angle %s', (x, y, angle) => {
+            const ref = new TileReferenceModel(CURVED_TILE_TYPE);
+            expect(ref.build(specs, x, y, angle)).toMatchSnapshot();
+
+            // @ts-expect-error
+            expect(() => ref.build({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it.each([
+            [void 0, void 0, void 0],
+            [100, 100, 45]
+        ])('a curved tile enlarged at coordinates [%s, %s] and angle %s', (x, y, angle) => {
+            const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
+            expect(ref.build(specs, x, y, angle)).toMatchSnapshot();
+
+            // @ts-expect-error
+            expect(() => ref.build({})).toThrow('A valid specifications object is needed!');
+        });
+    });
+
     describe('can get the component for', () => {
         it('a straight tile', () => {
             const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);

@@ -23,34 +23,6 @@ import { Vector2D } from './Vector2D.js';
 import { List } from '../stores/List.js';
 
 /**
- * @typedef {object} tileExport - Represents an exported tile reference.
- * @property {string} type - The type of tile.
- * @property {string} direction - The direction of the tile.
- * @property {number} ratio - The size ratio of the tile.
- */
-
-/**
- * @typedef {object} tile - Represents a tile ready to be rendered.
- * @property {string} id - The identifier of the tile.
- * @property {string} type - The type of tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {TileModel} model - The tile model with respect to its type.
- * @property {SvelteComponent} component - The constructor of the component.
- */
-
-/**
- * @typedef {object} track - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tile[]} tiles - The list of tiles.
- * @property {object} stats - An object listing the stats for the track.
- */
-
-/**
  * Update the number of identified types.
  * @param {object} stats - The receiver for the stats.
  * @param {TileReferenceModel} tile - The tile to count.
@@ -251,37 +223,33 @@ export class TrackModel {
      * @param {number} startX - The X-coordinate of the first tile.
      * @param {number} startY - The Y-coordinate of the first tile.
      * @param {number} startAngle - The rotation angle of the first tile.
-     * @returns {track}
+     * @returns {trackCoord}
      */
     build(startX = 0, startY = 0, startAngle = 0) {
         const topLeft = new Vector2D();
         const bottomRight = new Vector2D();
-        let position = new Vector2D(startX, startY);
-        let angle = startAngle;
+        let inputX = startX;
+        let inputY = startY;
+        let inputAngle = startAngle;
 
         const stats = {};
         const tiles = this.tiles.map(tile => {
-            const component = tile.getComponent();
-            const model = tile.getModel(this.specs);
-            const center = model.getCenterCoord(position.x, position.y, angle);
-            const middle = model.length / 2;
-            const { id, type } = tile;
-            const { x, y } = position;
-
-            const specs = { id, type, x, y, angle, model, component };
+            const tileCoord = tile.build(this.specs, inputX, inputY, inputAngle);
+            const middle = tileCoord.model.length / 2;
 
             updateStats(stats, tile);
 
-            position = model.getOutputCoord(x, y, angle);
-            angle = model.getOutputAngle(angle);
+            inputX = tileCoord.outputCoord.x;
+            inputY = tileCoord.outputCoord.y;
+            inputAngle = tileCoord.outputAngle;
 
-            topLeft.x = Math.min(topLeft.x, center.x - middle);
-            topLeft.y = Math.min(topLeft.y, center.y - middle);
+            topLeft.x = Math.min(topLeft.x, tileCoord.centerCoord.x - middle);
+            topLeft.y = Math.min(topLeft.y, tileCoord.centerCoord.y - middle);
 
-            bottomRight.x = Math.max(bottomRight.x, center.x + middle);
-            bottomRight.y = Math.max(bottomRight.y, center.y + middle);
+            bottomRight.x = Math.max(bottomRight.x, tileCoord.centerCoord.x + middle);
+            bottomRight.y = Math.max(bottomRight.y, tileCoord.centerCoord.y + middle);
 
-            return specs;
+            return tileCoord;
         });
 
         const { x, y } = topLeft;
@@ -348,6 +316,27 @@ export class TrackModel {
         return this;
     }
 }
+
+/**
+ * @typedef {object} tileExport - Represents an exported tile reference.
+ * @property {string} type - The type of tile.
+ * @property {string} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
+ */
+
+/**
+ * @typedef {object} trackCoord - Represents a track ready to be rendered.
+ * @property {number} x - The left coordinate of the track.
+ * @property {number} y - The top coordinate of the track.
+ * @property {number} width - The width of the track.
+ * @property {number} height - The height of the track.
+ * @property {tileCoord[]} tiles - The list of tiles.
+ * @property {object} stats - An object listing the stats for the track.
+ */
+
+/**
+ * @typedef {import('./TileReferenceModel').tileCoord} tileCoord
+ */
 
 /**
  * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
