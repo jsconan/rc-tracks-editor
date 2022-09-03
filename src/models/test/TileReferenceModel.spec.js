@@ -48,6 +48,7 @@ describe('TileReferenceModel', () => {
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-1`);
         });
 
         it('with the given type', () => {
@@ -55,6 +56,7 @@ describe('TileReferenceModel', () => {
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-1`);
         });
 
         it('with the given direction', () => {
@@ -62,6 +64,7 @@ describe('TileReferenceModel', () => {
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-1`);
         });
 
         it('with the given ratio', () => {
@@ -69,6 +72,7 @@ describe('TileReferenceModel', () => {
 
             expect(ref).toBeInstanceOf(TileReferenceModel);
             expect(ref).toMatchSnapshot();
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-2`);
         });
 
         it('but throws error', () => {
@@ -84,6 +88,7 @@ describe('TileReferenceModel', () => {
             expect(ref.type).toBe(STRAIGHT_TILE_TYPE);
             expect(ref.setType(CURVED_TILE_TYPE)).toBe(ref);
             expect(ref.type).toBe(CURVED_TILE_TYPE);
+            expect(ref.modelId).toBe(`${CURVED_TILE_TYPE}-1`);
             expect(() => ref.setType('')).toThrow('A valid type of tile is needed!');
         });
 
@@ -93,6 +98,7 @@ describe('TileReferenceModel', () => {
             expect(ref.direction).toBe(TILE_DIRECTION_RIGHT);
             expect(ref.setDirection(TILE_DIRECTION_LEFT)).toBe(ref);
             expect(ref.direction).toBe(TILE_DIRECTION_LEFT);
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-1`);
             expect(() => ref.setDirection('')).toThrow('A valid direction is needed!');
         });
 
@@ -102,6 +108,7 @@ describe('TileReferenceModel', () => {
             expect(ref.ratio).toBe(1);
             expect(ref.setRatio(2)).toBe(ref);
             expect(ref.ratio).toBe(2);
+            expect(ref.modelId).toBe(`${STRAIGHT_TILE_TYPE}-2`);
             expect(ref.setRatio(-1).ratio).toBe(1);
             expect(ref.setRatio(0).ratio).toBe(1);
             expect(ref.setRatio(0.5).ratio).toBe(0.5);

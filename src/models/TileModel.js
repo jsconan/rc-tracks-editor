@@ -48,6 +48,14 @@ export class TileModel {
     }
 
     /**
+     * The identifier for the model.
+     * @type {string}
+     */
+    get id() {
+        return `${this.type}-${this.ratio}`;
+    }
+
+    /**
      * The actual length of the tile with respect to the ratio.
      * @type {number}
      */

@@ -41,6 +41,7 @@ describe('CurvedTileModel', () => {
             expect(tile).toBeInstanceOf(CurvedTileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileModel.TYPE);
+            expect(tile.id).toBe(`${CurvedTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
 
@@ -54,6 +55,7 @@ describe('CurvedTileModel', () => {
             expect(tile).toBeInstanceOf(CurvedTileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileModel.TYPE);
+            expect(tile.id).toBe(`${CurvedTileModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
 
@@ -66,6 +68,7 @@ describe('CurvedTileModel', () => {
             expect(tile).toBeInstanceOf(CurvedTileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileModel.TYPE);
+            expect(tile.id).toBe(`${CurvedTileModel.TYPE}-${ratio}`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
         });

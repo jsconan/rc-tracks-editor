@@ -41,6 +41,14 @@ export class TileReferenceModel {
     }
 
     /**
+     * The identifier for the model.
+     * @type {string}
+     */
+    get modelId() {
+        return `${this.type}-${this.ratio}`;
+    }
+
+    /**
      * Sets the type of referenced tile.
      * @param {string} type - The type of referenced tile.
      * @returns {TileReferenceModel} - Chains the instance.

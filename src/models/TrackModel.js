@@ -53,12 +53,13 @@ import { List } from '../stores/List.js';
 /**
  * Update the number of identified types.
  * @param {object} stats - The receiver for the stats.
- * @param {string} type - The type to count.
+ * @param {TileReferenceModel} tile - The tile to count.
  * @param {number} diff - The amount to add for the identified type.
  * @private
  */
-function updateStats(stats, type, diff = 1) {
-    stats[type] = Math.max(0, (stats[type] || 0) + diff);
+function updateStats(stats, tile, diff = 1) {
+    const key = tile.modelId;
+    stats[key] = Math.max(0, (stats[key] || 0) + diff);
 }
 
 /**
@@ -124,7 +125,7 @@ export class TrackModel {
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
 
-        updateStats(this.stats, type);
+        updateStats(this.stats, tile);
         this.tiles.add(tile);
 
         return tile.id;
@@ -142,7 +143,7 @@ export class TrackModel {
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = new TileReferenceModel(type, direction, ratio);
 
-        updateStats(this.stats, type);
+        updateStats(this.stats, tile);
         this.tiles.insert(0, tile);
 
         return tile.id;
@@ -160,7 +161,7 @@ export class TrackModel {
             return false;
         }
 
-        updateStats(this.stats, this.tiles.get(index).type, -1);
+        updateStats(this.stats, this.tiles.get(index), -1);
 
         return this.tiles.delete(index) > 0;
     }
@@ -182,8 +183,8 @@ export class TrackModel {
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            updateStats(this.stats, this.tiles.get(index).type, -1);
-            updateStats(this.stats, type);
+            updateStats(this.stats, this.tiles.get(index), -1);
+            updateStats(this.stats, tile);
 
             this.tiles.set(index, tile);
 
@@ -210,7 +211,7 @@ export class TrackModel {
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            updateStats(this.stats, type);
+            updateStats(this.stats, tile);
             this.tiles.insert(index, tile);
 
             return tile.id;
@@ -236,7 +237,7 @@ export class TrackModel {
         if (index >= 0) {
             const tile = new TileReferenceModel(type, direction, ratio);
 
-            updateStats(this.stats, type);
+            updateStats(this.stats, tile);
             this.tiles.insert(index + 1, tile);
 
             return tile.id;
@@ -269,7 +270,7 @@ export class TrackModel {
 
             const specs = { id, type, x, y, angle, model, component };
 
-            updateStats(stats, type);
+            updateStats(stats, tile);
 
             position = model.getOutputCoord(x, y, angle);
             angle = model.getOutputAngle(angle);
@@ -319,7 +320,7 @@ export class TrackModel {
                 if (!done) {
                     const { type, direction, ratio } = value || {};
                     value = new TileReferenceModel(type, direction, ratio);
-                    updateStats(this.stats, type);
+                    updateStats(this.stats, value);
                 }
 
                 return { done, value };

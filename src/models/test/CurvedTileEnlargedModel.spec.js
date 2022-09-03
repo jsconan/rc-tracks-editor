@@ -41,6 +41,7 @@ describe('CurvedTileEnlargedModel', () => {
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
+            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
 
@@ -54,6 +55,7 @@ describe('CurvedTileEnlargedModel', () => {
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
+            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
 
@@ -62,12 +64,14 @@ describe('CurvedTileEnlargedModel', () => {
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
             const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
+            const sizeRatio = Math.max(1, ratio);
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.length).toBe(tileLength * Math.max(1, ratio));
-            expect(tile.width).toBe(tileWidth * Math.max(1, ratio));
+            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`);
+            expect(tile.length).toBe(tileLength * sizeRatio);
+            expect(tile.width).toBe(tileWidth * sizeRatio);
         });
     });
 

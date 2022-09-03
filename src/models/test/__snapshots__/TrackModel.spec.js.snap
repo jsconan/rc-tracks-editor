@@ -8,8 +8,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
-    "straight-tile": 1,
+    "curved-tile-2": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -41,7 +41,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 2,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -73,7 +73,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
+    "curved-tile-2": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -99,7 +99,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -121,8 +121,8 @@ exports[`TrackModel can build a track for rendering using a start position and a
 Object {
   "height": 421.1269837220809,
   "stats": Object {
-    "curved-tile": 4,
-    "straight-tile": 4,
+    "curved-tile-1": 4,
+    "straight-tile-1": 4,
   },
   "tiles": Array [
     Object {
@@ -272,8 +272,8 @@ exports[`TrackModel can build a track for rendering using default position 1`] =
 Object {
   "height": 330,
   "stats": Object {
-    "curved-tile": 4,
-    "straight-tile": 4,
+    "curved-tile-1": 4,
+    "straight-tile-1": 4,
   },
   "tiles": Array [
     Object {
@@ -427,7 +427,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 4,
+    "straight-tile-1": 4,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -471,7 +471,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -497,7 +497,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -535,7 +535,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -573,8 +573,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
-    "straight-tile": 1,
+    "curved-tile-2": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -606,7 +606,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 4,
+    "straight-tile-1": 4,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -650,7 +650,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -676,7 +676,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -714,7 +714,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -752,8 +752,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
-    "straight-tile": 1,
+    "curved-tile-2": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -785,7 +785,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -811,7 +811,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 2,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -843,7 +843,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 2,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -875,7 +875,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 2,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -907,7 +907,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -933,8 +933,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
-    "straight-tile": 2,
+    "curved-tile-2": 1,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -972,7 +972,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1054,7 +1054,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 1,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1080,8 +1080,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 2,
-    "undefined": 1,
+    "curved-tile-1": 2,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1136,7 +1136,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
+    "curved-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1162,7 +1162,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 2,
+    "curved-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1194,7 +1194,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 1,
+    "curved-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1220,8 +1220,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 0,
-    "straight-tile": 1,
+    "curved-tile-1": 0,
+    "straight-tile-1": 1,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1247,8 +1247,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 0,
-    "straight-tile": 2,
+    "curved-tile-1": 0,
+    "straight-tile-1": 2,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1280,8 +1280,8 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "curved-tile": 0,
-    "straight-tile": 3,
+    "curved-tile-1": 0,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1336,7 +1336,7 @@ TrackModel {
     "laneWidth": 80,
   },
   "stats": Object {
-    "straight-tile": 3,
+    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
