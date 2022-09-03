@@ -9,6 +9,20 @@
         { "type": "straight-tile", "direction": "right", "ratio": 1 },
         { "type": "curved-tile-enlarged", "direction": "left", "ratio": 1 }
     ],
+    "oval": [
+        { "type": "straight-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "straight-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 }
+    ],
+    "circle": [
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 }
+    ],
     "camel": [
         { "type": "straight-tile", "direction": "right", "ratio": 1 },
         { "type": "straight-tile", "direction": "right", "ratio": 1 },
