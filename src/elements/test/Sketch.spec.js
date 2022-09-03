@@ -17,15 +17,9 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { wait } from '../../helpers/wait.js';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
-
-/**
- * Resolves a promise after a particular number of milliseconds.
- * @param {number} ms - How many milliseconds to wait.
- * @returns {Promise}
- */
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const x = 40;
 const y = 50;
@@ -79,7 +73,7 @@ describe('Sketch', () => {
             'x, y, viewX, viewY, viewWidth, viewHeight, width, and height',
             { x, y, viewX, viewY, viewWidth, viewHeight, width, height }
         ]
-    ])('updates with the parameters %s', (title, props) => {
+    ])('updates with the parameters %s', async (title, props) => {
         const unset = {
             x: void 0,
             y: void 0,
@@ -92,10 +86,10 @@ describe('Sketch', () => {
         };
         const rendered = render(Sketch);
 
-        return wait(50)
+        return wait(10)
             .then(() => rendered.component.$set(props))
             .then(() => expect(rendered.container).toMatchSnapshot())
-            .then(() => wait(50))
+            .then(() => wait(10))
             .then(() => rendered.component.$set(unset))
             .then(() => expect(rendered.container).toMatchSnapshot());
     });
