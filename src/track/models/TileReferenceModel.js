@@ -28,6 +28,7 @@ import { uid } from '../../core/helpers';
 import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
+import { TileSpecifications } from './TileSpecifications';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -40,22 +41,39 @@ const modelsMap = {
 };
 
 /**
+ * Creates the tile model with respect to the given reference.
+ * @param {TileReferenceModel} ref - The reference object.
+ * @returns {TileModel} - Returns a tile model of the expected type.
+ * @throws {TypeError} - If the given specifications object is not valid.
+ * @throws {TypeError} - If the given direction is not valid.
+ * @private
+ */
+function getModel(ref) {
+    const Model = modelsMap[ref.type];
+    return new Model(ref.specs, ref.direction, ref.ratio);
+}
+
+/**
  * Represents a reference to a tile model.
  */
 export class TileReferenceModel {
     /**
      * Represents a reference to a tile model with the given specifications.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
      * @param {string} type - The type of referenced tile.
      * @param {string} direction - The direction of the tile, it can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
+     * @throws {TypeError} - If the given specifications object is not valid.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      */
-    constructor(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        this.id = uid();
+    constructor(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        this.setSpecs(specs);
         this.setType(type);
         this.setDirection(direction);
         this.setRatio(ratio);
+        this.id = uid();
+        this.model = getModel(this);
     }
 
     /**
@@ -63,7 +81,27 @@ export class TileReferenceModel {
      * @type {string}
      */
     get modelId() {
-        return `${this.type}-${this.ratio}`;
+        return this.model.id;
+    }
+
+    /**
+     * Sets the specifications for the tiles.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @returns {TileReferenceModel} - Chains the instance.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     */
+    setSpecs(specs) {
+        if (!specs || !(specs instanceof TileSpecifications)) {
+            throw new TypeError('A valid specifications object is needed!');
+        }
+
+        this.specs = specs;
+
+        if (this.model) {
+            this.model.setSpecs(specs);
+        }
+
+        return this;
     }
 
     /**
@@ -78,6 +116,11 @@ export class TileReferenceModel {
         }
 
         this.type = type;
+
+        if (this.model) {
+            this.model = getModel(this);
+        }
+
         return this;
     }
 
@@ -94,6 +137,11 @@ export class TileReferenceModel {
         }
 
         this.direction = direction;
+
+        if (this.model) {
+            this.model.setDirection(direction);
+        }
+
         return this;
     }
 
@@ -105,32 +153,33 @@ export class TileReferenceModel {
      */
     setRatio(ratio) {
         this.ratio = Math.abs(ratio || 1);
+
+        if (this.model) {
+            this.model.setRatio(ratio);
+        }
+
         return this;
     }
 
     /**
-     * Creates the model of the tile with the given size constraints with respect to the stored reference.
-     * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TileModel} - Returns a tile model of the expected type.
-     * @throws {TypeError} - If the given specifications object is not valid.
+     * Exports the model to an object.
+     * @returns {tileExport} - An object representation of the model.
      */
-    getModel(specs) {
-        const Model = modelsMap[this.type];
-        return new Model(specs, this.direction, this.ratio);
+    export() {
+        const { type, direction, ratio } = this;
+        return { type, direction, ratio };
     }
 
     /**
      * Computes the coordinates of the tile.
-     * @param {TileSpecifications} specs - The specifications for the tiles.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
      * @returns {tileCoord} - The computed coordinates for rendering the tile.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
-    build(specs, x = 0, y = 0, angle = 0) {
-        const { id, type } = this;
-        const model = this.getModel(specs);
+    build(x = 0, y = 0, angle = 0) {
+        const { id, type, model } = this;
         const outputAngle = model.getOutputAngle(angle);
         const outputCoord = model.getOutputCoord(x, y, angle);
         const centerCoord = model.getCenterCoord(x, y, angle);
@@ -153,7 +202,10 @@ export class TileReferenceModel {
  */
 
 /**
- * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
+ * @typedef {object} tileExport - Represents an exported tile reference.
+ * @property {string} type - The type of tile.
+ * @property {string} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
  */
 
 /**

@@ -73,6 +73,7 @@ export class TrackModel {
         this.specs = specs;
 
         if (this.tiles.length) {
+            this.tiles.forEach(tile => tile.setSpecs(specs));
             this.tiles.notify();
         }
 
@@ -116,7 +117,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(type, direction, ratio);
+        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.add(tile);
@@ -134,7 +135,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(type, direction, ratio);
+        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.insert(0, tile);
@@ -174,7 +175,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(type, direction, ratio);
+            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, this.tiles.get(index), -1);
             updateStats(this.stats, tile);
@@ -202,7 +203,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(type, direction, ratio);
+            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index, tile);
@@ -228,7 +229,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(type, direction, ratio);
+            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index + 1, tile);
@@ -255,7 +256,7 @@ export class TrackModel {
 
         const stats = {};
         const tiles = this.tiles.map(tile => {
-            const tileCoord = tile.build(this.specs, inputX, inputY, inputAngle);
+            const tileCoord = tile.build(inputX, inputY, inputAngle);
             const middle = tileCoord.model.length / 2;
 
             updateStats(stats, tile);
@@ -284,10 +285,7 @@ export class TrackModel {
      * @returns {tileExport[]} - An object representation of the model.
      */
     export() {
-        return this.tiles.map(tile => {
-            const { type, direction, ratio } = tile;
-            return { type, direction, ratio };
-        });
+        return this.tiles.map(tile => tile.export());
     }
 
     /**
@@ -304,15 +302,17 @@ export class TrackModel {
         const dataIterator = data[Symbol.iterator]();
         const loadIterator = {
             next: () => {
-                let { done, value } = dataIterator.next();
+                const next = dataIterator.next();
 
-                if (!done) {
-                    const { type, direction, ratio } = value || {};
-                    value = new TileReferenceModel(type, direction, ratio);
-                    updateStats(this.stats, value);
+                if (next.done) {
+                    return next;
                 }
 
-                return { done, value };
+                const { type, direction, ratio } = next.value || {};
+                const tileRef = new TileReferenceModel(this.specs, type, direction, ratio);
+                updateStats(this.stats, tileRef);
+
+                return { done: false, value: tileRef };
             },
 
             [Symbol.iterator]() {
@@ -339,13 +339,6 @@ export class TrackModel {
 }
 
 /**
- * @typedef {object} tileExport - Represents an exported tile reference.
- * @property {string} type - The type of tile.
- * @property {string} direction - The direction of the tile.
- * @property {number} ratio - The size ratio of the tile.
- */
-
-/**
  * @typedef {object} trackCoord - Represents a track ready to be rendered.
  * @property {number} x - The left coordinate of the track.
  * @property {number} y - The top coordinate of the track.
@@ -360,9 +353,9 @@ export class TrackModel {
  */
 
 /**
- * @typedef {import('./TileModel').TileModel} TileModel
+ * @typedef {import('./TileReferenceModel').tileExport} tileExport
  */
 
 /**
- * @typedef {import('svelte').SvelteComponent} SvelteComponent
+ * @typedef {import('./TileModel').TileModel} TileModel
  */

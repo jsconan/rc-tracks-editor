@@ -44,14 +44,16 @@ describe('TrackModel', () => {
         });
     });
 
-    describe('can set the specifications of the tile', () => {
+    it('can set the specifications of the tile', () => {
         const track = new TrackModel(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
+        track.appendTile();
 
         expect(track.specs).toBeInstanceOf(TileSpecifications);
         expect(track.specs).not.toBe(newSpecs);
         expect(track.setSpecs(newSpecs)).toBe(track);
         expect(track.specs).toBe(newSpecs);
+        expect(track).toMatchSnapshot();
     });
 
     it('can get the index of a tile in the track', () => {
@@ -427,6 +429,7 @@ describe('TrackModel', () => {
 
         const unsubscribe = track.subscribe(callback); // callback called
 
+        track.setSpecs(specs);
         const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
         const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
         track.removeTile(id1); // callback called
