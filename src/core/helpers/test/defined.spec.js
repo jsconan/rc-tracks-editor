@@ -16,6 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
+import defined from '../defined.js';
+
+describe('defined', () => {
+    it('is a function', () => {
+        expect(defined).toEqual(expect.any(Function));
+    });
+
+    it.each([void 0])('tells if a value is not defined (%s)', value => {
+        expect(defined(value)).toBeFalsy();
+    });
+
+    it.each([0, null, {}, [], false])('tells if a value is defined (%s)', value => {
+        expect(defined(value)).toBeTruthy();
+    });
+});

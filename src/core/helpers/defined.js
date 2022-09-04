@@ -16,6 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
+/**
+ * Checks if a value is defined.
+ * @function defined
+ * @param {*} value - The value to check.
+ * @returns {boolean} - Returns `true` if the value is defined.
+ */
+export default value => 'undefined' !== typeof value;
