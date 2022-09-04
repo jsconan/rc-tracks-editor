@@ -16,4 +16,5 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { default as CurvedTile } from './CurvedTile.svelte';
 export { default as StraightTile } from './StraightTile.svelte';
