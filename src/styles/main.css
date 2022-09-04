@@ -16,9 +16,15 @@
     --color-fg: var(--color-fg-dark);
     --color-bg: var(--color-bg-dark);
 
+    /* common rules */
     color-scheme: light dark;
     color: var(--color-fg);
     background-color: var(--color-bg);
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {
