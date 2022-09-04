@@ -16,14 +16,20 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    isDirectionValid,
-    isTypeValid
-} from './tiles.js';
+import alternateBarrierColor from '../alternateBarrierColor.js';
+
+describe('alternateBarrierColor', () => {
+    it('is a function', () => {
+        expect(alternateBarrierColor).toEqual(expect.any(Function));
+    });
+
+    it('alternates the colors with respect to the given index', () => {
+        expect(alternateBarrierColor(0)).toBe('even');
+        expect(alternateBarrierColor(1)).toBe('odd');
+    });
+
+    it('loop back to the beginning when the given index exceeds the length', () => {
+        expect(alternateBarrierColor(2)).toBe('even');
+        expect(alternateBarrierColor(3)).toBe('odd');
+    });
+});

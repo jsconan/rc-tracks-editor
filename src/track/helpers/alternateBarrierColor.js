@@ -16,14 +16,17 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    isDirectionValid,
-    isTypeValid
-} from './tiles.js';
+import { alternate } from '../../core/helpers';
+
+/**
+ * A list of colors for the barriers.
+ * @type {string[]}
+ */
+const barrierColors = ['even', 'odd'];
+
+/**
+ * Returns the color for a barrier element at the given position.
+ * @param {number} i - The position of the barrier element.
+ * @returns {string} - The color for the barrier element.
+ */
+export default i => alternate(i, barrierColors);
