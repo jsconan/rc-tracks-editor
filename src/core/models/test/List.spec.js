@@ -53,6 +53,29 @@ describe('list', () => {
         expect([...list.values()]).toStrictEqual(source);
     });
 
+    it('can walk over its values', () => {
+        const list = new List(source);
+
+        expect(list.forEach).toEqual(expect.any(Function));
+
+        const iterator = source[Symbol.iterator]();
+        let i = 0;
+        const callback = jest.fn().mockImplementation(function (value, index, thisList) {
+            expect(this).toBe(list);
+            expect(thisList).toBe(list);
+            expect(value).toBe(iterator.next().value);
+            expect(index).toBe(i++);
+        });
+
+        expect(list.forEach(callback)).toBe(list);
+        expect(callback).toHaveBeenCalledTimes(source.length);
+    });
+
+    it('needs a valid callback to walk values', () => {
+        // @ts-expect-error
+        expect(() => new List().forEach()).toThrow('A callback function is expected!');
+    });
+
     it('can map its values', () => {
         const list = new List(source);
 

@@ -80,6 +80,21 @@ export class List {
     }
 
     /**
+     * Applies a callback to each value from the list.
+     * @param {function} walker - A callback that will be applied to each value of the list.
+     * @returns {List} - Chains the list.
+     */
+    forEach(walker) {
+        if ('function' !== typeof walker) {
+            throw new TypeError('A callback function is expected!');
+        }
+
+        this.list.forEach((value, index) => walker.call(this, value, index, this));
+
+        return this;
+    }
+
+    /**
      * Maps the values of the list to an array.
      * @param {function} mapper - A mapper callback that will be applied to each value of the list.
      * @returns {Array}
