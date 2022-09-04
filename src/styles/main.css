@@ -6,6 +6,12 @@
     --color-fg-light: #242424;
     --color-bg-light: rgba(255, 255, 255, 0.87);
 
+    /* track tiles */
+    --color-ground: #444;
+    --color-even: #eec;
+    --color-odd: #c24;
+    --color-control: #2a2;
+
     /* default scheme */
     --color-fg: var(--color-fg-dark);
     --color-bg: var(--color-bg-dark);
@@ -43,4 +49,21 @@ body,
     margin: 0;
     height: 100%;
     overflow: hidden;
+}
+
+.control {
+    fill: var(--color-control);
+}
+
+.ground {
+    fill: var(--color-ground);
+    stroke: var(--color-bg);
+}
+
+.even {
+    fill: var(--color-even);
+}
+
+.odd {
+    fill: var(--color-odd);
 }
