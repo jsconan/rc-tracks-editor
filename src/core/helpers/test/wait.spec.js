@@ -16,8 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as CurvedBarrier } from './CurvedBarrier.svelte';
-export { default as CurvedElement } from './CurvedElement.svelte';
-export { default as Sketch } from './Sketch.svelte';
-export { default as StraightBarrier } from './StraightBarrier.svelte';
-export { default as StraightElement } from './StraightElement.svelte';
+import wait from '../wait.js';
+
+describe('wait', () => {
+    it('is a function', () => {
+        expect(wait).toEqual(expect.any(Function));
+    });
+
+    it('returns a promise', () => {
+        expect(wait(10)).toEqual(expect.any(Promise));
+    });
+
+    it('resolve after the given delay', async () => {
+        await expect(wait(10)).resolves.not.toThrow();
+    });
+});

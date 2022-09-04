@@ -17,4 +17,6 @@
  */
 
 export { default as alternate } from './alternate.js';
+export { default as defined } from './defined.js';
 export { default as uid } from './uid.js';
+export { default as wait } from './wait.js';

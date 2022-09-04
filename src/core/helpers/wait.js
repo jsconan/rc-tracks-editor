@@ -16,8 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as CurvedBarrier } from './CurvedBarrier.svelte';
-export { default as CurvedElement } from './CurvedElement.svelte';
-export { default as Sketch } from './Sketch.svelte';
-export { default as StraightBarrier } from './StraightBarrier.svelte';
-export { default as StraightElement } from './StraightElement.svelte';
+/**
+ * Resolves a promise after a particular number of milliseconds.
+ * @param {number} ms - How many milliseconds to wait.
+ * @returns {Promise}
+ */
+export default ms => new Promise(resolve => setTimeout(resolve, ms));

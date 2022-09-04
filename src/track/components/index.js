@@ -16,6 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { default as ControlPoints } from './ControlPoints.svelte';
 export { default as CurvedTile } from './CurvedTile.svelte';
 export { default as CurvedTileEnlarged } from './CurvedTileEnlarged.svelte';
 export { default as StraightTile } from './StraightTile.svelte';
+export { default as Track } from './Track.svelte';

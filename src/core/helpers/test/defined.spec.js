@@ -16,8 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as CurvedBarrier } from './CurvedBarrier.svelte';
-export { default as CurvedElement } from './CurvedElement.svelte';
-export { default as Sketch } from './Sketch.svelte';
-export { default as StraightBarrier } from './StraightBarrier.svelte';
-export { default as StraightElement } from './StraightElement.svelte';
+import defined from '../defined.js';
+
+describe('defined', () => {
+    it('is a function', () => {
+        expect(defined).toEqual(expect.any(Function));
+    });
+
+    it.each([void 0])('tells if a value is not defined (%s)', value => {
+        expect(defined(value)).toBeFalsy();
+    });
+
+    it.each([0, null, {}, [], false])('tells if a value is defined (%s)', value => {
+        expect(defined(value)).toBeTruthy();
+    });
+});
