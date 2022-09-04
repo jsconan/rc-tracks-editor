@@ -23,7 +23,6 @@ import {
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
 } from '../../helpers';
-import { CurvedTile, CurvedTileEnlarged, StraightTile } from '../../components';
 import { CurvedTileModel } from '../CurvedTileModel.js';
 import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
 import { StraightTileModel } from '../StraightTileModel.js';
@@ -189,26 +188,6 @@ describe('TileReferenceModel', () => {
         ])('a curved tile enlarged at coordinates [%s, %s] and angle %s', (x, y, angle) => {
             const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
             expect(ref.build(specs, x, y, angle)).toMatchSnapshot();
-        });
-    });
-
-    describe('can get the component for', () => {
-        it('a straight tile', () => {
-            const ref = new TileReferenceModel(STRAIGHT_TILE_TYPE);
-
-            expect(ref.getComponent()).toBe(StraightTile);
-        });
-
-        it('a curved tile', () => {
-            const ref = new TileReferenceModel(CURVED_TILE_TYPE);
-
-            expect(ref.getComponent()).toBe(CurvedTile);
-        });
-
-        it('a curved tile enlarged', () => {
-            const ref = new TileReferenceModel(CURVED_TILE_ENLARGED_TYPE);
-
-            expect(ref.getComponent()).toBe(CurvedTileEnlarged);
         });
     });
 });

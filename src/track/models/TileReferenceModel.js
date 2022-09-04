@@ -16,10 +16,28 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import getTileComponent from '../helpers/getTileComponent.js';
-import getTileModel from '../helpers/getTileModel.js';
-import { isDirectionValid, isTypeValid, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
+import {
+    isDirectionValid,
+    isTypeValid,
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../helpers';
 import { uid } from '../../core/helpers';
+import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
+import { CurvedTileModel } from './CurvedTileModel.js';
+import { StraightTileModel } from './StraightTileModel.js';
+
+/**
+ * @type {object} - Maps the types of tile to their respective model.
+ * @private
+ */
+const modelsMap = {
+    [STRAIGHT_TILE_TYPE]: StraightTileModel,
+    [CURVED_TILE_TYPE]: CurvedTileModel,
+    [CURVED_TILE_ENLARGED_TYPE]: CurvedTileEnlargedModel
+};
 
 /**
  * Represents a reference to a tile model.
@@ -97,17 +115,8 @@ export class TileReferenceModel {
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     getModel(specs) {
-        const Model = getTileModel(this.type);
-        // @ts-expect-error
+        const Model = modelsMap[this.type];
         return new Model(specs, this.direction, this.ratio);
-    }
-
-    /**
-     * Gets the component constructor of the tile with respect to the stored reference.
-     * @returns {SvelteComponent} - Returns the constructor of the component.
-     */
-    getComponent() {
-        return getTileComponent(this.type);
     }
 
     /**
@@ -121,13 +130,12 @@ export class TileReferenceModel {
      */
     build(specs, x = 0, y = 0, angle = 0) {
         const { id, type } = this;
-        const component = this.getComponent();
         const model = this.getModel(specs);
         const outputAngle = model.getOutputAngle(angle);
         const outputCoord = model.getOutputCoord(x, y, angle);
         const centerCoord = model.getCenterCoord(x, y, angle);
 
-        return { id, type, x, y, angle, centerCoord, outputCoord, outputAngle, model, component };
+        return { id, type, x, y, angle, centerCoord, outputCoord, outputAngle, model };
     }
 }
 
@@ -142,7 +150,6 @@ export class TileReferenceModel {
  * @property {Vector2D} outputCoord - The coordinates of the output of the tile.
  * @property {number} outputAngle - The rotation angle at the output of the tile.
  * @property {TileModel} model - The tile model with respect to its type.
- * @property {SvelteComponent} component - The constructor of the component.
  */
 
 /**
@@ -155,8 +162,4 @@ export class TileReferenceModel {
 
 /**
  * @typedef {import('../../core/models/Vector2D').Vector2D} Vector2D
- */
-
-/**
- * @typedef {import('svelte').SvelteComponent} SvelteComponent
  */

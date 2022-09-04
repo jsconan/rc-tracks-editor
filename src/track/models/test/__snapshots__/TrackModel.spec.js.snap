@@ -131,7 +131,6 @@ Object {
         "x": 61.10912703473989,
         "y": 138.89087296526012,
       },
-      "component": [Function],
       "id": "id-68",
       "model": StraightTileModel {
         "direction": "right",
@@ -157,7 +156,6 @@ Object {
         "x": -16.672618895780325,
         "y": 216.67261889578035,
       },
-      "component": [Function],
       "id": "id-69",
       "model": CurvedTileModel {
         "direction": "right",
@@ -183,7 +181,6 @@ Object {
         "x": -94.45436482630056,
         "y": 138.89087296526012,
       },
-      "component": [Function],
       "id": "id-70",
       "model": StraightTileModel {
         "direction": "right",
@@ -209,7 +206,6 @@ Object {
         "x": -172.2361107568208,
         "y": 61.10912703473991,
       },
-      "component": [Function],
       "id": "id-71",
       "model": CurvedTileModel {
         "direction": "right",
@@ -235,7 +231,6 @@ Object {
         "x": -94.45436482630058,
         "y": -16.672618895780325,
       },
-      "component": [Function],
       "id": "id-72",
       "model": StraightTileModel {
         "direction": "right",
@@ -261,7 +256,6 @@ Object {
         "x": -16.672618895780367,
         "y": -94.45436482630056,
       },
-      "component": [Function],
       "id": "id-73",
       "model": CurvedTileModel {
         "direction": "right",
@@ -287,7 +281,6 @@ Object {
         "x": 61.10912703473988,
         "y": -16.67261889578036,
       },
-      "component": [Function],
       "id": "id-74",
       "model": StraightTileModel {
         "direction": "right",
@@ -313,7 +306,6 @@ Object {
         "x": 138.89087296526012,
         "y": 61.10912703473984,
       },
-      "component": [Function],
       "id": "id-75",
       "model": CurvedTileModel {
         "direction": "right",
@@ -354,7 +346,6 @@ Object {
         "x": 0,
         "y": 55,
       },
-      "component": [Function],
       "id": "id-60",
       "model": StraightTileModel {
         "direction": "right",
@@ -380,7 +371,6 @@ Object {
         "x": 0,
         "y": 165,
       },
-      "component": [Function],
       "id": "id-61",
       "model": CurvedTileModel {
         "direction": "right",
@@ -406,7 +396,6 @@ Object {
         "x": -110,
         "y": 165,
       },
-      "component": [Function],
       "id": "id-62",
       "model": StraightTileModel {
         "direction": "right",
@@ -432,7 +421,6 @@ Object {
         "x": -220,
         "y": 165,
       },
-      "component": [Function],
       "id": "id-63",
       "model": CurvedTileModel {
         "direction": "right",
@@ -458,7 +446,6 @@ Object {
         "x": -220,
         "y": 55,
       },
-      "component": [Function],
       "id": "id-64",
       "model": StraightTileModel {
         "direction": "right",
@@ -484,7 +471,6 @@ Object {
         "x": -220,
         "y": -55,
       },
-      "component": [Function],
       "id": "id-65",
       "model": CurvedTileModel {
         "direction": "right",
@@ -510,7 +496,6 @@ Object {
         "x": -110,
         "y": -55.000000000000014,
       },
-      "component": [Function],
       "id": "id-66",
       "model": StraightTileModel {
         "direction": "right",
@@ -536,7 +521,6 @@ Object {
         "x": -2.842170943040401e-14,
         "y": -55.000000000000036,
       },
-      "component": [Function],
       "id": "id-67",
       "model": CurvedTileModel {
         "direction": "right",
