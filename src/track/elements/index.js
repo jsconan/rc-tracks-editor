@@ -17,4 +17,5 @@
  */
 
 export { default as CurvedElement } from './CurvedElement.svelte';
+export { default as StraightBarrier } from './StraightBarrier.svelte';
 export { default as StraightElement } from './StraightElement.svelte';
