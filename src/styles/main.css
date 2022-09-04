@@ -1,0 +1,46 @@
+:root {
+    /* layout */
+    --color-fg-dark: rgba(255, 255, 255, 0.87);
+    --color-bg-dark: #242424;
+
+    --color-fg-light: #242424;
+    --color-bg-light: rgba(255, 255, 255, 0.87);
+
+    /* default scheme */
+    --color-fg: var(--color-fg-dark);
+    --color-bg: var(--color-bg-dark);
+
+    /* common rules */
+    color-scheme: light dark;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-fg: var(--color-fg-dark);
+        --color-bg: var(--color-bg-dark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-fg: var(--color-fg-light);
+        --color-bg: var(--color-bg-light);
+    }
+}
+
+html,
+body,
+#app {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
