@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ControlPoints renders with default values 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="0"
+        cy="0"
+        r="5"
+      />
+      <circle
+        class="point"
+        cx="0"
+        cy="55"
+        r="5"
+      />
+      <circle
+        class="point"
+        cx="0"
+        cy="110"
+        r="5"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a curved-tile oriented to the left 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="100"
+        cy="227.78174593052023"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a curved-tile oriented to the right 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="22.21825406947977"
+        cy="150"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a curved-tile-enlarged oriented to the left 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="100"
+        cy="227.78174593052023"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a curved-tile-enlarged oriented to the right 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="22.21825406947977"
+        cy="150"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a straight-tile oriented to the left 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="22.218254069479784"
+        cy="227.78174593052023"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`ControlPoints renders with the given parameters for a straight-tile oriented to the right 1`] = `
+<body>
+  <div>
+    <g
+      class="control"
+    >
+      <circle
+        class="point"
+        cx="100"
+        cy="150"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="61.10912703473989"
+        cy="188.89087296526012"
+        r="8"
+      />
+      <circle
+        class="point"
+        cx="22.218254069479784"
+        cy="227.78174593052023"
+        r="8"
+      />
+    </g>
+  </div>
+</body>
+`;
