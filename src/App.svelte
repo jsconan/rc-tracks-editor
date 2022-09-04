@@ -3,17 +3,16 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import config from './config.js';
-    import Sketch from './elements/Sketch.svelte';
-    import Track from './components/Track.svelte';
-    import { TileSpecifications } from './models/TileSpecifications.js';
-    import { TrackModel } from './models/TrackModel.js';
+    import { Sketch } from './track/elements';
+    import { Track } from './track/components';
+    import { TileSpecifications, TrackModel } from './track/models';
     import {
         CURVED_TILE_ENLARGED_TYPE,
         CURVED_TILE_TYPE,
         STRAIGHT_TILE_TYPE,
         TILE_DIRECTION_LEFT,
         TILE_DIRECTION_RIGHT
-    } from './helpers/types';
+    } from './track/helpers';
     import data from './data/tracks.json';
 
     const barrierChunks = config.barrierChunks;
