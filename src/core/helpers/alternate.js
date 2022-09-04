@@ -16,14 +16,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    isDirectionValid,
-    isTypeValid
-} from './tiles.js';
+/**
+ * Returns the element at the given position.
+ * A modulo is applied to the position so that it cannot be outside of the given array.
+ * @param {number} i - The position in the given list.
+ * @param {array} list - A list from which get an element at the given position.
+ * @returns {*} - The element at the given position.
+ */
+export default (i, list) => list[i % list.length];

@@ -16,14 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    isDirectionValid,
-    isTypeValid
-} from './tiles.js';
+export { default as CurvedBarrier } from './CurvedBarrier.svelte';
+export { default as CurvedElement } from './CurvedElement.svelte';
+export { default as StraightBarrier } from './StraightBarrier.svelte';
+export { default as StraightElement } from './StraightElement.svelte';

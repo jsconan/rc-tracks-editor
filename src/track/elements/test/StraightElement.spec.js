@@ -16,14 +16,27 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    isDirectionValid,
-    isTypeValid
-} from './tiles.js';
+import { render } from '@testing-library/svelte';
+import StraightElement from '../StraightElement.svelte';
+
+describe('StraightElement', () => {
+    it('renders with default values', () => {
+        const { container } = render(StraightElement);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('renders with the given parameters', () => {
+        const props = {
+            class: 'tile',
+            style: 'fill: #444;',
+            x: 100,
+            y: 150,
+            width: 80,
+            height: 100
+        };
+        const { container } = render(StraightElement, { props });
+
+        expect(container).toMatchSnapshot();
+    });
+});
