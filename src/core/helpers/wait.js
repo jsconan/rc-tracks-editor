@@ -16,7 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as wait } from './wait.js';
+/**
+ * Resolves a promise after a particular number of milliseconds.
+ * @param {number} ms - How many milliseconds to wait.
+ * @returns {Promise}
+ */
+export default ms => new Promise(resolve => setTimeout(resolve, ms));

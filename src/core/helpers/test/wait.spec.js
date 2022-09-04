@@ -16,7 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as wait } from './wait.js';
+import wait from '../wait.js';
+
+describe('wait', () => {
+    it('is a function', () => {
+        expect(wait).toEqual(expect.any(Function));
+    });
+
+    it('returns a promise', () => {
+        expect(wait(10)).toEqual(expect.any(Promise));
+    });
+
+    it('resolve after the given delay', async () => {
+        await expect(wait(10)).resolves.not.toThrow();
+    });
+});
