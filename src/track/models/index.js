@@ -16,4 +16,5 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { TileModel } from './TileModel.js';
 export { TileSpecifications } from './TileSpecifications.js';
