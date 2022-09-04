@@ -16,5 +16,29 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as CurvedElement } from './CurvedElement.svelte';
-export { default as StraightElement } from './StraightElement.svelte';
+import { render } from '@testing-library/svelte';
+import CurvedElement from '../CurvedElement.svelte';
+
+describe('CurvedElement', () => {
+    it('renders with default values', () => {
+        const { container } = render(CurvedElement);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('renders with the given parameters', () => {
+        const props = {
+            class: 'tile',
+            style: 'fill: #444;',
+            cx: 100,
+            cy: 150,
+            width: 80,
+            radius: 50,
+            angle: 30,
+            start: 60
+        };
+        const { container } = render(CurvedElement, { props });
+
+        expect(container).toMatchSnapshot();
+    });
+});
