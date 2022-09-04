@@ -378,6 +378,23 @@ describe('TrackModel', () => {
         });
     });
 
+    it('can rebuilds the stats', () => {
+        const track = new TrackModel(specs);
+
+        expect(track.stats).toEqual({});
+        expect(track.rebuildStats()).toBe(track);
+        expect(track.stats).toEqual({});
+
+        track.appendTile(CURVED_TILE_TYPE);
+
+        expect(track.stats).toMatchSnapshot();
+
+        track.getTileAt(0).setRatio(3);
+
+        expect(track.rebuildStats()).toBe(track);
+        expect(track.stats).toMatchSnapshot();
+    });
+
     it('can export to an object', () => {
         const track = new TrackModel(specs);
         track.appendTile(CURVED_TILE_TYPE);
@@ -440,10 +457,11 @@ describe('TrackModel', () => {
         track.clear(); // callback called
         track.import(data); // callback called
         track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+        track.rebuildStats(); // callback called
 
         unsubscribe();
         track.appendTile();
 
-        expect(callback).toHaveBeenCalledTimes(10);
+        expect(callback).toHaveBeenCalledTimes(11);
     });
 });

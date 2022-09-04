@@ -241,6 +241,21 @@ export class TrackModel {
     }
 
     /**
+     * Rebuilds the stats regarding the number of identified types.
+     * @returns {TrackModel} - Chains the instance.
+     */
+    rebuildStats() {
+        this.stats = {};
+
+        if (this.tiles.length) {
+            this.tiles.forEach(tile => updateStats(this.stats, tile));
+            this.tiles.notify();
+        }
+
+        return this;
+    }
+
+    /**
      * Builds the track for rendering, computing the coordinates of each tile.
      * @param {number} startX - The X-coordinate of the first tile.
      * @param {number} startY - The Y-coordinate of the first tile.
