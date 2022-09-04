@@ -16,5 +16,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as uid } from './uid.js';
+/**
+ * @type {number} - The internal counter for generating unique identifiers.
+ * @private
+ */
+let counter = 0;
+
+/**
+ * Generates a unique identifier for the current session.
+ * @function uid
+ * @returns {string} - Returns an identifier that is unique within the current session.
+ */
+export default () => `id-${counter++}`;

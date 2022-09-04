@@ -16,5 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as uid } from './uid.js';
+import uid from '../uid.js';
+
+describe('uid', () => {
+    it('is a function', () => {
+        expect(uid).toEqual(expect.any(Function));
+    });
+
+    it('generates an identifier', () => {
+        expect(uid()).toEqual(expect.any(String));
+    });
+
+    it('generates a new identifier on each call', () => {
+        expect(uid()).not.toBe(uid());
+    });
+});

@@ -20,4 +20,6 @@ export { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 export { CurvedTileModel } from './CurvedTileModel.js';
 export { StraightTileModel } from './StraightTileModel.js';
 export { TileModel } from './TileModel.js';
+export { TileReferenceModel } from './TileReferenceModel.js';
 export { TileSpecifications } from './TileSpecifications.js';
+export { TrackModel } from './TrackModel.js';
