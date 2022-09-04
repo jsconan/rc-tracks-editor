@@ -1,3 +1,7 @@
+# RC Tracks Editor
+
+An editor to build RC tracks using the tiles from [jsconan/rc-tracks](https://github.com/jsconan/rc-tracks/tree/main/scale-64)
+
 <!-- vscode-markdown-toc -->
 
 -   [Quick start](#Quickstart)
@@ -24,9 +28,7 @@
 	numbering=false
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># RC Tracks Editor
-
-An editor to build RC tracks using the tiles from [jsconan/rc-tracks](https://github.com/jsconan/rc-tracks/tree/main/scale-64)
+<!-- /vscode-markdown-toc -->
 
 ## <a name='Quickstart'></a>Quick start
 
