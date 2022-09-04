@@ -26,4 +26,4 @@ export {
     CURVED_TILE_ENLARGED_TYPE,
     isDirectionValid,
     isTypeValid
-} from './types.js';
+} from './tiles.js';

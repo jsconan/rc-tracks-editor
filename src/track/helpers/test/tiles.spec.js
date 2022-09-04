@@ -25,7 +25,7 @@ import {
     STRAIGHT_TILE_TYPE,
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
-} from '../types.js';
+} from '../tiles.js';
 
 describe('isDirectionValid', () => {
     it('is a function', () => {
