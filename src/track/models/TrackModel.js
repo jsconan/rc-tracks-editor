@@ -19,6 +19,7 @@
 import { derived } from 'svelte/store';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
 import { TileReferenceModel } from './TileReferenceModel.js';
+import { TileSpecifications } from './TileSpecifications.js';
 import { List, Vector2D } from '../../core/models';
 
 /**
@@ -40,11 +41,12 @@ export class TrackModel {
     /**
      * Represents a track with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @throws {TypeError} - If the given specifications object is not valid.
      */
     constructor(specs) {
-        this.specs = specs;
         this.tiles = new List();
         this.stats = {};
+        this.setSpecs(specs);
 
         const { subscribe } = derived(this.tiles, () => this);
 
@@ -55,6 +57,26 @@ export class TrackModel {
          * @returns {function} - Return a callback for removing the subscription.
          */
         this.subscribe = subscribe;
+    }
+
+    /**
+     * Sets the specifications for the tiles.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @returns {TrackModel} - Chains the instance.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     */
+    setSpecs(specs) {
+        if (!specs || !(specs instanceof TileSpecifications)) {
+            throw new TypeError('A valid specifications object is needed!');
+        }
+
+        this.specs = specs;
+
+        if (this.tiles.length) {
+            this.tiles.notify();
+        }
+
+        return this;
     }
 
     /**
@@ -335,10 +357,6 @@ export class TrackModel {
 
 /**
  * @typedef {import('./TileReferenceModel').tileCoord} tileCoord
- */
-
-/**
- * @typedef {import('./TileSpecifications').TileSpecifications} TileSpecifications
  */
 
 /**

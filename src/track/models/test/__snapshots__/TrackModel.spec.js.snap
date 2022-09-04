@@ -1493,3 +1493,41 @@ TrackModel {
   },
 }
 `;
+
+exports[`TrackModel can notify changes 10`] = `
+TrackModel {
+  "specs": TileSpecifications {
+    "barrierChunks": 2,
+    "barrierWidth": 1,
+    "laneWidth": 10,
+  },
+  "stats": Object {
+    "straight-tile-1": 3,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "list": Array [
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-87",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-88",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+      TileReferenceModel {
+        "direction": "right",
+        "id": "id-89",
+        "ratio": 1,
+        "type": "straight-tile",
+      },
+    ],
+    "notify": [Function],
+    "subscribe": [Function],
+  },
+}
+`;

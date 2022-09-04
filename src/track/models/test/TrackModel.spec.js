@@ -31,6 +31,29 @@ describe('TrackModel', () => {
         expect(TrackModel).toEqual(expect.any(Function));
     });
 
+    describe('throws error', () => {
+        it('when trying to create an instance with an invalid specifications object', () => {
+            // @ts-expect-error
+            expect(() => new TrackModel({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to set an invalid specifications object', () => {
+            const track = new TrackModel(specs);
+            // @ts-expect-error
+            expect(() => track.setSpecs({})).toThrow('A valid specifications object is needed!');
+        });
+    });
+
+    describe('can set the specifications of the tile', () => {
+        const track = new TrackModel(specs);
+        const newSpecs = new TileSpecifications(10, 1, 2);
+
+        expect(track.specs).toBeInstanceOf(TileSpecifications);
+        expect(track.specs).not.toBe(newSpecs);
+        expect(track.setSpecs(newSpecs)).toBe(track);
+        expect(track.specs).toBe(newSpecs);
+    });
+
     it('can get the index of a tile in the track', () => {
         const track = new TrackModel(specs);
 
@@ -413,10 +436,11 @@ describe('TrackModel', () => {
         const data = track.export();
         track.clear(); // callback called
         track.import(data); // callback called
+        track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
 
         unsubscribe();
         track.appendTile();
 
-        expect(callback).toHaveBeenCalledTimes(9);
+        expect(callback).toHaveBeenCalledTimes(10);
     });
 });
