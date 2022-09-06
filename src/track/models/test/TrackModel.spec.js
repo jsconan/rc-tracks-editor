@@ -17,7 +17,7 @@
  */
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { TileReferenceModel } from '../TileReferenceModel.js';
+import { TileReference } from '../TileReference.js';
 import { TileSpecifications } from '../TileSpecifications.js';
 import { TrackModel } from '../TrackModel.js';
 
@@ -76,7 +76,7 @@ describe('TrackModel', () => {
             track.appendTile();
 
             expect(track.getTile(id)).toBe(track.tiles.get(1));
-            expect(track.getTile(id)).toBeInstanceOf(TileReferenceModel);
+            expect(track.getTile(id)).toBeInstanceOf(TileReference);
             expect(track.getTile('id')).toBeNull();
         });
 
@@ -88,7 +88,7 @@ describe('TrackModel', () => {
             track.appendTile();
 
             expect(track.getTileAt(1)).toBe(track.tiles.get(1));
-            expect(track.getTileAt(1)).toBeInstanceOf(TileReferenceModel);
+            expect(track.getTileAt(1)).toBeInstanceOf(TileReference);
             expect(track.getTileAt(3)).toBeNull();
         });
     });

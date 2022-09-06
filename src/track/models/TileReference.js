@@ -42,7 +42,7 @@ const modelsMap = {
 
 /**
  * Creates the tile model with respect to the given reference.
- * @param {TileReferenceModel} ref - The reference object.
+ * @param {TileReference} ref - The reference object.
  * @returns {TileModel} - Returns a tile model of the expected type.
  * @throws {TypeError} - If the given specifications object is not valid.
  * @throws {TypeError} - If the given direction is not valid.
@@ -56,7 +56,7 @@ function getModel(ref) {
 /**
  * Represents a reference to a tile model.
  */
-export class TileReferenceModel {
+export class TileReference {
     /**
      * Represents a reference to a tile model with the given specifications.
      * @param {TileSpecifications} specs - The specifications for the tiles.
@@ -87,7 +87,7 @@ export class TileReferenceModel {
     /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TileReferenceModel} - Chains the instance.
+     * @returns {TileReference} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
@@ -107,7 +107,7 @@ export class TileReferenceModel {
     /**
      * Sets the type of referenced tile.
      * @param {string} type - The type of referenced tile.
-     * @returns {TileReferenceModel} - Chains the instance.
+     * @returns {TileReference} - Chains the instance.
      * @throws {TypeError} - If the given type is not valid.
      */
     setType(type) {
@@ -128,7 +128,7 @@ export class TileReferenceModel {
      * Sets the direction of the tile.
      * It can be either TileModel.DIRECTION_RIGHT or TileModel.DIRECTION_LEFT.
      * @param {string} direction - The direction of the tile.
-     * @returns {TileReferenceModel} - Chains the instance.
+     * @returns {TileReference} - Chains the instance.
      * @throws {TypeError} - If the given direction is not valid.
      */
     setDirection(direction) {
@@ -149,7 +149,7 @@ export class TileReferenceModel {
      * Sets the size factor of the tile.
      * 1 means the tile fits 1 tile section in each direction.
      * @param {number} ratio - The size factor of the tile.
-     * @returns {TileReferenceModel} - Chains the instance.
+     * @returns {TileReference} - Chains the instance.
      */
     setRatio(ratio) {
         this.ratio = Math.abs(ratio || 1);

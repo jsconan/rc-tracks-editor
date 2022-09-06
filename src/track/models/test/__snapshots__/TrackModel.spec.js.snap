@@ -14,7 +14,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-15",
         "model": CurvedTileModel {
@@ -34,7 +34,7 @@ TrackModel {
         },
         "type": "curved-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-14",
         "model": StraightTileModel {
@@ -74,7 +74,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-13",
         "model": StraightTileModel {
@@ -94,7 +94,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-12",
         "model": StraightTileModel {
@@ -134,7 +134,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-11",
         "model": CurvedTileModel {
@@ -174,7 +174,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-10",
         "model": StraightTileModel {
@@ -644,7 +644,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-55",
         "model": StraightTileModel {
@@ -664,7 +664,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-56",
         "model": StraightTileModel {
@@ -684,7 +684,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-58",
         "model": StraightTileModel {
@@ -704,7 +704,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-57",
         "model": StraightTileModel {
@@ -744,7 +744,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-48",
         "model": StraightTileModel {
@@ -784,7 +784,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-49",
         "model": StraightTileModel {
@@ -804,7 +804,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-51",
         "model": StraightTileModel {
@@ -824,7 +824,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-50",
         "model": StraightTileModel {
@@ -864,7 +864,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-52",
         "model": StraightTileModel {
@@ -884,7 +884,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-53",
         "model": StraightTileModel {
@@ -904,7 +904,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-54",
         "model": StraightTileModel {
@@ -945,7 +945,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-59",
         "model": StraightTileModel {
@@ -965,7 +965,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-60",
         "model": CurvedTileModel {
@@ -1005,7 +1005,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-42",
         "model": StraightTileModel {
@@ -1025,7 +1025,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-45",
         "model": StraightTileModel {
@@ -1045,7 +1045,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-43",
         "model": StraightTileModel {
@@ -1065,7 +1065,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-44",
         "model": StraightTileModel {
@@ -1105,7 +1105,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-35",
         "model": StraightTileModel {
@@ -1145,7 +1145,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-38",
         "model": StraightTileModel {
@@ -1165,7 +1165,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-36",
         "model": StraightTileModel {
@@ -1185,7 +1185,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-37",
         "model": StraightTileModel {
@@ -1225,7 +1225,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-39",
         "model": StraightTileModel {
@@ -1245,7 +1245,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-41",
         "model": StraightTileModel {
@@ -1265,7 +1265,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-40",
         "model": StraightTileModel {
@@ -1306,7 +1306,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-47",
         "model": CurvedTileModel {
@@ -1326,7 +1326,7 @@ TrackModel {
         },
         "type": "curved-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-46",
         "model": StraightTileModel {
@@ -1366,7 +1366,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-25",
         "model": StraightTileModel {
@@ -1406,7 +1406,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-22",
         "model": StraightTileModel {
@@ -1426,7 +1426,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-23",
         "model": StraightTileModel {
@@ -1466,7 +1466,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-19",
         "model": StraightTileModel {
@@ -1486,7 +1486,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-21",
         "model": StraightTileModel {
@@ -1526,7 +1526,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-17",
         "model": StraightTileModel {
@@ -1546,7 +1546,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-18",
         "model": StraightTileModel {
@@ -1586,7 +1586,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-34",
         "model": StraightTileModel {
@@ -1627,7 +1627,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-30",
         "model": StraightTileModel {
@@ -1647,7 +1647,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-31",
         "model": StraightTileModel {
@@ -1667,7 +1667,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-33",
         "model": CurvedTileModel {
@@ -1707,7 +1707,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-26",
         "model": StraightTileModel {
@@ -1727,7 +1727,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-29",
         "model": StraightTileModel {
@@ -1747,7 +1747,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-28",
         "model": StraightTileModel {
@@ -1831,7 +1831,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-79",
         "model": StraightTileModel {
@@ -1872,7 +1872,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "left",
         "id": "id-80",
         "model": CurvedTileModel {
@@ -1892,7 +1892,7 @@ TrackModel {
         },
         "type": "curved-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-81",
         "model": StraightTileModel {
@@ -1912,7 +1912,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-82",
         "model": CurvedTileModel {
@@ -1969,7 +1969,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-84",
         "model": CurvedTileModel {
@@ -2009,7 +2009,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-85",
         "model": CurvedTileModel {
@@ -2029,7 +2029,7 @@ TrackModel {
         },
         "type": "curved-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-84",
         "model": CurvedTileModel {
@@ -2069,7 +2069,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-85",
         "model": CurvedTileModel {
@@ -2110,7 +2110,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-86",
         "model": StraightTileModel {
@@ -2151,7 +2151,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-87",
         "model": StraightTileModel {
@@ -2171,7 +2171,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-86",
         "model": StraightTileModel {
@@ -2212,7 +2212,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-87",
         "model": StraightTileModel {
@@ -2232,7 +2232,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-86",
         "model": StraightTileModel {
@@ -2252,7 +2252,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-88",
         "model": StraightTileModel {
@@ -2309,7 +2309,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-89",
         "model": StraightTileModel {
@@ -2329,7 +2329,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-90",
         "model": StraightTileModel {
@@ -2349,7 +2349,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-91",
         "model": StraightTileModel {
@@ -2389,7 +2389,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-89",
         "model": StraightTileModel {
@@ -2409,7 +2409,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-90",
         "model": StraightTileModel {
@@ -2429,7 +2429,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-91",
         "model": StraightTileModel {
@@ -2469,7 +2469,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-89",
         "model": StraightTileModel {
@@ -2489,7 +2489,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-90",
         "model": StraightTileModel {
@@ -2509,7 +2509,7 @@ TrackModel {
         },
         "type": "straight-tile",
       },
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-91",
         "model": StraightTileModel {
@@ -2561,7 +2561,7 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      TileReference {
         "direction": "right",
         "id": "id-0",
         "model": StraightTileModel {

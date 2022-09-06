@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TileReferenceModel can build a reference to a tile with the given direction 1`] = `
-TileReferenceModel {
+exports[`TileReference can build a reference to a tile with the given direction 1`] = `
+TileReference {
   "direction": "left",
   "id": "id-5",
   "model": StraightTileModel {
@@ -23,8 +23,8 @@ TileReferenceModel {
 }
 `;
 
-exports[`TileReferenceModel can build a reference to a tile with the given ratio 1`] = `
-TileReferenceModel {
+exports[`TileReference can build a reference to a tile with the given ratio 1`] = `
+TileReference {
   "direction": "left",
   "id": "id-6",
   "model": StraightTileModel {
@@ -46,8 +46,8 @@ TileReferenceModel {
 }
 `;
 
-exports[`TileReferenceModel can build a reference to a tile with the given specifications 1`] = `
-TileReferenceModel {
+exports[`TileReference can build a reference to a tile with the given specifications 1`] = `
+TileReference {
   "direction": "right",
   "id": "id-3",
   "model": StraightTileModel {
@@ -69,8 +69,8 @@ TileReferenceModel {
 }
 `;
 
-exports[`TileReferenceModel can build a reference to a tile with the given type 1`] = `
-TileReferenceModel {
+exports[`TileReference can build a reference to a tile with the given type 1`] = `
+TileReference {
   "direction": "right",
   "id": "id-4",
   "model": StraightTileModel {
@@ -92,7 +92,7 @@ TileReferenceModel {
 }
 `;
 
-exports[`TileReferenceModel can build the model for a curved tile 1`] = `
+exports[`TileReference can build the model for a curved tile 1`] = `
 CurvedTileModel {
   "direction": "right",
   "ratio": 1,
@@ -104,7 +104,7 @@ CurvedTileModel {
 }
 `;
 
-exports[`TileReferenceModel can build the model for a curved tile enlarged 1`] = `
+exports[`TileReference can build the model for a curved tile enlarged 1`] = `
 CurvedTileEnlargedModel {
   "direction": "right",
   "ratio": 1,
@@ -116,7 +116,7 @@ CurvedTileEnlargedModel {
 }
 `;
 
-exports[`TileReferenceModel can build the model for a straight tile 1`] = `
+exports[`TileReference can build the model for a straight tile 1`] = `
 StraightTileModel {
   "direction": "right",
   "ratio": 1,
@@ -128,7 +128,7 @@ StraightTileModel {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile at coordinates [100, 100] and angle 45 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a curved tile at coordinates [100, 100] and angle 45 1`] = `
 Object {
   "angle": 45,
   "centerCoord": Vector2D {
@@ -156,7 +156,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile at coordinates [undefined, undefined] and angle undefined 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a curved tile at coordinates [undefined, undefined] and angle undefined 1`] = `
 Object {
   "angle": 0,
   "centerCoord": Vector2D {
@@ -184,7 +184,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile enlarged at coordinates [100, 100] and angle 45 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a curved tile enlarged at coordinates [100, 100] and angle 45 1`] = `
 Object {
   "angle": 45,
   "centerCoord": Vector2D {
@@ -212,7 +212,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a curved tile enlarged at coordinates [undefined, undefined] and angle undefined 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a curved tile enlarged at coordinates [undefined, undefined] and angle undefined 1`] = `
 Object {
   "angle": 0,
   "centerCoord": Vector2D {
@@ -240,7 +240,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a straight tile at coordinates [100, 100] and angle 45 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a straight tile at coordinates [100, 100] and angle 45 1`] = `
 Object {
   "angle": 45,
   "centerCoord": Vector2D {
@@ -268,7 +268,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can compute the coordinates of the tile for a straight tile at coordinates [undefined, undefined] and angle undefined 1`] = `
+exports[`TileReference can compute the coordinates of the tile for a straight tile at coordinates [undefined, undefined] and angle undefined 1`] = `
 Object {
   "angle": 0,
   "centerCoord": Vector2D {
@@ -296,7 +296,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can export to an object from a tile type curved-tile 1`] = `
+exports[`TileReference can export to an object from a tile type curved-tile 1`] = `
 Object {
   "direction": "right",
   "ratio": 1,
@@ -304,7 +304,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can export to an object from a tile type curved-tile-enlarged 1`] = `
+exports[`TileReference can export to an object from a tile type curved-tile-enlarged 1`] = `
 Object {
   "direction": "right",
   "ratio": 1,
@@ -312,7 +312,7 @@ Object {
 }
 `;
 
-exports[`TileReferenceModel can export to an object from a tile type straight-tile 1`] = `
+exports[`TileReference can export to an object from a tile type straight-tile 1`] = `
 Object {
   "direction": "right",
   "ratio": 1,

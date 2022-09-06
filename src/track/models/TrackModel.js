@@ -18,14 +18,14 @@
 
 import { derived } from 'svelte/store';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
-import { TileReferenceModel } from './TileReferenceModel.js';
+import { TileReference } from './TileReference.js';
 import { TileSpecifications } from './TileSpecifications.js';
 import { List, Vector2D } from '../../core/models';
 
 /**
  * Update the number of identified types.
  * @param {object} stats - The receiver for the stats.
- * @param {TileReferenceModel} tile - The tile to count.
+ * @param {TileReference} tile - The tile to count.
  * @param {number} diff - The amount to add for the identified type.
  * @private
  */
@@ -92,7 +92,7 @@ export class TrackModel {
     /**
      * Retrieves a tile by its identifier.
      * @param {string} id - The unique identifier of the tile.
-     * @returns {TileReferenceModel} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileReference} - The referenced tile, or `null` if it does not exist.
      */
     getTile(id) {
         return this.getTileAt(this.getTileIndex(id));
@@ -101,7 +101,7 @@ export class TrackModel {
     /**
      * Gets a tile from a particular position.
      * @param {number} index - The position of the tile.
-     * @returns {TileReferenceModel} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileReference} - The referenced tile, or `null` if it does not exist.
      */
     getTileAt(index) {
         return this.tiles.get(index) || null;
@@ -117,7 +117,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+        const tile = new TileReference(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.add(tile);
@@ -135,7 +135,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+        const tile = new TileReference(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.insert(0, tile);
@@ -175,7 +175,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = new TileReference(this.specs, type, direction, ratio);
 
             updateStats(this.stats, this.tiles.get(index), -1);
             updateStats(this.stats, tile);
@@ -203,7 +203,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = new TileReference(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index, tile);
@@ -229,7 +229,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = new TileReference(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index + 1, tile);
@@ -324,7 +324,7 @@ export class TrackModel {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tileRef = new TileReferenceModel(this.specs, type, direction, ratio);
+                const tileRef = new TileReference(this.specs, type, direction, ratio);
                 updateStats(this.stats, tileRef);
 
                 return { done: false, value: tileRef };
@@ -364,11 +364,11 @@ export class TrackModel {
  */
 
 /**
- * @typedef {import('./TileReferenceModel').tileCoord} tileCoord
+ * @typedef {import('./TileReference').tileCoord} tileCoord
  */
 
 /**
- * @typedef {import('./TileReferenceModel').tileExport} tileExport
+ * @typedef {import('./TileReference').tileExport} tileExport
  */
 
 /**
