@@ -45,7 +45,7 @@ export class CurvedTileModel extends TileModel {
      * @returns {number}
      */
     getDirectionAngleLeft() {
-        return 90 + (90 / this.ratio) * (Math.max(1, this.ratio) - 1);
+        return Vector2D.RIGHT_ANGLE + (Vector2D.RIGHT_ANGLE / this.ratio) * (Math.max(1, this.ratio) - 1);
     }
 
     /**
@@ -54,10 +54,10 @@ export class CurvedTileModel extends TileModel {
      */
     getCurveAngle() {
         if (this.ratio < 1) {
-            return 90 * this.ratio;
+            return Vector2D.RIGHT_ANGLE * this.ratio;
         }
 
-        return 90 / this.ratio;
+        return Vector2D.RIGHT_ANGLE / this.ratio;
     }
 
     /**
@@ -77,7 +77,7 @@ export class CurvedTileModel extends TileModel {
         const p1 = Vector2D.polar(radius, 0, curveCenter);
         const p2 = p1.addScalarY(10);
         const p3 = Vector2D.polar(radius, curveAngle, curveCenter);
-        const p4 = p3.add(Vector2D.polar(10, curveAngle + 90));
+        const p4 = p3.add(Vector2D.polar(10, curveAngle + Vector2D.RIGHT_ANGLE));
 
         const center = Vector2D.intersect(p1, p2, p3, p4);
 
@@ -112,7 +112,7 @@ export class CurvedTileModel extends TileModel {
         const start = new Vector2D(x, y);
 
         const radius = this.getInnerRadius() + this.specs.width / 2;
-        const curveAngle = 180 - this.getCurveAngle();
+        const curveAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
         const center = start.addScalarX(radius);
 
         return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
