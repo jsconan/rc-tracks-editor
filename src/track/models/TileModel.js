@@ -36,6 +36,7 @@ export class TileModel {
         this.setSpecs(specs);
         this.setDirection(direction);
         this.setRatio(ratio);
+        this.id = this.modelId;
     }
 
     /**
@@ -51,7 +52,7 @@ export class TileModel {
      * The identifier for the model.
      * @type {string}
      */
-    get id() {
+    get modelId() {
         return `${this.type}-${this.ratio}`;
     }
 
@@ -315,6 +316,32 @@ export class TileModel {
     getOutputAngleLeft(angle = 0) {
         return angle;
     }
+
+    /**
+     * Exports the model to an object.
+     * @returns {tileExport} - An object representation of the model.
+     */
+    export() {
+        const { type, direction, ratio } = this;
+        return { type, direction, ratio };
+    }
+
+    /**
+     * Computes the coordinates of the tile.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {tileCoord} - The computed coordinates for rendering the tile.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     */
+    build(x = 0, y = 0, angle = 0) {
+        const id = this.id;
+        const outputAngle = this.getOutputAngle(angle);
+        const outputCoord = this.getOutputCoord(x, y, angle);
+        const centerCoord = this.getCenterCoord(x, y, angle);
+
+        return { id, x, y, angle, outputAngle, outputCoord, centerCoord, model: this };
+    }
 }
 
 /**
@@ -349,3 +376,22 @@ Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
     enumerable: true,
     configurable: true
 });
+
+/**
+ * @typedef {object} tileExport - Represents an exported tile.
+ * @property {string} type - The type of tile.
+ * @property {string} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
+ */
+
+/**
+ * @typedef {object} tileCoord - Represents a positioned tile.
+ * @property {string} id - The unique identifier of the tile.
+ * @property {number} x - The left coordinate of the tile.
+ * @property {number} y - The top coordinate of the tile.
+ * @property {number} angle - The rotation angle of the tile.
+ * @property {number} outputAngle - The rotation angle at the output of the tile.
+ * @property {Vector2D} outputCoord - The coordinates of the output of the tile.
+ * @property {Vector2D} centerCoord - The coordinates of the center of the tile.
+ * @property {TileModel} model - A reference to the tile model.
+ */

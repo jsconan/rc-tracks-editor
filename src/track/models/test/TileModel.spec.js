@@ -59,33 +59,39 @@ describe('TileModel', () => {
     describe('can build a tile', () => {
         it('with the given size', () => {
             const tile = new TileModel(specs);
+            const modelId = `${TileModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(TileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(TileModel.TYPE);
-            expect(tile.id).toBe(`${TileModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
         });
 
         it('with the given size and direction', () => {
             const tile = new TileModel(specs, TileModel.DIRECTION_LEFT);
+            const modelId = `${TileModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(TileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(TileModel.TYPE);
-            expect(tile.id).toBe(`${TileModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
             const tile = new TileModel(specs, TileModel.DIRECTION_LEFT, ratio);
+            const modelId = `${TileModel.TYPE}-${ratio}`;
 
             expect(tile).toBeInstanceOf(TileModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(TileModel.TYPE);
-            expect(tile.id).toBe(`${TileModel.TYPE}-${ratio}`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength * ratio);
             expect(tile.width).toBe(tileWidth * ratio);
         });
@@ -250,5 +256,33 @@ describe('TileModel', () => {
                 expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
             });
         });
+
+        describe('the coordinates of the tile', () => {
+            it.each([
+                [TileModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [TileModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [TileModel.DIRECTION_RIGHT, 2, 100, 100, 45],
+                [TileModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [TileModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [TileModel.DIRECTION_LEFT, 2, 100, 100, 45]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const ref = new TileModel(specs, direction, ratio);
+                    expect(ref.build(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
+    });
+
+    it.each([
+        [TileModel.DIRECTION_RIGHT, 1],
+        [TileModel.DIRECTION_RIGHT, 2],
+        [TileModel.DIRECTION_LEFT, 1],
+        [TileModel.DIRECTION_LEFT, 2]
+    ])('can export to an object a tile oriented to the %s having a ratio of %s', (direction, ratio) => {
+        const track = new TileModel(specs, direction, ratio);
+
+        expect(track.export()).toMatchSnapshot();
     });
 });

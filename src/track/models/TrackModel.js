@@ -17,15 +17,55 @@
  */
 
 import { derived } from 'svelte/store';
-import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
-import { TileReference } from './TileReference.js';
+import {
+    isTypeValid,
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../helpers';
+import { uid } from '../../core/helpers';
+import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
+import { CurvedTileModel } from './CurvedTileModel.js';
+import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from './TileSpecifications.js';
 import { List, Vector2D } from '../../core/models';
 
 /**
+ * @type {object} - Maps the types of tile to their respective model.
+ * @private
+ */
+const modelsMap = {
+    [STRAIGHT_TILE_TYPE]: StraightTileModel,
+    [CURVED_TILE_TYPE]: CurvedTileModel,
+    [CURVED_TILE_ENLARGED_TYPE]: CurvedTileEnlargedModel
+};
+
+/**
+ * Creates the tile model with respect to the given type.
+ * @param {TileSpecifications} specs - The specifications for the tiles.
+ * @param {string} type - The type of tile.
+ * @param {string} direction - The direction of the tile.
+ * @param {number} ratio - The size ratio of the tile.
+ * @returns {TileModel} - Returns a tile model of the expected type.
+ * @throws {TypeError} - If the given specifications object is not valid.
+ * @throws {TypeError} - If the given type is not valid.
+ * @throws {TypeError} - If the given direction is not valid.
+ * @private
+ */
+function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    if (!isTypeValid(type)) {
+        throw new TypeError('A valid type of tile is needed!');
+    }
+    const model = new modelsMap[type](specs, direction, ratio);
+    model.id = uid();
+    return model;
+}
+
+/**
  * Update the number of identified types.
  * @param {object} stats - The receiver for the stats.
- * @param {TileReference} tile - The tile to count.
+ * @param {TileModel} tile - The tile to count.
  * @param {number} diff - The amount to add for the identified type.
  * @private
  */
@@ -92,7 +132,7 @@ export class TrackModel {
     /**
      * Retrieves a tile by its identifier.
      * @param {string} id - The unique identifier of the tile.
-     * @returns {TileReference} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
     getTile(id) {
         return this.getTileAt(this.getTileIndex(id));
@@ -101,7 +141,7 @@ export class TrackModel {
     /**
      * Gets a tile from a particular position.
      * @param {number} index - The position of the tile.
-     * @returns {TileReference} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
     getTileAt(index) {
         return this.tiles.get(index) || null;
@@ -117,7 +157,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReference(this.specs, type, direction, ratio);
+        const tile = createModel(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.add(tile);
@@ -135,7 +175,7 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReference(this.specs, type, direction, ratio);
+        const tile = createModel(this.specs, type, direction, ratio);
 
         updateStats(this.stats, tile);
         this.tiles.insert(0, tile);
@@ -175,7 +215,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReference(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, this.tiles.get(index), -1);
             updateStats(this.stats, tile);
@@ -203,7 +243,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReference(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index, tile);
@@ -229,7 +269,7 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReference(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
             updateStats(this.stats, tile);
             this.tiles.insert(index + 1, tile);
@@ -324,7 +364,7 @@ export class TrackModel {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tileRef = new TileReference(this.specs, type, direction, ratio);
+                const tileRef = createModel(this.specs, type, direction, ratio);
                 updateStats(this.stats, tileRef);
 
                 return { done: false, value: tileRef };
@@ -364,11 +404,11 @@ export class TrackModel {
  */
 
 /**
- * @typedef {import('./TileReference').tileCoord} tileCoord
+ * @typedef {import('./TileModel').tileCoord} tileCoord
  */
 
 /**
- * @typedef {import('./TileReference').tileExport} tileExport
+ * @typedef {import('./TileModel').tileExport} tileExport
  */
 
 /**
