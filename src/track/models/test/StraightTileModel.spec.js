@@ -257,6 +257,49 @@ describe('StraightTileModel', () => {
             });
         });
 
+        describe('the position of the edge point for a tile', () => {
+            it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
+                const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, ratio);
+
+                expect(tile.getEdgeCoord()).toMatchSnapshot();
+                expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
+
+                expect(tile.getEdgeCoordRight()).toMatchSnapshot();
+                expect(tile.getEdgeCoordRight(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgeCoordRight(tileX, tileY, 90)).toMatchSnapshot();
+            });
+
+            it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
+                const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, ratio);
+
+                expect(tile.getEdgeCoord()).toMatchSnapshot();
+                expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
+
+                expect(tile.getEdgeCoordLeft()).toMatchSnapshot();
+                expect(tile.getEdgeCoordLeft(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgeCoordLeft(tileX, tileY, 90)).toMatchSnapshot();
+            });
+        });
+
+        describe('the bounding rectangle of the tile', () => {
+            it.each([
+                [StraightTileModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [StraightTileModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [StraightTileModel.DIRECTION_RIGHT, 2, 100, 100, 405],
+                [StraightTileModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [StraightTileModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [StraightTileModel.DIRECTION_LEFT, 2, 100, 100, 405]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const ref = new StraightTileModel(specs, direction, ratio);
+                    expect(ref.getBoundingRect(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
+
         describe('the coordinates of the tile', () => {
             it.each([
                 [StraightTileModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],

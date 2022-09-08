@@ -181,6 +181,60 @@ exports[`StraightTileModel can compute the angle of the output point for a tile 
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 4`] = `90`;
 
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "height": 141.4213562373095,
+  "width": 141.4213562373095,
+  "x": -9.601551083914863,
+  "y": 68.18019484660536,
+}
+`;
+
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+Object {
+  "height": 110,
+  "width": 90,
+  "x": -45,
+  "y": 0,
+}
+`;
+
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
+Object {
+  "height": 219.2031021678298,
+  "width": 219.20310216782968,
+  "x": -87.38329701443504,
+  "y": 68.18019484660535,
+}
+`;
+
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "height": 141.4213562373095,
+  "width": 141.4213562373095,
+  "x": -9.601551083914863,
+  "y": 68.18019484660536,
+}
+`;
+
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+Object {
+  "height": 110,
+  "width": 90,
+  "x": -45,
+  "y": 0,
+}
+`;
+
+exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
+Object {
+  "height": 219.2031021678298,
+  "width": 219.20310216782968,
+  "x": -87.38329701443504,
+  "y": 68.18019484660535,
+}
+`;
+
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 0.5 1`] = `
 Vector2D {
   "x": -55,
@@ -571,6 +625,426 @@ exports[`StraightTileModel can compute the position of the center point for a ti
 Vector2D {
   "x": -120,
   "y": 100.00000000000001,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 4`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 5`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 4`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 5`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 4`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 5`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 4`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 5`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 4`] = `
+Vector2D {
+  "x": -45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 5`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 4`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 5`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 4`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 5`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 4`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 5`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 4`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 5`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 4`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 5`] = `
+Vector2D {
+  "x": 145,
+  "y": 145,
+}
+`;
+
+exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 6`] = `
+Vector2D {
+  "x": 55,
+  "y": 145,
 }
 `;
 

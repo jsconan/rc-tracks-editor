@@ -151,6 +151,40 @@ export class CurvedTileEnlargedModel extends TileModel {
     getOutputAngleLeft(angle = 0) {
         return Vector2D.degrees(angle - Vector2D.RIGHT_ANGLE);
     }
+
+    /**
+     * Computes the coordinates of the edge point when the tile is oriented to the right.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getEdgeCoordRight(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        const center = start.addScalarY(this.specs.length * (this.ratio - 0.5));
+        const radius = this.getOuterRadius();
+        const curveAngle = Vector2D.RIGHT_ANGLE - this.getCurveAngle() / 2;
+
+        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the coordinates of the edge point when the tile is oriented to the left.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getEdgeCoordLeft(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        const center = start.addScalarY(this.specs.length * (this.ratio - 0.5));
+        const radius = this.getOuterRadius();
+        const curveAngle = Vector2D.RIGHT_ANGLE + this.getCurveAngle() / 2;
+
+        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
+    }
 }
 
 /**

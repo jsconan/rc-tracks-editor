@@ -318,6 +318,89 @@ export class TileModel {
     }
 
     /**
+     * Computes the coordinates of the edge point with respect to the tile direction.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getEdgeCoord(x = 0, y = 0, angle = 0) {
+        switch (this.direction) {
+            case TILE_DIRECTION_RIGHT:
+                return this.getEdgeCoordRight(x, y, angle);
+
+            case TILE_DIRECTION_LEFT:
+                return this.getEdgeCoordLeft(x, y, angle);
+        }
+    }
+
+    /**
+     * Computes the coordinates of the edge point when the tile is oriented to the right.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getEdgeCoordRight(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+        const edge = new Vector2D(this.width / 2, this.width / 2);
+        return start.add(edge).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the coordinates of the edge point when the tile is oriented to the left.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {Vector2D}
+     */
+    getEdgeCoordLeft(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+        const edge = new Vector2D(-this.width / 2, this.width / 2);
+        return start.add(edge).rotateAround(angle, start);
+    }
+
+    /**
+     * Computes the smallest rectangle which contains the entire tile.
+     * The coordinates are computed with respect to the entry point of the tile.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {tileRect} - The smallest rectangle which contains the entire tile.
+     */
+    getBoundingRect(x = 0, y = 0, angle = 0) {
+        const radius = this.specs.width / 2;
+        const inputCoord = new Vector2D(x, y);
+        const outputCoord = this.getOutputCoord(x, y, angle);
+        const outputAngle = this.getOutputAngle(angle);
+
+        const topLeft = new Vector2D(x, y);
+        const bottomRight = new Vector2D(x, y);
+        const coords = [
+            Vector2D.polar(radius, angle, inputCoord),
+            Vector2D.polar(radius, angle + Vector2D.STRAIGHT_ANGLE, inputCoord),
+            Vector2D.polar(radius, outputAngle, outputCoord),
+            Vector2D.polar(radius, outputAngle + Vector2D.STRAIGHT_ANGLE, outputCoord),
+            this.getEdgeCoord(x, y, angle)
+        ];
+
+        coords.forEach(point => {
+            topLeft.x = Math.min(topLeft.x, point.x);
+            topLeft.y = Math.min(topLeft.y, point.y);
+
+            bottomRight.x = Math.max(bottomRight.x, point.x);
+            bottomRight.y = Math.max(bottomRight.y, point.y);
+        });
+
+        return {
+            x: topLeft.x,
+            y: topLeft.y,
+            width: bottomRight.x - topLeft.x,
+            height: bottomRight.y - topLeft.y
+        };
+    }
+
+    /**
      * Exports the model to an object.
      * @returns {tileExport} - An object representation of the model.
      */
@@ -383,6 +466,14 @@ Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
  * @property {string} type - The type of tile.
  * @property {string} direction - The direction of the tile.
  * @property {number} ratio - The size ratio of the tile.
+ */
+
+/**
+ * @typedef {object} tileRect - Represents the smallest rectangle which contains a tile.
+ * @property {number} x - The left coordinate of the rectangle.
+ * @property {number} y - The top coordinate of the rectangle.
+ * @property {number} width - The width of the rectangle.
+ * @property {number} height - The height of the rectangle.
  */
 
 /**
