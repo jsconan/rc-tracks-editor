@@ -503,7 +503,7 @@ export class Vector2D {
 
     /**
      * Converts the vector to an object
-     * @returns {object} - The object representation of the vector.
+     * @returns {coord} - The object representation of the vector.
      */
     toObject() {
         return { x: this.x, y: this.y };
@@ -536,20 +536,20 @@ export class Vector2D {
 
     /**
      * Creates a vector from the cartesian coordinates given as an array.
-     * @param {number[]} array - The cartesian coordinates of the form [x, y].
+     * @param {number[]} coord - The cartesian coordinates of the form [x, y].
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
-    static fromArray(array = []) {
-        return new Vector2D(array[0], array[1]);
+    static fromArray(coord = []) {
+        return new Vector2D(coord[0], coord[1]);
     }
 
     /**
      * Creates a vector from the cartesian coordinates given as an object.
-     * @param {object} object - The cartesian coordinates of the form {x, y}.
+     * @param {coord} coord - The cartesian coordinates of the form {x, y}.
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
-    static fromObject(object = {}) {
-        return new Vector2D(object.x, object.y);
+    static fromObject(coord = { x: 0, y: 0 }) {
+        return new Vector2D(coord.x, coord.y);
     }
 
     /**
@@ -659,3 +659,9 @@ Object.defineProperty(Vector2D, 'DEGREES_PER_RADIANS', {
     enumerable: true,
     configurable: true
 });
+
+/**
+ * @typedef {object} coord - Represents coordinates.
+ * @property {number} x - The left coordinate.
+ * @property {number} y - The top coordinate.
+ */
