@@ -593,6 +593,15 @@ export class Vector2D {
     static toDegrees(angle) {
         return angle * Vector2D.DEGREES_PER_RADIANS;
     }
+
+    /**
+     * Adjust an angle given in degrees so that it remains within the domain.
+     * @param {number} angle - The angle given in degrees.
+     * @returns {number} - The angle adjusted in degrees.
+     */
+    static degrees(angle) {
+        return (angle + Vector2D.CIRCLE * Math.sign(angle)) % Vector2D.CIRCLE;
+    }
 }
 
 /**
@@ -631,9 +640,9 @@ Object.defineProperty(Vector2D, 'STRAIGHT_ANGLE', {
 
 /**
  * Degrees in a circle.
- * @constant {number} Vector2D.DEGREES
+ * @constant {number} Vector2D.CIRCLE
  */
-Object.defineProperty(Vector2D, 'DEGREES', {
+Object.defineProperty(Vector2D, 'CIRCLE', {
     value: 360,
     writable: false,
     enumerable: true,

@@ -807,6 +807,25 @@ describe('vector', () => {
             });
         });
 
+        describe('degrees', () => {
+            it('which is a function', () => {
+                expect(Vector2D.degrees).toEqual(expect.any(Function));
+            });
+
+            it.each([
+                [60, 60],
+                [400, 40],
+                [360, 0],
+                [720, 0],
+                [-60, -60],
+                [-400, -40],
+                [-360, -0],
+                [-720, -0]
+            ])('which adjust angles in degrees [%s => %s]', (angle, expected) => {
+                expect(Vector2D.degrees(angle)).toBe(expected);
+            });
+        });
+
         describe('intersect', () => {
             describe('which compute the point at the intersection of 2 lines', () => {
                 it('crossing lines', () => {
