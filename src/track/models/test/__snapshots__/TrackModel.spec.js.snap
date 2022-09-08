@@ -143,7 +143,7 @@ TrackModel {
 
 exports[`TrackModel can build a track for rendering using a start position and angle 1`] = `
 Object {
-  "height": 421.1269837220809,
+  "height": 355.56349186104046,
   "stats": Object {
     "curved-tile-1": 4,
     "straight-tile-1": 4,
@@ -151,10 +151,6 @@ Object {
   "tiles": Array [
     Object {
       "angle": 45,
-      "centerCoord": Vector2D {
-        "x": 61.10912703473989,
-        "y": 138.89087296526012,
-      },
       "id": "id-69",
       "model": StraightTileModel {
         "direction": "right",
@@ -166,20 +162,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 45,
-      "outputCoord": Vector2D {
-        "x": 22.218254069479784,
-        "y": 177.78174593052023,
-      },
       "x": 100,
       "y": 100,
     },
     Object {
       "angle": 45,
-      "centerCoord": Vector2D {
-        "x": -16.672618895780325,
-        "y": 216.67261889578035,
-      },
       "id": "id-70",
       "model": CurvedTileModel {
         "direction": "right",
@@ -191,20 +178,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 135,
-      "outputCoord": Vector2D {
-        "x": -55.56349186104045,
-        "y": 177.78174593052023,
-      },
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
     Object {
       "angle": 135,
-      "centerCoord": Vector2D {
-        "x": -94.45436482630056,
-        "y": 138.89087296526012,
-      },
       "id": "id-71",
       "model": StraightTileModel {
         "direction": "right",
@@ -216,20 +194,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 135,
-      "outputCoord": Vector2D {
-        "x": -133.3452377915607,
-        "y": 100.00000000000001,
-      },
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
     Object {
       "angle": 135,
-      "centerCoord": Vector2D {
-        "x": -172.2361107568208,
-        "y": 61.10912703473991,
-      },
       "id": "id-72",
       "model": CurvedTileModel {
         "direction": "right",
@@ -241,20 +210,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 225,
-      "outputCoord": Vector2D {
-        "x": -133.3452377915607,
-        "y": 22.218254069479798,
-      },
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
     Object {
       "angle": 225,
-      "centerCoord": Vector2D {
-        "x": -94.45436482630058,
-        "y": -16.672618895780325,
-      },
       "id": "id-73",
       "model": StraightTileModel {
         "direction": "right",
@@ -266,20 +226,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 225,
-      "outputCoord": Vector2D {
-        "x": -55.563491861040475,
-        "y": -55.56349186104045,
-      },
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
     Object {
       "angle": 225,
-      "centerCoord": Vector2D {
-        "x": -16.672618895780367,
-        "y": -94.45436482630056,
-      },
       "id": "id-74",
       "model": CurvedTileModel {
         "direction": "right",
@@ -291,20 +242,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 315,
-      "outputCoord": Vector2D {
-        "x": 22.218254069479755,
-        "y": -55.56349186104046,
-      },
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
     Object {
       "angle": 315,
-      "centerCoord": Vector2D {
-        "x": 61.10912703473988,
-        "y": -16.67261889578036,
-      },
       "id": "id-75",
       "model": StraightTileModel {
         "direction": "right",
@@ -316,20 +258,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 315,
-      "outputCoord": Vector2D {
-        "x": 100,
-        "y": 22.21825406947974,
-      },
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
     Object {
       "angle": 315,
-      "centerCoord": Vector2D {
-        "x": 138.89087296526012,
-        "y": 61.10912703473984,
-      },
       "id": "id-76",
       "model": CurvedTileModel {
         "direction": "right",
@@ -341,24 +274,19 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 45,
-      "outputCoord": Vector2D {
-        "x": 100.00000000000003,
-        "y": 99.99999999999997,
-      },
       "x": 100,
       "y": 22.21825406947974,
     },
   ],
-  "width": 421.1269837220809,
-  "x": -227.2361107568208,
-  "y": -149.45436482630055,
+  "width": 355.56349186104046,
+  "x": -194.45436482630058,
+  "y": -116.67261889578033,
 }
 `;
 
 exports[`TrackModel can build a track for rendering using default position 1`] = `
 Object {
-  "height": 330,
+  "height": 310,
   "stats": Object {
     "curved-tile-1": 4,
     "straight-tile-1": 4,
@@ -366,10 +294,6 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
-      "centerCoord": Vector2D {
-        "x": 0,
-        "y": 55,
-      },
       "id": "id-61",
       "model": StraightTileModel {
         "direction": "right",
@@ -381,20 +305,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 0,
-      "outputCoord": Vector2D {
-        "x": 0,
-        "y": 110,
-      },
       "x": 0,
       "y": 0,
     },
     Object {
       "angle": 0,
-      "centerCoord": Vector2D {
-        "x": 0,
-        "y": 165,
-      },
       "id": "id-62",
       "model": CurvedTileModel {
         "direction": "right",
@@ -406,20 +321,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 90,
-      "outputCoord": Vector2D {
-        "x": -55,
-        "y": 165,
-      },
       "x": 0,
       "y": 110,
     },
     Object {
       "angle": 90,
-      "centerCoord": Vector2D {
-        "x": -110,
-        "y": 165,
-      },
       "id": "id-63",
       "model": StraightTileModel {
         "direction": "right",
@@ -431,20 +337,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 90,
-      "outputCoord": Vector2D {
-        "x": -165,
-        "y": 165,
-      },
       "x": -55,
       "y": 165,
     },
     Object {
       "angle": 90,
-      "centerCoord": Vector2D {
-        "x": -220,
-        "y": 165,
-      },
       "id": "id-64",
       "model": CurvedTileModel {
         "direction": "right",
@@ -456,20 +353,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 180,
-      "outputCoord": Vector2D {
-        "x": -220,
-        "y": 110,
-      },
       "x": -165,
       "y": 165,
     },
     Object {
       "angle": 180,
-      "centerCoord": Vector2D {
-        "x": -220,
-        "y": 55,
-      },
       "id": "id-65",
       "model": StraightTileModel {
         "direction": "right",
@@ -481,20 +369,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 180,
-      "outputCoord": Vector2D {
-        "x": -220,
-        "y": 0,
-      },
       "x": -220,
       "y": 110,
     },
     Object {
       "angle": 180,
-      "centerCoord": Vector2D {
-        "x": -220,
-        "y": -55,
-      },
       "id": "id-66",
       "model": CurvedTileModel {
         "direction": "right",
@@ -506,20 +385,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 270,
-      "outputCoord": Vector2D {
-        "x": -165,
-        "y": -55.00000000000001,
-      },
       "x": -220,
       "y": 0,
     },
     Object {
       "angle": 270,
-      "centerCoord": Vector2D {
-        "x": -110,
-        "y": -55.000000000000014,
-      },
       "id": "id-67",
       "model": StraightTileModel {
         "direction": "right",
@@ -531,20 +401,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 270,
-      "outputCoord": Vector2D {
-        "x": -55,
-        "y": -55.00000000000003,
-      },
       "x": -165,
       "y": -55.00000000000001,
     },
     Object {
       "angle": 270,
-      "centerCoord": Vector2D {
-        "x": -2.842170943040401e-14,
-        "y": -55.000000000000036,
-      },
       "id": "id-68",
       "model": CurvedTileModel {
         "direction": "right",
@@ -556,18 +417,13 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 0,
-      "outputCoord": Vector2D {
-        "x": 7.105427357601002e-15,
-        "y": -3.552713678800501e-14,
-      },
       "x": -55,
       "y": -55.00000000000003,
     },
   ],
-  "width": 330,
-  "x": -275,
-  "y": -110.00000000000003,
+  "width": 310,
+  "x": -265,
+  "y": -100.00000000000003,
 }
 `;
 
