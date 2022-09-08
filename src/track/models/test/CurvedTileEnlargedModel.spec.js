@@ -241,20 +241,20 @@ describe('CurvedTileEnlargedModel', () => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
 
                 expect(tile.getOutputAngleRight()).toMatchSnapshot();
-                expect(tile.getOutputAngleRight(90)).toMatchSnapshot();
+                expect(tile.getOutputAngleRight(450)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
 
                 expect(tile.getOutputAngleLeft()).toMatchSnapshot();
-                expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
+                expect(tile.getOutputAngleLeft(450)).toMatchSnapshot();
             });
         });
 
@@ -262,10 +262,10 @@ describe('CurvedTileEnlargedModel', () => {
             it.each([
                 [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
                 [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
-                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 405],
                 [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
                 [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
-                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 45]
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 405]
             ])(
                 'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
                 (direction, ratio, x, y, angle) => {

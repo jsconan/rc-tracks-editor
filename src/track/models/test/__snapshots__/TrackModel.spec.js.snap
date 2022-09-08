@@ -341,7 +341,7 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 405,
+      "outputAngle": 45,
       "outputCoord": Vector2D {
         "x": 100.00000000000003,
         "y": 99.99999999999997,
@@ -556,7 +556,7 @@ Object {
           "laneWidth": 80,
         },
       },
-      "outputAngle": 360,
+      "outputAngle": 0,
       "outputCoord": Vector2D {
         "x": 7.105427357601002e-15,
         "y": -3.552713678800501e-14,

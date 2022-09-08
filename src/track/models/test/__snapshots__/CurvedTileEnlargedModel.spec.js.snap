@@ -307,7 +307,7 @@ Object {
 }
 `;
 
-exports[`CurvedTileEnlargedModel can compute the coordinates of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+exports[`CurvedTileEnlargedModel can compute the coordinates of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
   "angle": 45,
   "centerCoord": Vector2D {
@@ -391,7 +391,7 @@ Object {
 }
 `;
 
-exports[`CurvedTileEnlargedModel can compute the coordinates of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+exports[`CurvedTileEnlargedModel can compute the coordinates of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
   "angle": 45,
   "centerCoord": Vector2D {

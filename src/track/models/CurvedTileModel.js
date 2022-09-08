@@ -124,7 +124,7 @@ export class CurvedTileModel extends TileModel {
      * @returns {number}
      */
     getOutputAngleRight(angle = 0) {
-        return angle + this.getCurveAngle();
+        return Vector2D.degrees(angle + this.getCurveAngle());
     }
 
     /**
@@ -133,7 +133,7 @@ export class CurvedTileModel extends TileModel {
      * @returns {number}
      */
     getOutputAngleLeft(angle = 0) {
-        return angle - this.getCurveAngle();
+        return Vector2D.degrees(angle - this.getCurveAngle());
     }
 }
 

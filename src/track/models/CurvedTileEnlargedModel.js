@@ -140,7 +140,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getOutputAngleRight(angle = 0) {
-        return angle + Vector2D.RIGHT_ANGLE;
+        return Vector2D.degrees(angle + Vector2D.RIGHT_ANGLE);
     }
 
     /**
@@ -149,7 +149,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getOutputAngleLeft(angle = 0) {
-        return angle - Vector2D.RIGHT_ANGLE;
+        return Vector2D.degrees(angle - Vector2D.RIGHT_ANGLE);
     }
 }
 

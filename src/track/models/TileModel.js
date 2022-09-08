@@ -305,7 +305,7 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngleRight(angle = 0) {
-        return angle;
+        return Vector2D.degrees(angle);
     }
 
     /**
@@ -314,7 +314,7 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngleLeft(angle = 0) {
-        return angle;
+        return Vector2D.degrees(angle);
     }
 
     /**
@@ -335,6 +335,7 @@ export class TileModel {
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     build(x = 0, y = 0, angle = 0) {
+        angle = Vector2D.degrees(angle);
         const id = this.id;
         const outputAngle = this.getOutputAngle(angle);
         const outputCoord = this.getOutputCoord(x, y, angle);
