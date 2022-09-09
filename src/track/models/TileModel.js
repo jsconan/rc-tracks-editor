@@ -122,28 +122,10 @@ export class TileModel {
      * @returns {number}
      */
     getDirectionAngle() {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getDirectionAngleRight();
-
-            case TILE_DIRECTION_LEFT:
-                return this.getDirectionAngleLeft();
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            return Vector2D.STRAIGHT_ANGLE;
         }
-    }
 
-    /**
-     * Computes the angle for rotating the tile to the right.
-     * @returns {number}
-     */
-    getDirectionAngleRight() {
-        return 0;
-    }
-
-    /**
-     * Computes the angle for rotating the tile to the left.
-     * @returns {number}
-     */
-    getDirectionAngleLeft() {
         return 0;
     }
 
@@ -249,36 +231,6 @@ export class TileModel {
      * @returns {Vector2D}
      */
     getOutputCoord(x = 0, y = 0, angle = 0) {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getOutputCoordRight(x, y, angle);
-
-            case TILE_DIRECTION_LEFT:
-                return this.getOutputCoordLeft(x, y, angle);
-        }
-    }
-
-    /**
-     * Computes the coordinates of the output point when the tile is oriented to the right.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getOutputCoordRight(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-
-        return start.addScalarY(this.length).rotateAround(angle, start);
-    }
-
-    /**
-     * Computes the coordinates of the output point when the tile is oriented to the left.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getOutputCoordLeft(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
         return start.addScalarY(this.length).rotateAround(angle, start);
@@ -290,30 +242,6 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngle(angle = 0) {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getOutputAngleRight(angle);
-
-            case TILE_DIRECTION_LEFT:
-                return this.getOutputAngleLeft(angle);
-        }
-    }
-
-    /**
-     * Computes the angle of the output point when the tile is oriented to the right.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
-     */
-    getOutputAngleRight(angle = 0) {
-        return Vector2D.degrees(angle);
-    }
-
-    /**
-     * Computes the angle of the output point when the tile is oriented to the left.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
-     */
-    getOutputAngleLeft(angle = 0) {
         return Vector2D.degrees(angle);
     }
 
@@ -325,38 +253,15 @@ export class TileModel {
      * @returns {Vector2D}
      */
     getEdgeCoord(x = 0, y = 0, angle = 0) {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getEdgeCoordRight(x, y, angle);
+        const start = new Vector2D(x, y);
+        let edge;
 
-            case TILE_DIRECTION_LEFT:
-                return this.getEdgeCoordLeft(x, y, angle);
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            edge = new Vector2D(-this.width / 2, this.width / 2);
+        } else {
+            edge = new Vector2D(this.width / 2, this.width / 2);
         }
-    }
 
-    /**
-     * Computes the coordinates of the edge point when the tile is oriented to the right.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getEdgeCoordRight(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-        const edge = new Vector2D(this.width / 2, this.width / 2);
-        return start.add(edge).rotateAround(angle, start);
-    }
-
-    /**
-     * Computes the coordinates of the edge point when the tile is oriented to the left.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getEdgeCoordLeft(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-        const edge = new Vector2D(-this.width / 2, this.width / 2);
         return start.add(edge).rotateAround(angle, start);
     }
 

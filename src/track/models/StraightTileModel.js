@@ -18,7 +18,6 @@
 
 import { STRAIGHT_TILE_TYPE } from '../helpers';
 import { TileModel } from './TileModel.js';
-import { Vector2D } from '../../core/models';
 
 /**
  * Represents a straight track tile.
@@ -30,14 +29,6 @@ export class StraightTileModel extends TileModel {
      */
     get width() {
         return this.specs.width;
-    }
-
-    /**
-     * Computes the angle for rotating the tile to the left.
-     * @returns {number}
-     */
-    getDirectionAngleLeft() {
-        return Vector2D.STRAIGHT_ANGLE;
     }
 }
 

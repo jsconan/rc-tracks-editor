@@ -105,81 +105,41 @@ exports[`StraightTileModel can compute the angle of the output point for a tile 
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 0.5 2`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 0.5 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 0.5 4`] = `90`;
-
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 2`] = `90`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 4`] = `90`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 2`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 4`] = `90`;
-
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 2`] = `90`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 4`] = `90`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 2`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 4`] = `90`;
-
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 2`] = `90`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 4`] = `90`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 2`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 4`] = `90`;
-
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 2`] = `90`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 4`] = `90`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 2`] = `90`;
 
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 4`] = `90`;
-
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 1`] = `0`;
 
 exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 2`] = `90`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 3`] = `0`;
-
-exports[`StraightTileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 4`] = `90`;
 
 exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
 Object {
@@ -589,27 +549,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 4`] = `
-Vector2D {
-  "x": -45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 5`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 6`] = `
-Vector2D {
-  "x": 55,
-  "y": 55,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 1`] = `
 Vector2D {
   "x": -45,
@@ -625,27 +564,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 3`] = `
-Vector2D {
-  "x": 55,
-  "y": 55,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 4`] = `
-Vector2D {
-  "x": -45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 5`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 6`] = `
 Vector2D {
   "x": 55,
   "y": 55,
@@ -673,27 +591,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 4`] = `
-Vector2D {
-  "x": -45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 5`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 6`] = `
-Vector2D {
-  "x": 55,
-  "y": 55,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 1`] = `
 Vector2D {
   "x": -45,
@@ -709,27 +606,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 3`] = `
-Vector2D {
-  "x": 55,
-  "y": 55,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 4`] = `
-Vector2D {
-  "x": -45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 5`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 6`] = `
 Vector2D {
   "x": 55,
   "y": 55,
@@ -757,27 +633,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 4`] = `
-Vector2D {
-  "x": -45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 5`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 6`] = `
-Vector2D {
-  "x": 55,
-  "y": 55,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 1`] = `
 Vector2D {
   "x": 45,
@@ -793,27 +648,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 3`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 4`] = `
-Vector2D {
-  "x": 45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 5`] = `
-Vector2D {
-  "x": 145,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 6`] = `
 Vector2D {
   "x": 55,
   "y": 145,
@@ -841,27 +675,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 4`] = `
-Vector2D {
-  "x": 45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 5`] = `
-Vector2D {
-  "x": 145,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 6`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 1`] = `
 Vector2D {
   "x": 45,
@@ -877,27 +690,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 3`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 4`] = `
-Vector2D {
-  "x": 45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 5`] = `
-Vector2D {
-  "x": 145,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 6`] = `
 Vector2D {
   "x": 55,
   "y": 145,
@@ -925,27 +717,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 4`] = `
-Vector2D {
-  "x": 45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 5`] = `
-Vector2D {
-  "x": 145,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 6`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 1`] = `
 Vector2D {
   "x": 45,
@@ -961,27 +732,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 3`] = `
-Vector2D {
-  "x": 55,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 4`] = `
-Vector2D {
-  "x": 45,
-  "y": 45,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 5`] = `
-Vector2D {
-  "x": 145,
-  "y": 145,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 6`] = `
 Vector2D {
   "x": 55,
   "y": 145,
@@ -1009,27 +759,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 55,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 155,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 6`] = `
-Vector2D {
-  "x": 45,
-  "y": 100,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 1`] = `
 Vector2D {
   "x": 0,
@@ -1045,27 +774,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 3`] = `
-Vector2D {
-  "x": -10,
-  "y": 100,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 110,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 210,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 6`] = `
 Vector2D {
   "x": -10,
   "y": 100,
@@ -1093,27 +801,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 220,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 320,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 6`] = `
-Vector2D {
-  "x": -120,
-  "y": 100.00000000000001,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 1`] = `
 Vector2D {
   "x": 0,
@@ -1129,27 +816,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 3`] = `
-Vector2D {
-  "x": -230,
-  "y": 100.00000000000001,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 330,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 430,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 6`] = `
 Vector2D {
   "x": -230,
   "y": 100.00000000000001,
@@ -1177,27 +843,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 440,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 540,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 6`] = `
-Vector2D {
-  "x": -340,
-  "y": 100.00000000000003,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 1`] = `
 Vector2D {
   "x": 0,
@@ -1213,27 +858,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 3`] = `
-Vector2D {
-  "x": 45,
-  "y": 100,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 55,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 155,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 6`] = `
 Vector2D {
   "x": 45,
   "y": 100,
@@ -1261,27 +885,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 110,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 210,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 6`] = `
-Vector2D {
-  "x": -10,
-  "y": 100,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 1`] = `
 Vector2D {
   "x": 0,
@@ -1297,27 +900,6 @@ Vector2D {
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 3`] = `
-Vector2D {
-  "x": -120,
-  "y": 100.00000000000001,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 220,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 320,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 6`] = `
 Vector2D {
   "x": -120,
   "y": 100.00000000000001,
@@ -1345,27 +927,6 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 330,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 430,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 6`] = `
-Vector2D {
-  "x": -230,
-  "y": 100.00000000000001,
-}
-`;
-
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 1`] = `
 Vector2D {
   "x": 0,
@@ -1387,66 +948,25 @@ Vector2D {
 }
 `;
 
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 4`] = `
-Vector2D {
-  "x": 0,
-  "y": 440,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 5`] = `
-Vector2D {
-  "x": 100,
-  "y": 540,
-}
-`;
-
-exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 6`] = `
-Vector2D {
-  "x": -340,
-  "y": 100.00000000000003,
-}
-`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 1`] = `180`;
-
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 2`] = `180`;
 
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 2`] = `180`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 1`] = `180`;
-
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 2`] = `180`;
 
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 1`] = `180`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 2`] = `180`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 1`] = `180`;
-
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 2`] = `180`;
 
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 0.5 1`] = `0`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 0.5 2`] = `0`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 1 1`] = `0`;
-
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 1 2`] = `0`;
 
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 2 1`] = `0`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 2 2`] = `0`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 3 1`] = `0`;
 
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 3 2`] = `0`;
-
 exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 4 1`] = `0`;
-
-exports[`StraightTileModel can compute the rotation angle for a tile oriented to the right with a ratio of 4 2`] = `0`;
 
 exports[`StraightTileModel can compute the side of the curve for a tile with a ratio of 0.5 1`] = `0`;
 

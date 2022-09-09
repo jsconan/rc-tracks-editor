@@ -132,13 +132,11 @@ describe('StraightTileModel', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleRight()).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleLeft()).toMatchSnapshot();
             });
         });
 
@@ -216,10 +214,6 @@ describe('StraightTileModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordRight()).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY, 90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
@@ -228,10 +222,6 @@ describe('StraightTileModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordLeft()).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY, 90)).toMatchSnapshot();
             });
         });
 
@@ -241,9 +231,6 @@ describe('StraightTileModel', () => {
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
                 expect(tile.getOutputAngle(450)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleRight()).toMatchSnapshot();
-                expect(tile.getOutputAngleRight(450)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
@@ -251,9 +238,6 @@ describe('StraightTileModel', () => {
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
                 expect(tile.getOutputAngle(450)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleLeft()).toMatchSnapshot();
-                expect(tile.getOutputAngleLeft(450)).toMatchSnapshot();
             });
         });
 
@@ -264,10 +248,6 @@ describe('StraightTileModel', () => {
                 expect(tile.getEdgeCoord()).toMatchSnapshot();
                 expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getEdgeCoordRight()).toMatchSnapshot();
-                expect(tile.getEdgeCoordRight(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getEdgeCoordRight(tileX, tileY, 90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
@@ -276,10 +256,6 @@ describe('StraightTileModel', () => {
                 expect(tile.getEdgeCoord()).toMatchSnapshot();
                 expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getEdgeCoordLeft()).toMatchSnapshot();
-                expect(tile.getEdgeCoordLeft(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getEdgeCoordLeft(tileX, tileY, 90)).toMatchSnapshot();
             });
         });
 
