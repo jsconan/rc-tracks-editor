@@ -132,6 +132,16 @@ export class Vector2D {
     }
 
     /**
+     * Adds the given coordinates.
+     * @param {number} x - The X-coordinate to add.
+     * @param {number} y - The Y-coordinate to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addCoord(x, y) {
+        return new Vector2D(this.x + x, this.y + y);
+    }
+
+    /**
      * Adds a scalar value to the coordinates.
      * @param {number} scalar - The scalar value to add.
      * @returns {Vector2D} - A new vector resulting of the addition.
@@ -183,6 +193,16 @@ export class Vector2D {
      */
     subY(vector) {
         return new Vector2D(this.x, this.y - vector.y);
+    }
+
+    /**
+     * Subtracts the given coordinates.
+     * @param {number} x - The X-coordinate to subtract.
+     * @param {number} y - The Y-coordinate to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subCoord(x, y) {
+        return new Vector2D(this.x - x, this.y - y);
     }
 
     /**
@@ -240,6 +260,16 @@ export class Vector2D {
     }
 
     /**
+     * Multiplies the given coordinates.
+     * @param {number} x - The X-coordinate to multiply by.
+     * @param {number} y - The Y-coordinate to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulCoord(x, y) {
+        return new Vector2D(this.x * x, this.y * y);
+    }
+
+    /**
      * Multiplies the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to multiply by.
      * @returns {Vector2D} - A new vector resulting of the multiplication.
@@ -291,6 +321,16 @@ export class Vector2D {
      */
     divY(vector) {
         return new Vector2D(this.x, this.y / vector.y);
+    }
+
+    /**
+     * Divides the given coordinates.
+     * @param {number} x - The X-coordinate to divide by.
+     * @param {number} y - The Y-coordinate to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divCoord(x, y) {
+        return new Vector2D(this.x / x, this.y / y);
     }
 
     /**
