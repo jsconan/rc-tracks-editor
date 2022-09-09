@@ -600,7 +600,7 @@ export class Vector2D {
      * @returns {number} - The angle adjusted in degrees.
      */
     static degrees(angle) {
-        return (angle + Vector2D.CIRCLE * Math.sign(angle)) % Vector2D.CIRCLE;
+        return ((angle % Vector2D.CIRCLE) + Vector2D.CIRCLE) % Vector2D.CIRCLE;
     }
 }
 

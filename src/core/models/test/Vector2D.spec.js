@@ -817,10 +817,10 @@ describe('vector', () => {
                 [400, 40],
                 [360, 0],
                 [720, 0],
-                [-60, -60],
-                [-400, -40],
-                [-360, -0],
-                [-720, -0]
+                [-60, 300],
+                [-400, 320],
+                [-360, 0],
+                [-720, 0]
             ])('which adjust angles in degrees [%s => %s]', (angle, expected) => {
                 expect(Vector2D.degrees(angle)).toBe(expected);
             });
