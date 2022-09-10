@@ -30,3 +30,18 @@
 </script>
 
 <svelte:component this={component} {model} {angle} {x} {y} {filter} {id} />
+
+<style>
+    :global(.ground) {
+        fill: var(--color-ground);
+        stroke: var(--color-bg);
+    }
+
+    :global(.even) {
+        fill: var(--color-even);
+    }
+
+    :global(.odd) {
+        fill: var(--color-odd);
+    }
+</style>

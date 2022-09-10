@@ -4,7 +4,7 @@ exports[`ControlPoints renders with default values 1`] = `
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -33,7 +33,7 @@ exports[`ControlPoints renders with the given parameters for a curved-tile orien
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -62,7 +62,7 @@ exports[`ControlPoints renders with the given parameters for a curved-tile orien
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -91,7 +91,7 @@ exports[`ControlPoints renders with the given parameters for a curved-tile-enlar
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -120,7 +120,7 @@ exports[`ControlPoints renders with the given parameters for a curved-tile-enlar
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -149,7 +149,7 @@ exports[`ControlPoints renders with the given parameters for a straight-tile ori
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"
@@ -178,7 +178,7 @@ exports[`ControlPoints renders with the given parameters for a straight-tile ori
 <body>
   <div>
     <g
-      class="control"
+      class="control svelte-1em7g89"
     >
       <circle
         class="point"

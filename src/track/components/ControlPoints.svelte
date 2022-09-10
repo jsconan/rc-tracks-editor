@@ -23,3 +23,9 @@
     <circle class="point" cx={center.x} cy={center.y} {r} />
     <circle class="point" cx={output.x} cy={output.y} {r} />
 </g>
+
+<style>
+    .control {
+        fill: var(--color-control);
+    }
+</style>
