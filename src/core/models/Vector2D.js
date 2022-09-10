@@ -635,12 +635,21 @@ export class Vector2D {
     }
 
     /**
-     * Adjust an angle given in degrees so that it remains within the domain.
+     * Adjusts an angle given in degrees so that it remains within the domain.
      * @param {number} angle - The angle given in degrees.
      * @returns {number} - The angle adjusted in degrees.
      */
     static degrees(angle) {
         return ((angle % Vector2D.CIRCLE) + Vector2D.CIRCLE) % Vector2D.CIRCLE;
+    }
+
+    /**
+     * Gets the quadrant in which the given angle is contained.
+     * @param {number} angle - The angle given in degrees.
+     * @returns {number} - The quadrant containing the given angle.
+     */
+    static quadrant(angle) {
+        return Math.floor(Vector2D.degrees(angle) / Vector2D.RIGHT_ANGLE);
     }
 }
 

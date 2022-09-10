@@ -874,6 +874,27 @@ describe('vector', () => {
             });
         });
 
+        describe('quadrant', () => {
+            it('which is a function', () => {
+                expect(Vector2D.quadrant).toEqual(expect.any(Function));
+            });
+
+            it.each([
+                [60, 0],
+                [100, 1],
+                [200, 2],
+                [300, 3],
+                [400, 0],
+                [-300, 0],
+                [-200, 1],
+                [-100, 2],
+                [-60, 3],
+                [-400, 3]
+            ])('which tells in which quadrant is the angle %s', (angle, expected) => {
+                expect(Vector2D.quadrant(angle)).toBe(expected);
+            });
+        });
+
         describe('intersect', () => {
             describe('which compute the point at the intersection of 2 lines', () => {
                 it('crossing lines', () => {
