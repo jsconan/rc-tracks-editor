@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
+import { quadrantRange, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -134,28 +134,40 @@ export class CurvedTileModel extends TileModel {
      */
     getEdgesCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
-        const width = this.width;
+        const width = this.specs.width;
         const innerRadius = this.getInnerRadius();
         const outerRadius = innerRadius + width;
         const centerRadius = innerRadius + width / 2;
 
-        let startAngle, endAngle, center;
+        let startAngle, center;
         if (this.direction === TILE_DIRECTION_LEFT) {
             center = start.addScalarX(centerRadius);
-            startAngle = Vector2D.STRAIGHT_ANGLE;
-            endAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
+            startAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
         } else {
             center = start.subScalarX(centerRadius);
             startAngle = 0;
-            endAngle = this.getCurveAngle();
+        }
+        const endAngle = startAngle + this.getCurveAngle();
+
+        const p0 = Vector2D.polar(innerRadius, startAngle, center).rotateAround(angle, start);
+        const p1 = Vector2D.polar(outerRadius, startAngle, center).rotateAround(angle, start);
+        const p2 = Vector2D.polar(outerRadius, endAngle, center).rotateAround(angle, start);
+        const p3 = Vector2D.polar(innerRadius, endAngle, center).rotateAround(angle, start);
+
+        const edges = [p0, p1];
+
+        const rotatedCenter = center.rotateAround(angle, start);
+        const rotatedStartAngle = Vector2D.degrees(p1.sub(rotatedCenter).angle());
+        const rotatedEndAngle = rotatedStartAngle + this.getCurveAngle();
+
+        const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);
+        if (edgeAngle !== null) {
+            edges.push(Vector2D.polar(outerRadius, edgeAngle, rotatedCenter));
         }
 
-        return [
-            Vector2D.polar(innerRadius, startAngle, center).rotateAround(angle, start),
-            Vector2D.polar(outerRadius, startAngle, center).rotateAround(angle, start),
-            Vector2D.polar(outerRadius, endAngle, center).rotateAround(angle, start),
-            Vector2D.polar(innerRadius, endAngle, center).rotateAround(angle, start)
-        ];
+        edges.push(p2, p3);
+
+        return edges;
     }
 }
 

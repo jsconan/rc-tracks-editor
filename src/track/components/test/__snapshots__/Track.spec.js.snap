@@ -568,7 +568,7 @@ exports[`Track update when the model is modified 1`] = `
 <body>
   <div>
     <svg
-      viewBox="-210 -155 210 200"
+      viewBox="-210 -155.00000000000003 210 200.00000000000003"
       x="100"
       y="200"
     >

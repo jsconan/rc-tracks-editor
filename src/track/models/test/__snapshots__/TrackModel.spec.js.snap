@@ -143,7 +143,7 @@ TrackModel {
 
 exports[`TrackModel can build a track for rendering using a start position and angle 1`] = `
 Object {
-  "height": 296.98484809834997,
+  "height": 355.56349186104046,
   "stats": Object {
     "curved-tile-1": 4,
     "straight-tile-1": 4,
@@ -278,9 +278,9 @@ Object {
       "y": 22.21825406947974,
     },
   ],
-  "width": 296.98484809834997,
-  "x": -165.16504294495533,
-  "y": -87.3832970144351,
+  "width": 355.56349186104046,
+  "x": -194.45436482630058,
+  "y": -116.67261889578035,
 }
 `;
 

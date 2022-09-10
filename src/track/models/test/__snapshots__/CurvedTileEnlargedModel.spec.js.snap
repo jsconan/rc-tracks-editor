@@ -154,8 +154,8 @@ Object {
     "x": 100,
     "y": 177.78174593052023,
   },
-  "width": 102.5304832720494,
-  "x": 29.289321881345245,
+  "width": 115.71067811865476,
+  "x": 16.109127034739892,
   "y": 68.18019484660537,
 }
 `;
@@ -181,7 +181,7 @@ Object {
 
 exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
-  "height": 424.2640687119285,
+  "height": 296.9848480983499,
   "input": Object {
     "angle": 45,
     "x": 100,
@@ -192,15 +192,15 @@ Object {
     "x": 100.00000000000006,
     "y": 333.3452377915607,
   },
-  "width": 243.95183950935893,
-  "x": -80.3122292025696,
-  "y": 36.36038969321077,
+  "width": 170.71067811865478,
+  "x": -38.89087296526008,
+  "y": 68.18019484660539,
 }
 `;
 
 exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
 Object {
-  "height": 102.5304832720494,
+  "height": 115.71067811865476,
   "input": Object {
     "angle": 45,
     "x": 100,
@@ -238,7 +238,7 @@ Object {
 
 exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
-  "height": 166.17009357883867,
+  "height": 170.71067811865476,
   "input": Object {
     "angle": 45,
     "x": 100,
@@ -249,9 +249,9 @@ Object {
     "x": -133.3452377915607,
     "y": 100.00000000000006,
   },
-  "width": 424.2640687119285,
-  "x": -260.6244584051392,
-  "y": 36.36038969321074,
+  "width": 296.98484809834997,
+  "x": -165.1650429449553,
+  "y": 68.18019484660537,
 }
 `;
 
@@ -483,28 +483,28 @@ Vector2D {
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 1`] = `
 Array [
   Vector2D {
-    "x": 45,
-    "y": 1.2246467991473533e-15,
-  },
-  Vector2D {
-    "x": -45,
-    "y": 1.2246467991473532e-14,
-  },
-  Vector2D {
-    "x": -45,
-    "y": 55.00000000000001,
-  },
-  Vector2D {
-    "x": 2.7554552980815448e-15,
-    "y": 100,
+    "x": 55,
+    "y": 10,
   },
   Vector2D {
     "x": 55.00000000000001,
     "y": 100,
   },
   Vector2D {
-    "x": 55,
-    "y": 10,
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
   },
 ]
 `;
@@ -512,28 +512,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 2`] = `
 Array [
   Vector2D {
-    "x": 145,
-    "y": 100,
+    "x": 155,
+    "y": 110,
   },
   Vector2D {
-    "x": 55,
-    "y": 100.00000000000001,
-  },
-  Vector2D {
-    "x": 55,
-    "y": 155,
+    "x": 155,
+    "y": 200,
   },
   Vector2D {
     "x": 100,
     "y": 200,
   },
   Vector2D {
-    "x": 155,
-    "y": 200,
+    "x": 55,
+    "y": 155,
   },
   Vector2D {
-    "x": 155,
-    "y": 110,
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
   },
 ]
 `;
@@ -541,28 +541,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 3`] = `
 Array [
   Vector2D {
-    "x": 100,
-    "y": 145,
+    "x": 90,
+    "y": 155,
   },
   Vector2D {
-    "x": 99.99999999999999,
-    "y": 55,
-  },
-  Vector2D {
-    "x": 45,
-    "y": 55,
+    "x": 0,
+    "y": 155,
   },
   Vector2D {
     "x": 0,
     "y": 100,
   },
   Vector2D {
-    "x": 0,
-    "y": 155,
+    "x": 45,
+    "y": 55,
   },
   Vector2D {
-    "x": 90,
-    "y": 155,
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
   },
 ]
 `;
@@ -570,28 +570,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 1`] = `
 Array [
   Vector2D {
-    "x": 45,
-    "y": 1.2246467991473533e-15,
-  },
-  Vector2D {
-    "x": -45,
-    "y": 1.2246467991473532e-14,
-  },
-  Vector2D {
-    "x": -45,
-    "y": 55.00000000000001,
-  },
-  Vector2D {
-    "x": 2.7554552980815448e-15,
-    "y": 100,
+    "x": 55,
+    "y": 10,
   },
   Vector2D {
     "x": 55.00000000000001,
     "y": 100,
   },
   Vector2D {
-    "x": 55,
-    "y": 10,
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
   },
 ]
 `;
@@ -599,28 +599,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 2`] = `
 Array [
   Vector2D {
-    "x": 145,
-    "y": 100,
+    "x": 155,
+    "y": 110,
   },
   Vector2D {
-    "x": 55,
-    "y": 100.00000000000001,
-  },
-  Vector2D {
-    "x": 55,
-    "y": 155,
+    "x": 155,
+    "y": 200,
   },
   Vector2D {
     "x": 100,
     "y": 200,
   },
   Vector2D {
-    "x": 155,
-    "y": 200,
+    "x": 55,
+    "y": 155,
   },
   Vector2D {
-    "x": 155,
-    "y": 110,
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
   },
 ]
 `;
@@ -628,28 +628,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 3`] = `
 Array [
   Vector2D {
-    "x": 100,
-    "y": 145,
+    "x": 90,
+    "y": 155,
   },
   Vector2D {
-    "x": 99.99999999999999,
-    "y": 55,
-  },
-  Vector2D {
-    "x": 45,
-    "y": 55,
+    "x": 0,
+    "y": 155,
   },
   Vector2D {
     "x": 0,
     "y": 100,
   },
   Vector2D {
-    "x": 0,
-    "y": 155,
+    "x": 45,
+    "y": 55,
   },
   Vector2D {
-    "x": 90,
-    "y": 155,
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
   },
 ]
 `;
@@ -657,28 +657,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 1`] = `
 Array [
   Vector2D {
-    "x": 90,
-    "y": 1.469576158976824e-14,
+    "x": 165,
+    "y": 120,
   },
   Vector2D {
-    "x": -90,
-    "y": 3.6739403974420595e-14,
+    "x": 165,
+    "y": 210,
   },
   Vector2D {
-    "x": -145,
+    "x": 55.00000000000001,
+    "y": 210,
+  },
+  Vector2D {
+    "x": -45,
     "y": 110.00000000000001,
   },
   Vector2D {
-    "x": -54.99999999999999,
-    "y": 200,
+    "x": -45,
+    "y": 2.5717582782094416e-14,
   },
   Vector2D {
-    "x": 210.00000000000003,
-    "y": 300,
-  },
-  Vector2D {
-    "x": 210,
-    "y": 120,
+    "x": 45,
+    "y": 1.469576158976824e-14,
   },
 ]
 `;
@@ -686,28 +686,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 2`] = `
 Array [
   Vector2D {
-    "x": 190,
-    "y": 100.00000000000001,
+    "x": 265,
+    "y": 220,
   },
   Vector2D {
-    "x": 10,
-    "y": 100.00000000000004,
+    "x": 265,
+    "y": 310,
   },
   Vector2D {
-    "x": -45,
+    "x": 155,
+    "y": 310,
+  },
+  Vector2D {
+    "x": 55,
     "y": 210,
   },
   Vector2D {
-    "x": 45.00000000000001,
-    "y": 300,
+    "x": 55,
+    "y": 100.00000000000003,
   },
   Vector2D {
-    "x": 310,
-    "y": 400,
-  },
-  Vector2D {
-    "x": 310,
-    "y": 220,
+    "x": 145,
+    "y": 100.00000000000001,
   },
 ]
 `;
@@ -715,28 +715,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 3`] = `
 Array [
   Vector2D {
-    "x": 99.99999999999999,
-    "y": 190,
-  },
-  Vector2D {
-    "x": 99.99999999999996,
-    "y": 10,
-  },
-  Vector2D {
-    "x": -10.000000000000014,
-    "y": -45,
-  },
-  Vector2D {
-    "x": -100,
-    "y": 45.00000000000002,
-  },
-  Vector2D {
-    "x": -200,
-    "y": 310,
-  },
-  Vector2D {
     "x": -19.999999999999986,
-    "y": 310,
+    "y": 265,
+  },
+  Vector2D {
+    "x": -110,
+    "y": 265,
+  },
+  Vector2D {
+    "x": -110,
+    "y": 155,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": 99.99999999999997,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 145,
   },
 ]
 `;
@@ -744,28 +744,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 1`] = `
 Array [
   Vector2D {
-    "x": 135,
-    "y": 2.8166876380389125e-14,
+    "x": 275,
+    "y": 230,
   },
   Vector2D {
-    "x": -135,
-    "y": 6.123233995736766e-14,
+    "x": 275,
+    "y": 320,
   },
   Vector2D {
-    "x": -245,
+    "x": 110.00000000000001,
+    "y": 320,
+  },
+  Vector2D {
+    "x": -45,
     "y": 165.00000000000003,
   },
   Vector2D {
-    "x": -109.99999999999999,
-    "y": 300,
+    "x": -45,
+    "y": 3.9188697572715304e-14,
   },
   Vector2D {
-    "x": 365.00000000000006,
-    "y": 500,
-  },
-  Vector2D {
-    "x": 365,
-    "y": 230,
+    "x": 45,
+    "y": 2.8166876380389125e-14,
   },
 ]
 `;
@@ -773,28 +773,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 2`] = `
 Array [
   Vector2D {
-    "x": 235,
-    "y": 100.00000000000003,
+    "x": 375,
+    "y": 330,
   },
   Vector2D {
-    "x": -35,
-    "y": 100.00000000000006,
+    "x": 375,
+    "y": 420,
   },
   Vector2D {
-    "x": -145,
+    "x": 210,
+    "y": 420,
+  },
+  Vector2D {
+    "x": 55,
     "y": 265,
   },
   Vector2D {
-    "x": -9.999999999999986,
-    "y": 400,
+    "x": 55,
+    "y": 100.00000000000004,
   },
   Vector2D {
-    "x": 465.00000000000006,
-    "y": 600,
-  },
-  Vector2D {
-    "x": 465,
-    "y": 330,
+    "x": 145,
+    "y": 100.00000000000003,
   },
 ]
 `;
@@ -802,28 +802,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 3`] = `
 Array [
   Vector2D {
-    "x": 99.99999999999999,
-    "y": 235,
-  },
-  Vector2D {
-    "x": 99.99999999999993,
-    "y": -35,
-  },
-  Vector2D {
-    "x": -65.00000000000003,
-    "y": -145,
-  },
-  Vector2D {
-    "x": -200,
-    "y": -9.999999999999972,
-  },
-  Vector2D {
-    "x": -400,
-    "y": 465.0000000000001,
-  },
-  Vector2D {
     "x": -129.99999999999997,
-    "y": 465,
+    "y": 375,
+  },
+  Vector2D {
+    "x": -220,
+    "y": 375,
+  },
+  Vector2D {
+    "x": -220,
+    "y": 210,
+  },
+  Vector2D {
+    "x": -65,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": 99.99999999999996,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999997,
+    "y": 145,
   },
 ]
 `;
@@ -831,28 +831,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 1`] = `
 Array [
   Vector2D {
-    "x": 180,
-    "y": 4.163799117101001e-14,
+    "x": 385,
+    "y": 340,
   },
   Vector2D {
-    "x": -180,
-    "y": 8.572527594031473e-14,
+    "x": 385,
+    "y": 430,
   },
   Vector2D {
-    "x": -345,
+    "x": 165,
+    "y": 430,
+  },
+  Vector2D {
+    "x": -45,
     "y": 220.00000000000003,
   },
   Vector2D {
-    "x": -165,
-    "y": 400,
+    "x": -45,
+    "y": 5.265981236333619e-14,
   },
   Vector2D {
-    "x": 520,
-    "y": 700,
-  },
-  Vector2D {
-    "x": 520,
-    "y": 340,
+    "x": 45,
+    "y": 4.163799117101001e-14,
   },
 ]
 `;
@@ -860,28 +860,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 2`] = `
 Array [
   Vector2D {
-    "x": 280,
-    "y": 100.00000000000004,
+    "x": 485,
+    "y": 440,
   },
   Vector2D {
-    "x": -80,
-    "y": 100.00000000000009,
+    "x": 485,
+    "y": 530,
   },
   Vector2D {
-    "x": -245,
+    "x": 265,
+    "y": 530,
+  },
+  Vector2D {
+    "x": 55,
     "y": 320,
   },
   Vector2D {
-    "x": -65,
-    "y": 500,
+    "x": 55,
+    "y": 100.00000000000006,
   },
   Vector2D {
-    "x": 620,
-    "y": 800,
-  },
-  Vector2D {
-    "x": 620,
-    "y": 440,
+    "x": 145,
+    "y": 100.00000000000004,
   },
 ]
 `;
@@ -889,28 +889,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 3`] = `
 Array [
   Vector2D {
-    "x": 99.99999999999997,
-    "y": 280,
+    "x": -240,
+    "y": 485,
   },
   Vector2D {
-    "x": 99.9999999999999,
-    "y": -80,
+    "x": -330,
+    "y": 485,
   },
   Vector2D {
-    "x": -120.00000000000003,
-    "y": -245,
+    "x": -330,
+    "y": 265,
   },
   Vector2D {
-    "x": -300,
-    "y": -64.99999999999997,
+    "x": -120,
+    "y": 55.000000000000014,
   },
   Vector2D {
-    "x": -600,
-    "y": 620,
+    "x": 99.99999999999994,
+    "y": 55,
   },
   Vector2D {
-    "x": -239.99999999999994,
-    "y": 620,
+    "x": 99.99999999999996,
+    "y": 145,
   },
 ]
 `;
@@ -1092,27 +1092,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 1`] = `
 Array [
   Vector2D {
-    "x": -90,
+    "x": -45,
     "y": 0,
   },
   Vector2D {
-    "x": 90,
+    "x": 45,
     "y": 0,
   },
   Vector2D {
-    "x": 35,
+    "x": 45,
     "y": 110,
   },
   Vector2D {
     "x": -54.99999999999999,
-    "y": 200,
+    "y": 210,
   },
   Vector2D {
-    "x": -209.99999999999997,
-    "y": 300,
+    "x": -165,
+    "y": 210,
   },
   Vector2D {
-    "x": -210,
+    "x": -165,
     "y": 120,
   },
 ]
@@ -1121,27 +1121,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 2`] = `
 Array [
   Vector2D {
-    "x": 10,
+    "x": 55,
     "y": 100,
   },
   Vector2D {
-    "x": 190,
+    "x": 145,
     "y": 100,
   },
   Vector2D {
-    "x": 135,
+    "x": 145,
     "y": 210,
   },
   Vector2D {
     "x": 45.00000000000001,
-    "y": 300,
+    "y": 310,
   },
   Vector2D {
-    "x": -110,
-    "y": 400,
+    "x": -65,
+    "y": 310,
   },
   Vector2D {
-    "x": -110,
+    "x": -65,
     "y": 220,
   },
 ]
@@ -1151,27 +1151,27 @@ exports[`CurvedTileEnlargedModel can compute the position of the edge points for
 Array [
   Vector2D {
     "x": 100,
-    "y": 10,
+    "y": 55,
   },
   Vector2D {
     "x": 100,
-    "y": 190,
+    "y": 145,
   },
   Vector2D {
     "x": -10,
-    "y": 135,
+    "y": 145,
   },
   Vector2D {
-    "x": -100,
+    "x": -110,
     "y": 45.00000000000002,
   },
   Vector2D {
-    "x": -200,
-    "y": -109.99999999999997,
+    "x": -110,
+    "y": -65,
   },
   Vector2D {
     "x": -20.000000000000014,
-    "y": -110,
+    "y": -65,
   },
 ]
 `;
@@ -1179,27 +1179,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 1`] = `
 Array [
   Vector2D {
-    "x": -135,
+    "x": -45,
     "y": 0,
   },
   Vector2D {
-    "x": 135,
+    "x": 45,
     "y": 0,
   },
   Vector2D {
-    "x": 25,
+    "x": 45,
     "y": 165,
   },
   Vector2D {
     "x": -109.99999999999999,
-    "y": 300,
+    "y": 320,
   },
   Vector2D {
-    "x": -364.99999999999994,
-    "y": 500,
+    "x": -275,
+    "y": 320,
   },
   Vector2D {
-    "x": -365,
+    "x": -275,
     "y": 230,
   },
 ]
@@ -1208,27 +1208,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 2`] = `
 Array [
   Vector2D {
-    "x": -35,
+    "x": 55,
     "y": 100,
   },
   Vector2D {
-    "x": 235,
+    "x": 145,
     "y": 100,
   },
   Vector2D {
-    "x": 125,
+    "x": 145,
     "y": 265,
   },
   Vector2D {
     "x": -9.999999999999986,
-    "y": 400,
+    "y": 420,
   },
   Vector2D {
-    "x": -264.99999999999994,
-    "y": 600,
+    "x": -175,
+    "y": 420,
   },
   Vector2D {
-    "x": -265,
+    "x": -175,
     "y": 330,
   },
 ]
@@ -1237,28 +1237,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 3`] = `
 Array [
   Vector2D {
-    "x": 99.99999999999999,
-    "y": -35,
+    "x": 100,
+    "y": 55,
   },
   Vector2D {
-    "x": 100.00000000000001,
-    "y": 235,
+    "x": 100,
+    "y": 145,
   },
   Vector2D {
     "x": -65,
-    "y": 125.00000000000001,
+    "y": 145,
   },
   Vector2D {
-    "x": -200,
+    "x": -220,
     "y": -9.999999999999972,
   },
   Vector2D {
-    "x": -400,
-    "y": -264.9999999999999,
+    "x": -220,
+    "y": -175,
   },
   Vector2D {
     "x": -130.00000000000003,
-    "y": -265,
+    "y": -175,
   },
 ]
 `;
@@ -1266,27 +1266,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 1`] = `
 Array [
   Vector2D {
-    "x": -180,
+    "x": -45,
     "y": 0,
   },
   Vector2D {
-    "x": 180,
+    "x": 45,
     "y": 0,
   },
   Vector2D {
-    "x": 15,
+    "x": 45,
     "y": 220,
   },
   Vector2D {
     "x": -165,
-    "y": 400,
+    "y": 430,
   },
   Vector2D {
-    "x": -520,
-    "y": 700,
+    "x": -385,
+    "y": 430,
   },
   Vector2D {
-    "x": -520,
+    "x": -385,
     "y": 340,
   },
 ]
@@ -1295,27 +1295,27 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 2`] = `
 Array [
   Vector2D {
-    "x": -80,
+    "x": 55,
     "y": 100,
   },
   Vector2D {
-    "x": 280,
+    "x": 145,
     "y": 100,
   },
   Vector2D {
-    "x": 115,
+    "x": 145,
     "y": 320,
   },
   Vector2D {
     "x": -65,
-    "y": 500,
+    "y": 530,
   },
   Vector2D {
-    "x": -420,
-    "y": 800,
+    "x": -285,
+    "y": 530,
   },
   Vector2D {
-    "x": -420,
+    "x": -285,
     "y": 440,
   },
 ]
@@ -1324,28 +1324,28 @@ Array [
 exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 3`] = `
 Array [
   Vector2D {
-    "x": 99.99999999999999,
-    "y": -80,
+    "x": 100,
+    "y": 55,
   },
   Vector2D {
-    "x": 100.00000000000001,
-    "y": 280,
+    "x": 100,
+    "y": 145,
   },
   Vector2D {
     "x": -120,
-    "y": 115.00000000000001,
+    "y": 145,
   },
   Vector2D {
-    "x": -300,
+    "x": -330,
     "y": -64.99999999999997,
   },
   Vector2D {
-    "x": -600,
-    "y": -420,
+    "x": -330,
+    "y": -285,
   },
   Vector2D {
-    "x": -240.00000000000006,
-    "y": -420,
+    "x": -240,
+    "y": -285,
   },
 ]
 `;
