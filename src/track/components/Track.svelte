@@ -10,6 +10,8 @@
     export let angle = 0;
     export let x = 0;
     export let y = 0;
+    export let width = void 0;
+    export let height = void 0;
 
     if (!(model instanceof TrackModel)) {
         throw new TypeError('The model must be an instance of TrackModel!');
@@ -18,7 +20,7 @@
     $: track = $model.build(0, 0, angle);
 </script>
 
-<Sketch {x} {y} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
+<Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
     {#each track.tiles as { id, x, y, angle, model } (id)}
         <Tile {model} {angle} {x} {y} {id} />
     {/each}
