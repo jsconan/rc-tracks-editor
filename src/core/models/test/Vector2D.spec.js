@@ -591,9 +591,10 @@ describe('vector', () => {
         });
 
         it('the angle between 2 vectors', () => {
-            const v1 = new Vector2D(0, 4);
-            const v2 = new Vector2D(4, 4);
+            const v1 = new Vector2D(4, 4);
+            const v2 = new Vector2D(0, 4);
             expect(v1.angleWith(v2)).toBeCloseTo(45, 5);
+            expect(v2.angleWith(v1)).toBeCloseTo(-45, 5);
         });
     });
 
