@@ -141,26 +141,40 @@ export class CurvedTileEnlargedModel extends TileModel {
     }
 
     /**
-     * Computes the coordinates of the edge point with respect to the tile direction.
+     * Computes the coordinates of the edge points with respect to the tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
+     * @returns {Vector2D[]} - Returns a list of edge points.
      */
-    getEdgeCoord(x = 0, y = 0, angle = 0) {
+    getEdgesCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
+        const width = this.width;
+        const innerRadius = this.getInnerRadius();
+        const outerRadius = innerRadius + width;
+        const centerRadius = innerRadius + width / 2;
+        const roundRadius = width / 2;
+        const curveCenter = this.getCurveCenter(x, y).addScalar(this.getCurveSide());
 
-        const center = start.addScalarY(this.specs.length * (this.ratio - 0.5));
-        const radius = this.getOuterRadius();
-        let curveAngle;
-
+        let startAngle, endAngle, center;
         if (this.direction === TILE_DIRECTION_LEFT) {
-            curveAngle = Vector2D.RIGHT_ANGLE + this.getCurveAngle() / 2;
+            center = start.addScalarX(centerRadius);
+            startAngle = Vector2D.STRAIGHT_ANGLE;
+            endAngle = Vector2D.RIGHT_ANGLE;
         } else {
-            curveAngle = Vector2D.RIGHT_ANGLE - this.getCurveAngle() / 2;
+            center = start.subScalarX(centerRadius);
+            startAngle = 0;
+            endAngle = Vector2D.RIGHT_ANGLE;
         }
 
-        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
+        return [
+            Vector2D.polar(innerRadius, startAngle, center).rotateAround(angle, start),
+            Vector2D.polar(outerRadius, startAngle, center).rotateAround(angle, start),
+            Vector2D.polar(roundRadius, startAngle, curveCenter).rotateAround(angle, start),
+            Vector2D.polar(roundRadius, endAngle, curveCenter).rotateAround(angle, start),
+            Vector2D.polar(outerRadius, endAngle, center).rotateAround(angle, start),
+            Vector2D.polar(innerRadius, endAngle, center).rotateAround(angle, start)
+        ];
     }
 }
 

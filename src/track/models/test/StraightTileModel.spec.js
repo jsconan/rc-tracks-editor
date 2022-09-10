@@ -241,21 +241,21 @@ describe('StraightTileModel', () => {
             });
         });
 
-        describe('the position of the edge point for a tile', () => {
+        describe('the position of the edge points for a tile', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, ratio);
 
-                expect(tile.getEdgeCoord()).toMatchSnapshot();
-                expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, ratio);
 
-                expect(tile.getEdgeCoord()).toMatchSnapshot();
-                expect(tile.getEdgeCoord(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getEdgeCoord(tileX, tileY, 90)).toMatchSnapshot();
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
             });
         });
 

@@ -312,14 +312,14 @@ export class TrackModel {
         const stats = {};
         const tiles = this.tiles.map(model => {
             const coord = model.getBoundingRect(inputX, inputY, inputAngle);
-            const { x, y, angle } = coord.in;
+            const { x, y, angle } = coord.input;
             const { id } = model;
 
             updateStats(stats, model);
 
-            inputX = coord.out.x;
-            inputY = coord.out.y;
-            inputAngle = coord.out.angle;
+            inputX = coord.output.x;
+            inputY = coord.output.y;
+            inputAngle = coord.output.angle;
 
             topLeft.x = Math.min(topLeft.x, coord.x);
             topLeft.y = Math.min(topLeft.y, coord.y);

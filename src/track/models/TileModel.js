@@ -246,23 +246,24 @@ export class TileModel {
     }
 
     /**
-     * Computes the coordinates of the edge point with respect to the tile direction.
+     * Computes the coordinates of the edge points with respect to the tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
+     * @returns {Vector2D[]} - Returns a list of edge points.
      */
-    getEdgeCoord(x = 0, y = 0, angle = 0) {
+    getEdgesCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
-        let edge;
 
-        if (this.direction === TILE_DIRECTION_LEFT) {
-            edge = new Vector2D(-this.width / 2, this.width / 2);
-        } else {
-            edge = new Vector2D(this.width / 2, this.width / 2);
-        }
+        const length = this.length;
+        const width = this.width / 2;
 
-        return start.add(edge).rotateAround(angle, start);
+        return [
+            start.subScalarX(width).rotateAround(angle, start),
+            start.addScalarX(width).rotateAround(angle, start),
+            start.addCoord(width, length).rotateAround(angle, start),
+            start.addCoord(-width, length).rotateAround(angle, start)
+        ];
     }
 
     /**
@@ -274,24 +275,14 @@ export class TileModel {
      * @returns {tileRect} - The smallest rectangle which contains the entire tile.
      */
     getBoundingRect(x = 0, y = 0, angle = 0) {
-        const radius = this.specs.width / 2;
         const inputCoord = new Vector2D(x, y);
         const outputCoord = this.getOutputCoord(x, y, angle);
         const outputAngle = this.getOutputAngle(angle);
-        const centerCoord = this.getCenterCoord(x, y, angle);
-        const edgeCoord = this.getEdgeCoord(x, y, angle);
 
         const topLeft = new Vector2D(x, y);
         const bottomRight = new Vector2D(x, y);
-        const coords = [
-            Vector2D.polar(radius, angle, inputCoord),
-            Vector2D.polar(radius, angle + Vector2D.STRAIGHT_ANGLE, inputCoord),
-            Vector2D.polar(radius, outputAngle, outputCoord),
-            Vector2D.polar(radius, outputAngle + Vector2D.STRAIGHT_ANGLE, outputCoord),
-            edgeCoord
-        ];
 
-        coords.forEach(point => {
+        this.getEdgesCoord(x, y, angle).forEach(point => {
             topLeft.x = Math.min(topLeft.x, point.x);
             topLeft.y = Math.min(topLeft.y, point.y);
 
@@ -304,18 +295,16 @@ export class TileModel {
             y: topLeft.y,
             width: bottomRight.x - topLeft.x,
             height: bottomRight.y - topLeft.y,
-            in: {
+            input: {
                 x: inputCoord.x,
                 y: inputCoord.y,
                 angle: Vector2D.degrees(angle)
             },
-            out: {
+            output: {
                 x: outputCoord.x,
                 y: outputCoord.y,
                 angle: outputAngle
-            },
-            center: centerCoord.toObject(),
-            edge: edgeCoord.toObject()
+            }
         };
     }
 
@@ -382,8 +371,6 @@ Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
  * @property {number} y - The top coordinate of the rectangle.
  * @property {number} width - The width of the rectangle.
  * @property {number} height - The height of the rectangle.
- * @property {coordAngle} in - The input point of the tile.
- * @property {coordAngle} out - The output point of the tile.
- * @property {import('../../core/models/Vector2D').coord} center - The center point of the tile.
- * @property {import('../../core/models/Vector2D').coord} edge - The edge point of the tile.
+ * @property {coordAngle} input - The input point of the tile.
+ * @property {coordAngle} output - The output point of the tile.
  */

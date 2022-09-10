@@ -143,53 +143,37 @@ exports[`CurvedTileModel can compute the angle of the output point for a tile or
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 61.10912703473989,
-    "y": 138.89087296526012,
-  },
-  "edge": Object {
-    "x": 38.89087296526012,
-    "y": 138.89087296526014,
-  },
-  "height": 141.42135623730948,
-  "in": Object {
+  "height": 141.4213562373095,
+  "input": Object {
     "angle": 45,
     "x": 100,
     "y": 100,
   },
-  "out": Object {
+  "output": Object {
     "angle": 315,
     "x": 100,
     "y": 177.78174593052023,
   },
-  "width": 92.92893218813452,
-  "x": 38.89087296526012,
-  "y": 68.18019484660536,
+  "width": 63.639610306789294,
+  "x": 68.18019484660535,
+  "y": 68.18019484660537,
 }
 `;
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 0,
-    "y": 55,
-  },
-  "edge": Object {
-    "x": -15.71067811865474,
-    "y": 70.71067811865476,
-  },
   "height": 100,
-  "in": Object {
+  "input": Object {
     "angle": 0,
     "x": 0,
     "y": 0,
   },
-  "out": Object {
+  "output": Object {
     "angle": 270,
     "x": 55,
     "y": 55,
   },
-  "width": 100.00000000000001,
+  "width": 100,
   "x": -45,
   "y": 0,
 }
@@ -197,109 +181,77 @@ Object {
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 51.67261889578037,
-    "y": 148.32738110421965,
-  },
-  "edge": Object {
-    "x": 22.657917068410143,
-    "y": 136.3090980991115,
-  },
-  "height": 148.49242404917504,
-  "in": Object {
+  "height": 148.49242404917499,
+  "input": Object {
     "angle": 45,
     "x": 100,
     "y": 100,
   },
-  "out": Object {
+  "output": Object {
     "angle": 0,
     "x": 51.67261889578038,
     "y": 216.67261889578037,
   },
-  "width": 125.14718625761427,
-  "x": 6.672618895780381,
-  "y": 68.18019484660535,
+  "width": 125.14718625761425,
+  "x": 6.6726188957803885,
+  "y": 68.18019484660539,
 }
 `;
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 61.10912703473989,
-    "y": 138.89087296526012,
-  },
-  "edge": Object {
-    "x": 61.109127034739885,
-    "y": 161.10912703473988,
-  },
-  "height": 92.92893218813452,
-  "in": Object {
+  "height": 63.63961030678928,
+  "input": Object {
     "angle": 45,
     "x": 100,
     "y": 100,
   },
-  "out": Object {
+  "output": Object {
     "angle": 135,
     "x": 22.21825406947977,
     "y": 100,
   },
-  "width": 141.4213562373095,
-  "x": -9.601551083914867,
+  "width": 141.42135623730948,
+  "x": -9.601551083914842,
   "y": 68.18019484660536,
 }
 `;
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 0,
-    "y": 55,
-  },
-  "edge": Object {
-    "x": 15.710678118654755,
-    "y": 70.71067811865474,
-  },
   "height": 100,
-  "in": Object {
+  "input": Object {
     "angle": 0,
     "x": 0,
     "y": 0,
   },
-  "out": Object {
+  "output": Object {
     "angle": 90,
     "x": -55,
     "y": 55,
   },
   "width": 100,
-  "x": -55.00000000000001,
+  "x": -55,
   "y": 0,
 }
 `;
 
 exports[`CurvedTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
-  "center": Object {
-    "x": 51.67261889578037,
-    "y": 148.32738110421965,
-  },
-  "edge": Object {
-    "x": 63.69090190088851,
-    "y": 177.34208293158989,
-  },
-  "height": 125.14718625761434,
-  "in": Object {
+  "height": 125.14718625761431,
+  "input": Object {
     "angle": 45,
     "x": 100,
     "y": 100,
   },
-  "out": Object {
+  "output": Object {
     "angle": 90,
     "x": -16.672618895780303,
     "y": 148.32738110421968,
   },
-  "width": 148.49242404917496,
-  "x": -16.67261889578031,
-  "y": 68.18019484660535,
+  "width": 148.49242404917499,
+  "x": -16.672618895780346,
+  "y": 68.18019484660537,
 }
 `;
 
@@ -528,214 +480,634 @@ Vector2D {
 }
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 1`] = `
-Vector2D {
-  "x": -37.38795325112868,
-  "y": 38.26834323650899,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 1`] = `
+Array [
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": -15.71067811865474,
+    "y": 70.71067811865476,
+  },
+  Vector2D {
+    "x": 47.928932188134524,
+    "y": 7.0710678118654755,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 2`] = `
-Vector2D {
-  "x": 62.61204674887132,
-  "y": 138.268343236509,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 2`] = `
+Array [
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 84.28932188134526,
+    "y": 170.71067811865476,
+  },
+  Vector2D {
+    "x": 147.92893218813452,
+    "y": 107.07106781186548,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 0.5 3`] = `
-Vector2D {
-  "x": 61.731656763491,
-  "y": 62.61204674887132,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 29.289321881345245,
+    "y": 84.28932188134526,
+  },
+  Vector2D {
+    "x": 92.92893218813452,
+    "y": 147.92893218813452,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 1`] = `
-Vector2D {
-  "x": -15.71067811865474,
-  "y": 70.71067811865476,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 1`] = `
+Array [
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 2`] = `
-Vector2D {
-  "x": 84.28932188134526,
-  "y": 170.71067811865476,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 2`] = `
+Array [
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 1 3`] = `
-Vector2D {
-  "x": 29.289321881345245,
-  "y": 84.28932188134526,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 1`] = `
-Vector2D {
-  "x": -29.014701827370203,
-  "y": 80.36352079666888,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 1`] = `
+Array [
+  Vector2D {
+    "x": 45,
+    "y": 1.469576158976824e-14,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 2.5717582782094416e-14,
+  },
+  Vector2D {
+    "x": 16.507575950825043,
+    "y": 148.49242404917499,
+  },
+  Vector2D {
+    "x": 80.14718625761431,
+    "y": 84.8528137423857,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 2`] = `
-Vector2D {
-  "x": 70.9852981726298,
-  "y": 180.36352079666887,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 2`] = `
+Array [
+  Vector2D {
+    "x": 145,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000003,
+  },
+  Vector2D {
+    "x": 116.50757595082504,
+    "y": 248.49242404917499,
+  },
+  Vector2D {
+    "x": 180.1471862576143,
+    "y": 184.8528137423857,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 2 3`] = `
-Vector2D {
-  "x": 19.636479203331135,
-  "y": 70.9852981726298,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 3`] = `
+Array [
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 99.99999999999997,
+    "y": 55,
+  },
+  Vector2D {
+    "x": -48.492424049174986,
+    "y": 116.50757595082506,
+  },
+  Vector2D {
+    "x": 15.147186257614294,
+    "y": 180.1471862576143,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 1`] = `
-Vector2D {
-  "x": -34.096264412501796,
-  "y": 82.82209443280672,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 1`] = `
+Array [
+  Vector2D {
+    "x": 45,
+    "y": 2.8166876380389125e-14,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 3.9188697572715304e-14,
+  },
+  Vector2D {
+    "x": -2.1281292110203935,
+    "y": 159.99999999999997,
+  },
+  Vector2D {
+    "x": 75.81415712957909,
+    "y": 114.99999999999999,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 2`] = `
-Vector2D {
-  "x": 65.9037355874982,
-  "y": 182.82209443280672,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 2`] = `
+Array [
+  Vector2D {
+    "x": 145,
+    "y": 100.00000000000003,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000004,
+  },
+  Vector2D {
+    "x": 97.8718707889796,
+    "y": 260,
+  },
+  Vector2D {
+    "x": 175.8141571295791,
+    "y": 215,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 3 3`] = `
-Vector2D {
-  "x": 17.177905567193278,
-  "y": 65.9037355874982,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 3`] = `
+Array [
+  Vector2D {
+    "x": 99.99999999999997,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 99.99999999999996,
+    "y": 55,
+  },
+  Vector2D {
+    "x": -60,
+    "y": 97.87187078897962,
+  },
+  Vector2D {
+    "x": -15,
+    "y": 175.8141571295791,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 1`] = `
-Vector2D {
-  "x": -36.737670573389096,
-  "y": 83.88883846693511,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 1`] = `
+Array [
+  Vector2D {
+    "x": 45,
+    "y": 4.163799117101001e-14,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 5.265981236333619e-14,
+  },
+  Vector2D {
+    "x": -12.26819897985331,
+    "y": 164.55387591698866,
+  },
+  Vector2D {
+    "x": 70.88095894616254,
+    "y": 130.11236700413056,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 2`] = `
-Vector2D {
-  "x": 63.262329426610904,
-  "y": 183.8888384669351,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 2`] = `
+Array [
+  Vector2D {
+    "x": 145,
+    "y": 100.00000000000004,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000006,
+  },
+  Vector2D {
+    "x": 87.73180102014669,
+    "y": 264.55387591698866,
+  },
+  Vector2D {
+    "x": 170.88095894616254,
+    "y": 230.11236700413056,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the left with a ratio of 4 3`] = `
-Vector2D {
-  "x": 16.111161533064887,
-  "y": 63.26232942661091,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 3`] = `
+Array [
+  Vector2D {
+    "x": 99.99999999999996,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 99.99999999999994,
+    "y": 55,
+  },
+  Vector2D {
+    "x": -64.55387591698866,
+    "y": 87.7318010201467,
+  },
+  Vector2D {
+    "x": -30.11236700413056,
+    "y": 170.88095894616254,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 1`] = `
-Vector2D {
-  "x": 37.38795325112868,
-  "y": 38.268343236508976,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 1`] = `
+Array [
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 15.710678118654755,
+    "y": 70.71067811865474,
+  },
+  Vector2D {
+    "x": -47.928932188134524,
+    "y": 7.071067811865475,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 2`] = `
-Vector2D {
-  "x": 137.3879532511287,
-  "y": 138.26834323650897,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 2`] = `
+Array [
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 115.71067811865476,
+    "y": 170.71067811865476,
+  },
+  Vector2D {
+    "x": 52.071067811865476,
+    "y": 107.07106781186548,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 0.5 3`] = `
-Vector2D {
-  "x": 61.73165676349103,
-  "y": 137.3879532511287,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 29.289321881345245,
+    "y": 115.71067811865476,
+  },
+  Vector2D {
+    "x": 92.92893218813452,
+    "y": 52.071067811865476,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 1`] = `
-Vector2D {
-  "x": 15.710678118654755,
-  "y": 70.71067811865474,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 1`] = `
+Array [
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 2`] = `
-Vector2D {
-  "x": 115.71067811865476,
-  "y": 170.71067811865476,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 2`] = `
+Array [
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 1 3`] = `
-Vector2D {
-  "x": 29.289321881345245,
-  "y": 115.71067811865476,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 1`] = `
-Vector2D {
-  "x": 29.014701827370203,
-  "y": 80.36352079666885,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 1`] = `
+Array [
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -16.507575950825014,
+    "y": 148.49242404917496,
+  },
+  Vector2D {
+    "x": -80.1471862576143,
+    "y": 84.85281374238569,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 2`] = `
-Vector2D {
-  "x": 129.0147018273702,
-  "y": 180.36352079666887,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 2`] = `
+Array [
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 83.49242404917499,
+    "y": 248.49242404917496,
+  },
+  Vector2D {
+    "x": 19.852813742385706,
+    "y": 184.8528137423857,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 2 3`] = `
-Vector2D {
-  "x": 19.636479203331135,
-  "y": 129.0147018273702,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": -48.49242404917496,
+    "y": 83.492424049175,
+  },
+  Vector2D {
+    "x": 15.147186257614294,
+    "y": 19.852813742385706,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 1`] = `
-Vector2D {
-  "x": 34.09626441250185,
-  "y": 82.82209443280664,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 1`] = `
+Array [
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 2.1281292110203935,
+    "y": 159.99999999999997,
+  },
+  Vector2D {
+    "x": -75.81415712957909,
+    "y": 114.99999999999999,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 2`] = `
-Vector2D {
-  "x": 134.09626441250185,
-  "y": 182.82209443280664,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 2`] = `
+Array [
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 102.1281292110204,
+    "y": 260,
+  },
+  Vector2D {
+    "x": 24.185842870420913,
+    "y": 215,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 3 3`] = `
-Vector2D {
-  "x": 17.177905567193363,
-  "y": 134.09626441250185,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": -60,
+    "y": 102.12812921102041,
+  },
+  Vector2D {
+    "x": -15,
+    "y": 24.185842870420913,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 1`] = `
-Vector2D {
-  "x": 36.737670573389096,
-  "y": 83.88883846693514,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 1`] = `
+Array [
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 12.26819897985331,
+    "y": 164.5538759169886,
+  },
+  Vector2D {
+    "x": -70.88095894616254,
+    "y": 130.11236700413053,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 2`] = `
-Vector2D {
-  "x": 136.7376705733891,
-  "y": 183.88883846693514,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 2`] = `
+Array [
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 112.26819897985331,
+    "y": 264.5538759169886,
+  },
+  Vector2D {
+    "x": 29.119041053837464,
+    "y": 230.11236700413053,
+  },
+]
 `;
 
-exports[`CurvedTileModel can compute the position of the edge point for a tile oriented to the right with a ratio of 4 3`] = `
-Vector2D {
-  "x": 16.11116153306486,
-  "y": 136.7376705733891,
-}
+exports[`CurvedTileModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 3`] = `
+Array [
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": -64.5538759169886,
+    "y": 112.26819897985332,
+  },
+  Vector2D {
+    "x": -30.112367004130533,
+    "y": 29.119041053837478,
+  },
+]
 `;
 
 exports[`CurvedTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 1`] = `
