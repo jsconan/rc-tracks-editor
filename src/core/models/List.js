@@ -47,7 +47,7 @@ export class List {
          * Adds a subscriber that will be notified each time the list is modified.
          * @function subscribe
          * @param {function} subscriber - A callback that will receive notifications when the list is changed.
-         * @returns {function} - Return a callback for removing the subscription.
+         * @returns {function} - Returns a callback for removing the subscription.
          */
         this.subscribe = subscribe;
     }
@@ -64,7 +64,6 @@ export class List {
      * Iterates over the values from the list.
      * @yields {*} - The next value in the list.
      * @generator
-     * @function list.@@iterator
      */
     *[Symbol.iterator]() {
         yield* this.list.values();
