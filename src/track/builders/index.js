@@ -16,4 +16,5 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { default as buildList } from './buildList.js';
 export { default as buildTrack } from './buildTrack.js';

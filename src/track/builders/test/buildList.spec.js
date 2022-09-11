@@ -16,9 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import buildTrack from '../buildTrack.js';
-
-import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
+import buildList from '../buildList.js';
+import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
 import { TileSpecifications, TilesList } from '../../models';
 
 const laneWidth = 80;
@@ -28,32 +27,34 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 const list = new TilesList(specs);
 list.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 2 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 3 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 4 }
 ]);
 
-describe('buildTrack', () => {
+describe('buildList', () => {
     it('is a function', () => {
-        expect(buildTrack).toEqual(expect.any(Function));
+        expect(buildList).toEqual(expect.any(Function));
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
         // @ts-expect-error
-        expect(() => buildTrack([])).toThrow('A valid list of tiles is needed!');
+        expect(() => buildList([])).toThrow('A valid list of tiles is needed!');
     });
 
-    describe('process a list of tiles for rendering a track', () => {
+    describe('process a list of tiles for rendering', () => {
         it('using default position', () => {
-            expect(buildTrack(list)).toMatchSnapshot();
+            expect(buildList(list)).toMatchSnapshot();
         });
 
-        it('using a start position and angle', () => {
-            expect(buildTrack(list, 100, 100, 45)).toMatchSnapshot();
+        it('using start position and angle, distributed vertically', () => {
+            expect(buildList(list, 100, 100, 45, true)).toMatchSnapshot();
+        });
+
+        it('using start position and angle, distributed horizontally', () => {
+            expect(buildList(list, 100, 100, 45, false)).toMatchSnapshot();
         });
     });
 });
