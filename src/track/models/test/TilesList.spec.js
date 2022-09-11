@@ -19,43 +19,43 @@
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 import { StraightTileModel } from '../StraightTileModel.js';
 import { TileSpecifications } from '../TileSpecifications.js';
-import { TrackModel } from '../TrackModel.js';
+import { TilesList } from '../TilesList.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-describe('TrackModel', () => {
+describe('TilesList', () => {
     it('is a class', () => {
-        expect(TrackModel).toEqual(expect.any(Function));
+        expect(TilesList).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new TrackModel({})).toThrow('A valid specifications object is needed!');
+            expect(() => new TilesList({})).toThrow('A valid specifications object is needed!');
         });
 
         it('when trying to set an invalid specifications object', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
             // @ts-expect-error
             expect(() => track.setSpecs({})).toThrow('A valid specifications object is needed!');
         });
 
         it('when trying to add a tile with an invalid type', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
             expect(() => track.appendTile('')).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
             expect(() => track.appendTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
         });
     });
 
     it('can set the specifications of the tile', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
         track.appendTile();
 
@@ -67,7 +67,7 @@ describe('TrackModel', () => {
     });
 
     it('can get the index of a tile in the track', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
 
         track.appendTile();
         const id = track.appendTile();
@@ -79,7 +79,7 @@ describe('TrackModel', () => {
 
     describe('can get a tile from the track', () => {
         it('by its identifier', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
 
             track.appendTile();
             const id = track.appendTile();
@@ -91,7 +91,7 @@ describe('TrackModel', () => {
         });
 
         it('by its index', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
 
             track.appendTile();
             track.appendTile();
@@ -105,16 +105,16 @@ describe('TrackModel', () => {
 
     describe('can build a track', () => {
         it('with the given size', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
 
-            expect(track).toBeInstanceOf(TrackModel);
+            expect(track).toBeInstanceOf(TilesList);
             expect(track).toMatchSnapshot();
         });
 
         describe('adding tiles', () => {
             describe('at the last position', () => {
                 it('with the default specifications', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile();
 
@@ -123,7 +123,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
@@ -134,7 +134,7 @@ describe('TrackModel', () => {
 
             describe('at the first position', () => {
                 it('with the default specifications', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.prependTile();
@@ -144,7 +144,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -157,7 +157,7 @@ describe('TrackModel', () => {
 
         describe('removing tiles', () => {
             it('from the start', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 const id = track.appendTile();
                 track.appendTile();
@@ -168,7 +168,7 @@ describe('TrackModel', () => {
             });
 
             it('from the middle', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
                 const id = track.appendTile();
@@ -179,7 +179,7 @@ describe('TrackModel', () => {
             });
 
             it('from the end', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
                 track.appendTile();
@@ -190,7 +190,7 @@ describe('TrackModel', () => {
             });
 
             it('at inexistent position', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
 
@@ -201,7 +201,7 @@ describe('TrackModel', () => {
 
         describe('replacing tiles', () => {
             it('with a tile having default specifications', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
                 const id = track.appendTile();
@@ -214,7 +214,7 @@ describe('TrackModel', () => {
             });
 
             it('with a tile having a particular type', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
                 track.appendTile();
@@ -227,7 +227,7 @@ describe('TrackModel', () => {
             });
 
             it('at inexistent position', () => {
-                const track = new TrackModel(specs);
+                const track = new TilesList(specs);
 
                 track.appendTile();
                 expect(track.replaceTile('id')).toBeNull();
@@ -238,7 +238,7 @@ describe('TrackModel', () => {
         describe('inserting tiles', () => {
             describe('before', () => {
                 it('an inexistent position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
 
@@ -247,7 +247,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the first position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile();
                     track.appendTile();
@@ -259,7 +259,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the last position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -271,7 +271,7 @@ describe('TrackModel', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -284,7 +284,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile();
                     const newId = track.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -297,7 +297,7 @@ describe('TrackModel', () => {
 
             describe('after', () => {
                 it('an inexistent position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
 
@@ -306,7 +306,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the first position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile();
                     track.appendTile();
@@ -318,7 +318,7 @@ describe('TrackModel', () => {
                 });
 
                 it('the last position', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -330,7 +330,7 @@ describe('TrackModel', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     track.appendTile();
                     const id = track.appendTile();
@@ -343,7 +343,7 @@ describe('TrackModel', () => {
                 });
 
                 it('with a particular type', () => {
-                    const track = new TrackModel(specs);
+                    const track = new TilesList(specs);
 
                     const id = track.appendTile();
                     const newId = track.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -354,42 +354,10 @@ describe('TrackModel', () => {
                 });
             });
         });
-
-        describe('for rendering', () => {
-            it('using default position', () => {
-                const track = new TrackModel(specs);
-
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-
-                expect(track.build()).toMatchSnapshot();
-            });
-
-            it('using a start position and angle', () => {
-                const track = new TrackModel(specs);
-
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-                track.appendTile();
-                track.appendTile(CURVED_TILE_TYPE);
-
-                expect(track.build(100, 100, 45)).toMatchSnapshot();
-            });
-        });
     });
 
     it('can rebuilds the stats', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
 
         expect([...track.stats]).toEqual([]);
         expect(track.rebuildStats()).toBe(track);
@@ -406,14 +374,14 @@ describe('TrackModel', () => {
     });
 
     it('can export to an object', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
         track.appendTile(CURVED_TILE_TYPE);
 
         expect(track.export()).toMatchSnapshot();
     });
 
     it('can import from an object', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
         const data = [
             {
                 type: CURVED_TILE_TYPE,
@@ -439,7 +407,7 @@ describe('TrackModel', () => {
     });
 
     it('can clear the list', () => {
-        const track = new TrackModel(specs);
+        const track = new TilesList(specs);
         track.appendTile(CURVED_TILE_TYPE);
 
         expect(track.clear()).toBe(track);
@@ -448,7 +416,7 @@ describe('TrackModel', () => {
 
     describe('can notify changes', () => {
         it('for changes applying to the tiles', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
                 expect(value).toBe(track);
@@ -477,7 +445,7 @@ describe('TrackModel', () => {
         });
 
         it('for changes applying to the stats', () => {
-            const track = new TrackModel(specs);
+            const track = new TilesList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
                 expect(value).toBe(track.stats);

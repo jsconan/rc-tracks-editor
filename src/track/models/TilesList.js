@@ -29,7 +29,7 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from './TileSpecifications.js';
-import { Counter, List, Vector2D } from '../../core/models';
+import { Counter, List } from '../../core/models';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -63,11 +63,11 @@ function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTIO
 }
 
 /**
- * Represents a track.
+ * Represents a list of tiles.
  */
-export class TrackModel {
+export class TilesList {
     /**
-     * Represents a track with the given size constraints.
+     * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
@@ -90,7 +90,7 @@ export class TrackModel {
     /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
@@ -109,7 +109,7 @@ export class TrackModel {
     }
 
     /**
-     * Gets the position of a tile inside the track.
+     * Gets the position of a tile inside the list.
      * @param {string} id - The unique identifier of the tile.
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
@@ -136,7 +136,7 @@ export class TrackModel {
     }
 
     /**
-     * Add a tile to the track, at the last position.
+     * Add a tile to the list, at the last position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -154,7 +154,7 @@ export class TrackModel {
     }
 
     /**
-     * Add a tile to the track, at the first position.
+     * Add a tile to the list, at the first position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -172,7 +172,7 @@ export class TrackModel {
     }
 
     /**
-     * Removes a tile from the track.
+     * Removes a tile from the list.
      * @param {string} id - The unique identifier of the tile to remove.
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
      */
@@ -189,7 +189,7 @@ export class TrackModel {
     }
 
     /**
-     * Replace a tile in the track.
+     * Replace a tile in the list.
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
      * @param {string} type - The type of tile to add.
@@ -217,7 +217,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track before a particular position.
+     * Insert a tile in the list before a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
      * @param {string} type - The type of tile to add.
@@ -243,7 +243,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track after a particular position.
+     * Insert a tile in the list after a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile after which add another tile.
      * @param {string} type - The type of tile to add.
@@ -270,7 +270,7 @@ export class TrackModel {
 
     /**
      * Rebuilds the stats regarding the number of identified types.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      */
     rebuildStats() {
         const dataIterator = this.tiles.values();
@@ -282,7 +282,7 @@ export class TrackModel {
                     return next;
                 }
 
-                const { modelId } = next.value || {};
+                const { modelId } = next.value;
                 return { done: false, value: modelId };
             },
 
@@ -297,59 +297,18 @@ export class TrackModel {
     }
 
     /**
-     * Builds the track for rendering, computing the coordinates of each tile.
-     * @param {number} startX - The X-coordinate of the first tile.
-     * @param {number} startY - The Y-coordinate of the first tile.
-     * @param {number} startAngle - The rotation angle of the first tile.
-     * @returns {trackCoord}
-     */
-    build(startX = 0, startY = 0, startAngle = 0) {
-        const topLeft = new Vector2D();
-        const bottomRight = new Vector2D();
-        let inputX = startX;
-        let inputY = startY;
-        let inputAngle = startAngle;
-
-        const stats = new Counter();
-        const tiles = this.tiles.map(model => {
-            const coord = model.getBoundingRect(inputX, inputY, inputAngle);
-            const { x, y, angle } = coord.input;
-            const { id } = model;
-
-            stats.increment(model.modelId);
-
-            inputX = coord.output.x;
-            inputY = coord.output.y;
-            inputAngle = coord.output.angle;
-
-            topLeft.x = Math.min(topLeft.x, coord.x);
-            topLeft.y = Math.min(topLeft.y, coord.y);
-
-            bottomRight.x = Math.max(bottomRight.x, coord.x + coord.width);
-            bottomRight.y = Math.max(bottomRight.y, coord.y + coord.height);
-
-            return { id, x, y, angle, model };
-        });
-
-        const { x, y } = topLeft;
-        const { x: width, y: height } = bottomRight.sub(topLeft);
-
-        return { x, y, width, height, tiles, stats };
-    }
-
-    /**
-     * Exports the model to an object.
-     * @returns {tileExport[]} - An object representation of the model.
+     * Exports the list to an object.
+     * @returns {tileExport[]} - An object representation of the list.
      */
     export() {
         return this.tiles.map(tile => tile.export());
     }
 
     /**
-     * Imports the model from an object.
-     * The track is emptied before importing, any existing tile will be deleted.
-     * @param {tileExport[]} data - An iterable object containing a representation of the model.
-     * @returns {TrackModel} - Chains the instance.
+     * Imports the list from a source.
+     * The list is emptied before importing, any existing tile will be deleted.
+     * @param {tileExport[]} data - An iterable object containing a representation of the list.
+     * @returns {TilesList} - Chains the instance.
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
@@ -383,8 +342,8 @@ export class TrackModel {
     }
 
     /**
-     * Removes all tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * Removes all tiles from the list.
+     * @returns {TilesList} - Chains the instance.
      */
     clear() {
         this.stats.clear();
@@ -393,25 +352,6 @@ export class TrackModel {
         return this;
     }
 }
-
-/**
- * @typedef {object} trackCoord - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tileCoord[]} tiles - The list of tiles.
- * @property {object} stats - An object listing the stats for the track.
- */
-
-/**
- * @typedef {object} tileCoord - Represents a positioned tile.
- * @property {string} id - The unique identifier of the tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {TileModel} model - A reference to the tile model.
- */
 
 /**
  * @typedef {import('./TileModel').tileExport} tileExport

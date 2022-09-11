@@ -5,7 +5,7 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { Track } from './track/components';
-    import { TileSpecifications, TrackModel } from './track/models';
+    import { TileSpecifications, TilesList } from './track/models';
     import {
         CURVED_TILE_ENLARGED_TYPE,
         CURVED_TILE_TYPE,
@@ -21,7 +21,7 @@
 
     const angle = -90;
     const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-    const model = new TrackModel(specs);
+    const model = new TilesList(specs);
 
     model.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);
     model.appendTile(STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT);

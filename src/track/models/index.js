@@ -21,4 +21,4 @@ export { CurvedTileModel } from './CurvedTileModel.js';
 export { StraightTileModel } from './StraightTileModel.js';
 export { TileModel } from './TileModel.js';
 export { TileSpecifications } from './TileSpecifications.js';
-export { TrackModel } from './TrackModel.js';
+export { TilesList } from './TilesList.js';

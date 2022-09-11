@@ -2,8 +2,9 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { buildTrack } from '../builders';
     import { Sketch } from '../elements';
-    import { TrackModel } from '../models';
+    import { TilesList } from '../models';
     import Tile from './Tile.svelte';
 
     export let model;
@@ -13,11 +14,11 @@
     export let width = void 0;
     export let height = void 0;
 
-    if (!(model instanceof TrackModel)) {
-        throw new TypeError('The model must be an instance of TrackModel!');
+    if (!(model instanceof TilesList)) {
+        throw new TypeError('The model must be an instance of TilesList!');
     }
 
-    $: track = $model.build(0, 0, angle);
+    $: track = buildTrack($model, 0, 0, angle);
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
