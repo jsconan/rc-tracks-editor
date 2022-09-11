@@ -391,9 +391,9 @@ describe('TrackModel', () => {
     it('can rebuilds the stats', () => {
         const track = new TrackModel(specs);
 
-        expect(track.stats).toEqual({});
+        expect([...track.stats]).toEqual([]);
         expect(track.rebuildStats()).toBe(track);
-        expect(track.stats).toEqual({});
+        expect([...track.stats]).toEqual([]);
 
         track.appendTile(CURVED_TILE_TYPE);
 
@@ -446,32 +446,63 @@ describe('TrackModel', () => {
         expect(track).toMatchSnapshot();
     });
 
-    it('can notify changes', () => {
-        const track = new TrackModel(specs);
+    describe('can notify changes', () => {
+        it('for changes applying to the tiles', () => {
+            const track = new TrackModel(specs);
 
-        const callback = jest.fn().mockImplementation(value => {
-            expect(value).toBe(track);
-            expect(value).toMatchSnapshot();
+            const callback = jest.fn().mockImplementation(value => {
+                expect(value).toBe(track);
+                expect(value).toMatchSnapshot();
+            });
+
+            const unsubscribe = track.subscribe(callback); // callback called
+
+            track.setSpecs(specs);
+            const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
+            const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
+            track.removeTile(id1); // callback called
+            const id3 = track.replaceTile(id2); // callback called
+            track.insertTileBefore(id3); // callback called
+            track.insertTileAfter(id3); // callback called
+            const data = track.export();
+            track.clear(); // callback called
+            track.import(data); // callback called
+            track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+            track.rebuildStats();
+
+            unsubscribe();
+            track.appendTile();
+
+            expect(callback).toHaveBeenCalledTimes(10);
         });
 
-        const unsubscribe = track.subscribe(callback); // callback called
+        it('for changes applying to the stats', () => {
+            const track = new TrackModel(specs);
 
-        track.setSpecs(specs);
-        const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
-        const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
-        track.removeTile(id1); // callback called
-        const id3 = track.replaceTile(id2); // callback called
-        track.insertTileBefore(id3); // callback called
-        track.insertTileAfter(id3); // callback called
-        const data = track.export();
-        track.clear(); // callback called
-        track.import(data); // callback called
-        track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
-        track.rebuildStats(); // callback called
+            const callback = jest.fn().mockImplementation(value => {
+                expect(value).toBe(track.stats);
+                expect(value).toMatchSnapshot();
+            });
 
-        unsubscribe();
-        track.appendTile();
+            const unsubscribe = track.stats.subscribe(callback); // callback called
 
-        expect(callback).toHaveBeenCalledTimes(11);
+            track.setSpecs(specs);
+            const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
+            const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
+            track.removeTile(id1); // callback called
+            const id3 = track.replaceTile(id2); // callback called twice
+            track.insertTileBefore(id3); // callback called
+            track.insertTileAfter(id3); // callback called
+            const data = track.export();
+            track.clear(); // callback called
+            track.import(data); // callback called
+            track.setSpecs(new TileSpecifications(10, 1, 2));
+            track.rebuildStats(); // callback called
+
+            unsubscribe();
+            track.appendTile();
+
+            expect(callback).toHaveBeenCalledTimes(11);
+        });
     });
 });

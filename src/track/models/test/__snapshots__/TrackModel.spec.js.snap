@@ -7,9 +7,13 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-2": 1,
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-2" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -48,8 +52,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -88,8 +96,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-2": 1,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-2" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -118,8 +130,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -144,9 +160,13 @@ TrackModel {
 exports[`TrackModel can build a track for rendering using a start position and angle 1`] = `
 Object {
   "height": 355.56349186104046,
-  "stats": Object {
-    "curved-tile-1": 4,
-    "straight-tile-1": 4,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 4,
+      "curved-tile-1" => 4,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "tiles": Array [
     Object {
@@ -287,9 +307,13 @@ Object {
 exports[`TrackModel can build a track for rendering using default position 1`] = `
 Object {
   "height": 310,
-  "stats": Object {
-    "curved-tile-1": 4,
-    "straight-tile-1": 4,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 4,
+      "curved-tile-1" => 4,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "tiles": Array [
     Object {
@@ -434,8 +458,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 4,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 4,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -494,8 +522,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -524,8 +556,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -574,8 +610,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -624,9 +664,13 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-2": 1,
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-2" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -665,8 +709,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 4,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 4,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -725,8 +773,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -755,8 +807,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -805,8 +861,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -855,9 +915,13 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-2": 1,
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-2" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -896,8 +960,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -926,8 +994,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -966,8 +1038,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1006,8 +1082,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1046,8 +1126,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1076,9 +1160,13 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-2": 1,
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 2,
+      "curved-tile-2" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1127,8 +1215,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1177,7 +1269,11 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {},
+  "stats": Counter {
+    "counters": Map {},
+    "notify": [Function],
+    "subscribe": [Function],
+  },
   "subscribe": [Function],
   "tiles": List {
     "list": Array [],
@@ -1194,7 +1290,11 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {},
+  "stats": Counter {
+    "counters": Map {},
+    "notify": [Function],
+    "subscribe": [Function],
+  },
   "subscribe": [Function],
   "tiles": List {
     "list": Array [],
@@ -1221,8 +1321,12 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1251,9 +1355,13 @@ TrackModel {
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 2,
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1295,14 +1403,127 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 1`] = `
+exports[`TrackModel can notify changes for changes applying to the stats 1`] = `
+Counter {
+  "counters": Map {},
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 2`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 1,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 3`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 2,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 4`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 1,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 5`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 0,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 6`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 0,
+    "straight-tile-1" => 1,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 7`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 0,
+    "straight-tile-1" => 2,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 8`] = `
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 0,
+    "straight-tile-1" => 3,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 9`] = `
+Counter {
+  "counters": Map {},
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 10`] = `
+Counter {
+  "counters": Map {
+    "straight-tile-1" => 3,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the stats 11`] = `
+Counter {
+  "counters": Map {
+    "straight-tile-1" => 3,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
+}
+`;
+
+exports[`TrackModel can notify changes for changes applying to the tiles 1`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {},
+  "stats": Counter {
+    "counters": Map {},
+    "notify": [Function],
+    "subscribe": [Function],
+  },
   "subscribe": [Function],
   "tiles": List {
     "list": Array [],
@@ -1312,15 +1533,19 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 2`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 2`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1342,15 +1567,19 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 3`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 3`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1382,15 +1611,19 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 4`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 4`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1412,16 +1645,20 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 5`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 5`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 0,
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 0,
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1443,16 +1680,20 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 6`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 6`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 0,
-    "straight-tile-1": 2,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 0,
+      "straight-tile-1" => 2,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1484,16 +1725,20 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 7`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 7`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "curved-tile-1": 0,
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {
+      "curved-tile-1" => 0,
+      "straight-tile-1" => 3,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1535,14 +1780,18 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 8`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 8`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {},
+  "stats": Counter {
+    "counters": Map {},
+    "notify": [Function],
+    "subscribe": [Function],
+  },
   "subscribe": [Function],
   "tiles": List {
     "list": Array [],
@@ -1552,15 +1801,17 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 9`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 9`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
+  "stats": Counter {
+    "counters": Map {},
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1602,65 +1853,19 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can notify changes 10`] = `
+exports[`TrackModel can notify changes for changes applying to the tiles 10`] = `
 TrackModel {
   "specs": TileSpecifications {
     "barrierChunks": 2,
     "barrierWidth": 1,
     "laneWidth": 10,
   },
-  "stats": Object {
-    "straight-tile-1": 3,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-89",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-90",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-91",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-        },
-      },
-    ],
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 3,
+    },
     "notify": [Function],
     "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TrackModel can notify changes 11`] = `
-TrackModel {
-  "specs": TileSpecifications {
-    "barrierChunks": 2,
-    "barrierWidth": 1,
-    "laneWidth": 10,
-  },
-  "stats": Object {
-    "straight-tile-1": 3,
   },
   "subscribe": [Function],
   "tiles": List {
@@ -1703,14 +1908,23 @@ TrackModel {
 `;
 
 exports[`TrackModel can rebuilds the stats 1`] = `
-Object {
-  "curved-tile-1": 1,
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 1,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
 }
 `;
 
 exports[`TrackModel can rebuilds the stats 2`] = `
-Object {
-  "curved-tile-3": 1,
+Counter {
+  "counters": Map {
+    "curved-tile-1" => 0,
+    "curved-tile-3" => 1,
+  },
+  "notify": [Function],
+  "subscribe": [Function],
 }
 `;
 
@@ -1721,8 +1935,12 @@ TrackModel {
     "barrierWidth": 1,
     "laneWidth": 10,
   },
-  "stats": Object {
-    "straight-tile-1": 1,
+  "stats": Counter {
+    "counters": Map {
+      "straight-tile-1" => 1,
+    },
+    "notify": [Function],
+    "subscribe": [Function],
   },
   "subscribe": [Function],
   "tiles": List {

@@ -29,7 +29,7 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from './TileSpecifications.js';
-import { List, Vector2D } from '../../core/models';
+import { Counter, List, Vector2D } from '../../core/models';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -63,18 +63,6 @@ function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTIO
 }
 
 /**
- * Update the number of identified types.
- * @param {object} stats - The receiver for the stats.
- * @param {TileModel} tile - The tile to count.
- * @param {number} diff - The amount to add for the identified type.
- * @private
- */
-function updateStats(stats, tile, diff = 1) {
-    const key = tile.modelId;
-    stats[key] = Math.max(0, (stats[key] || 0) + diff);
-}
-
-/**
  * Represents a track.
  */
 export class TrackModel {
@@ -85,7 +73,7 @@ export class TrackModel {
      */
     constructor(specs) {
         this.tiles = new List();
-        this.stats = {};
+        this.stats = new Counter();
         this.setSpecs(specs);
 
         const { subscribe } = derived(this.tiles, () => this);
@@ -159,7 +147,7 @@ export class TrackModel {
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = createModel(this.specs, type, direction, ratio);
 
-        updateStats(this.stats, tile);
+        this.stats.increment(tile.modelId);
         this.tiles.add(tile);
 
         return tile.id;
@@ -177,7 +165,7 @@ export class TrackModel {
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = createModel(this.specs, type, direction, ratio);
 
-        updateStats(this.stats, tile);
+        this.stats.increment(tile.modelId);
         this.tiles.insert(0, tile);
 
         return tile.id;
@@ -195,7 +183,7 @@ export class TrackModel {
             return false;
         }
 
-        updateStats(this.stats, this.tiles.get(index), -1);
+        this.stats.decrement(this.tiles.get(index).modelId);
 
         return this.tiles.delete(index) > 0;
     }
@@ -217,8 +205,8 @@ export class TrackModel {
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, this.tiles.get(index), -1);
-            updateStats(this.stats, tile);
+            this.stats.decrement(this.tiles.get(index).modelId);
+            this.stats.increment(tile.modelId);
 
             this.tiles.set(index, tile);
 
@@ -245,7 +233,7 @@ export class TrackModel {
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, tile);
+            this.stats.increment(tile.modelId);
             this.tiles.insert(index, tile);
 
             return tile.id;
@@ -271,7 +259,7 @@ export class TrackModel {
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, tile);
+            this.stats.increment(tile.modelId);
             this.tiles.insert(index + 1, tile);
 
             return tile.id;
@@ -285,12 +273,25 @@ export class TrackModel {
      * @returns {TrackModel} - Chains the instance.
      */
     rebuildStats() {
-        this.stats = {};
+        const dataIterator = this.tiles.values();
+        const loadIterator = {
+            next: () => {
+                const next = dataIterator.next();
 
-        if (this.tiles.length) {
-            this.tiles.forEach(tile => updateStats(this.stats, tile));
-            this.tiles.notify();
-        }
+                if (next.done) {
+                    return next;
+                }
+
+                const { modelId } = next.value || {};
+                return { done: false, value: modelId };
+            },
+
+            [Symbol.iterator]() {
+                return this;
+            }
+        };
+
+        this.stats.reset(loadIterator);
 
         return this;
     }
@@ -309,13 +310,13 @@ export class TrackModel {
         let inputY = startY;
         let inputAngle = startAngle;
 
-        const stats = {};
+        const stats = new Counter();
         const tiles = this.tiles.map(model => {
             const coord = model.getBoundingRect(inputX, inputY, inputAngle);
             const { x, y, angle } = coord.input;
             const { id } = model;
 
-            updateStats(stats, model);
+            stats.increment(model.modelId);
 
             inputX = coord.output.x;
             inputY = coord.output.y;
@@ -365,10 +366,9 @@ export class TrackModel {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tileRef = createModel(this.specs, type, direction, ratio);
-                updateStats(this.stats, tileRef);
+                const tile = createModel(this.specs, type, direction, ratio);
 
-                return { done: false, value: tileRef };
+                return { done: false, value: tile };
             },
 
             [Symbol.iterator]() {
@@ -376,8 +376,8 @@ export class TrackModel {
             }
         };
 
-        this.stats = {};
         this.tiles.load(loadIterator);
+        this.rebuildStats();
 
         return this;
     }
@@ -387,7 +387,7 @@ export class TrackModel {
      * @returns {TrackModel} - Chains the instance.
      */
     clear() {
-        this.stats = {};
+        this.stats.clear();
         this.tiles.clear();
 
         return this;
