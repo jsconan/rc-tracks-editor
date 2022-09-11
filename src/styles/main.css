@@ -50,3 +50,16 @@ body,
     height: 100%;
     overflow: hidden;
 }
+
+.ground {
+    fill: var(--color-ground);
+    stroke: var(--color-bg);
+}
+
+.even {
+    fill: var(--color-even);
+}
+
+.odd {
+    fill: var(--color-odd);
+}
