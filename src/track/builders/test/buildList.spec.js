@@ -53,8 +53,18 @@ describe('buildList', () => {
             {},
             { startX: 100, startY: 100 },
             { tileAngle: 45 },
+            { tileWidth: 200, tileHeight: 200, centered: false },
+            { tileWidth: 200, tileHeight: 200, centered: true },
+            { hPadding: 20, vPadding: 10, vertical: false },
+            { hPadding: 20, vPadding: 10, vertical: true },
+            { centered: false },
+            { centered: true },
+            { aligned: false },
+            { aligned: true },
             { vertical: false },
             { vertical: true },
+            { centered: true, vertical: true },
+            { startX: 100, startY: 100, tileAngle: 45, vertical: false },
             { startX: 100, startY: 100, tileAngle: 45, vertical: true }
         ])('using config options %s', config => {
             expect(buildList(list, config)).toMatchSnapshot();

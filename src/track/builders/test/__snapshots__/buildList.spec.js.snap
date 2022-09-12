@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100 } 1`] = `
+exports[`buildList process a list of tiles for rendering using config options { aligned: false } 1`] = `
 Object {
-  "height": 904.1489073928212,
+  "height": 164.5538759169886,
   "tiles": Array [
     Object {
       "angle": 0,
@@ -17,8 +17,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 100,
-      "y": 100,
+      "x": 45,
+      "y": 0,
     },
     Object {
       "angle": 0,
@@ -33,8 +33,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 105,
-      "y": 210,
+      "x": 145,
+      "y": 0,
     },
     Object {
       "angle": 0,
@@ -49,8 +49,115 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 105,
-      "y": 310,
+      "x": 245,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 370.1471862576143,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 490.9613433871934,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 606.842302333356,
+      "y": 0,
+    },
+  ],
+  "width": 651.842302333356,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { aligned: true } 1`] = `
+Object {
+  "height": 167.7776769338703,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 145,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 245,
+      "y": 0,
     },
     Object {
       "angle": -22.5,
@@ -65,8 +172,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 92.00735091368512,
-      "y": 427.22075445642906,
+      "x": 331.5745789630079,
+      "y": 17.22075445642904,
     },
     Object {
       "angle": -15,
@@ -81,8 +188,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 94.54813220625093,
-      "y": 582.3738986229511,
+      "x": 432.60111828165367,
+      "y": 11.646857029613432,
     },
     Object {
       "angle": -11.25,
@@ -97,22 +204,22 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 95.86883528669455,
-      "y": 745.1502949496767,
+      "x": 531.1068536703053,
+      "y": 8.779064490725771,
     },
   ],
-  "width": 150,
+  "width": 583.5045207150616,
   "x": 0,
   "y": 0,
 }
 `;
 
-exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: true } 1`] = `
+exports[`buildList process a list of tiles for rendering using config options { centered: false } 1`] = `
 Object {
-  "height": 928.9198397621083,
+  "height": 164.5538759169886,
   "tiles": Array [
     Object {
-      "angle": 45,
+      "angle": 0,
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -124,11 +231,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 138.8908729652601,
-      "y": 131.81980515339464,
+      "x": 45,
+      "y": 0,
     },
     Object {
-      "angle": 45,
+      "angle": 0,
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -140,11 +247,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 138.8908729652601,
-      "y": 273.2411613907041,
+      "x": 145,
+      "y": 0,
     },
     Object {
-      "angle": 45,
+      "angle": 0,
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -156,11 +263,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 138.8908729652601,
-      "y": 388.9518395093589,
+      "x": 245,
+      "y": 0,
     },
     Object {
-      "angle": 22.5,
+      "angle": 0,
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -172,11 +279,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 132.47176600877182,
-      "y": 467.28172100052785,
+      "x": 370.1471862576143,
+      "y": 0,
     },
     Object {
-      "angle": 30,
+      "angle": 0,
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -188,11 +295,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 142.09292143521043,
-      "y": 620.6536564876583,
+      "x": 490.9613433871934,
+      "y": 0,
     },
     Object {
-      "angle": 33.75,
+      "angle": 0,
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -204,126 +311,19 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 146.90289447810034,
-      "y": 785.2824461845607,
+      "x": 606.842302333356,
+      "y": 0,
     },
   ],
-  "width": 184.31902703171488,
+  "width": 651.842302333356,
   "x": 0,
   "y": 0,
 }
 `;
 
-exports[`buildList process a list of tiles for rendering using config options { tileAngle: 45 } 1`] = `
+exports[`buildList process a list of tiles for rendering using config options { centered: true } 1`] = `
 Object {
-  "height": 828.9198397621083,
-  "tiles": Array [
-    Object {
-      "angle": 45,
-      "id": "id-0",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-0",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 38.8908729652601,
-      "y": 31.819805153394636,
-    },
-    Object {
-      "angle": 45,
-      "id": "id-1",
-      "model": CurvedTileEnlargedModel {
-        "direction": "right",
-        "id": "id-1",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 38.8908729652601,
-      "y": 173.24116139070415,
-    },
-    Object {
-      "angle": 45,
-      "id": "id-2",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-2",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 38.8908729652601,
-      "y": 288.9518395093589,
-    },
-    Object {
-      "angle": 22.5,
-      "id": "id-3",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-3",
-        "ratio": 2,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 32.47176600877182,
-      "y": 367.28172100052785,
-    },
-    Object {
-      "angle": 30,
-      "id": "id-4",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-4",
-        "ratio": 3,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 42.09292143521043,
-      "y": 520.6536564876582,
-    },
-    Object {
-      "angle": 33.75,
-      "id": "id-5",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-5",
-        "ratio": 4,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-        },
-      },
-      "x": 46.90289447810032,
-      "y": 685.2824461845607,
-    },
-  ],
-  "width": 168.63805406342973,
-  "x": -84.31902703171487,
-  "y": 0,
-}
-`;
-
-exports[`buildList process a list of tiles for rendering using config options { vertical: false } 1`] = `
-Object {
-  "height": 167.7776769338703,
+  "height": 164.5538759169886,
   "tiles": Array [
     Object {
       "angle": 0,
@@ -374,7 +374,7 @@ Object {
       "y": -50,
     },
     Object {
-      "angle": -22.5,
+      "angle": 0,
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -386,11 +386,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 331.5745789630079,
-      "y": -63.142766340239795,
+      "x": 370.1471862576143,
+      "y": -74.24621202458748,
     },
     Object {
-      "angle": -15,
+      "angle": 0,
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -402,11 +402,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 432.60111828165367,
-      "y": -71.17523740319321,
+      "x": 490.9613433871934,
+      "y": -79.99999999999999,
     },
     Object {
-      "angle": -11.25,
+      "angle": 0,
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -418,19 +418,19 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 531.1068536703053,
-      "y": -75.10977397620938,
+      "x": 606.842302333356,
+      "y": -82.2769379584943,
     },
   ],
-  "width": 583.5045207150616,
+  "width": 651.842302333356,
   "x": 0,
-  "y": -83.88883846693516,
+  "y": -82.2769379584943,
 }
 `;
 
-exports[`buildList process a list of tiles for rendering using config options { vertical: true } 1`] = `
+exports[`buildList process a list of tiles for rendering using config options { centered: true, vertical: true } 1`] = `
 Object {
-  "height": 804.1489073928213,
+  "height": 783.0462999661636,
   "tiles": Array [
     Object {
       "angle": 0,
@@ -481,7 +481,7 @@ Object {
       "y": 210,
     },
     Object {
-      "angle": -22.5,
+      "angle": 0,
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -493,11 +493,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -7.992649086314891,
-      "y": 327.22075445642906,
+      "x": 17.573593128807147,
+      "y": 310,
     },
     Object {
-      "angle": -15,
+      "angle": 0,
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -509,11 +509,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -5.4518677937490665,
-      "y": 482.3738986229511,
+      "x": 15.407078564789543,
+      "y": 458.49242404917493,
     },
     Object {
-      "angle": -11.25,
+      "angle": 0,
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -525,19 +525,1089 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -4.131164713305445,
-      "y": 645.1502949496768,
+      "x": 12.940479473081268,
+      "y": 618.4924240491749,
     },
   ],
-  "width": 100,
-  "x": -50,
+  "width": 125.1471862576143,
+  "x": -62.57359312880715,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: false } 1`] = `
+Object {
+  "height": 184.5538759169886,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 185,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 325,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 490.1471862576143,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 650.9613433871934,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 806.842302333356,
+      "y": 0,
+    },
+  ],
+  "width": 891.842302333356,
+  "x": -20,
+  "y": -10,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: true } 1`] = `
+Object {
+  "height": 903.0462999661636,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 55,
+      "y": 130,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 55,
+      "y": 250,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 80.1471862576143,
+      "y": 370,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 75.81415712957909,
+      "y": 538.4924240491749,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 70.88095894616254,
+      "y": 718.4924240491749,
+    },
+  ],
+  "width": 165.1471862576143,
+  "x": -20,
+  "y": -10,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100 } 1`] = `
+Object {
+  "height": 264.5538759169886,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 145,
+      "y": 100,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 245,
+      "y": 100,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 345,
+      "y": 100,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 470.1471862576143,
+      "y": 100,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 590.9613433871934,
+      "y": 100,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 706.842302333356,
+      "y": 100,
+    },
+  ],
+  "width": 751.842302333356,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: false } 1`] = `
+Object {
+  "height": 256.85189337642714,
+  "tiles": Array [
+    Object {
+      "angle": 45,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 209.60155108391484,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 351.02290732122435,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 492.44426355853386,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 640.9366876077089,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 807.6824772138243,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 981.6260261199093,
+      "y": 131.81980515339464,
+    },
+  ],
+  "width": 1013.445831273304,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: true } 1`] = `
+Object {
+  "height": 878.5217509177362,
+  "tiles": Array [
+    Object {
+      "angle": 45,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 209.60155108391484,
+      "y": 131.81980515339464,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 209.60155108391484,
+      "y": 273.2411613907041,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 209.60155108391484,
+      "y": 388.9518395093589,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 216.67261889578032,
+      "y": 481.8807716974934,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 234.92598445272077,
+      "y": 607.0279579551078,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 242.1237437526903,
+      "y": 753.4896626947037,
+    },
+  ],
+  "width": 273.94354890608497,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { tileAngle: 45 } 1`] = `
+Object {
+  "height": 156.85189337642714,
+  "tiles": Array [
+    Object {
+      "angle": 45,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 109.60155108391486,
+      "y": 31.819805153394636,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 251.02290732122435,
+      "y": 31.819805153394636,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 392.44426355853386,
+      "y": 31.819805153394636,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 540.9366876077089,
+      "y": 31.819805153394636,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 707.6824772138243,
+      "y": 31.819805153394636,
+    },
+    Object {
+      "angle": 45,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 881.6260261199093,
+      "y": 31.819805153394636,
+    },
+  ],
+  "width": 913.445831273304,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: false } 1`] = `
+Object {
+  "height": 200,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 255,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 455,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 680.1471862576143,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 875.8141571295791,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 1070.8809589461625,
+      "y": 0,
+    },
+  ],
+  "width": 1200,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: true } 1`] = `
+Object {
+  "height": 200,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 100,
+      "y": -55,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 305,
+      "y": -50,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 505,
+      "y": -50,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 717.5735931288071,
+      "y": -74.24621202458748,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 915.4070785647896,
+      "y": -79.99999999999999,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 1112.9404794730813,
+      "y": -82.2769379584943,
+    },
+  ],
+  "width": 1200,
+  "x": 0,
+  "y": -100,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { vertical: false } 1`] = `
+Object {
+  "height": 164.5538759169886,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 145,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 245,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 370.1471862576143,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 490.9613433871934,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 606.842302333356,
+      "y": 0,
+    },
+  ],
+  "width": 651.842302333356,
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`buildList process a list of tiles for rendering using config options { vertical: true } 1`] = `
+Object {
+  "height": 783.0462999661636,
+  "tiles": Array [
+    Object {
+      "angle": 0,
+      "id": "id-0",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 45,
+      "y": 0,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-1",
+      "model": CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 55,
+      "y": 110,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-2",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 55,
+      "y": 210,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-3",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-3",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 80.1471862576143,
+      "y": 310,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-4",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-4",
+        "ratio": 3,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 75.81415712957909,
+      "y": 458.49242404917493,
+    },
+    Object {
+      "angle": 0,
+      "id": "id-5",
+      "model": CurvedTileModel {
+        "direction": "right",
+        "id": "id-5",
+        "ratio": 4,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+        },
+      },
+      "x": 70.88095894616254,
+      "y": 618.4924240491749,
+    },
+  ],
+  "width": 125.1471862576143,
+  "x": 0,
   "y": 0,
 }
 `;
 
 exports[`buildList process a list of tiles for rendering using config options {} 1`] = `
 Object {
-  "height": 804.1489073928213,
+  "height": 164.5538759169886,
   "tiles": Array [
     Object {
       "angle": 0,
@@ -552,7 +1622,7 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 0,
+      "x": 45,
       "y": 0,
     },
     Object {
@@ -568,8 +1638,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 5,
-      "y": 110,
+      "x": 145,
+      "y": 0,
     },
     Object {
       "angle": 0,
@@ -584,11 +1654,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 5,
-      "y": 210,
+      "x": 245,
+      "y": 0,
     },
     Object {
-      "angle": -22.5,
+      "angle": 0,
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -600,11 +1670,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -7.992649086314891,
-      "y": 327.22075445642906,
+      "x": 370.1471862576143,
+      "y": 0,
     },
     Object {
-      "angle": -15,
+      "angle": 0,
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -616,11 +1686,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -5.4518677937490665,
-      "y": 482.3738986229511,
+      "x": 490.9613433871934,
+      "y": 0,
     },
     Object {
-      "angle": -11.25,
+      "angle": 0,
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -632,19 +1702,19 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -4.131164713305445,
-      "y": 645.1502949496768,
+      "x": 606.842302333356,
+      "y": 0,
     },
   ],
-  "width": 100,
-  "x": -50,
+  "width": 651.842302333356,
+  "x": 0,
   "y": 0,
 }
 `;
 
 exports[`buildList process a list of tiles for rendering using default position 1`] = `
 Object {
-  "height": 804.1489073928213,
+  "height": 164.5538759169886,
   "tiles": Array [
     Object {
       "angle": 0,
@@ -659,7 +1729,7 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 0,
+      "x": 45,
       "y": 0,
     },
     Object {
@@ -675,8 +1745,8 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 5,
-      "y": 110,
+      "x": 145,
+      "y": 0,
     },
     Object {
       "angle": 0,
@@ -691,11 +1761,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": 5,
-      "y": 210,
+      "x": 245,
+      "y": 0,
     },
     Object {
-      "angle": -22.5,
+      "angle": 0,
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -707,11 +1777,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -7.992649086314891,
-      "y": 327.22075445642906,
+      "x": 370.1471862576143,
+      "y": 0,
     },
     Object {
-      "angle": -15,
+      "angle": 0,
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -723,11 +1793,11 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -5.4518677937490665,
-      "y": 482.3738986229511,
+      "x": 490.9613433871934,
+      "y": 0,
     },
     Object {
-      "angle": -11.25,
+      "angle": 0,
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -739,12 +1809,12 @@ Object {
           "laneWidth": 80,
         },
       },
-      "x": -4.131164713305445,
-      "y": 645.1502949496768,
+      "x": 606.842302333356,
+      "y": 0,
     },
   ],
-  "width": 100,
-  "x": -50,
+  "width": 651.842302333356,
+  "x": 0,
   "y": 0,
 }
 `;

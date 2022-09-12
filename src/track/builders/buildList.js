@@ -26,10 +26,30 @@ import { TilesList } from '../models';
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
  * @param {number} [config.tileAngle] - The rotation angle of each tile.
+ * @param {number} [config.tileWidth] - The reserved width for each tile.
+ * @param {number} [config.tileHeight] - The reserved height for each tile.
+ * @param {number} [config.hPadding] - An horizontal padding added around the tiles.
+ * @param {number} [config.vPadding] - A vertical padding added around the tiles.
+ * @param {boolean} [config.centered] - Whether or not center the tiles.
+ * @param {boolean} [config.aligned] - Whether or not align the tiles.
  * @param {boolean} [config.vertical] - Position the tiles vertically.
  * @returns {listCoord}
  */
-export default (list, { startX = 0, startY = 0, tileAngle = 0, vertical = true } = {}) => {
+export default (
+    list,
+    {
+        startX = 0,
+        startY = 0,
+        tileAngle = 0,
+        tileWidth = 0,
+        tileHeight = 0,
+        hPadding = 0,
+        vPadding = 0,
+        centered = false,
+        aligned = false,
+        vertical = false
+    } = {}
+) => {
     if (!list || !(list instanceof TilesList)) {
         throw new TypeError('A valid list of tiles is needed!');
     }
@@ -41,24 +61,28 @@ export default (list, { startX = 0, startY = 0, tileAngle = 0, vertical = true }
 
     const tiles = list.tiles.map(model => {
         const curveAngle = model.getCurveAngle();
-        const angle = tileAngle - (curveAngle < Vector2D.RIGHT_ANGLE ? curveAngle / 2 : 0);
+        const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? curveAngle / 2 : 0);
         const coord = model.getBoundingRect(0, 0, angle);
-        const topX = tileX - (vertical ? coord.width / 2 : 0);
-        const topY = tileY - (vertical ? 0 : coord.height / 2);
-        const x = topX - coord.x;
-        const y = topY - coord.y;
+        const width = Math.max(tileWidth, coord.width) + hPadding * 2;
+        const height = Math.max(tileHeight, coord.height) + vPadding * 2;
+        const dx = centered ? Math.max(0, tileWidth - coord.width) / 2 : 0;
+        const dy = centered ? Math.max(0, tileHeight - coord.height) / 2 : 0;
+        const topX = tileX - (centered && vertical ? width / 2 : 0) - hPadding;
+        const topY = tileY - (!centered || vertical ? 0 : height / 2) - vPadding;
+        const x = topX - coord.x + hPadding + dx;
+        const y = topY - coord.y + vPadding + dy;
         const { id } = model;
 
         topLeft.x = Math.min(topLeft.x, topX);
         topLeft.y = Math.min(topLeft.y, topY);
 
-        bottomRight.x = Math.max(bottomRight.x, topX + coord.width);
-        bottomRight.y = Math.max(bottomRight.y, topY + coord.height);
+        bottomRight.x = Math.max(bottomRight.x, topX + width);
+        bottomRight.y = Math.max(bottomRight.y, topY + height);
 
         if (vertical) {
-            tileY += coord.height;
+            tileY += height;
         } else {
-            tileX += coord.width;
+            tileX += width;
         }
 
         return { id, x, y, angle, model };
