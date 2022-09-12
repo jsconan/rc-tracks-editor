@@ -18,7 +18,7 @@
         throw new TypeError('The model must be an instance of TilesList!');
     }
 
-    $: track = buildTrack($model, 0, 0, angle);
+    $: track = buildTrack($model, { startAngle: angle });
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>

@@ -49,12 +49,15 @@ describe('buildList', () => {
             expect(buildList(list)).toMatchSnapshot();
         });
 
-        it('using start position and angle, distributed vertically', () => {
-            expect(buildList(list, 100, 100, 45, true)).toMatchSnapshot();
-        });
-
-        it('using start position and angle, distributed horizontally', () => {
-            expect(buildList(list, 100, 100, 45, false)).toMatchSnapshot();
+        it.each([
+            {},
+            { startX: 100, startY: 100 },
+            { tileAngle: 45 },
+            { vertical: false },
+            { vertical: true },
+            { startX: 100, startY: 100, tileAngle: 45, vertical: true }
+        ])('using config options %s', config => {
+            expect(buildList(list, config)).toMatchSnapshot();
         });
     });
 });

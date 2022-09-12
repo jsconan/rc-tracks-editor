@@ -22,21 +22,22 @@ import { TilesList } from '../models';
 /**
  * Process a list of tiles for rendering, computing the coordinates of each tile.
  * @param {TilesList} list - The list of tiles from which prepare the rendering.
- * @param {number} listX - The X-coordinate of the list.
- * @param {number} listY - The Y-coordinate of the list.
- * @param {number} tileAngle - The rotation angle of each tile.
- * @param {boolean} vertical - Position the tiles vertically.
+ * @param {object} config - A set of config options.
+ * @param {number} [config.startX] - The X-coordinate of the first tile.
+ * @param {number} [config.startY] - The Y-coordinate of the first tile.
+ * @param {number} [config.tileAngle] - The rotation angle of each tile.
+ * @param {boolean} [config.vertical] - Position the tiles vertically.
  * @returns {listCoord}
  */
-export default (list, listX = 0, listY = 0, tileAngle = 0, vertical = true) => {
+export default (list, { startX = 0, startY = 0, tileAngle = 0, vertical = true } = {}) => {
     if (!list || !(list instanceof TilesList)) {
         throw new TypeError('A valid list of tiles is needed!');
     }
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();
-    let tileX = listX;
-    let tileY = listY;
+    let tileX = startX;
+    let tileY = startY;
 
     const tiles = list.tiles.map(model => {
         const curveAngle = model.getCurveAngle();

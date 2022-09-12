@@ -22,12 +22,13 @@ import { TilesList } from '../models';
 /**
  * Process a list of tiles for rendering a track, computing the coordinates of each tile.
  * @param {TilesList} list - The list of tiles from which build the track.
- * @param {number} startX - The X-coordinate of the first tile.
- * @param {number} startY - The Y-coordinate of the first tile.
- * @param {number} startAngle - The rotation angle of the first tile.
+ * @param {object} config - A set of config options.
+ * @param {number} [config.startX] - The X-coordinate of the first tile.
+ * @param {number} [config.startY] - The Y-coordinate of the first tile.
+ * @param {number} [config.startAngle] - The rotation angle of the first tile.
  * @returns {trackCoord}
  */
-export default (list, startX = 0, startY = 0, startAngle = 0) => {
+export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
     if (!list || !(list instanceof TilesList)) {
         throw new TypeError('A valid list of tiles is needed!');
     }

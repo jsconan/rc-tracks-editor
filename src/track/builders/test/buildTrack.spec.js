@@ -52,8 +52,11 @@ describe('buildTrack', () => {
             expect(buildTrack(list)).toMatchSnapshot();
         });
 
-        it('using a start position and angle', () => {
-            expect(buildTrack(list, 100, 100, 45)).toMatchSnapshot();
-        });
+        it.each([{}, { startX: 100, startY: 100 }, { startAngle: 45 }, { startX: 100, startY: 100, startAngle: 45 }])(
+            'using config options %s',
+            config => {
+                expect(buildTrack(list, config)).toMatchSnapshot();
+            }
+        );
     });
 });
