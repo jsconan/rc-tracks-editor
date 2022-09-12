@@ -296,7 +296,7 @@ exports[`Track renders with the given parameters 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-3"
+        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -383,7 +383,7 @@ exports[`Track renders with the given parameters 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-4"
+        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -461,7 +461,7 @@ exports[`Track renders with the given parameters 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-5"
+        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -580,7 +580,7 @@ exports[`Track update when the model is modified 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-6"
+        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -667,7 +667,7 @@ exports[`Track update when the model is modified 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-7"
+        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -745,7 +745,7 @@ exports[`Track update when the model is modified 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-8"
+        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -847,7 +847,7 @@ exports[`Track update when the model is modified 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-9"
+        id="id-3"
         transform="rotate(270 -110 -110)"
       >
         <rect

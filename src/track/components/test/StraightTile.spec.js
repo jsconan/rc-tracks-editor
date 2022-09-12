@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import StraightTile from '../StraightTile.svelte';
 import { StraightTileModel, TileSpecifications } from '../../models';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
@@ -66,6 +66,20 @@ describe('StraightTile', () => {
         const props = {
             model: {}
         };
+        // @ts-expect-error
         expect(() => render(StraightTile, { props })).toThrow('The model must be an instance of StraightTileModel!');
+    });
+
+    it('fires click', () => {
+        const onClick = jest.fn();
+        const props = {
+            model: new StraightTileModel(specs)
+        };
+        const { container, component } = render(StraightTile, { props });
+        const element = container.querySelector('.ground');
+
+        component.$on('click', onClick);
+        fireEvent.click(element);
+        expect(onClick).toHaveBeenCalled();
     });
 });

@@ -29,4 +29,4 @@
     const component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {model} {angle} {x} {y} {filter} {id} />
+<svelte:component this={component} {model} {angle} {x} {y} {filter} {id} on:click />

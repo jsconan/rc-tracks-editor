@@ -2,6 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { createEventDispatcher } from 'svelte';
     import { CurvedBarrier, CurvedElement } from '../elements';
     import { CurvedTileModel } from '../models';
 
@@ -34,12 +35,18 @@
     const outerBarrierX = curveCenter.x + outerBarrierRadius;
     const outerBarrierY = curveCenter.y;
 
+    const dispatch = createEventDispatcher();
+
+    function click() {
+        dispatch('click', { id, x, y, angle, model });
+    }
+
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
     $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
     $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
 </script>
 
-<g class="tile curved-tile" {transform} {filter} {id}>
+<g class="tile curved-tile" {transform} {filter} {id} on:click={click}>
     <CurvedElement
         class="ground"
         cx={curveCenter.x}

@@ -16,23 +16,25 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import Track from '../Track.svelte';
 import { TilesList, TileSpecifications } from '../../models';
 import { wait } from '../../../core/helpers';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../../helpers';
+import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const model = new TilesList(specs);
+model.import([
+    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
+]);
 
 describe('Track', () => {
     it('renders with default values', () => {
-        const model = new TilesList(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = { model };
         const { container } = render(Track, { props });
 
@@ -40,10 +42,6 @@ describe('Track', () => {
     });
 
     it('renders with the given parameters', () => {
-        const model = new TilesList(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = {
             model,
             x: 100,
@@ -58,10 +56,6 @@ describe('Track', () => {
     });
 
     it('update when the model is modified', async () => {
-        const model = new TilesList(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = {
             model,
             x: 100,
@@ -98,5 +92,17 @@ describe('Track', () => {
                 }
             })
         ).toThrow('The model must be an instance of TilesList!');
+    });
+
+    it('fires click', () => {
+        const onClick = jest.fn();
+        const props = { model };
+        const { container, component } = render(Track, { props });
+
+        component.$on('click', onClick);
+        fireEvent.click(container.querySelector(`#id-0`));
+        fireEvent.click(container.querySelector(`#id-1`));
+        fireEvent.click(container.querySelector(`#id-2`));
+        expect(onClick).toHaveBeenCalledTimes(3);
     });
 });

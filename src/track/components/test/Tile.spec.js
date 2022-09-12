@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import Tile from '../Tile.svelte';
 import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel, TileSpecifications } from '../../models';
 
@@ -60,5 +60,20 @@ describe('Tile', () => {
 
     it('needs a valid model', () => {
         expect(() => render(Tile)).toThrow('The model must be an instance of TileModel!');
+    });
+
+    it.each([
+        [straightTile.type, straightTile],
+        [curvedTile.type, curvedTile],
+        [curvedTileEnlarged.type, curvedTileEnlarged]
+    ])('fires click from a %s tile', (type, model) => {
+        const onClick = jest.fn();
+        const props = { model };
+        const { container, component } = render(Tile, { props });
+        const element = container.querySelector('.ground');
+
+        component.$on('click', onClick);
+        fireEvent.click(element);
+        expect(onClick).toHaveBeenCalled();
     });
 });

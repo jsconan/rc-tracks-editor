@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
 import { CurvedTileEnlargedModel, TileSpecifications } from '../../models';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
@@ -66,8 +66,22 @@ describe('CurvedTileEnlarged', () => {
         const props = {
             model: {}
         };
+        // @ts-expect-error
         expect(() => render(CurvedTileEnlarged, { props })).toThrow(
             'The model must be an instance of CurvedTileEnlargedModel!'
         );
+    });
+
+    it('fires click', () => {
+        const onClick = jest.fn();
+        const props = {
+            model: new CurvedTileEnlargedModel(specs)
+        };
+        const { container, component } = render(CurvedTileEnlarged, { props });
+        const element = container.querySelector('.ground');
+
+        component.$on('click', onClick);
+        fireEvent.click(element);
+        expect(onClick).toHaveBeenCalled();
     });
 });
