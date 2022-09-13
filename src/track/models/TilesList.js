@@ -28,7 +28,7 @@ import { uid } from '../../core/helpers';
 import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
-import { TileSpecifications } from './TileSpecifications.js';
+import { TileSpecifications } from '../config';
 import { Counter, List } from '../../core/models';
 
 /**

@@ -17,7 +17,7 @@
  */
 
 import { TileModel } from '../TileModel.js';
-import { TileSpecifications } from '../TileSpecifications.js';
+import { TileSpecifications } from '../../config';
 
 const tileX = 100;
 const tileY = 100;

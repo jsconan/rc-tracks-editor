@@ -18,7 +18,8 @@
 
 import buildList from '../buildList.js';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { TileSpecifications, TilesList } from '../../models';
+import { TileSpecifications } from '../../config';
+import { TilesList } from '../../models';
 
 const laneWidth = 80;
 const barrierWidth = 5;

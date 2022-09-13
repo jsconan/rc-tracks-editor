@@ -18,7 +18,8 @@
 
 import { render, fireEvent } from '@testing-library/svelte';
 import StraightTile from '../StraightTile.svelte';
-import { StraightTileModel, TileSpecifications } from '../../models';
+import { StraightTileModel } from '../../models';
+import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;

@@ -18,7 +18,8 @@
 
 import { render, fireEvent } from '@testing-library/svelte';
 import Tile from '../Tile.svelte';
-import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel, TileSpecifications } from '../../models';
+import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../models';
+import { TileSpecifications } from '../../config';
 
 const laneWidth = 80;
 const barrierWidth = 5;

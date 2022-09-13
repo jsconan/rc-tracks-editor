@@ -5,7 +5,8 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { Track } from './track/components';
-    import { TileSpecifications, TilesList } from './track/models';
+    import { TilesList } from './track/models';
+    import { TileSpecifications } from './track/config';
     import {
         CURVED_TILE_ENLARGED_TYPE,
         CURVED_TILE_TYPE,

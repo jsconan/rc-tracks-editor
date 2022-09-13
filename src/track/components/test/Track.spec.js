@@ -18,7 +18,8 @@
 
 import { render, fireEvent } from '@testing-library/svelte';
 import Track from '../Track.svelte';
-import { TilesList, TileSpecifications } from '../../models';
+import { TilesList } from '../../models';
+import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
 
