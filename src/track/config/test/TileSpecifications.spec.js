@@ -26,6 +26,7 @@ const barrierLength = 27.5;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
+const contextId = 'tileSpecifications';
 
 describe('TileSpecifications', () => {
     it('is a class', () => {
@@ -33,17 +34,18 @@ describe('TileSpecifications', () => {
     });
 
     it('defines the specifications for the tiles', () => {
-        const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-        expect(tile).toBeInstanceOf(TileSpecifications);
-        expect(tile.laneWidth).toBe(laneWidth);
-        expect(tile.barrierWidth).toBe(barrierWidth);
-        expect(tile.barrierChunks).toBe(barrierChunks);
-        expect(tile.length).toBe(tileLength);
-        expect(tile.width).toBe(tileWidth);
-        expect(tile.padding).toBe(tilePadding);
-        expect(tile.barrierLength).toBe(barrierLength);
-        expect(tile.maxRatio).toBe(maxRatio);
+        expect(specs).toBeInstanceOf(TileSpecifications);
+        expect(specs.laneWidth).toBe(laneWidth);
+        expect(specs.barrierWidth).toBe(barrierWidth);
+        expect(specs.barrierChunks).toBe(barrierChunks);
+        expect(specs.length).toBe(tileLength);
+        expect(specs.width).toBe(tileWidth);
+        expect(specs.padding).toBe(tilePadding);
+        expect(specs.barrierLength).toBe(barrierLength);
+        expect(specs.maxRatio).toBe(maxRatio);
+        expect(specs.contextId).toBe(contextId);
     });
 
     describe('can set', () => {
@@ -51,19 +53,19 @@ describe('TileSpecifications', () => {
             [50, 50],
             [-60, 60]
         ])('the width of the track lane as %s, actually %s', (value, expected) => {
-            const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-            expect(tile.setLaneWidth(value)).toBe(tile);
-            expect(tile.laneWidth).toBe(expected);
+            expect(specs.setLaneWidth(value)).toBe(specs);
+            expect(specs.laneWidth).toBe(expected);
         });
 
         it.each([
             [3, 3],
             [-4, 4]
         ])('the width of a barrier as %s, actually %s', (value, expected) => {
-            const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setBarrierWidth(value)).toBe(tile);
-            expect(tile.barrierWidth).toBe(expected);
+            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            expect(specs.setBarrierWidth(value)).toBe(specs);
+            expect(specs.barrierWidth).toBe(expected);
         });
 
         it.each([
@@ -74,9 +76,9 @@ describe('TileSpecifications', () => {
             [1.8, 2],
             [2.1, 2]
         ])('the number of a barrier chunks as %s, actually %s', (value, expected) => {
-            const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setBarrierChunks(value)).toBe(tile);
-            expect(tile.barrierChunks).toBe(expected);
+            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            expect(specs.setBarrierChunks(value)).toBe(specs);
+            expect(specs.barrierChunks).toBe(expected);
         });
 
         it.each([
@@ -87,9 +89,9 @@ describe('TileSpecifications', () => {
             [1.8, 2],
             [2.1, 2]
         ])('the maximum value for size ratio as %s, actually %s', (value, expected) => {
-            const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-            expect(tile.setMaxRatio(value)).toBe(tile);
-            expect(tile.maxRatio).toBe(expected);
+            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            expect(specs.setMaxRatio(value)).toBe(specs);
+            expect(specs.maxRatio).toBe(expected);
         });
     });
 });
