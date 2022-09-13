@@ -77,3 +77,15 @@ const allowedTypes = [STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED
  * @returns {boolean} - Returns `true` if the type is valid.
  */
 export const isTypeValid = type => allowedTypes.includes(type);
+
+/**
+ * Flips the direction of a tile.
+ * @param {string} direction - The original direction
+ * @returns {string} - The flipped direction.
+ */
+export const flipTileDirection = direction => {
+    if (direction === TILE_DIRECTION_LEFT) {
+        return TILE_DIRECTION_RIGHT;
+    }
+    return TILE_DIRECTION_LEFT;
+};

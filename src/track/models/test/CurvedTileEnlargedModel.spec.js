@@ -128,6 +128,17 @@ describe('CurvedTileEnlargedModel', () => {
         });
     });
 
+    it.each([
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, CurvedTileEnlargedModel.DIRECTION_LEFT],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, CurvedTileEnlargedModel.DIRECTION_RIGHT]
+    ])('can flip the direction of the tile from %s to %s', (direction, flippedDirection) => {
+        const tile = new CurvedTileEnlargedModel(specs, direction);
+
+        expect(tile.direction).toBe(direction);
+        expect(tile.flipDirection()).toBe(tile);
+        expect(tile.direction).toBe(flippedDirection);
+    });
+
     describe('can compute', () => {
         describe('the rotation angle for a tile', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
