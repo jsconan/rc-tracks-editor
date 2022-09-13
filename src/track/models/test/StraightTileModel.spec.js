@@ -27,7 +27,9 @@ const tileLength = 110;
 const tileWidth = 90;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const minRatio = 1 / barrierChunks;
+const maxRatio = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
 
 describe('StraightTileModel', () => {
     it('is a class', () => {
@@ -68,6 +70,8 @@ describe('StraightTileModel', () => {
             expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
 
         it('with the given size and direction', () => {
@@ -81,6 +85,8 @@ describe('StraightTileModel', () => {
             expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
@@ -94,6 +100,8 @@ describe('StraightTileModel', () => {
             expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength * ratio);
             expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
     });
 
@@ -122,8 +130,11 @@ describe('StraightTileModel', () => {
             expect(tile.ratio).toBe(1);
             expect(tile.setRatio(-1).ratio).toBe(1);
             expect(tile.setRatio(0).ratio).toBe(1);
+            expect(tile.setRatio(0.15).ratio).toBe(0.25);
+            expect(tile.setRatio(0.33).ratio).toBe(0.25);
             expect(tile.setRatio(0.5).ratio).toBe(0.5);
-            expect(tile.setRatio(2.5).ratio).toBe(2.5);
+            expect(tile.setRatio(2.5).ratio).toBe(3);
+            expect(tile.setRatio(5).ratio).toBe(maxRatio);
         });
     });
 

@@ -79,6 +79,22 @@ export class TileModel {
     }
 
     /**
+     * The minimum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get minRatio() {
+        return 1 / this.specs.barrierChunks;
+    }
+
+    /**
+     * The maximum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get maxRatio() {
+        return this.specs.maxRatio;
+    }
+
+    /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @returns {TileModel} - Chains the instance.
@@ -121,13 +137,21 @@ export class TileModel {
     }
 
     /**
-     * Sets the size factor relative to a track section.
+     * Sets the size ratio relative to a track section.
      * 1 means the tile fits 1 tile section in each direction.
-     * @param {number} ratio - The size factor relative to a track section.
+     * @param {number} ratio - The size ratio relative to a track section.
      * @returns {TileModel} - Chains the instance.
      */
     setRatio(ratio) {
-        this.ratio = Math.abs(ratio || 1);
+        let sizeRatio = Math.abs(ratio) || 1;
+
+        if (sizeRatio < 1) {
+            sizeRatio = Math.round(sizeRatio * this.specs.barrierChunks) / this.specs.barrierChunks;
+        } else {
+            sizeRatio = Math.round(sizeRatio);
+        }
+
+        this.ratio = Math.abs(Math.min(Math.max(this.minRatio, sizeRatio), this.maxRatio));
 
         return this;
     }

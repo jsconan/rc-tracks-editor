@@ -25,6 +25,7 @@ const tilePadding = 10;
 const barrierLength = 27.5;
 const barrierWidth = 5;
 const barrierChunks = 4;
+const maxRatio = 4;
 
 describe('TileSpecifications', () => {
     it('is a class', () => {
@@ -42,6 +43,7 @@ describe('TileSpecifications', () => {
         expect(tile.width).toBe(tileWidth);
         expect(tile.padding).toBe(tilePadding);
         expect(tile.barrierLength).toBe(barrierLength);
+        expect(tile.maxRatio).toBe(maxRatio);
     });
 
     describe('can set', () => {
@@ -75,6 +77,19 @@ describe('TileSpecifications', () => {
             const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
             expect(tile.setBarrierChunks(value)).toBe(tile);
             expect(tile.barrierChunks).toBe(expected);
+        });
+
+        it.each([
+            [1, 1],
+            [-1, 1],
+            [0, 1],
+            [0.1, 1],
+            [1.8, 2],
+            [2.1, 2]
+        ])('the maximum value for size ratio as %s, actually %s', (value, expected) => {
+            const tile = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            expect(tile.setMaxRatio(value)).toBe(tile);
+            expect(tile.maxRatio).toBe(expected);
         });
     });
 });
