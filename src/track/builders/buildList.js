@@ -62,16 +62,16 @@ export default (
     const tiles = list.tiles.map(model => {
         const curveAngle = model.getCurveAngle();
         const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? curveAngle / 2 : 0);
-        const coord = model.getBoundingRect(0, 0, angle);
-        const width = Math.max(tileWidth, coord.width) + hPadding * 2;
-        const height = Math.max(tileHeight, coord.height) + vPadding * 2;
-        const dx = centered ? Math.max(0, tileWidth - coord.width) / 2 : 0;
-        const dy = centered ? Math.max(0, tileHeight - coord.height) / 2 : 0;
+        const bounds = model.getBoundingRect(0, 0, angle);
+        const width = Math.max(tileWidth, bounds.width) + hPadding * 2;
+        const height = Math.max(tileHeight, bounds.height) + vPadding * 2;
+        const dx = centered ? Math.max(0, tileWidth - bounds.width) / 2 : 0;
+        const dy = centered ? Math.max(0, tileHeight - bounds.height) / 2 : 0;
         const topX = tileX - (centered && vertical ? width / 2 : 0) - hPadding;
         const topY = tileY - (!centered || vertical ? 0 : height / 2) - vPadding;
-        const x = topX - coord.x + hPadding + dx;
-        const y = topY - coord.y + vPadding + dy;
-        const { id } = model;
+        const x = topX - bounds.x + hPadding + dx;
+        const y = topY - bounds.y + vPadding + dy;
+        const { id, type, direction, ratio } = model;
 
         topLeft.x = Math.min(topLeft.x, topX);
         topLeft.y = Math.min(topLeft.y, topY);
@@ -85,7 +85,7 @@ export default (
             tileX += width;
         }
 
-        return { id, x, y, angle, model };
+        return { id, type, direction, ratio, x, y, angle, model };
     });
 
     const { x, y } = topLeft;
@@ -106,6 +106,9 @@ export default (
 /**
  * @typedef {object} tileCoord - Represents a positioned tile.
  * @property {string} id - The unique identifier of the tile.
+ * @property {string} type - The type of tile.
+ * @property {string} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
  * @property {number} angle - The rotation angle of the tile.

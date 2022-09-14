@@ -6,6 +6,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -18,11 +19,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -35,11 +39,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -52,11 +59,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -69,11 +79,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -86,11 +99,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -103,6 +119,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
@@ -119,6 +137,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -131,11 +150,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -148,11 +170,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -165,11 +190,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": -22.5,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -182,11 +210,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 331.5745789630079,
       "y": 17.22075445642904,
     },
     Object {
       "angle": -15,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -199,11 +230,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 432.60111828165367,
       "y": 11.646857029613432,
     },
     Object {
       "angle": -11.25,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -216,6 +250,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 531.1068536703053,
       "y": 8.779064490725771,
     },
@@ -232,6 +268,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -244,11 +281,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -261,11 +301,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -278,11 +321,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -295,11 +341,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -312,11 +361,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -329,6 +381,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
@@ -345,6 +399,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -357,11 +412,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": -55,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -374,11 +432,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": -50,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -391,11 +452,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": -50,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -408,11 +472,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": -74.24621202458748,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -425,11 +492,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": -79.99999999999999,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -442,6 +512,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": -82.2769379584943,
     },
@@ -458,6 +530,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -470,11 +543,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -487,11 +563,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 5,
       "y": 110,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -504,11 +583,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 5,
       "y": 210,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -521,11 +603,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 17.573593128807147,
       "y": 310,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -538,11 +623,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 15.407078564789543,
       "y": 458.49242404917493,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -555,6 +643,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 12.940479473081268,
       "y": 618.4924240491749,
     },
@@ -571,6 +661,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -583,11 +674,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -600,11 +694,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 185,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -617,11 +714,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 325,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -634,11 +734,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 490.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -651,11 +754,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 650.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -668,6 +774,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 806.842302333356,
       "y": 0,
     },
@@ -684,6 +792,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -696,11 +805,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -713,11 +825,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 55,
       "y": 130,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -730,11 +845,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 55,
       "y": 250,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -747,11 +865,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 80.1471862576143,
       "y": 370,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -764,11 +885,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 75.81415712957909,
       "y": 538.4924240491749,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -781,6 +905,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 70.88095894616254,
       "y": 718.4924240491749,
     },
@@ -797,6 +923,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -809,11 +936,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 145,
       "y": 100,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -826,11 +956,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 245,
       "y": 100,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -843,11 +976,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 345,
       "y": 100,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -860,11 +996,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 470.1471862576143,
       "y": 100,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -877,11 +1016,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 590.9613433871934,
       "y": 100,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -894,6 +1036,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 706.842302333356,
       "y": 100,
     },
@@ -910,6 +1054,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -922,11 +1067,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -939,11 +1087,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 351.02290732122435,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -956,11 +1107,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 492.44426355853386,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -973,11 +1127,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 640.9366876077089,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -990,11 +1147,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 807.6824772138243,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1007,6 +1167,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 981.6260261199093,
       "y": 131.81980515339464,
     },
@@ -1023,6 +1185,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1035,11 +1198,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1052,11 +1218,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 209.60155108391484,
       "y": 273.2411613907041,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1069,11 +1238,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 209.60155108391484,
       "y": 388.9518395093589,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1086,11 +1258,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 216.67261889578032,
       "y": 481.8807716974934,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1103,11 +1278,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 234.92598445272077,
       "y": 607.0279579551078,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1120,6 +1298,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 242.1237437526903,
       "y": 753.4896626947037,
     },
@@ -1136,6 +1316,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1148,11 +1329,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 109.60155108391486,
       "y": 31.819805153394636,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1165,11 +1349,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 251.02290732122435,
       "y": 31.819805153394636,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1182,11 +1369,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 392.44426355853386,
       "y": 31.819805153394636,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1199,11 +1389,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 540.9366876077089,
       "y": 31.819805153394636,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1216,11 +1409,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 707.6824772138243,
       "y": 31.819805153394636,
     },
     Object {
       "angle": 45,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1233,6 +1429,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 881.6260261199093,
       "y": 31.819805153394636,
     },
@@ -1249,6 +1447,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1261,11 +1460,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1278,11 +1480,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 255,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1295,11 +1500,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 455,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1312,11 +1520,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 680.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1329,11 +1540,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 875.8141571295791,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1346,6 +1560,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 1070.8809589461625,
       "y": 0,
     },
@@ -1362,6 +1578,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1374,11 +1591,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 100,
       "y": -55,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1391,11 +1611,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 305,
       "y": -50,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1408,11 +1631,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 505,
       "y": -50,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1425,11 +1651,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 717.5735931288071,
       "y": -74.24621202458748,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1442,11 +1671,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 915.4070785647896,
       "y": -79.99999999999999,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1459,6 +1691,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 1112.9404794730813,
       "y": -82.2769379584943,
     },
@@ -1475,6 +1709,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1487,11 +1722,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1504,11 +1742,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1521,11 +1762,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1538,11 +1782,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1555,11 +1802,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1572,6 +1822,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
@@ -1588,6 +1840,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1600,11 +1853,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1617,11 +1873,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 55,
       "y": 110,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1634,11 +1893,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 55,
       "y": 210,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1651,11 +1913,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 80.1471862576143,
       "y": 310,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1668,11 +1933,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 75.81415712957909,
       "y": 458.49242404917493,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1685,6 +1953,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 70.88095894616254,
       "y": 618.4924240491749,
     },
@@ -1701,6 +1971,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1713,11 +1984,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1730,11 +2004,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1747,11 +2024,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1764,11 +2044,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1781,11 +2064,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1798,6 +2084,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
@@ -1814,6 +2102,7 @@ Object {
   "tiles": Array [
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
         "direction": "right",
@@ -1826,11 +2115,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
         "direction": "right",
@@ -1843,11 +2135,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1860,11 +2155,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 1,
+      "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1877,11 +2175,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 2,
+      "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1894,11 +2195,14 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 3,
+      "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     Object {
       "angle": 0,
+      "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
         "direction": "right",
@@ -1911,6 +2215,8 @@ Object {
           "maxRatio": 4,
         },
       },
+      "ratio": 4,
+      "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },

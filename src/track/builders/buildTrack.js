@@ -41,23 +41,23 @@ export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
 
     const stats = new Counter();
     const tiles = list.tiles.map(model => {
-        const coord = model.getBoundingRect(inputX, inputY, inputAngle);
-        const { x, y, angle } = coord.input;
-        const { id } = model;
+        const bounds = model.getBoundingRect(inputX, inputY, inputAngle);
+        const { x, y, angle } = bounds.input;
+        const { id, type, direction, ratio } = model;
 
         stats.increment(model.modelId);
 
-        inputX = coord.output.x;
-        inputY = coord.output.y;
-        inputAngle = coord.output.angle;
+        inputX = bounds.output.x;
+        inputY = bounds.output.y;
+        inputAngle = bounds.output.angle;
 
-        topLeft.x = Math.min(topLeft.x, coord.x);
-        topLeft.y = Math.min(topLeft.y, coord.y);
+        topLeft.x = Math.min(topLeft.x, bounds.x);
+        topLeft.y = Math.min(topLeft.y, bounds.y);
 
-        bottomRight.x = Math.max(bottomRight.x, coord.x + coord.width);
-        bottomRight.y = Math.max(bottomRight.y, coord.y + coord.height);
+        bottomRight.x = Math.max(bottomRight.x, bounds.x + bounds.width);
+        bottomRight.y = Math.max(bottomRight.y, bounds.y + bounds.height);
 
-        return { id, x, y, angle, model };
+        return { id, type, direction, ratio, x, y, angle, model };
     });
 
     const { x, y } = topLeft;
@@ -79,6 +79,9 @@ export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
 /**
  * @typedef {object} tileCoord - Represents a positioned tile.
  * @property {string} id - The unique identifier of the tile.
+ * @property {string} type - The type of tile.
+ * @property {string} direction - The direction of the tile.
+ * @property {number} ratio - The size ratio of the tile.
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
  * @property {number} angle - The rotation angle of the tile.
