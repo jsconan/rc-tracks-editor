@@ -2,20 +2,21 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, getContext } from 'svelte';
+    import { TileSpecifications } from '../config';
     import { CurvedBarrier, CurvedElement } from '../elements';
     import { CurvedTileModel } from '../models';
 
-    export let model;
+    export let direction = CurvedTileModel.DIRECTION_RIGHT;
+    export let ratio = 1;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof CurvedTileModel)) {
-        throw new TypeError('The model must be an instance of CurvedTileModel!');
-    }
+    const specs = getContext(TileSpecifications.CONTEXT_ID);
+    const model = new CurvedTileModel(specs, direction, ratio);
 
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();
@@ -38,7 +39,7 @@
     const dispatch = createEventDispatcher();
 
     function click() {
-        dispatch('click', { id, x, y, angle, model });
+        dispatch('click', { id, type: model.type, direction, ratio, x, y, angle });
     }
 
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';

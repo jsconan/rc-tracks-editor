@@ -278,6 +278,7 @@ exports[`Track renders with default values 1`] = `
       
       
     </svg>
+    
   </div>
 </body>
 `;
@@ -562,6 +563,7 @@ exports[`Track renders with the given parameters 1`] = `
       
       
     </svg>
+    
   </div>
 </body>
 `;
@@ -933,6 +935,7 @@ exports[`Track update when the model is modified 1`] = `
       
       
     </svg>
+    
   </div>
 </body>
 `;

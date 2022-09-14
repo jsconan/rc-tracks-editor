@@ -17,9 +17,11 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import Tile from '../Tile.svelte';
 import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../models';
 import { TileSpecifications } from '../../config';
+import { TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -30,47 +32,65 @@ const curvedTile = new CurvedTileModel(specs);
 const curvedTileEnlarged = new CurvedTileEnlargedModel(specs);
 
 describe('Tile', () => {
-    it.each([
-        [straightTile.type, straightTile],
-        [curvedTile.type, curvedTile],
-        [curvedTileEnlarged.type, curvedTileEnlarged]
-    ])('renders a %s tile with default values', (type, model) => {
-        const props = { model };
-        const { container } = render(Tile, { props });
+    it.each([void 0, straightTile.type, curvedTile.type, curvedTileEnlarged.type])(
+        'renders a %s tile with default values',
+        type => {
+            const props = { type };
+            const { container } = render(Context, {
+                props: {
+                    component: Tile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
-        expect(container).toMatchSnapshot();
+            expect(container).toMatchSnapshot();
+        }
+    );
+
+    it.each([straightTile.type, curvedTile.type, curvedTileEnlarged.type])(
+        'renders a %s tile with the given parameters',
+        type => {
+            const props = {
+                type,
+                direction: TILE_DIRECTION_RIGHT,
+                ratio: 1,
+                x: 100,
+                y: 200,
+                angle: 90,
+                filter: 'select',
+                id: 'tile'
+            };
+            const { container } = render(Context, {
+                props: {
+                    component: Tile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
+
+            expect(container).toMatchSnapshot();
+        }
+    );
+
+    it('needs a valid type', () => {
+        const props = { type: 'tile' };
+        expect(() => render(Tile, { props })).toThrow('A valid type of tile is needed!');
     });
 
-    it.each([
-        [straightTile.type, straightTile],
-        [curvedTile.type, curvedTile],
-        [curvedTileEnlarged.type, curvedTileEnlarged]
-    ])('renders a %s tile with the given parameters', (type, model) => {
-        const props = {
-            model,
-            x: 100,
-            y: 200,
-            angle: 90,
-            filter: 'select',
-            id: 'tile'
-        };
-        const { container } = render(Tile, { props });
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('needs a valid model', () => {
-        expect(() => render(Tile)).toThrow('The model must be an instance of TileModel!');
-    });
-
-    it.each([
-        [straightTile.type, straightTile],
-        [curvedTile.type, curvedTile],
-        [curvedTileEnlarged.type, curvedTileEnlarged]
-    ])('fires click from a %s tile', (type, model) => {
+    it.each([straightTile.type, curvedTile.type, curvedTileEnlarged.type])('fires click from a %s tile', type => {
         const onClick = jest.fn();
-        const props = { model };
-        const { container, component } = render(Tile, { props });
+        const props = { type };
+        const { container, component } = render(Context, {
+            props: {
+                component: Tile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
         const element = container.querySelector('.ground');
 
         component.$on('click', onClick);

@@ -17,8 +17,8 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
-import { CurvedTileEnlargedModel } from '../../models';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 
@@ -29,10 +29,13 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('CurvedTileEnlarged', () => {
     it('renders with default values', () => {
-        const props = {
-            model: new CurvedTileEnlargedModel(specs)
-        };
-        const { container } = render(CurvedTileEnlarged, { props });
+        const { container } = render(Context, {
+            props: {
+                component: CurvedTileEnlarged,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -50,35 +53,36 @@ describe('CurvedTileEnlarged', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new CurvedTileEnlargedModel(specs, direction, ratio),
+                direction,
+                ratio,
                 angle,
                 x: 100,
                 y: 150,
                 filter: 'select',
                 id: 'tile'
             };
-            const { container } = render(CurvedTileEnlarged, { props });
+            const { container } = render(Context, {
+                props: {
+                    component: CurvedTileEnlarged,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
             expect(container).toMatchSnapshot();
         }
     );
 
-    it('needs a valid model', () => {
-        const props = {
-            model: {}
-        };
-        // @ts-expect-error
-        expect(() => render(CurvedTileEnlarged, { props })).toThrow(
-            'The model must be an instance of CurvedTileEnlargedModel!'
-        );
-    });
-
     it('fires click', () => {
         const onClick = jest.fn();
-        const props = {
-            model: new CurvedTileEnlargedModel(specs)
-        };
-        const { container, component } = render(CurvedTileEnlarged, { props });
+        const { container, component } = render(Context, {
+            props: {
+                component: CurvedTileEnlarged,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
         const element = container.querySelector('.ground');
 
         component.$on('click', onClick);

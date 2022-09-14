@@ -17,8 +17,8 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import StraightTile from '../StraightTile.svelte';
-import { StraightTileModel } from '../../models';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 
@@ -29,10 +29,13 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('StraightTile', () => {
     it('renders with default values', () => {
-        const props = {
-            model: new StraightTileModel(specs)
-        };
-        const { container } = render(StraightTile, { props });
+        const { container } = render(Context, {
+            props: {
+                component: StraightTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -50,33 +53,36 @@ describe('StraightTile', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new StraightTileModel(specs, direction, ratio),
+                direction,
+                ratio,
                 angle,
                 x: 100,
                 y: 150,
                 filter: 'select',
                 id: 'tile'
             };
-            const { container } = render(StraightTile, { props });
+            const { container } = render(Context, {
+                props: {
+                    component: StraightTile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
             expect(container).toMatchSnapshot();
         }
     );
 
-    it('needs a valid model', () => {
-        const props = {
-            model: {}
-        };
-        // @ts-expect-error
-        expect(() => render(StraightTile, { props })).toThrow('The model must be an instance of StraightTileModel!');
-    });
-
     it('fires click', () => {
         const onClick = jest.fn();
-        const props = {
-            model: new StraightTileModel(specs)
-        };
-        const { container, component } = render(StraightTile, { props });
+        const { container, component } = render(Context, {
+            props: {
+                component: StraightTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
         const element = container.querySelector('.ground');
 
         component.$on('click', onClick);

@@ -2,20 +2,21 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, getContext } from 'svelte';
+    import { TileSpecifications } from '../config';
     import { CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
 
-    export let model;
+    export let direction = CurvedTileEnlargedModel.DIRECTION_RIGHT;
+    export let ratio = 1;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof CurvedTileEnlargedModel)) {
-        throw new TypeError('The model must be an instance of CurvedTileEnlargedModel!');
-    }
+    const specs = getContext(TileSpecifications.CONTEXT_ID);
+    const model = new CurvedTileEnlargedModel(specs, direction, ratio);
 
     const barrierLength = model.specs.barrierLength;
     const barrierWidth = model.specs.barrierWidth;
@@ -58,7 +59,7 @@
     const dispatch = createEventDispatcher();
 
     function click() {
-        dispatch('click', { id, x, y, angle, model });
+        dispatch('click', { id, type: model.type, direction, ratio, x, y, angle });
     }
 
     $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';

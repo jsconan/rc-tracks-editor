@@ -78,6 +78,7 @@ exports[`CurvedTile renders with default values 1`] = `
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -162,6 +163,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -246,6 +248,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -303,6 +306,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -387,6 +391,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -489,6 +494,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -591,6 +597,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -693,6 +700,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -777,6 +785,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;

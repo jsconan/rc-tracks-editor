@@ -17,6 +17,7 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import Track from '../Track.svelte';
 import { TilesList } from '../../models';
 import { TileSpecifications } from '../../config';
@@ -37,7 +38,14 @@ model.import([
 describe('Track', () => {
     it('renders with default values', () => {
         const props = { model };
-        const { container } = render(Track, { props });
+        const { container } = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -51,7 +59,14 @@ describe('Track', () => {
             height: 400,
             angle: 90
         };
-        const { container } = render(Track, { props });
+        const { container } = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -65,7 +80,14 @@ describe('Track', () => {
             height: 400,
             angle: 90
         };
-        const rendered = render(Track, { props });
+        const rendered = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         return wait(10)
             .then(() => model.appendTile())
@@ -77,6 +99,7 @@ describe('Track', () => {
         expect(() =>
             render(Track, {
                 props: {
+                    // @ts-expect-error
                     model: {}
                 }
             })
@@ -85,6 +108,7 @@ describe('Track', () => {
         expect(() =>
             render(Track, {
                 props: {
+                    // @ts-expect-error
                     model: {
                         subscribe() {
                             return () => {};
@@ -98,7 +122,14 @@ describe('Track', () => {
     it('fires click', () => {
         const onClick = jest.fn();
         const props = { model };
-        const { container, component } = render(Track, { props });
+        const { container, component } = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         component.$on('click', onClick);
         fireEvent.click(container.querySelector(`#id-0`));

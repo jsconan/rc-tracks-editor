@@ -17,8 +17,8 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import CurvedTile from '../CurvedTile.svelte';
-import { CurvedTileModel } from '../../models';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 
@@ -29,10 +29,13 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('CurvedTile', () => {
     it('renders with default values', () => {
-        const props = {
-            model: new CurvedTileModel(specs)
-        };
-        const { container } = render(CurvedTile, { props });
+        const { container } = render(Context, {
+            props: {
+                component: CurvedTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -50,33 +53,36 @@ describe('CurvedTile', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new CurvedTileModel(specs, direction, ratio),
+                direction,
+                ratio,
                 angle,
                 x: 100,
                 y: 150,
                 filter: 'select',
                 id: 'tile'
             };
-            const { container } = render(CurvedTile, { props });
+            const { container } = render(Context, {
+                props: {
+                    component: CurvedTile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
             expect(container).toMatchSnapshot();
         }
     );
 
-    it('needs a valid model', () => {
-        const props = {
-            model: {}
-        };
-        // @ts-expect-error
-        expect(() => render(CurvedTile, { props })).toThrow('The model must be an instance of CurvedTileModel!');
-    });
-
     it('fires click', () => {
         const onClick = jest.fn();
-        const props = {
-            model: new CurvedTileModel(specs)
-        };
-        const { container, component } = render(CurvedTile, { props });
+        const { container, component } = render(Context, {
+            props: {
+                component: CurvedTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
         const element = container.querySelector('.ground');
 
         component.$on('click', onClick);
