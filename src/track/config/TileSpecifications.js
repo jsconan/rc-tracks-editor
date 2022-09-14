@@ -27,7 +27,7 @@ export class TileSpecifications {
      * @param {number} barrierChunks - The number of barrier chunks per tile.
      * @param {number} maxRatio - The maximum value for size ratios.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks, maxRatio = 4) {
+    constructor(laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4) {
         this.setLaneWidth(laneWidth);
         this.setBarrierWidth(barrierWidth);
         this.setBarrierChunks(barrierChunks);

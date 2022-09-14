@@ -33,6 +33,21 @@ describe('TileSpecifications', () => {
         expect(TileSpecifications).toEqual(expect.any(Function));
     });
 
+    it('defines default specifications for the tiles', () => {
+        const specs = new TileSpecifications();
+
+        expect(specs).toBeInstanceOf(TileSpecifications);
+        expect(specs.laneWidth).toBe(20);
+        expect(specs.barrierWidth).toBe(1);
+        expect(specs.barrierChunks).toBe(4);
+        expect(specs.length).toBe(27);
+        expect(specs.width).toBe(22);
+        expect(specs.padding).toBe(2.5);
+        expect(specs.barrierLength).toBe(6.75);
+        expect(specs.maxRatio).toBe(4);
+        expect(specs.contextId).toBe(contextId);
+    });
+
     it('defines the specifications for the tiles', () => {
         const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
