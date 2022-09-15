@@ -17,6 +17,7 @@
  */
 
 import { writable } from 'svelte/store';
+import { validateCallback } from '../helpers';
 
 /**
  * Represents an observable set of counters.
@@ -85,11 +86,10 @@ export class Counter {
      * Applies a callback to each counter from the list.
      * @param {function} walker - A callback that will be applied to each counter of the list.
      * @returns {Counter} - Chains the counter.
+     * @throws {TypeError} - If the given callback is not a function.
      */
     forEach(walker) {
-        if ('function' !== typeof walker) {
-            throw new TypeError('A callback function is expected!');
-        }
+        validateCallback(walker);
 
         this.counters.forEach((value, key) => walker.call(this, value, key, this));
 
@@ -100,11 +100,10 @@ export class Counter {
      * Maps the counters to an object.
      * @param {function} mapper - A mapper callback that will be applied to each counter.
      * @returns {object}
+     * @throws {TypeError} - If the given callback is not a function.
      */
     map(mapper) {
-        if ('function' !== typeof mapper) {
-            throw new TypeError('A callback function is expected!');
-        }
+        validateCallback(mapper);
 
         const counters = {};
 

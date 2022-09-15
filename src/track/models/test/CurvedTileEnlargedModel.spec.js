@@ -39,7 +39,9 @@ describe('CurvedTileEnlargedModel', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new CurvedTileEnlargedModel({})).toThrow('A valid specifications object is needed!');
+            expect(() => new CurvedTileEnlargedModel({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to create an instance with an invalid direction', () => {
@@ -49,7 +51,9 @@ describe('CurvedTileEnlargedModel', () => {
         it('when trying to set an invalid specifications object', () => {
             const tile = new CurvedTileEnlargedModel(specs);
             // @ts-expect-error
-            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
+            expect(() => tile.setSpecs({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to set an invalid direction', () => {
@@ -306,8 +310,16 @@ describe('CurvedTileEnlargedModel', () => {
         [CurvedTileEnlargedModel.DIRECTION_LEFT, 1],
         [CurvedTileEnlargedModel.DIRECTION_LEFT, 2]
     ])('can export to an object a tile oriented to the %s having a ratio of %s', (direction, ratio) => {
-        const track = new CurvedTileEnlargedModel(specs, direction, ratio);
+        const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
 
-        expect(track.export()).toMatchSnapshot();
+        expect(tile.export()).toMatchSnapshot();
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const tile = new CurvedTileEnlargedModel(specs);
+        expect(() => CurvedTileEnlargedModel.validateInstance(tile)).not.toThrow();
+        expect(() => CurvedTileEnlargedModel.validateInstance({})).toThrow(
+            'The model must be an instance of CurvedTileEnlargedModel!'
+        );
     });
 });

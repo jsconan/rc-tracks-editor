@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import {
-        isTypeValid,
+        validateType,
         CURVED_TILE_ENLARGED_TYPE,
         CURVED_TILE_TYPE,
         STRAIGHT_TILE_TYPE,
@@ -22,9 +22,7 @@
     export let filter = void 0;
     export let id = void 0;
 
-    if (!isTypeValid(type)) {
-        throw new TypeError('A valid type of tile is needed!');
-    }
+    validateType(type);
 
     const componentsMap = {
         [STRAIGHT_TILE_TYPE]: StraightTile,

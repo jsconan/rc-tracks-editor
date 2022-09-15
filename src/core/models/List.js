@@ -17,6 +17,7 @@
  */
 
 import { writable } from 'svelte/store';
+import { validateCallback } from '../helpers';
 
 /**
  * Represents an observable list.
@@ -82,11 +83,10 @@ export class List {
      * Applies a callback to each value from the list.
      * @param {function} walker - A callback that will be applied to each value of the list.
      * @returns {List} - Chains the list.
+     * @throws {TypeError} - If the given callback is not a function.
      */
     forEach(walker) {
-        if ('function' !== typeof walker) {
-            throw new TypeError('A callback function is expected!');
-        }
+        validateCallback(walker);
 
         this.list.forEach((value, index) => walker.call(this, value, index, this));
 
@@ -97,11 +97,10 @@ export class List {
      * Maps the values of the list to an array.
      * @param {function} mapper - A mapper callback that will be applied to each value of the list.
      * @returns {Array}
+     * @throws {TypeError} - If the given callback is not a function.
      */
     map(mapper) {
-        if ('function' !== typeof mapper) {
-            throw new TypeError('A callback function is expected!');
-        }
+        validateCallback(mapper);
 
         return this.list.map((value, index) => mapper.call(this, value, index, this));
     }

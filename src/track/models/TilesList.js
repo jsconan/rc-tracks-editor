@@ -18,7 +18,7 @@
 
 import { derived } from 'svelte/store';
 import {
-    isTypeValid,
+    validateType,
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,
     STRAIGHT_TILE_TYPE,
@@ -54,9 +54,7 @@ const modelsMap = {
  * @private
  */
 function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-    if (!isTypeValid(type)) {
-        throw new TypeError('A valid type of tile is needed!');
-    }
+    validateType(type);
     const model = new modelsMap[type](specs, direction, ratio);
     model.id = uid();
     return model;
@@ -94,9 +92,7 @@ export class TilesList {
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
-        if (!specs || !(specs instanceof TileSpecifications)) {
-            throw new TypeError('A valid specifications object is needed!');
-        }
+        TileSpecifications.validateInstance(specs);
 
         this.specs = specs;
 
@@ -350,6 +346,18 @@ export class TilesList {
         this.tiles.clear();
 
         return this;
+    }
+
+    /**
+     * Validates that the given model is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} model - The instance to validate.
+     * @throws {TypeError} - If the given model is not a valid instance.
+     */
+    static validateInstance(model) {
+        if (!(model instanceof this)) {
+            throw new TypeError(`The model must be an instance of ${this.name}!`);
+        }
     }
 }
 

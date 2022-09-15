@@ -109,4 +109,12 @@ describe('TileSpecifications', () => {
             expect(specs.maxRatio).toBe(expected);
         });
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+        expect(() => TileSpecifications.validateInstance(specs)).not.toThrow();
+        expect(() => TileSpecifications.validateInstance({})).toThrow(
+            'The specifications object must be an instance of TileSpecifications!'
+        );
+    });
 });

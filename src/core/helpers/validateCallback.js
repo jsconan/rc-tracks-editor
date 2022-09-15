@@ -16,8 +16,14 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
+/**
+ * Validates that the given callback is a function.
+ * Otherwise, an error is thrown.
+ * @param {*} callback - The callback to validate.
+ * @throws {TypeError} - If the given callback is not a function.
+ */
+export default callback => {
+    if ('function' !== typeof callback) {
+        throw new TypeError('A callback function is expected!');
+    }
+};

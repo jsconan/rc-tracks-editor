@@ -34,13 +34,17 @@ describe('TilesList', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new TilesList({})).toThrow('A valid specifications object is needed!');
+            expect(() => new TilesList({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to set an invalid specifications object', () => {
             const track = new TilesList(specs);
             // @ts-expect-error
-            expect(() => track.setSpecs({})).toThrow('A valid specifications object is needed!');
+            expect(() => track.setSpecs({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to add a tile with an invalid type', () => {
@@ -55,333 +59,333 @@ describe('TilesList', () => {
     });
 
     it('can set the specifications of the tile', () => {
-        const track = new TilesList(specs);
+        const list = new TilesList(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
-        track.appendTile();
+        list.appendTile();
 
-        expect(track.specs).toBeInstanceOf(TileSpecifications);
-        expect(track.specs).not.toBe(newSpecs);
-        expect(track.setSpecs(newSpecs)).toBe(track);
-        expect(track.specs).toBe(newSpecs);
-        expect(track).toMatchSnapshot();
+        expect(list.specs).toBeInstanceOf(TileSpecifications);
+        expect(list.specs).not.toBe(newSpecs);
+        expect(list.setSpecs(newSpecs)).toBe(list);
+        expect(list.specs).toBe(newSpecs);
+        expect(list).toMatchSnapshot();
     });
 
     it('can get the index of a tile in the track', () => {
-        const track = new TilesList(specs);
+        const list = new TilesList(specs);
 
-        track.appendTile();
-        const id = track.appendTile();
-        track.appendTile();
+        list.appendTile();
+        const id = list.appendTile();
+        list.appendTile();
 
-        expect(track.getTileIndex(id)).toBe(1);
-        expect(track.getTileIndex('id')).toBe(-1);
+        expect(list.getTileIndex(id)).toBe(1);
+        expect(list.getTileIndex('id')).toBe(-1);
     });
 
     describe('can get a tile from the track', () => {
         it('by its identifier', () => {
-            const track = new TilesList(specs);
+            const list = new TilesList(specs);
 
-            track.appendTile();
-            const id = track.appendTile();
-            track.appendTile();
+            list.appendTile();
+            const id = list.appendTile();
+            list.appendTile();
 
-            expect(track.getTile(id)).toBe(track.tiles.get(1));
-            expect(track.getTile(id)).toBeInstanceOf(StraightTileModel);
-            expect(track.getTile('id')).toBeNull();
+            expect(list.getTile(id)).toBe(list.tiles.get(1));
+            expect(list.getTile(id)).toBeInstanceOf(StraightTileModel);
+            expect(list.getTile('id')).toBeNull();
         });
 
         it('by its index', () => {
-            const track = new TilesList(specs);
+            const list = new TilesList(specs);
 
-            track.appendTile();
-            track.appendTile();
-            track.appendTile();
+            list.appendTile();
+            list.appendTile();
+            list.appendTile();
 
-            expect(track.getTileAt(1)).toBe(track.tiles.get(1));
-            expect(track.getTileAt(1)).toBeInstanceOf(StraightTileModel);
-            expect(track.getTileAt(3)).toBeNull();
+            expect(list.getTileAt(1)).toBe(list.tiles.get(1));
+            expect(list.getTileAt(1)).toBeInstanceOf(StraightTileModel);
+            expect(list.getTileAt(3)).toBeNull();
         });
     });
 
     describe('can build a track', () => {
         it('with the given size', () => {
-            const track = new TilesList(specs);
+            const list = new TilesList(specs);
 
-            expect(track).toBeInstanceOf(TilesList);
-            expect(track).toMatchSnapshot();
+            expect(list).toBeInstanceOf(TilesList);
+            expect(list).toMatchSnapshot();
         });
 
         describe('adding tiles', () => {
             describe('at the last position', () => {
                 it('with the default specifications', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile();
+                    const id = list.appendTile();
 
                     expect(id).toEqual(expect.any(String));
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = list.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
             });
 
             describe('at the first position', () => {
                 it('with the default specifications', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.prependTile();
+                    list.appendTile();
+                    const id = list.prependTile();
 
                     expect(id).toEqual(expect.any(String));
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    list.appendTile();
+                    const id = list.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(id).toEqual(expect.any(String));
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
             });
         });
 
         describe('removing tiles', () => {
             it('from the start', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                const id = track.appendTile();
-                track.appendTile();
-                track.appendTile();
+                const id = list.appendTile();
+                list.appendTile();
+                list.appendTile();
 
-                expect(track.removeTile(id)).toBeTruthy();
-                expect(track).toMatchSnapshot();
+                expect(list.removeTile(id)).toBeTruthy();
+                expect(list).toMatchSnapshot();
             });
 
             it('from the middle', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
-                const id = track.appendTile();
-                track.appendTile();
+                list.appendTile();
+                const id = list.appendTile();
+                list.appendTile();
 
-                expect(track.removeTile(id)).toBeTruthy();
-                expect(track).toMatchSnapshot();
+                expect(list.removeTile(id)).toBeTruthy();
+                expect(list).toMatchSnapshot();
             });
 
             it('from the end', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
-                track.appendTile();
-                const id = track.appendTile();
+                list.appendTile();
+                list.appendTile();
+                const id = list.appendTile();
 
-                expect(track.removeTile(id)).toBeTruthy();
-                expect(track).toMatchSnapshot();
+                expect(list.removeTile(id)).toBeTruthy();
+                expect(list).toMatchSnapshot();
             });
 
             it('at inexistent position', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
+                list.appendTile();
 
-                expect(track.removeTile('id')).toBeFalsy();
-                expect(track).toMatchSnapshot();
+                expect(list.removeTile('id')).toBeFalsy();
+                expect(list).toMatchSnapshot();
             });
         });
 
         describe('replacing tiles', () => {
             it('with a tile having default specifications', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
-                const id = track.appendTile();
-                track.appendTile();
-                const newId = track.replaceTile(id);
+                list.appendTile();
+                const id = list.appendTile();
+                list.appendTile();
+                const newId = list.replaceTile(id);
 
                 expect(newId).toEqual(expect.any(String));
                 expect(newId).not.toBe(id);
-                expect(track).toMatchSnapshot();
+                expect(list).toMatchSnapshot();
             });
 
             it('with a tile having a particular type', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
-                track.appendTile();
-                const id = track.appendTile();
-                const newId = track.replaceTile(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                list.appendTile();
+                list.appendTile();
+                const id = list.appendTile();
+                const newId = list.replaceTile(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(newId).toEqual(expect.any(String));
                 expect(newId).not.toBe(id);
-                expect(track).toMatchSnapshot();
+                expect(list).toMatchSnapshot();
             });
 
             it('at inexistent position', () => {
-                const track = new TilesList(specs);
+                const list = new TilesList(specs);
 
-                track.appendTile();
-                expect(track.replaceTile('id')).toBeNull();
-                expect(track).toMatchSnapshot();
+                list.appendTile();
+                expect(list.replaceTile('id')).toBeNull();
+                expect(list).toMatchSnapshot();
             });
         });
 
         describe('inserting tiles', () => {
             describe('before', () => {
                 it('an inexistent position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
+                    list.appendTile();
 
-                    expect(track.insertTileBefore('id')).toBeNull();
-                    expect(track).toMatchSnapshot();
+                    expect(list.insertTileBefore('id')).toBeNull();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile();
-                    track.appendTile();
-                    const newId = track.insertTileBefore(id);
+                    const id = list.appendTile();
+                    list.appendTile();
+                    const newId = list.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('the last position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.appendTile();
-                    const newId = track.insertTileBefore(id);
+                    list.appendTile();
+                    const id = list.appendTile();
+                    const newId = list.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.appendTile();
-                    track.appendTile();
-                    const newId = track.insertTileBefore(id);
+                    list.appendTile();
+                    const id = list.appendTile();
+                    list.appendTile();
+                    const newId = list.insertTileBefore(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile();
-                    const newId = track.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = list.appendTile();
+                    const newId = list.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
             });
 
             describe('after', () => {
                 it('an inexistent position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
+                    list.appendTile();
 
-                    expect(track.insertTileAfter('id')).toBeNull();
-                    expect(track).toMatchSnapshot();
+                    expect(list.insertTileAfter('id')).toBeNull();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile();
-                    track.appendTile();
-                    const newId = track.insertTileAfter(id);
+                    const id = list.appendTile();
+                    list.appendTile();
+                    const newId = list.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('the last position', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.appendTile();
-                    const newId = track.insertTileAfter(id);
+                    list.appendTile();
+                    const id = list.appendTile();
+                    const newId = list.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('a position in the middle', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    track.appendTile();
-                    const id = track.appendTile();
-                    track.appendTile();
-                    const newId = track.insertTileAfter(id);
+                    list.appendTile();
+                    const id = list.appendTile();
+                    list.appendTile();
+                    const newId = list.insertTileAfter(id);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
-                    const track = new TilesList(specs);
+                    const list = new TilesList(specs);
 
-                    const id = track.appendTile();
-                    const newId = track.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const id = list.appendTile();
+                    const newId = list.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                     expect(newId).toEqual(expect.any(String));
                     expect(newId).not.toBe(id);
-                    expect(track).toMatchSnapshot();
+                    expect(list).toMatchSnapshot();
                 });
             });
         });
     });
 
     it('can rebuilds the stats', () => {
-        const track = new TilesList(specs);
+        const list = new TilesList(specs);
 
-        expect([...track.stats]).toEqual([]);
-        expect(track.rebuildStats()).toBe(track);
-        expect([...track.stats]).toEqual([]);
+        expect([...list.stats]).toEqual([]);
+        expect(list.rebuildStats()).toBe(list);
+        expect([...list.stats]).toEqual([]);
 
-        track.appendTile(CURVED_TILE_TYPE);
+        list.appendTile(CURVED_TILE_TYPE);
 
-        expect(track.stats).toMatchSnapshot();
+        expect(list.stats).toMatchSnapshot();
 
-        track.getTileAt(0).setRatio(3);
+        list.getTileAt(0).setRatio(3);
 
-        expect(track.rebuildStats()).toBe(track);
-        expect(track.stats).toMatchSnapshot();
+        expect(list.rebuildStats()).toBe(list);
+        expect(list.stats).toMatchSnapshot();
     });
 
     it('can export to an object', () => {
-        const track = new TilesList(specs);
-        track.appendTile(CURVED_TILE_TYPE);
+        const list = new TilesList(specs);
+        list.appendTile(CURVED_TILE_TYPE);
 
-        expect(track.export()).toMatchSnapshot();
+        expect(list.export()).toMatchSnapshot();
     });
 
     it('can import from an object', () => {
-        const track = new TilesList(specs);
+        const list = new TilesList(specs);
         const data = [
             {
                 type: CURVED_TILE_TYPE,
@@ -396,81 +400,87 @@ describe('TilesList', () => {
             }
         ];
 
-        track.appendTile();
+        list.appendTile();
 
         // @ts-expect-error
-        expect(track.import({})).toBe(track);
-        expect(track).toMatchSnapshot();
+        expect(list.import({})).toBe(list);
+        expect(list).toMatchSnapshot();
 
-        expect(track.import(data)).toBe(track);
-        expect(track).toMatchSnapshot();
+        expect(list.import(data)).toBe(list);
+        expect(list).toMatchSnapshot();
     });
 
     it('can clear the list', () => {
-        const track = new TilesList(specs);
-        track.appendTile(CURVED_TILE_TYPE);
+        const list = new TilesList(specs);
+        list.appendTile(CURVED_TILE_TYPE);
 
-        expect(track.clear()).toBe(track);
-        expect(track).toMatchSnapshot();
+        expect(list.clear()).toBe(list);
+        expect(list).toMatchSnapshot();
     });
 
     describe('can notify changes', () => {
         it('for changes applying to the tiles', () => {
-            const track = new TilesList(specs);
+            const list = new TilesList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
-                expect(value).toBe(track);
+                expect(value).toBe(list);
                 expect(value).toMatchSnapshot();
             });
 
-            const unsubscribe = track.subscribe(callback); // callback called
+            const unsubscribe = list.subscribe(callback); // callback called
 
-            track.setSpecs(specs);
-            const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
-            const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
-            track.removeTile(id1); // callback called
-            const id3 = track.replaceTile(id2); // callback called
-            track.insertTileBefore(id3); // callback called
-            track.insertTileAfter(id3); // callback called
-            const data = track.export();
-            track.clear(); // callback called
-            track.import(data); // callback called
-            track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
-            track.rebuildStats();
+            list.setSpecs(specs);
+            const id1 = list.appendTile(CURVED_TILE_TYPE); // callback called
+            const id2 = list.prependTile(CURVED_TILE_TYPE); // callback called
+            list.removeTile(id1); // callback called
+            const id3 = list.replaceTile(id2); // callback called
+            list.insertTileBefore(id3); // callback called
+            list.insertTileAfter(id3); // callback called
+            const data = list.export();
+            list.clear(); // callback called
+            list.import(data); // callback called
+            list.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+            list.rebuildStats();
 
             unsubscribe();
-            track.appendTile();
+            list.appendTile();
 
             expect(callback).toHaveBeenCalledTimes(10);
         });
 
         it('for changes applying to the stats', () => {
-            const track = new TilesList(specs);
+            const list = new TilesList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
-                expect(value).toBe(track.stats);
+                expect(value).toBe(list.stats);
                 expect(value).toMatchSnapshot();
             });
 
-            const unsubscribe = track.stats.subscribe(callback); // callback called
+            const unsubscribe = list.stats.subscribe(callback); // callback called
 
-            track.setSpecs(specs);
-            const id1 = track.appendTile(CURVED_TILE_TYPE); // callback called
-            const id2 = track.prependTile(CURVED_TILE_TYPE); // callback called
-            track.removeTile(id1); // callback called
-            const id3 = track.replaceTile(id2); // callback called twice
-            track.insertTileBefore(id3); // callback called
-            track.insertTileAfter(id3); // callback called
-            const data = track.export();
-            track.clear(); // callback called
-            track.import(data); // callback called
-            track.setSpecs(new TileSpecifications(10, 1, 2));
-            track.rebuildStats(); // callback called
+            list.setSpecs(specs);
+            const id1 = list.appendTile(CURVED_TILE_TYPE); // callback called
+            const id2 = list.prependTile(CURVED_TILE_TYPE); // callback called
+            list.removeTile(id1); // callback called
+            const id3 = list.replaceTile(id2); // callback called twice
+            list.insertTileBefore(id3); // callback called
+            list.insertTileAfter(id3); // callback called
+            const data = list.export();
+            list.clear(); // callback called
+            list.import(data); // callback called
+            list.setSpecs(new TileSpecifications(10, 1, 2));
+            list.rebuildStats(); // callback called
 
             unsubscribe();
-            track.appendTile();
+            list.appendTile();
 
             expect(callback).toHaveBeenCalledTimes(11);
         });
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const list = new TilesList(specs);
+        expect(() => TilesList.validateInstance(list)).not.toThrow();
+        expect(() => TilesList.validateInstance({})).toThrow('The model must be an instance of TilesList!');
     });
 });

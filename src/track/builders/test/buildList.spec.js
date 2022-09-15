@@ -42,7 +42,7 @@ describe('buildList', () => {
 
     it('throws error when trying to use a wrong list of tiles', () => {
         // @ts-expect-error
-        expect(() => buildList([])).toThrow('A valid list of tiles is needed!');
+        expect(() => buildList([])).toThrow('The model must be an instance of TilesList!');
     });
 
     describe('process a list of tiles for rendering', () => {

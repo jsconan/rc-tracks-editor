@@ -14,9 +14,7 @@
     export let width = void 0;
     export let height = void 0;
 
-    if (!(model instanceof TilesList)) {
-        throw new TypeError('The model must be an instance of TilesList!');
-    }
+    TilesList.validateInstance(model);
 
     $: track = buildTrack($model, { startAngle: angle });
 </script>

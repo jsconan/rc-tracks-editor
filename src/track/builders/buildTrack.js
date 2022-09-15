@@ -27,11 +27,10 @@ import { TilesList } from '../models';
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
  * @param {number} [config.startAngle] - The rotation angle of the first tile.
  * @returns {trackCoord}
+ * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
-    if (!list || !(list instanceof TilesList)) {
-        throw new TypeError('A valid list of tiles is needed!');
-    }
+    TilesList.validateInstance(list);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();

@@ -34,6 +34,7 @@ import { TilesList } from '../models';
  * @param {boolean} [config.aligned] - Whether or not align the tiles.
  * @param {boolean} [config.vertical] - Position the tiles vertically.
  * @returns {listCoord}
+ * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (
     list,
@@ -50,9 +51,7 @@ export default (
         vertical = false
     } = {}
 ) => {
-    if (!list || !(list instanceof TilesList)) {
-        throw new TypeError('A valid list of tiles is needed!');
-    }
+    TilesList.validateInstance(list);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();

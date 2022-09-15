@@ -45,7 +45,7 @@ describe('buildTrack', () => {
 
     it('throws error when trying to use a wrong list of tiles', () => {
         // @ts-expect-error
-        expect(() => buildTrack([])).toThrow('A valid list of tiles is needed!');
+        expect(() => buildTrack([])).toThrow('The model must be an instance of TilesList!');
     });
 
     describe('process a list of tiles for rendering a track', () => {

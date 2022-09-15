@@ -27,5 +27,7 @@ export {
     CURVED_TILE_ENLARGED_TYPE,
     flipTileDirection,
     isDirectionValid,
-    isTypeValid
+    isTypeValid,
+    validateDirection,
+    validateType
 } from './tiles.js';
