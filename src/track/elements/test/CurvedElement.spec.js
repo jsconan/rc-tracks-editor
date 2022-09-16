@@ -17,6 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { wait } from '../../../core/helpers';
 import CurvedElement from '../CurvedElement.svelte';
 
 describe('CurvedElement', () => {
@@ -40,5 +41,32 @@ describe('CurvedElement', () => {
         const { container } = render(CurvedElement, { props });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it.each([
+        ['class', { class: 'curve' }],
+        ['style', { style: 'fill: #888' }],
+        ['cx', { cx: 40 }],
+        ['cy', { cy: 40 }],
+        ['width', { width: 40 }],
+        ['radius', { radius: 40 }],
+        ['angle', { angle: 40 }],
+        ['start', { start: 40 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            class: 'tile',
+            style: 'fill: #444;',
+            cx: 100,
+            cy: 150,
+            width: 80,
+            radius: 50,
+            angle: 30,
+            start: 60
+        };
+        const rendered = render(CurvedElement, { props });
+
+        return wait(10)
+            .then(() => rendered.component.$set(update))
+            .then(() => expect(rendered.container).toMatchSnapshot());
     });
 });

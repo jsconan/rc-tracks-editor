@@ -3,6 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { Vector2D } from '../../core/models';
+    import { arcTo, lineTo, moveTo } from '../../core/helpers';
 
     let cls = void 0;
     export { cls as class };
@@ -14,23 +15,30 @@
     export let angle = 1;
     export let start = 0;
 
-    const innerRadius = radius;
-    const outerRadius = radius + width;
-    const end = start + angle;
-    const center = new Vector2D(cx, cy);
+    /**
+     * Builds the SVG path for rendering a curve.
+     * @param {number} innerRadius - The radius of the inner curve.
+     * @param {number} curveWidth - The width between the inner and the outer curve.
+     * @param {number} curveAngle - Tha angle of the curve.
+     * @param {number} startAngle - The start angle of the curve.
+     * @param {number} centerX - The X-coordinate of the center of the curve.
+     * @param {number} centerY - The Y-coordinate of the center of the curve.
+     * @private
+     */
+    function curvedElementPath(innerRadius, curveWidth, curveAngle, startAngle, centerX, centerY) {
+        const outerRadius = innerRadius + curveWidth;
+        const end = startAngle + curveAngle;
+        const center = new Vector2D(centerX, centerY);
 
-    const p1 = Vector2D.polar(innerRadius, start, center);
-    const p2 = Vector2D.polar(innerRadius, end, center);
-    const p3 = Vector2D.polar(outerRadius, end, center);
-    const p4 = Vector2D.polar(outerRadius, start, center);
+        const p1 = Vector2D.polar(innerRadius, start, center);
+        const p2 = Vector2D.polar(innerRadius, end, center);
+        const p3 = Vector2D.polar(outerRadius, end, center);
+        const p4 = Vector2D.polar(outerRadius, start, center);
+
+        return `${moveTo(p1)} ${arcTo(innerRadius, p2, 0, 1, 0)} ${lineTo(p3)} ${arcTo(outerRadius, p4, 0, 0, 0)} Z`;
+    }
+
+    $: path = curvedElementPath(radius, width, angle, start, cx, cy);
 </script>
 
-<path
-    class={cls}
-    {style}
-    d="M {p1.x} {p1.y}
-       A {innerRadius} {innerRadius} 0 0 1 {p2.x} {p2.y}
-       L {p3.x} {p3.y}
-       A {outerRadius} {outerRadius} 0 0 0 {p4.x} {p4.y}
-       Z"
-/>
+<path class={cls} {style} d={path} />
