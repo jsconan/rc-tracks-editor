@@ -17,6 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { wait } from '../../../core/helpers';
 import CurvedBarrier from '../CurvedBarrier.svelte';
 
 describe('CurvedBarrier', () => {
@@ -45,5 +46,31 @@ describe('CurvedBarrier', () => {
         const { container } = render(CurvedBarrier, { props });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it.each([
+        ['chunks', { chunks: '5' }],
+        ['chunks', { chunks: '3' }],
+        ['width', { width: 4 }],
+        ['angle', { angle: 90 }],
+        ['radius', { radius: 40 }],
+        ['left', { left: 40 }],
+        ['top', { top: 40 }],
+        ['shift', { shift: 1 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            chunks: 4,
+            width: 6,
+            angle: 45,
+            radius: 10,
+            left: 100,
+            top: 100,
+            shift: 0
+        };
+        const rendered = render(CurvedBarrier, { props });
+
+        return wait(10)
+            .then(() => rendered.component.$set(update))
+            .then(() => expect(rendered.container).toMatchSnapshot());
     });
 });
