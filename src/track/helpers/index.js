@@ -17,6 +17,7 @@
  */
 
 export { default as alternateBarrierColor } from './alternateBarrierColor.js';
+export { quadrantAngle, quadrantRange } from './angles.js';
 export {
     TILE_DIRECTION_RIGHT,
     TILE_DIRECTION_LEFT,
