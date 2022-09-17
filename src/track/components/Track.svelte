@@ -11,9 +11,7 @@
     export let x = 0;
     export let y = 0;
 
-    if (!(model instanceof TrackModel)) {
-        throw new TypeError('The model must be an instance of TrackModel!');
-    }
+    TrackModel.validateInstance(model);
 
     $: track = $model.build(0, 0, angle);
 </script>

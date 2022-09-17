@@ -20,7 +20,7 @@ import { List } from '../List.js';
 
 const source = [1, 2, 3];
 
-describe('list', () => {
+describe('List', () => {
     it('is a class', () => {
         expect(List).toEqual(expect.any(Function));
     });
@@ -71,7 +71,7 @@ describe('list', () => {
         expect(callback).toHaveBeenCalledTimes(source.length);
     });
 
-    it('needs a valid callback to walk values', () => {
+    it('needs a valid callback to walk over values', () => {
         // @ts-expect-error
         expect(() => new List().forEach()).toThrow('A callback function is expected!');
     });

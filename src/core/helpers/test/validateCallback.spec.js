@@ -16,8 +16,22 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
+import validateCallback from '../validateCallback.js';
+
+describe('defined', () => {
+    it('is a function', () => {
+        expect(validateCallback).toEqual(expect.any(Function));
+    });
+
+    it('validates a function', () => {
+        expect(() => validateCallback(() => {})).not.toThrow();
+        expect(() => validateCallback(function () {})).not.toThrow();
+    });
+
+    it.each([void 0, {}, [], true, 1])(
+        'throws an error if the callback is not a function, example with "%s"',
+        callback => {
+            expect(() => validateCallback(callback)).toThrow('A callback function is expected!');
+        }
+    );
+});

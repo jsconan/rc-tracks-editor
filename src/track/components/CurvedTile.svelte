@@ -12,9 +12,7 @@
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof CurvedTileModel)) {
-        throw new TypeError('The model must be an instance of CurvedTileModel!');
-    }
+    CurvedTileModel.validateInstance(model);
 
     const innerRadius = model.getInnerRadius();
     const outerRadius = model.getOuterRadius();

@@ -26,5 +26,7 @@ export {
     CURVED_TILE_TYPE,
     CURVED_TILE_ENLARGED_TYPE,
     isDirectionValid,
-    isTypeValid
+    isTypeValid,
+    validateDirection,
+    validateType
 } from './tiles.js';

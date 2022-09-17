@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { isDirectionValid, DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers';
+import { validateDirection, DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
 
@@ -95,9 +95,7 @@ export class TileModel {
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
-        if (!specs || !(specs instanceof TileSpecifications)) {
-            throw new TypeError('A valid specifications object is needed!');
-        }
+        TileSpecifications.validateInstance(specs);
 
         this.specs = specs;
 
@@ -112,9 +110,7 @@ export class TileModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     setDirection(direction) {
-        if (!isDirectionValid(direction)) {
-            throw new TypeError('A valid direction is needed!');
-        }
+        validateDirection(direction);
 
         this.direction = direction;
 
@@ -339,6 +335,18 @@ export class TileModel {
     export() {
         const { type, direction, ratio } = this;
         return { type, direction, ratio };
+    }
+
+    /**
+     * Validates that the given model is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} model - The instance to validate.
+     * @throws {TypeError} - If the given model is not a valid instance.
+     */
+    static validateInstance(model) {
+        if (!(model instanceof this)) {
+            throw new TypeError(`The model must be an instance of ${this.name}!`);
+        }
     }
 }
 

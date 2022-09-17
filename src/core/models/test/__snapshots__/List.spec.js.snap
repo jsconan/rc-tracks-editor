@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`list can add values to the list 1`] = `
+exports[`List can add values to the list 1`] = `
 Array [
   1,
   2,
@@ -10,7 +10,7 @@ Array [
 ]
 `;
 
-exports[`list can insert values at a particular index 1`] = `
+exports[`List can insert values at a particular index 1`] = `
 Array [
   1,
   4,
@@ -20,7 +20,7 @@ Array [
 ]
 `;
 
-exports[`list can insert values at the beginning 1`] = `
+exports[`List can insert values at the beginning 1`] = `
 Array [
   4,
   5,
@@ -30,7 +30,7 @@ Array [
 ]
 `;
 
-exports[`list can insert values at the end 1`] = `
+exports[`List can insert values at the end 1`] = `
 Array [
   1,
   2,
@@ -40,7 +40,7 @@ Array [
 ]
 `;
 
-exports[`list can map its values 1`] = `
+exports[`List can map its values 1`] = `
 Array [
   10,
   20,
@@ -48,7 +48,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 1`] = `
+exports[`List can notify changes 1`] = `
 Array [
   1,
   2,
@@ -56,7 +56,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 2`] = `
+exports[`List can notify changes 2`] = `
 Array [
   1,
   2,
@@ -64,7 +64,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 3`] = `
+exports[`List can notify changes 3`] = `
 Array [
   0,
   1,
@@ -73,7 +73,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 4`] = `
+exports[`List can notify changes 4`] = `
 Array [
   0,
   1,
@@ -83,7 +83,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 5`] = `
+exports[`List can notify changes 5`] = `
 Array [
   0,
   1,
@@ -93,7 +93,7 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 6`] = `
+exports[`List can notify changes 6`] = `
 Array [
   0,
   1,
@@ -102,9 +102,9 @@ Array [
 ]
 `;
 
-exports[`list can notify changes 7`] = `Array []`;
+exports[`List can notify changes 7`] = `Array []`;
 
-exports[`list can notify changes 8`] = `
+exports[`List can notify changes 8`] = `
 Array [
   1,
   2,
@@ -112,13 +112,13 @@ Array [
 ]
 `;
 
-exports[`list can remove values from a particular index 1`] = `
+exports[`List can remove values from a particular index 1`] = `
 Array [
   1,
 ]
 `;
 
-exports[`list can write a value at a particular index 1`] = `
+exports[`List can write a value at a particular index 1`] = `
 Array [
   3,
   4,

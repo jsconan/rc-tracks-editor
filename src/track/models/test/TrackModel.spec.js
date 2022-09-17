@@ -34,13 +34,17 @@ describe('TrackModel', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new TrackModel({})).toThrow('A valid specifications object is needed!');
+            expect(() => new TrackModel({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to set an invalid specifications object', () => {
             const track = new TrackModel(specs);
             // @ts-expect-error
-            expect(() => track.setSpecs({})).toThrow('A valid specifications object is needed!');
+            expect(() => track.setSpecs({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to add a tile with an invalid type', () => {
@@ -473,5 +477,11 @@ describe('TrackModel', () => {
         track.appendTile();
 
         expect(callback).toHaveBeenCalledTimes(11);
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const track = new TrackModel(specs);
+        expect(() => TrackModel.validateInstance(track)).not.toThrow();
+        expect(() => TrackModel.validateInstance({})).toThrow('The model must be an instance of TrackModel!');
     });
 });

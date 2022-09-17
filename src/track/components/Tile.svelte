@@ -15,9 +15,7 @@
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof TileModel)) {
-        throw new TypeError('The model must be an instance of TileModel!');
-    }
+    TileModel.validateInstance(model);
 
     const componentsMap = {
         [STRAIGHT_TILE_TYPE]: StraightTile,

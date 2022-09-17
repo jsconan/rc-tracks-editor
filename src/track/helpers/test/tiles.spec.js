@@ -24,7 +24,9 @@ import {
     isTypeValid,
     STRAIGHT_TILE_TYPE,
     TILE_DIRECTION_LEFT,
-    TILE_DIRECTION_RIGHT
+    TILE_DIRECTION_RIGHT,
+    validateDirection,
+    validateType
 } from '../tiles.js';
 
 describe('isDirectionValid', () => {
@@ -38,6 +40,20 @@ describe('isDirectionValid', () => {
 
     it.each([-1, 0, 1, 2])('tells the direction "%s" is not valid', direction => {
         expect(isDirectionValid(direction)).toBeFalsy();
+    });
+});
+
+describe('validateDirection', () => {
+    it('is a function', () => {
+        expect(validateDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT])('validates the direction "%s"', direction => {
+        expect(() => validateDirection(direction)).not.toThrow();
+    });
+
+    it.each([-1, 0, 1, 2])('throws an error if the direction is not valid, example with "%s"', direction => {
+        expect(() => validateDirection(direction)).toThrow('A valid direction is needed!');
     });
 });
 
@@ -55,5 +71,19 @@ describe('isTypeValid', () => {
 
     it.each([DEFAULT_TILE_TYPE, 'left', 'right'])('tells the type "%s" is not valid', direction => {
         expect(isTypeValid(direction)).toBeFalsy();
+    });
+});
+
+describe('validateType', () => {
+    it('is a function', () => {
+        expect(validateType).toEqual(expect.any(Function));
+    });
+
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])('validates the type "%s"', type => {
+        expect(() => validateType(type)).not.toThrow();
+    });
+
+    it.each([-1, 0, 1, 2])('throws an error if the type is not valid, example with "%s"', type => {
+        expect(() => validateType(type)).toThrow('A valid type of tile is needed!');
     });
 });

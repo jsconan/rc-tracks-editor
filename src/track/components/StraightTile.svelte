@@ -12,9 +12,7 @@
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof StraightTileModel)) {
-        throw new TypeError('The model must be an instance of StraightTileModel!');
-    }
+    StraightTileModel.validateInstance(model);
 
     const width = model.width;
     const height = model.length;

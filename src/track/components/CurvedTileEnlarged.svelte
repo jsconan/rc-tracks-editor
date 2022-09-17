@@ -12,9 +12,7 @@
     export let filter = void 0;
     export let id = void 0;
 
-    if (!(model instanceof CurvedTileEnlargedModel)) {
-        throw new TypeError('The model must be an instance of CurvedTileEnlargedModel!');
-    }
+    CurvedTileEnlargedModel.validateInstance(model);
 
     const barrierLength = model.specs.barrierLength;
     const barrierWidth = model.specs.barrierWidth;

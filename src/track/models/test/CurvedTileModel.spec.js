@@ -39,7 +39,9 @@ describe('CurvedTileModel', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new CurvedTileModel({})).toThrow('A valid specifications object is needed!');
+            expect(() => new CurvedTileModel({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to create an instance with an invalid direction', () => {
@@ -49,7 +51,9 @@ describe('CurvedTileModel', () => {
         it('when trying to set an invalid specifications object', () => {
             const tile = new CurvedTileModel(specs);
             // @ts-expect-error
-            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
+            expect(() => tile.setSpecs({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to set an invalid direction', () => {
@@ -301,5 +305,11 @@ describe('CurvedTileModel', () => {
         const tile = new CurvedTileModel(specs, direction, ratio);
 
         expect(tile.export()).toMatchSnapshot();
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const tile = new CurvedTileModel(specs);
+        expect(() => CurvedTileModel.validateInstance(tile)).not.toThrow();
+        expect(() => CurvedTileModel.validateInstance({})).toThrow('The model must be an instance of CurvedTileModel!');
     });
 });
