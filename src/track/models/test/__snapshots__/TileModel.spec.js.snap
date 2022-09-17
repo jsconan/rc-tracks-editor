@@ -148,6 +148,25 @@ exports[`TileModel can compute the angle of the output point for a tile oriented
 
 exports[`TileModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 2`] = `90`;
 
+exports[`TileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `
+Object {
+  "height": 110,
+  "input": Object {
+    "angle": 0,
+    "x": 100,
+    "y": 100,
+  },
+  "output": Object {
+    "angle": 0,
+    "x": 100,
+    "y": 210,
+  },
+  "width": 90,
+  "x": 55,
+  "y": 100,
+}
+`;
+
 exports[`TileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
 Object {
   "height": 141.4213562373095,
@@ -186,6 +205,25 @@ Object {
 }
 `;
 
+exports[`TileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
+Object {
+  "height": 180,
+  "input": Object {
+    "angle": 90,
+    "x": 0,
+    "y": 0,
+  },
+  "output": Object {
+    "angle": 90,
+    "x": -220,
+    "y": 1.3471114790620885e-14,
+  },
+  "width": 220,
+  "x": -220,
+  "y": -90,
+}
+`;
+
 exports[`TileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 Object {
   "height": 282.842712474619,
@@ -202,6 +240,25 @@ Object {
   "width": 282.84271247461896,
   "x": -119.20310216782968,
   "y": 36.36038969321074,
+}
+`;
+
+exports[`TileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `
+Object {
+  "height": 110,
+  "input": Object {
+    "angle": 0,
+    "x": 100,
+    "y": 100,
+  },
+  "output": Object {
+    "angle": 0,
+    "x": 100,
+    "y": 210,
+  },
+  "width": 90,
+  "x": 55,
+  "y": 100,
 }
 `;
 
@@ -240,6 +297,25 @@ Object {
   "width": 90,
   "x": -45,
   "y": 0,
+}
+`;
+
+exports[`TileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
+Object {
+  "height": 180,
+  "input": Object {
+    "angle": 90,
+    "x": 0,
+    "y": 0,
+  },
+  "output": Object {
+    "angle": 90,
+    "x": -220,
+    "y": 1.3471114790620885e-14,
+  },
+  "width": 220,
+  "x": -220,
+  "y": -90,
 }
 `;
 
@@ -1356,6 +1432,26 @@ exports[`TileModel can compute the side of the curve for a tile with a ratio of 
 exports[`TileModel can compute the side of the curve for a tile with a ratio of 3 1`] = `0`;
 
 exports[`TileModel can compute the side of the curve for a tile with a ratio of 4 1`] = `0`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `"rotate(180 100 155)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)rotate(180 100 155)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `"rotate(180 0 55)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)rotate(180 0 110)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)rotate(180 100 210)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `""`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `""`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)"`;
 
 exports[`TileModel can export to an object a tile oriented to the left having a ratio of 1 1`] = `
 Object {
