@@ -4,7 +4,7 @@ exports[`Track renders with default values 1`] = `
 <body>
   <div>
     <svg
-      viewBox="-165 0 220 220"
+      viewBox="-155 0 200 210"
       x="0"
       y="0"
     >
@@ -286,7 +286,7 @@ exports[`Track renders with the given parameters 1`] = `
 <body>
   <div>
     <svg
-      viewBox="-220 -165 220 220"
+      viewBox="-210 -155 210 200"
       x="100"
       y="200"
     >
@@ -568,7 +568,7 @@ exports[`Track update when the model is modified 1`] = `
 <body>
   <div>
     <svg
-      viewBox="-220 -165 220 220"
+      viewBox="-210 -155.00000000000003 210 200.00000000000003"
       x="100"
       y="200"
     >

@@ -122,28 +122,10 @@ export class TileModel {
      * @returns {number}
      */
     getDirectionAngle() {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getDirectionAngleRight();
-
-            case TILE_DIRECTION_LEFT:
-                return this.getDirectionAngleLeft();
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            return Vector2D.STRAIGHT_ANGLE;
         }
-    }
 
-    /**
-     * Computes the angle for rotating the tile to the right.
-     * @returns {number}
-     */
-    getDirectionAngleRight() {
-        return 0;
-    }
-
-    /**
-     * Computes the angle for rotating the tile to the left.
-     * @returns {number}
-     */
-    getDirectionAngleLeft() {
         return 0;
     }
 
@@ -249,36 +231,6 @@ export class TileModel {
      * @returns {Vector2D}
      */
     getOutputCoord(x = 0, y = 0, angle = 0) {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getOutputCoordRight(x, y, angle);
-
-            case TILE_DIRECTION_LEFT:
-                return this.getOutputCoordLeft(x, y, angle);
-        }
-    }
-
-    /**
-     * Computes the coordinates of the output point when the tile is oriented to the right.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getOutputCoordRight(x = 0, y = 0, angle = 0) {
-        const start = new Vector2D(x, y);
-
-        return start.addScalarY(this.length).rotateAround(angle, start);
-    }
-
-    /**
-     * Computes the coordinates of the output point when the tile is oriented to the left.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
-     */
-    getOutputCoordLeft(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
         return start.addScalarY(this.length).rotateAround(angle, start);
@@ -290,31 +242,70 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngle(angle = 0) {
-        switch (this.direction) {
-            case TILE_DIRECTION_RIGHT:
-                return this.getOutputAngleRight(angle);
-
-            case TILE_DIRECTION_LEFT:
-                return this.getOutputAngleLeft(angle);
-        }
+        return Vector2D.degrees(angle);
     }
 
     /**
-     * Computes the angle of the output point when the tile is oriented to the right.
+     * Computes the coordinates of the edge points with respect to the tile direction.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
+     * @returns {Vector2D[]} - Returns a list of edge points.
      */
-    getOutputAngleRight(angle = 0) {
-        return angle;
+    getEdgesCoord(x = 0, y = 0, angle = 0) {
+        const start = new Vector2D(x, y);
+
+        const length = this.length;
+        const width = this.width / 2;
+
+        return [
+            start.subScalarX(width).rotateAround(angle, start),
+            start.addScalarX(width).rotateAround(angle, start),
+            start.addCoord(width, length).rotateAround(angle, start),
+            start.addCoord(-width, length).rotateAround(angle, start)
+        ];
     }
 
     /**
-     * Computes the angle of the output point when the tile is oriented to the left.
+     * Computes the smallest rectangle which contains the entire tile.
+     * The coordinates are computed with respect to the entry point of the tile.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
+     * @returns {tileRect} - The smallest rectangle which contains the entire tile.
      */
-    getOutputAngleLeft(angle = 0) {
-        return angle;
+    getBoundingRect(x = 0, y = 0, angle = 0) {
+        const inputCoord = new Vector2D(x, y);
+        const outputCoord = this.getOutputCoord(x, y, angle);
+        const outputAngle = this.getOutputAngle(angle);
+
+        const topLeft = new Vector2D(x, y);
+        const bottomRight = new Vector2D(x, y);
+
+        this.getEdgesCoord(x, y, angle).forEach(point => {
+            topLeft.x = Math.min(topLeft.x, point.x);
+            topLeft.y = Math.min(topLeft.y, point.y);
+
+            bottomRight.x = Math.max(bottomRight.x, point.x);
+            bottomRight.y = Math.max(bottomRight.y, point.y);
+        });
+
+        return {
+            x: topLeft.x,
+            y: topLeft.y,
+            width: bottomRight.x - topLeft.x,
+            height: bottomRight.y - topLeft.y,
+            input: {
+                x: inputCoord.x,
+                y: inputCoord.y,
+                angle: Vector2D.degrees(angle)
+            },
+            output: {
+                x: outputCoord.x,
+                y: outputCoord.y,
+                angle: outputAngle
+            }
+        };
     }
 
     /**
@@ -324,23 +315,6 @@ export class TileModel {
     export() {
         const { type, direction, ratio } = this;
         return { type, direction, ratio };
-    }
-
-    /**
-     * Computes the coordinates of the tile.
-     * @param {number} x - The X-coordinate of the tile.
-     * @param {number} y - The Y-coordinate of the tile.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {tileCoord} - The computed coordinates for rendering the tile.
-     * @throws {TypeError} - If the given specifications object is not valid.
-     */
-    build(x = 0, y = 0, angle = 0) {
-        const id = this.id;
-        const outputAngle = this.getOutputAngle(angle);
-        const outputCoord = this.getOutputCoord(x, y, angle);
-        const centerCoord = this.getCenterCoord(x, y, angle);
-
-        return { id, x, y, angle, outputAngle, outputCoord, centerCoord, model: this };
     }
 }
 
@@ -385,13 +359,18 @@ Object.defineProperty(TileModel, 'DIRECTION_LEFT', {
  */
 
 /**
- * @typedef {object} tileCoord - Represents a positioned tile.
- * @property {string} id - The unique identifier of the tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {number} outputAngle - The rotation angle at the output of the tile.
- * @property {Vector2D} outputCoord - The coordinates of the output of the tile.
- * @property {Vector2D} centerCoord - The coordinates of the center of the tile.
- * @property {TileModel} model - A reference to the tile model.
+ * @typedef {object} coordAngle - Represents coordinates with rotation angle.
+ * @property {number} x - The left coordinate.
+ * @property {number} y - The top coordinate.
+ * @property {number} angle - The rotation angle.
+ */
+
+/**
+ * @typedef {object} tileRect - Represents the smallest rectangle which contains a tile.
+ * @property {number} x - The left coordinate of the rectangle.
+ * @property {number} y - The top coordinate of the rectangle.
+ * @property {number} width - The width of the rectangle.
+ * @property {number} height - The height of the rectangle.
+ * @property {coordAngle} input - The input point of the tile.
+ * @property {coordAngle} output - The output point of the tile.
  */

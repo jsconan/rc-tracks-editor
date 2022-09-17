@@ -133,13 +133,11 @@ describe('CurvedTileEnlargedModel', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleRight()).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleLeft()).toMatchSnapshot();
             });
         });
 
@@ -217,10 +215,6 @@ describe('CurvedTileEnlargedModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordRight()).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY, 90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
@@ -229,10 +223,6 @@ describe('CurvedTileEnlargedModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordLeft()).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY, 90)).toMatchSnapshot();
             });
         });
 
@@ -241,36 +231,52 @@ describe('CurvedTileEnlargedModel', () => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleRight()).toMatchSnapshot();
-                expect(tile.getOutputAngleRight(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleLeft()).toMatchSnapshot();
-                expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
             });
         });
 
-        describe('the coordinates of the tile', () => {
+        describe('the position of the edge points for a tile', () => {
+            it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
+                const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
+
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
+            });
+
+            it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
+                const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
+
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
+            });
+        });
+
+        describe('the bounding rectangle of the tile', () => {
             it.each([
                 [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 0],
                 [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
-                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 0, 0, 90],
                 [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 0],
                 [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
-                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 45]
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 0, 0, 90]
             ])(
                 'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
                 (direction, ratio, x, y, angle) => {
-                    const ref = new CurvedTileEnlargedModel(specs, direction, ratio);
-                    expect(ref.build(x, y, angle)).toMatchSnapshot();
+                    const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+                    expect(tile.getBoundingRect(x, y, angle)).toMatchSnapshot();
                 }
             );
         });
@@ -282,8 +288,8 @@ describe('CurvedTileEnlargedModel', () => {
         [CurvedTileEnlargedModel.DIRECTION_LEFT, 1],
         [CurvedTileEnlargedModel.DIRECTION_LEFT, 2]
     ])('can export to an object a tile oriented to the %s having a ratio of %s', (direction, ratio) => {
-        const track = new CurvedTileEnlargedModel(specs, direction, ratio);
+        const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
 
-        expect(track.export()).toMatchSnapshot();
+        expect(tile.export()).toMatchSnapshot();
     });
 });

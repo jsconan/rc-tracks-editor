@@ -310,23 +310,24 @@ export class TrackModel {
         let inputAngle = startAngle;
 
         const stats = {};
-        const tiles = this.tiles.map(tile => {
-            const tileCoord = tile.build(inputX, inputY, inputAngle);
-            const middle = tileCoord.model.length / 2;
+        const tiles = this.tiles.map(model => {
+            const coord = model.getBoundingRect(inputX, inputY, inputAngle);
+            const { x, y, angle } = coord.input;
+            const { id } = model;
 
-            updateStats(stats, tile);
+            updateStats(stats, model);
 
-            inputX = tileCoord.outputCoord.x;
-            inputY = tileCoord.outputCoord.y;
-            inputAngle = tileCoord.outputAngle;
+            inputX = coord.output.x;
+            inputY = coord.output.y;
+            inputAngle = coord.output.angle;
 
-            topLeft.x = Math.min(topLeft.x, tileCoord.centerCoord.x - middle);
-            topLeft.y = Math.min(topLeft.y, tileCoord.centerCoord.y - middle);
+            topLeft.x = Math.min(topLeft.x, coord.x);
+            topLeft.y = Math.min(topLeft.y, coord.y);
 
-            bottomRight.x = Math.max(bottomRight.x, tileCoord.centerCoord.x + middle);
-            bottomRight.y = Math.max(bottomRight.y, tileCoord.centerCoord.y + middle);
+            bottomRight.x = Math.max(bottomRight.x, coord.x + coord.width);
+            bottomRight.y = Math.max(bottomRight.y, coord.y + coord.height);
 
-            return tileCoord;
+            return { id, x, y, angle, model };
         });
 
         const { x, y } = topLeft;
@@ -404,7 +405,12 @@ export class TrackModel {
  */
 
 /**
- * @typedef {import('./TileModel').tileCoord} tileCoord
+ * @typedef {object} tileCoord - Represents a positioned tile.
+ * @property {string} id - The unique identifier of the tile.
+ * @property {number} x - The left coordinate of the tile.
+ * @property {number} y - The top coordinate of the tile.
+ * @property {number} angle - The rotation angle of the tile.
+ * @property {TileModel} model - A reference to the tile model.
  */
 
 /**
