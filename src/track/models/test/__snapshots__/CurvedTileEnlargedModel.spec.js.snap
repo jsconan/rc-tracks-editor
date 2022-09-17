@@ -9,6 +9,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -22,6 +23,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -35,6 +37,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -48,6 +51,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -61,6 +65,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -74,6 +79,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;
@@ -87,6 +93,7 @@ CurvedTileEnlargedModel {
     "barrierChunks": 4,
     "barrierWidth": 5,
     "laneWidth": 80,
+    "maxRatio": 4,
   },
 }
 `;

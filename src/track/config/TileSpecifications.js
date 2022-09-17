@@ -25,11 +25,13 @@ export class TileSpecifications {
      * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
      * @param {number} barrierWidth - The width of the barriers.
      * @param {number} barrierChunks - The number of barrier chunks per tile.
+     * @param {number} maxRatio - The maximum value for size ratios.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks) {
+    constructor(laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4) {
         this.setLaneWidth(laneWidth);
         this.setBarrierWidth(barrierWidth);
         this.setBarrierChunks(barrierChunks);
+        this.setMaxRatio(maxRatio);
     }
 
     /**
@@ -94,6 +96,17 @@ export class TileSpecifications {
      */
     setBarrierChunks(barrierChunks) {
         this.barrierChunks = Math.abs(Math.round(barrierChunks) || 1);
+
+        return this;
+    }
+
+    /**
+     * Sets the maximum value for size ratios.
+     * @param {number} maxRatio - The maximum value for size ratios.
+     * @returns {TileSpecifications} - Chains the instance.
+     */
+    setMaxRatio(maxRatio) {
+        this.maxRatio = Math.abs(Math.round(maxRatio) || 1);
 
         return this;
     }

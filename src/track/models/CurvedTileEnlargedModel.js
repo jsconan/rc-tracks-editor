@@ -25,14 +25,11 @@ import { Vector2D } from '../../core/models';
  */
 export class CurvedTileEnlargedModel extends TileModel {
     /**
-     * Sets the size ratio relative to a track section.
-     * 1 means the tile fits 1 tile section in each direction.
-     * @param {number} ratio - The size ratio relative to a track section.
-     * @returns {CurvedTileEnlargedModel} - Chains the instance.
+     * The minimum allowed size ratio for the tile.
+     * @type {number}
      */
-    setRatio(ratio) {
-        this.ratio = Math.max(1, Math.floor(Math.abs(ratio)));
-        return this;
+    get minRatio() {
+        return 1;
     }
 
     /**

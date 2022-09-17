@@ -41,6 +41,14 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
+     * The minimum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get minRatio() {
+        return 2 / this.specs.barrierChunks;
+    }
+
+    /**
      * Computes the angle for rotating the tile to the expected direction.
      * @returns {number}
      */
