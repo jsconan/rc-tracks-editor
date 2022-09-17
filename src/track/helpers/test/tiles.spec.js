@@ -20,6 +20,7 @@ import {
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,
     DEFAULT_TILE_TYPE,
+    flipTileDirection,
     isDirectionValid,
     isTypeValid,
     STRAIGHT_TILE_TYPE,
@@ -54,6 +55,19 @@ describe('validateDirection', () => {
 
     it.each([-1, 0, 1, 2])('throws an error if the direction is not valid, example with "%s"', direction => {
         expect(() => validateDirection(direction)).toThrow('A valid direction is needed!');
+    });
+});
+
+describe('flipTileDirection', () => {
+    it('is a function', () => {
+        expect(flipTileDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT],
+        [TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT]
+    ])('flips the direction from %s to %s', (direction, flippedDirection) => {
+        expect(flipTileDirection(direction)).toBe(flippedDirection);
     });
 });
 

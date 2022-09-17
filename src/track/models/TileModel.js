@@ -16,7 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { validateDirection, DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers';
+import {
+    flipTileDirection,
+    validateDirection,
+    DEFAULT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT
+} from '../helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
 
@@ -114,6 +120,15 @@ export class TileModel {
 
         this.direction = direction;
 
+        return this;
+    }
+
+    /**
+     * Flips the the direction of the tile.
+     * @returns {TileModel} - Chains the instance.
+     */
+    flipDirection() {
+        this.direction = flipTileDirection(this.direction);
         return this;
     }
 

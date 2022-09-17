@@ -78,6 +78,18 @@ export const validateDirection = direction => {
 };
 
 /**
+ * Flips the direction of a tile.
+ * @param {string} direction - The original direction
+ * @returns {string} - The flipped direction.
+ */
+export const flipTileDirection = direction => {
+    if (direction === TILE_DIRECTION_LEFT) {
+        return TILE_DIRECTION_RIGHT;
+    }
+    return TILE_DIRECTION_LEFT;
+};
+
+/**
  * @type {string[]} - The list of allowed tile types.
  * @private
  */
