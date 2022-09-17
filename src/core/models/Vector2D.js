@@ -132,6 +132,16 @@ export class Vector2D {
     }
 
     /**
+     * Adds the given coordinates.
+     * @param {number} x - The X-coordinate to add.
+     * @param {number} y - The Y-coordinate to add.
+     * @returns {Vector2D} - A new vector resulting of the addition.
+     */
+    addCoord(x, y) {
+        return new Vector2D(this.x + x, this.y + y);
+    }
+
+    /**
      * Adds a scalar value to the coordinates.
      * @param {number} scalar - The scalar value to add.
      * @returns {Vector2D} - A new vector resulting of the addition.
@@ -183,6 +193,16 @@ export class Vector2D {
      */
     subY(vector) {
         return new Vector2D(this.x, this.y - vector.y);
+    }
+
+    /**
+     * Subtracts the given coordinates.
+     * @param {number} x - The X-coordinate to subtract.
+     * @param {number} y - The Y-coordinate to subtract.
+     * @returns {Vector2D} - A new vector resulting of the subtraction.
+     */
+    subCoord(x, y) {
+        return new Vector2D(this.x - x, this.y - y);
     }
 
     /**
@@ -240,6 +260,16 @@ export class Vector2D {
     }
 
     /**
+     * Multiplies the given coordinates.
+     * @param {number} x - The X-coordinate to multiply by.
+     * @param {number} y - The Y-coordinate to multiply by.
+     * @returns {Vector2D} - A new vector resulting of the multiplication.
+     */
+    mulCoord(x, y) {
+        return new Vector2D(this.x * x, this.y * y);
+    }
+
+    /**
      * Multiplies the coordinates by a scalar value.
      * @param {number} scalar - The scalar value to multiply by.
      * @returns {Vector2D} - A new vector resulting of the multiplication.
@@ -291,6 +321,16 @@ export class Vector2D {
      */
     divY(vector) {
         return new Vector2D(this.x, this.y / vector.y);
+    }
+
+    /**
+     * Divides the given coordinates.
+     * @param {number} x - The X-coordinate to divide by.
+     * @param {number} y - The Y-coordinate to divide by.
+     * @returns {Vector2D} - A new vector resulting of the division.
+     */
+    divCoord(x, y) {
+        return new Vector2D(this.x / x, this.y / y);
     }
 
     /**
@@ -503,7 +543,7 @@ export class Vector2D {
 
     /**
      * Converts the vector to an object
-     * @returns {object} - The object representation of the vector.
+     * @returns {coord} - The object representation of the vector.
      */
     toObject() {
         return { x: this.x, y: this.y };
@@ -536,20 +576,20 @@ export class Vector2D {
 
     /**
      * Creates a vector from the cartesian coordinates given as an array.
-     * @param {number[]} array - The cartesian coordinates of the form [x, y].
+     * @param {number[]} coord - The cartesian coordinates of the form [x, y].
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
-    static fromArray(array = []) {
-        return new Vector2D(array[0], array[1]);
+    static fromArray(coord = []) {
+        return new Vector2D(coord[0], coord[1]);
     }
 
     /**
      * Creates a vector from the cartesian coordinates given as an object.
-     * @param {object} object - The cartesian coordinates of the form {x, y}.
+     * @param {coord} coord - The cartesian coordinates of the form {x, y}.
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
-    static fromObject(object = {}) {
-        return new Vector2D(object.x, object.y);
+    static fromObject(coord = { x: 0, y: 0 }) {
+        return new Vector2D(coord.x, coord.y);
     }
 
     /**
@@ -650,3 +690,9 @@ Object.defineProperty(Vector2D, 'DEGREES_PER_RADIANS', {
     enumerable: true,
     configurable: true
 });
+
+/**
+ * @typedef {object} coord - Represents coordinates.
+ * @property {number} x - The left coordinate.
+ * @property {number} y - The top coordinate.
+ */
