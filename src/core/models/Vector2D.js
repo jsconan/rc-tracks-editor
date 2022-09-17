@@ -455,12 +455,14 @@ export class Vector2D {
     }
 
     /**
-     * Computes the angle between of the vector and another vector.
+     * Computes the angle between the vector and another vector.
      * @param {Vector2D} vector - The other vector to compute the angle.
      * @returns {number} - The angle between the 2 vectors, in degrees.
      */
     angleWith(vector) {
-        return Vector2D.toDegrees(Math.acos(this.dot(vector) / (this.length() * vector.length())));
+        return Vector2D.toDegrees(
+            Math.atan2(this.x * vector.y - this.y * vector.x, this.x * vector.x + this.y * vector.y)
+        );
     }
 
     /**
