@@ -49,6 +49,8 @@ describe('Track', () => {
             model,
             x: 100,
             y: 200,
+            width: 400,
+            height: 400,
             angle: 90
         };
         const { container } = render(Track, { props });
@@ -65,6 +67,8 @@ describe('Track', () => {
             model,
             x: 100,
             y: 200,
+            width: 400,
+            height: 400,
             angle: 90
         };
         const rendered = render(Track, { props });
