@@ -16,10 +16,12 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+/**
+ * Rotate an element around the center.
+ * By default, the center is at the origin of the coordinates system.
+ * @param {number} angle - The rotation angle, in degrees.
+ * @param {number} x - The X-coordinate of the center of rotation.
+ * @param {number} y - The Y-coordinate of the center of rotation.
+ * @returns {string} - Returns a rotation command.
+ */
+export const rotate = (angle = 0, x = 0, y = 0) => `rotate(${angle} ${x} ${y})`;
