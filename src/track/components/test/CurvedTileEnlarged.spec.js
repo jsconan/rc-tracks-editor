@@ -18,7 +18,8 @@
 
 import { render } from '@testing-library/svelte';
 import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
-import { CurvedTileEnlargedModel, TileSpecifications } from '../../models';
+import { CurvedTileEnlargedModel } from '../../models';
+import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;

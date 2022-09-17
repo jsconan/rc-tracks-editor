@@ -18,7 +18,7 @@
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 import { StraightTileModel } from '../StraightTileModel.js';
-import { TileSpecifications } from '../TileSpecifications.js';
+import { TileSpecifications } from '../../config';
 import { TrackModel } from '../TrackModel.js';
 
 const laneWidth = 80;

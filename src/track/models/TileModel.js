@@ -17,7 +17,7 @@
  */
 
 import { isDirectionValid, DEFAULT_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../helpers';
-import { TileSpecifications } from './TileSpecifications.js';
+import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
 
 /**
