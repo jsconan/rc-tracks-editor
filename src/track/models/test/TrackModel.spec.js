@@ -17,7 +17,7 @@
  */
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { TileReferenceModel } from '../TileReferenceModel.js';
+import { StraightTileModel } from '../StraightTileModel.js';
 import { TileSpecifications } from '../TileSpecifications.js';
 import { TrackModel } from '../TrackModel.js';
 
@@ -41,6 +41,16 @@ describe('TrackModel', () => {
             const track = new TrackModel(specs);
             // @ts-expect-error
             expect(() => track.setSpecs({})).toThrow('A valid specifications object is needed!');
+        });
+
+        it('when trying to add a tile with an invalid type', () => {
+            const track = new TrackModel(specs);
+            expect(() => track.appendTile('')).toThrow('A valid type of tile is needed!');
+        });
+
+        it('when trying to add a tile with an invalid direction', () => {
+            const track = new TrackModel(specs);
+            expect(() => track.appendTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
         });
     });
 
@@ -76,7 +86,7 @@ describe('TrackModel', () => {
             track.appendTile();
 
             expect(track.getTile(id)).toBe(track.tiles.get(1));
-            expect(track.getTile(id)).toBeInstanceOf(TileReferenceModel);
+            expect(track.getTile(id)).toBeInstanceOf(StraightTileModel);
             expect(track.getTile('id')).toBeNull();
         });
 
@@ -88,7 +98,7 @@ describe('TrackModel', () => {
             track.appendTile();
 
             expect(track.getTileAt(1)).toBe(track.tiles.get(1));
-            expect(track.getTileAt(1)).toBeInstanceOf(TileReferenceModel);
+            expect(track.getTileAt(1)).toBeInstanceOf(StraightTileModel);
             expect(track.getTileAt(3)).toBeNull();
         });
     });

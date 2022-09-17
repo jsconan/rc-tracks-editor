@@ -59,22 +59,26 @@ describe('CurvedTileEnlargedModel', () => {
     describe('can build a tile', () => {
         it('with the given size', () => {
             const tile = new CurvedTileEnlargedModel(specs);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
         });
 
         it('with the given size and direction', () => {
             const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
         });
@@ -82,11 +86,13 @@ describe('CurvedTileEnlargedModel', () => {
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
             const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
             const sizeRatio = Math.max(1, ratio);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength * sizeRatio);
             expect(tile.width).toBe(tileWidth * sizeRatio);
         });
@@ -251,5 +257,33 @@ describe('CurvedTileEnlargedModel', () => {
                 expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
             });
         });
+
+        describe('the coordinates of the tile', () => {
+            it.each([
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 45]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const ref = new CurvedTileEnlargedModel(specs, direction, ratio);
+                    expect(ref.build(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
+    });
+
+    it.each([
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1],
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, 1],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, 2]
+    ])('can export to an object a tile oriented to the %s having a ratio of %s', (direction, ratio) => {
+        const track = new CurvedTileEnlargedModel(specs, direction, ratio);
+
+        expect(track.export()).toMatchSnapshot();
     });
 });

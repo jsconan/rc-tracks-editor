@@ -3,6 +3,7 @@
 exports[`CurvedTileModel can build a tile with the given size 1`] = `
 CurvedTileModel {
   "direction": "right",
+  "id": "curved-tile-1",
   "ratio": 1,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -15,6 +16,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and a ratio of 0.5 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-0.5",
   "ratio": 0.5,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -27,6 +29,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and a ratio of 1 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-1",
   "ratio": 1,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -39,6 +42,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and a ratio of 2 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-2",
   "ratio": 2,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -51,6 +55,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and a ratio of 3 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-3",
   "ratio": 3,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -63,6 +68,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and a ratio of 4 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-4",
   "ratio": 4,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -75,6 +81,7 @@ CurvedTileModel {
 exports[`CurvedTileModel can build a tile with the given size and direction 1`] = `
 CurvedTileModel {
   "direction": "left",
+  "id": "curved-tile-1",
   "ratio": 1,
   "specs": TileSpecifications {
     "barrierChunks": 4,
@@ -240,6 +247,174 @@ Vector2D {
 exports[`CurvedTileModel can compute the center of the curve for a tile with a ratio of 4 2`] = `
 Vector2D {
   "x": -285,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 61.10912703473989,
+    "y": 138.89087296526012,
+  },
+  "id": "curved-tile-1",
+  "model": CurvedTileModel {
+    "direction": "left",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": -45,
+  "outputCoord": Vector2D {
+    "x": 100,
+    "y": 177.78174593052023,
+  },
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+Object {
+  "angle": 0,
+  "centerCoord": Vector2D {
+    "x": 0,
+    "y": 55,
+  },
+  "id": "curved-tile-1",
+  "model": CurvedTileModel {
+    "direction": "left",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": -90,
+  "outputCoord": Vector2D {
+    "x": 55,
+    "y": 55,
+  },
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 51.67261889578036,
+    "y": 148.32738110421965,
+  },
+  "id": "curved-tile-2",
+  "model": CurvedTileModel {
+    "direction": "left",
+    "id": "curved-tile-2",
+    "ratio": 2,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 0,
+  "outputCoord": Vector2D {
+    "x": 51.67261889578036,
+    "y": 216.67261889578037,
+  },
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 61.10912703473989,
+    "y": 138.89087296526012,
+  },
+  "id": "curved-tile-1",
+  "model": CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 135,
+  "outputCoord": Vector2D {
+    "x": 22.21825406947977,
+    "y": 100,
+  },
+  "x": 100,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+Object {
+  "angle": 0,
+  "centerCoord": Vector2D {
+    "x": 0,
+    "y": 55,
+  },
+  "id": "curved-tile-1",
+  "model": CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 90,
+  "outputCoord": Vector2D {
+    "x": -55,
+    "y": 55,
+  },
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileModel can compute the coordinates of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+Object {
+  "angle": 45,
+  "centerCoord": Vector2D {
+    "x": 51.67261889578036,
+    "y": 148.32738110421965,
+  },
+  "id": "curved-tile-2",
+  "model": CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-2",
+    "ratio": 2,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+    },
+  },
+  "outputAngle": 90,
+  "outputCoord": Vector2D {
+    "x": -16.672618895780317,
+    "y": 148.32738110421965,
+  },
+  "x": 100,
   "y": 100,
 }
 `;
@@ -868,3 +1043,35 @@ exports[`CurvedTileModel can compute the side of the curve for a tile with a rat
 exports[`CurvedTileModel can compute the side of the curve for a tile with a ratio of 3 1`] = `0`;
 
 exports[`CurvedTileModel can compute the side of the curve for a tile with a ratio of 4 1`] = `0`;
+
+exports[`CurvedTileModel can export to an object a tile oriented to the left having a ratio of 1 1`] = `
+Object {
+  "direction": "left",
+  "ratio": 1,
+  "type": "curved-tile",
+}
+`;
+
+exports[`CurvedTileModel can export to an object a tile oriented to the left having a ratio of 2 1`] = `
+Object {
+  "direction": "left",
+  "ratio": 2,
+  "type": "curved-tile",
+}
+`;
+
+exports[`CurvedTileModel can export to an object a tile oriented to the right having a ratio of 1 1`] = `
+Object {
+  "direction": "right",
+  "ratio": 1,
+  "type": "curved-tile",
+}
+`;
+
+exports[`CurvedTileModel can export to an object a tile oriented to the right having a ratio of 2 1`] = `
+Object {
+  "direction": "right",
+  "ratio": 2,
+  "type": "curved-tile",
+}
+`;

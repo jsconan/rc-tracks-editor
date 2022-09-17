@@ -14,45 +14,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-15",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-14",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -74,45 +54,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-13",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-12",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -134,25 +94,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-11",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -174,25 +124,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-10",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -218,6 +158,7 @@ Object {
       "id": "id-69",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-69",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -230,7 +171,6 @@ Object {
         "x": 22.218254069479784,
         "y": 177.78174593052023,
       },
-      "type": "straight-tile",
       "x": 100,
       "y": 100,
     },
@@ -243,6 +183,7 @@ Object {
       "id": "id-70",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-70",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -255,7 +196,6 @@ Object {
         "x": -55.56349186104045,
         "y": 177.78174593052023,
       },
-      "type": "curved-tile",
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
@@ -268,6 +208,7 @@ Object {
       "id": "id-71",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-71",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -280,7 +221,6 @@ Object {
         "x": -133.3452377915607,
         "y": 100.00000000000001,
       },
-      "type": "straight-tile",
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
@@ -293,6 +233,7 @@ Object {
       "id": "id-72",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-72",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -305,7 +246,6 @@ Object {
         "x": -133.3452377915607,
         "y": 22.218254069479798,
       },
-      "type": "curved-tile",
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
@@ -318,6 +258,7 @@ Object {
       "id": "id-73",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-73",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -330,7 +271,6 @@ Object {
         "x": -55.563491861040475,
         "y": -55.56349186104045,
       },
-      "type": "straight-tile",
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
@@ -343,6 +283,7 @@ Object {
       "id": "id-74",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-74",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -355,7 +296,6 @@ Object {
         "x": 22.218254069479755,
         "y": -55.56349186104046,
       },
-      "type": "curved-tile",
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
@@ -368,6 +308,7 @@ Object {
       "id": "id-75",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-75",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -380,7 +321,6 @@ Object {
         "x": 100,
         "y": 22.21825406947974,
       },
-      "type": "straight-tile",
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
@@ -393,6 +333,7 @@ Object {
       "id": "id-76",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-76",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -405,7 +346,6 @@ Object {
         "x": 100.00000000000003,
         "y": 99.99999999999997,
       },
-      "type": "curved-tile",
       "x": 100,
       "y": 22.21825406947974,
     },
@@ -433,6 +373,7 @@ Object {
       "id": "id-61",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-61",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -445,7 +386,6 @@ Object {
         "x": 0,
         "y": 110,
       },
-      "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
@@ -458,6 +398,7 @@ Object {
       "id": "id-62",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-62",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -470,7 +411,6 @@ Object {
         "x": -55,
         "y": 165,
       },
-      "type": "curved-tile",
       "x": 0,
       "y": 110,
     },
@@ -483,6 +423,7 @@ Object {
       "id": "id-63",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-63",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -495,7 +436,6 @@ Object {
         "x": -165,
         "y": 165,
       },
-      "type": "straight-tile",
       "x": -55,
       "y": 165,
     },
@@ -508,6 +448,7 @@ Object {
       "id": "id-64",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-64",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -520,7 +461,6 @@ Object {
         "x": -220,
         "y": 110,
       },
-      "type": "curved-tile",
       "x": -165,
       "y": 165,
     },
@@ -533,6 +473,7 @@ Object {
       "id": "id-65",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-65",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -545,7 +486,6 @@ Object {
         "x": -220,
         "y": 0,
       },
-      "type": "straight-tile",
       "x": -220,
       "y": 110,
     },
@@ -558,6 +498,7 @@ Object {
       "id": "id-66",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-66",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -570,7 +511,6 @@ Object {
         "x": -165,
         "y": -55.00000000000001,
       },
-      "type": "curved-tile",
       "x": -220,
       "y": 0,
     },
@@ -583,6 +523,7 @@ Object {
       "id": "id-67",
       "model": StraightTileModel {
         "direction": "right",
+        "id": "id-67",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -595,7 +536,6 @@ Object {
         "x": -55,
         "y": -55.00000000000003,
       },
-      "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
     },
@@ -608,6 +548,7 @@ Object {
       "id": "id-68",
       "model": CurvedTileModel {
         "direction": "right",
+        "id": "id-68",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -620,7 +561,6 @@ Object {
         "x": 7.105427357601002e-15,
         "y": -3.552713678800501e-14,
       },
-      "type": "curved-tile",
       "x": -55,
       "y": -55.00000000000003,
     },
@@ -644,85 +584,45 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-55",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-56",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-58",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-57",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -744,25 +644,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-48",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -784,65 +674,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-49",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-51",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-50",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -864,65 +724,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-52",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-53",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-54",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -945,45 +775,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-59",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-60",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -1005,85 +815,45 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-42",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-45",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-43",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-44",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1105,25 +875,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-35",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1145,65 +905,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-38",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-36",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-37",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1225,65 +955,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-39",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-41",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-40",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1306,45 +1006,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-47",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-46",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1366,25 +1046,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-25",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1406,45 +1076,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-22",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-23",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1466,45 +1116,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-19",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-21",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1526,45 +1156,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-17",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-18",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1586,25 +1196,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-34",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1627,65 +1227,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-30",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-31",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-33",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -1707,65 +1277,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-26",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-29",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-28",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1831,25 +1371,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-79",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -1872,65 +1402,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "left",
         "id": "id-80",
-        "model": CurvedTileModel {
-          "direction": "left",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-81",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "right",
         "id": "id-82",
-        "model": CurvedTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -1969,25 +1469,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "right",
         "id": "id-84",
-        "model": CurvedTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -2009,45 +1499,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "right",
         "id": "id-85",
-        "model": CurvedTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "right",
         "id": "id-84",
-        "model": CurvedTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -2069,25 +1539,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      CurvedTileModel {
         "direction": "right",
         "id": "id-85",
-        "model": CurvedTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "curved-tile",
       },
     ],
     "notify": [Function],
@@ -2110,25 +1570,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-86",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2151,45 +1601,25 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-87",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-86",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2212,65 +1642,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-87",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-86",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-88",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2309,65 +1709,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-89",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-90",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-91",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
           "laneWidth": 80,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2389,65 +1759,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-89",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-90",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-91",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2469,65 +1809,35 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-89",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-90",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-91",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
@@ -2561,25 +1871,15 @@ TrackModel {
   "subscribe": [Function],
   "tiles": List {
     "list": Array [
-      TileReferenceModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-0",
-        "model": StraightTileModel {
-          "direction": "right",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-          },
-        },
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
           "barrierWidth": 1,
           "laneWidth": 10,
         },
-        "type": "straight-tile",
       },
     ],
     "notify": [Function],
