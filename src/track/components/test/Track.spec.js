@@ -18,7 +18,7 @@
 
 import { render } from '@testing-library/svelte';
 import Track from '../Track.svelte';
-import { TrackModel } from '../../models';
+import { TilesList } from '../../models';
 import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../../helpers';
@@ -30,7 +30,7 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('Track', () => {
     it('renders with default values', () => {
-        const model = new TrackModel(specs);
+        const model = new TilesList(specs);
         model.appendTile(STRAIGHT_TILE_TYPE);
         model.appendTile(CURVED_TILE_TYPE);
         model.appendTile(CURVED_TILE_ENLARGED_TYPE);
@@ -41,7 +41,7 @@ describe('Track', () => {
     });
 
     it('renders with the given parameters', () => {
-        const model = new TrackModel(specs);
+        const model = new TilesList(specs);
         model.appendTile(STRAIGHT_TILE_TYPE);
         model.appendTile(CURVED_TILE_TYPE);
         model.appendTile(CURVED_TILE_ENLARGED_TYPE);
@@ -59,7 +59,7 @@ describe('Track', () => {
     });
 
     it('update when the model is modified', async () => {
-        const model = new TrackModel(specs);
+        const model = new TilesList(specs);
         model.appendTile(STRAIGHT_TILE_TYPE);
         model.appendTile(CURVED_TILE_TYPE);
         model.appendTile(CURVED_TILE_ENLARGED_TYPE);
@@ -98,6 +98,6 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TrackModel!');
+        ).toThrow('The model must be an instance of TilesList!');
     });
 });

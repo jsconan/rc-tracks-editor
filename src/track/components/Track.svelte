@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { Sketch } from '../elements';
-    import { TrackModel } from '../models';
+    import { TilesList } from '../models';
     import Tile from './Tile.svelte';
 
     export let model;
@@ -13,7 +13,7 @@
     export let width = void 0;
     export let height = void 0;
 
-    TrackModel.validateInstance(model);
+    TilesList.validateInstance(model);
 
     $: track = $model.build(0, 0, angle);
 </script>

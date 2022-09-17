@@ -73,11 +73,11 @@ function updateStats(stats, tile, diff = 1) {
 }
 
 /**
- * Represents a track.
+ * Represents a list of tiles.
  */
-export class TrackModel {
+export class TilesList {
     /**
-     * Represents a track with the given size constraints.
+     * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
@@ -100,7 +100,7 @@ export class TrackModel {
     /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
@@ -117,7 +117,7 @@ export class TrackModel {
     }
 
     /**
-     * Gets the position of a tile inside the track.
+     * Gets the position of a tile inside the list.
      * @param {string} id - The unique identifier of the tile.
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
@@ -144,7 +144,7 @@ export class TrackModel {
     }
 
     /**
-     * Add a tile to the track, at the last position.
+     * Add a tile to the list, at the last position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -162,7 +162,7 @@ export class TrackModel {
     }
 
     /**
-     * Add a tile to the track, at the first position.
+     * Add a tile to the list, at the first position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -180,7 +180,7 @@ export class TrackModel {
     }
 
     /**
-     * Removes a tile from the track.
+     * Removes a tile from the list.
      * @param {string} id - The unique identifier of the tile to remove.
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
      */
@@ -197,7 +197,7 @@ export class TrackModel {
     }
 
     /**
-     * Replace a tile in the track.
+     * Replace a tile in the list.
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
      * @param {string} type - The type of tile to add.
@@ -225,7 +225,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track before a particular position.
+     * Insert a tile in the list before a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
      * @param {string} type - The type of tile to add.
@@ -251,7 +251,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track after a particular position.
+     * Insert a tile in the list after a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile after which add another tile.
      * @param {string} type - The type of tile to add.
@@ -278,7 +278,7 @@ export class TrackModel {
 
     /**
      * Rebuilds the stats regarding the number of identified types.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      */
     rebuildStats() {
         this.stats = {};
@@ -333,18 +333,18 @@ export class TrackModel {
     }
 
     /**
-     * Exports the model to an object.
-     * @returns {tileExport[]} - An object representation of the model.
+     * Exports the list to an object.
+     * @returns {tileExport[]} - An object representation of the list.
      */
     export() {
         return this.tiles.map(tile => tile.export());
     }
 
     /**
-     * Imports the model from an object.
-     * The track is emptied before importing, any existing tile will be deleted.
-     * @param {tileExport[]} data - An iterable object containing a representation of the model.
-     * @returns {TrackModel} - Chains the instance.
+     * Imports the list from a source.
+     * The list is emptied before importing, any existing tile will be deleted.
+     * @param {tileExport[]} data - An iterable object containing a representation of the list.
+     * @returns {TilesList} - Chains the instance.
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
@@ -361,10 +361,10 @@ export class TrackModel {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tileRef = createModel(this.specs, type, direction, ratio);
-                updateStats(this.stats, tileRef);
+                const tile = createModel(this.specs, type, direction, ratio);
+                updateStats(this.stats, tile);
 
-                return { done: false, value: tileRef };
+                return { done: false, value: tile };
             },
 
             [Symbol.iterator]() {
@@ -379,8 +379,8 @@ export class TrackModel {
     }
 
     /**
-     * Removes all tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * Removes all tiles from the list.
+     * @returns {TilesList} - Chains the instance.
      */
     clear() {
         this.stats = {};
