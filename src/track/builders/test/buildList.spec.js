@@ -17,7 +17,13 @@
  */
 
 import buildList from '../buildList.js';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT
+} from '../../helpers';
 import { TileSpecifications } from '../../config';
 import { TilesList } from '../../models';
 
@@ -32,7 +38,13 @@ list.import([
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 2 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 3 },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 4 }
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 4 },
+    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1 },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 2 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 3 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 4 }
 ]);
 
 describe('buildList', () => {

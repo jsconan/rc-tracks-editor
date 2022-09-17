@@ -17,6 +17,7 @@
  */
 
 import { Vector2D } from '../../core/models';
+import { TILE_DIRECTION_LEFT } from '../helpers';
 import { TilesList } from '../models';
 
 /**
@@ -60,7 +61,11 @@ export default (
 
     const tiles = list.tiles.map(model => {
         const curveAngle = model.getCurveAngle();
-        const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? curveAngle / 2 : 0);
+        const { id, type, direction, ratio } = model;
+        const alignedAngle = curveAngle / 2;
+        const directionAngle =
+            direction === TILE_DIRECTION_LEFT ? Vector2D.STRAIGHT_ANGLE * 2 - alignedAngle : alignedAngle;
+        const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? directionAngle : 0);
         const bounds = model.getBoundingRect(0, 0, angle);
         const width = Math.max(tileWidth, bounds.width) + hPadding * 2;
         const height = Math.max(tileHeight, bounds.height) + vPadding * 2;
@@ -70,7 +75,6 @@ export default (
         const topY = tileY - (!centered || vertical ? 0 : height / 2) - vPadding;
         const x = topX - bounds.x + hPadding + dx;
         const y = topY - bounds.y + vPadding + dy;
-        const { id, type, direction, ratio } = model;
 
         topLeft.x = Math.min(topLeft.x, topX);
         topLeft.y = Math.min(topLeft.y, topY);
