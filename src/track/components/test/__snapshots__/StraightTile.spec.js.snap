@@ -1195,3 +1195,527 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   </div>
 </body>
 `;
+
+exports[`StraightTile updates when the parameter angle is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform="rotate(45 0 0)"
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="-45"
+        y="0"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="82.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="82.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates when the parameter direction is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform="rotate(180 0 55)"
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="-45"
+        y="0"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="82.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="82.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates when the parameter ratio is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="220"
+        width="90"
+        x="-45"
+        y="0"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="82.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="110"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="137.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="165"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="192.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="82.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="110"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="137.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="165"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="192.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates when the parameter x is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="-5"
+        y="0"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-5"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-5"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-5"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-5"
+          y="82.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="80"
+          y="0"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="80"
+          y="27.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="80"
+          y="55"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="80"
+          y="82.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates when the parameter y is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      transform=""
+    >
+      <rect
+        class="ground"
+        height="110"
+        width="90"
+        x="-45"
+        y="40"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="40"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="67.5"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="95"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="-45"
+          y="122.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="40"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="67.5"
+        />
+        
+        <rect
+          class="barrier-chunk odd"
+          height="27.5"
+          width="5"
+          x="40"
+          y="95"
+        />
+        
+        <rect
+          class="barrier-chunk even"
+          height="27.5"
+          width="5"
+          x="40"
+          y="122.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;

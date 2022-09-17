@@ -15,93 +15,116 @@
     export let filter = void 0;
     export let id = void 0;
 
-    const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const model = new CurvedTileEnlargedModel(specs, direction, ratio);
-
-    const barrierLength = model.specs.barrierLength;
-    const barrierWidth = model.specs.barrierWidth;
-    const width = model.specs.width;
-    const side = model.getCurveSide();
-    const innerRadius = model.getInnerRadius();
-    const outerRadius = model.getOuterRadius();
-    const sideChunks = model.getSideBarrierChunks();
-    const innerChunks = model.getInnerBarrierChunks();
-    const outerChunks = model.getOuterBarrierChunks();
-    const tileAngle = model.getDirectionAngle();
-    const curveAngle = model.getCurveAngle();
-    const curveCenter = model.getCurveCenter(x, y);
-    const center = model.getCenterCoord(x, y);
-
-    const innerCurveStartX = curveCenter.x + innerRadius;
-    const innerCurveStartY = curveCenter.y;
-    const innerCurveEndX = innerCurveStartX - innerRadius;
-    const innerCurveEndY = innerCurveStartY + innerRadius;
-    const leftSideEndX = innerCurveEndX;
-    const leftSideEndY = innerCurveEndY + width;
-    const outerCurveStartX = leftSideEndX + side;
-    const outerCurveStartY = leftSideEndY;
-    const outerCurveEndX = outerCurveStartX + outerRadius;
-    const outerCurveEndY = outerCurveStartY - outerRadius;
-    const rightSideEndX = outerCurveEndX;
-    const rightSideEndY = outerCurveEndY - side;
-
-    const innerBarrierRadius = innerRadius;
-    const innerBarrierX = innerCurveStartX;
-    const innerBarrierY = innerCurveStartY;
-    const outerBarrierRadius = outerRadius - barrierWidth;
-    const outerBarrierX = outerCurveEndX - barrierWidth;
-    const outerBarrierY = outerCurveEndY;
-    const horizontalBarrierX = leftSideEndX;
-    const horizontalBarrierY = leftSideEndY - barrierWidth;
-    const verticalBarrierX = rightSideEndX - barrierWidth;
-    const verticalBarrierY = rightSideEndY;
-
     const dispatch = createEventDispatcher();
+    const specs = getContext(TileSpecifications.CONTEXT_ID);
+    const type = CurvedTileEnlargedModel.TYPE;
 
+    const barrierLength = specs.barrierLength;
+    const barrierWidth = specs.barrierWidth;
+    const width = specs.width;
+
+    /**
+     * Handles the click event.
+     * @private
+     */
     function click() {
-        dispatch('click', { id, type: model.type, direction, ratio, x, y, angle });
+        dispatch('click', { id, type, direction, ratio, x, y, angle });
     }
 
-    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
-    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
-    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
+    /**
+     * Computes the parameters for rendering the tile at the expected position.
+     * @param {CurvedTileEnlargedModel} model
+     * @param {number} tileX
+     * @param {number} tileY
+     * @returns {object}
+     * @private
+     */
+    function getTileParameters(model, tileX, tileY) {
+        const side = model.getCurveSide();
+        const innerRadius = model.getInnerRadius();
+        const outerRadius = model.getOuterRadius() - barrierWidth;
+        const sideChunks = model.getSideBarrierChunks();
+        const innerChunks = model.getInnerBarrierChunks();
+        const outerChunks = model.getOuterBarrierChunks();
+        const curveAngle = model.getCurveAngle();
+        const curveCenter = model.getCurveCenter(tileX, tileY);
+        const outerBarrier = width - barrierWidth;
+
+        const { x: innerX, y: innerY } = curveCenter.addScalarX(innerRadius);
+        const { x: outerX, y: outerY } = curveCenter.addCoord(
+            side + outerRadius,
+            innerRadius + outerBarrier - outerRadius
+        );
+        const { x: horizontalX, y: horizontalY } = curveCenter.addScalarY(innerRadius + outerBarrier);
+        const { x: verticalX, y: verticalY } = curveCenter.addScalarX(innerRadius + outerBarrier);
+
+        return {
+            side,
+            innerRadius,
+            outerRadius,
+            curveAngle,
+            curveCenter,
+            sideChunks,
+            innerChunks,
+            outerChunks,
+            innerX,
+            innerY,
+            outerX,
+            outerY,
+            horizontalX,
+            horizontalY,
+            verticalX,
+            verticalY
+        };
+    }
+
+    $: model = new CurvedTileEnlargedModel(specs, direction, ratio);
+    $: tile = getTileParameters(model, x, y);
+    $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
 <g class="tile curved-tile-enlarged" {transform} {filter} {id} on:click={click}>
-    <CurvedElementEnlarged class="ground" cx={curveCenter.x} cy={curveCenter.y} {width} {side} radius={innerRadius} />
+    <CurvedElementEnlarged
+        class="ground"
+        cx={tile.curveCenter.x}
+        cy={tile.curveCenter.y}
+        {width}
+        side={tile.side}
+        radius={tile.innerRadius}
+    />
     <CurvedBarrier
-        chunks={innerChunks}
+        chunks={tile.innerChunks}
         width={barrierWidth}
-        radius={innerBarrierRadius}
-        angle={curveAngle}
-        left={innerBarrierX}
-        top={innerBarrierY}
+        radius={tile.innerRadius}
+        angle={tile.curveAngle}
+        left={tile.innerX}
+        top={tile.innerY}
         shift={0}
     />
     <CurvedBarrier
-        chunks={outerChunks}
+        chunks={tile.outerChunks}
         width={barrierWidth}
-        radius={outerBarrierRadius}
-        angle={curveAngle}
-        left={outerBarrierX}
-        top={outerBarrierY}
+        radius={tile.outerRadius}
+        angle={tile.curveAngle}
+        left={tile.outerX}
+        top={tile.outerY}
         shift={1}
     />
     <StraightBarrier
-        chunks={sideChunks}
+        chunks={tile.sideChunks}
         width={barrierWidth}
         length={barrierLength}
-        left={horizontalBarrierX}
-        top={horizontalBarrierY}
+        left={tile.horizontalX}
+        top={tile.horizontalY}
         shift={0}
         vertical={false}
     />
     <StraightBarrier
-        chunks={sideChunks}
+        chunks={tile.sideChunks}
         width={barrierWidth}
         length={barrierLength}
-        left={verticalBarrierX}
-        top={verticalBarrierY}
+        left={tile.verticalX}
+        top={tile.verticalY}
         shift={1}
         vertical={true}
     />
