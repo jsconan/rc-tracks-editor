@@ -395,9 +395,9 @@ describe('TilesList', () => {
     it('can rebuilds the stats', () => {
         const list = new TilesList(specs);
 
-        expect(list.stats).toEqual({});
+        expect([...list.stats]).toEqual([]);
         expect(list.rebuildStats()).toBe(list);
-        expect(list.stats).toEqual({});
+        expect([...list.stats]).toEqual([]);
 
         list.appendTile(CURVED_TILE_TYPE);
 
@@ -472,6 +472,35 @@ describe('TilesList', () => {
             list.clear(); // callback called
             list.import(data); // callback called
             list.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+            list.rebuildStats();
+
+            unsubscribe();
+            list.appendTile();
+
+            expect(callback).toHaveBeenCalledTimes(10);
+        });
+
+        it('for changes applying to the stats', () => {
+            const list = new TilesList(specs);
+
+            const callback = jest.fn().mockImplementation(value => {
+                expect(value).toBe(list.stats);
+                expect(value).toMatchSnapshot();
+            });
+
+            const unsubscribe = list.stats.subscribe(callback); // callback called
+
+            list.setSpecs(specs);
+            const id1 = list.appendTile(CURVED_TILE_TYPE); // callback called
+            const id2 = list.prependTile(CURVED_TILE_TYPE); // callback called
+            list.removeTile(id1); // callback called
+            const id3 = list.replaceTile(id2); // callback called twice
+            list.insertTileBefore(id3); // callback called
+            list.insertTileAfter(id3); // callback called
+            const data = list.export();
+            list.clear(); // callback called
+            list.import(data); // callback called
+            list.setSpecs(new TileSpecifications(10, 1, 2));
             list.rebuildStats(); // callback called
 
             unsubscribe();
