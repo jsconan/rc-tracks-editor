@@ -642,6 +642,15 @@ export class Vector2D {
     static degrees(angle) {
         return ((angle % Vector2D.CIRCLE) + Vector2D.CIRCLE) % Vector2D.CIRCLE;
     }
+
+    /**
+     * Gets the quadrant in which the given angle is contained.
+     * @param {number} angle - The angle given in degrees.
+     * @returns {number} - The quadrant containing the given angle.
+     */
+    static quadrant(angle) {
+        return Math.floor(Vector2D.degrees(angle) / Vector2D.RIGHT_ANGLE);
+    }
 }
 
 /**
