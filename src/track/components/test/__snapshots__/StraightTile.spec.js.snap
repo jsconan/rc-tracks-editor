@@ -87,6 +87,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -180,6 +181,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -273,6 +275,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -334,6 +337,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -427,6 +431,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -584,6 +589,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -805,6 +811,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -1090,6 +1097,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;
@@ -1183,6 +1191,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
       </g>
     </g>
+    
   </div>
 </body>
 `;

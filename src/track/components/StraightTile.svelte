@@ -2,17 +2,21 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { getContext } from 'svelte';
+    import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
 
-    export let model;
+    export let direction = StraightTileModel.DIRECTION_RIGHT;
+    export let ratio = 1;
     export let angle = 0;
     export let x = 0;
     export let y = 0;
     export let filter = void 0;
     export let id = void 0;
 
-    StraightTileModel.validateInstance(model);
+    const specs = getContext(TileSpecifications.CONTEXT_ID);
+    const model = new StraightTileModel(specs, direction, ratio);
 
     const width = model.width;
     const height = model.length;

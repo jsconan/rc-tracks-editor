@@ -22,7 +22,7 @@
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
-    {#each track.tiles as { id, x, y, angle, model } (id)}
-        <Tile {model} {angle} {x} {y} {id} />
+    {#each track.tiles as { id, type, direction, ratio, x, y, angle } (id)}
+        <Tile {type} {direction} {ratio} {angle} {x} {y} {id} />
     {/each}
 </Sketch>

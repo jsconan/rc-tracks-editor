@@ -17,49 +17,62 @@
  */
 
 import { render } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import Tile from '../Tile.svelte';
-import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../models';
 import { TileSpecifications } from '../../config';
+import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const straightTile = new StraightTileModel(specs);
-const curvedTile = new CurvedTileModel(specs);
-const curvedTileEnlarged = new CurvedTileEnlargedModel(specs);
 
 describe('Tile', () => {
-    it.each([
-        [straightTile.type, straightTile],
-        [curvedTile.type, curvedTile],
-        [curvedTileEnlarged.type, curvedTileEnlarged]
-    ])('renders a %s tile with default values', (type, model) => {
-        const props = { model };
-        const { container } = render(Tile, { props });
+    it.each([void 0, STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
+        'renders a %s tile with default values',
+        type => {
+            const props = { type };
+            const { container } = render(Context, {
+                props: {
+                    component: Tile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
-        expect(container).toMatchSnapshot();
-    });
+            expect(container).toMatchSnapshot();
+        }
+    );
 
-    it.each([
-        [straightTile.type, straightTile],
-        [curvedTile.type, curvedTile],
-        [curvedTileEnlarged.type, curvedTileEnlarged]
-    ])('renders a %s tile with the given parameters', (type, model) => {
-        const props = {
-            model,
-            x: 100,
-            y: 200,
-            angle: 90,
-            filter: 'select',
-            id: 'tile'
-        };
-        const { container } = render(Tile, { props });
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
+        'renders a %s tile with the given parameters',
+        type => {
+            const props = {
+                type,
+                direction: TILE_DIRECTION_RIGHT,
+                ratio: 1,
+                x: 100,
+                y: 200,
+                angle: 90,
+                filter: 'select',
+                id: 'tile'
+            };
+            const { container } = render(Context, {
+                props: {
+                    component: Tile,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
-        expect(container).toMatchSnapshot();
-    });
+            expect(container).toMatchSnapshot();
+        }
+    );
 
-    it('needs a valid model', () => {
-        expect(() => render(Tile)).toThrow('The model must be an instance of TileModel!');
+    it('needs a valid type', () => {
+        const props = { type: 'tile' };
+        expect(() => render(Tile, { props })).toThrow('A valid type of tile is needed!');
     });
 });
