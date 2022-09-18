@@ -25,6 +25,7 @@ import {
 } from '../helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
+import { rotate } from '../../core/helpers';
 
 /**
  * Represents a track tile.
@@ -341,6 +342,23 @@ export class TileModel {
                 angle: outputAngle
             }
         };
+    }
+
+    /**
+     * Builds the transform command for rotating the tile with respect to both its direction and its angle.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {string} - The transform command for rotating the tile.
+     */
+    getRotateTransform(x = 0, y = 0, angle = 0) {
+        const center = this.getCenterCoord(x, y);
+        const directionAngle = this.getDirectionAngle();
+        const rotationAngle = Vector2D.degrees(angle);
+        const orientation = directionAngle ? rotate(directionAngle, center.x, center.y) : '';
+        const rotation = rotationAngle ? rotate(rotationAngle, x, y) : '';
+
+        return rotation || orientation ? `${rotation}${orientation}` : '';
     }
 
     /**

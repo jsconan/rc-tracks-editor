@@ -306,6 +306,27 @@ describe('CurvedTileEnlargedModel', () => {
                 }
             );
         });
+
+        describe('the transform command to rotate the tile', () => {
+            it.each([
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 0, 0, 90],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 0, 0, 90]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+                    expect(tile.getRotateTransform(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
     });
 
     it.each([

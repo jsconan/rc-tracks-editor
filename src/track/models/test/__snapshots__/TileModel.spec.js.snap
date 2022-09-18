@@ -1433,6 +1433,26 @@ exports[`TileModel can compute the side of the curve for a tile with a ratio of 
 
 exports[`TileModel can compute the side of the curve for a tile with a ratio of 4 1`] = `0`;
 
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `"rotate(180 100 155)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)rotate(180 100 155)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `"rotate(180 0 55)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)rotate(180 0 110)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)rotate(180 100 210)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `""`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `""`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)"`;
+
+exports[`TileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)"`;
+
 exports[`TileModel can export to an object a tile oriented to the left having a ratio of 1 1`] = `
 Object {
   "direction": "left",

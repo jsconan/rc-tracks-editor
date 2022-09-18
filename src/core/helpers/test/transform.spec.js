@@ -16,10 +16,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as defined } from './defined.js';
-export { default as uid } from './uid.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+import { rotate } from '../transform.js';
+
+describe('rotate', () => {
+    it('is a function', () => {
+        expect(rotate).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [void 0, void 0, void 0, 'rotate(0 0 0)'],
+        [10, 20, 30, 'rotate(10 20 30)'],
+        [-10, -20, -30, 'rotate(-10 -20 -30)']
+    ])('renders the transform command rotate(%s %s %s)', (angle, x, y, expected) => {
+        expect(rotate(angle, x, y)).toBe(expected);
+    });
+});
