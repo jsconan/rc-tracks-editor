@@ -360,38 +360,6 @@ describe('TilesList', () => {
         });
     });
 
-    describe('for rendering', () => {
-        it('using default position', () => {
-            const list = new TilesList(specs);
-
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-
-            expect(list.build()).toMatchSnapshot();
-        });
-
-        it('using a start position and angle', () => {
-            const list = new TilesList(specs);
-
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-            list.appendTile();
-            list.appendTile(CURVED_TILE_TYPE);
-
-            expect(list.build(100, 100, 45)).toMatchSnapshot();
-        });
-    });
-
     it('can rebuilds the stats', () => {
         const list = new TilesList(specs);
 

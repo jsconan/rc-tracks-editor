@@ -29,7 +29,7 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
-import { Counter, List, Vector2D } from '../../core/models';
+import { Counter, List } from '../../core/models';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -293,47 +293,6 @@ export class TilesList {
     }
 
     /**
-     * Builds the track for rendering, computing the coordinates of each tile.
-     * @param {number} startX - The X-coordinate of the first tile.
-     * @param {number} startY - The Y-coordinate of the first tile.
-     * @param {number} startAngle - The rotation angle of the first tile.
-     * @returns {trackCoord}
-     */
-    build(startX = 0, startY = 0, startAngle = 0) {
-        const topLeft = new Vector2D();
-        const bottomRight = new Vector2D();
-        let inputX = startX;
-        let inputY = startY;
-        let inputAngle = startAngle;
-
-        const stats = new Counter();
-        const tiles = this.tiles.map(model => {
-            const coord = model.getBoundingRect(inputX, inputY, inputAngle);
-            const { x, y, angle } = coord.input;
-            const { id } = model;
-
-            stats.increment(model.modelId);
-
-            inputX = coord.output.x;
-            inputY = coord.output.y;
-            inputAngle = coord.output.angle;
-
-            topLeft.x = Math.min(topLeft.x, coord.x);
-            topLeft.y = Math.min(topLeft.y, coord.y);
-
-            bottomRight.x = Math.max(bottomRight.x, coord.x + coord.width);
-            bottomRight.y = Math.max(bottomRight.y, coord.y + coord.height);
-
-            return { id, x, y, angle, model };
-        });
-
-        const { x, y } = topLeft;
-        const { x: width, y: height } = bottomRight.sub(topLeft);
-
-        return { x, y, width, height, tiles, stats };
-    }
-
-    /**
      * Exports the list to an object.
      * @returns {tileExport[]} - An object representation of the list.
      */
@@ -401,25 +360,6 @@ export class TilesList {
         }
     }
 }
-
-/**
- * @typedef {object} trackCoord - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tileCoord[]} tiles - The list of tiles.
- * @property {object} stats - An object listing the stats for the track.
- */
-
-/**
- * @typedef {object} tileCoord - Represents a positioned tile.
- * @property {string} id - The unique identifier of the tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {TileModel} model - A reference to the tile model.
- */
 
 /**
  * @typedef {import('./TileModel').tileExport} tileExport

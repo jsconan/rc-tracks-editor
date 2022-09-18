@@ -1109,7 +1109,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-79",
+        "id": "id-63",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1146,7 +1146,7 @@ TilesList {
     "list": Array [
       CurvedTileModel {
         "direction": "left",
-        "id": "id-80",
+        "id": "id-64",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1157,7 +1157,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-81",
+        "id": "id-65",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1168,7 +1168,7 @@ TilesList {
       },
       CurvedTileModel {
         "direction": "right",
-        "id": "id-82",
+        "id": "id-66",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1335,7 +1335,7 @@ TilesList {
     "list": Array [
       CurvedTileModel {
         "direction": "right",
-        "id": "id-84",
+        "id": "id-68",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1371,7 +1371,7 @@ TilesList {
     "list": Array [
       CurvedTileModel {
         "direction": "right",
-        "id": "id-85",
+        "id": "id-69",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1382,7 +1382,7 @@ TilesList {
       },
       CurvedTileModel {
         "direction": "right",
-        "id": "id-84",
+        "id": "id-68",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1418,7 +1418,7 @@ TilesList {
     "list": Array [
       CurvedTileModel {
         "direction": "right",
-        "id": "id-85",
+        "id": "id-69",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1455,7 +1455,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-86",
+        "id": "id-70",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1492,7 +1492,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-87",
+        "id": "id-71",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1503,7 +1503,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-86",
+        "id": "id-70",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1540,7 +1540,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-87",
+        "id": "id-71",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1551,7 +1551,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-86",
+        "id": "id-70",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1562,7 +1562,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-88",
+        "id": "id-72",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1618,7 +1618,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-89",
+        "id": "id-73",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1629,7 +1629,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-90",
+        "id": "id-74",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1640,7 +1640,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-91",
+        "id": "id-75",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1676,7 +1676,7 @@ TilesList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-89",
+        "id": "id-73",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1687,7 +1687,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-90",
+        "id": "id-74",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1698,7 +1698,7 @@ TilesList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-91",
+        "id": "id-75",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1768,315 +1768,5 @@ TilesList {
     "notify": [Function],
     "subscribe": [Function],
   },
-}
-`;
-
-exports[`TilesList for rendering using a start position and angle 1`] = `
-Object {
-  "height": 355.56349186104046,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
-  "tiles": Array [
-    Object {
-      "angle": 45,
-      "id": "id-69",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-69",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 100,
-      "y": 100,
-    },
-    Object {
-      "angle": 45,
-      "id": "id-70",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-70",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 22.218254069479784,
-      "y": 177.78174593052023,
-    },
-    Object {
-      "angle": 135,
-      "id": "id-71",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-71",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -55.56349186104045,
-      "y": 177.78174593052023,
-    },
-    Object {
-      "angle": 135,
-      "id": "id-72",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-72",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -133.3452377915607,
-      "y": 100.00000000000001,
-    },
-    Object {
-      "angle": 225,
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -133.3452377915607,
-      "y": 22.218254069479798,
-    },
-    Object {
-      "angle": 225,
-      "id": "id-74",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -55.563491861040475,
-      "y": -55.56349186104045,
-    },
-    Object {
-      "angle": 315,
-      "id": "id-75",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-75",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 22.218254069479755,
-      "y": -55.56349186104046,
-    },
-    Object {
-      "angle": 315,
-      "id": "id-76",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-76",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 100,
-      "y": 22.21825406947974,
-    },
-  ],
-  "width": 355.56349186104046,
-  "x": -194.45436482630058,
-  "y": -116.67261889578035,
-}
-`;
-
-exports[`TilesList for rendering using default position 1`] = `
-Object {
-  "height": 310,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
-  "tiles": Array [
-    Object {
-      "angle": 0,
-      "id": "id-61",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-61",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 0,
-      "y": 0,
-    },
-    Object {
-      "angle": 0,
-      "id": "id-62",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-62",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": 0,
-      "y": 110,
-    },
-    Object {
-      "angle": 90,
-      "id": "id-63",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-63",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -55,
-      "y": 165,
-    },
-    Object {
-      "angle": 90,
-      "id": "id-64",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-64",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -165,
-      "y": 165,
-    },
-    Object {
-      "angle": 180,
-      "id": "id-65",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-65",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -220,
-      "y": 110,
-    },
-    Object {
-      "angle": 180,
-      "id": "id-66",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-66",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -220,
-      "y": 0,
-    },
-    Object {
-      "angle": 270,
-      "id": "id-67",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-67",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -165,
-      "y": -55.00000000000001,
-    },
-    Object {
-      "angle": 270,
-      "id": "id-68",
-      "model": CurvedTileModel {
-        "direction": "right",
-        "id": "id-68",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      "x": -55,
-      "y": -55.00000000000003,
-    },
-  ],
-  "width": 310,
-  "x": -265,
-  "y": -100.00000000000003,
 }
 `;
