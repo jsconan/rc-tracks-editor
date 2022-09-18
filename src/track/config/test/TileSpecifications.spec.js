@@ -26,6 +26,7 @@ const barrierLength = 27.5;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
+const contextId = 'tileSpecifications';
 
 describe('TileSpecifications', () => {
     it('is a class', () => {
@@ -44,6 +45,7 @@ describe('TileSpecifications', () => {
         expect(specs.padding).toBe(2.5);
         expect(specs.barrierLength).toBe(6.75);
         expect(specs.maxRatio).toBe(4);
+        expect(specs.contextId).toBe(contextId);
     });
 
     it('defines the specifications for the tiles', () => {
@@ -58,6 +60,7 @@ describe('TileSpecifications', () => {
         expect(specs.padding).toBe(tilePadding);
         expect(specs.barrierLength).toBe(barrierLength);
         expect(specs.maxRatio).toBe(maxRatio);
+        expect(specs.contextId).toBe(contextId);
     });
 
     describe('can set', () => {

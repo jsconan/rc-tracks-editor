@@ -35,6 +35,15 @@ export class TileSpecifications {
     }
 
     /**
+     * The context identifier to retrieve the config from the context.
+     * @type {string}
+     */
+    get contextId() {
+        // @ts-expect-error
+        return this.constructor.CONTEXT_ID;
+    }
+
+    /**
      * The length of a tile with respect to the initial constraints.
      * @type {number}
      */
@@ -123,3 +132,14 @@ export class TileSpecifications {
         }
     }
 }
+
+/**
+ * The context identifier to retrieve the config from the context.
+ * @constant {string} TileSpecifications.CONTEXT_ID
+ */
+Object.defineProperty(TileSpecifications, 'CONTEXT_ID', {
+    value: 'tileSpecifications',
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
