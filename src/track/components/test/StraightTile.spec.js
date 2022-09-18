@@ -21,6 +21,7 @@ import Context from './Context.svelte';
 import StraightTile from '../StraightTile.svelte';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -73,4 +74,34 @@ describe('StraightTile', () => {
             expect(container).toMatchSnapshot();
         }
     );
+
+    it.each([
+        ['direction', { direction: TILE_DIRECTION_LEFT }],
+        ['ratio', { ratio: 2 }],
+        ['angle', { angle: 45 }],
+        ['x', { x: 40 }],
+        ['y', { y: 40 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            direction: TILE_DIRECTION_RIGHT,
+            ratio: 1,
+            angle: 0,
+            x: 100,
+            y: 150,
+            filter: 'select',
+            id: 'tile'
+        };
+        const rendered = render(Context, {
+            props: {
+                component: StraightTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        return wait(10)
+            .then(() => rendered.component.$set({ props: Object.assign({}, props, update) }))
+            .then(() => expect(rendered.container).toMatchSnapshot());
+    });
 });

@@ -16,57 +16,75 @@
     export let id = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const model = new CurvedTileModel(specs, direction, ratio);
+    const barrierWidth = specs.barrierWidth;
+    const width = specs.width;
 
-    const innerRadius = model.getInnerRadius();
-    const outerRadius = model.getOuterRadius();
-    const innerChunks = model.getInnerBarrierChunks();
-    const outerChunks = model.getOuterBarrierChunks();
-    const tileAngle = model.getDirectionAngle();
-    const curveAngle = model.getCurveAngle();
-    const curveCenter = model.getCurveCenter(x, y);
-    const center = model.getCenterCoord(x, y);
-    const barrierWidth = model.specs.barrierWidth;
-    const width = model.specs.width;
+    /**
+     * Computes the parameters for rendering the tile at the expected position.
+     * @param {CurvedTileModel} model
+     * @param {number} tileX
+     * @param {number} tileY
+     * @returns {object}
+     * @private
+     */
+    function getTileParameters(model, tileX, tileY) {
+        const innerRadius = model.getInnerRadius();
+        const outerRadius = model.getOuterRadius() - barrierWidth;
+        const innerChunks = model.getInnerBarrierChunks();
+        const outerChunks = model.getOuterBarrierChunks();
+        const curveAngle = model.getCurveAngle();
+        const curveCenter = model.getCurveCenter(tileX, tileY);
 
-    const innerBarrierRadius = innerRadius;
-    const innerBarrierX = curveCenter.x + innerBarrierRadius;
-    const innerBarrierY = curveCenter.y;
-    const outerBarrierRadius = outerRadius - barrierWidth;
-    const outerBarrierX = curveCenter.x + outerBarrierRadius;
-    const outerBarrierY = curveCenter.y;
+        const innerX = curveCenter.x + innerRadius;
+        const innerY = curveCenter.y;
+        const outerX = curveCenter.x + outerRadius;
+        const outerY = curveCenter.y;
 
-    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
-    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
-    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
+        return {
+            innerRadius,
+            outerRadius,
+            curveAngle,
+            curveCenter,
+            innerChunks,
+            outerChunks,
+            innerX,
+            innerY,
+            outerX,
+            outerY
+        };
+    }
+
+    $: model = new CurvedTileModel(specs, direction, ratio);
+    $: tile = getTileParameters(model, x, y);
+    $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
 <g class="tile curved-tile" {transform} {filter} {id}>
     <CurvedElement
         class="ground"
-        cx={curveCenter.x}
-        cy={curveCenter.y}
+        cx={tile.curveCenter.x}
+        cy={tile.curveCenter.y}
         {width}
-        radius={innerRadius}
-        angle={curveAngle}
+        radius={tile.innerRadius}
+        angle={tile.curveAngle}
         start={0}
     />
     <CurvedBarrier
-        chunks={innerChunks}
+        chunks={tile.innerChunks}
         width={barrierWidth}
-        radius={innerBarrierRadius}
-        angle={curveAngle}
-        left={innerBarrierX}
-        top={innerBarrierY}
+        radius={tile.innerRadius}
+        angle={tile.curveAngle}
+        left={tile.innerX}
+        top={tile.innerY}
         shift={0}
     />
     <CurvedBarrier
-        chunks={outerChunks}
+        chunks={tile.outerChunks}
         width={barrierWidth}
-        radius={outerBarrierRadius}
-        angle={curveAngle}
-        left={outerBarrierX}
-        top={outerBarrierY}
+        radius={tile.outerRadius}
+        angle={tile.curveAngle}
+        left={tile.outerX}
+        top={tile.outerY}
         shift={1}
     />
 </g>

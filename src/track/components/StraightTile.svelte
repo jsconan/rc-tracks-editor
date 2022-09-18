@@ -16,47 +16,56 @@
     export let id = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const model = new StraightTileModel(specs, direction, ratio);
-
-    const width = model.width;
-    const height = model.length;
-    const chunks = model.getSideBarrierChunks();
-    const innerRadius = model.getInnerRadius();
-    const outerRadius = model.getOuterRadius();
-    const tileAngle = model.getDirectionAngle();
-    const curveCenter = model.getCurveCenter(x, y);
-    const center = model.getCenterCoord(x, y);
-    const barrierLength = model.specs.barrierLength;
-    const barrierWidth = model.specs.barrierWidth;
+    const barrierLength = specs.barrierLength;
+    const barrierWidth = specs.barrierWidth;
     const vertical = true;
 
-    const leftBarrierX = curveCenter.x + innerRadius;
-    const leftBarrierY = curveCenter.y;
-    const rightBarrierX = curveCenter.x + outerRadius - barrierWidth;
-    const rightBarrierY = curveCenter.y;
+    /**
+     * Computes the parameters for rendering the tile at the expected position.
+     * @param {StraightTileModel} model
+     * @param {number} tileX
+     * @param {number} tileY
+     * @returns {object}
+     * @private
+     */
+    function getTileParameters(model, tileX, tileY) {
+        const width = model.width;
+        const height = model.length;
+        const chunks = model.getSideBarrierChunks();
+        const innerRadius = model.getInnerRadius();
+        const outerRadius = model.getOuterRadius();
+        const curveCenter = model.getCurveCenter(tileX, tileY);
 
-    $: rotation = angle ? `rotate(${angle} ${x} ${y})` : '';
-    $: orientation = tileAngle ? `rotate(${tileAngle} ${center.x} ${center.y})` : '';
-    $: transform = rotation || orientation ? `${rotation}${orientation}` : '';
+        const leftX = curveCenter.x + innerRadius;
+        const leftY = curveCenter.y;
+        const rightX = curveCenter.x + outerRadius - barrierWidth;
+        const rightY = curveCenter.y;
+
+        return { width, height, chunks, leftX, leftY, rightX, rightY };
+    }
+
+    $: model = new StraightTileModel(specs, direction, ratio);
+    $: tile = getTileParameters(model, x, y);
+    $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
 <g class="tile straight-tile" {transform} {filter} {id}>
-    <StraightElement class="ground" x={leftBarrierX} y={leftBarrierY} {width} {height} />
+    <StraightElement class="ground" x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} />
     <StraightBarrier
-        {chunks}
+        chunks={tile.chunks}
         width={barrierWidth}
         length={barrierLength}
-        left={leftBarrierX}
-        top={leftBarrierY}
+        left={tile.leftX}
+        top={tile.leftY}
         shift={0}
         {vertical}
     />
     <StraightBarrier
-        {chunks}
+        chunks={tile.chunks}
         width={barrierWidth}
         length={barrierLength}
-        left={rightBarrierX}
-        top={rightBarrierY}
+        left={tile.rightX}
+        top={tile.rightY}
         shift={1}
         {vertical}
     />
