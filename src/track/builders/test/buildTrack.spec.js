@@ -53,11 +53,15 @@ describe('buildTrack', () => {
             expect(buildTrack(list)).toMatchSnapshot();
         });
 
-        it.each([{}, { startX: 100, startY: 100 }, { startAngle: 45 }, { startX: 100, startY: 100, startAngle: 45 }])(
-            'using config options %s',
-            config => {
-                expect(buildTrack(list, config)).toMatchSnapshot();
-            }
-        );
+        it.each([
+            {},
+            { startX: 100, startY: 100 },
+            { startAngle: 45 },
+            { startX: 100, startY: 100, startAngle: 45 },
+            { hPadding: 10, vPadding: 20 },
+            { startX: 100, startY: 100, startAngle: 45, hPadding: 10, vPadding: 20 }
+        ])('using config options %s', config => {
+            expect(buildTrack(list, config)).toMatchSnapshot();
+        });
     });
 });

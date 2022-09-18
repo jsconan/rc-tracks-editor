@@ -26,10 +26,12 @@ import { TilesList } from '../models';
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
  * @param {number} [config.startAngle] - The rotation angle of the first tile.
+ * @param {number} [config.hPadding] - An horizontal padding added around the track.
+ * @param {number} [config.vPadding] - A vertical padding added around the tracks.
  * @returns {trackCoord}
  * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
-export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
+export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vPadding = 0 } = {}) => {
     TilesList.validateInstance(list);
 
     const topLeft = new Vector2D();
@@ -59,8 +61,8 @@ export default (list, { startX = 0, startY = 0, startAngle = 0 } = {}) => {
         return { id, type, direction, ratio, x, y, angle, model };
     });
 
-    const { x, y } = topLeft;
-    const { x: width, y: height } = bottomRight.sub(topLeft);
+    const { x, y } = topLeft.subCoord(hPadding, vPadding);
+    const { x: width, y: height } = bottomRight.sub(topLeft).addCoord(hPadding * 2, vPadding * 2);
 
     return { x, y, width, height, tiles, stats };
 };
