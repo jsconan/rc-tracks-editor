@@ -17,6 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { wait } from '../../../core/helpers';
 import StraightBarrier from '../StraightBarrier.svelte';
 
 describe('StraightBarrier', () => {
@@ -49,5 +50,31 @@ describe('StraightBarrier', () => {
         const { container } = render(StraightBarrier, { props });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it.each([
+        ['chunks', { chunks: '5' }],
+        ['chunks', { chunks: '3' }],
+        ['width', { width: 4 }],
+        ['length', { length: 20 }],
+        ['left', { left: 40 }],
+        ['top', { top: 40 }],
+        ['shift', { shift: 1 }],
+        ['vertical', { vertical: true }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            chunks: 4,
+            width: 6,
+            length: 25,
+            left: 100,
+            top: 100,
+            shift: 0,
+            vertical: false
+        };
+        const rendered = render(StraightBarrier, { props });
+
+        return wait(10)
+            .then(() => rendered.component.$set(update))
+            .then(() => expect(rendered.container).toMatchSnapshot());
     });
 });

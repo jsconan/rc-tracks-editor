@@ -17,6 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { wait } from '../../../core/helpers';
 import StraightElement from '../StraightElement.svelte';
 
 describe('StraightElement', () => {
@@ -38,5 +39,28 @@ describe('StraightElement', () => {
         const { container } = render(StraightElement, { props });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it.each([
+        ['class', { class: 'curve' }],
+        ['style', { style: 'fill: #888' }],
+        ['x', { x: 40 }],
+        ['y', { y: 40 }],
+        ['width', { width: 40 }],
+        ['height', { height: 40 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            class: 'tile',
+            style: 'fill: #444;',
+            x: 100,
+            y: 150,
+            width: 80,
+            height: 100
+        };
+        const rendered = render(StraightElement, { props });
+
+        return wait(10)
+            .then(() => rendered.component.$set(update))
+            .then(() => expect(rendered.container).toMatchSnapshot());
     });
 });
