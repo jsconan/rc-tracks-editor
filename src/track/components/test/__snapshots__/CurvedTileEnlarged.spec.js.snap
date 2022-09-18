@@ -1188,11 +1188,13 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
-      transform="rotate(45 0 0)"
+      filter="select"
+      id="tile"
+      transform="rotate(45 100 150)"
     >
       <path
         class="ground"
-        d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1200,12 +1202,12 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
         
         <path
           class="barrier-chunk even"
-          d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+          d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+          d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
         />
       </g>
       <g
@@ -1214,12 +1216,12 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
         
         <path
           class="barrier-chunk odd"
-          d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+          d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+          d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
         />
       </g>
       <g
@@ -1230,16 +1232,16 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
           class="barrier-chunk even"
           height="5"
           width="27.5"
-          x="-55"
-          y="95"
+          x="45"
+          y="245"
         />
         
         <rect
           class="barrier-chunk odd"
           height="5"
           width="27.5"
-          x="-27.5"
-          y="95"
+          x="72.5"
+          y="245"
         />
       </g>
       <g
@@ -1250,16 +1252,16 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
       </g>
     </g>
@@ -1273,11 +1275,13 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
   <div>
     <g
       class="tile curved-tile-enlarged"
-      transform="rotate(90 0 55)"
+      filter="select"
+      id="tile"
+      transform="rotate(90 100 205)"
     >
       <path
         class="ground"
-        d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1285,12 +1289,12 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
         
         <path
           class="barrier-chunk even"
-          d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+          d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+          d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
         />
       </g>
       <g
@@ -1299,12 +1303,12 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
         
         <path
           class="barrier-chunk odd"
-          d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+          d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+          d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
         />
       </g>
       <g
@@ -1315,16 +1319,16 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
           class="barrier-chunk even"
           height="5"
           width="27.5"
-          x="-55"
-          y="95"
+          x="45"
+          y="245"
         />
         
         <rect
           class="barrier-chunk odd"
           height="5"
           width="27.5"
-          x="-27.5"
-          y="95"
+          x="72.5"
+          y="245"
         />
       </g>
       <g
@@ -1335,16 +1339,16 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
       </g>
     </g>
@@ -1358,11 +1362,13 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
+      filter="select"
+      id="tile"
       transform=""
     >
       <path
         class="ground"
-        d="M -45 0 A 120 120 0 0 1 -165 120 L -165 210 L -55 210 A 100 100 0 0 0 45 110 L 45 0 Z"
+        d="M 55 150 A 120 120 0 0 1 -65 270 L -65 360 L 45 360 A 100 100 0 0 0 145 260 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1370,42 +1376,42 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
         
         <path
           class="barrier-chunk even"
-          d="M -45 0 A 120 120 0 0 1 -47.30576635161235 23.41083864193539 L -42.401839949596194 24.386290252016032 A 125 125 0 0 0 -40 0 Z"
+          d="M 55 150 A 120 120 0 0 1 52.69423364838765 173.41083864193538 L 57.598160050403806 174.38629025201604 A 125 125 0 0 0 60 150 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -47.30576635161235 23.41083864193539 A 120 120 0 0 1 -54.134456098645586 45.922011883810775 L -49.51505843608916 47.835429045636225 A 125 125 0 0 0 -42.401839949596194 24.386290252016032 Z"
+          d="M 52.69423364838765 173.41083864193538 A 120 120 0 0 1 45.865543901354414 195.92201188381077 L 50.48494156391084 197.83542904563623 A 125 125 0 0 0 57.598160050403806 174.38629025201604 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M -54.134456098645586 45.922011883810775 A 120 120 0 0 1 -65.22364652369457 66.66842796235227 L -61.06629846218185 69.44627912745027 A 125 125 0 0 0 -49.51505843608916 47.835429045636225 Z"
+          d="M 45.865543901354414 195.92201188381077 A 120 120 0 0 1 34.77635347630543 216.66842796235227 L 38.93370153781815 219.44627912745028 A 125 125 0 0 0 50.48494156391084 197.83542904563623 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -65.22364652369457 66.66842796235227 A 120 120 0 0 1 -80.1471862576143 84.85281374238569 L -76.61165235168156 88.38834764831843 A 125 125 0 0 0 -61.06629846218185 69.44627912745027 Z"
+          d="M 34.77635347630543 216.66842796235227 A 120 120 0 0 1 19.852813742385706 234.8528137423857 L 23.388347648318444 238.38834764831842 A 125 125 0 0 0 38.93370153781815 219.44627912745028 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M -80.1471862576143 84.85281374238569 A 120 120 0 0 1 -98.33157203764773 99.77635347630543 L -95.55372087254972 103.93370153781815 A 125 125 0 0 0 -76.61165235168156 88.38834764831843 Z"
+          d="M 19.852813742385706 234.8528137423857 A 120 120 0 0 1 1.6684279623522684 249.77635347630542 L 4.446279127450282 253.93370153781814 A 125 125 0 0 0 23.388347648318444 238.38834764831842 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -98.33157203764773 99.77635347630543 A 120 120 0 0 1 -119.07798811618922 110.86554390135441 L -117.16457095436377 115.48494156391084 A 125 125 0 0 0 -95.55372087254972 103.93370153781815 Z"
+          d="M 1.6684279623522684 249.77635347630542 A 120 120 0 0 1 -19.077988116189218 260.8655439013544 L -17.164570954363768 265.48494156391087 A 125 125 0 0 0 4.446279127450282 253.93370153781814 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M -119.07798811618922 110.86554390135441 A 120 120 0 0 1 -141.5891613580646 117.69423364838765 L -140.61370974798396 122.5981600504038 A 125 125 0 0 0 -117.16457095436377 115.48494156391084 Z"
+          d="M -19.077988116189218 260.8655439013544 A 120 120 0 0 1 -41.5891613580646 267.69423364838764 L -40.61370974798396 272.5981600504038 A 125 125 0 0 0 -17.164570954363768 265.48494156391087 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -141.5891613580646 117.69423364838765 A 120 120 0 0 1 -165 120 L -165 125 A 125 125 0 0 0 -140.61370974798396 122.5981600504038 Z"
+          d="M -41.5891613580646 267.69423364838764 A 120 120 0 0 1 -64.99999999999999 270 L -64.99999999999999 275 A 125 125 0 0 0 -40.61370974798396 272.5981600504038 Z"
         />
       </g>
       <g
@@ -1414,22 +1420,22 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
         
         <path
           class="barrier-chunk odd"
-          d="M 40 110 A 95 95 0 0 1 32.76855558857224 146.35492607468353 L 37.38795325112868 148.26834323650897 A 100 100 0 0 0 45 110 Z"
+          d="M 140 260 A 95 95 0 0 1 132.76855558857224 296.35492607468353 L 137.3879532511287 298.268343236509 A 100 100 0 0 0 145 260 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M 32.76855558857224 146.35492607468353 A 95 95 0 0 1 12.175144212722017 177.175144212722 L 15.710678118654755 180.71067811865476 A 100 100 0 0 0 37.38795325112868 148.26834323650897 Z"
+          d="M 132.76855558857224 296.35492607468353 A 95 95 0 0 1 112.17514421272202 327.175144212722 L 115.71067811865476 330.71067811865476 A 100 100 0 0 0 137.3879532511287 298.268343236509 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M 12.175144212722017 177.175144212722 A 95 95 0 0 1 -18.645073925316467 197.76855558857224 L -16.731656763491017 202.3879532511287 A 100 100 0 0 0 15.710678118654755 180.71067811865476 Z"
+          d="M 112.17514421272202 327.175144212722 A 95 95 0 0 1 81.35492607468353 347.7685555885722 L 83.26834323650898 352.3879532511287 A 100 100 0 0 0 115.71067811865476 330.71067811865476 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M -18.645073925316467 197.76855558857224 A 95 95 0 0 1 -54.99999999999999 205 L -54.99999999999999 210 A 100 100 0 0 0 -16.731656763491017 202.3879532511287 Z"
+          d="M 81.35492607468353 347.7685555885722 A 95 95 0 0 1 45.00000000000001 355 L 45.00000000000001 360 A 100 100 0 0 0 83.26834323650898 352.3879532511287 Z"
         />
       </g>
       <g
@@ -1440,32 +1446,32 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
           class="barrier-chunk even"
           height="5"
           width="27.5"
-          x="-165"
-          y="205"
+          x="-65"
+          y="355"
         />
         
         <rect
           class="barrier-chunk odd"
           height="5"
           width="27.5"
-          x="-137.5"
-          y="205"
+          x="-37.5"
+          y="355"
         />
         
         <rect
           class="barrier-chunk even"
           height="5"
           width="27.5"
-          x="-110"
-          y="205"
+          x="-10"
+          y="355"
         />
         
         <rect
           class="barrier-chunk odd"
           height="5"
           width="27.5"
-          x="-82.5"
-          y="205"
+          x="17.5"
+          y="355"
         />
       </g>
       <g
@@ -1476,32 +1482,32 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="55"
+          x="140"
+          y="205"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="82.5"
+          x="140"
+          y="232.5"
         />
       </g>
     </g>
@@ -1515,11 +1521,13 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
+      filter="select"
+      id="tile"
       transform=""
     >
       <path
         class="ground"
-        d="M -5 0 A 10 10 0 0 1 -15 10 L -15 100 L 40 100 A 45 45 0 0 0 85 55 L 85 0 Z"
+        d="M -5 150 A 10 10 0 0 1 -15 160 L -15 250 L 40 250 A 45 45 0 0 0 85 205 L 85 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1527,12 +1535,12 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
         
         <path
           class="barrier-chunk even"
-          d="M -5 0 A 10 10 0 0 1 -7.9289321881345245 7.071067811865475 L -4.393398282201787 10.606601717798211 A 15 15 0 0 0 0 0 Z"
+          d="M -5 150 A 10 10 0 0 1 -7.9289321881345245 157.07106781186548 L -4.393398282201787 160.6066017177982 A 15 15 0 0 0 0 150 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -7.9289321881345245 7.071067811865475 A 10 10 0 0 1 -15 10 L -14.999999999999998 15 A 15 15 0 0 0 -4.393398282201787 10.606601717798211 Z"
+          d="M -7.9289321881345245 157.07106781186548 A 10 10 0 0 1 -15 160 L -14.999999999999998 165 A 15 15 0 0 0 -4.393398282201787 160.6066017177982 Z"
         />
       </g>
       <g
@@ -1541,12 +1549,12 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
         
         <path
           class="barrier-chunk odd"
-          d="M 80 55 A 40 40 0 0 1 68.2842712474619 83.2842712474619 L 71.81980515339464 86.81980515339464 A 45 45 0 0 0 85 55 Z"
+          d="M 80 205 A 40 40 0 0 1 68.2842712474619 233.2842712474619 L 71.81980515339464 236.81980515339464 A 45 45 0 0 0 85 205 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M 68.2842712474619 83.2842712474619 A 40 40 0 0 1 40 95 L 40 100 A 45 45 0 0 0 71.81980515339464 86.81980515339464 Z"
+          d="M 68.2842712474619 233.2842712474619 A 40 40 0 0 1 40 245 L 40 250 A 45 45 0 0 0 71.81980515339464 236.81980515339464 Z"
         />
       </g>
       <g
@@ -1558,7 +1566,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
           height="5"
           width="27.5"
           x="-15"
-          y="95"
+          y="245"
         />
         
         <rect
@@ -1566,7 +1574,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
           height="5"
           width="27.5"
           x="12.5"
-          y="95"
+          y="245"
         />
       </g>
       <g
@@ -1578,7 +1586,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="0"
+          y="150"
         />
         
         <rect
@@ -1586,7 +1594,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="27.5"
+          y="177.5"
         />
       </g>
     </g>
@@ -1600,11 +1608,13 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
+      filter="select"
+      id="tile"
       transform=""
     >
       <path
         class="ground"
-        d="M -45 40 A 10 10 0 0 1 -55 50 L -55 140 L 0 140 A 45 45 0 0 0 45 95 L 45 40 Z"
+        d="M 55 40 A 10 10 0 0 1 45 50 L 45 140 L 100 140 A 45 45 0 0 0 145 95 L 145 40 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1612,12 +1622,12 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
         
         <path
           class="barrier-chunk even"
-          d="M -45 40 A 10 10 0 0 1 -47.928932188134524 47.071067811865476 L -44.39339828220179 50.60660171779821 A 15 15 0 0 0 -40 40 Z"
+          d="M 55 40 A 10 10 0 0 1 52.071067811865476 47.071067811865476 L 55.60660171779821 50.60660171779821 A 15 15 0 0 0 60 40 Z"
         />
         
         <path
           class="barrier-chunk odd"
-          d="M -47.928932188134524 47.071067811865476 A 10 10 0 0 1 -55 50 L -55 55 A 15 15 0 0 0 -44.39339828220179 50.60660171779821 Z"
+          d="M 52.071067811865476 47.071067811865476 A 10 10 0 0 1 45 50 L 45 55 A 15 15 0 0 0 55.60660171779821 50.60660171779821 Z"
         />
       </g>
       <g
@@ -1626,12 +1636,12 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
         
         <path
           class="barrier-chunk odd"
-          d="M 40 95 A 40 40 0 0 1 28.284271247461902 123.2842712474619 L 31.81980515339464 126.81980515339464 A 45 45 0 0 0 45 95 Z"
+          d="M 140 95 A 40 40 0 0 1 128.2842712474619 123.2842712474619 L 131.81980515339464 126.81980515339464 A 45 45 0 0 0 145 95 Z"
         />
         
         <path
           class="barrier-chunk even"
-          d="M 28.284271247461902 123.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 135 L 2.7554552980815448e-15 140 A 45 45 0 0 0 31.81980515339464 126.81980515339464 Z"
+          d="M 128.2842712474619 123.2842712474619 A 40 40 0 0 1 100 135 L 100 140 A 45 45 0 0 0 131.81980515339464 126.81980515339464 Z"
         />
       </g>
       <g
@@ -1642,7 +1652,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="5"
           width="27.5"
-          x="-55"
+          x="45"
           y="135"
         />
         
@@ -1650,7 +1660,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="5"
           width="27.5"
-          x="-27.5"
+          x="72.5"
           y="135"
         />
       </g>
@@ -1662,7 +1672,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="40"
         />
         
@@ -1670,7 +1680,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="67.5"
         />
       </g>

@@ -1201,14 +1201,16 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      transform="rotate(45 0 0)"
+      filter="select"
+      id="tile"
+      transform="rotate(45 100 150)"
     >
       <rect
         class="ground"
         height="110"
         width="90"
-        x="-45"
-        y="0"
+        x="55"
+        y="150"
       />
       <g
         class="barrier straight-barrier"
@@ -1218,32 +1220,32 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="0"
+          x="55"
+          y="150"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="27.5"
+          x="55"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="55"
+          x="55"
+          y="205"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="82.5"
+          x="55"
+          y="232.5"
         />
       </g>
       <g
@@ -1254,32 +1256,32 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="55"
+          x="140"
+          y="205"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="82.5"
+          x="140"
+          y="232.5"
         />
       </g>
     </g>
@@ -1293,14 +1295,16 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      transform="rotate(180 0 55)"
+      filter="select"
+      id="tile"
+      transform="rotate(180 100 205)"
     >
       <rect
         class="ground"
         height="110"
         width="90"
-        x="-45"
-        y="0"
+        x="55"
+        y="150"
       />
       <g
         class="barrier straight-barrier"
@@ -1310,32 +1314,32 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="0"
+          x="55"
+          y="150"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="27.5"
+          x="55"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="55"
+          x="55"
+          y="205"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="82.5"
+          x="55"
+          y="232.5"
         />
       </g>
       <g
@@ -1346,32 +1350,32 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="55"
+          x="140"
+          y="205"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="82.5"
+          x="140"
+          y="232.5"
         />
       </g>
     </g>
@@ -1385,14 +1389,16 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
+      filter="select"
+      id="tile"
       transform=""
     >
       <rect
         class="ground"
         height="220"
         width="90"
-        x="-45"
-        y="0"
+        x="55"
+        y="150"
       />
       <g
         class="barrier straight-barrier"
@@ -1402,64 +1408,64 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="0"
+          x="55"
+          y="150"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="27.5"
+          x="55"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="55"
+          x="55"
+          y="205"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="82.5"
+          x="55"
+          y="232.5"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="110"
+          x="55"
+          y="260"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="137.5"
+          x="55"
+          y="287.5"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
-          y="165"
+          x="55"
+          y="315"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
-          y="192.5"
+          x="55"
+          y="342.5"
         />
       </g>
       <g
@@ -1470,64 +1476,64 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="0"
+          x="140"
+          y="150"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="27.5"
+          x="140"
+          y="177.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="55"
+          x="140"
+          y="205"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="82.5"
+          x="140"
+          y="232.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="110"
+          x="140"
+          y="260"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="137.5"
+          x="140"
+          y="287.5"
         />
         
         <rect
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
-          y="165"
+          x="140"
+          y="315"
         />
         
         <rect
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
-          y="192.5"
+          x="140"
+          y="342.5"
         />
       </g>
     </g>
@@ -1541,6 +1547,8 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
+      filter="select"
+      id="tile"
       transform=""
     >
       <rect
@@ -1548,7 +1556,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         height="110"
         width="90"
         x="-5"
-        y="0"
+        y="150"
       />
       <g
         class="barrier straight-barrier"
@@ -1559,7 +1567,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="-5"
-          y="0"
+          y="150"
         />
         
         <rect
@@ -1567,7 +1575,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="-5"
-          y="27.5"
+          y="177.5"
         />
         
         <rect
@@ -1575,7 +1583,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="-5"
-          y="55"
+          y="205"
         />
         
         <rect
@@ -1583,7 +1591,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="-5"
-          y="82.5"
+          y="232.5"
         />
       </g>
       <g
@@ -1595,7 +1603,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="0"
+          y="150"
         />
         
         <rect
@@ -1603,7 +1611,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="27.5"
+          y="177.5"
         />
         
         <rect
@@ -1611,7 +1619,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="55"
+          y="205"
         />
         
         <rect
@@ -1619,7 +1627,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
           height="27.5"
           width="5"
           x="80"
-          y="82.5"
+          y="232.5"
         />
       </g>
     </g>
@@ -1633,13 +1641,15 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
+      filter="select"
+      id="tile"
       transform=""
     >
       <rect
         class="ground"
         height="110"
         width="90"
-        x="-45"
+        x="55"
         y="40"
       />
       <g
@@ -1650,7 +1660,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
+          x="55"
           y="40"
         />
         
@@ -1658,7 +1668,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
+          x="55"
           y="67.5"
         />
         
@@ -1666,7 +1676,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="-45"
+          x="55"
           y="95"
         />
         
@@ -1674,7 +1684,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="-45"
+          x="55"
           y="122.5"
         />
       </g>
@@ -1686,7 +1696,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="40"
         />
         
@@ -1694,7 +1704,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="67.5"
         />
         
@@ -1702,7 +1712,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk odd"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="95"
         />
         
@@ -1710,7 +1720,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
           class="barrier-chunk even"
           height="27.5"
           width="5"
-          x="40"
+          x="140"
           y="122.5"
         />
       </g>

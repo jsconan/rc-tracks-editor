@@ -19,20 +19,23 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import Context from './Context.svelte';
 import Tile from '../Tile.svelte';
-import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../models';
 import { TileSpecifications } from '../../config';
-import { TILE_DIRECTION_RIGHT } from '../../helpers';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT
+} from '../../helpers';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const straightTile = new StraightTileModel(specs);
-const curvedTile = new CurvedTileModel(specs);
-const curvedTileEnlarged = new CurvedTileEnlargedModel(specs);
 
 describe('Tile', () => {
-    it.each([void 0, straightTile.type, curvedTile.type, curvedTileEnlarged.type])(
+    it.each([void 0, STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
         'renders a %s tile with default values',
         type => {
             const props = { type };
@@ -49,7 +52,7 @@ describe('Tile', () => {
         }
     );
 
-    it.each([straightTile.type, curvedTile.type, curvedTileEnlarged.type])(
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
         'renders a %s tile with the given parameters',
         type => {
             const props = {
@@ -75,12 +78,44 @@ describe('Tile', () => {
         }
     );
 
+    it.each([
+        ['type', { type: CURVED_TILE_TYPE }],
+        ['direction', { direction: TILE_DIRECTION_LEFT }],
+        ['ratio', { ratio: 2 }],
+        ['angle', { angle: 45 }],
+        ['x', { x: 40 }],
+        ['y', { y: 40 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
+        const props = {
+            type: STRAIGHT_TILE_TYPE,
+            direction: TILE_DIRECTION_RIGHT,
+            ratio: 1,
+            x: 100,
+            y: 200,
+            angle: 90,
+            filter: 'select',
+            id: 'tile'
+        };
+        const rendered = render(Context, {
+            props: {
+                component: Tile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        return wait(10)
+            .then(() => rendered.component.$set({ props: Object.assign({}, props, update) }))
+            .then(() => expect(rendered.container).toMatchSnapshot());
+    });
+
     it('needs a valid type', () => {
         const props = { type: 'tile' };
         expect(() => render(Tile, { props })).toThrow('A valid type of tile is needed!');
     });
 
-    it.each([straightTile.type, curvedTile.type, curvedTileEnlarged.type])('fires click from a %s tile', type => {
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])('fires click from a %s tile', type => {
         const onClick = jest.fn();
         const props = { type };
         const { container, component } = render(Context, {
