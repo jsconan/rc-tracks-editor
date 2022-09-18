@@ -13,22 +13,37 @@
     export let top = 0;
     export let shift = 0;
 
-    const chunkAngle = angle / chunks;
-    const cx = left - radius;
-    const cy = top;
+    /**
+     * Computes the coordinates of each curve segment.
+     * @param {number} centerX - The X-coordinate of the center of the curve.
+     * @param {number} centerY - The Y-coordinate of the center of the curve.
+     * @param {number} curveChunks - The number of curve segments.
+     * @param {number} curveAngle - The angle of the curve.
+     * @param {number} curveRadius - The radius of the curve.
+     * @param {number} colorShift - A shift applied to the alternate colors.
+     * @private
+     */
+    function curvedSegments(centerX, centerY, curveChunks, curveAngle, curveRadius, colorShift) {
+        const chunkAngle = curveAngle / curveChunks;
+        const cx = centerX - curveRadius;
+        const cy = centerY;
+        const segments = [];
 
-    function* segments() {
-        for (let i = 0; i < chunks; i++) {
-            const color = alternateBarrierColor(i + shift);
+        for (let i = 0; i < curveChunks; i++) {
+            const color = alternateBarrierColor(i + colorShift);
             const start = chunkAngle * i;
 
-            yield { color, start, i };
+            segments.push({ cx, cy, chunkAngle, color, start, i });
         }
+
+        return segments;
     }
+
+    $: segments = curvedSegments(left, top, chunks, angle, radius, shift);
 </script>
 
 <g class="barrier curved-barrier">
-    {#each [...segments()] as { color, start, i } (i)}
+    {#each segments as { cx, cy, chunkAngle, color, start, i } (i)}
         <CurvedElement class="barrier-chunk {color}" {cx} {cy} {width} {radius} angle={chunkAngle} {start} />
     {/each}
 </g>

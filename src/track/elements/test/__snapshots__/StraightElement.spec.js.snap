@@ -27,3 +27,93 @@ exports[`StraightElement renders with the given parameters 1`] = `
   </div>
 </body>
 `;
+
+exports[`StraightElement updates when the parameter class is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="curve"
+      height="100"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter height is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="40"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter style is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="100"
+      style="fill: #888"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter width is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="100"
+      style="fill: #444;"
+      width="40"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter x is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="100"
+      style="fill: #444;"
+      width="80"
+      x="40"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter y is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      height="100"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="40"
+    />
+  </div>
+</body>
+`;

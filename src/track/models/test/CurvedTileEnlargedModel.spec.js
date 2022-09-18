@@ -17,7 +17,7 @@
  */
 
 import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
-import { TileSpecifications } from '../TileSpecifications.js';
+import { TileSpecifications } from '../../config';
 
 const tileX = 100;
 const tileY = 100;
@@ -27,7 +27,9 @@ const tileLength = 110;
 const tileWidth = 90;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const minRatio = 1;
+const maxRatio = 4;
+const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
 
 describe('CurvedTileEnlargedModel', () => {
     it('is a class', () => {
@@ -37,7 +39,9 @@ describe('CurvedTileEnlargedModel', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new CurvedTileEnlargedModel({})).toThrow('A valid specifications object is needed!');
+            expect(() => new CurvedTileEnlargedModel({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to create an instance with an invalid direction', () => {
@@ -47,7 +51,9 @@ describe('CurvedTileEnlargedModel', () => {
         it('when trying to set an invalid specifications object', () => {
             const tile = new CurvedTileEnlargedModel(specs);
             // @ts-expect-error
-            expect(() => tile.setSpecs({})).toThrow('A valid specifications object is needed!');
+            expect(() => tile.setSpecs({})).toThrow(
+                'The specifications object must be an instance of TileSpecifications!'
+            );
         });
 
         it('when trying to set an invalid direction', () => {
@@ -59,36 +65,48 @@ describe('CurvedTileEnlargedModel', () => {
     describe('can build a tile', () => {
         it('with the given size', () => {
             const tile = new CurvedTileEnlargedModel(specs);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
 
         it('with the given size and direction', () => {
             const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-1`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-1`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
             const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
             const sizeRatio = Math.max(1, ratio);
+            const modelId = `${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`;
 
             expect(tile).toBeInstanceOf(CurvedTileEnlargedModel);
             expect(tile).toMatchSnapshot();
             expect(tile.type).toBe(CurvedTileEnlargedModel.TYPE);
-            expect(tile.id).toBe(`${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
             expect(tile.length).toBe(tileLength * sizeRatio);
             expect(tile.width).toBe(tileWidth * sizeRatio);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(maxRatio);
         });
     });
 
@@ -117,9 +135,23 @@ describe('CurvedTileEnlargedModel', () => {
             expect(tile.ratio).toBe(1);
             expect(tile.setRatio(-1).ratio).toBe(1);
             expect(tile.setRatio(0).ratio).toBe(1);
+            expect(tile.setRatio(0.15).ratio).toBe(1);
+            expect(tile.setRatio(0.33).ratio).toBe(1);
             expect(tile.setRatio(0.5).ratio).toBe(1);
-            expect(tile.setRatio(2.5).ratio).toBe(2);
+            expect(tile.setRatio(2.5).ratio).toBe(3);
+            expect(tile.setRatio(5).ratio).toBe(maxRatio);
         });
+    });
+
+    it.each([
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, CurvedTileEnlargedModel.DIRECTION_LEFT],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, CurvedTileEnlargedModel.DIRECTION_RIGHT]
+    ])('can flip the direction of the tile from %s to %s', (direction, flippedDirection) => {
+        const tile = new CurvedTileEnlargedModel(specs, direction);
+
+        expect(tile.direction).toBe(direction);
+        expect(tile.flipDirection()).toBe(tile);
+        expect(tile.direction).toBe(flippedDirection);
     });
 
     describe('can compute', () => {
@@ -127,13 +159,11 @@ describe('CurvedTileEnlargedModel', () => {
             it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleRight()).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
                 expect(tile.getDirectionAngle()).toMatchSnapshot();
-                expect(tile.getDirectionAngleLeft()).toMatchSnapshot();
             });
         });
 
@@ -211,10 +241,6 @@ describe('CurvedTileEnlargedModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordRight()).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordRight(tileX, tileY, 90)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
@@ -223,10 +249,6 @@ describe('CurvedTileEnlargedModel', () => {
                 expect(tile.getOutputCoord()).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY)).toMatchSnapshot();
                 expect(tile.getOutputCoord(tileX, tileY, 90)).toMatchSnapshot();
-
-                expect(tile.getOutputCoordLeft()).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY)).toMatchSnapshot();
-                expect(tile.getOutputCoordLeft(tileX, tileY, 90)).toMatchSnapshot();
             });
         });
 
@@ -235,21 +257,94 @@ describe('CurvedTileEnlargedModel', () => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleRight()).toMatchSnapshot();
-                expect(tile.getOutputAngleRight(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
             });
 
             it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
                 const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
 
                 expect(tile.getOutputAngle()).toMatchSnapshot();
-                expect(tile.getOutputAngle(90)).toMatchSnapshot();
-
-                expect(tile.getOutputAngleLeft()).toMatchSnapshot();
-                expect(tile.getOutputAngleLeft(90)).toMatchSnapshot();
+                expect(tile.getOutputAngle(450)).toMatchSnapshot();
             });
         });
+
+        describe('the position of the edge points for a tile', () => {
+            it.each(tileRatios)('oriented to the right with a ratio of %s', ratio => {
+                const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
+
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
+            });
+
+            it.each(tileRatios)('oriented to the left with a ratio of %s', ratio => {
+                const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
+
+                expect(tile.getEdgesCoord()).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY)).toMatchSnapshot();
+                expect(tile.getEdgesCoord(tileX, tileY, 90)).toMatchSnapshot();
+            });
+        });
+
+        describe('the bounding rectangle of the tile', () => {
+            it.each([
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 0, 0, 90],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 0, 0, 90]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+                    expect(tile.getBoundingRect(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
+
+        describe('the transform command to rotate the tile', () => {
+            it.each([
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 0, 0, 90],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100, 45],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100, 405],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 0, 0, 90]
+            ])(
+                'oriented to the %s with a ratio of %s and positioned at [%s, %s] rotated by %s degrees',
+                (direction, ratio, x, y, angle) => {
+                    const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+                    expect(tile.getRotateTransform(x, y, angle)).toMatchSnapshot();
+                }
+            );
+        });
+    });
+
+    it.each([
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1],
+        [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, 1],
+        [CurvedTileEnlargedModel.DIRECTION_LEFT, 2]
+    ])('can export to an object a tile oriented to the %s having a ratio of %s', (direction, ratio) => {
+        const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+
+        expect(tile.export()).toMatchSnapshot();
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const tile = new CurvedTileEnlargedModel(specs);
+        expect(() => CurvedTileEnlargedModel.validateInstance(tile)).not.toThrow();
+        expect(() => CurvedTileEnlargedModel.validateInstance({})).toThrow(
+            'The model must be an instance of CurvedTileEnlargedModel!'
+        );
     });
 });

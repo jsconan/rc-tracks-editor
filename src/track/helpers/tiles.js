@@ -66,6 +66,30 @@ const allowedDirection = [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT];
 export const isDirectionValid = direction => allowedDirection.includes(direction);
 
 /**
+ * Validates that a given direction is valid for a tile.
+ * Otherwise, an error is thrown.
+ * @param {*} direction - The direction to validate.
+ * @throws {TypeError} - If the given direction is not valid.
+ */
+export const validateDirection = direction => {
+    if (!isDirectionValid(direction)) {
+        throw new TypeError('A valid direction is needed!');
+    }
+};
+
+/**
+ * Flips the direction of a tile.
+ * @param {string} direction - The original direction
+ * @returns {string} - The flipped direction.
+ */
+export const flipTileDirection = direction => {
+    if (direction === TILE_DIRECTION_LEFT) {
+        return TILE_DIRECTION_RIGHT;
+    }
+    return TILE_DIRECTION_LEFT;
+};
+
+/**
  * @type {string[]} - The list of allowed tile types.
  * @private
  */
@@ -77,3 +101,15 @@ const allowedTypes = [STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED
  * @returns {boolean} - Returns `true` if the type is valid.
  */
 export const isTypeValid = type => allowedTypes.includes(type);
+
+/**
+ * Validates that a given type is valid for a tile.
+ * Otherwise, an error is thrown.
+ * @param {*} type - The type to validate.
+ * @throws {TypeError} - If the given type is not valid.
+ */
+export const validateType = type => {
+    if (!isTypeValid(type)) {
+        throw new TypeError('A valid type of tile is needed!');
+    }
+};

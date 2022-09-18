@@ -25,11 +25,22 @@ export class TileSpecifications {
      * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
      * @param {number} barrierWidth - The width of the barriers.
      * @param {number} barrierChunks - The number of barrier chunks per tile.
+     * @param {number} maxRatio - The maximum value for size ratios.
      */
-    constructor(laneWidth, barrierWidth, barrierChunks) {
+    constructor(laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4) {
         this.setLaneWidth(laneWidth);
         this.setBarrierWidth(barrierWidth);
         this.setBarrierChunks(barrierChunks);
+        this.setMaxRatio(maxRatio);
+    }
+
+    /**
+     * The context identifier to retrieve the config from the context.
+     * @type {string}
+     */
+    get contextId() {
+        // @ts-expect-error
+        return this.constructor.CONTEXT_ID;
     }
 
     /**
@@ -97,4 +108,38 @@ export class TileSpecifications {
 
         return this;
     }
+
+    /**
+     * Sets the maximum value for size ratios.
+     * @param {number} maxRatio - The maximum value for size ratios.
+     * @returns {TileSpecifications} - Chains the instance.
+     */
+    setMaxRatio(maxRatio) {
+        this.maxRatio = Math.abs(Math.round(maxRatio) || 1);
+
+        return this;
+    }
+
+    /**
+     * Validates that the given object is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} object - The instance to validate.
+     * @throws {TypeError} - If the given object is not a valid instance.
+     */
+    static validateInstance(object) {
+        if (!(object instanceof this)) {
+            throw new TypeError(`The specifications object must be an instance of ${this.name}!`);
+        }
+    }
 }
+
+/**
+ * The context identifier to retrieve the config from the context.
+ * @constant {string} TileSpecifications.CONTEXT_ID
+ */
+Object.defineProperty(TileSpecifications, 'CONTEXT_ID', {
+    value: 'tileSpecifications',
+    writable: false,
+    enumerable: true,
+    configurable: true
+});

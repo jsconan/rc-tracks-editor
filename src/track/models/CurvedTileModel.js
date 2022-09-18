@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CURVED_TILE_TYPE } from '../helpers';
+import { quadrantRange, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -41,11 +41,23 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the angle for rotating the tile to the left.
+     * The minimum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get minRatio() {
+        return 2 / this.specs.barrierChunks;
+    }
+
+    /**
+     * Computes the angle for rotating the tile to the expected direction.
      * @returns {number}
      */
-    getDirectionAngleLeft() {
-        return 90 + (90 / this.ratio) * (Math.max(1, this.ratio) - 1);
+    getDirectionAngle() {
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            return Vector2D.RIGHT_ANGLE + (Vector2D.RIGHT_ANGLE / this.ratio) * (Math.max(1, this.ratio) - 1);
+        }
+
+        return 0;
     }
 
     /**
@@ -54,10 +66,10 @@ export class CurvedTileModel extends TileModel {
      */
     getCurveAngle() {
         if (this.ratio < 1) {
-            return 90 * this.ratio;
+            return Vector2D.RIGHT_ANGLE * this.ratio;
         }
 
-        return 90 / this.ratio;
+        return Vector2D.RIGHT_ANGLE / this.ratio;
     }
 
     /**
@@ -77,7 +89,7 @@ export class CurvedTileModel extends TileModel {
         const p1 = Vector2D.polar(radius, 0, curveCenter);
         const p2 = p1.addScalarY(10);
         const p3 = Vector2D.polar(radius, curveAngle, curveCenter);
-        const p4 = p3.add(Vector2D.polar(10, curveAngle + 90));
+        const p4 = p3.add(Vector2D.polar(10, curveAngle + Vector2D.RIGHT_ANGLE));
 
         const center = Vector2D.intersect(p1, p2, p3, p4);
 
@@ -85,55 +97,85 @@ export class CurvedTileModel extends TileModel {
     }
 
     /**
-     * Computes the coordinates of the output point when the tile is oriented to the right.
+     * Computes the coordinates of the output point with respect to the tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
      * @returns {Vector2D}
      */
-    getOutputCoordRight(x = 0, y = 0, angle = 0) {
+    getOutputCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
         const radius = this.getInnerRadius() + this.specs.width / 2;
-        const curveAngle = this.getCurveAngle();
-        const center = start.subScalarX(radius);
+
+        let curveAngle, center;
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            curveAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
+            center = start.addScalarX(radius);
+        } else {
+            curveAngle = this.getCurveAngle();
+            center = start.subScalarX(radius);
+        }
 
         return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
     }
 
     /**
-     * Computes the coordinates of the output point when the tile is oriented to the left.
+     * Computes the angle of the output point with respect to the tile direction.
+     * @param {number} angle - The rotation angle of the tile.
+     * @returns {number}
+     */
+    getOutputAngle(angle = 0) {
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            return Vector2D.degrees(angle - this.getCurveAngle());
+        }
+
+        return Vector2D.degrees(angle + this.getCurveAngle());
+    }
+
+    /**
+     * Computes the coordinates of the edge points with respect to the tile direction.
      * @param {number} x - The X-coordinate of the tile.
      * @param {number} y - The Y-coordinate of the tile.
      * @param {number} angle - The rotation angle of the tile.
-     * @returns {Vector2D}
+     * @returns {Vector2D[]} - Returns a list of edge points.
      */
-    getOutputCoordLeft(x = 0, y = 0, angle = 0) {
+    getEdgesCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
+        const width = this.specs.width;
+        const innerRadius = this.getInnerRadius();
+        const outerRadius = innerRadius + width;
+        const centerRadius = innerRadius + width / 2;
 
-        const radius = this.getInnerRadius() + this.specs.width / 2;
-        const curveAngle = 180 - this.getCurveAngle();
-        const center = start.addScalarX(radius);
+        let startAngle, center;
+        if (this.direction === TILE_DIRECTION_LEFT) {
+            center = start.addScalarX(centerRadius);
+            startAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
+        } else {
+            center = start.subScalarX(centerRadius);
+            startAngle = 0;
+        }
+        const endAngle = startAngle + this.getCurveAngle();
 
-        return Vector2D.polar(radius, curveAngle, center).rotateAround(angle, start);
-    }
+        const p0 = Vector2D.polar(innerRadius, startAngle, center).rotateAround(angle, start);
+        const p1 = Vector2D.polar(outerRadius, startAngle, center).rotateAround(angle, start);
+        const p2 = Vector2D.polar(outerRadius, endAngle, center).rotateAround(angle, start);
+        const p3 = Vector2D.polar(innerRadius, endAngle, center).rotateAround(angle, start);
 
-    /**
-     * Computes the angle of the output point when the tile is oriented to the right.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
-     */
-    getOutputAngleRight(angle = 0) {
-        return angle + this.getCurveAngle();
-    }
+        const edges = [p0, p1];
 
-    /**
-     * Computes the angle of the output point when the tile is oriented to the left.
-     * @param {number} angle - The rotation angle of the tile.
-     * @returns {number}
-     */
-    getOutputAngleLeft(angle = 0) {
-        return angle - this.getCurveAngle();
+        const rotatedCenter = center.rotateAround(angle, start);
+        const rotatedStartAngle = Vector2D.degrees(p1.sub(rotatedCenter).angle());
+        const rotatedEndAngle = rotatedStartAngle + this.getCurveAngle();
+
+        const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);
+        if (edgeAngle !== null) {
+            edges.push(Vector2D.polar(outerRadius, edgeAngle, rotatedCenter));
+        }
+
+        edges.push(p2, p3);
+
+        return edges;
     }
 }
 

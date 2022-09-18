@@ -10,9 +10,7 @@
     export let y = 0;
     export let r = 5;
 
-    if (!(model instanceof TileModel)) {
-        throw new TypeError('The model must be an instance of TileModel!');
-    }
+    TileModel.validateInstance(model);
 
     const output = model.getOutputCoord(x, y, angle);
     const center = model.getCenterCoord(x, y, angle);

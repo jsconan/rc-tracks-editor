@@ -30,14 +30,6 @@ export class StraightTileModel extends TileModel {
     get width() {
         return this.specs.width;
     }
-
-    /**
-     * Computes the angle for rotating the tile to the left.
-     * @returns {number}
-     */
-    getDirectionAngleLeft() {
-        return 180;
-    }
 }
 
 /**

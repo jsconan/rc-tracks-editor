@@ -17,9 +17,11 @@
  */
 
 import { render } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
-import { CurvedTileEnlargedModel, TileSpecifications } from '../../models';
+import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -28,10 +30,13 @@ const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('CurvedTileEnlarged', () => {
     it('renders with default values', () => {
-        const props = {
-            model: new CurvedTileEnlargedModel(specs)
-        };
-        const { container } = render(CurvedTileEnlarged, { props });
+        const { container } = render(Context, {
+            props: {
+                component: CurvedTileEnlarged,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
@@ -49,25 +54,54 @@ describe('CurvedTileEnlarged', () => {
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
         (direction, angle, ratio) => {
             const props = {
-                model: new CurvedTileEnlargedModel(specs, direction, ratio),
+                direction,
+                ratio,
                 angle,
                 x: 100,
                 y: 150,
                 filter: 'select',
                 id: 'tile'
             };
-            const { container } = render(CurvedTileEnlarged, { props });
+            const { container } = render(Context, {
+                props: {
+                    component: CurvedTileEnlarged,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
             expect(container).toMatchSnapshot();
         }
     );
 
-    it('needs a valid model', () => {
+    it.each([
+        ['direction', { direction: TILE_DIRECTION_LEFT }],
+        ['ratio', { ratio: 2 }],
+        ['angle', { angle: 45 }],
+        ['x', { x: 40 }],
+        ['y', { y: 40 }]
+    ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
-            model: {}
+            direction: TILE_DIRECTION_RIGHT,
+            ratio: 1,
+            angle: 0,
+            x: 100,
+            y: 150,
+            filter: 'select',
+            id: 'tile'
         };
-        expect(() => render(CurvedTileEnlarged, { props })).toThrow(
-            'The model must be an instance of CurvedTileEnlargedModel!'
-        );
+        const rendered = render(Context, {
+            props: {
+                component: CurvedTileEnlarged,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        return wait(10)
+            .then(() => rendered.component.$set({ props: Object.assign({}, props, update) }))
+            .then(() => expect(rendered.container).toMatchSnapshot());
     });
 });

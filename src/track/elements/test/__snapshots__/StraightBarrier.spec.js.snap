@@ -214,3 +214,347 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
   </div>
 </body>
 `;
+
+exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="125"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="150"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="175"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="200"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="125"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="150"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter left is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="40"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="65"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="90"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="115"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter length is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="20"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="20"
+        x="120"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="20"
+        x="140"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="20"
+        x="160"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="125"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="150"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="175"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter top is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="100"
+        y="40"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="125"
+        y="40"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="6"
+        width="25"
+        x="150"
+        y="40"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="6"
+        width="25"
+        x="175"
+        y="40"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="125"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="25"
+        width="6"
+        x="100"
+        y="150"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="25"
+        width="6"
+        x="100"
+        y="175"
+      />
+    </g>
+  </div>
+</body>
+`;
+
+exports[`StraightBarrier updates when the parameter width is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        class="barrier-chunk even"
+        height="4"
+        width="25"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="4"
+        width="25"
+        x="125"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk even"
+        height="4"
+        width="25"
+        x="150"
+        y="100"
+      />
+      
+      <rect
+        class="barrier-chunk odd"
+        height="4"
+        width="25"
+        x="175"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;

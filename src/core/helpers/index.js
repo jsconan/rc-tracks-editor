@@ -19,4 +19,7 @@
 export { default as alternate } from './alternate.js';
 export { default as defined } from './defined.js';
 export { default as uid } from './uid.js';
+export { default as validateCallback } from './validateCallback.js';
 export { default as wait } from './wait.js';
+export { arcTo, lineTo, moveTo } from './svg.js';
+export { rotate } from './transform.js';

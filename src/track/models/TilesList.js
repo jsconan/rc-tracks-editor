@@ -17,35 +17,61 @@
  */
 
 import { derived } from 'svelte/store';
-import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
-import { TileReferenceModel } from './TileReferenceModel.js';
-import { TileSpecifications } from './TileSpecifications.js';
-import { List, Vector2D } from '../../core/models';
+import {
+    validateType,
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../helpers';
+import { uid } from '../../core/helpers';
+import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
+import { CurvedTileModel } from './CurvedTileModel.js';
+import { StraightTileModel } from './StraightTileModel.js';
+import { TileSpecifications } from '../config';
+import { Counter, List } from '../../core/models';
 
 /**
- * Update the number of identified types.
- * @param {object} stats - The receiver for the stats.
- * @param {TileReferenceModel} tile - The tile to count.
- * @param {number} diff - The amount to add for the identified type.
+ * @type {object} - Maps the types of tile to their respective model.
  * @private
  */
-function updateStats(stats, tile, diff = 1) {
-    const key = tile.modelId;
-    stats[key] = Math.max(0, (stats[key] || 0) + diff);
+const modelsMap = {
+    [STRAIGHT_TILE_TYPE]: StraightTileModel,
+    [CURVED_TILE_TYPE]: CurvedTileModel,
+    [CURVED_TILE_ENLARGED_TYPE]: CurvedTileEnlargedModel
+};
+
+/**
+ * Creates the tile model with respect to the given type.
+ * @param {TileSpecifications} specs - The specifications for the tiles.
+ * @param {string} type - The type of tile.
+ * @param {string} direction - The direction of the tile.
+ * @param {number} ratio - The size ratio of the tile.
+ * @returns {TileModel} - Returns a tile model of the expected type.
+ * @throws {TypeError} - If the given specifications object is not valid.
+ * @throws {TypeError} - If the given type is not valid.
+ * @throws {TypeError} - If the given direction is not valid.
+ * @private
+ */
+function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    validateType(type);
+    const model = new modelsMap[type](specs, direction, ratio);
+    model.id = uid();
+    return model;
 }
 
 /**
- * Represents a track.
+ * Represents a list of tiles.
  */
-export class TrackModel {
+export class TilesList {
     /**
-     * Represents a track with the given size constraints.
+     * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     constructor(specs) {
         this.tiles = new List();
-        this.stats = {};
+        this.stats = new Counter();
         this.setSpecs(specs);
 
         const { subscribe } = derived(this.tiles, () => this);
@@ -62,13 +88,11 @@ export class TrackModel {
     /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
-        if (!specs || !(specs instanceof TileSpecifications)) {
-            throw new TypeError('A valid specifications object is needed!');
-        }
+        TileSpecifications.validateInstance(specs);
 
         this.specs = specs;
 
@@ -81,7 +105,7 @@ export class TrackModel {
     }
 
     /**
-     * Gets the position of a tile inside the track.
+     * Gets the position of a tile inside the list.
      * @param {string} id - The unique identifier of the tile.
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
@@ -92,7 +116,7 @@ export class TrackModel {
     /**
      * Retrieves a tile by its identifier.
      * @param {string} id - The unique identifier of the tile.
-     * @returns {TileReferenceModel} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
     getTile(id) {
         return this.getTileAt(this.getTileIndex(id));
@@ -101,14 +125,14 @@ export class TrackModel {
     /**
      * Gets a tile from a particular position.
      * @param {number} index - The position of the tile.
-     * @returns {TileReferenceModel} - The referenced tile, or `null` if it does not exist.
+     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
     getTileAt(index) {
         return this.tiles.get(index) || null;
     }
 
     /**
-     * Add a tile to the track, at the last position.
+     * Add a tile to the list, at the last position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -117,16 +141,16 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+        const tile = createModel(this.specs, type, direction, ratio);
 
-        updateStats(this.stats, tile);
+        this.stats.increment(tile.modelId);
         this.tiles.add(tile);
 
         return tile.id;
     }
 
     /**
-     * Add a tile to the track, at the first position.
+     * Add a tile to the list, at the first position.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
@@ -135,16 +159,16 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      */
     prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+        const tile = createModel(this.specs, type, direction, ratio);
 
-        updateStats(this.stats, tile);
+        this.stats.increment(tile.modelId);
         this.tiles.insert(0, tile);
 
         return tile.id;
     }
 
     /**
-     * Removes a tile from the track.
+     * Removes a tile from the list.
      * @param {string} id - The unique identifier of the tile to remove.
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
      */
@@ -155,13 +179,13 @@ export class TrackModel {
             return false;
         }
 
-        updateStats(this.stats, this.tiles.get(index), -1);
+        this.stats.decrement(this.tiles.get(index).modelId);
 
         return this.tiles.delete(index) > 0;
     }
 
     /**
-     * Replace a tile in the track.
+     * Replace a tile in the list.
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
      * @param {string} type - The type of tile to add.
@@ -175,10 +199,10 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, this.tiles.get(index), -1);
-            updateStats(this.stats, tile);
+            this.stats.decrement(this.tiles.get(index).modelId);
+            this.stats.increment(tile.modelId);
 
             this.tiles.set(index, tile);
 
@@ -189,7 +213,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track before a particular position.
+     * Insert a tile in the list before a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
      * @param {string} type - The type of tile to add.
@@ -203,9 +227,9 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, tile);
+            this.stats.increment(tile.modelId);
             this.tiles.insert(index, tile);
 
             return tile.id;
@@ -215,7 +239,7 @@ export class TrackModel {
     }
 
     /**
-     * Insert a tile in the track after a particular position.
+     * Insert a tile in the list after a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile after which add another tile.
      * @param {string} type - The type of tile to add.
@@ -229,9 +253,9 @@ export class TrackModel {
         const index = this.getTileIndex(id);
 
         if (index >= 0) {
-            const tile = new TileReferenceModel(this.specs, type, direction, ratio);
+            const tile = createModel(this.specs, type, direction, ratio);
 
-            updateStats(this.stats, tile);
+            this.stats.increment(tile.modelId);
             this.tiles.insert(index + 1, tile);
 
             return tile.id;
@@ -242,72 +266,45 @@ export class TrackModel {
 
     /**
      * Rebuilds the stats regarding the number of identified types.
-     * @returns {TrackModel} - Chains the instance.
+     * @returns {TilesList} - Chains the instance.
      */
     rebuildStats() {
-        this.stats = {};
+        const dataIterator = this.tiles.values();
+        const loadIterator = {
+            next: () => {
+                const next = dataIterator.next();
 
-        if (this.tiles.length) {
-            this.tiles.forEach(tile => updateStats(this.stats, tile));
-            this.tiles.notify();
-        }
+                if (next.done) {
+                    return next;
+                }
+
+                const { modelId } = next.value;
+                return { done: false, value: modelId };
+            },
+
+            [Symbol.iterator]() {
+                return this;
+            }
+        };
+
+        this.stats.reset(loadIterator);
 
         return this;
     }
 
     /**
-     * Builds the track for rendering, computing the coordinates of each tile.
-     * @param {number} startX - The X-coordinate of the first tile.
-     * @param {number} startY - The Y-coordinate of the first tile.
-     * @param {number} startAngle - The rotation angle of the first tile.
-     * @returns {trackCoord}
-     */
-    build(startX = 0, startY = 0, startAngle = 0) {
-        const topLeft = new Vector2D();
-        const bottomRight = new Vector2D();
-        let inputX = startX;
-        let inputY = startY;
-        let inputAngle = startAngle;
-
-        const stats = {};
-        const tiles = this.tiles.map(tile => {
-            const tileCoord = tile.build(inputX, inputY, inputAngle);
-            const middle = tileCoord.model.length / 2;
-
-            updateStats(stats, tile);
-
-            inputX = tileCoord.outputCoord.x;
-            inputY = tileCoord.outputCoord.y;
-            inputAngle = tileCoord.outputAngle;
-
-            topLeft.x = Math.min(topLeft.x, tileCoord.centerCoord.x - middle);
-            topLeft.y = Math.min(topLeft.y, tileCoord.centerCoord.y - middle);
-
-            bottomRight.x = Math.max(bottomRight.x, tileCoord.centerCoord.x + middle);
-            bottomRight.y = Math.max(bottomRight.y, tileCoord.centerCoord.y + middle);
-
-            return tileCoord;
-        });
-
-        const { x, y } = topLeft;
-        const { x: width, y: height } = bottomRight.sub(topLeft);
-
-        return { x, y, width, height, tiles, stats };
-    }
-
-    /**
-     * Exports the model to an object.
-     * @returns {tileExport[]} - An object representation of the model.
+     * Exports the list to an object.
+     * @returns {tileExport[]} - An object representation of the list.
      */
     export() {
         return this.tiles.map(tile => tile.export());
     }
 
     /**
-     * Imports the model from an object.
-     * The track is emptied before importing, any existing tile will be deleted.
-     * @param {tileExport[]} data - An iterable object containing a representation of the model.
-     * @returns {TrackModel} - Chains the instance.
+     * Imports the list from a source.
+     * The list is emptied before importing, any existing tile will be deleted.
+     * @param {tileExport[]} data - An iterable object containing a representation of the list.
+     * @returns {TilesList} - Chains the instance.
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
@@ -324,10 +321,9 @@ export class TrackModel {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tileRef = new TileReferenceModel(this.specs, type, direction, ratio);
-                updateStats(this.stats, tileRef);
+                const tile = createModel(this.specs, type, direction, ratio);
 
-                return { done: false, value: tileRef };
+                return { done: false, value: tile };
             },
 
             [Symbol.iterator]() {
@@ -335,40 +331,38 @@ export class TrackModel {
             }
         };
 
-        this.stats = {};
         this.tiles.load(loadIterator);
+        this.rebuildStats();
 
         return this;
     }
 
     /**
-     * Removes all tiles.
-     * @returns {TrackModel} - Chains the instance.
+     * Removes all tiles from the list.
+     * @returns {TilesList} - Chains the instance.
      */
     clear() {
-        this.stats = {};
+        this.stats.clear();
         this.tiles.clear();
 
         return this;
     }
+
+    /**
+     * Validates that the given model is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} model - The instance to validate.
+     * @throws {TypeError} - If the given model is not a valid instance.
+     */
+    static validateInstance(model) {
+        if (!(model instanceof this)) {
+            throw new TypeError(`The model must be an instance of ${this.name}!`);
+        }
+    }
 }
 
 /**
- * @typedef {object} trackCoord - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tileCoord[]} tiles - The list of tiles.
- * @property {object} stats - An object listing the stats for the track.
- */
-
-/**
- * @typedef {import('./TileReferenceModel').tileCoord} tileCoord
- */
-
-/**
- * @typedef {import('./TileReferenceModel').tileExport} tileExport
+ * @typedef {import('./TileModel').tileExport} tileExport
  */
 
 /**

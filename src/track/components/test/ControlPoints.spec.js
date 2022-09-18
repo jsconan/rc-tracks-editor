@@ -18,7 +18,8 @@
 
 import { render } from '@testing-library/svelte';
 import ControlPoints from '../ControlPoints.svelte';
-import { CurvedTileModel, CurvedTileEnlargedModel, StraightTileModel, TileSpecifications } from '../../models';
+import { CurvedTileModel, CurvedTileEnlargedModel, StraightTileModel } from '../../models';
+import { TileSpecifications } from '../../config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,

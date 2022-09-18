@@ -17,56 +17,81 @@
  */
 
 import { render } from '@testing-library/svelte';
+import Context from './Context.svelte';
 import Track from '../Track.svelte';
-import { TrackModel, TileSpecifications } from '../../models';
+import { TilesList } from '../../models';
+import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../../helpers';
+import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const model = new TilesList(specs);
+model.import([
+    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
+]);
 
 describe('Track', () => {
     it('renders with default values', () => {
-        const model = new TrackModel(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = { model };
-        const { container } = render(Track, { props });
+        const { container } = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
 
     it('renders with the given parameters', () => {
-        const model = new TrackModel(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = {
             model,
             x: 100,
             y: 200,
+            width: 400,
+            height: 400,
+            hPadding: 10,
+            vPadding: 20,
             angle: 90
         };
-        const { container } = render(Track, { props });
+        const { container } = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         expect(container).toMatchSnapshot();
     });
 
     it('update when the model is modified', async () => {
-        const model = new TrackModel(specs);
-        model.appendTile(STRAIGHT_TILE_TYPE);
-        model.appendTile(CURVED_TILE_TYPE);
-        model.appendTile(CURVED_TILE_ENLARGED_TYPE);
         const props = {
             model,
             x: 100,
             y: 200,
+            width: 400,
+            height: 400,
+            hPadding: 10,
+            vPadding: 20,
             angle: 90
         };
-        const rendered = render(Track, { props });
+        const rendered = render(Context, {
+            props: {
+                component: Track,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
 
         return wait(10)
             .then(() => model.appendTile())
@@ -93,6 +118,6 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TrackModel!');
+        ).toThrow('The model must be an instance of TilesList!');
     });
 });

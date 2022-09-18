@@ -18,7 +18,7 @@
 
 import { Vector2D } from '../Vector2D.js';
 
-describe('vector', () => {
+describe('Vector', () => {
     it('is a class', () => {
         expect(Vector2D).toEqual(expect.any(Function));
     });
@@ -157,6 +157,18 @@ describe('vector', () => {
             expect(v3.y).toBe(3);
         });
 
+        it('the coordinates x an y', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.addCoord(2, 2);
+
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(1);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(3);
+            expect(v2.y).toBe(3);
+        });
+
         it('a scalar value to the coordinates', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = v1.addScalar(2);
@@ -232,6 +244,18 @@ describe('vector', () => {
             expect(v3).not.toBe(v1);
             expect(v3.x).toBe(1);
             expect(v3.y).toBe(-1);
+        });
+
+        it('the coordinates x an y', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.subCoord(2, 2);
+
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(1);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(-1);
+            expect(v2.y).toBe(-1);
         });
 
         it('a scalar value from the coordinates', () => {
@@ -311,6 +335,18 @@ describe('vector', () => {
             expect(v3.y).toBe(8);
         });
 
+        it('by the coordinates x an y', () => {
+            const v1 = new Vector2D(3, 4);
+            const v2 = v1.mulCoord(2, 2);
+
+            expect(v1.x).toBe(3);
+            expect(v1.y).toBe(4);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(6);
+            expect(v2.y).toBe(8);
+        });
+
         it('the coordinates by a scalar value', () => {
             const v1 = new Vector2D(3, 4);
             const v2 = v1.mulScalar(3);
@@ -386,6 +422,18 @@ describe('vector', () => {
             expect(v3).not.toBe(v1);
             expect(v3.x).toBe(6);
             expect(v3.y).toBe(4);
+        });
+
+        it('by the coordinates x an y', () => {
+            const v1 = new Vector2D(6, 8);
+            const v2 = v1.divCoord(2, 2);
+
+            expect(v1.x).toBe(6);
+            expect(v1.y).toBe(8);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(3);
+            expect(v2.y).toBe(4);
         });
 
         it('the coordinates by a scalar value', () => {
@@ -543,9 +591,10 @@ describe('vector', () => {
         });
 
         it('the angle between 2 vectors', () => {
-            const v1 = new Vector2D(0, 4);
-            const v2 = new Vector2D(4, 4);
+            const v1 = new Vector2D(4, 4);
+            const v2 = new Vector2D(0, 4);
             expect(v1.angleWith(v2)).toBeCloseTo(45, 5);
+            expect(v2.angleWith(v1)).toBeCloseTo(-45, 5);
         });
     });
 
@@ -804,6 +853,46 @@ describe('vector', () => {
                 expect(Vector2D.toDegrees(Math.PI)).toBe(180);
                 expect(Vector2D.toDegrees((Math.PI / 2) * 3)).toBe(270);
                 expect(Vector2D.toDegrees(Math.PI * 2)).toBe(360);
+            });
+        });
+
+        describe('degrees', () => {
+            it('which is a function', () => {
+                expect(Vector2D.degrees).toEqual(expect.any(Function));
+            });
+
+            it.each([
+                [60, 60],
+                [400, 40],
+                [360, 0],
+                [720, 0],
+                [-60, 300],
+                [-400, 320],
+                [-360, 0],
+                [-720, 0]
+            ])('which adjusts angles in degrees [%s => %s]', (angle, expected) => {
+                expect(Vector2D.degrees(angle)).toBe(expected);
+            });
+        });
+
+        describe('quadrant', () => {
+            it('which is a function', () => {
+                expect(Vector2D.quadrant).toEqual(expect.any(Function));
+            });
+
+            it.each([
+                [60, 0],
+                [100, 1],
+                [200, 2],
+                [300, 3],
+                [400, 0],
+                [-300, 0],
+                [-200, 1],
+                [-100, 2],
+                [-60, 3],
+                [-400, 3]
+            ])('which tells in which quadrant is the angle %s', (angle, expected) => {
+                expect(Vector2D.quadrant(angle)).toBe(expected);
             });
         });
 
