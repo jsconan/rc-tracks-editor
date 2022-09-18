@@ -34,6 +34,30 @@ exports[`Sketch renders with the given element in slots 1`] = `
 </body>
 `;
 
+exports[`Sketch renders with the parameters class 1`] = `
+<body>
+  <div>
+    <svg
+      class="tile"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch renders with the parameters style 1`] = `
+<body>
+  <div>
+    <svg
+      style="fill: #444;"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
 exports[`Sketch renders with the parameters viewX, viewY, viewWidth, and viewHeight 1`] = `
 <body>
   <div>
@@ -144,6 +168,50 @@ exports[`Sketch renders with the parameters x, y, width and height 1`] = `
       x="40"
       y="50"
     >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters class 1`] = `
+<body>
+  <div>
+    <svg
+      class="tile"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters class 2`] = `
+<body>
+  <div>
+    <svg>
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters style 1`] = `
+<body>
+  <div>
+    <svg
+      style="fill: #444;"
+    >
+      <defs />
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters style 2`] = `
+<body>
+  <div>
+    <svg>
       <defs />
     </svg>
   </div>

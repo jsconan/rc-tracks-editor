@@ -4,6 +4,9 @@
 
     import { defined } from '../../core/helpers';
 
+    let cls = void 0;
+    export { cls as class };
+    export let style = void 0;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
@@ -19,7 +22,7 @@
     $: viewBox = hasViewBox() ? `${viewX} ${viewY} ${viewWidth || width} ${viewHeight || height}` : void 0;
 </script>
 
-<svg {x} {y} {viewBox} {width} {height}>
+<svg class={cls} {style} {x} {y} {viewBox} {width} {height}>
     <defs>
         <slot name="defs" />
     </defs>
