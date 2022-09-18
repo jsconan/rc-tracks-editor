@@ -34,4 +34,8 @@ describe('defined', () => {
             expect(() => validateCallback(callback)).toThrow('A callback function is expected!');
         }
     );
+
+    it('can customize the error thrown if the callback is not a function', () => {
+        expect(() => validateCallback({}, 'foo')).toThrow('A foo function is expected!');
+    });
 });
