@@ -13,10 +13,12 @@
     export let y = 0;
     export let width = void 0;
     export let height = void 0;
+    export let hPadding = void 0;
+    export let vPadding = void 0;
 
     TilesList.validateInstance(model);
 
-    $: track = buildTrack($model, { startAngle: angle });
+    $: track = buildTrack($model, { startAngle: angle, hPadding, vPadding });
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
