@@ -9,13 +9,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
     >
       <path
         class="ground"
-        d="M -45 0
-           A 10 10 0 0 1 -55 10
-           L -55 100
-           L 0 100
-           A 45 45 0 0 0 45 55
-           L 45 0
-           Z"
+        d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -102,13 +96,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 10 10 0 0 1 45 160
-           L 45 250
-           L 100 250
-           A 45 45 0 0 0 145 205
-           L 145 150
-           Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -195,13 +183,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 10 10 0 0 1 45 160
-           L 45 250
-           L 100 250
-           A 45 45 0 0 0 145 205
-           L 145 150
-           Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -288,13 +270,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 10 10 0 0 1 45 160
-           L 45 250
-           L 100 250
-           A 45 45 0 0 0 145 205
-           L 145 150
-           Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -381,13 +357,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 10 10 0 0 1 45 160
-           L 45 250
-           L 100 250
-           A 45 45 0 0 0 145 205
-           L 145 150
-           Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -474,13 +444,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 120 120 0 0 1 -65 270
-           L -65 360
-           L 45 360
-           A 100 100 0 0 0 145 260
-           L 145 150
-           Z"
+        d="M 55 150 A 120 120 0 0 1 -65 270 L -65 360 L 45 360 A 100 100 0 0 0 145 260 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -639,13 +603,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 230 230 0 0 1 -175 380
-           L -175 470
-           L -10 470
-           A 155 155 0 0 0 145 315
-           L 145 150
-           Z"
+        d="M 55 150 A 230 230 0 0 1 -175 380 L -175 470 L -10 470 A 155 155 0 0 0 145 315 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -866,13 +824,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 340 340 0 0 1 -285 490
-           L -285 580
-           L -65 580
-           A 210 210 0 0 0 145 370
-           L 145 150
-           Z"
+        d="M 55 150 A 340 340 0 0 1 -285 490 L -285 580 L -65 580 A 210 210 0 0 0 145 370 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -1155,13 +1107,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
     >
       <path
         class="ground"
-        d="M 55 150
-           A 10 10 0 0 1 45 160
-           L 45 250
-           L 100 250
-           A 45 45 0 0 0 145 205
-           L 145 150
-           Z"
+        d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
       />
       <g
         class="barrier curved-barrier"

@@ -4,7 +4,7 @@
 
     import { getContext } from 'svelte';
     import { TileSpecifications } from '../config';
-    import { CurvedBarrier, StraightBarrier } from '../elements';
+    import { CurvedElementEnlarged, CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
 
     export let direction = CurvedTileEnlargedModel.DIRECTION_RIGHT;
@@ -62,16 +62,7 @@
 </script>
 
 <g class="tile curved-tile-enlarged" {transform} {filter} {id}>
-    <path
-        class="ground"
-        d="M {innerCurveStartX} {innerCurveStartY}
-           A {innerRadius} {innerRadius} 0 0 1 {innerCurveEndX} {innerCurveEndY}
-           L {leftSideEndX} {leftSideEndY}
-           L {outerCurveStartX} {outerCurveStartY}
-           A {outerRadius} {outerRadius} 0 0 0 {outerCurveEndX} {outerCurveEndY}
-           L {rightSideEndX} {rightSideEndY}
-           Z"
-    />
+    <CurvedElementEnlarged class="ground" cx={curveCenter.x} cy={curveCenter.y} {width} {side} radius={innerRadius} />
     <CurvedBarrier
         chunks={innerChunks}
         width={barrierWidth}

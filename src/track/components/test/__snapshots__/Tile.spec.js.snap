@@ -123,13 +123,7 @@ exports[`Tile renders a curved-tile-enlarged tile with default values 1`] = `
     >
       <path
         class="ground"
-        d="M -45 0
-           A 10 10 0 0 1 -55 10
-           L -55 100
-           L 0 100
-           A 45 45 0 0 0 45 55
-           L 45 0
-           Z"
+        d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
       />
       <g
         class="barrier curved-barrier"
@@ -217,13 +211,7 @@ exports[`Tile renders a curved-tile-enlarged tile with the given parameters 1`] 
     >
       <path
         class="ground"
-        d="M 55 200
-           A 10 10 0 0 1 45 210
-           L 45 300
-           L 100 300
-           A 45 45 0 0 0 145 255
-           L 145 200
-           Z"
+        d="M 55 200 A 10 10 0 0 1 45 210 L 45 300 L 100 300 A 45 45 0 0 0 145 255 L 145 200 Z"
       />
       <g
         class="barrier curved-barrier"
