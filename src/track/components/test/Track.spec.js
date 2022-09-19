@@ -20,7 +20,7 @@ import { render, fireEvent } from '@testing-library/svelte';
 import Context from './Context.svelte';
 import Track from '../Track.svelte';
 import { buildTrack } from '../../builders';
-import { TileCoordList, TilesList } from '../../models';
+import { TileCoordList, TileList } from '../../models';
 import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
@@ -29,7 +29,7 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const tileList = new TilesList(specs);
+const tileList = new TileList(specs);
 tileList.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
@@ -39,7 +39,7 @@ const listCoord = new TileCoordList(tileList, buildTrack, { hPadding: 10, vPaddi
 
 describe('Track', () => {
     it.each([
-        ['TilesList', tileList],
+        ['TileList', tileList],
         ['TileCoordList', listCoord]
     ])('renders with default values using a %s', (type, list) => {
         const props = { list };
@@ -56,7 +56,7 @@ describe('Track', () => {
     });
 
     it.each([
-        ['TilesList', tileList],
+        ['TileList', tileList],
         ['TileCoordList', listCoord]
     ])('renders with the given parameters using a %s', (type, list) => {
         const props = {
@@ -79,7 +79,7 @@ describe('Track', () => {
     });
 
     it.each([
-        ['TilesList', tileList],
+        ['TileList', tileList],
         ['TileCoordList', listCoord]
     ])('updates when the %s model is modified', async (type, list) => {
         const props = {
@@ -125,11 +125,11 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The list must be either an instance of TilesList or TileCoordList!');
+        ).toThrow('The list must be either an instance of TileList or TileCoordList!');
     });
 
     it.each([
-        ['TilesList', tileList],
+        ['TileList', tileList],
         ['TileCoordList', listCoord]
     ])('fires click from a track built with a %s', (type, list) => {
         const onClick = jest.fn();

@@ -18,7 +18,7 @@
 
 import { writable } from 'svelte/store';
 import { validateCallback } from '../../core/helpers';
-import { TilesList } from './TilesList.js';
+import { TileList } from './TileList.js';
 
 /**
  * Represents a list of tile coordinates.
@@ -27,7 +27,7 @@ import { TilesList } from './TilesList.js';
 export class TileCoordList {
     /**
      * Binds a list of tiles and a builder in order to produce a list of tile coordinates.
-     * @param {TilesList} list - The list of tiles to bind with the builder.
+     * @param {TileList} list - The list of tiles to bind with the builder.
      * @param {function} builder - The reference to the builder.
      * @param {object} [options] - Some options for the builder.
      * @throws {TypeError} - If the given list is not a valid instance of TileList.
@@ -61,12 +61,12 @@ export class TileCoordList {
 
         /**
          * Binds the list of tiles with the builder.
-         * @param {TilesList} newList - The list of tiles to bind with the builder.
+         * @param {TileList} newList - The list of tiles to bind with the builder.
          * @returns {TileCoordList} - Chains the instance.
          * @throws {TypeError} - If the given list is not a valid instance of TileList.
          */
         this.setList = newList => {
-            TilesList.validateInstance(newList);
+            TileList.validateInstance(newList);
 
             if (unsubscribe) {
                 unsubscribe();
@@ -96,7 +96,7 @@ export class TileCoordList {
         /**
          * Process a list of tiles for rendering, computing the coordinates of each tile.
          * @function builder
-         * @param {TilesList} list - The list of tiles from which compute the coordinates of each tile.
+         * @param {TileList} list - The list of tiles from which compute the coordinates of each tile.
          * @param {object} [config] - A set of config options.
          * @returns {listCoord} - Returns the list of coordinates.
          */

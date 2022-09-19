@@ -233,7 +233,7 @@ exports[`Track renders with default values using a TileCoordList 1`] = `
 </body>
 `;
 
-exports[`Track renders with default values using a TilesList 1`] = `
+exports[`Track renders with default values using a TileList 1`] = `
 <body>
   <div>
     <svg
@@ -701,7 +701,7 @@ exports[`Track renders with the given parameters using a TileCoordList 1`] = `
 </body>
 `;
 
-exports[`Track renders with the given parameters using a TilesList 1`] = `
+exports[`Track renders with the given parameters using a TileList 1`] = `
 <body>
   <div>
     <svg
@@ -1345,7 +1345,7 @@ exports[`Track updates when the TileCoordList model is modified 1`] = `
 </body>
 `;
 
-exports[`Track updates when the TilesList model is modified 1`] = `
+exports[`Track updates when the TileList model is modified 1`] = `
 <body>
   <div>
     <svg

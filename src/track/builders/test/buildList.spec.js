@@ -25,13 +25,13 @@ import {
     TILE_DIRECTION_RIGHT
 } from '../../helpers';
 import { TileSpecifications } from '../../config';
-import { TilesList } from '../../models';
+import { TileList } from '../../models';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const list = new TilesList(specs);
+const list = new TileList(specs);
 list.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
@@ -54,7 +54,7 @@ describe('buildList', () => {
 
     it('throws error when trying to use a wrong list of tiles', () => {
         // @ts-expect-error
-        expect(() => buildList([])).toThrow('The model must be an instance of TilesList!');
+        expect(() => buildList([])).toThrow('The model must be an instance of TileList!');
     });
 
     describe('process a list of tiles for rendering', () => {

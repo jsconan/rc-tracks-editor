@@ -17,11 +17,11 @@
  */
 
 import { Counter, Vector2D } from '../../core/models';
-import { TilesList } from '../models';
+import { TileList } from '../models';
 
 /**
  * Process a list of tiles for rendering a track, computing the coordinates of each tile.
- * @param {TilesList} list - The list of tiles from which build the track.
+ * @param {TileList} list - The list of tiles from which build the track.
  * @param {object} config - A set of config options.
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
@@ -32,7 +32,7 @@ import { TilesList } from '../models';
  * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vPadding = 0 } = {}) => {
-    TilesList.validateInstance(list);
+    TileList.validateInstance(list);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();

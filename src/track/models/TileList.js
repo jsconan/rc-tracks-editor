@@ -63,7 +63,7 @@ function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTIO
 /**
  * Represents a list of tiles.
  */
-export class TilesList {
+export class TileList {
     /**
      * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
@@ -88,7 +88,7 @@ export class TilesList {
     /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TilesList} - Chains the instance.
+     * @returns {TileList} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      */
     setSpecs(specs) {
@@ -266,7 +266,7 @@ export class TilesList {
 
     /**
      * Rebuilds the stats regarding the number of identified types.
-     * @returns {TilesList} - Chains the instance.
+     * @returns {TileList} - Chains the instance.
      */
     rebuildStats() {
         const dataIterator = this.tiles.values();
@@ -304,7 +304,7 @@ export class TilesList {
      * Imports the list from a source.
      * The list is emptied before importing, any existing tile will be deleted.
      * @param {tileExport[]} data - An iterable object containing a representation of the list.
-     * @returns {TilesList} - Chains the instance.
+     * @returns {TileList} - Chains the instance.
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
@@ -339,7 +339,7 @@ export class TilesList {
 
     /**
      * Removes all tiles from the list.
-     * @returns {TilesList} - Chains the instance.
+     * @returns {TileList} - Chains the instance.
      */
     clear() {
         this.stats.clear();

@@ -18,11 +18,11 @@
 
 import { Vector2D } from '../../core/models';
 import { TILE_DIRECTION_LEFT } from '../helpers';
-import { TilesList } from '../models';
+import { TileList } from '../models';
 
 /**
  * Process a list of tiles for rendering, computing the coordinates of each tile.
- * @param {TilesList} list - The list of tiles from which prepare the rendering.
+ * @param {TileList} list - The list of tiles from which prepare the rendering.
  * @param {object} config - A set of config options.
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
@@ -52,7 +52,7 @@ export default (
         vertical = false
     } = {}
 ) => {
-    TilesList.validateInstance(list);
+    TileList.validateInstance(list);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();

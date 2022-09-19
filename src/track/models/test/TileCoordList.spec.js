@@ -17,7 +17,7 @@
  */
 
 import { TileSpecifications } from '../../config';
-import { TilesList } from '../TilesList.js';
+import { TileList } from '../TileList.js';
 import { TileCoordList } from '../TileCoordList.js';
 
 const laneWidth = 80;
@@ -38,22 +38,22 @@ describe('TileCoordList', () => {
     describe('throws error', () => {
         it('when trying to create an instance with an invalid list', () => {
             // @ts-expect-error
-            expect(() => new TileCoordList({})).toThrow('The model must be an instance of TilesList!');
+            expect(() => new TileCoordList({})).toThrow('The model must be an instance of TileList!');
         });
 
         it('when trying to create an instance with an invalid builder', () => {
             // @ts-expect-error
-            expect(() => new TileCoordList(new TilesList(specs), {})).toThrow('A builder function is expected!');
+            expect(() => new TileCoordList(new TileList(specs), {})).toThrow('A builder function is expected!');
         });
 
         it('when trying to set an invalid list', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
             // @ts-expect-error
-            expect(() => bridge.setList({})).toThrow('The model must be an instance of TilesList!');
+            expect(() => bridge.setList({})).toThrow('The model must be an instance of TileList!');
         });
 
         it('when trying to set an invalid builder', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
             // @ts-expect-error
             expect(() => bridge.setBuilder({})).toThrow('A builder function is expected!');
         });
@@ -61,8 +61,8 @@ describe('TileCoordList', () => {
 
     describe('can set', () => {
         it('a list of tiles', () => {
-            const oldList = new TilesList(specs);
-            const newList = new TilesList(specs);
+            const oldList = new TileList(specs);
+            const newList = new TileList(specs);
             const bridge = new TileCoordList(oldList, mockBuilder);
 
             expect(bridge.list).toBe(oldList);
@@ -71,7 +71,7 @@ describe('TileCoordList', () => {
         });
 
         it('a builder function', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
             const builder = () => {};
 
             expect(bridge.builder).not.toBe(builder);
@@ -80,7 +80,7 @@ describe('TileCoordList', () => {
         });
 
         it('the options for the builder', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder, { dummy: true });
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder, { dummy: true });
             const options = { foo: 'bar' };
 
             expect(bridge.hasOption('dummy')).toBeTruthy();
@@ -93,7 +93,7 @@ describe('TileCoordList', () => {
 
     describe('manage options for the builder', () => {
         it('setting the value of an option', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
 
             expect(bridge.hasOption('foo')).toBeFalsy();
             expect(bridge.setOption('foo', 'bar')).toBe(bridge);
@@ -102,7 +102,7 @@ describe('TileCoordList', () => {
         });
 
         it('getting the value of an option', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
 
             expect(bridge.getOption('foo')).toBeUndefined();
             bridge.setOption('foo', 'bar');
@@ -110,7 +110,7 @@ describe('TileCoordList', () => {
         });
 
         it('checking if an option is assigned', () => {
-            const bridge = new TileCoordList(new TilesList(specs), mockBuilder);
+            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
 
             expect(bridge.hasOption('foo')).toBeFalsy();
             bridge.setOption('foo', 'bar');
@@ -119,7 +119,7 @@ describe('TileCoordList', () => {
     });
 
     describe('manage the built coordinates', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         const bridge = new TileCoordList(list, mockBuilder);
 
         list.appendTile();
@@ -140,14 +140,14 @@ describe('TileCoordList', () => {
             expect(bridge.getTileCoordAt(1)).toBe(`coord-${id}`);
             expect(bridge.getTileCoordAt(3)).toBeNull();
 
-            const emptyBridge = new TileCoordList(new TilesList(specs), () => {});
+            const emptyBridge = new TileCoordList(new TileList(specs), () => {});
             expect(emptyBridge.getTileCoordAt(0)).toBeNull();
         });
     });
 
     describe('can build coordinates', () => {
         it('with the given builder options', () => {
-            const theList = new TilesList(specs);
+            const theList = new TileList(specs);
             theList.appendTile();
 
             const builder = (list, options) => {
@@ -169,10 +169,10 @@ describe('TileCoordList', () => {
         });
 
         it('when the list of tiles is changed', () => {
-            const oldList = new TilesList(specs);
+            const oldList = new TileList(specs);
             oldList.appendTile();
 
-            const newList = new TilesList(specs);
+            const newList = new TileList(specs);
             newList.appendTile();
 
             const bridge = new TileCoordList(oldList, mockBuilder);
@@ -192,7 +192,7 @@ describe('TileCoordList', () => {
         });
 
         it('when the builder function is changed', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
             list.appendTile();
 
             const bridge = new TileCoordList(list, mockBuilder);
@@ -211,7 +211,7 @@ describe('TileCoordList', () => {
         });
 
         it('each time a tile is added', () => {
-            const theList = new TilesList(specs);
+            const theList = new TileList(specs);
             const bridge = new TileCoordList(theList, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
@@ -226,7 +226,7 @@ describe('TileCoordList', () => {
         });
 
         it('each time an option is changed', () => {
-            const theList = new TilesList(specs);
+            const theList = new TileList(specs);
             theList.appendTile();
 
             const bridge = new TileCoordList(theList, mockBuilder);
@@ -244,7 +244,7 @@ describe('TileCoordList', () => {
         });
 
         it('each time the build function is called', () => {
-            const theList = new TilesList(specs);
+            const theList = new TileList(specs);
             theList.appendTile();
 
             const bridge = new TileCoordList(theList, mockBuilder);
@@ -262,7 +262,7 @@ describe('TileCoordList', () => {
     });
 
     it('can validate an object is an instance of the class', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         const bridge = new TileCoordList(list, mockBuilder);
         expect(() => TileCoordList.validateInstance(bridge)).not.toThrow();
         expect(() => TileCoordList.validateInstance({})).toThrow('The model must be an instance of TileCoordList!');

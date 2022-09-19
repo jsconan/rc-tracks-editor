@@ -4,7 +4,7 @@
 
     import { buildTrack } from '../builders';
     import { Sketch } from '../elements';
-    import { TileCoordList, TilesList } from '../models';
+    import { TileCoordList, TileList } from '../models';
     import Tile from './Tile.svelte';
 
     export let list;
@@ -13,11 +13,11 @@
     export let width = void 0;
     export let height = void 0;
 
-    if (!(list instanceof TilesList) && !(list instanceof TileCoordList)) {
-        throw 'The list must be either an instance of TilesList or TileCoordList!';
+    if (!(list instanceof TileList) && !(list instanceof TileCoordList)) {
+        throw 'The list must be either an instance of TileList or TileCoordList!';
     }
 
-    $: track = list instanceof TilesList ? buildTrack($list) : $list;
+    $: track = list instanceof TileList ? buildTrack($list) : $list;
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
