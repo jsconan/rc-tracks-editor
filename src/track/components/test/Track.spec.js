@@ -19,7 +19,8 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import Context from './Context.svelte';
 import Track from '../Track.svelte';
-import { TilesList } from '../../models';
+import { buildTrack } from '../../builders';
+import { TileCoordList, TilesList } from '../../models';
 import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
@@ -28,16 +29,20 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const model = new TilesList(specs);
-model.import([
+const tileList = new TilesList(specs);
+tileList.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
 ]);
+const listCoord = new TileCoordList(tileList, buildTrack, { hPadding: 10, vPadding: 20, startAngle: 90 });
 
 describe('Track', () => {
-    it('renders with default values', () => {
-        const props = { model };
+    it.each([
+        ['TilesList', tileList],
+        ['TileCoordList', listCoord]
+    ])('renders with default values using a %s', (type, list) => {
+        const props = { list };
         const { container } = render(Context, {
             props: {
                 component: Track,
@@ -50,16 +55,16 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('renders with the given parameters', () => {
+    it.each([
+        ['TilesList', tileList],
+        ['TileCoordList', listCoord]
+    ])('renders with the given parameters using a %s', (type, list) => {
         const props = {
-            model,
+            list,
             x: 100,
             y: 200,
             width: 400,
-            height: 400,
-            hPadding: 10,
-            vPadding: 20,
-            angle: 90
+            height: 400
         };
         const { container } = render(Context, {
             props: {
@@ -73,16 +78,16 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('update when the model is modified', async () => {
+    it.each([
+        ['TilesList', tileList],
+        ['TileCoordList', listCoord]
+    ])('updates when the %s model is modified', async (type, list) => {
         const props = {
-            model,
+            list,
             x: 100,
             y: 200,
             width: 400,
-            height: 400,
-            hPadding: 10,
-            vPadding: 20,
-            angle: 90
+            height: 400
         };
         const rendered = render(Context, {
             props: {
@@ -94,7 +99,7 @@ describe('Track', () => {
         });
 
         return wait(10)
-            .then(() => model.appendTile())
+            .then(() => tileList.appendTile())
             .then(() => wait(10))
             .then(() => expect(rendered.container).toMatchSnapshot());
     });
@@ -103,27 +108,32 @@ describe('Track', () => {
         expect(() =>
             render(Track, {
                 props: {
-                    model: {}
+                    // @ts-expect-error
+                    list: {}
                 }
             })
-        ).toThrow("'model' is not a store with a 'subscribe' method");
+        ).toThrow("'list' is not a store with a 'subscribe' method");
 
         expect(() =>
             render(Track, {
                 props: {
-                    model: {
+                    // @ts-expect-error
+                    list: {
                         subscribe() {
                             return () => {};
                         }
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TilesList!');
+        ).toThrow('The list must be either an instance of TilesList or TileCoordList!');
     });
 
-    it('fires click', () => {
+    it.each([
+        ['TilesList', tileList],
+        ['TileCoordList', listCoord]
+    ])('fires click from a track built with a %s', (type, list) => {
         const onClick = jest.fn();
-        const props = { model };
+        const props = { list };
         const { container, component } = render(Context, {
             props: {
                 component: Track,

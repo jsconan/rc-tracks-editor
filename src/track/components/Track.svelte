@@ -4,21 +4,20 @@
 
     import { buildTrack } from '../builders';
     import { Sketch } from '../elements';
-    import { TilesList } from '../models';
+    import { TileCoordList, TilesList } from '../models';
     import Tile from './Tile.svelte';
 
-    export let model;
-    export let angle = 0;
+    export let list;
     export let x = 0;
     export let y = 0;
     export let width = void 0;
     export let height = void 0;
-    export let hPadding = void 0;
-    export let vPadding = void 0;
 
-    TilesList.validateInstance(model);
+    if (!(list instanceof TilesList) && !(list instanceof TileCoordList)) {
+        throw 'The list must be either an instance of TilesList or TileCoordList!';
+    }
 
-    $: track = buildTrack($model, { startAngle: angle, hPadding, vPadding });
+    $: track = list instanceof TilesList ? buildTrack($list) : $list;
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
