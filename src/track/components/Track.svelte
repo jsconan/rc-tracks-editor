@@ -24,4 +24,5 @@
     {#each track.tiles as { id, type, direction, ratio, x, y, angle } (id)}
         <Tile {type} {direction} {ratio} {angle} {x} {y} {id} on:click />
     {/each}
+    <slot />
 </Sketch>

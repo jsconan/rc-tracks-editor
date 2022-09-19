@@ -19,6 +19,7 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import Context from './Context.svelte';
 import Track from '../Track.svelte';
+import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../builders';
 import { TileCoordList, TileList } from '../../models';
 import { TileSpecifications } from '../../config';
@@ -148,5 +149,22 @@ describe('Track', () => {
         fireEvent.click(container.querySelector(`#id-1`));
         fireEvent.click(container.querySelector(`#id-2`));
         expect(onClick).toHaveBeenCalledTimes(3);
+    });
+
+    it.each([
+        ['TileList', tileList],
+        ['TileCoordList', listCoord]
+    ])('renders with the given element in slots using a %s', (type, list) => {
+        const props = { list };
+        const { container } = render(Context, {
+            props: {
+                component: TrackWithSlot,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        expect(container).toMatchSnapshot();
     });
 });
