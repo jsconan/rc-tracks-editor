@@ -28,7 +28,7 @@ import { TilesList } from '../models';
  * @param {number} [config.startAngle] - The rotation angle of the first tile.
  * @param {number} [config.hPadding] - An horizontal padding added around the track.
  * @param {number} [config.vPadding] - A vertical padding added around the tracks.
- * @returns {trackCoord}
+ * @returns {listCoord} - Returns the list of coordinates.
  * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vPadding = 0 } = {}) => {
@@ -68,27 +68,5 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 };
 
 /**
- * @typedef {object} trackCoord - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tileCoord[]} tiles - The list of tiles.
- * @property {Counter} stats - An object listing the stats for the track.
- */
-
-/**
- * @typedef {object} tileCoord - Represents a positioned tile.
- * @property {string} id - The unique identifier of the tile.
- * @property {string} type - The type of tile.
- * @property {string} direction - The direction of the tile.
- * @property {number} ratio - The size ratio of the tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {TileModel} model - A reference to the tile model.
- */
-
-/**
- * @typedef {import('../models').TileModel} TileModel
+ * @typedef {import('../models/TileCoordList.js').listCoord} listCoord
  */

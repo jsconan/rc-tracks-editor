@@ -19,5 +19,6 @@
 export { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 export { CurvedTileModel } from './CurvedTileModel.js';
 export { StraightTileModel } from './StraightTileModel.js';
+export { TileCoordList } from './TileCoordList.js';
 export { TileModel } from './TileModel.js';
 export { TilesList } from './TilesList.js';
