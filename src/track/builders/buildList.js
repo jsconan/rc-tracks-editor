@@ -66,15 +66,15 @@ export default (
         const directionAngle =
             direction === TILE_DIRECTION_LEFT ? Vector2D.STRAIGHT_ANGLE * 2 - alignedAngle : alignedAngle;
         const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? directionAngle : 0);
-        const bounds = model.getBoundingRect(0, 0, angle);
-        const width = Math.max(tileWidth, bounds.width) + hPadding * 2;
-        const height = Math.max(tileHeight, bounds.height) + vPadding * 2;
-        const dx = centered ? Math.max(0, tileWidth - bounds.width) / 2 : 0;
-        const dy = centered ? Math.max(0, tileHeight - bounds.height) / 2 : 0;
+        const rect = model.getBoundingRect(0, 0, angle);
+        const width = Math.max(tileWidth, rect.width) + hPadding * 2;
+        const height = Math.max(tileHeight, rect.height) + vPadding * 2;
+        const dx = centered ? Math.max(0, tileWidth - rect.width) / 2 : 0;
+        const dy = centered ? Math.max(0, tileHeight - rect.height) / 2 : 0;
         const topX = tileX - (centered && vertical ? width / 2 : 0) - hPadding;
         const topY = tileY - (!centered || vertical ? 0 : height / 2) - vPadding;
-        const x = topX - bounds.x + hPadding + dx;
-        const y = topY - bounds.y + vPadding + dy;
+        const x = topX - rect.x + hPadding + dx;
+        const y = topY - rect.y + vPadding + dy;
 
         topLeft.x = Math.min(topLeft.x, topX);
         topLeft.y = Math.min(topLeft.y, topY);
@@ -88,7 +88,7 @@ export default (
             tileX += width;
         }
 
-        return { id, type, direction, ratio, x, y, angle, model };
+        return { id, type, direction, ratio, x, y, angle, rect, model };
     });
 
     const { x, y } = topLeft;

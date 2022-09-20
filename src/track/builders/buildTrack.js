@@ -42,23 +42,23 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 
     const stats = new Counter();
     const tiles = list.tiles.map(model => {
-        const bounds = model.getBoundingRect(inputX, inputY, inputAngle);
-        const { x, y, angle } = bounds.input;
+        const rect = model.getBoundingRect(inputX, inputY, inputAngle);
+        const { x, y, angle } = rect.input;
         const { id, type, direction, ratio } = model;
 
         stats.increment(model.modelId);
 
-        inputX = bounds.output.x;
-        inputY = bounds.output.y;
-        inputAngle = bounds.output.angle;
+        inputX = rect.output.x;
+        inputY = rect.output.y;
+        inputAngle = rect.output.angle;
 
-        topLeft.x = Math.min(topLeft.x, bounds.x);
-        topLeft.y = Math.min(topLeft.y, bounds.y);
+        topLeft.x = Math.min(topLeft.x, rect.x);
+        topLeft.y = Math.min(topLeft.y, rect.y);
 
-        bottomRight.x = Math.max(bottomRight.x, bounds.x + bounds.width);
-        bottomRight.y = Math.max(bottomRight.y, bounds.y + bounds.height);
+        bottomRight.x = Math.max(bottomRight.x, rect.x + rect.width);
+        bottomRight.y = Math.max(bottomRight.y, rect.y + rect.height);
 
-        return { id, type, direction, ratio, x, y, angle, model };
+        return { id, type, direction, ratio, x, y, angle, rect, model };
     });
 
     const { x, y } = topLeft.subCoord(hPadding, vPadding);

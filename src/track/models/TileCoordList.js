@@ -209,7 +209,12 @@ export class TileCoordList {
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
  * @property {number} angle - The rotation angle of the tile.
+ * @property {tileRect} rect - The bounding rectangle of the tile.
  * @property {TileModel} model - A reference to the tile model.
+ */
+
+/**
+ * @typedef {import('../models/TileModel.js').tileRect} tileRect
  */
 
 /**
