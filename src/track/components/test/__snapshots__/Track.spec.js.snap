@@ -8,6 +8,7 @@ exports[`Track renders with default values using a TileCoordList 1`] = `
       x="0"
       y="0"
     >
+      <defs />
       
       
       <g
@@ -241,6 +242,7 @@ exports[`Track renders with default values using a TileList 1`] = `
       x="0"
       y="0"
     >
+      <defs />
       
       
       <g
@@ -476,6 +478,15 @@ exports[`Track renders with the given element in slots using a TileCoordList 1`]
       x="0"
       y="0"
     >
+      <defs>
+        <circle
+          cx="10"
+          cy="10"
+          id="circle"
+          r="10"
+          slot="defs"
+        />
+      </defs>
       
       
       <g
@@ -891,6 +902,15 @@ exports[`Track renders with the given element in slots using a TileList 1`] = `
       x="0"
       y="0"
     >
+      <defs>
+        <circle
+          cx="10"
+          cy="10"
+          id="circle"
+          r="10"
+          slot="defs"
+        />
+      </defs>
       
       
       <g
@@ -1306,6 +1326,7 @@ exports[`Track renders with the given parameters using a TileCoordList 1`] = `
       x="100"
       y="200"
     >
+      <defs />
       
       
       <g
@@ -1541,6 +1562,7 @@ exports[`Track renders with the given parameters using a TileList 1`] = `
       x="100"
       y="200"
     >
+      <defs />
       
       
       <g
@@ -1776,6 +1798,7 @@ exports[`Track updates when the TileCoordList model is modified 1`] = `
       x="100"
       y="200"
     >
+      <defs />
       
       
       <g
@@ -2185,6 +2208,7 @@ exports[`Track updates when the TileList model is modified 1`] = `
       x="100"
       y="200"
     >
+      <defs />
       
       
       <g

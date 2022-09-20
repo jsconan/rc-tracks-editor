@@ -9,4 +9,5 @@
 
 <Track {list}>
     <rect x={10} y={10} width={100} height={50} />
+    <circle id="circle" cx={10} cy={10} r={10} slot="defs" />
 </Track>
