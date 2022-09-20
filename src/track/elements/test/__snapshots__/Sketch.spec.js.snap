@@ -47,6 +47,18 @@ exports[`Sketch renders with the parameters class 1`] = `
 </body>
 `;
 
+exports[`Sketch renders with the parameters id 1`] = `
+<body>
+  <div>
+    <svg
+      id="foo"
+    >
+      
+    </svg>
+  </div>
+</body>
+`;
+
 exports[`Sketch renders with the parameters style 1`] = `
 <body>
   <div>
@@ -188,6 +200,28 @@ exports[`Sketch updates with the parameters class 1`] = `
 `;
 
 exports[`Sketch updates with the parameters class 2`] = `
+<body>
+  <div>
+    <svg>
+      
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters id 1`] = `
+<body>
+  <div>
+    <svg
+      id="foo"
+    >
+      
+    </svg>
+  </div>
+</body>
+`;
+
+exports[`Sketch updates with the parameters id 2`] = `
 <body>
   <div>
     <svg>

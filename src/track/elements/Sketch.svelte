@@ -7,6 +7,7 @@
     let cls = void 0;
     export { cls as class };
     export let style = void 0;
+    export let id = void 0;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
@@ -22,7 +23,7 @@
     $: viewBox = hasViewBox() ? `${viewX} ${viewY} ${viewWidth || width} ${viewHeight || height}` : void 0;
 </script>
 
-<svg class={cls} {style} {x} {y} {viewBox} {width} {height}>
+<svg {id} class={cls} {style} {x} {y} {viewBox} {width} {height}>
     {#if $$slots.defs}
         <defs>
             <slot name="defs" />

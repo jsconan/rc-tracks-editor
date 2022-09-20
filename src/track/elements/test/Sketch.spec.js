@@ -40,6 +40,7 @@ describe('Sketch', () => {
     it.each([
         ['class', { class: 'tile' }],
         ['style', { style: 'fill: #444;' }],
+        ['id', { id: 'foo' }],
         ['width and height', { width, height }],
         ['x, y, width and height', { x, y, width, height }],
         ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
@@ -63,6 +64,7 @@ describe('Sketch', () => {
     it.each([
         ['class', { class: 'tile' }],
         ['style', { style: 'fill: #444;' }],
+        ['id', { id: 'foo' }],
         ['width and height', { width, height }],
         ['x, y, width and height', { x, y, width, height }],
         ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
@@ -81,6 +83,7 @@ describe('Sketch', () => {
         const unset = {
             class: void 0,
             style: void 0,
+            id: void 0,
             x: void 0,
             y: void 0,
             viewX: void 0,
