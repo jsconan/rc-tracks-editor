@@ -23,8 +23,10 @@
 </script>
 
 <svg class={cls} {style} {x} {y} {viewBox} {width} {height}>
-    <defs>
-        <slot name="defs" />
-    </defs>
+    {#if $$slots.defs}
+        <defs>
+            <slot name="defs" />
+        </defs>
+    {/if}
     <slot />
 </svg>
