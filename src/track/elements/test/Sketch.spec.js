@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { fireEvent, render } from '@testing-library/svelte';
 import { wait } from '../../../core/helpers';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
@@ -107,5 +107,15 @@ describe('Sketch', () => {
         const { container } = render(SketchWithSlot);
 
         expect(container).toMatchSnapshot();
+    });
+
+    it('fires click', () => {
+        const onClick = jest.fn();
+        const { container, component } = render(Sketch);
+        const element = container.querySelector('svg');
+
+        component.$on('click', onClick);
+        fireEvent.click(element);
+        expect(onClick).toHaveBeenCalled();
     });
 });

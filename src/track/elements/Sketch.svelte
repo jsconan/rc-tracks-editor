@@ -23,7 +23,7 @@
     $: viewBox = hasViewBox() ? `${viewX} ${viewY} ${viewWidth || width} ${viewHeight || height}` : void 0;
 </script>
 
-<svg {id} class={cls} {style} {x} {y} {viewBox} {width} {height}>
+<svg {id} class={cls} {style} {x} {y} {viewBox} {width} {height} on:click>
     {#if $$slots.defs}
         <defs>
             <slot name="defs" />
