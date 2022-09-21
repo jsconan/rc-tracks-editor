@@ -36,6 +36,26 @@ describe('CurvedTileModel', () => {
         expect(CurvedTileModel).toEqual(expect.any(Function));
     });
 
+    describe('can clone', () => {
+        it('its instance', () => {
+            const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
+            const clone = tile.clone();
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(CurvedTileModel);
+        });
+
+        it('a given instance', () => {
+            const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
+            const clone = CurvedTileModel.clone(tile);
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(CurvedTileModel);
+        });
+    });
+
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error

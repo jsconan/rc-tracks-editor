@@ -47,6 +47,15 @@ export class TileModel {
     }
 
     /**
+     * Creates a copy of the instance.
+     * @returns {TileModel} - Another instance of the same type with the same properties.
+     */
+    clone() {
+        // @ts-expect-error
+        return this.constructor.clone(this);
+    }
+
+    /**
      * The type of tile.
      * @type {string}
      */
@@ -368,6 +377,15 @@ export class TileModel {
     export() {
         const { type, direction, ratio } = this;
         return { type, direction, ratio };
+    }
+
+    /**
+     * Creates a copy of the given instance.
+     * @param {TileModel} tile - The instance to copy.
+     * @returns {TileModel} - Another instance of the same type with the same properties.
+     */
+    static clone(tile) {
+        return new this(tile.specs, tile.direction, tile.ratio);
     }
 
     /**
