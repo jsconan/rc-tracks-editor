@@ -132,16 +132,16 @@ describe('TileCoordList', () => {
         });
 
         it('getting the coordinate of a tile from its identifier', () => {
-            expect(bridge.getTileCoord(id)).toBe(`coord-${id}`);
-            expect(bridge.getTileCoord('foo')).toBeNull();
+            expect(bridge.getTile(id)).toBe(`coord-${id}`);
+            expect(bridge.getTile('foo')).toBeNull();
         });
 
         it('getting the coordinate of a tile at a particular index', () => {
-            expect(bridge.getTileCoordAt(1)).toBe(`coord-${id}`);
-            expect(bridge.getTileCoordAt(3)).toBeNull();
+            expect(bridge.getTileAt(1)).toBe(`coord-${id}`);
+            expect(bridge.getTileAt(3)).toBeNull();
 
             const emptyBridge = new TileCoordList(new TileList(specs), () => {});
-            expect(emptyBridge.getTileCoordAt(0)).toBeNull();
+            expect(emptyBridge.getTileAt(0)).toBeNull();
         });
     });
 

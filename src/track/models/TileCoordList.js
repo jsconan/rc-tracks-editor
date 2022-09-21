@@ -160,8 +160,8 @@ export class TileCoordList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {tileCoord} - The coordinates of the tile, or `null` if it does not exist.
      */
-    getTileCoord(id) {
-        return this.getTileCoordAt(this.getTileIndex(id));
+    getTile(id) {
+        return this.getTileAt(this.getTileIndex(id));
     }
 
     /**
@@ -169,7 +169,7 @@ export class TileCoordList {
      * @param {number} index - The position of the tile.
      * @returns {tileCoord} - The coordinates of the tile, or `null` if it does not exist.
      */
-    getTileCoordAt(index) {
+    getTileAt(index) {
         if (!this.listCoord) {
             return null;
         }
