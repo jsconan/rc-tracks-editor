@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher, getContext } from 'svelte';
+    import { getContext } from 'svelte';
     import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
@@ -15,21 +15,10 @@
     export let filter = void 0;
     export let id = void 0;
 
-    const dispatch = createEventDispatcher();
     const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const type = StraightTileModel.TYPE;
-
     const barrierLength = specs.barrierLength;
     const barrierWidth = specs.barrierWidth;
     const vertical = true;
-
-    /**
-     * Handles the click event.
-     * @private
-     */
-    function click() {
-        dispatch('click', { id, type, direction, ratio, x, y, angle });
-    }
 
     /**
      * Computes the parameters for rendering the tile at the expected position.
@@ -60,7 +49,7 @@
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
-<g class="tile straight-tile" {transform} {filter} {id} on:click={click}>
+<g class="tile straight-tile" {transform} {filter} {id} on:click>
     <StraightElement class="ground" x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} />
     <StraightBarrier
         chunks={tile.chunks}

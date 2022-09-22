@@ -116,8 +116,25 @@ describe('Tile', () => {
     });
 
     it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])('fires click from a %s tile', type => {
-        const onClick = jest.fn();
-        const props = { type };
+        const props = {
+            type,
+            id: 'id-10',
+            direction: TILE_DIRECTION_LEFT,
+            ratio: 2,
+            x: 10,
+            y: 20,
+            angle: 30
+        };
+        const onClick = jest.fn().mockImplementation(event => {
+            expect(event.detail).toEqual(expect.any(Object));
+            expect(event.detail.id).toBe(props.id);
+            expect(event.detail.type).toBe(props.type);
+            expect(event.detail.direction).toBe(props.direction);
+            expect(event.detail.ratio).toBe(props.ratio);
+            expect(event.detail.x).toBe(props.x);
+            expect(event.detail.y).toBe(props.y);
+            expect(event.detail.angle).toBe(props.angle);
+        });
         const { container, component } = render(Context, {
             props: {
                 component: Tile,

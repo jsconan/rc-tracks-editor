@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher, getContext } from 'svelte';
+    import { getContext } from 'svelte';
     import { TileSpecifications } from '../config';
     import { CurvedElementEnlarged, CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
@@ -15,21 +15,10 @@
     export let filter = void 0;
     export let id = void 0;
 
-    const dispatch = createEventDispatcher();
     const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const type = CurvedTileEnlargedModel.TYPE;
-
     const barrierLength = specs.barrierLength;
     const barrierWidth = specs.barrierWidth;
     const width = specs.width;
-
-    /**
-     * Handles the click event.
-     * @private
-     */
-    function click() {
-        dispatch('click', { id, type, direction, ratio, x, y, angle });
-    }
 
     /**
      * Computes the parameters for rendering the tile at the expected position.
@@ -83,7 +72,7 @@
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
-<g class="tile curved-tile-enlarged" {transform} {filter} {id} on:click={click}>
+<g class="tile curved-tile-enlarged" {transform} {filter} {id} on:click>
     <CurvedElementEnlarged
         class="ground"
         cx={tile.curveCenter.x}
