@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Counter, Vector2D } from '../../core/models';
+import { Vector2D } from '../../core/models';
 import { TileList } from '../models';
 
 /**
@@ -40,13 +40,10 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
     let inputY = startY;
     let inputAngle = startAngle;
 
-    const stats = new Counter();
     const tiles = list.tiles.map(model => {
         const rect = model.getBoundingRect(inputX, inputY, inputAngle);
         const { x, y, angle } = rect.input;
         const { id, type, direction, ratio } = model;
-
-        stats.increment(model.modelId);
 
         inputX = rect.output.x;
         inputY = rect.output.y;
@@ -64,7 +61,7 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
     const { x, y } = topLeft.subCoord(hPadding, vPadding);
     const { x: width, y: height } = bottomRight.sub(topLeft).addCoord(hPadding * 2, vPadding * 2);
 
-    return { x, y, width, height, tiles, stats };
+    return { x, y, width, height, tiles };
 };
 
 /**

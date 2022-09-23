@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Counter, Vector2D } from '../../core/models';
+import { Vector2D } from '../../core/models';
 import { TILE_DIRECTION_LEFT } from '../helpers';
 import { TileList } from '../models';
 
@@ -59,7 +59,6 @@ export default (
     let tileX = startX;
     let tileY = startY;
 
-    const stats = new Counter();
     const tiles = list.tiles.map(model => {
         const curveAngle = model.getCurveAngle();
         const { id, type, direction, ratio } = model;
@@ -76,8 +75,6 @@ export default (
         const topY = tileY - (!centered || vertical ? 0 : height / 2) - vPadding;
         const x = topX - rect.x + hPadding + dx;
         const y = topY - rect.y + vPadding + dy;
-
-        stats.increment(model.modelId);
 
         topLeft.x = Math.min(topLeft.x, topX);
         topLeft.y = Math.min(topLeft.y, topY);
@@ -97,7 +94,7 @@ export default (
     const { x, y } = topLeft;
     const { x: width, y: height } = bottomRight.sub(topLeft);
 
-    return { x, y, width, height, tiles, stats };
+    return { x, y, width, height, tiles };
 };
 
 /**

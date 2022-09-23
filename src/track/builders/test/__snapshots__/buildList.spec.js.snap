@@ -3,18 +3,6 @@
 exports[`buildList process a list of tiles for rendering using config options { aligned: false } 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -458,18 +446,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { aligned: true } 1`] = `
 Object {
   "height": 167.7776769338703,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -913,18 +889,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { centered: false } 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -1368,18 +1332,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { centered: true } 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -1823,18 +1775,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { centered: true, vertical: true } 1`] = `
 Object {
   "height": 1566.0925999323272,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -2278,18 +2218,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: false } 1`] = `
 Object {
   "height": 184.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -2733,18 +2661,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: true } 1`] = `
 Object {
   "height": 1806.0925999323272,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -3188,18 +3104,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100 } 1`] = `
 Object {
   "height": 264.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -3643,18 +3547,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: false } 1`] = `
 Object {
   "height": 273.94354890608497,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -4098,18 +3990,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: true } 1`] = `
 Object {
   "height": 1791.96758219104,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -4553,18 +4433,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { tileAngle: 45 } 1`] = `
 Object {
   "height": 173.94354890608494,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -5008,18 +4876,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: false } 1`] = `
 Object {
   "height": 200,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -5463,18 +5319,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: true } 1`] = `
 Object {
   "height": 200,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -5918,18 +5762,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { vertical: false } 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -6373,18 +6205,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options { vertical: true } 1`] = `
 Object {
   "height": 1566.0925999323272,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -6828,18 +6648,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using config options {} 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -7283,18 +7091,6 @@ Object {
 exports[`buildList process a list of tiles for rendering using default position 1`] = `
 Object {
   "height": 164.55387591698866,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-enlarged-1" => 2,
-      "curved-tile-1" => 2,
-      "curved-tile-2" => 2,
-      "curved-tile-3" => 2,
-      "curved-tile-4" => 2,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,

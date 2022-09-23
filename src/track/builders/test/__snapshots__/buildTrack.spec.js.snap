@@ -9,14 +9,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
 } 1`] = `
 Object {
   "height": 395.56349186104046,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -316,14 +308,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using config options { hPadding: 10, vPadding: 20 } 1`] = `
 Object {
   "height": 350,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -623,14 +607,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using config options { startAngle: 45 } 1`] = `
 Object {
   "height": 355.56349186104046,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -930,14 +906,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using config options { startX: 100, startY: 100 } 1`] = `
 Object {
   "height": 310,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -1237,14 +1205,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using config options { startX: 100, startY: 100, startAngle: 45 } 1`] = `
 Object {
   "height": 355.56349186104046,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 45,
@@ -1544,14 +1504,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using config options {} 1`] = `
 Object {
   "height": 310,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
@@ -1851,14 +1803,6 @@ Object {
 exports[`buildTrack process a list of tiles for rendering a track using default position 1`] = `
 Object {
   "height": 310,
-  "stats": Counter {
-    "counters": Map {
-      "straight-tile-1" => 4,
-      "curved-tile-1" => 4,
-    },
-    "notify": [Function],
-    "subscribe": [Function],
-  },
   "tiles": Array [
     Object {
       "angle": 0,
