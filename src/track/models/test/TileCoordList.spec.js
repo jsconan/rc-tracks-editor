@@ -35,6 +35,39 @@ describe('TileCoordList', () => {
         expect(TileCoordList).toEqual(expect.any(Function));
     });
 
+    it('has a length', () => {
+        const list = new TileList(specs);
+        const listCoord = new TileCoordList(list, mockBuilder);
+
+        expect(listCoord.length).toBe(0);
+
+        list.appendTile();
+
+        expect(listCoord.length).toBe(1);
+    });
+
+    it('implements the iteration protocol', () => {
+        const list = new TileList(specs);
+        const listCoord = new TileCoordList(list, mockBuilder);
+        list.appendTile();
+
+        expect(listCoord[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(listCoord[Symbol.iterator]()).not.toBe(listCoord[Symbol.iterator]());
+        expect([...listCoord]).toMatchSnapshot();
+    });
+
+    it('can produce an iterator', () => {
+        const list = new TileList(specs);
+        const listCoord = new TileCoordList(list, mockBuilder);
+        list.appendTile();
+
+        expect(listCoord.values).toEqual(expect.any(Function));
+        expect(listCoord.values()[Symbol.iterator]).toEqual(expect.any(Function));
+
+        expect(listCoord.values()).not.toBe(listCoord.values());
+        expect([...listCoord.values()]).toMatchSnapshot();
+    });
+
     describe('throws error', () => {
         it('when trying to create an instance with an invalid list', () => {
             // @ts-expect-error
@@ -47,15 +80,15 @@ describe('TileCoordList', () => {
         });
 
         it('when trying to set an invalid list', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
             // @ts-expect-error
-            expect(() => bridge.setList({})).toThrow('The model must be an instance of TileList!');
+            expect(() => listCoord.setList({})).toThrow('The model must be an instance of TileList!');
         });
 
         it('when trying to set an invalid builder', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
             // @ts-expect-error
-            expect(() => bridge.setBuilder({})).toThrow('A builder function is expected!');
+            expect(() => listCoord.setBuilder({})).toThrow('A builder function is expected!');
         });
     });
 
@@ -63,82 +96,82 @@ describe('TileCoordList', () => {
         it('a list of tiles', () => {
             const oldList = new TileList(specs);
             const newList = new TileList(specs);
-            const bridge = new TileCoordList(oldList, mockBuilder);
+            const listCoord = new TileCoordList(oldList, mockBuilder);
 
-            expect(bridge.list).toBe(oldList);
-            expect(bridge.setList(newList)).toBe(bridge);
-            expect(bridge.list).toBe(newList);
+            expect(listCoord.list).toBe(oldList);
+            expect(listCoord.setList(newList)).toBe(listCoord);
+            expect(listCoord.list).toBe(newList);
         });
 
         it('a builder function', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
             const builder = () => {};
 
-            expect(bridge.builder).not.toBe(builder);
-            expect(bridge.setBuilder(builder)).toBe(bridge);
-            expect(bridge.builder).toBe(builder);
+            expect(listCoord.builder).not.toBe(builder);
+            expect(listCoord.setBuilder(builder)).toBe(listCoord);
+            expect(listCoord.builder).toBe(builder);
         });
 
         it('the options for the builder', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder, { dummy: true });
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder, { dummy: true });
             const options = { foo: 'bar' };
 
-            expect(bridge.hasOption('dummy')).toBeTruthy();
-            expect(bridge.setOptions(options)).toBe(bridge);
-            expect(bridge.options).not.toBe(options);
-            expect(bridge.hasOption('dummy')).toBeFalsy();
-            expect(bridge.getOption('foo')).toBe(options.foo);
+            expect(listCoord.hasOption('dummy')).toBeTruthy();
+            expect(listCoord.setOptions(options)).toBe(listCoord);
+            expect(listCoord.options).not.toBe(options);
+            expect(listCoord.hasOption('dummy')).toBeFalsy();
+            expect(listCoord.getOption('foo')).toBe(options.foo);
         });
     });
 
     describe('manage options for the builder', () => {
         it('setting the value of an option', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
 
-            expect(bridge.hasOption('foo')).toBeFalsy();
-            expect(bridge.setOption('foo', 'bar')).toBe(bridge);
-            expect(bridge.hasOption('foo')).toBeTruthy();
-            expect(bridge.getOption('foo')).toBe('bar');
+            expect(listCoord.hasOption('foo')).toBeFalsy();
+            expect(listCoord.setOption('foo', 'bar')).toBe(listCoord);
+            expect(listCoord.hasOption('foo')).toBeTruthy();
+            expect(listCoord.getOption('foo')).toBe('bar');
         });
 
         it('getting the value of an option', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
 
-            expect(bridge.getOption('foo')).toBeUndefined();
-            bridge.setOption('foo', 'bar');
-            expect(bridge.getOption('foo')).toBe('bar');
+            expect(listCoord.getOption('foo')).toBeUndefined();
+            listCoord.setOption('foo', 'bar');
+            expect(listCoord.getOption('foo')).toBe('bar');
         });
 
         it('checking if an option is assigned', () => {
-            const bridge = new TileCoordList(new TileList(specs), mockBuilder);
+            const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
 
-            expect(bridge.hasOption('foo')).toBeFalsy();
-            bridge.setOption('foo', 'bar');
-            expect(bridge.hasOption('foo')).toBeTruthy();
+            expect(listCoord.hasOption('foo')).toBeFalsy();
+            listCoord.setOption('foo', 'bar');
+            expect(listCoord.hasOption('foo')).toBeTruthy();
         });
     });
 
     describe('manage the built coordinates', () => {
         const list = new TileList(specs);
-        const bridge = new TileCoordList(list, mockBuilder);
+        const listCoord = new TileCoordList(list, mockBuilder);
 
         list.appendTile();
         const id = list.appendTile();
         list.appendTile();
 
         it('getting the identifier of a tile at a particular index', () => {
-            expect(bridge.getTileIndex(id)).toBe(1);
-            expect(bridge.getTileIndex('foo')).toBe(-1);
+            expect(listCoord.getTileIndex(id)).toBe(1);
+            expect(listCoord.getTileIndex('foo')).toBe(-1);
         });
 
         it('getting the coordinate of a tile from its identifier', () => {
-            expect(bridge.getTile(id)).toBe(`coord-${id}`);
-            expect(bridge.getTile('foo')).toBeNull();
+            expect(listCoord.getTile(id)).toBe(`coord-${id}`);
+            expect(listCoord.getTile('foo')).toBeNull();
         });
 
         it('getting the coordinate of a tile at a particular index', () => {
-            expect(bridge.getTileAt(1)).toBe(`coord-${id}`);
-            expect(bridge.getTileAt(3)).toBeNull();
+            expect(listCoord.getTileAt(1)).toBe(`coord-${id}`);
+            expect(listCoord.getTileAt(3)).toBeNull();
 
             const emptyBridge = new TileCoordList(new TileList(specs), () => {});
             expect(emptyBridge.getTileAt(0)).toBeNull();
@@ -157,12 +190,12 @@ describe('TileCoordList', () => {
                 return mockBuilder(list);
             };
 
-            const bridge = new TileCoordList(theList, builder, { foo: 'bar' });
+            const listCoord = new TileCoordList(theList, builder, { foo: 'bar' });
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
             expect(callback).toHaveBeenCalledTimes(1);
             unsubscribe();
@@ -175,14 +208,14 @@ describe('TileCoordList', () => {
             const newList = new TileList(specs);
             newList.appendTile();
 
-            const bridge = new TileCoordList(oldList, mockBuilder);
+            const listCoord = new TileCoordList(oldList, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
-            expect(bridge.setList(newList)).toBe(bridge);
+            expect(listCoord.setList(newList)).toBe(listCoord);
             oldList.appendTile();
             newList.appendTile();
 
@@ -195,15 +228,15 @@ describe('TileCoordList', () => {
             const list = new TileList(specs);
             list.appendTile();
 
-            const bridge = new TileCoordList(list, mockBuilder);
+            const listCoord = new TileCoordList(list, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
             const newBuilder = () => list.tiles.map(tile => `coord-${tile.id}`);
-            expect(bridge.setBuilder(newBuilder)).toBe(bridge);
+            expect(listCoord.setBuilder(newBuilder)).toBe(listCoord);
 
             expect(callback).toHaveBeenCalledTimes(2);
 
@@ -212,12 +245,12 @@ describe('TileCoordList', () => {
 
         it('each time a tile is added', () => {
             const theList = new TileList(specs);
-            const bridge = new TileCoordList(theList, mockBuilder);
+            const listCoord = new TileCoordList(theList, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
             theList.appendTile();
 
@@ -229,15 +262,15 @@ describe('TileCoordList', () => {
             const theList = new TileList(specs);
             theList.appendTile();
 
-            const bridge = new TileCoordList(theList, mockBuilder);
+            const listCoord = new TileCoordList(theList, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
-            bridge.setOption('foo', 'bar');
-            bridge.setOptions({});
+            listCoord.setOption('foo', 'bar');
+            listCoord.setOptions({});
 
             expect(callback).toHaveBeenCalledTimes(3);
             unsubscribe();
@@ -247,14 +280,14 @@ describe('TileCoordList', () => {
             const theList = new TileList(specs);
             theList.appendTile();
 
-            const bridge = new TileCoordList(theList, mockBuilder);
+            const listCoord = new TileCoordList(theList, mockBuilder);
 
             const callback = jest.fn().mockImplementation(() => {
-                expect(bridge.listCoord).toMatchSnapshot();
+                expect(listCoord.listCoord).toMatchSnapshot();
             });
-            const unsubscribe = bridge.subscribe(callback);
+            const unsubscribe = listCoord.subscribe(callback);
 
-            bridge.build();
+            listCoord.build();
 
             expect(callback).toHaveBeenCalledTimes(2);
             unsubscribe();
@@ -263,8 +296,8 @@ describe('TileCoordList', () => {
 
     it('can validate an object is an instance of the class', () => {
         const list = new TileList(specs);
-        const bridge = new TileCoordList(list, mockBuilder);
-        expect(() => TileCoordList.validateInstance(bridge)).not.toThrow();
+        const listCoord = new TileCoordList(list, mockBuilder);
+        expect(() => TileCoordList.validateInstance(listCoord)).not.toThrow();
         expect(() => TileCoordList.validateInstance({})).toThrow('The model must be an instance of TileCoordList!');
     });
 });

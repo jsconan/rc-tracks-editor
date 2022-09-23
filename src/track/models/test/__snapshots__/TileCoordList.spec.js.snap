@@ -9,7 +9,7 @@ Object {
 exports[`TileCoordList can build coordinates each time a tile is added 2`] = `
 Object {
   "tiles": Array [
-    "coord-id-9",
+    "coord-id-12",
   ],
 }
 `;
@@ -17,7 +17,7 @@ Object {
 exports[`TileCoordList can build coordinates each time an option is changed 1`] = `
 Object {
   "tiles": Array [
-    "coord-id-10",
+    "coord-id-13",
   ],
 }
 `;
@@ -25,7 +25,7 @@ Object {
 exports[`TileCoordList can build coordinates each time an option is changed 2`] = `
 Object {
   "tiles": Array [
-    "coord-id-10",
+    "coord-id-13",
   ],
 }
 `;
@@ -33,7 +33,7 @@ Object {
 exports[`TileCoordList can build coordinates each time an option is changed 3`] = `
 Object {
   "tiles": Array [
-    "coord-id-10",
+    "coord-id-13",
   ],
 }
 `;
@@ -41,7 +41,7 @@ Object {
 exports[`TileCoordList can build coordinates each time the build function is called 1`] = `
 Object {
   "tiles": Array [
-    "coord-id-11",
+    "coord-id-14",
   ],
 }
 `;
@@ -49,7 +49,7 @@ Object {
 exports[`TileCoordList can build coordinates each time the build function is called 2`] = `
 Object {
   "tiles": Array [
-    "coord-id-11",
+    "coord-id-14",
   ],
 }
 `;
@@ -57,21 +57,21 @@ Object {
 exports[`TileCoordList can build coordinates when the builder function is changed 1`] = `
 Object {
   "tiles": Array [
-    "coord-id-8",
+    "coord-id-11",
   ],
 }
 `;
 
 exports[`TileCoordList can build coordinates when the builder function is changed 2`] = `
 Array [
-  "coord-id-8",
+  "coord-id-11",
 ]
 `;
 
 exports[`TileCoordList can build coordinates when the list of tiles is changed 1`] = `
 Object {
   "tiles": Array [
-    "coord-id-4",
+    "coord-id-7",
   ],
 }
 `;
@@ -79,7 +79,7 @@ Object {
 exports[`TileCoordList can build coordinates when the list of tiles is changed 2`] = `
 Object {
   "tiles": Array [
-    "coord-id-5",
+    "coord-id-8",
   ],
 }
 `;
@@ -87,8 +87,8 @@ Object {
 exports[`TileCoordList can build coordinates when the list of tiles is changed 3`] = `
 Object {
   "tiles": Array [
-    "coord-id-5",
-    "coord-id-7",
+    "coord-id-8",
+    "coord-id-10",
   ],
 }
 `;
@@ -96,7 +96,19 @@ Object {
 exports[`TileCoordList can build coordinates with the given builder options 1`] = `
 Object {
   "tiles": Array [
-    "coord-id-3",
+    "coord-id-6",
   ],
 }
+`;
+
+exports[`TileCoordList can produce an iterator 1`] = `
+Array [
+  "coord-id-5",
+]
+`;
+
+exports[`TileCoordList implements the iteration protocol 1`] = `
+Array [
+  "coord-id-4",
+]
 `;

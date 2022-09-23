@@ -85,6 +85,32 @@ export class TileCoordList {
     }
 
     /**
+     * The number of tiles in the list.
+     * @type {number}
+     */
+    get length() {
+        return this.list.length;
+    }
+
+    /**
+     * Iterates over the tile coordinates from the list.
+     * @yields {tileCoord} - The next tile coordinates in the list.
+     * @generator
+     */
+    *[Symbol.iterator]() {
+        yield* this.listCoord.tiles.values();
+    }
+
+    /**
+     * Returns an iterator for the tile coordinates from the list.
+     * @yields {tileCoord} - The next tile coordinates in the list.
+     * @generator
+     */
+    *values() {
+        yield* this.listCoord.tiles.values();
+    }
+
+    /**
      * Binds the builder.
      * @param {function} builder - The reference to the builder.
      * @returns {TileCoordList} - Chains the instance.
@@ -197,7 +223,6 @@ export class TileCoordList {
  * @property {number} width - The width of the list of tiles.
  * @property {number} height - The height of the list of tiles.
  * @property {tileCoord[]} tiles - The list of tiles.
- * @property {Counter} [stats] - An object listing the stats for the list of tiles.
  */
 
 /**

@@ -31,6 +31,33 @@ describe('TileList', () => {
         expect(TileList).toEqual(expect.any(Function));
     });
 
+    it('has a length', () => {
+        const list = new TileList(specs);
+        expect(list.length).toBe(0);
+        list.appendTile();
+        expect(list.length).toBe(1);
+    });
+
+    it('implements the iteration protocol', () => {
+        const list = new TileList(specs);
+        list.appendTile();
+
+        expect(list[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(list[Symbol.iterator]()).not.toBe(list[Symbol.iterator]());
+        expect([...list]).toMatchSnapshot();
+    });
+
+    it('can produce an iterator', () => {
+        const list = new TileList(specs);
+        list.appendTile();
+
+        expect(list.values).toEqual(expect.any(Function));
+        expect(list.values()[Symbol.iterator]).toEqual(expect.any(Function));
+
+        expect(list.values()).not.toBe(list.values());
+        expect([...list.values()]).toMatchSnapshot();
+    });
+
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error

@@ -86,6 +86,32 @@ export class TileList {
     }
 
     /**
+     * The number of tiles in the list.
+     * @type {number}
+     */
+    get length() {
+        return this.tiles.length;
+    }
+
+    /**
+     * Iterates over the tiles from the list.
+     * @yields {TileModel} - The next tile in the list.
+     * @generator
+     */
+    *[Symbol.iterator]() {
+        yield* this.tiles.values();
+    }
+
+    /**
+     * Returns an iterator for the tiles from the list.
+     * @yields {TileModel} - The next tile in the list.
+     * @generator
+     */
+    *values() {
+        yield* this.tiles.values();
+    }
+
+    /**
      * Sets the specifications for the tiles.
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @returns {TileList} - Chains the instance.
