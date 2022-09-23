@@ -888,6 +888,7 @@ exports[`Track renders with the given element in slots using a TileCoordList 1`]
       />
     </svg>
     
+    
   </div>
 </body>
 `;
@@ -1311,6 +1312,7 @@ exports[`Track renders with the given element in slots using a TileList 1`] = `
         y="10"
       />
     </svg>
+    
     
   </div>
 </body>

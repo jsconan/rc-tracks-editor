@@ -18,7 +18,7 @@
 
 import { render, fireEvent } from '@testing-library/svelte';
 import Context from './Context.svelte';
-import Track from '../Track.svelte';
+import TrackRef from '../TrackRef.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../builders';
 import { TileCoordList, TileList } from '../../models';
@@ -38,15 +38,12 @@ tileList.import([
 ]);
 const listCoord = new TileCoordList(tileList, buildTrack, { hPadding: 10, vPadding: 20, startAngle: 90 });
 
-describe('Track', () => {
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with default values using a %s', (type, list) => {
-        const props = { list };
+describe('TrackRef', () => {
+    it('renders with default values', () => {
+        const props = { list: listCoord };
         const { container } = render(Context, {
             props: {
-                component: Track,
+                component: TrackRef,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -56,12 +53,9 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with the given parameters using a %s', (type, list) => {
+    it('renders with the given parameters', () => {
         const props = {
-            list,
+            list: listCoord,
             x: 100,
             y: 200,
             width: 400,
@@ -69,7 +63,7 @@ describe('Track', () => {
         };
         const { container } = render(Context, {
             props: {
-                component: Track,
+                component: TrackRef,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -79,12 +73,9 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('updates when the %s model is modified', async (type, list) => {
+    it('updates when the model is modified', async () => {
         const props = {
-            list,
+            list: listCoord,
             x: 100,
             y: 200,
             width: 400,
@@ -92,7 +83,7 @@ describe('Track', () => {
         };
         const rendered = render(Context, {
             props: {
-                component: Track,
+                component: TrackRef,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -107,7 +98,7 @@ describe('Track', () => {
 
     it('needs a valid model', () => {
         expect(() =>
-            render(Track, {
+            render(TrackRef, {
                 props: {
                     // @ts-expect-error
                     list: {}
@@ -116,7 +107,7 @@ describe('Track', () => {
         ).toThrow("'list' is not a store with a 'subscribe' method");
 
         expect(() =>
-            render(Track, {
+            render(TrackRef, {
                 props: {
                     // @ts-expect-error
                     list: {
@@ -126,18 +117,15 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The list must be either an instance of TileList or TileCoordList!');
+        ).toThrow('The model must be an instance of TileCoordList!');
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('fires click from a track built with a %s', (type, list) => {
+    it('fires click', () => {
         const onClick = jest.fn();
-        const props = { list };
+        const props = { list: listCoord };
         const { container, component } = render(Context, {
             props: {
-                component: Track,
+                component: TrackRef,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -145,17 +133,14 @@ describe('Track', () => {
         });
 
         component.$on('click', onClick);
-        fireEvent.click(container.querySelector(`#id-0`));
-        fireEvent.click(container.querySelector(`#id-1`));
-        fireEvent.click(container.querySelector(`#id-2`));
+        fireEvent.click(container.querySelector(`[data-id=id-0]`));
+        fireEvent.click(container.querySelector(`[data-id=id-1]`));
+        fireEvent.click(container.querySelector(`[data-id=id-2]`));
         expect(onClick).toHaveBeenCalledTimes(3);
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with the given element in slots using a %s', (type, list) => {
-        const props = { list, component: Track };
+    it('renders with the given element in slots', () => {
+        const props = { list: listCoord, component: TrackRef };
         const { container } = render(Context, {
             props: {
                 component: TrackWithSlot,

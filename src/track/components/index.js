@@ -22,3 +22,4 @@ export { default as CurvedTileEnlarged } from './CurvedTileEnlarged.svelte';
 export { default as StraightTile } from './StraightTile.svelte';
 export { default as Tile } from './Tile.svelte';
 export { default as Track } from './Track.svelte';
+export { default as TrackRef } from './TrackRef.svelte';

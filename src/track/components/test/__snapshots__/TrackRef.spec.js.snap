@@ -1,0 +1,1063 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackRef renders with default values 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="-220 -175 230 240"
+      x="0"
+      y="0"
+    >
+      <defs>
+        
+        <g
+          class="tile straight-tile"
+          id="straight-tile-1"
+          transform=""
+        >
+          <rect
+            class="ground"
+            height="110"
+            width="90"
+            x="-45"
+            y="0"
+          />
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="82.5"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="82.5"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile"
+          id="curved-tile-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile-enlarged"
+          id="curved-tile-enlarged-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="5"
+              width="27.5"
+              x="-55"
+              y="95"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="5"
+              width="27.5"
+              x="-27.5"
+              y="95"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+          </g>
+        </g>
+        
+         
+      </defs>
+      
+      <use
+        data-id="id-0"
+        href="#straight-tile-1"
+        transform="rotate(90 0 0)"
+        x="0"
+        y="0"
+      />
+      <use
+        data-id="id-1"
+        href="#curved-tile-1"
+        transform="rotate(90 -110 6.735557395310443e-15)"
+        x="-110"
+        y="6.735557395310443e-15"
+      />
+      <use
+        data-id="id-2"
+        href="#curved-tile-enlarged-1"
+        transform="rotate(180 -165 -54.99999999999999)"
+        x="-165"
+        y="-54.99999999999999"
+      />
+       
+    </svg>
+    
+  </div>
+</body>
+`;
+
+exports[`TrackRef renders with the given element in slots 1`] = `
+<body>
+  <div />
+  <div />
+  <div>
+    <svg
+      viewBox="-220 -175.00000000000003 230 240.00000000000003"
+      x="0"
+      y="0"
+    >
+      <defs>
+        
+        <g
+          class="tile straight-tile"
+          id="straight-tile-1"
+          transform=""
+        >
+          <rect
+            class="ground"
+            height="110"
+            width="90"
+            x="-45"
+            y="0"
+          />
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="82.5"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="82.5"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile"
+          id="curved-tile-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile-enlarged"
+          id="curved-tile-enlarged-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="5"
+              width="27.5"
+              x="-55"
+              y="95"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="5"
+              width="27.5"
+              x="-27.5"
+              y="95"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+          </g>
+        </g>
+        
+         
+        <circle
+          cx="10"
+          cy="10"
+          id="circle"
+          r="10"
+          slot="defs"
+        />
+      </defs>
+      
+      <use
+        data-id="id-0"
+        href="#straight-tile-1"
+        transform="rotate(90 0 0)"
+        x="0"
+        y="0"
+      />
+      <use
+        data-id="id-1"
+        href="#curved-tile-1"
+        transform="rotate(90 -110 6.735557395310443e-15)"
+        x="-110"
+        y="6.735557395310443e-15"
+      />
+      <use
+        data-id="id-2"
+        href="#curved-tile-enlarged-1"
+        transform="rotate(180 -165 -54.99999999999999)"
+        x="-165"
+        y="-54.99999999999999"
+      />
+      <use
+        data-id="id-3"
+        href="#straight-tile-1"
+        transform="rotate(270 -110 -110)"
+        x="-110"
+        y="-110"
+      />
+       
+      <rect
+        height="50"
+        width="100"
+        x="10"
+        y="10"
+      />
+    </svg>
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TrackRef renders with the given parameters 1`] = `
+<body>
+  <div>
+    <svg
+      height="400"
+      viewBox="-220 -175 230 240"
+      width="400"
+      x="100"
+      y="200"
+    >
+      <defs>
+        
+        <g
+          class="tile straight-tile"
+          id="straight-tile-1"
+          transform=""
+        >
+          <rect
+            class="ground"
+            height="110"
+            width="90"
+            x="-45"
+            y="0"
+          />
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="82.5"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="82.5"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile"
+          id="curved-tile-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile-enlarged"
+          id="curved-tile-enlarged-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="5"
+              width="27.5"
+              x="-55"
+              y="95"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="5"
+              width="27.5"
+              x="-27.5"
+              y="95"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+          </g>
+        </g>
+        
+         
+      </defs>
+      
+      <use
+        data-id="id-0"
+        href="#straight-tile-1"
+        transform="rotate(90 0 0)"
+        x="0"
+        y="0"
+      />
+      <use
+        data-id="id-1"
+        href="#curved-tile-1"
+        transform="rotate(90 -110 6.735557395310443e-15)"
+        x="-110"
+        y="6.735557395310443e-15"
+      />
+      <use
+        data-id="id-2"
+        href="#curved-tile-enlarged-1"
+        transform="rotate(180 -165 -54.99999999999999)"
+        x="-165"
+        y="-54.99999999999999"
+      />
+       
+    </svg>
+    
+  </div>
+</body>
+`;
+
+exports[`TrackRef updates when the model is modified 1`] = `
+<body>
+  <div>
+    <svg
+      height="400"
+      viewBox="-220 -175.00000000000003 230 240.00000000000003"
+      width="400"
+      x="100"
+      y="200"
+    >
+      <defs>
+        
+        <g
+          class="tile straight-tile"
+          id="straight-tile-1"
+          transform=""
+        >
+          <rect
+            class="ground"
+            height="110"
+            width="90"
+            x="-45"
+            y="0"
+          />
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="-45"
+              y="82.5"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="55"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="82.5"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile"
+          id="curved-tile-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            />
+          </g>
+        </g>
+        
+        
+        <g
+          class="tile curved-tile-enlarged"
+          id="curved-tile-enlarged-1"
+          transform=""
+        >
+          <path
+            class="ground"
+            d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          />
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk even"
+              d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            />
+            
+            <path
+              class="barrier-chunk odd"
+              d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            />
+          </g>
+          <g
+            class="barrier curved-barrier"
+          >
+            
+            <path
+              class="barrier-chunk odd"
+              d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            />
+            
+            <path
+              class="barrier-chunk even"
+              d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk even"
+              height="5"
+              width="27.5"
+              x="-55"
+              y="95"
+            />
+            
+            <rect
+              class="barrier-chunk odd"
+              height="5"
+              width="27.5"
+              x="-27.5"
+              y="95"
+            />
+          </g>
+          <g
+            class="barrier straight-barrier"
+          >
+            
+            <rect
+              class="barrier-chunk odd"
+              height="27.5"
+              width="5"
+              x="40"
+              y="0"
+            />
+            
+            <rect
+              class="barrier-chunk even"
+              height="27.5"
+              width="5"
+              x="40"
+              y="27.5"
+            />
+          </g>
+        </g>
+        
+         
+      </defs>
+      
+      <use
+        data-id="id-0"
+        href="#straight-tile-1"
+        transform="rotate(90 0 0)"
+        x="0"
+        y="0"
+      />
+      <use
+        data-id="id-1"
+        href="#curved-tile-1"
+        transform="rotate(90 -110 6.735557395310443e-15)"
+        x="-110"
+        y="6.735557395310443e-15"
+      />
+      <use
+        data-id="id-2"
+        href="#curved-tile-enlarged-1"
+        transform="rotate(180 -165 -54.99999999999999)"
+        x="-165"
+        y="-54.99999999999999"
+      />
+      <use
+        data-id="id-3"
+        href="#straight-tile-1"
+        transform="rotate(270 -110 -110)"
+        x="-110"
+        y="-110"
+      />
+       
+    </svg>
+    
+  </div>
+</body>
+`;
