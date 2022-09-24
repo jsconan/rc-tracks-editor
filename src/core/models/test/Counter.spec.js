@@ -199,41 +199,6 @@ describe('Counter', () => {
         expect([...counters]).toStrictEqual([]);
     });
 
-    it('can load counters', () => {
-        const counters = new Counter();
-        counters.set('c', 1);
-
-        expect([...counters]).toStrictEqual([['c', 1]]);
-        expect(counters.load({})).toBe(counters);
-        expect([...counters]).toStrictEqual([['c', 1]]);
-
-        expect(counters.load(source)).toBe(counters);
-        expect([...counters]).toStrictEqual(source);
-    });
-
-    it('can reset counters', () => {
-        const counters = new Counter();
-        counters.set('a', 2);
-        counters.set('b', 3);
-
-        expect([...counters]).toStrictEqual([
-            ['a', 2],
-            ['b', 3]
-        ]);
-        expect(counters.reset()).toBe(counters);
-        expect([...counters]).toStrictEqual([
-            ['a', 0],
-            ['b', 0]
-        ]);
-
-        expect(counters.reset(['a', 'b', 'c', 'a', 'c'])).toBe(counters);
-        expect([...counters]).toStrictEqual([
-            ['a', 2],
-            ['b', 1],
-            ['c', 2]
-        ]);
-    });
-
     it('can export counters', () => {
         const counters = new Counter(source);
 
@@ -245,7 +210,7 @@ describe('Counter', () => {
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(counters);
-            expect([...value]).toMatchSnapshot();
+            expect(value).toMatchSnapshot();
         });
 
         const unsubscribe = counters.subscribe(callback); // callback called
@@ -257,14 +222,10 @@ describe('Counter', () => {
         counters.increment('c2'); // callback called
         counters.decrement('c2'); // callback called
         counters.clear(); // callback called
-        counters.load(source); // callback called
-        counters.load({});
-        counters.reset(source); // callback called
-        counters.reset({}); // callback called
 
         unsubscribe();
         counters.increment('c1');
 
-        expect(callback).toHaveBeenCalledTimes(10);
+        expect(callback).toHaveBeenCalledTimes(7);
     });
 });

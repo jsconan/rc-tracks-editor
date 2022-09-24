@@ -20,22 +20,17 @@ import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
 
 /**
- * Represents an observable set of counters.
- * Each change in the counters will be notified to the subscribers.
+ * Represents a set of counters.
  */
-export class Counter {
+export class Counter extends Map {
     /**
      * Creates an observable set of counters.
      * Each change in the counters will be notified to the subscribers.
      * @param {*} source - An iterable object that can be used to initialize the counters.
      */
     constructor(source = []) {
-        this.counters = new Map();
+        super();
         const { subscribe, set } = writable(this);
-
-        for (const [key, value] of source) {
-            this.counters.set(key, Math.floor(value) || 0);
-        }
 
         /**
          * Notifies all subscribers.
@@ -54,32 +49,10 @@ export class Counter {
          * @returns {function} - Returns a callback for removing the subscription.
          */
         this.subscribe = subscribe;
-    }
 
-    /**
-     * The number of managed counters.
-     * @type {number}
-     */
-    get size() {
-        return this.counters.size;
-    }
-
-    /**
-     * Iterates over the counters.
-     * @yields {*} - The next counter in the list.
-     * @generator
-     */
-    *[Symbol.iterator]() {
-        yield* this.counters.entries();
-    }
-
-    /**
-     * Iterates over the counter keys.
-     * @yields {*} - The next key in the list.
-     * @generator
-     */
-    *keys() {
-        yield* this.counters.keys();
+        for (const [key, value] of source) {
+            this.set(key, value);
+        }
     }
 
     /**
@@ -91,7 +64,7 @@ export class Counter {
     forEach(walker) {
         validateCallback(walker);
 
-        this.counters.forEach((value, key) => walker.call(this, value, key, this));
+        super.forEach((value, key) => walker.call(this, value, key, this));
 
         return this;
     }
@@ -107,20 +80,11 @@ export class Counter {
 
         const counters = {};
 
-        for (const [key, value] of this.counters.entries()) {
+        for (const [key, value] of this.entries()) {
             counters[key] = mapper.call(this, value, key, this);
         }
 
         return counters;
-    }
-
-    /**
-     * Tells whether a counter exists or not.
-     * @param {string} key - The key of the counter to check.
-     * @returns {boolean} - Returns `true` if the counter exists.
-     */
-    has(key) {
-        return this.counters.has(key);
     }
 
     /**
@@ -129,8 +93,8 @@ export class Counter {
      * @returns {number} - The current value of the counter. It returns 0 if the counter does not exist.
      */
     get(key) {
-        if (this.counters.has(key)) {
-            return this.counters.get(key);
+        if (this.has(key)) {
+            return super.get(key);
         }
         return 0;
     }
@@ -142,7 +106,7 @@ export class Counter {
      * @returns {Counter} - Chains the counter.
      */
     set(key, value) {
-        this.counters.set(key, Math.floor(value) || 0);
+        super.set(key, Math.floor(value) || 0);
 
         return this.notify();
     }
@@ -153,7 +117,7 @@ export class Counter {
      * @returns {boolean} - Returns `true` if a counter was deleted.
      */
     delete(key) {
-        const deleted = this.counters.delete(key);
+        const deleted = super.delete(key);
 
         if (deleted) {
             this.notify();
@@ -170,9 +134,7 @@ export class Counter {
      */
     increment(key, amount = 1) {
         const value = Math.floor(amount) || 1;
-        this.counters.set(key, this.get(key) + value);
-
-        return this.notify();
+        return this.set(key, this.get(key) + value);
     }
 
     /**
@@ -183,9 +145,7 @@ export class Counter {
      */
     decrement(key, amount = 1) {
         const value = Math.floor(amount) || 1;
-        this.counters.set(key, this.get(key) - value);
-
-        return this.notify();
+        return this.set(key, this.get(key) - value);
     }
 
     /**
@@ -193,44 +153,7 @@ export class Counter {
      * @returns {Counter} - Chains the counter.
      */
     clear() {
-        this.counters.clear();
-
-        return this.notify();
-    }
-
-    /**
-     * Loads counters from another source. The existing counters are removed before.
-     * @param {*} iterator - An iterable object that can be used to set the counters.
-     * @returns {Counter} - Chains the counter.
-     */
-    load(iterator) {
-        if (!iterator || !iterator[Symbol.iterator]) {
-            return this;
-        }
-
-        this.counters.clear();
-        for (const [key, value] of iterator) {
-            this.counters.set(key, Math.floor(value) || 0);
-        }
-
-        return this.notify();
-    }
-
-    /**
-     * Counts the occurrences from the given source. The existing counters are reset before.
-     * @param {*} [iterator] - An iterable object that can be used to set the counters.
-     * @returns {Counter} - Chains the counter.
-     */
-    reset(iterator) {
-        for (const key of this.counters.keys()) {
-            this.counters.set(key, 0);
-        }
-
-        if (iterator && iterator[Symbol.iterator]) {
-            for (const key of iterator) {
-                this.counters.set(key, this.get(key) + 1);
-            }
-        }
+        super.clear();
 
         return this.notify();
     }
@@ -242,7 +165,7 @@ export class Counter {
     toObject() {
         const counters = {};
 
-        for (const [key, value] of this.counters.entries()) {
+        for (const [key, value] of this.entries()) {
             counters[key] = value;
         }
 

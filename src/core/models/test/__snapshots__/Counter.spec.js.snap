@@ -17,194 +17,50 @@ Object {
 `;
 
 exports[`Counter can notify changes 1`] = `
-Array [
-  Array [
-    "c1",
-    0,
-  ],
-  Array [
-    "c2",
-    1,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-]
+Map {
+  "c1" => 0,
+  "c2" => 1,
+  "c3" => -1,
+}
 `;
 
 exports[`Counter can notify changes 2`] = `
-Array [
-  Array [
-    "c1",
-    0,
-  ],
-  Array [
-    "c2",
-    1,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-]
+Map {
+  "c1" => 0,
+  "c2" => 1,
+  "c3" => -1,
+}
 `;
 
 exports[`Counter can notify changes 3`] = `
-Array [
-  Array [
-    "c1",
-    3,
-  ],
-  Array [
-    "c2",
-    1,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-]
+Map {
+  "c1" => 3,
+  "c2" => 1,
+  "c3" => -1,
+}
 `;
 
 exports[`Counter can notify changes 4`] = `
-Array [
-  Array [
-    "c1",
-    3,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-]
+Map {
+  "c1" => 3,
+  "c3" => -1,
+}
 `;
 
 exports[`Counter can notify changes 5`] = `
-Array [
-  Array [
-    "c1",
-    3,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-  Array [
-    "c2",
-    1,
-  ],
-]
+Map {
+  "c1" => 3,
+  "c3" => -1,
+  "c2" => 1,
+}
 `;
 
 exports[`Counter can notify changes 6`] = `
-Array [
-  Array [
-    "c1",
-    3,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-  Array [
-    "c2",
-    0,
-  ],
-]
+Map {
+  "c1" => 3,
+  "c3" => -1,
+  "c2" => 0,
+}
 `;
 
-exports[`Counter can notify changes 7`] = `Array []`;
-
-exports[`Counter can notify changes 8`] = `
-Array [
-  Array [
-    "c1",
-    0,
-  ],
-  Array [
-    "c2",
-    1,
-  ],
-  Array [
-    "c3",
-    -1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 9`] = `
-Array [
-  Array [
-    "c1",
-    0,
-  ],
-  Array [
-    "c2",
-    0,
-  ],
-  Array [
-    "c3",
-    0,
-  ],
-  Array [
-    Array [
-      "c1",
-      0,
-    ],
-    1,
-  ],
-  Array [
-    Array [
-      "c2",
-      1,
-    ],
-    1,
-  ],
-  Array [
-    Array [
-      "c3",
-      -1,
-    ],
-    1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 10`] = `
-Array [
-  Array [
-    "c1",
-    0,
-  ],
-  Array [
-    "c2",
-    0,
-  ],
-  Array [
-    "c3",
-    0,
-  ],
-  Array [
-    Array [
-      "c1",
-      0,
-    ],
-    0,
-  ],
-  Array [
-    Array [
-      "c2",
-      1,
-    ],
-    0,
-  ],
-  Array [
-    Array [
-      "c3",
-      -1,
-    ],
-    0,
-  ],
-]
-`;
+exports[`Counter can notify changes 7`] = `Map {}`;
