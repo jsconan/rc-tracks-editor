@@ -125,3 +125,66 @@ Array [
   5,
 ]
 `;
+
+exports[`List emits an event when adding values 1`] = `
+Array [
+  4,
+  5,
+]
+`;
+
+exports[`List emits an event when inserting values 1`] = `
+Array [
+  3,
+  4,
+  5,
+]
+`;
+
+exports[`List emits an event when inserting values 2`] = `
+Array [
+  1,
+  2.5,
+  2.75,
+]
+`;
+
+exports[`List emits an event when inserting values 3`] = `
+Array [
+  0,
+  0.5,
+  0.75,
+]
+`;
+
+exports[`List emits an event when removing values 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`List emits an event when setting a value 1`] = `
+Array [
+  0,
+  3,
+  1,
+]
+`;
+
+exports[`List emits an event when setting a value 2`] = `
+Array [
+  1,
+  4,
+  2,
+]
+`;
+
+exports[`List emits an event when setting a value 3`] = `
+Array [
+  2,
+  5,
+  3,
+]
+`;

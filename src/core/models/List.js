@@ -18,10 +18,12 @@
 
 import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
+import { eventEmitterMixin } from '../mixins';
 
 /**
  * Represents an observable list.
  * Each change in the list will be notified to the subscribers.
+ * @mixes EventEmitter
  */
 export class List {
     /**
@@ -33,6 +35,8 @@ export class List {
         this.list = [...source];
         const { subscribe, set } = writable(this);
         source = void 0;
+
+        eventEmitterMixin(this);
 
         /**
          * Notifies all subscribers.
@@ -131,11 +135,22 @@ export class List {
     /**
      * Sets a value at a particular index.
      * @param {number} index - The index where to set the value.
-     * @param {*} value  - The value to set at the index.
+     * @param {*} value - The value to set at the index.
      * @returns {List} - Chains the list.
+     * @fires set
      */
     set(index, value) {
+        const previous = this.list[index];
         this.list[index] = value;
+
+        /**
+         * Notifies a value has been set to the list.
+         * @event set
+         * @param {number} index - The index where the value was set.
+         * @param {*} newValue - The new value.
+         * @param {*} oldValue - The previous value.
+         */
+        this.emit('set', index, value, previous);
 
         return this.notify();
     }
@@ -143,22 +158,39 @@ export class List {
     /**
      * Inserts a value at a particular index.
      * @param {number} index - The index where to insert the value.
-     * @param {*} value  - The value to insert at the index.
+     * @param {...*} value - The value to insert at the index.
      * @returns {List} - Chains the list.
+     * @fires insert
      */
     insert(index, ...value) {
         this.list.splice(index, 0, ...value);
+
+        /**
+         * Notifies values have been inserted into the list.
+         * @event insert
+         * @param {number} index - The index where the values have been inserted.
+         * @param {...*} value - The inserted values.
+         */
+        this.emit('insert', index, ...value);
 
         return this.notify();
     }
 
     /**
      * Adds a value at the end of the list.
-     * @param {*} value  - The value to add.
+     * @param {...*} value - The value to add.
      * @returns {List} - Chains the list.
+     * @fires add
      */
     add(...value) {
         this.list.push(...value);
+
+        /**
+         * Notifies values have been added to the list.
+         * @event add
+         * @param {...*} value - The added value.
+         */
+        this.emit('add', ...value);
 
         return this.notify();
     }
@@ -168,11 +200,21 @@ export class List {
      * @param {number} index - The index from where remove the value.
      * @param {number} count - The number of values to remove from the index.
      * @returns {number} - The number of deleted values.
+     * @fires delete
      */
     delete(index, count = 1) {
-        const deleted = this.list.splice(index, count).length;
+        const removed = this.list.splice(index, count);
+        const deleted = removed.length;
 
         if (deleted) {
+            /**
+             * Notifies values have been removed from the list.
+             * @event delete
+             * @param {number} index - The index from where the values were removed.
+             * @param {...*} value - The removed value.
+             */
+            this.emit('delete', index, ...removed);
+
             this.notify();
         }
 
@@ -182,9 +224,16 @@ export class List {
     /**
      * Clears the list.
      * @returns {List} - Chains the list.
+     * @fires clear
      */
     clear() {
         this.list = [];
+
+        /**
+         * Notifies the list was cleared.
+         * @event clear
+         */
+        this.emit('clear');
 
         return this.notify();
     }
@@ -193,6 +242,7 @@ export class List {
      * Loads values from another source. The list is cleared before.
      * @param {*} iterator - An iterable object that can be used to fill the list.
      * @returns {List} - Chains the list.
+     * @fires load
      */
     load(iterator) {
         if (!iterator || !iterator[Symbol.iterator]) {
@@ -200,6 +250,12 @@ export class List {
         }
 
         this.list = [...iterator];
+
+        /**
+         * Notifies the list was loaded.
+         * @event load
+         */
+        this.emit('load');
 
         return this.notify();
     }

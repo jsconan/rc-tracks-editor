@@ -72,7 +72,6 @@ describe('List', () => {
     });
 
     it('needs a valid callback to walk over values', () => {
-        // @ts-expect-error
         expect(() => new List().forEach()).toThrow('A callback function is expected!');
     });
 
@@ -98,7 +97,6 @@ describe('List', () => {
     });
 
     it('needs a valid callback to map values', () => {
-        // @ts-expect-error
         expect(() => new List().map()).toThrow('A callback function is expected!');
     });
 
@@ -172,6 +170,21 @@ describe('List', () => {
         expect([...list]).toMatchSnapshot();
     });
 
+    it('emits an event when setting a value', () => {
+        const list = new List(source);
+
+        const callback = jest.fn().mockImplementation((index, value, previous) => {
+            expect([index, value, previous]).toMatchSnapshot();
+        });
+
+        list.on('set', callback);
+
+        list.set(0, 3);
+        list.set(1, 4);
+        list.set(2, 5);
+        expect(callback).toHaveBeenCalledTimes(3);
+    });
+
     describe('can insert values', () => {
         it('at a particular index', () => {
             const list = new List(source);
@@ -201,6 +214,21 @@ describe('List', () => {
         });
     });
 
+    it('emits an event when inserting values', () => {
+        const list = new List(source);
+
+        const callback = jest.fn().mockImplementation((index, ...value) => {
+            expect([index, ...value]).toMatchSnapshot();
+        });
+
+        list.on('insert', callback);
+
+        list.insert(3, 4, 5);
+        list.insert(1, 2.5, 2.75);
+        list.insert(0, 0.5, 0.75);
+        expect(callback).toHaveBeenCalledTimes(3);
+    });
+
     it('can add values to the list', () => {
         const list = new List(source);
 
@@ -208,6 +236,19 @@ describe('List', () => {
 
         expect(list.add(4, 5)).toBe(list);
         expect([...list]).toMatchSnapshot();
+    });
+
+    it('emits an event when adding values', () => {
+        const list = new List(source);
+
+        const callback = jest.fn().mockImplementation((...value) => {
+            expect([...value]).toMatchSnapshot();
+        });
+
+        list.on('add', callback);
+
+        list.add(4, 5);
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can remove values from a particular index', () => {
@@ -220,6 +261,20 @@ describe('List', () => {
         expect([...list]).toMatchSnapshot();
     });
 
+    it('emits an event when removing values', () => {
+        const list = new List(source);
+
+        const callback = jest.fn().mockImplementation((index, ...value) => {
+            expect([index, ...value]).toMatchSnapshot();
+        });
+
+        list.on('delete', callback);
+
+        list.delete(1, 2);
+        list.delete(1, 2);
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
     it('can clear the list', () => {
         const list = new List(source);
 
@@ -228,6 +283,17 @@ describe('List', () => {
         expect([...list]).toEqual(source);
         expect(list.clear()).toBe(list);
         expect([...list]).toEqual([]);
+    });
+
+    it('emits an event when clearing the list', () => {
+        const list = new List(source);
+
+        const callback = jest.fn();
+
+        list.on('clear', callback);
+
+        list.clear();
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can load values from another source', () => {
@@ -240,6 +306,18 @@ describe('List', () => {
 
         expect(list.load(source)).toBe(list);
         expect([...list]).toEqual(source);
+    });
+
+    it('emits an event when loading the list', () => {
+        const list = new List();
+
+        const callback = jest.fn();
+
+        list.on('load', callback);
+
+        list.load(source);
+        list.load({});
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can export the values to an array', () => {
