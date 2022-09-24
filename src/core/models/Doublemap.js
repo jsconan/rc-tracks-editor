@@ -103,7 +103,6 @@ export class Doublemap extends Map {
      * @param {*} value - The value to register under the keys.
      * @returns {Doublemap} - Chains the instance.
      */
-    // @ts-expect-error
     set(primaryKey, secondaryKey, value) {
         if ('undefined' !== typeof secondaryKey) {
             let bucket = super.get(primaryKey);
@@ -155,7 +154,6 @@ export class Doublemap extends Map {
      * @param {*} [thisArg] - An optional call context for the callback. If omitted it will be defaulted to `undefined`.
      * @throws {TypeError} - If the callback is not supplied or is not a function.
      */
-    // @ts-expect-error
     forEach(each, thisArg) {
         validateCallback(each);
 

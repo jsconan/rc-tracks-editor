@@ -176,7 +176,6 @@ describe('Multimap', () => {
 
     it('needs a callback to iterate over entries', () => {
         const multimap = new Multimap();
-        // @ts-expect-error
         expect(() => multimap.forEach()).toThrow('A callback function is expected!');
     });
 

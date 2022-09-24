@@ -44,7 +44,6 @@ describe('buildTrack', () => {
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
-        // @ts-expect-error
         expect(() => buildTrack([])).toThrow('The model must be an instance of TileList!');
     });
 

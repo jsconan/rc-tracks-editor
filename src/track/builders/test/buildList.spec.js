@@ -53,7 +53,6 @@ describe('buildList', () => {
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
-        // @ts-expect-error
         expect(() => buildList([])).toThrow('The model must be an instance of TileList!');
     });
 

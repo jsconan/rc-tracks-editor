@@ -70,24 +70,20 @@ describe('TileCoordList', () => {
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid list', () => {
-            // @ts-expect-error
             expect(() => new TileCoordList({})).toThrow('The model must be an instance of TileList!');
         });
 
         it('when trying to create an instance with an invalid builder', () => {
-            // @ts-expect-error
             expect(() => new TileCoordList(new TileList(specs), {})).toThrow('A builder function is expected!');
         });
 
         it('when trying to set an invalid list', () => {
             const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
-            // @ts-expect-error
             expect(() => listCoord.setList({})).toThrow('The model must be an instance of TileList!');
         });
 
         it('when trying to set an invalid builder', () => {
             const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
-            // @ts-expect-error
             expect(() => listCoord.setBuilder({})).toThrow('A builder function is expected!');
         });
     });

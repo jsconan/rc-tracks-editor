@@ -81,7 +81,6 @@ describe('assign', () => {
         expect(result).toStrictEqual(source);
         expect(result).toBe(target);
         expect(target[Symbol.iterator]).toEqual(expect.any(Function));
-        // @ts-expect-error
         expect([...target]).toStrictEqual(list);
     });
 

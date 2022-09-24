@@ -39,7 +39,6 @@ export default (target, ...sources) => {
     }
 
     if (mixedIn) {
-        // @ts-expect-error
         Object.defineProperties(target, descriptors);
     }
 

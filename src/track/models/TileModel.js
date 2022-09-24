@@ -51,7 +51,6 @@ export class TileModel {
      * @returns {TileModel} - Another instance of the same type with the same properties.
      */
     clone() {
-        // @ts-expect-error
         return this.constructor.clone(this);
     }
 
@@ -60,7 +59,6 @@ export class TileModel {
      * @type {string}
      */
     get type() {
-        // @ts-expect-error
         return this.constructor.TYPE;
     }
 

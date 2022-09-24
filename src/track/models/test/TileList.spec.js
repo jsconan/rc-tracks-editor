@@ -60,7 +60,6 @@ describe('TileList', () => {
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
-            // @ts-expect-error
             expect(() => new TileList({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
@@ -68,7 +67,6 @@ describe('TileList', () => {
 
         it('when trying to set an invalid specifications object', () => {
             const track = new TileList(specs);
-            // @ts-expect-error
             expect(() => track.setSpecs({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
@@ -429,7 +427,6 @@ describe('TileList', () => {
 
         list.appendTile();
 
-        // @ts-expect-error
         expect(list.import({})).toBe(list);
         expect(list).toMatchSnapshot();
 

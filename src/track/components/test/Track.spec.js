@@ -109,7 +109,6 @@ describe('Track', () => {
         expect(() =>
             render(Track, {
                 props: {
-                    // @ts-expect-error
                     list: {}
                 }
             })
@@ -118,7 +117,6 @@ describe('Track', () => {
         expect(() =>
             render(Track, {
                 props: {
-                    // @ts-expect-error
                     list: {
                         subscribe() {
                             return () => {};

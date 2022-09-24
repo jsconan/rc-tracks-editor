@@ -92,7 +92,6 @@ export class Multimap extends Map {
      * @param {*} value - The value to register under the key.
      * @returns {Multimap} - Chains the instance.
      */
-    // @ts-expect-error
     set(key, value) {
         let bucket = this.get(key);
         if (!bucket) {
@@ -136,7 +135,6 @@ export class Multimap extends Map {
      * @param {*} [thisArg] - An optional call context for the callback. If omitted it will be defaulted to `undefined`.
      * @throws {TypeError} - If the callback is not supplied or is not a function.
      */
-    // @ts-expect-error
     forEach(each, thisArg) {
         validateCallback(each);
 
@@ -171,7 +169,6 @@ export class Multimap extends Map {
      * @yields {*} - The next key/value pair in the map.
      * @generator
      */
-    // @ts-expect-error
     *entries() {
         for (const [key, bucket] of super.entries()) {
             for (const value of bucket) {
@@ -188,7 +185,6 @@ export class Multimap extends Map {
      * @yields {*} - The next key/value pair in the map.
      * @generator
      */
-    // @ts-expect-error
     *[Symbol.iterator]() {
         yield* this.entries();
     }

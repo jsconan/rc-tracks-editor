@@ -160,7 +160,6 @@ describe('Doublemap', () => {
 
     it('needs a callback to iterate over entries', () => {
         const doublemap = new Doublemap();
-        // @ts-expect-error
         expect(() => doublemap.forEach()).toThrow('A callback function is expected!');
     });
 
