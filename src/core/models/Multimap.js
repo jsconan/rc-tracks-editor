@@ -58,14 +58,6 @@ import { validateCallback } from '../helpers';
  */
 export class Multimap extends Map {
     /**
-     * Creates a multimap.
-     * @param {*} source - A list of key/value pairs to inject in the map.
-     */
-    constructor(source) {
-        super(source);
-    }
-
-    /**
      * Tells whether a key exists or not. When the value is supplied, it also tells whether the key/pair exists or not.
      * @param {*} key - The key to check.
      * @param {*} [value] - An optional value to check together with the key.
