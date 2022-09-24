@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multimap can be initialized with another instance 1`] = `
+Array [
+  Array [
+    1,
+    "1",
+  ],
+  Array [
+    1,
+    "I",
+  ],
+  Array [
+    2,
+    "2",
+  ],
+  Array [
+    2,
+    "II",
+  ],
+  Array [
+    3,
+    "3",
+  ],
+  Array [
+    3,
+    "III",
+  ],
+]
+`;
+
+exports[`Multimap can be initialized with values 1`] = `
+Array [
+  Array [
+    1,
+    "1",
+  ],
+  Array [
+    1,
+    "I",
+  ],
+  Array [
+    2,
+    "2",
+  ],
+  Array [
+    2,
+    "II",
+  ],
+  Array [
+    3,
+    "3",
+  ],
+  Array [
+    3,
+    "III",
+  ],
+]
+`;
