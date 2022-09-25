@@ -22,3 +22,4 @@ export { StraightTileModel } from './StraightTileModel.js';
 export { TileCoordList } from './TileCoordList.js';
 export { TileList } from './TileList.js';
 export { TileModel } from './TileModel.js';
+export { TileModelCounter } from './TileModelCounter.js';
