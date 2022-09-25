@@ -100,9 +100,10 @@ describe('CurvedTileEnlarged', () => {
             }
         });
 
-        return wait(10)
-            .then(() => rendered.component.$set({ props: Object.assign({}, props, update) }))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await wait(1);
+        rendered.component.$set({ props: Object.assign({}, props, update) });
+        await wait(0);
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('fires click', () => {

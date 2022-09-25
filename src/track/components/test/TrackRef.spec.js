@@ -90,10 +90,10 @@ describe('TrackRef', () => {
             }
         });
 
-        return wait(10)
-            .then(() => tileList.appendTile())
-            .then(() => wait(10))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await wait(1);
+        tileList.appendTile();
+        await wait(1);
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('needs a valid model', () => {

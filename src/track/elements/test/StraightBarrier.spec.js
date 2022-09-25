@@ -73,8 +73,9 @@ describe('StraightBarrier', () => {
         };
         const rendered = render(StraightBarrier, { props });
 
-        return wait(10)
-            .then(() => rendered.component.$set(update))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await wait(1);
+        rendered.component.$set(update);
+        await wait(0);
+        expect(rendered.container).toMatchSnapshot();
     });
 });

@@ -95,12 +95,14 @@ describe('Sketch', () => {
         };
         const rendered = render(Sketch);
 
-        return wait(10)
-            .then(() => rendered.component.$set(props))
-            .then(() => expect(rendered.container).toMatchSnapshot())
-            .then(() => wait(10))
-            .then(() => rendered.component.$set(unset))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await wait(1);
+        rendered.component.$set(props);
+        await wait(0);
+        expect(rendered.container).toMatchSnapshot();
+        await wait(1);
+        rendered.component.$set(unset);
+        await wait(0);
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('renders with the given element in slots', () => {
