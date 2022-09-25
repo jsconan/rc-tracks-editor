@@ -32,10 +32,7 @@ export class List {
      * @param {*} source - An iterable object that can be used to initialize the list.
      */
     constructor(source = []) {
-        this.list = [...source];
         const { subscribe, set } = writable(this);
-        source = void 0;
-
         eventEmitterMixin(this);
 
         /**
@@ -55,6 +52,9 @@ export class List {
          * @returns {function} - Returns a callback for removing the subscription.
          */
         this.subscribe = subscribe;
+
+        this.list = [...source];
+        source = void 0;
     }
 
     /**
