@@ -16,55 +16,6 @@ Object {
 }
 `;
 
-exports[`Counter can notify changes 1`] = `
-Map {
-  "c1" => 0,
-  "c2" => 1,
-  "c3" => -1,
-}
-`;
-
-exports[`Counter can notify changes 2`] = `
-Map {
-  "c1" => 0,
-  "c2" => 1,
-  "c3" => -1,
-}
-`;
-
-exports[`Counter can notify changes 3`] = `
-Map {
-  "c1" => 3,
-  "c2" => 1,
-  "c3" => -1,
-}
-`;
-
-exports[`Counter can notify changes 4`] = `
-Map {
-  "c1" => 3,
-  "c3" => -1,
-}
-`;
-
-exports[`Counter can notify changes 5`] = `
-Map {
-  "c1" => 3,
-  "c3" => -1,
-  "c2" => 1,
-}
-`;
-
-exports[`Counter can notify changes 6`] = `
-Map {
-  "c1" => 3,
-  "c3" => -1,
-  "c2" => 0,
-}
-`;
-
-exports[`Counter can notify changes 7`] = `Map {}`;
-
 exports[`Counter emits an event when setting a counter 1`] = `
 Array [
   "c1",

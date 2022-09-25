@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { writable } from 'svelte/store';
 import { Counter } from '../../core/models';
 import { TILE_DIRECTION_RIGHT } from '../helpers';
 
@@ -32,28 +31,6 @@ export class TileModelCounter extends Counter {
         super();
 
         this.tileModels = new Map();
-
-        const { subscribe, set } = writable(this.getTileModels());
-
-        /**
-         * Notifies all models subscribers.
-         * @returns {Counter} - Chains the counter.
-         */
-        this.notifyTileModels = () => {
-            set(this.getTileModels());
-
-            return this;
-        };
-
-        this.tileModelsStore = {
-            /**
-             * Adds a subscriber that will be notified each time a tile model is added or removed.
-             * @function subscribe
-             * @param {function} subscriber - A callback that will receive the updated list of tile models.
-             * @returns {function} - Returns a callback for removing the subscription.
-             */
-            subscribe
-        };
 
         for (const tile of source) {
             this.add(tile);
@@ -97,7 +74,6 @@ export class TileModelCounter extends Counter {
              * @param {TileModel} model - The tile model that was removed.
              */
             this.emit('deletemodel', key, model);
-            this.notifyTileModels();
         }
 
         return super.delete(key);
@@ -125,7 +101,6 @@ export class TileModelCounter extends Counter {
              * @param {TileModel} model - The tile model that was added.
              */
             this.emit('addmodel', modelId, model);
-            this.notifyTileModels();
         }
 
         return this.increment(modelId, 1);
@@ -159,7 +134,6 @@ export class TileModelCounter extends Counter {
      */
     clear() {
         this.tileModels.clear();
-        this.notifyTileModels();
 
         return super.clear();
     }

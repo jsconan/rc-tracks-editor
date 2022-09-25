@@ -277,28 +277,4 @@ describe('Counter', () => {
 
         expect(counters.toObject()).toMatchSnapshot();
     });
-
-    it('can notify changes', () => {
-        const counters = new Counter(source);
-
-        const callback = jest.fn().mockImplementation(value => {
-            expect(value).toBe(counters);
-            expect(value).toMatchSnapshot();
-        });
-
-        const unsubscribe = counters.subscribe(callback); // callback called
-
-        counters.notify(); // callback called
-        counters.set(keys[0], 3); // callback called
-        counters.delete(keys[1]); // callback called
-        counters.delete(keys[1]);
-        counters.increment(keys[1]); // callback called
-        counters.decrement(keys[1]); // callback called
-        counters.clear(); // callback called
-
-        unsubscribe();
-        counters.increment(keys[0]);
-
-        expect(callback).toHaveBeenCalledTimes(7);
-    });
 });

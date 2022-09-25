@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
 import { eventEmitterMixin } from '../mixins';
 
@@ -32,26 +31,7 @@ export class Counter extends Map {
     constructor(source = []) {
         super();
 
-        const { subscribe, set } = writable(this);
         eventEmitterMixin(this);
-
-        /**
-         * Notifies all subscribers.
-         * @returns {Counter} - Chains the counter.
-         */
-        this.notify = () => {
-            set(this);
-
-            return this;
-        };
-
-        /**
-         * Adds a subscriber that will be notified each time a counter is modified.
-         * @function subscribe
-         * @param {function} subscriber - A callback that will receive notifications when a counter is changed.
-         * @returns {function} - Returns a callback for removing the subscription.
-         */
-        this.subscribe = subscribe;
 
         for (const [key, value] of source) {
             this.set(key, value);
@@ -120,7 +100,7 @@ export class Counter extends Map {
          */
         this.emit('set', key, value, previous);
 
-        return this.notify();
+        return this;
     }
 
     /**
@@ -141,8 +121,6 @@ export class Counter extends Map {
              * @param {number} value - The last value of the removed counter.
              */
             this.emit('delete', key, value);
-
-            this.notify();
         }
 
         return deleted;
@@ -186,7 +164,7 @@ export class Counter extends Map {
          */
         this.emit('clear');
 
-        return this.notify();
+        return this;
     }
 
     /**
