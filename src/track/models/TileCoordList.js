@@ -245,7 +245,3 @@ export class TileCoordList {
 /**
  * @typedef {import('../models').TileModel} TileModel
  */
-
-/**
- * @typedef {import('../../core/models').Counter} Counter
- */
