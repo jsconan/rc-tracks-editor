@@ -2,12 +2,6 @@
 
 exports[`TileList can build a track adding tiles at the first position with a particular type 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -21,7 +15,7 @@ TileList {
     "list": Array [
       CurvedTileModel {
         "direction": "left",
-        "id": "id-19",
+        "id": "id-18",
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -32,7 +26,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-18",
+        "id": "id-17",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -43,23 +37,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track adding tiles at the first position with the default specifications 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -73,7 +59,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-17",
+        "id": "id-16",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -84,7 +70,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-16",
+        "id": "id-15",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -95,23 +81,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track adding tiles at the last position with a particular type 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -136,23 +114,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track adding tiles at the last position with the default specifications 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -177,97 +147,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track inserting tiles after a position in the middle 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-65",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-66",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-68",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-67",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track inserting tiles after an inexistent position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -290,36 +178,6 @@ TileList {
           "maxRatio": 4,
         },
       },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track inserting tiles after the first position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
       StraightTileModel {
         "direction": "right",
         "id": "id-59",
@@ -355,23 +213,158 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track inserting tiles after an inexistent position 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-51",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track inserting tiles after the first position 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-52",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-54",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-53",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track inserting tiles after the last position 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-55",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-56",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-57",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track inserting tiles after with a particular type 1`] = `
+TileList {
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -394,72 +387,9 @@ TileList {
           "maxRatio": 4,
         },
       },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-63",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-64",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track inserting tiles after with a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-69",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
       CurvedTileModel {
         "direction": "left",
-        "id": "id-70",
+        "id": "id-63",
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -470,23 +400,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track inserting tiles before a position in the middle 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -500,7 +422,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-50",
+        "id": "id-45",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -511,7 +433,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-53",
+        "id": "id-48",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -522,7 +444,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-51",
+        "id": "id-46",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -533,7 +455,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-52",
+        "id": "id-47",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -544,23 +466,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track inserting tiles before an inexistent position 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -574,7 +488,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-43",
+        "id": "id-38",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -585,23 +499,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track inserting tiles before the first position 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -615,7 +521,62 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-46",
+        "id": "id-41",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-39",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-40",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track inserting tiles before the last position 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-42",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -637,7 +598,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-45",
+        "id": "id-43",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -648,23 +609,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
-exports[`TileList can build a track inserting tiles before the last position 1`] = `
+exports[`TileList can build a track inserting tiles before with a particular type 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -676,10 +629,10 @@ TileList {
     "delegate": [Function],
     "emit": [Function],
     "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-47",
-        "ratio": 1,
+      CurvedTileModel {
+        "direction": "left",
+        "id": "id-50",
+        "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
@@ -698,88 +651,17 @@ TileList {
           "maxRatio": 4,
         },
       },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-48",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track inserting tiles before with a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      CurvedTileModel {
-        "direction": "left",
-        "id": "id-55",
-        "ratio": 2,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-54",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track removing tiles at inexistent position 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -791,58 +673,6 @@ TileList {
     "delegate": [Function],
     "emit": [Function],
     "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-30",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track removing tiles from the end 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-27",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
       StraightTileModel {
         "direction": "right",
         "id": "id-28",
@@ -856,23 +686,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
-exports[`TileList can build a track removing tiles from the middle 1`] = `
+exports[`TileList can build a track removing tiles from the end 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -886,7 +708,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-24",
+        "id": "id-25",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -908,23 +730,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
-exports[`TileList can build a track removing tiles from the start 1`] = `
+exports[`TileList can build a track removing tiles from the middle 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -949,7 +763,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-23",
+        "id": "id-24",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -960,23 +774,59 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track removing tiles from the start 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-20",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-21",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track replacing tiles at inexistent position 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -988,58 +838,6 @@ TileList {
     "delegate": [Function],
     "emit": [Function],
     "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-40",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can build a track replacing tiles with a tile having a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-36",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
       StraightTileModel {
         "direction": "right",
         "id": "id-37",
@@ -1051,36 +849,17 @@ TileList {
           "maxRatio": 4,
         },
       },
-      CurvedTileModel {
-        "direction": "left",
-        "id": "id-39",
-        "ratio": 2,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
-exports[`TileList can build a track replacing tiles with a tile having default specifications 1`] = `
+exports[`TileList can build a track replacing tiles with a tile having a particular type 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -1094,18 +873,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-32",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-35",
+        "id": "id-33",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1125,25 +893,83 @@ TileList {
           "maxRatio": 4,
         },
       },
+      CurvedTileModel {
+        "direction": "left",
+        "id": "id-36",
+        "ratio": 2,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TileList can build a track replacing tiles with a tile having default specifications 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-29",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-32",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-31",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
   },
 }
 `;
 
 exports[`TileList can build a track with the given size 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -1156,23 +982,15 @@ TileList {
     "emit": [Function],
     "list": Array [],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can clear the list 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -1185,11 +1003,9 @@ TileList {
     "emit": [Function],
     "list": Array [],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
@@ -1206,12 +1022,6 @@ Array [
 
 exports[`TileList can import from an object 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -1225,7 +1035,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-74",
+        "id": "id-65",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1236,23 +1046,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can import from an object 2`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 4,
     "barrierWidth": 5,
@@ -1266,6 +1068,345 @@ TileList {
     "list": Array [
       CurvedTileModel {
         "direction": "left",
+        "id": "id-66",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-67",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-68",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 1`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 2`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-70",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 3`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-71",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-70",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 4`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-71",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 5`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-72",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 6`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-73",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-72",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 7`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-73",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-72",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-74",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 8`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 9`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
         "id": "id-75",
         "ratio": 1,
         "specs": TileSpecifications {
@@ -1286,7 +1427,7 @@ TileList {
           "maxRatio": 4,
         },
       },
-      CurvedTileModel {
+      StraightTileModel {
         "direction": "right",
         "id": "id-77",
         "ratio": 1,
@@ -1299,434 +1440,15 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 2`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      CurvedTileModel {
-        "direction": "right",
-        "id": "id-79",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 3`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      CurvedTileModel {
-        "direction": "right",
-        "id": "id-80",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      CurvedTileModel {
-        "direction": "right",
-        "id": "id-79",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 4`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      CurvedTileModel {
-        "direction": "right",
-        "id": "id-80",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 5`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-81",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 6`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-82",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-81",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 7`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-82",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-81",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-83",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 8`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
-  },
-}
-`;
-
-exports[`TileList can notify changes 9`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-  },
-  "subscribe": [Function],
-  "tiles": List {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": Array [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-84",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-85",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-86",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-        },
-      },
-    ],
-    "listens": [Function],
-    "notify": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;
 
 exports[`TileList can notify changes 10`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 2,
     "barrierWidth": 1,
@@ -1740,7 +1462,7 @@ TileList {
     "list": Array [
       StraightTileModel {
         "direction": "right",
-        "id": "id-84",
+        "id": "id-75",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1751,7 +1473,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-85",
+        "id": "id-76",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1762,7 +1484,7 @@ TileList {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-86",
+        "id": "id-77",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -1773,11 +1495,64 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
+  },
+}
+`;
+
+exports[`TileList can notify changes 11`] = `
+TileList {
+  "specs": TileSpecifications {
+    "barrierChunks": 2,
+    "barrierWidth": 1,
+    "laneWidth": 10,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+  "tiles": List {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-75",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-76",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+        },
+      },
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-77",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
   },
 }
 `;
@@ -1800,12 +1575,6 @@ Array [
 
 exports[`TileList can set the specifications of the tiles 1`] = `
 TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
   "specs": TileSpecifications {
     "barrierChunks": 2,
     "barrierWidth": 1,
@@ -1830,11 +1599,9 @@ TileList {
       },
     ],
     "listens": [Function],
-    "notify": [Function],
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "subscribe": [Function],
   },
 }
 `;

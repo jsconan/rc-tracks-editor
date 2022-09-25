@@ -326,29 +326,4 @@ describe('List', () => {
         expect(list.toArray).toEqual(expect.any(Function));
         expect(list.toArray()).toEqual(source);
     });
-
-    it('can notify changes', () => {
-        const list = new List(source);
-
-        const callback = jest.fn().mockImplementation(value => {
-            expect(value).toBe(list);
-            expect([...value]).toMatchSnapshot();
-        });
-
-        const unsubscribe = list.subscribe(callback); // callback called
-
-        list.notify(); // callback called
-        list.insert(0, 0); // callback called
-        list.add(5); // callback called
-        list.set(4, 4); // callback called
-        list.delete(5);
-        list.delete(2); // callback called
-        list.clear(); // callback called
-        list.load(source); // callback called
-
-        unsubscribe();
-        list.add(4);
-
-        expect(callback).toHaveBeenCalledTimes(8);
-    });
 });

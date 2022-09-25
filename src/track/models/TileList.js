@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { derived } from 'svelte/store';
 import {
     validateType,
     CURVED_TILE_ENLARGED_TYPE,
@@ -29,8 +28,8 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
-import { eventEmitterMixin } from '../../core/mixins';
 import { List } from '../../core/models';
+import { eventStore } from '../../core/stores';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -73,11 +72,25 @@ export class TileList {
     constructor(specs) {
         this.tiles = new List();
 
-        eventEmitterMixin(this);
-
         this.setSpecs(specs);
 
-        const { subscribe } = derived(this.tiles, () => this);
+        // Produces a store linked to the list events and returning the TileList
+        const { subscribe } = eventStore(
+            this.tiles,
+            [
+                // List events
+                'set',
+                'insert',
+                'add',
+                'delete',
+                'clear',
+                'load',
+                // TileList events
+                'specs',
+                'update'
+            ],
+            () => this
+        );
 
         /**
          * Adds a subscriber that will be notified each time the list is modified.
@@ -86,50 +99,6 @@ export class TileList {
          * @returns {function} - Return a callback for removing the subscription.
          */
         this.subscribe = subscribe;
-
-        /**
-         * Notifies a tile has been set to the list.
-         * @event set
-         * @param {number} index - The index where the tile was set.
-         * @param {TileModel} newTile - The new tile.
-         * @param {TileModel} oldTile - The previous tile.
-         */
-        this.tiles.delegate('set', this);
-
-        /**
-         * Notifies a tile has been inserted into the list.
-         * @event insert
-         * @param {number} index - The index where the tile has been inserted.
-         * @param {TileModel} tile - The inserted tile.
-         */
-        this.tiles.delegate('insert', this);
-
-        /**
-         * Notifies a tile has been added to the list.
-         * @event insert
-         * @param {TileModel} tile - The added tile.
-         */
-        this.tiles.delegate('add', this);
-
-        /**
-         * Notifies a tile have been removed from the list.
-         * @event delete
-         * @param {number} index - The index from where the tile was removed.
-         * @param {TileModel} value - The removed tile.
-         */
-        this.tiles.delegate('delete', this);
-
-        /**
-         * Notifies the list was cleared.
-         * @event clear
-         */
-        this.tiles.delegate('clear', this);
-
-        /**
-         * Notifies the list was loaded.
-         * @event load
-         */
-        this.tiles.delegate('load', this);
     }
 
     /**
@@ -170,17 +139,32 @@ export class TileList {
 
         this.specs = specs;
 
-        /**
-         * Notifies the tile specification have changed.
-         * @event specs
-         * @param {TileSpecifications} specs - The specifications for the tiles.
-         */
-        this.emit('specs', specs);
-
         if (this.tiles.length) {
             this.tiles.forEach(tile => tile.setSpecs(specs));
-            this.tiles.notify();
+
+            /**
+             * Notifies the tile specification have changed.
+             * @event specs
+             * @param {TileSpecifications} specs - The specifications for the tiles.
+             */
+            this.tiles.emit('specs', specs);
         }
+
+        return this;
+    }
+
+    /**
+     * Notifies an update of the tiles.
+     * This is useful when one or several tiles have been modified internally without calling the list API.
+     * @returns {TileList} - Chains the instance.
+     * @fires update
+     */
+    update() {
+        /**
+         * Notifies a change in the tiles.
+         * @event update
+         */
+        this.tiles.emit('update');
 
         return this;
     }

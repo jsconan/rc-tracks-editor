@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
 import { eventEmitterMixin } from '../mixins';
 
@@ -32,26 +31,7 @@ export class List {
      * @param {*} source - An iterable object that can be used to initialize the list.
      */
     constructor(source = []) {
-        const { subscribe, set } = writable(this);
         eventEmitterMixin(this);
-
-        /**
-         * Notifies all subscribers.
-         * @returns {List} - Chains the list.
-         */
-        this.notify = () => {
-            set(this);
-
-            return this;
-        };
-
-        /**
-         * Adds a subscriber that will be notified each time the list is modified.
-         * @function subscribe
-         * @param {function} subscriber - A callback that will receive notifications when the list is changed.
-         * @returns {function} - Returns a callback for removing the subscription.
-         */
-        this.subscribe = subscribe;
 
         this.list = [...source];
         source = void 0;
@@ -152,7 +132,7 @@ export class List {
          */
         this.emit('set', index, value, previous);
 
-        return this.notify();
+        return this;
     }
 
     /**
@@ -173,7 +153,7 @@ export class List {
          */
         this.emit('insert', index, ...value);
 
-        return this.notify();
+        return this;
     }
 
     /**
@@ -192,7 +172,7 @@ export class List {
          */
         this.emit('add', ...value);
 
-        return this.notify();
+        return this;
     }
 
     /**
@@ -214,8 +194,6 @@ export class List {
              * @param {...*} value - The removed value.
              */
             this.emit('delete', index, ...removed);
-
-            this.notify();
         }
 
         return deleted;
@@ -235,7 +213,7 @@ export class List {
          */
         this.emit('clear');
 
-        return this.notify();
+        return this;
     }
 
     /**
@@ -257,7 +235,7 @@ export class List {
          */
         this.emit('load');
 
-        return this.notify();
+        return this;
     }
 
     /**

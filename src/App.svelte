@@ -85,7 +85,7 @@
                         on:click={event => {
                             click(event);
                             track.getTile(event.detail.id).flipDirection();
-                            track.tiles.notify();
+                            track.update();
                         }}
                     />
                 </Sketch>
