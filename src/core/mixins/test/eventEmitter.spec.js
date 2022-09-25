@@ -18,8 +18,22 @@
 
 import eventEmitterMixin from '../eventEmitter.js';
 
-describe('eventEmitter', () => {
-    it('is a mixin helper', () => {
+const mocks = {
+    eventEmitter: {
+        emit() {}
+    },
+    eventListener: {
+        on() {},
+        once() {},
+        off() {},
+        listens() {},
+        delegate() {}
+    },
+    notEmitter: {}
+};
+
+describe('eventEmitterMixin', () => {
+    it('is a function', () => {
         expect(eventEmitterMixin).toEqual(expect.any(Function));
     });
 
@@ -51,6 +65,49 @@ describe('eventEmitter', () => {
         expect(eventEmitterMixin(object, mixin1, mixin2)).toBe(object);
         expect(object.action).toBe(mixin1.action);
         expect(object.run).toBe(mixin2.run);
+    });
+
+    it('checks if an object can emit events', () => {
+        expect(eventEmitterMixin.canEmit(eventEmitterMixin())).toBeTruthy();
+        expect(eventEmitterMixin.canEmit(mocks.eventEmitter)).toBeTruthy();
+        expect(eventEmitterMixin.canEmit(mocks.eventListener)).toBeFalsy();
+        expect(eventEmitterMixin.canEmit(mocks.notEmitter)).toBeFalsy();
+        expect(eventEmitterMixin.canEmit(void 0)).toBeFalsy();
+    });
+
+    it('checks if an object can listen to events', () => {
+        expect(eventEmitterMixin.canListen(eventEmitterMixin())).toBeTruthy();
+        expect(eventEmitterMixin.canListen(mocks.eventEmitter)).toBeFalsy();
+        expect(eventEmitterMixin.canListen(mocks.eventListener)).toBeTruthy();
+        expect(eventEmitterMixin.canListen(mocks.notEmitter)).toBeFalsy();
+        expect(eventEmitterMixin.canListen(void 0)).toBeFalsy();
+    });
+
+    it('checks if an object is an event emitter', () => {
+        expect(eventEmitterMixin.isEventEmitter(eventEmitterMixin())).toBeTruthy();
+        expect(eventEmitterMixin.isEventEmitter(mocks.eventEmitter)).toBeFalsy();
+        expect(eventEmitterMixin.isEventEmitter(mocks.eventListener)).toBeFalsy();
+        expect(eventEmitterMixin.isEventEmitter(mocks.notEmitter)).toBeFalsy();
+        expect(eventEmitterMixin.isEventEmitter(void 0)).toBeFalsy();
+    });
+
+    describe('throws error', () => {
+        it('if the given object cannot emit events', () => {
+            expect(() => eventEmitterMixin.validateEmitter({})).toThrow('The object must implement the function: emit');
+            expect(() => eventEmitterMixin.validateEmitter(eventEmitterMixin())).not.toThrow();
+        });
+        it('if the given object cannot listen to events', () => {
+            expect(() => eventEmitterMixin.validateListener({})).toThrow(
+                'The object must implement the functions: on, once, off, listens, delegate'
+            );
+            expect(() => eventEmitterMixin.validateListener(eventEmitterMixin())).not.toThrow();
+        });
+        it('if the given object does not implement the EventEmitter API', () => {
+            expect(() => eventEmitterMixin.validateInstance({})).toThrow(
+                'The object must implement the functions: emit, on, once, off, listens, delegate'
+            );
+            expect(() => eventEmitterMixin.validateInstance(eventEmitterMixin())).not.toThrow();
+        });
     });
 });
 

@@ -19,13 +19,15 @@
 import { Doublemap } from '../models/Doublemap.js';
 import { mixin } from '../helpers';
 
+export default eventEmitterMixin;
+
 /**
  * Takes any object and mixes in the `EventEmitter` API.
  * @param {object} [target] - The object to augment with the `EventEmitter` API. If none is supplied, an empty object is created.
  * @param  {...object} mixins - A list of additional mixins to add to the target.
  * @returns {EventEmitter} - Returns the supplied object, augmented with the `EventEmitter` API.
  */
-export default function eventEmitterMixin(target, ...mixins) {
+function eventEmitterMixin(target, ...mixins) {
     const events = new Doublemap();
     target = target || {};
 
@@ -217,3 +219,78 @@ export default function eventEmitterMixin(target, ...mixins) {
 
     return mixin(target, EventEmitter, ...mixins);
 }
+
+/**
+ * A list of functions an object must implement to be an event emitter.
+ */
+const emitterAPI = ['emit'];
+
+/**
+ * A list of functions an object must implement to allow events listening.
+ */
+const listenerAPI = ['on', 'once', 'off', 'listens', 'delegate'];
+
+/**
+ * A list of functions an object must implement to be a fully featured event emitter.
+ */
+const fullAPI = [...emitterAPI, ...listenerAPI];
+
+/**
+ * Checks if an object implements the functions required to emit events.
+ * @param {*} eventEmitter - The object to check.
+ * @returns {boolean} - Return `true` if the object can emit events.
+ */
+eventEmitterMixin.canEmit = eventEmitter =>
+    'object' === typeof eventEmitter && emitterAPI.every(api => 'function' === typeof eventEmitter[api]);
+
+/**
+ * Checks if an object implements the functions required to listen to events.
+ * @param {*} eventEmitter - The object to check.
+ * @returns {boolean} - Return `true` if the object offers to listen to events.
+ */
+eventEmitterMixin.canListen = eventEmitter =>
+    'object' === typeof eventEmitter && listenerAPI.every(api => 'function' === typeof eventEmitter[api]);
+
+/**
+ * Checks if an object implements the functions required to be a fully featured event emitter.
+ * @param {*} eventEmitter - The object to check.
+ * @returns {boolean} - Return `true` if the object is a fully featured event emitter.
+ */
+eventEmitterMixin.isEventEmitter = eventEmitter =>
+    'object' === typeof eventEmitter && fullAPI.every(api => 'function' === typeof eventEmitter[api]);
+
+/**
+ * Validates that a given object implement the API to emit events.
+ * Otherwise, an error is thrown.
+ * @param {*} eventEmitter - The object to check.
+ * @throws {TypeError} - If the given object does not implement the required API.
+ */
+eventEmitterMixin.validateEmitter = eventEmitter => {
+    if (!eventEmitterMixin.canEmit(eventEmitter)) {
+        throw new TypeError(`The object must implement the function: ${emitterAPI.join(', ')}`);
+    }
+};
+
+/**
+ * Validates that a given object implement the API to listen to events.
+ * Otherwise, an error is thrown.
+ * @param {*} eventEmitter - The object to check.
+ * @throws {TypeError} - If the given object does not implement the required API.
+ */
+eventEmitterMixin.validateListener = eventEmitter => {
+    if (!eventEmitterMixin.canListen(eventEmitter)) {
+        throw new TypeError(`The object must implement the functions: ${listenerAPI.join(', ')}`);
+    }
+};
+
+/**
+ * Validates that a given object implement the EventEmitter API.
+ * Otherwise, an error is thrown.
+ * @param {*} eventEmitter - The object to check.
+ * @throws {TypeError} - If the given object does not implement the required API.
+ */
+eventEmitterMixin.validateInstance = eventEmitter => {
+    if (!eventEmitterMixin.isEventEmitter(eventEmitter)) {
+        throw new TypeError(`The object must implement the functions: ${fullAPI.join(', ')}`);
+    }
+};
