@@ -23,7 +23,7 @@ const source = [
     ['c2', 1],
     ['c3', -1]
 ];
-const keys = ['c1', 'c2', 'c3'];
+const keys = source.map(entry => entry[0]);
 
 describe('Counter', () => {
     it('is a class', () => {
@@ -37,7 +37,7 @@ describe('Counter', () => {
 
     it('has a size', () => {
         expect(new Counter().size).toBe(0);
-        expect(new Counter(source).size).toBe(3);
+        expect(new Counter(source).size).toBe(source.length);
     });
 
     it('implements the iteration protocol', () => {
@@ -108,87 +108,149 @@ describe('Counter', () => {
     it('can tell if a counter exists', () => {
         const counters = new Counter(source);
 
-        expect(counters.has('c1')).toBeTruthy();
-        expect(counters.has('c2')).toBeTruthy();
-        expect(counters.has('c3')).toBeTruthy();
-        expect(counters.has('c4')).toBeFalsy();
+        expect(counters.has(keys[0])).toBeTruthy();
+        expect(counters.has(keys[1])).toBeTruthy();
+        expect(counters.has(keys[2])).toBeTruthy();
+        expect(counters.has('key')).toBeFalsy();
     });
 
     it('can get the value of a counter', () => {
         const counters = new Counter(source);
 
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.get('c2')).toBe(1);
-        expect(counters.get('c3')).toBe(-1);
-        expect(counters.get('c4')).toBe(0);
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.get(keys[1])).toBe(1);
+        expect(counters.get(keys[2])).toBe(-1);
+        expect(counters.get('key')).toBe(0);
     });
 
     it('can set the value of a counter', () => {
         const counters = new Counter(source);
 
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.set('c1', 10)).toBe(counters);
-        expect(counters.get('c1')).toBe(10);
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.set(keys[0], 10)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(10);
 
-        expect(counters.get('c4')).toBe(0);
-        expect(counters.set('c4', 1)).toBe(counters);
-        expect(counters.get('c4')).toBe(1);
+        expect(counters.get('key')).toBe(0);
+        expect(counters.set('key', 1)).toBe(counters);
+        expect(counters.get('key')).toBe(1);
     });
 
     it('can only set whole numbers', () => {
         const counters = new Counter(source);
 
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.set('c1', 1.2)).toBe(counters);
-        expect(counters.get('c1')).toBe(1);
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.set(keys[0], 1.2)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(1);
 
-        expect(counters.set('c1', 2.9)).toBe(counters);
-        expect(counters.get('c1')).toBe(2);
+        expect(counters.set(keys[0], 2.9)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(2);
 
-        expect(counters.set('c1', 'c')).toBe(counters);
-        expect(counters.get('c1')).toBe(0);
+        expect(counters.set(keys[0], 'c')).toBe(counters);
+        expect(counters.get(keys[0])).toBe(0);
+    });
+
+    it('emits an event when setting a counter', () => {
+        const counters = new Counter(source);
+
+        const callback = jest.fn().mockImplementation((key, value, previous) => {
+            expect([key, value, previous]).toMatchSnapshot();
+        });
+
+        counters.on('set', callback);
+
+        counters.set(keys[0], 3);
+        counters.set(keys[1], 4);
+        counters.set(keys[2], 5);
+        expect(callback).toHaveBeenCalledTimes(3);
     });
 
     it('can delete a counter', () => {
         const counters = new Counter(source);
 
-        expect(counters.has('c1')).toBeTruthy();
-        expect(counters.delete('c1')).toBeTruthy();
-        expect(counters.has('c1')).toBeFalsy();
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.delete('c1')).toBeFalsy();
+        expect(counters.has(keys[0])).toBeTruthy();
+        expect(counters.delete(keys[0])).toBeTruthy();
+        expect(counters.has(keys[0])).toBeFalsy();
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.delete(keys[0])).toBeFalsy();
+    });
+
+    it('emits an event when removing a counter', () => {
+        const counters = new Counter(source);
+
+        const callback = jest.fn().mockImplementation((key, value) => {
+            expect(key).toBe(keys[1]);
+            expect(value).toBe(1);
+        });
+
+        counters.on('delete', callback);
+
+        counters.delete(keys[1]);
+        counters.delete(keys[1]);
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can increment a counter', () => {
         const counters = new Counter();
 
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.increment('c1')).toBe(counters);
-        expect(counters.get('c1')).toBe(1);
-        expect(counters.increment('c1', 2)).toBe(counters);
-        expect(counters.get('c1')).toBe(3);
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.increment(keys[0])).toBe(counters);
+        expect(counters.get(keys[0])).toBe(1);
+        expect(counters.increment(keys[0], 2)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(3);
 
-        expect(counters.increment('c1', 2.5)).toBe(counters);
-        expect(counters.get('c1')).toBe(5);
+        expect(counters.increment(keys[0], 2.5)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(5);
 
-        expect(counters.increment('c1', 0)).toBe(counters);
-        expect(counters.get('c1')).toBe(6);
+        expect(counters.increment(keys[0], 0)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(6);
+    });
+
+    it('emits an event when incrementing a counter', () => {
+        const counters = new Counter(source);
+
+        const callback = jest.fn().mockImplementation((key, value, previous) => {
+            expect(key).toBe(keys[1]);
+            expect(value).toBe(2);
+            expect(previous).toBe(1);
+        });
+
+        counters.on('set', callback);
+
+        counters.increment(keys[1]);
+
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can decrement a counter', () => {
         const counters = new Counter();
 
-        expect(counters.get('c1')).toBe(0);
-        expect(counters.decrement('c1')).toBe(counters);
-        expect(counters.get('c1')).toBe(-1);
-        expect(counters.decrement('c1', 2)).toBe(counters);
-        expect(counters.get('c1')).toBe(-3);
+        expect(counters.get(keys[0])).toBe(0);
+        expect(counters.decrement(keys[0])).toBe(counters);
+        expect(counters.get(keys[0])).toBe(-1);
+        expect(counters.decrement(keys[0], 2)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(-3);
 
-        expect(counters.decrement('c1', 2.5)).toBe(counters);
-        expect(counters.get('c1')).toBe(-5);
+        expect(counters.decrement(keys[0], 2.5)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(-5);
 
-        expect(counters.decrement('c1', 0)).toBe(counters);
-        expect(counters.get('c1')).toBe(-6);
+        expect(counters.decrement(keys[0], 0)).toBe(counters);
+        expect(counters.get(keys[0])).toBe(-6);
+    });
+
+    it('emits an event when decrementing a counter', () => {
+        const counters = new Counter(source);
+
+        const callback = jest.fn().mockImplementation((key, value, previous) => {
+            expect(key).toBe(keys[1]);
+            expect(value).toBe(0);
+            expect(previous).toBe(1);
+        });
+
+        counters.on('set', callback);
+
+        counters.decrement(keys[1]);
+
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can removes all counters', () => {
@@ -197,6 +259,17 @@ describe('Counter', () => {
         expect([...counters]).toStrictEqual(source);
         expect(counters.clear()).toBe(counters);
         expect([...counters]).toStrictEqual([]);
+    });
+
+    it('emits an event when removing all counters', () => {
+        const counters = new Counter(source);
+
+        const callback = jest.fn();
+
+        counters.on('clear', callback);
+
+        counters.clear();
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can export counters', () => {
@@ -216,15 +289,15 @@ describe('Counter', () => {
         const unsubscribe = counters.subscribe(callback); // callback called
 
         counters.notify(); // callback called
-        counters.set('c1', 3); // callback called
-        counters.delete('c2'); // callback called
-        counters.delete('c2');
-        counters.increment('c2'); // callback called
-        counters.decrement('c2'); // callback called
+        counters.set(keys[0], 3); // callback called
+        counters.delete(keys[1]); // callback called
+        counters.delete(keys[1]);
+        counters.increment(keys[1]); // callback called
+        counters.decrement(keys[1]); // callback called
         counters.clear(); // callback called
 
         unsubscribe();
-        counters.increment('c1');
+        counters.increment(keys[0]);
 
         expect(callback).toHaveBeenCalledTimes(7);
     });

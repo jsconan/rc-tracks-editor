@@ -64,3 +64,27 @@ Map {
 `;
 
 exports[`Counter can notify changes 7`] = `Map {}`;
+
+exports[`Counter emits an event when setting a counter 1`] = `
+Array [
+  "c1",
+  3,
+  0,
+]
+`;
+
+exports[`Counter emits an event when setting a counter 2`] = `
+Array [
+  "c2",
+  4,
+  1,
+]
+`;
+
+exports[`Counter emits an event when setting a counter 3`] = `
+Array [
+  "c3",
+  5,
+  -1,
+]
+`;

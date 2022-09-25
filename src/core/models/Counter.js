@@ -18,6 +18,7 @@
 
 import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
+import { eventEmitterMixin } from '../mixins';
 
 /**
  * Represents a set of counters.
@@ -30,7 +31,9 @@ export class Counter extends Map {
      */
     constructor(source = []) {
         super();
+
         const { subscribe, set } = writable(this);
+        eventEmitterMixin(this);
 
         /**
          * Notifies all subscribers.
@@ -53,6 +56,7 @@ export class Counter extends Map {
         for (const [key, value] of source) {
             this.set(key, value);
         }
+        source = void 0;
     }
 
     /**
@@ -93,10 +97,7 @@ export class Counter extends Map {
      * @returns {number} - The current value of the counter. It returns 0 if the counter does not exist.
      */
     get(key) {
-        if (this.has(key)) {
-            return super.get(key);
-        }
-        return 0;
+        return super.get(key) || 0;
     }
 
     /**
@@ -104,9 +105,20 @@ export class Counter extends Map {
      * @param {string} key - The key of the counter to set.
      * @param {number} value  - The new value of the counter. It must be a whole number.
      * @returns {Counter} - Chains the counter.
+     * @fires set
      */
     set(key, value) {
+        const previous = super.get(key) || 0;
         super.set(key, Math.floor(value) || 0);
+
+        /**
+         * Notifies a value has been set to the list.
+         * @event set
+         * @param {string} key - The key of the counter that was set.
+         * @param {number} newValue - The new value.
+         * @param {number} oldValue - The previous value.
+         */
+        this.emit('set', key, value, previous);
 
         return this.notify();
     }
@@ -115,11 +127,21 @@ export class Counter extends Map {
      * Removes a counter.
      * @param {string} key - The key of the counter to delete.
      * @returns {boolean} - Returns `true` if a counter was deleted.
+     * @fires delete
      */
     delete(key) {
+        const value = super.get(key) || 0;
         const deleted = super.delete(key);
 
         if (deleted) {
+            /**
+             * Notifies a counter has been removed.
+             * @event delete
+             * @param {string} key - The key of the counter that was removed.
+             * @param {number} value - The last value of the removed counter.
+             */
+            this.emit('delete', key, value);
+
             this.notify();
         }
 
@@ -131,6 +153,7 @@ export class Counter extends Map {
      * @param {string} key - The key of the counter to increment.
      * @param {number} amount - The amount to add to the counter.
      * @returns {Counter} - Chains the counter.
+     * @fires set
      */
     increment(key, amount = 1) {
         const value = Math.floor(amount) || 1;
@@ -142,6 +165,7 @@ export class Counter extends Map {
      * @param {string} key - The key of the counter to decrement.
      * @param {number} amount - The amount to subtract from the counter.
      * @returns {Counter} - Chains the counter.
+     * @fires set
      */
     decrement(key, amount = 1) {
         const value = Math.floor(amount) || 1;
@@ -151,9 +175,16 @@ export class Counter extends Map {
     /**
      * Removes all counters.
      * @returns {Counter} - Chains the counter.
+     * @fires clear
      */
     clear() {
         super.clear();
+
+        /**
+         * Notifies all counter were removed.
+         * @event clear
+         */
+        this.emit('clear');
 
         return this.notify();
     }
