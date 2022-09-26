@@ -30,6 +30,7 @@ import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
 import { List } from '../../core/models';
 import { eventStore } from '../../core/stores';
+import { eventEmitterMixin } from '../../core/mixins';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -72,6 +73,8 @@ export class TileList {
     constructor(specs) {
         this.tiles = new List();
 
+        eventEmitterMixin(this);
+
         this.setSpecs(specs);
 
         // Produces a store linked to the list events and returning the TileList
@@ -88,8 +91,7 @@ export class TileList {
                 'specs',
                 'update'
             ],
-            this.tiles,
-            () => this
+            this
         );
 
         /**
@@ -99,6 +101,50 @@ export class TileList {
          * @returns {function} - Return a callback for removing the subscription.
          */
         this.subscribe = subscribe;
+
+        /**
+         * Notifies a tile has been set to the list.
+         * @event set
+         * @param {number} index - The index where the tile was set.
+         * @param {TileModel} newTile - The new tile.
+         * @param {TileModel} oldTile - The previous tile.
+         */
+        this.tiles.delegate('set', this);
+
+        /**
+         * Notifies a tile has been inserted into the list.
+         * @event insert
+         * @param {number} index - The index where the tile has been inserted.
+         * @param {TileModel} tile - The inserted tile.
+         */
+        this.tiles.delegate('insert', this);
+
+        /**
+         * Notifies a tile has been added to the list.
+         * @event insert
+         * @param {TileModel} tile - The added tile.
+         */
+        this.tiles.delegate('add', this);
+
+        /**
+         * Notifies a tile have been removed from the list.
+         * @event delete
+         * @param {number} index - The index from where the tile was removed.
+         * @param {TileModel} value - The removed tile.
+         */
+        this.tiles.delegate('delete', this);
+
+        /**
+         * Notifies the list was cleared.
+         * @event clear
+         */
+        this.tiles.delegate('clear', this);
+
+        /**
+         * Notifies the list was loaded.
+         * @event load
+         */
+        this.tiles.delegate('load', this);
     }
 
     /**
@@ -147,7 +193,7 @@ export class TileList {
              * @event specs
              * @param {TileSpecifications} specs - The specifications for the tiles.
              */
-            this.tiles.emit('specs', specs);
+            this.emit('specs', specs);
         }
 
         return this;
@@ -164,7 +210,7 @@ export class TileList {
          * Notifies a change in the tiles.
          * @event update
          */
-        this.tiles.emit('update');
+        this.emit('update');
 
         return this;
     }

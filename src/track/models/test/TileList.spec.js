@@ -87,6 +87,11 @@ describe('TileList', () => {
     it('can set the specifications of the tiles', () => {
         const list = new TileList(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
+        const callback = jest.fn().mockImplementation(s => {
+            expect(s).toBe(newSpecs);
+        });
+
+        list.on('specs', callback);
 
         list.append();
 
@@ -95,6 +100,7 @@ describe('TileList', () => {
         expect(list.setSpecs(newSpecs)).toBe(list);
         expect(list.specs).toBe(newSpecs);
         expect(list).toMatchSnapshot();
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can get the index of a tile in the track', () => {
@@ -160,6 +166,19 @@ describe('TileList', () => {
                     expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
                 });
+
+                it('emits an event when adding a tile', () => {
+                    const list = new TileList(specs);
+
+                    const callback = jest.fn().mockImplementation(tile => {
+                        expect(tile).toBeInstanceOf(TileModel);
+                    });
+
+                    list.on('add', callback);
+
+                    list.append();
+                    expect(callback).toHaveBeenCalledTimes(1);
+                });
             });
 
             describe('at the first position', () => {
@@ -181,6 +200,20 @@ describe('TileList', () => {
 
                     expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
+                });
+
+                it('emits an event when adding a tile', () => {
+                    const list = new TileList(specs);
+
+                    const callback = jest.fn().mockImplementation((index, tile) => {
+                        expect(index).toBe(0);
+                        expect(tile).toBeInstanceOf(TileModel);
+                    });
+
+                    list.on('insert', callback);
+
+                    list.prepend();
+                    expect(callback).toHaveBeenCalledTimes(1);
                 });
             });
         });
@@ -227,6 +260,21 @@ describe('TileList', () => {
                 expect(list.remove('id')).toBeFalsy();
                 expect(list).toMatchSnapshot();
             });
+
+            it('emits an event when removing a tile', () => {
+                const list = new TileList(specs);
+                const tile = list.append();
+
+                const callback = jest.fn().mockImplementation((index, removed) => {
+                    expect(index).toBe(0);
+                    expect(removed).toBe(tile);
+                });
+
+                list.on('delete', callback);
+
+                list.remove(tile.id);
+                expect(callback).toHaveBeenCalledTimes(1);
+            });
         });
 
         describe('replacing tiles', () => {
@@ -264,6 +312,23 @@ describe('TileList', () => {
                 list.append();
                 expect(list.replace('id')).toBeNull();
                 expect(list).toMatchSnapshot();
+            });
+
+            it('emits an event when replacing a tile', () => {
+                const list = new TileList(specs);
+                const tile = list.append();
+
+                const callback = jest.fn().mockImplementation((index, newTile, oldTile) => {
+                    expect(index).toBe(0);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(oldTile);
+                    expect(oldTile).toBe(tile);
+                });
+
+                list.on('set', callback);
+
+                list.replace(tile.id);
+                expect(callback).toHaveBeenCalledTimes(1);
             });
         });
 
@@ -329,6 +394,22 @@ describe('TileList', () => {
                     expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
+
+                it('emits an event when inserting a tile', () => {
+                    const list = new TileList(specs);
+                    const tile = list.append();
+
+                    const callback = jest.fn().mockImplementation((index, newTile) => {
+                        expect(index).toBe(0);
+                        expect(newTile).toBeInstanceOf(TileModel);
+                        expect(newTile).not.toBe(tile);
+                    });
+
+                    list.on('insert', callback);
+
+                    list.insertBefore(tile.id);
+                    expect(callback).toHaveBeenCalledTimes(1);
+                });
             });
 
             describe('after', () => {
@@ -392,6 +473,22 @@ describe('TileList', () => {
                     expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
+
+                it('emits an event when inserting a tile', () => {
+                    const list = new TileList(specs);
+                    const tile = list.append();
+
+                    const callback = jest.fn().mockImplementation((index, newTile) => {
+                        expect(index).toBe(1);
+                        expect(newTile).toBeInstanceOf(TileModel);
+                        expect(newTile).not.toBe(tile);
+                    });
+
+                    list.on('insert', callback);
+
+                    list.insertAfter(tile.id);
+                    expect(callback).toHaveBeenCalledTimes(1);
+                });
             });
         });
     });
@@ -419,6 +516,9 @@ describe('TileList', () => {
             }
         ];
 
+        const callback = jest.fn();
+        list.on('load', callback);
+
         list.append();
 
         expect(list.import({})).toBe(list);
@@ -426,15 +526,20 @@ describe('TileList', () => {
 
         expect(list.import(data)).toBe(list);
         expect(list).toMatchSnapshot();
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can clear the list', () => {
         const list = new TileList(specs);
+        const callback = jest.fn();
+
+        list.on('clear', callback);
 
         list.append(CURVED_TILE_TYPE);
 
         expect(list.clear()).toBe(list);
         expect(list).toMatchSnapshot();
+        expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can notify changes', () => {
