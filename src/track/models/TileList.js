@@ -76,7 +76,6 @@ export class TileList {
 
         // Produces a store linked to the list events and returning the TileList
         const { subscribe } = eventStore(
-            this.tiles,
             [
                 // List events
                 'set',
@@ -89,6 +88,7 @@ export class TileList {
                 'specs',
                 'update'
             ],
+            this.tiles,
             () => this
         );
 
