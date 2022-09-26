@@ -27,7 +27,7 @@ import {
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
 } from '../../helpers';
-import { wait } from '../../../core/helpers';
+import { tick } from 'svelte';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -105,9 +105,9 @@ describe('Tile', () => {
             }
         });
 
-        await wait(1);
+        await tick();
         rendered.component.$set({ props: Object.assign({}, props, update) });
-        await wait(0);
+        await tick();
         expect(rendered.container).toMatchSnapshot();
     });
 

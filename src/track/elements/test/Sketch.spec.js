@@ -17,7 +17,7 @@
  */
 
 import { fireEvent, render } from '@testing-library/svelte';
-import { wait } from '../../../core/helpers';
+import { tick } from 'svelte';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
 
@@ -95,13 +95,13 @@ describe('Sketch', () => {
         };
         const rendered = render(Sketch);
 
-        await wait(1);
+        await tick();
         rendered.component.$set(props);
-        await wait(0);
+        await tick();
         expect(rendered.container).toMatchSnapshot();
-        await wait(1);
+        await tick();
         rendered.component.$set(unset);
-        await wait(0);
+        await tick();
         expect(rendered.container).toMatchSnapshot();
     });
 

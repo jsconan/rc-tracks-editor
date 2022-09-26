@@ -17,7 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
-import { wait } from '../../../core/helpers';
+import { tick } from 'svelte';
 import CurvedElement from '../CurvedElement.svelte';
 
 describe('CurvedElement', () => {
@@ -65,9 +65,9 @@ describe('CurvedElement', () => {
         };
         const rendered = render(CurvedElement, { props });
 
-        await wait(1);
+        await tick();
         rendered.component.$set(update);
-        await wait(0);
+        await tick();
         expect(rendered.container).toMatchSnapshot();
     });
 });

@@ -23,8 +23,8 @@ import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../builders';
 import { TileCoordList, TileList } from '../../models';
 import { TileSpecifications } from '../../config';
-import { wait } from '../../../core/helpers';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
+import { tick } from 'svelte';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -90,9 +90,9 @@ describe('TrackRef', () => {
             }
         });
 
-        await wait(1);
+        await tick();
         tileList.appendTile();
-        await wait(1);
+        await tick();
         expect(rendered.container).toMatchSnapshot();
     });
 
