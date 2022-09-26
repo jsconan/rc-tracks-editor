@@ -17,7 +17,7 @@
  */
 
 import { Doublemap } from '../models/Doublemap.js';
-import { mixin } from '../helpers';
+import { mixin, pick } from '../helpers';
 
 export default eventEmitterMixin;
 
@@ -294,3 +294,30 @@ eventEmitterMixin.validateInstance = eventEmitter => {
         throw new TypeError(`The object must implement the functions: ${fullAPI.join(', ')}`);
     }
 };
+
+/**
+ * Delegates the emitter API from an event emitter to a target object.
+ * If the target is omitted, an empty object is created to receive the API.
+ * @param {EventEmitter} eventEmitter - The source event emitter to delegate.
+ * @param {*} [target] - A target that will receive the emitter API bound to the source event emitter.
+ * @returns {EventEmitter} - The target augmented with the emitter API.
+ */
+eventEmitterMixin.delegateEmitter = (eventEmitter, target = null) => pick(target || {}, emitterAPI, eventEmitter);
+
+/**
+ * Delegates the listener API from an event emitter to a target object.
+ * If the target is omitted, an empty object is created to receive the API.
+ * @param {EventEmitter} eventEmitter - The source event emitter to delegate.
+ * @param {*} [target] - A target that will receive the listener API bound to the source event emitter.
+ * @returns {EventEmitter} - The target augmented with the listener API.
+ */
+eventEmitterMixin.delegateListener = (eventEmitter, target = null) => pick(target || {}, listenerAPI, eventEmitter);
+
+/**
+ * Delegates the event emitter API from an event emitter to a target object.
+ * If the target is omitted, an empty object is created to receive the API.
+ * @param {EventEmitter} eventEmitter - The source event emitter to delegate.
+ * @param {*} [target] - A target that will receive the event emitter API bound to the source event emitter.
+ * @returns {EventEmitter} - The target augmented with the event emitter API.
+ */
+eventEmitterMixin.delegate = (eventEmitter, target) => pick(target || {}, fullAPI, eventEmitter);

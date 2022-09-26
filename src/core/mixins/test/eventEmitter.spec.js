@@ -109,6 +109,69 @@ describe('eventEmitterMixin', () => {
             expect(() => eventEmitterMixin.validateInstance(eventEmitterMixin())).not.toThrow();
         });
     });
+
+    it('can delegate the emitter API', () => {
+        const emitter = eventEmitterMixin();
+        const delegated = {};
+
+        expect(eventEmitterMixin.delegateEmitter(emitter)).not.toBe(eventEmitterMixin.delegateEmitter(emitter));
+        expect(eventEmitterMixin.delegateEmitter(emitter, delegated)).toBe(delegated);
+
+        expect(delegated.emit).toEqual(expect.any(Function));
+
+        const callback = jest.fn();
+        emitter.on('foo', callback);
+        delegated.emit('foo');
+
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
+    it('can delegate the listener API', () => {
+        const listener = eventEmitterMixin();
+        const delegated = {};
+
+        expect(eventEmitterMixin.delegateListener(listener)).not.toBe(eventEmitterMixin.delegateListener(listener));
+        expect(eventEmitterMixin.delegateListener(listener, delegated)).toBe(delegated);
+
+        expect(delegated.on).toEqual(expect.any(Function));
+        expect(delegated.once).toEqual(expect.any(Function));
+        expect(delegated.off).toEqual(expect.any(Function));
+        expect(delegated.listens).toEqual(expect.any(Function));
+        expect(delegated.delegate).toEqual(expect.any(Function));
+
+        const callback = jest.fn();
+        delegated.on('foo', callback);
+        listener.emit('foo');
+
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
+    it('can delegate the full API', () => {
+        const emitter = eventEmitterMixin();
+        const delegated = {};
+
+        expect(eventEmitterMixin.delegate(emitter)).not.toBe(eventEmitterMixin.delegate(emitter));
+        expect(eventEmitterMixin.delegate(emitter, delegated)).toBe(delegated);
+
+        expect(delegated.emit).toEqual(expect.any(Function));
+        expect(delegated.on).toEqual(expect.any(Function));
+        expect(delegated.once).toEqual(expect.any(Function));
+        expect(delegated.off).toEqual(expect.any(Function));
+        expect(delegated.listens).toEqual(expect.any(Function));
+        expect(delegated.delegate).toEqual(expect.any(Function));
+
+        const callbackEmitter = jest.fn();
+        emitter.on('foo', callbackEmitter);
+
+        const callbackDelegated = jest.fn();
+        delegated.on('foo', callbackDelegated);
+
+        emitter.emit('foo');
+        delegated.emit('foo');
+
+        expect(callbackEmitter).toHaveBeenCalledTimes(2);
+        expect(callbackDelegated).toHaveBeenCalledTimes(2);
+    });
 });
 
 describe('EventEmitter', () => {
