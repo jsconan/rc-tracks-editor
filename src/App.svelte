@@ -67,7 +67,7 @@
                     list={menuCoords}
                     on:click={event => {
                         click(event);
-                        track.appendTile(event.detail.type, event.detail.direction, event.detail.ratio);
+                        track.append(event.detail.type, event.detail.direction, event.detail.ratio);
                     }}
                 />
             </Sketch>
@@ -84,7 +84,7 @@
                         list={trackCoords}
                         on:click={event => {
                             click(event);
-                            track.getTile(event.detail.id).flipDirection();
+                            track.get(event.detail.id).flipDirection();
                             track.update();
                         }}
                     />

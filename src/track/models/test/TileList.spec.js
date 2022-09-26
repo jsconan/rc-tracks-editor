@@ -20,6 +20,7 @@ import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../
 import { StraightTileModel } from '../StraightTileModel.js';
 import { TileSpecifications } from '../../config';
 import { TileList } from '../TileList.js';
+import { TileModel } from '../TileModel.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -34,13 +35,13 @@ describe('TileList', () => {
     it('has a length', () => {
         const list = new TileList(specs);
         expect(list.length).toBe(0);
-        list.appendTile();
+        list.append();
         expect(list.length).toBe(1);
     });
 
     it('implements the iteration protocol', () => {
         const list = new TileList(specs);
-        list.appendTile();
+        list.append();
 
         expect(list[Symbol.iterator]).toEqual(expect.any(Function));
         expect(list[Symbol.iterator]()).not.toBe(list[Symbol.iterator]());
@@ -49,7 +50,7 @@ describe('TileList', () => {
 
     it('can produce an iterator', () => {
         const list = new TileList(specs);
-        list.appendTile();
+        list.append();
 
         expect(list.values).toEqual(expect.any(Function));
         expect(list.values()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -74,12 +75,12 @@ describe('TileList', () => {
 
         it('when trying to add a tile with an invalid type', () => {
             const track = new TileList(specs);
-            expect(() => track.appendTile('')).toThrow('A valid type of tile is needed!');
+            expect(() => track.append('')).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
             const track = new TileList(specs);
-            expect(() => track.appendTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => track.append(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
         });
     });
 
@@ -87,7 +88,7 @@ describe('TileList', () => {
         const list = new TileList(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
 
-        list.appendTile();
+        list.append();
 
         expect(list.specs).toBeInstanceOf(TileSpecifications);
         expect(list.specs).not.toBe(newSpecs);
@@ -99,37 +100,37 @@ describe('TileList', () => {
     it('can get the index of a tile in the track', () => {
         const list = new TileList(specs);
 
-        list.appendTile();
-        const id = list.appendTile();
-        list.appendTile();
+        list.append();
+        const tile = list.append();
+        list.append();
 
-        expect(list.getTileIndex(id)).toBe(1);
-        expect(list.getTileIndex('id')).toBe(-1);
+        expect(list.getIndex(tile.id)).toBe(1);
+        expect(list.getIndex('id')).toBe(-1);
     });
 
     describe('can get a tile from the track', () => {
         it('by its identifier', () => {
             const list = new TileList(specs);
 
-            list.appendTile();
-            const id = list.appendTile();
-            list.appendTile();
+            list.append();
+            const tile = list.append();
+            list.append();
 
-            expect(list.getTile(id)).toBe(list.tiles.get(1));
-            expect(list.getTile(id)).toBeInstanceOf(StraightTileModel);
-            expect(list.getTile('id')).toBeNull();
+            expect(list.get(tile.id)).toBe(list.tiles.get(1));
+            expect(list.get(tile.id)).toBeInstanceOf(StraightTileModel);
+            expect(list.get('id')).toBeNull();
         });
 
         it('by its index', () => {
             const list = new TileList(specs);
 
-            list.appendTile();
-            list.appendTile();
-            list.appendTile();
+            list.append();
+            list.append();
+            list.append();
 
-            expect(list.getTileAt(1)).toBe(list.tiles.get(1));
-            expect(list.getTileAt(1)).toBeInstanceOf(StraightTileModel);
-            expect(list.getTileAt(3)).toBeNull();
+            expect(list.getAt(1)).toBe(list.tiles.get(1));
+            expect(list.getAt(1)).toBeInstanceOf(StraightTileModel);
+            expect(list.getAt(3)).toBeNull();
         });
     });
 
@@ -137,7 +138,6 @@ describe('TileList', () => {
         it('with the given size', () => {
             const list = new TileList(specs);
 
-            expect(list).toBeInstanceOf(TileList);
             expect(list).toMatchSnapshot();
         });
 
@@ -146,18 +146,18 @@ describe('TileList', () => {
                 it('with the default specifications', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile();
+                    const tile = list.append();
 
-                    expect(id).toEqual(expect.any(String));
+                    expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const tile = list.append(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
-                    expect(id).toEqual(expect.any(String));
+                    expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
                 });
             });
@@ -166,20 +166,20 @@ describe('TileList', () => {
                 it('with the default specifications', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.prependTile();
+                    list.append();
+                    const tile = list.prepend();
 
-                    expect(id).toEqual(expect.any(String));
+                    expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    list.append();
+                    const tile = list.prepend(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
-                    expect(id).toEqual(expect.any(String));
+                    expect(tile).toBeInstanceOf(TileModel);
                     expect(list).toMatchSnapshot();
                 });
             });
@@ -189,42 +189,42 @@ describe('TileList', () => {
             it('from the start', () => {
                 const list = new TileList(specs);
 
-                const id = list.appendTile();
-                list.appendTile();
-                list.appendTile();
+                const tile = list.append();
+                list.append();
+                list.append();
 
-                expect(list.removeTile(id)).toBeTruthy();
+                expect(list.remove(tile.id)).toBeTruthy();
                 expect(list).toMatchSnapshot();
             });
 
             it('from the middle', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
-                const id = list.appendTile();
-                list.appendTile();
+                list.append();
+                const tile = list.append();
+                list.append();
 
-                expect(list.removeTile(id)).toBeTruthy();
+                expect(list.remove(tile.id)).toBeTruthy();
                 expect(list).toMatchSnapshot();
             });
 
             it('from the end', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
-                list.appendTile();
-                const id = list.appendTile();
+                list.append();
+                list.append();
+                const tile = list.append();
 
-                expect(list.removeTile(id)).toBeTruthy();
+                expect(list.remove(tile.id)).toBeTruthy();
                 expect(list).toMatchSnapshot();
             });
 
             it('at inexistent position', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
+                list.append();
 
-                expect(list.removeTile('id')).toBeFalsy();
+                expect(list.remove('id')).toBeFalsy();
                 expect(list).toMatchSnapshot();
             });
         });
@@ -233,34 +233,36 @@ describe('TileList', () => {
             it('with a tile having default specifications', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
-                const id = list.appendTile();
-                list.appendTile();
-                const newId = list.replaceTile(id);
+                list.append();
+                const tile = list.append();
+                list.append();
+                const newTile = list.replace(tile.id);
 
-                expect(newId).toEqual(expect.any(String));
-                expect(newId).not.toBe(id);
+                expect(newTile).toBeInstanceOf(TileModel);
+                expect(newTile).not.toBe(tile);
+                expect(newTile.id).not.toBe(tile.id);
                 expect(list).toMatchSnapshot();
             });
 
             it('with a tile having a particular type', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
-                list.appendTile();
-                const id = list.appendTile();
-                const newId = list.replaceTile(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                list.append();
+                list.append();
+                const tile = list.append();
+                const newTile = list.replace(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
-                expect(newId).toEqual(expect.any(String));
-                expect(newId).not.toBe(id);
+                expect(newTile).toBeInstanceOf(TileModel);
+                expect(newTile).not.toBe(tile);
+                expect(newTile.id).not.toBe(tile.id);
                 expect(list).toMatchSnapshot();
             });
 
             it('at inexistent position', () => {
                 const list = new TileList(specs);
 
-                list.appendTile();
-                expect(list.replaceTile('id')).toBeNull();
+                list.append();
+                expect(list.replace('id')).toBeNull();
                 expect(list).toMatchSnapshot();
             });
         });
@@ -270,57 +272,61 @@ describe('TileList', () => {
                 it('an inexistent position', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
+                    list.append();
 
-                    expect(list.insertTileBefore('id')).toBeNull();
+                    expect(list.insertBefore('id')).toBeNull();
                     expect(list).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile();
-                    list.appendTile();
-                    const newId = list.insertTileBefore(id);
+                    const tile = list.append();
+                    list.append();
+                    const newTile = list.insertBefore(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('the last position', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.appendTile();
-                    const newId = list.insertTileBefore(id);
+                    list.append();
+                    const tile = list.append();
+                    const newTile = list.insertBefore(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('a position in the middle', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.appendTile();
-                    list.appendTile();
-                    const newId = list.insertTileBefore(id);
+                    list.append();
+                    const tile = list.append();
+                    list.append();
+                    const newTile = list.insertBefore(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile();
-                    const newId = list.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const tile = list.append();
+                    const newTile = list.insertBefore(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
             });
@@ -329,57 +335,61 @@ describe('TileList', () => {
                 it('an inexistent position', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
+                    list.append();
 
-                    expect(list.insertTileAfter('id')).toBeNull();
+                    expect(list.insertAfter('id')).toBeNull();
                     expect(list).toMatchSnapshot();
                 });
 
                 it('the first position', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile();
-                    list.appendTile();
-                    const newId = list.insertTileAfter(id);
+                    const tile = list.append();
+                    list.append();
+                    const newTile = list.insertAfter(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('the last position', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.appendTile();
-                    const newId = list.insertTileAfter(id);
+                    list.append();
+                    const tile = list.append();
+                    const newTile = list.insertAfter(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('a position in the middle', () => {
                     const list = new TileList(specs);
 
-                    list.appendTile();
-                    const id = list.appendTile();
-                    list.appendTile();
-                    const newId = list.insertTileAfter(id);
+                    list.append();
+                    const tile = list.append();
+                    list.append();
+                    const newTile = list.insertAfter(tile.id);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
 
                 it('with a particular type', () => {
                     const list = new TileList(specs);
 
-                    const id = list.appendTile();
-                    const newId = list.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                    const tile = list.append();
+                    const newTile = list.insertAfter(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
-                    expect(newId).toEqual(expect.any(String));
-                    expect(newId).not.toBe(id);
+                    expect(newTile).toBeInstanceOf(TileModel);
+                    expect(newTile).not.toBe(tile);
+                    expect(newTile.id).not.toBe(tile.id);
                     expect(list).toMatchSnapshot();
                 });
             });
@@ -388,7 +398,7 @@ describe('TileList', () => {
 
     it('can export to an object', () => {
         const list = new TileList(specs);
-        list.appendTile(CURVED_TILE_TYPE);
+        list.append(CURVED_TILE_TYPE);
 
         expect(list.export()).toMatchSnapshot();
     });
@@ -409,7 +419,7 @@ describe('TileList', () => {
             }
         ];
 
-        list.appendTile();
+        list.append();
 
         expect(list.import({})).toBe(list);
         expect(list).toMatchSnapshot();
@@ -421,7 +431,7 @@ describe('TileList', () => {
     it('can clear the list', () => {
         const list = new TileList(specs);
 
-        list.appendTile(CURVED_TILE_TYPE);
+        list.append(CURVED_TILE_TYPE);
 
         expect(list.clear()).toBe(list);
         expect(list).toMatchSnapshot();
@@ -438,12 +448,12 @@ describe('TileList', () => {
         const unsubscribe = list.subscribe(callback); // callback called
 
         list.setSpecs(specs);
-        const id1 = list.appendTile(CURVED_TILE_TYPE); // callback called
-        const id2 = list.prependTile(CURVED_TILE_TYPE); // callback called
-        list.removeTile(id1); // callback called
-        const id3 = list.replaceTile(id2); // callback called
-        list.insertTileBefore(id3); // callback called
-        list.insertTileAfter(id3); // callback called
+        const tile1 = list.append(CURVED_TILE_TYPE); // callback called
+        const tile2 = list.prepend(CURVED_TILE_TYPE); // callback called
+        list.remove(tile1.id); // callback called
+        const tile3 = list.replace(tile2.id); // callback called
+        list.insertBefore(tile3.id); // callback called
+        list.insertAfter(tile3.id); // callback called
         const data = list.export();
         list.clear(); // callback called
         list.import(data); // callback called
@@ -451,7 +461,7 @@ describe('TileList', () => {
         list.update(); // callback called
 
         unsubscribe();
-        list.appendTile();
+        list.append();
 
         expect(callback).toHaveBeenCalledTimes(11);
     });

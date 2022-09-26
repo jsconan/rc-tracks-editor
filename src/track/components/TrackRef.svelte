@@ -24,7 +24,7 @@
      * @private
      */
     function click(event) {
-        const index = list.getTileIndex(event.target.dataset.id);
+        const index = list.getIndex(event.target.dataset.id);
         if (index > -1) {
             const { id, type, direction, ratio, x, y, angle } = track.tiles[index];
             dispatch('click', { id, type, direction, ratio, x, y, angle });

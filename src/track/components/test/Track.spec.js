@@ -100,7 +100,7 @@ describe('Track', () => {
         });
 
         await tick();
-        tileList.appendTile();
+        tileList.append();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });

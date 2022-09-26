@@ -174,7 +174,7 @@ export class TileList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
-    getTileIndex(id) {
+    getIndex(id) {
         return this.tiles.find(tile => tile.id === id);
     }
 
@@ -183,8 +183,8 @@ export class TileList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    getTile(id) {
-        return this.getTileAt(this.getTileIndex(id));
+    get(id) {
+        return this.getAt(this.getIndex(id));
     }
 
     /**
@@ -192,7 +192,7 @@ export class TileList {
      * @param {number} index - The position of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    getTileAt(index) {
+    getAt(index) {
         return this.tiles.get(index) || null;
     }
 
@@ -201,17 +201,17 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      * @fires add
      */
-    appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = createModel(this.specs, type, direction, ratio);
 
         this.tiles.add(tile);
 
-        return tile.id;
+        return tile;
     }
 
     /**
@@ -219,17 +219,17 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      * @fires insert
      */
-    prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+    prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = createModel(this.specs, type, direction, ratio);
 
         this.tiles.insert(0, tile);
 
-        return tile.id;
+        return tile;
     }
 
     /**
@@ -238,8 +238,8 @@ export class TileList {
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
      * @fires delete
      */
-    removeTile(id) {
-        const index = this.getTileIndex(id);
+    remove(id) {
+        const index = this.getIndex(id);
 
         if (index < 0) {
             return false;
@@ -255,20 +255,20 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      * @fires set
      */
-    replaceTile(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    replace(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
             this.tiles.set(index, tile);
 
-            return tile.id;
+            return tile;
         }
 
         return null;
@@ -281,20 +281,20 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      * @fires insert
      */
-    insertTileBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
             this.tiles.insert(index, tile);
 
-            return tile.id;
+            return tile;
         }
 
         return null;
@@ -307,20 +307,20 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
      * @fires insert
      */
-    insertTileAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
             const tile = createModel(this.specs, type, direction, ratio);
 
             this.tiles.insert(index + 1, tile);
 
-            return tile.id;
+            return tile;
         }
 
         return null;

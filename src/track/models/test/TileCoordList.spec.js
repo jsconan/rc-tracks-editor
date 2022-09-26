@@ -41,7 +41,7 @@ describe('TileCoordList', () => {
 
         expect(listCoord.length).toBe(0);
 
-        list.appendTile();
+        list.append();
 
         expect(listCoord.length).toBe(1);
     });
@@ -49,7 +49,7 @@ describe('TileCoordList', () => {
     it('implements the iteration protocol', () => {
         const list = new TileList(specs);
         const listCoord = new TileCoordList(list, mockBuilder);
-        list.appendTile();
+        list.append();
 
         expect(listCoord[Symbol.iterator]).toEqual(expect.any(Function));
         expect(listCoord[Symbol.iterator]()).not.toBe(listCoord[Symbol.iterator]());
@@ -59,7 +59,7 @@ describe('TileCoordList', () => {
     it('can produce an iterator', () => {
         const list = new TileList(specs);
         const listCoord = new TileCoordList(list, mockBuilder);
-        list.appendTile();
+        list.append();
 
         expect(listCoord.values).toEqual(expect.any(Function));
         expect(listCoord.values()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -151,33 +151,33 @@ describe('TileCoordList', () => {
         const list = new TileList(specs);
         const listCoord = new TileCoordList(list, mockBuilder);
 
-        list.appendTile();
-        const id = list.appendTile();
-        list.appendTile();
+        list.append();
+        const tile = list.append();
+        list.append();
 
         it('getting the identifier of a tile at a particular index', () => {
-            expect(listCoord.getTileIndex(id)).toBe(1);
-            expect(listCoord.getTileIndex('foo')).toBe(-1);
+            expect(listCoord.getIndex(tile.id)).toBe(1);
+            expect(listCoord.getIndex('foo')).toBe(-1);
         });
 
         it('getting the coordinate of a tile from its identifier', () => {
-            expect(listCoord.getTile(id)).toBe(`coord-${id}`);
-            expect(listCoord.getTile('foo')).toBeNull();
+            expect(listCoord.get(tile.id)).toBe(`coord-${tile.id}`);
+            expect(listCoord.get('foo')).toBeNull();
         });
 
         it('getting the coordinate of a tile at a particular index', () => {
-            expect(listCoord.getTileAt(1)).toBe(`coord-${id}`);
-            expect(listCoord.getTileAt(3)).toBeNull();
+            expect(listCoord.getAt(1)).toBe(`coord-${tile.id}`);
+            expect(listCoord.getAt(3)).toBeNull();
 
             const emptyBridge = new TileCoordList(new TileList(specs), () => {});
-            expect(emptyBridge.getTileAt(0)).toBeNull();
+            expect(emptyBridge.getAt(0)).toBeNull();
         });
     });
 
     describe('can build coordinates', () => {
         it('with the given builder options', () => {
             const theList = new TileList(specs);
-            theList.appendTile();
+            theList.append();
 
             const builder = (list, options) => {
                 expect(list).toBe(theList);
@@ -199,10 +199,10 @@ describe('TileCoordList', () => {
 
         it('when the list of tiles is changed', () => {
             const oldList = new TileList(specs);
-            oldList.appendTile();
+            oldList.append();
 
             const newList = new TileList(specs);
-            newList.appendTile();
+            newList.append();
 
             const listCoord = new TileCoordList(oldList, mockBuilder);
 
@@ -212,8 +212,8 @@ describe('TileCoordList', () => {
             const unsubscribe = listCoord.subscribe(callback);
 
             expect(listCoord.setList(newList)).toBe(listCoord);
-            oldList.appendTile();
-            newList.appendTile();
+            oldList.append();
+            newList.append();
 
             expect(callback).toHaveBeenCalledTimes(3);
 
@@ -222,7 +222,7 @@ describe('TileCoordList', () => {
 
         it('when the builder function is changed', () => {
             const list = new TileList(specs);
-            list.appendTile();
+            list.append();
 
             const listCoord = new TileCoordList(list, mockBuilder);
 
@@ -248,7 +248,7 @@ describe('TileCoordList', () => {
             });
             const unsubscribe = listCoord.subscribe(callback);
 
-            theList.appendTile();
+            theList.append();
 
             expect(callback).toHaveBeenCalledTimes(2);
             unsubscribe();
@@ -256,7 +256,7 @@ describe('TileCoordList', () => {
 
         it('each time an option is changed', () => {
             const theList = new TileList(specs);
-            theList.appendTile();
+            theList.append();
 
             const listCoord = new TileCoordList(theList, mockBuilder);
 
@@ -274,7 +274,7 @@ describe('TileCoordList', () => {
 
         it('each time the build function is called', () => {
             const theList = new TileList(specs);
-            theList.appendTile();
+            theList.append();
 
             const listCoord = new TileCoordList(theList, mockBuilder);
 
