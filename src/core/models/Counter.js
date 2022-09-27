@@ -180,4 +180,16 @@ export class Counter extends Map {
 
         return counters;
     }
+
+    /**
+     * Validates that the given object is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} object - The instance to validate.
+     * @throws {TypeError} - If the given object is not a valid instance.
+     */
+    static validateInstance(object) {
+        if (!(object instanceof this)) {
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
+        }
+    }
 }

@@ -277,4 +277,10 @@ describe('Counter', () => {
 
         expect(counters.toObject()).toMatchSnapshot();
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const counters = new Counter();
+        expect(() => Counter.validateInstance(counters)).not.toThrow();
+        expect(() => Counter.validateInstance({})).toThrow('The object must be an instance of Counter!');
+    });
 });

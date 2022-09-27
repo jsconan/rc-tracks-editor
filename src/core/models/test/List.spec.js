@@ -326,4 +326,10 @@ describe('List', () => {
         expect(list.toArray).toEqual(expect.any(Function));
         expect(list.toArray()).toEqual(source);
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const list = new List();
+        expect(() => List.validateInstance(list)).not.toThrow();
+        expect(() => List.validateInstance({})).toThrow('The object must be an instance of List!');
+    });
 });
