@@ -17,7 +17,7 @@
  */
 
 import { Doublemap } from '../models/Doublemap.js';
-import { mixin, pick } from '../helpers';
+import { hasAPI, mixin, pick, validateAPI } from '../helpers';
 
 export default eventEmitterMixin;
 
@@ -240,24 +240,21 @@ const fullAPI = [...emitterAPI, ...listenerAPI];
  * @param {*} eventEmitter - The object to check.
  * @returns {boolean} - Return `true` if the object can emit events.
  */
-eventEmitterMixin.canEmit = eventEmitter =>
-    'object' === typeof eventEmitter && emitterAPI.every(api => 'function' === typeof eventEmitter[api]);
+eventEmitterMixin.canEmit = eventEmitter => hasAPI(eventEmitter, emitterAPI);
 
 /**
  * Checks if an object implements the functions required to listen to events.
  * @param {*} eventEmitter - The object to check.
  * @returns {boolean} - Return `true` if the object offers to listen to events.
  */
-eventEmitterMixin.canListen = eventEmitter =>
-    'object' === typeof eventEmitter && listenerAPI.every(api => 'function' === typeof eventEmitter[api]);
+eventEmitterMixin.canListen = eventEmitter => hasAPI(eventEmitter, listenerAPI);
 
 /**
  * Checks if an object implements the functions required to be a fully featured event emitter.
  * @param {*} eventEmitter - The object to check.
  * @returns {boolean} - Return `true` if the object is a fully featured event emitter.
  */
-eventEmitterMixin.isEventEmitter = eventEmitter =>
-    'object' === typeof eventEmitter && fullAPI.every(api => 'function' === typeof eventEmitter[api]);
+eventEmitterMixin.isEventEmitter = eventEmitter => hasAPI(eventEmitter, fullAPI);
 
 /**
  * Validates that a given object implement the API to emit events.
@@ -265,11 +262,7 @@ eventEmitterMixin.isEventEmitter = eventEmitter =>
  * @param {*} eventEmitter - The object to check.
  * @throws {TypeError} - If the given object does not implement the required API.
  */
-eventEmitterMixin.validateEmitter = eventEmitter => {
-    if (!eventEmitterMixin.canEmit(eventEmitter)) {
-        throw new TypeError(`The object must implement the function: ${emitterAPI.join(', ')}`);
-    }
-};
+eventEmitterMixin.validateEmitter = eventEmitter => validateAPI(eventEmitter, emitterAPI);
 
 /**
  * Validates that a given object implement the API to listen to events.
@@ -277,11 +270,7 @@ eventEmitterMixin.validateEmitter = eventEmitter => {
  * @param {*} eventEmitter - The object to check.
  * @throws {TypeError} - If the given object does not implement the required API.
  */
-eventEmitterMixin.validateListener = eventEmitter => {
-    if (!eventEmitterMixin.canListen(eventEmitter)) {
-        throw new TypeError(`The object must implement the functions: ${listenerAPI.join(', ')}`);
-    }
-};
+eventEmitterMixin.validateListener = eventEmitter => validateAPI(eventEmitter, listenerAPI);
 
 /**
  * Validates that a given object implement the EventEmitter API.
@@ -289,11 +278,7 @@ eventEmitterMixin.validateListener = eventEmitter => {
  * @param {*} eventEmitter - The object to check.
  * @throws {TypeError} - If the given object does not implement the required API.
  */
-eventEmitterMixin.validateInstance = eventEmitter => {
-    if (!eventEmitterMixin.isEventEmitter(eventEmitter)) {
-        throw new TypeError(`The object must implement the functions: ${fullAPI.join(', ')}`);
-    }
-};
+eventEmitterMixin.validateInstance = eventEmitter => validateAPI(eventEmitter, fullAPI);
 
 /**
  * Delegates the emitter API from an event emitter to a target object.
