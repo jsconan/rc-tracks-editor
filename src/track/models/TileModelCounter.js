@@ -59,8 +59,8 @@ export class TileModelCounter extends Counter {
      * Removes a counter together with its related tile model.
      * @param {string} key - The key of the counter to delete.
      * @returns {boolean} - Returns `true` if a counter was deleted.
-     * @fires delete
      * @fires deletemodel
+     * @fires delete
      */
     delete(key) {
         const model = this.tileModels.get(key);
@@ -86,9 +86,12 @@ export class TileModelCounter extends Counter {
      * @returns {TileModelCounter} - Chains the counter.
      * @fires set
      * @fires addmodel
+     * @fires addtile
      */
     add(tile) {
         const { modelId } = tile;
+
+        this.increment(modelId, 1);
 
         if (!this.tileModels.has(modelId)) {
             const model = tile.clone().setDirection(TILE_DIRECTION_RIGHT);
@@ -103,7 +106,14 @@ export class TileModelCounter extends Counter {
             this.emit('addmodel', modelId, model);
         }
 
-        return this.increment(modelId, 1);
+        /**
+         * Notifies a tile has been added.
+         * @event addtile
+         * @param {TileModel} tile - The tile that was added.
+         */
+        this.emit('addtile', tile);
+
+        return this;
     }
 
     /**
@@ -112,17 +122,28 @@ export class TileModelCounter extends Counter {
      * @param {TileModel} tile - The tile to count.
      * @returns {TileModelCounter} - Chains the counter.
      * @fires set
-     * @fires delete
      * @fires deletemodel
+     * @fires delete
+     * @fires removetile
      */
     remove(tile) {
         const { modelId } = tile;
+        const count = this.get(modelId);
 
-        if (this.get(modelId) > 1) {
-            return this.decrement(modelId, 1);
+        if (count > 0) {
+            if (count > 1) {
+                this.decrement(modelId, 1);
+            } else {
+                this.delete(modelId);
+            }
+
+            /**
+             * Notifies a tile has been removed.
+             * @event removetile
+             * @param {TileModel} tile - The tile that was removed.
+             */
+            this.emit('removetile', tile);
         }
-
-        this.delete(modelId);
 
         return this;
     }

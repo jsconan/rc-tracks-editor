@@ -326,13 +326,17 @@ describe('TileModelCounter', () => {
         const counters = new TileModelCounter(source);
         const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
 
-        const callback = jest.fn().mockImplementation((key, model) => {
+        const modelCallback = jest.fn().mockImplementation((key, model) => {
             expect(key).toBe(tile.modelId);
             expect(model).toBeInstanceOf(CurvedTileModel);
             expect(model.modelId).toBe(tile.modelId);
         });
+        const tileCallback = jest.fn().mockImplementation(model => {
+            expect(model).toBe(tile);
+        });
 
-        counters.on('addmodel', callback);
+        counters.on('addmodel', modelCallback);
+        counters.on('addtile', tileCallback);
 
         expect(counters.get(tile.modelId)).toBe(0);
 
@@ -340,7 +344,8 @@ describe('TileModelCounter', () => {
         counters.add(tile);
 
         expect(counters.get(tile.modelId)).toBe(2);
-        expect(callback).toHaveBeenCalledTimes(1);
+        expect(modelCallback).toHaveBeenCalledTimes(1);
+        expect(tileCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can remove a tile from the counters', () => {
@@ -368,21 +373,27 @@ describe('TileModelCounter', () => {
         const counters = new TileModelCounter(source);
         const tile = new CurvedTileModel(specs);
 
-        const callback = jest.fn().mockImplementation((key, model) => {
+        const modelCallback = jest.fn().mockImplementation((key, model) => {
             expect(key).toBe(tile.modelId);
             expect(model).toBeInstanceOf(CurvedTileModel);
             expect(model.modelId).toBe(tile.modelId);
         });
+        const tileCallback = jest.fn().mockImplementation(model => {
+            expect(model).toBe(tile);
+        });
 
-        counters.on('deletemodel', callback);
+        counters.on('deletemodel', modelCallback);
+        counters.on('removetile', tileCallback);
 
         expect(counters.get(tile.modelId)).toBe(2);
 
         counters.remove(tile);
         counters.remove(tile);
+        counters.remove(tile);
 
         expect(counters.get(tile.modelId)).toBe(0);
-        expect(callback).toHaveBeenCalledTimes(1);
+        expect(modelCallback).toHaveBeenCalledTimes(1);
+        expect(tileCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can removes all counters', () => {
