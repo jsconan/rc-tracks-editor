@@ -18,7 +18,9 @@
 
 import { writable } from 'svelte/store';
 import { eventEmitterMixin } from '../mixins';
-import { validateCallback } from '../helpers';
+import { hasAPI, validateAPI, validateCallback } from '../helpers';
+
+export default eventStore;
 
 /**
  * Takes an event emitter and binds it with a store with respect to a list of events to listen to.
@@ -32,7 +34,7 @@ import { validateCallback } from '../helpers';
  * @throws {TypeError} - If the given object is not an event emitter.
  * @throws {TypeError} - If the list of events is missing or empty.
  */
-export default (events, boundTo = null, update = null) => {
+function eventStore(events, boundTo = null, update = null) {
     if (update) {
         validateCallback(update);
     }
@@ -67,7 +69,7 @@ export default (events, boundTo = null, update = null) => {
         /**
          * Captures an event emitter.
          * @param {EventEmitter} emitter - The event emitter to bind with the store.
-         * @function bind
+         * @returns {EventStore} - Chains the instance.
          * @throws {TypeError} - If the given object is not an event emitter.
          */
         bind(emitter) {
@@ -90,7 +92,7 @@ export default (events, boundTo = null, update = null) => {
 
         /**
          * Releases the event emitter.
-         * @function unbind
+         * @returns {EventStore} - Chains the instance.
          */
         unbind() {
             if (wrapper) {
@@ -109,7 +111,27 @@ export default (events, boundTo = null, update = null) => {
     }
 
     return EventStore;
-};
+}
+
+/**
+ * A list of functions an EventStore must implement.
+ */
+const eventStoreAPI = ['subscribe', 'bind', 'unbind'];
+
+/**
+ * Checks if an object implements the functions required to be an event store.
+ * @param {*} store - The object to check.
+ * @returns {boolean} - Return `true` if the object is a fully featured event store.
+ */
+eventStore.isEventStore = store => hasAPI(store, eventStoreAPI);
+
+/**
+ * Validates that a given object implement the EventStore API.
+ * Otherwise, an error is thrown.
+ * @param {*} store - The object to check.
+ * @throws {TypeError} - If the given object does not implement the required API.
+ */
+eventStore.validateInstance = store => validateAPI(store, eventStoreAPI);
 
 /**
  * A callback that will be called in order to set the store each time a listened event is emitted.

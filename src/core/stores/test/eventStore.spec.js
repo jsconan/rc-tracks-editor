@@ -47,6 +47,19 @@ describe('eventStore', () => {
         it('if the callback is not a function', () => {
             expect(() => eventStore(['set'], eventEmitterMixin(), true)).toThrow('A callback function is expected!');
         });
+
+        it('if the given object does not implement the EventStore API', () => {
+            expect(() => eventStore.validateInstance({})).toThrow(
+                'The object must implement the functions: subscribe, bind, unbind'
+            );
+            expect(() => eventStore.validateInstance(eventStore(['set']))).not.toThrow();
+        });
+    });
+
+    it('checks if an object is an event store', () => {
+        expect(eventStore.isEventStore(eventStore(['set']))).toBeTruthy();
+        expect(eventStore.isEventStore({})).toBeFalsy();
+        expect(eventStore.isEventStore(void 0)).toBeFalsy();
     });
 
     it('creates a store', () => {
@@ -158,7 +171,7 @@ describe('eventStore', () => {
         expect(callback).toHaveBeenCalledTimes(2);
     });
 
-    it('can releases the listeners', () => {
+    it('can release the listeners', () => {
         const eventEmitter = eventEmitterMixin();
         const store = eventStore(['set'], eventEmitter);
 
