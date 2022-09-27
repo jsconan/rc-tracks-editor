@@ -18,7 +18,7 @@
 
 import validateCallback from '../validateCallback.js';
 
-describe('defined', () => {
+describe('validateCallback', () => {
     it('is a function', () => {
         expect(validateCallback).toEqual(expect.any(Function));
     });
