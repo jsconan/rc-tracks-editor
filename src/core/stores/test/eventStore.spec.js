@@ -131,8 +131,6 @@ describe('eventStore', () => {
 
         const unsubscribe = store.subscribe(callback1);
 
-        expect(callback1).toHaveBeenCalledTimes(1);
-
         unsubscribe();
 
         expect(store.boundTo).toBe(eventEmitter1);
@@ -145,6 +143,7 @@ describe('eventStore', () => {
         eventEmitter2.emit('set');
         eventEmitter2.emit('add');
 
+        expect(callback1).toHaveBeenCalledTimes(1);
         expect(callback2).toHaveBeenCalledTimes(3);
     });
 

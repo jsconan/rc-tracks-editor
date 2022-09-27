@@ -108,8 +108,6 @@ describe('tileListStore', () => {
 
         const unsubscribe = store.subscribe(callback1);
 
-        expect(callback1).toHaveBeenCalledTimes(1);
-
         unsubscribe();
 
         expect(store.boundTo).toBe(list1);
@@ -121,6 +119,7 @@ describe('tileListStore', () => {
 
         list2.update();
 
+        expect(callback1).toHaveBeenCalledTimes(1);
         expect(callback2).toHaveBeenCalledTimes(2);
     });
 
