@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tileCounterStore can notify changes applied to the counter 1`] = `Map {}`;
+
+exports[`tileCounterStore can notify changes applied to the counter 2`] = `
+Map {
+  "straight-tile-1" => 1,
+}
+`;
+
+exports[`tileCounterStore can notify changes applied to the counter 3`] = `
+Map {
+  "straight-tile-1" => 1,
+}
+`;
+
+exports[`tileCounterStore can notify changes applied to the counter 4`] = `Map {}`;
+
+exports[`tileCounterStore can notify changes applied to the counter 5`] = `Map {}`;

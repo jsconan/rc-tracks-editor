@@ -16,4 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { default as tileCounterStore } from './tileCounterStore.js';
 export { default as tileListStore } from './tileListStore.js';
+export { default as tileModelStore } from './tileModelStore.js';
