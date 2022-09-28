@@ -48,7 +48,7 @@ function eventEmitterMixin(target, ...mixins) {
          * it, in the same order. Its lexical `this` is bound to the object on which the listener was attached. If the
          * event is emitted from another context, if won't have impact on it.
          * @param {string} name - The event to listen to.
-         * @param {Function} listener - The event listener that will be called when the event will be emitted.
+         * @param {function} listener - The event listener that will be called when the event will be emitted.
          * @returns {EventEmitter} - Chains the `EventEmitter` instance.
          */
         on(name, listener) {
@@ -70,7 +70,7 @@ function eventEmitterMixin(target, ...mixins) {
          * it, in the same order. Its lexical `this` is bound to the object on which the listener was attached. If the
          * event is emitted from another context, if won't have impact on it.
          * @param {string} name - The event to listen to.
-         * @param {Function} listener - The event listener that will be called when the event will be emitted.
+         * @param {function} listener - The event listener that will be called when the event will be emitted.
          * @returns {EventEmitter} - Chains the `EventEmitter` instance.
          */
         once(name, listener) {
@@ -117,7 +117,7 @@ function eventEmitterMixin(target, ...mixins) {
          * delegate.off('event', listener1);
          * ```
          * @param {string} name - The listened to event to unregister.
-         * @param {Function} listener - The event listener to remove.
+         * @param {function} listener - The event listener to remove.
          * @returns {EventEmitter} - Chains the `EventEmitter` instance.
          */
         off(name, listener) {
@@ -161,7 +161,7 @@ function eventEmitterMixin(target, ...mixins) {
          * Tells whether or not an event has listeners. If the listener is supplied, it will returns truthy
          * only if the listener is bound to the given event.
          * @param {string} name - The event to check.
-         * @param {Function} [listener] - An optional event listener to check.
+         * @param {function} [listener] - An optional event listener to check.
          * @returns {boolean} - Returns `true` if the event listener exists.
          */
         listens(name, listener) {
@@ -206,7 +206,7 @@ function eventEmitterMixin(target, ...mixins) {
          * @param {string} name - The event to delegate.
          * @param {EventEmitter} delegate - Another `EventEmitter` that will receive the event.
          * @param  {...any} params - A list of additional parameters to send to the listeners. They will be added to the parameters sent by the original emitter.
-         * @returns {Function} - Returns the event listener created to catch the events. It can be used to remove the event delegation.
+         * @returns {function} - Returns the event listener created to catch the events. It can be used to remove the event delegation.
          */
         delegate(name, delegate, ...params) {
             if ('undefined' !== typeof name && delegate && 'function' === typeof delegate.emit) {
