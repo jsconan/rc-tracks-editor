@@ -28,8 +28,8 @@ export default eventStore;
  * or with the event emitter itself if no callback was given.
  * @param {string[]} events - A list of events to listen to.
  * @param {EventEmitter} boundTo - The event emitter to bind with the store.
- * @param {updater} update - A callback that will be called for setting the store each time a listened event is emitted.
- * It it is omitted, the bound event emitter will be set on each update.
+ * @param {eventStoreUpdater} update - A callback that will be called for setting the store each time a listened event is emitted.
+ * If it is omitted, the bound event emitter will be set on each update.
  * @return {EventStore}
  * @throws {TypeError} - If the given object is not an event emitter.
  * @throws {TypeError} - If the list of events is missing or empty.
@@ -44,6 +44,7 @@ function eventStore(events, boundTo = null, update = null) {
     }
 
     const { subscribe, set } = writable();
+    const updater = update || (() => boundTo);
     let wrapper = null;
 
     /**
@@ -67,6 +68,17 @@ function eventStore(events, boundTo = null, update = null) {
         },
 
         /**
+         * Notifies the subscribers.
+         * @param {string} event - The event name that originated the notification.
+         * @returns {EventStore} - Chains the instance.
+         */
+        notify(event) {
+            set(updater(boundTo, event));
+
+            return this;
+        },
+
+        /**
          * Captures an event emitter.
          * @param {EventEmitter} emitter - The event emitter to bind with the store.
          * @returns {EventStore} - Chains the instance.
@@ -77,17 +89,13 @@ function eventStore(events, boundTo = null, update = null) {
 
             this.unbind();
 
-            const updater = update || (() => emitter);
-
             boundTo = emitter;
             wrapper = eventEmitterMixin.delegateListener(emitter);
             events.forEach(event => {
-                wrapper.on(event, () => set(updater(emitter, event)));
+                wrapper.on(event, () => this.notify(event));
             });
 
-            set(updater(emitter, null));
-
-            return this;
+            return this.notify(null);
         },
 
         /**
@@ -116,7 +124,7 @@ function eventStore(events, boundTo = null, update = null) {
 /**
  * A list of functions an EventStore must implement.
  */
-const eventStoreAPI = ['subscribe', 'bind', 'unbind'];
+const eventStoreAPI = ['subscribe', 'notify', 'bind', 'unbind'];
 
 /**
  * Checks if an object implements the functions required to be an event store.
@@ -137,5 +145,6 @@ eventStore.validateInstance = store => validateAPI(store, eventStoreAPI);
  * A callback that will be called in order to set the store each time a listened event is emitted.
  * @param {EventEmitter} eventEmitter - The event emitter linked with the store.
  * @param {string} eventName - The name of the captured event.
- * @callback updater
+ * @return {*} - Returns the value that will be stored.
+ * @callback eventStoreUpdater
  */

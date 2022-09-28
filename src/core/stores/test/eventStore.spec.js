@@ -50,7 +50,7 @@ describe('eventStore', () => {
 
         it('if the given object does not implement the EventStore API', () => {
             expect(() => eventStore.validateInstance({})).toThrow(
-                'The object must implement the functions: subscribe, bind, unbind'
+                'The object must implement the functions: subscribe, notify, bind, unbind'
             );
             expect(() => eventStore.validateInstance(eventStore(['set']))).not.toThrow();
         });
@@ -68,6 +68,7 @@ describe('eventStore', () => {
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
+        expect(store.notify).toEqual(expect.any(Function));
         expect(store.bind).toEqual(expect.any(Function));
         expect(store.unbind).toEqual(expect.any(Function));
         expect(store.boundTo).toBe(eventEmitter);
@@ -89,6 +90,31 @@ describe('eventStore', () => {
         eventEmitter.emit('add');
 
         expect(callback).toHaveBeenCalledTimes(3);
+    });
+
+    it('updates the store when calling the notify API', () => {
+        const eventEmitter = eventEmitterMixin();
+        let currentEvent = null;
+        const updateCallback = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
+            expect(value).toBe(eventEmitter);
+            return value;
+        });
+        const store = eventStore(['set', 'add'], eventEmitter, updateCallback);
+
+        expect(store.boundTo).toBe(eventEmitter);
+
+        const subscriberCallback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(eventEmitter);
+        });
+
+        store.subscribe(subscriberCallback);
+
+        currentEvent = 'test';
+        store.notify(currentEvent);
+
+        expect(updateCallback).toHaveBeenCalledTimes(2);
+        expect(subscriberCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can bind the event emitter later', () => {
@@ -151,7 +177,9 @@ describe('eventStore', () => {
         const eventEmitter = eventEmitterMixin();
         const data = {};
 
-        const update = jest.fn().mockImplementation(value => {
+        let currentEvent = null;
+        const update = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
             expect(value).toBe(eventEmitter);
             return data;
         });
@@ -164,7 +192,8 @@ describe('eventStore', () => {
 
         store.subscribe(callback);
 
-        eventEmitter.emit('set');
+        currentEvent = 'set';
+        eventEmitter.emit(currentEvent);
 
         expect(update).toHaveBeenCalledTimes(2);
         expect(callback).toHaveBeenCalledTimes(2);
