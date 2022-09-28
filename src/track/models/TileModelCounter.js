@@ -39,6 +39,21 @@ export class TileModelCounter extends Counter {
     }
 
     /**
+     * Exports the counters to an array.
+     * @returns {tileCounter[]} - A list of tile counters.
+     */
+    getTileCounters() {
+        const counters = [];
+
+        for (const [modelId, count] of this.entries()) {
+            const model = this.getTileModel(modelId);
+            counters.push({ modelId, model, count });
+        }
+
+        return counters;
+    }
+
+    /**
      * Gets the list of counted tile models for which the count if greater than 0.
      * @returns {TileModel[]} - Returns the list of counted tile models.
      */
@@ -53,30 +68,6 @@ export class TileModelCounter extends Counter {
      */
     getTileModel(key) {
         return this.tileModels.get(key) || null;
-    }
-
-    /**
-     * Removes a counter together with its related tile model.
-     * @param {string} key - The key of the counter to delete.
-     * @returns {boolean} - Returns `true` if a counter was deleted.
-     * @fires deletemodel
-     * @fires delete
-     */
-    delete(key) {
-        const model = this.tileModels.get(key);
-        const deleted = this.tileModels.delete(key);
-
-        if (deleted) {
-            /**
-             * Notifies a tile model has been removed.
-             * @event deletemodel
-             * @param {string} key - The key of the tile model that was removed.
-             * @param {TileModel} model - The tile model that was removed.
-             */
-            this.emit('deletemodel', key, model);
-        }
-
-        return super.delete(key);
     }
 
     /**
@@ -149,6 +140,30 @@ export class TileModelCounter extends Counter {
     }
 
     /**
+     * Removes a counter together with its related tile model.
+     * @param {string} key - The key of the counter to delete.
+     * @returns {boolean} - Returns `true` if a counter was deleted.
+     * @fires deletemodel
+     * @fires delete
+     */
+    delete(key) {
+        const model = this.tileModels.get(key);
+        const deleted = this.tileModels.delete(key);
+
+        if (deleted) {
+            /**
+             * Notifies a tile model has been removed.
+             * @event deletemodel
+             * @param {string} key - The key of the tile model that was removed.
+             * @param {TileModel} model - The tile model that was removed.
+             */
+            this.emit('deletemodel', key, model);
+        }
+
+        return super.delete(key);
+    }
+
+    /**
      * Removes all counters, including the related tile models.
      * @returns {TileModelCounter} - Chains the counter.
      * @fires clear
@@ -159,6 +174,13 @@ export class TileModelCounter extends Counter {
         return super.clear();
     }
 }
+
+/**
+ * @typedef {object} tileCounter - Represent a tile counter.
+ * @property {string} modelId - The identifier of the model.
+ * @property {TileModel} model - A reference to the tile model.
+ * @property {number} count - The number of tiles referenced for this model.
+ */
 
 /**
  * @typedef {import('./TileList.js').TileList} TileList

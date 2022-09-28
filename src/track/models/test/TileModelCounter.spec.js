@@ -286,6 +286,12 @@ describe('TileModelCounter', () => {
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
+    it('can list the counters', () => {
+        const counters = new TileModelCounter(source);
+
+        expect(counters.getTileCounters()).toMatchSnapshot();
+    });
+
     it('can list the counted tile models', () => {
         const counters = new TileModelCounter(source);
 

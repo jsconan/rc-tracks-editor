@@ -88,6 +88,56 @@ Array [
 ]
 `;
 
+exports[`TileModelCounter can list the counters 1`] = `
+Array [
+  Object {
+    "count": 3,
+    "model": StraightTileModel {
+      "direction": "right",
+      "id": "straight-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+    "modelId": "straight-tile-1",
+  },
+  Object {
+    "count": 1,
+    "model": CurvedTileEnlargedModel {
+      "direction": "right",
+      "id": "curved-tile-enlarged-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+    "modelId": "curved-tile-enlarged-1",
+  },
+  Object {
+    "count": 2,
+    "model": CurvedTileModel {
+      "direction": "right",
+      "id": "curved-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+    "modelId": "curved-tile-1",
+  },
+]
+`;
+
 exports[`TileModelCounter can map its counters 1`] = `
 Object {
   "curved-tile-1": 20,
