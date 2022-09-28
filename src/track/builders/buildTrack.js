@@ -65,5 +65,5 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 };
 
 /**
- * @typedef {import('../models/TileCoordList.js').listCoord} listCoord
+ * @typedef {import('../models/TileListBuilder.js').listCoord} listCoord
  */

@@ -98,5 +98,5 @@ export default (
 };
 
 /**
- * @typedef {import('../models/TileCoordList.js').listCoord} listCoord
+ * @typedef {import('../models/TileListBuilder.js').listCoord} listCoord
  */

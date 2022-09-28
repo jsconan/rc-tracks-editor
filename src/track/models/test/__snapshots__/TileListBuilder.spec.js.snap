@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileListBuilder can build coordinates with a new builder 1`] = `
+Object {
+  "tiles": Array [
+    "coord-id-0",
+    "coord-id-1",
+    "coord-id-2",
+  ],
+}
+`;
+
+exports[`TileListBuilder can build coordinates with a new builder 2`] = `
+Array [
+  "coord-id-0",
+  "coord-id-1",
+  "coord-id-2",
+]
+`;
+
+exports[`TileListBuilder can build coordinates with the given builder options 1`] = `
+Object {
+  "tiles": Array [
+    "coord-id-0",
+    "coord-id-1",
+    "coord-id-2",
+  ],
+}
+`;
