@@ -21,23 +21,29 @@ import { eventStore } from '../../core/stores';
 import { TileList } from '../models';
 
 /**
- * Creates a store bound to a list of tiles.
+ * Creates a store bound to a list of tiles. The store will be updated each time the list is modified.
  * @param {TileList} [boundTo] - The list of tiles to bind with the store.
+ * @param {eventStoreUpdater} update - A callback that will be called for setting the store each time a listened event is emitted.
+ * If it is omitted, the bound list of tiles will be set on each update.
  * @return {EventStore}
  */
-export default boundTo => {
-    const store = eventStore([
-        // List events
-        'set',
-        'insert',
-        'add',
-        'delete',
-        'clear',
-        'load',
-        // TileList events
-        'specs',
-        'update'
-    ]);
+export default (boundTo = null, update = null) => {
+    const store = eventStore(
+        [
+            // List events
+            'set',
+            'insert',
+            'add',
+            'delete',
+            'clear',
+            'load',
+            // TileList events
+            'specs',
+            'update'
+        ],
+        null,
+        update
+    );
     const bind = store.bind;
 
     assign(store, {
@@ -61,4 +67,8 @@ export default boundTo => {
 
 /**
  * @typedef {import('../../core/stores').EventStore} EventStore
+ */
+
+/**
+ * @typedef {import('../../core/stores').eventStoreUpdater} eventStoreUpdater
  */

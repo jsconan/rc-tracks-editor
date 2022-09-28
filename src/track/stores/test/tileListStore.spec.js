@@ -46,6 +46,7 @@ describe('tileListStore', () => {
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
+        expect(store.notify).toEqual(expect.any(Function));
         expect(store.bind).toEqual(expect.any(Function));
         expect(store.unbind).toEqual(expect.any(Function));
         expect(store.boundTo).toBe(list);
@@ -68,6 +69,31 @@ describe('tileListStore', () => {
         list.update();
 
         expect(callback).toHaveBeenCalledTimes(4);
+    });
+
+    it('updates the store when calling the notify API', () => {
+        const list = new TileList(specs);
+        let currentEvent = null;
+        const updateCallback = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
+            expect(value).toBe(list);
+            return value;
+        });
+        const store = tileListStore(list, updateCallback);
+
+        expect(store.boundTo).toBe(list);
+
+        const subscriberCallback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(list);
+        });
+
+        store.subscribe(subscriberCallback);
+
+        currentEvent = 'test';
+        store.notify(currentEvent);
+
+        expect(updateCallback).toHaveBeenCalledTimes(2);
+        expect(subscriberCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can bind the list of tiles later', () => {
@@ -121,6 +147,32 @@ describe('tileListStore', () => {
 
         expect(callback1).toHaveBeenCalledTimes(1);
         expect(callback2).toHaveBeenCalledTimes(2);
+    });
+
+    it('accepts a callback to set the store each time a listed event is emitted', () => {
+        const list = new TileList(specs);
+        const data = {};
+
+        let currentEvent = null;
+        const update = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
+            expect(value).toBe(list);
+            return data;
+        });
+
+        const store = tileListStore(list, update);
+
+        const callback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(data);
+        });
+
+        store.subscribe(callback);
+
+        currentEvent = 'update';
+        list.update();
+
+        expect(update).toHaveBeenCalledTimes(2);
+        expect(callback).toHaveBeenCalledTimes(2);
     });
 
     it('can release the listeners', () => {

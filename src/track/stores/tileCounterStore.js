@@ -21,12 +21,22 @@ import { eventStore } from '../../core/stores';
 import { TileModelCounter } from '../models';
 
 /**
- * Creates a store bound to a tiles counter.
+ * The default updater assigned to the EventStore.
+ * @param {TileModelCounter} counter - The tiles counter bound with the store.
+ * @returns {tileCounter[]} - A list of tile counters.
+ * @private
+ */
+const defaultUpdater = counter => counter.getTileCounters();
+
+/**
+ * Creates a store bound to a tiles counter. The store will be updated each time a tile is added or removed.
  * @param {TileList} [boundTo] - The tiles counter to bind with the store.
+ * @param {eventStoreUpdater} update - A callback that will be called for setting the store each time a listened event is emitted.
+ * If it is omitted, the bound tiles counter will be set on each update.
  * @return {EventStore}
  */
-export default boundTo => {
-    const store = eventStore(['addtile', 'removetile', 'deletemodel', 'clear']);
+export default (boundTo = null, update = defaultUpdater) => {
+    const store = eventStore(['addtile', 'removetile', 'clear'], null, update);
     const bind = store.bind;
 
     assign(store, {
@@ -50,4 +60,12 @@ export default boundTo => {
 
 /**
  * @typedef {import('../../core/stores').EventStore} EventStore
+ */
+
+/**
+ * @typedef {import('../../core/stores').eventStoreUpdater} eventStoreUpdater
+ */
+
+/**
+ * @typedef {import('../models/TileModelCounter').tileCounter} tileCounter
  */

@@ -45,6 +45,7 @@ describe('tileModelsStore', () => {
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
+        expect(store.notify).toEqual(expect.any(Function));
         expect(store.bind).toEqual(expect.any(Function));
         expect(store.unbind).toEqual(expect.any(Function));
         expect(store.boundTo).toBe(counter);
@@ -70,7 +71,32 @@ describe('tileModelsStore', () => {
         expect(callback).toHaveBeenCalledTimes(3);
     });
 
-    it('can bind the list of tiles later', () => {
+    it('updates the store when calling the notify API', () => {
+        const counter = new TileModelCounter();
+        let currentEvent = null;
+        const updateCallback = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
+            expect(value).toBe(counter);
+            return value;
+        });
+        const store = tileModelsStore(counter, updateCallback);
+
+        expect(store.boundTo).toBe(counter);
+
+        const subscriberCallback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(counter);
+        });
+
+        store.subscribe(subscriberCallback);
+
+        currentEvent = 'test';
+        store.notify(currentEvent);
+
+        expect(updateCallback).toHaveBeenCalledTimes(2);
+        expect(subscriberCallback).toHaveBeenCalledTimes(2);
+    });
+
+    it('can bind the counter later', () => {
         const counter = new TileModelCounter();
         const store = tileModelsStore();
 
@@ -128,6 +154,32 @@ describe('tileModelsStore', () => {
 
         expect(callback1).toHaveBeenCalledTimes(2);
         expect(callback2).toHaveBeenCalledTimes(2);
+    });
+
+    it('accepts a callback to set the store each time a listed event is emitted', () => {
+        const counter = new TileModelCounter();
+        const data = {};
+
+        let currentEvent = null;
+        const update = jest.fn().mockImplementation((value, event) => {
+            expect(event).toBe(currentEvent);
+            expect(value).toBe(counter);
+            return data;
+        });
+
+        const store = tileModelsStore(counter, update);
+
+        const callback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(data);
+        });
+
+        store.subscribe(callback);
+
+        currentEvent = 'clear';
+        counter.clear();
+
+        expect(update).toHaveBeenCalledTimes(2);
+        expect(callback).toHaveBeenCalledTimes(2);
     });
 
     it('can release the listeners', () => {
