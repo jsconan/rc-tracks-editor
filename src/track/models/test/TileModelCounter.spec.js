@@ -194,14 +194,14 @@ describe('TileModelCounter', () => {
     it('can delete a model', () => {
         const counters = new TileModelCounter(source);
 
-        expect(counters.getTileModel(keys[0])).not.toBeNull();
+        expect(counters.getModel(keys[0])).not.toBeNull();
         expect(counters.delete(keys[0])).toBeTruthy();
-        expect(counters.getTileModel(keys[0])).toBeNull();
+        expect(counters.getModel(keys[0])).toBeNull();
     });
 
     it('emits an event when removing a counter', () => {
         const counters = new TileModelCounter(source);
-        const tileModel = counters.getTileModel(keys[1]);
+        const tileModel = counters.getModel(keys[1]);
 
         const deleteCallback = jest.fn().mockImplementation((key, value) => {
             expect(key).toBe(keys[1]);
@@ -289,22 +289,22 @@ describe('TileModelCounter', () => {
     it('can list the counters', () => {
         const counters = new TileModelCounter(source);
 
-        expect(counters.getTileCounters()).toMatchSnapshot();
+        expect(counters.getCounterList()).toMatchSnapshot();
     });
 
     it('can list the counted tile models', () => {
         const counters = new TileModelCounter(source);
 
-        expect(counters.getTileModels()).toMatchSnapshot();
+        expect(counters.getModelList()).toMatchSnapshot();
     });
 
     it('can get the tile model for a given key', () => {
         const counters = new TileModelCounter(source);
 
-        expect(counters.getTileModel(keys[0])).toMatchSnapshot();
-        expect(counters.getTileModel(keys[1])).toMatchSnapshot();
-        expect(counters.getTileModel(keys[2])).toMatchSnapshot();
-        expect(counters.getTileModel(keys[3])).toBeNull();
+        expect(counters.getModel(keys[0])).toMatchSnapshot();
+        expect(counters.getModel(keys[1])).toMatchSnapshot();
+        expect(counters.getModel(keys[2])).toMatchSnapshot();
+        expect(counters.getModel(keys[3])).toBeNull();
     });
 
     it('can add a tile to the counters', () => {
@@ -320,12 +320,12 @@ describe('TileModelCounter', () => {
         const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
 
         expect(counters.get(tile.modelId)).toBe(0);
-        expect(counters.getTileModel(tile.modelId)).toBeNull();
+        expect(counters.getModel(tile.modelId)).toBeNull();
 
         counters.add(tile);
 
         expect(counters.get(tile.modelId)).toBe(1);
-        expect(counters.getTileModel(tile.modelId)).not.toBeNull();
+        expect(counters.getModel(tile.modelId)).not.toBeNull();
     });
 
     it('emits an event when registering a tile model', () => {
@@ -367,12 +367,12 @@ describe('TileModelCounter', () => {
         const tile = new CurvedTileEnlargedModel(specs);
 
         expect(counters.get(tile.modelId)).toBe(1);
-        expect(counters.getTileModel(tile.modelId)).not.toBeNull();
+        expect(counters.getModel(tile.modelId)).not.toBeNull();
 
         counters.remove(tile);
 
         expect(counters.get(tile.modelId)).toBe(0);
-        expect(counters.getTileModel(tile.modelId)).toBeNull();
+        expect(counters.getModel(tile.modelId)).toBeNull();
     });
 
     it('emits an event when un-registering a tile model', () => {
@@ -408,7 +408,7 @@ describe('TileModelCounter', () => {
         expect([...counters]).toStrictEqual(entries);
         expect(counters.clear()).toBe(counters);
         expect([...counters]).toStrictEqual([]);
-        expect(counters.getTileModels()).toStrictEqual([]);
+        expect(counters.getModelList()).toStrictEqual([]);
     });
 
     it('emits an event when removing all counters', () => {

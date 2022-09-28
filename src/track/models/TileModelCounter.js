@@ -30,7 +30,7 @@ export class TileModelCounter extends Counter {
     constructor(source = []) {
         super();
 
-        this.tileModels = new Map();
+        this.models = new Map();
 
         for (const tile of source) {
             this.add(tile);
@@ -42,11 +42,11 @@ export class TileModelCounter extends Counter {
      * Exports the counters to an array.
      * @returns {tileCounter[]} - A list of tile counters.
      */
-    getTileCounters() {
+    getCounterList() {
         const counters = [];
 
         for (const [modelId, count] of this.entries()) {
-            const model = this.getTileModel(modelId);
+            const model = this.getModel(modelId);
             counters.push({ modelId, model, count });
         }
 
@@ -57,8 +57,8 @@ export class TileModelCounter extends Counter {
      * Gets the list of counted tile models for which the count if greater than 0.
      * @returns {TileModel[]} - Returns the list of counted tile models.
      */
-    getTileModels() {
-        return [...this.tileModels.values()];
+    getModelList() {
+        return [...this.models.values()];
     }
 
     /**
@@ -66,8 +66,8 @@ export class TileModelCounter extends Counter {
      * @param {string} key - The key of the counter to get the tile model for.
      * @returns {TileModel} - The tile model registered under the given key.
      */
-    getTileModel(key) {
-        return this.tileModels.get(key) || null;
+    getModel(key) {
+        return this.models.get(key) || null;
     }
 
     /**
@@ -84,9 +84,9 @@ export class TileModelCounter extends Counter {
 
         this.increment(modelId, 1);
 
-        if (!this.tileModels.has(modelId)) {
+        if (!this.models.has(modelId)) {
             const model = tile.clone().setDirection(TILE_DIRECTION_RIGHT);
-            this.tileModels.set(modelId, model);
+            this.models.set(modelId, model);
 
             /**
              * Notifies a tile model has been added.
@@ -147,8 +147,8 @@ export class TileModelCounter extends Counter {
      * @fires delete
      */
     delete(key) {
-        const model = this.tileModels.get(key);
-        const deleted = this.tileModels.delete(key);
+        const model = this.models.get(key);
+        const deleted = this.models.delete(key);
 
         if (deleted) {
             /**
@@ -169,7 +169,7 @@ export class TileModelCounter extends Counter {
      * @fires clear
      */
     clear() {
-        this.tileModels.clear();
+        this.models.clear();
 
         return super.clear();
     }

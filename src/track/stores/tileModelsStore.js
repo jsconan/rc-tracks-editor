@@ -26,7 +26,7 @@ import { TileModelCounter } from '../models';
  * @returns {TileModel[]} - An array of TileModel.
  * @private
  */
-const defaultUpdater = counter => counter.getTileModels();
+const defaultUpdater = counter => counter.getModelList();
 
 /**
  * Creates a store bound to a tiles counter. The store will be updated each time a tile model is added or removed.

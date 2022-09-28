@@ -59,7 +59,7 @@ describe('tileCounterStore', () => {
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter);
-            expect(value).toEqual(counter.getTileCounters());
+            expect(value).toEqual(counter.getCounterList());
         });
 
         store.subscribe(callback);
@@ -103,7 +103,7 @@ describe('tileCounterStore', () => {
         const callback = jest.fn().mockImplementation(value => {
             if (value) {
                 expect(value).not.toBe(counter);
-                expect(value).toEqual(counter.getTileCounters());
+                expect(value).toEqual(counter.getCounterList());
             }
         });
 
@@ -127,12 +127,12 @@ describe('tileCounterStore', () => {
 
         const callback1 = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter1);
-            expect(value).toEqual(counter1.getTileCounters());
+            expect(value).toEqual(counter1.getCounterList());
         });
 
         const callback2 = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter2);
-            expect(value).toEqual(counter2.getTileCounters());
+            expect(value).toEqual(counter2.getCounterList());
         });
 
         const unsubscribe = store.subscribe(callback1);
@@ -184,7 +184,7 @@ describe('tileCounterStore', () => {
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter);
-            expect(value).toEqual(counter.getTileCounters());
+            expect(value).toEqual(counter.getCounterList());
         });
 
         store.subscribe(callback);
