@@ -185,6 +185,12 @@ describe('List', () => {
         expect(callback).toHaveBeenCalledTimes(3);
     });
 
+    it('throws an error if a value is attempted to be set at a wrong index', () => {
+        const list = new List(source);
+        expect(() => list.set(-1, 1)).toThrow('The list index is out of bounds!');
+        expect(() => list.set(3, 1)).toThrow('The list index is out of bounds!');
+    });
+
     describe('can insert values', () => {
         it('at a particular index', () => {
             const list = new List(source);

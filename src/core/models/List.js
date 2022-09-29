@@ -65,7 +65,7 @@ export class List {
 
     /**
      * Applies a callback to each value from the list.
-     * @param {function} walker - A callback that will be applied to each value of the list.
+     * @param {listCallback} walker - A callback that will be applied to each value of the list.
      * @returns {List} - Chains the list.
      * @throws {TypeError} - If the given callback is not a function.
      */
@@ -79,7 +79,7 @@ export class List {
 
     /**
      * Maps the values of the list to an array.
-     * @param {function} mapper - A mapper callback that will be applied to each value of the list.
+     * @param {listCallback} mapper - A mapper callback that will be applied to each value of the list.
      * @returns {Array}
      * @throws {TypeError} - If the given callback is not a function.
      */
@@ -91,7 +91,7 @@ export class List {
 
     /**
      * Finds the index of a value from the list. If the values does not exist in the list, `-1` is returned.
-     * @param {function|*} filter - Either a filter callback that will be applied to each value of the list
+     * @param {listCallback|*} filter - Either a filter callback that will be applied to each value of the list
      * and that must return true when the received value matches, or the searched value.
      * @returns {number} - The index of the value in the list, or -1 if not found.
      */
@@ -118,8 +118,13 @@ export class List {
      * @param {*} value - The value to set at the index.
      * @returns {List} - Chains the list.
      * @fires set
+     * @throws {ReferenceError} - If the given index is out of bounds.
      */
     set(index, value) {
+        if (index < 0 || index >= this.length) {
+            throw new ReferenceError('The list index is out of bounds!');
+        }
+
         const previous = this.list[index];
         this.list[index] = value;
 
@@ -258,3 +263,11 @@ export class List {
         }
     }
 }
+
+/**
+ * Callback called from the iteration algorithms.
+ * @param {*} value - The current value being traversed.
+ * @param {number} index - The index of the current value being traversed.
+ * @returns {*} - Returns a value expected by the context.
+ * @callback listCallback
+ */
