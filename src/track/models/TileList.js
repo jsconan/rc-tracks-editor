@@ -30,7 +30,7 @@ import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
 import { List } from '../../core/models';
 import { eventStore } from '../../core/stores';
-import { eventEmitterMixin } from '../../core/mixins';
+import { TileModel } from './TileModel';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -41,6 +41,19 @@ const modelsMap = {
     [CURVED_TILE_TYPE]: CurvedTileModel,
     [CURVED_TILE_ENLARGED_TYPE]: CurvedTileEnlargedModel
 };
+
+/**
+ * Makes sure a tile has a unique identifier.
+ * @param {TileModel} tile - The tile for which set the identifier.
+ * @returns {TileModel} - Returns the given tile model.
+ * @private
+ */
+function identify(tile) {
+    if (tile.id === tile.modelId) {
+        tile.id = uid();
+    }
+    return tile;
+}
 
 /**
  * Creates the tile model with respect to the given type.
@@ -54,28 +67,31 @@ const modelsMap = {
  * @throws {TypeError} - If the given direction is not valid.
  * @private
  */
-function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+function createTile(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
     validateType(type);
-    const model = new modelsMap[type](specs, direction, ratio);
-    model.id = uid();
-    return model;
+    return new modelsMap[type](specs, direction, ratio);
 }
 
 /**
  * Represents a list of tiles.
  */
-export class TileList {
+export class TileList extends List {
     /**
      * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {TileModel[]} source - A list of tiles to initialize the list.
      * @throws {TypeError} - If the given specifications object is not valid.
+     * @throws {TypeError} - If one of the tiles in the source is not a TileModel.
      */
-    constructor(specs) {
-        this.tiles = new List();
-
-        eventEmitterMixin(this);
+    constructor(specs, source = null) {
+        super();
 
         this.setSpecs(specs);
+
+        if (source) {
+            this.load(source);
+            source = void 0;
+        }
 
         // Produces a store linked to the list events and returning the TileList
         const { subscribe } = eventStore(
@@ -101,76 +117,6 @@ export class TileList {
          * @returns {function} - Return a callback for removing the subscription.
          */
         this.subscribe = subscribe;
-
-        /**
-         * Notifies a tile has been set to the list.
-         * @event set
-         * @param {number} index - The index where the tile was set.
-         * @param {TileModel} newTile - The new tile.
-         * @param {TileModel} oldTile - The previous tile.
-         */
-        this.tiles.delegate('set', this);
-
-        /**
-         * Notifies a tile has been inserted into the list.
-         * @event insert
-         * @param {number} index - The index where the tile has been inserted.
-         * @param {TileModel} tile - The inserted tile.
-         */
-        this.tiles.delegate('insert', this);
-
-        /**
-         * Notifies a tile has been added to the list.
-         * @event insert
-         * @param {TileModel} tile - The added tile.
-         */
-        this.tiles.delegate('add', this);
-
-        /**
-         * Notifies a tile have been removed from the list.
-         * @event delete
-         * @param {number} index - The index from where the tile was removed.
-         * @param {TileModel} value - The removed tile.
-         */
-        this.tiles.delegate('delete', this);
-
-        /**
-         * Notifies the list was cleared.
-         * @event clear
-         */
-        this.tiles.delegate('clear', this);
-
-        /**
-         * Notifies the list was loaded.
-         * @event load
-         */
-        this.tiles.delegate('load', this);
-    }
-
-    /**
-     * The number of tiles in the list.
-     * @type {number}
-     */
-    get length() {
-        return this.tiles.length;
-    }
-
-    /**
-     * Iterates over the tiles from the list.
-     * @yields {TileModel} - The next tile in the list.
-     * @generator
-     */
-    *[Symbol.iterator]() {
-        yield* this.tiles.values();
-    }
-
-    /**
-     * Returns an iterator for the tiles from the list.
-     * @yields {TileModel} - The next tile in the list.
-     * @generator
-     */
-    *values() {
-        yield* this.tiles.values();
     }
 
     /**
@@ -185,8 +131,8 @@ export class TileList {
 
         this.specs = specs;
 
-        if (this.tiles.length) {
-            this.tiles.forEach(tile => tile.setSpecs(specs));
+        if (this.length) {
+            this.forEach(tile => tile.setSpecs(specs));
 
             /**
              * Notifies the tile specification have changed.
@@ -221,7 +167,7 @@ export class TileList {
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
     getIndex(id) {
-        return this.tiles.find(tile => tile.id === id);
+        return this.find(tile => tile.id === id);
     }
 
     /**
@@ -229,8 +175,8 @@ export class TileList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    get(id) {
-        return this.getAt(this.getIndex(id));
+    getById(id) {
+        return super.get(this.getIndex(id)) || null;
     }
 
     /**
@@ -238,8 +184,53 @@ export class TileList {
      * @param {number} index - The position of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    getAt(index) {
-        return this.tiles.get(index) || null;
+    get(index) {
+        return super.get(index) || null;
+    }
+
+    /**
+     * Sets a tile at a particular index.
+     * @param {number} index - The index where to set the tile.
+     * @param {TileModel} tile - The tile to set at the index.
+     * @returns {TileList} - Chains the list.
+     * @fires set
+     * @throws {ReferenceError} - If the given index is out of bounds.
+     * @throws {TypeError} - If the given tile is not a TileModel.
+     */
+    set(index, tile) {
+        TileModel.validateInstance(tile);
+        return super.set(index, identify(tile));
+    }
+
+    /**
+     * Inserts a tile at a particular index.
+     * @param {number} index - The index where to insert the tile.
+     * @param {...TileModel} tiles - The tiles to insert at the index.
+     * @returns {TileList} - Chains the list.
+     * @fires insert
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     */
+    insert(index, ...tiles) {
+        tiles.forEach(tile => {
+            TileModel.validateInstance(tile);
+            identify(tile);
+        });
+        return super.insert(index, ...tiles);
+    }
+
+    /**
+     * Adds a tile at the end of the list.
+     * @param {...*} tiles - The tiles to add.
+     * @returns {TileList} - Chains the list.
+     * @fires add
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     */
+    add(...tiles) {
+        tiles.forEach(tile => {
+            TileModel.validateInstance(tile);
+            identify(tile);
+        });
+        return super.add(...tiles);
     }
 
     /**
@@ -253,9 +244,9 @@ export class TileList {
      * @fires add
      */
     append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createModel(this.specs, type, direction, ratio);
+        const tile = createTile(this.specs, type, direction, ratio);
 
-        this.tiles.add(tile);
+        this.add(tile);
 
         return tile;
     }
@@ -271,9 +262,9 @@ export class TileList {
      * @fires insert
      */
     prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createModel(this.specs, type, direction, ratio);
+        const tile = createTile(this.specs, type, direction, ratio);
 
-        this.tiles.insert(0, tile);
+        this.insert(0, tile);
 
         return tile;
     }
@@ -291,7 +282,7 @@ export class TileList {
             return false;
         }
 
-        return this.tiles.delete(index) > 0;
+        return this.delete(index) > 0;
     }
 
     /**
@@ -310,9 +301,9 @@ export class TileList {
         const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = createTile(this.specs, type, direction, ratio);
 
-            this.tiles.set(index, tile);
+            this.set(index, tile);
 
             return tile;
         }
@@ -336,9 +327,9 @@ export class TileList {
         const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = createTile(this.specs, type, direction, ratio);
 
-            this.tiles.insert(index, tile);
+            this.insert(index, tile);
 
             return tile;
         }
@@ -362,9 +353,9 @@ export class TileList {
         const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = createTile(this.specs, type, direction, ratio);
 
-            this.tiles.insert(index + 1, tile);
+            this.insert(index + 1, tile);
 
             return tile;
         }
@@ -377,7 +368,7 @@ export class TileList {
      * @returns {tileExport[]} - An object representation of the list.
      */
     export() {
-        return this.tiles.map(tile => tile.export());
+        return this.map(tile => tile.export());
     }
 
     /**
@@ -386,6 +377,8 @@ export class TileList {
      * @param {tileExport[]} data - An iterable object containing a representation of the list.
      * @returns {TileList} - Chains the instance.
      * @fires load
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
@@ -402,7 +395,7 @@ export class TileList {
                 }
 
                 const { type, direction, ratio } = next.value || {};
-                const tile = createModel(this.specs, type, direction, ratio);
+                const tile = createTile(this.specs, type, direction, ratio);
 
                 return { done: false, value: tile };
             },
@@ -412,32 +405,37 @@ export class TileList {
             }
         };
 
-        this.tiles.load(loadIterator);
+        this.load(loadIterator);
 
         return this;
     }
 
     /**
-     * Removes all tiles from the list.
-     * @returns {TileList} - Chains the instance.
-     * @fires clear
+     * Loads tiles from another source. The list is cleared before.
+     * @param {*} iterator - An iterable object that can be used to fill the list.
+     * @returns {List} - Chains the list.
+     * @fires load
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
      */
-    clear() {
-        this.tiles.clear();
-
-        return this;
-    }
-
-    /**
-     * Validates that the given model is an instance of the class.
-     * Otherwise, an error is thrown.
-     * @param {object} model - The instance to validate.
-     * @throws {TypeError} - If the given model is not a valid instance.
-     */
-    static validateInstance(model) {
-        if (!(model instanceof this)) {
-            throw new TypeError(`The model must be an instance of ${this.name}!`);
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
         }
+
+        const list = [];
+        for (const tile of iterator) {
+            TileModel.validateInstance(tile);
+            list.push(identify(tile));
+        }
+        this.list = list;
+
+        /**
+         * Notifies the list was loaded.
+         * @event load
+         */
+        this.emit('load');
+
+        return this;
     }
 }
 

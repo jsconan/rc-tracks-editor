@@ -26,7 +26,7 @@ const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 const mockBuilder = list => {
-    const tiles = list.tiles.map(tile => `coord-${tile.id}`);
+    const tiles = list.map(tile => `coord-${tile.id}`);
     return { tiles };
 };
 
@@ -70,7 +70,7 @@ describe('TileCoordList', () => {
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid list', () => {
-            expect(() => new TileCoordList({})).toThrow('The model must be an instance of TileList!');
+            expect(() => new TileCoordList({})).toThrow('The object must be an instance of TileList!');
         });
 
         it('when trying to create an instance with an invalid builder', () => {
@@ -79,7 +79,7 @@ describe('TileCoordList', () => {
 
         it('when trying to set an invalid list', () => {
             const listCoord = new TileCoordList(new TileList(specs), mockBuilder);
-            expect(() => listCoord.setList({})).toThrow('The model must be an instance of TileList!');
+            expect(() => listCoord.setList({})).toThrow('The object must be an instance of TileList!');
         });
 
         it('when trying to set an invalid builder', () => {
@@ -231,7 +231,7 @@ describe('TileCoordList', () => {
             });
             const unsubscribe = listCoord.subscribe(callback);
 
-            const newBuilder = () => list.tiles.map(tile => `coord-${tile.id}`);
+            const newBuilder = () => list.map(tile => `coord-${tile.id}`);
             expect(listCoord.setBuilder(newBuilder)).toBe(listCoord);
 
             expect(callback).toHaveBeenCalledTimes(2);

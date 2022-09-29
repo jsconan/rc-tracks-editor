@@ -40,7 +40,7 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
     let inputY = startY;
     let inputAngle = startAngle;
 
-    const tiles = list.tiles.map(model => {
+    const tiles = list.map(model => {
         const rect = model.getBoundingRect(inputX, inputY, inputAngle);
         const { x, y, angle } = rect.input;
         const { id, type, direction, ratio } = model;

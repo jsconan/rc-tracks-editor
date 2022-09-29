@@ -59,7 +59,7 @@ export default (
     let tileX = startX;
     let tileY = startY;
 
-    const tiles = list.tiles.map(model => {
+    const tiles = list.map(model => {
         const curveAngle = model.getCurveAngle();
         const { id, type, direction, ratio } = model;
         const alignedAngle = curveAngle / 2;
