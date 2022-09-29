@@ -115,7 +115,7 @@ describe('TrackRef', () => {
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TileCoordList!');
+        ).toThrow('The object must be an instance of TileCoordList!');
     });
 
     it('fires click', () => {

@@ -394,7 +394,7 @@ export class TileModel {
      */
     static validateInstance(model) {
         if (!(model instanceof this)) {
-            throw new TypeError(`The model must be an instance of ${this.name}!`);
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
         }
     }
 }

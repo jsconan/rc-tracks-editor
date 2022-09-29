@@ -361,7 +361,7 @@ describe('StraightTileModel', () => {
         const tile = new StraightTileModel(specs);
         expect(() => StraightTileModel.validateInstance(tile)).not.toThrow();
         expect(() => StraightTileModel.validateInstance({})).toThrow(
-            'The model must be an instance of StraightTileModel!'
+            'The object must be an instance of StraightTileModel!'
         );
     });
 });

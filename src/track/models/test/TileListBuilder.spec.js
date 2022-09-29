@@ -137,6 +137,8 @@ describe('TileListBuilder', () => {
     it('can validate an object is an instance of the class', () => {
         const listBuilder = new TileListBuilder(mockBuilder);
         expect(() => TileListBuilder.validateInstance(listBuilder)).not.toThrow();
-        expect(() => TileListBuilder.validateInstance({})).toThrow('The model must be an instance of TileListBuilder!');
+        expect(() => TileListBuilder.validateInstance({})).toThrow(
+            'The object must be an instance of TileListBuilder!'
+        );
     });
 });

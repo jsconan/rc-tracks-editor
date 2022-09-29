@@ -362,7 +362,7 @@ describe('CurvedTileEnlargedModel', () => {
         const tile = new CurvedTileEnlargedModel(specs);
         expect(() => CurvedTileEnlargedModel.validateInstance(tile)).not.toThrow();
         expect(() => CurvedTileEnlargedModel.validateInstance({})).toThrow(
-            'The model must be an instance of CurvedTileEnlargedModel!'
+            'The object must be an instance of CurvedTileEnlargedModel!'
         );
     });
 });

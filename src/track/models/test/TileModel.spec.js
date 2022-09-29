@@ -360,6 +360,6 @@ describe('TileModel', () => {
     it('can validate an object is an instance of the class', () => {
         const tile = new TileModel(specs);
         expect(() => TileModel.validateInstance(tile)).not.toThrow();
-        expect(() => TileModel.validateInstance({})).toThrow('The model must be an instance of TileModel!');
+        expect(() => TileModel.validateInstance({})).toThrow('The object must be an instance of TileModel!');
     });
 });

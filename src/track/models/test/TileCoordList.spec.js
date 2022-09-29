@@ -294,6 +294,6 @@ describe('TileCoordList', () => {
         const list = new TileList(specs);
         const listCoord = new TileCoordList(list, mockBuilder);
         expect(() => TileCoordList.validateInstance(listCoord)).not.toThrow();
-        expect(() => TileCoordList.validateInstance({})).toThrow('The model must be an instance of TileCoordList!');
+        expect(() => TileCoordList.validateInstance({})).toThrow('The object must be an instance of TileCoordList!');
     });
 });
