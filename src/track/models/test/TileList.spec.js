@@ -270,6 +270,30 @@ describe('TileList', () => {
             expect(list.get(1)).toBe(tile);
             expect(list.get(3)).toBeNull();
         });
+
+        it('from the first position', () => {
+            const list = new TileList(specs);
+
+            expect(list.first).toEqual(expect.any(Function));
+
+            expect(list.first()).toBeNull();
+
+            list.load(source);
+
+            expect(list.first()).toBe(source[0]);
+        });
+
+        it('from the last position', () => {
+            const list = new TileList(specs);
+
+            expect(list.last).toEqual(expect.any(Function));
+
+            expect(list.last()).toBeNull();
+
+            list.load(source);
+
+            expect(list.last()).toBe(source[2]);
+        });
     });
 
     it('can set a tile at a particular index', () => {

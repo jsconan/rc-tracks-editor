@@ -148,6 +148,30 @@ describe('List', () => {
         });
     });
 
+    it('can read the first value', () => {
+        const list = new List();
+
+        expect(list.first).toEqual(expect.any(Function));
+
+        expect(list.first()).toBeUndefined();
+
+        list.load(source);
+
+        expect(list.first()).toBe(source[0]);
+    });
+
+    it('can read the last value', () => {
+        const list = new List();
+
+        expect(list.last).toEqual(expect.any(Function));
+
+        expect(list.last()).toBeUndefined();
+
+        list.load(source);
+
+        expect(list.last()).toBe(source[2]);
+    });
+
     it('can read a value at a particular index', () => {
         const list = new List(source);
 

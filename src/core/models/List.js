@@ -104,6 +104,22 @@ export class List {
     }
 
     /**
+     * Gets the first value of the list.
+     * @returns {*} - The value at the first index. It may be undefined.
+     */
+    first() {
+        return this.get(0);
+    }
+
+    /**
+     * Gets the last value of the list.
+     * @returns {*} - The value at the last index. It may be undefined.
+     */
+    last() {
+        return this.get(this.list.length - 1);
+    }
+
+    /**
      * Gets the value at a particular index.
      * @param {number} index - The index of the value to get
      * @returns {*} - The value at the given index. It may be undefined.
