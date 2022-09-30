@@ -188,6 +188,20 @@ describe('EventEmitter', () => {
         expect(listener).toHaveBeenCalled();
     });
 
+    it('can register an event listener to multiple events', () => {
+        const object = eventEmitterMixin();
+        const listener = jest.fn();
+
+        expect(object.on('foo bar', listener)).toBe(object);
+        expect(object.listens('foo', listener)).toBeTruthy();
+        expect(object.listens('bar', listener)).toBeTruthy();
+
+        object.emit('foo');
+        object.emit('bar');
+
+        expect(listener).toHaveBeenCalledTimes(2);
+    });
+
     it('can register an event listener that runs only once', () => {
         const object = eventEmitterMixin();
         const listener = jest.fn();
@@ -200,6 +214,22 @@ describe('EventEmitter', () => {
         object.emit(name);
 
         expect(listener).toHaveBeenCalledTimes(1);
+    });
+
+    it('can register an event listener that runs only once for multiple events', () => {
+        const object = eventEmitterMixin();
+        const listener = jest.fn();
+
+        expect(object.once('foo bar', listener)).toBe(object);
+        expect(object.listens('foo', listener)).toBeTruthy();
+        expect(object.listens('bar', listener)).toBeTruthy();
+
+        object.emit('foo');
+        object.emit('foo');
+        object.emit('bar');
+        object.emit('bar');
+
+        expect(listener).toHaveBeenCalledTimes(2);
     });
 
     it('cannot register the same event listener twice', () => {
@@ -342,6 +372,40 @@ describe('EventEmitter', () => {
         object.emit(name);
         expect(listener1).toHaveBeenCalledTimes(1);
         expect(listener2).toHaveBeenCalledTimes(2);
+    });
+
+    it('can unregister an event listener from multiple events', () => {
+        const object = eventEmitterMixin();
+        const listener1 = jest.fn();
+        const listener2 = jest.fn();
+
+        object.on('foo bar', listener1);
+        object.on('foo bar', listener2);
+        expect(object.listens('foo')).toBeTruthy();
+        expect(object.listens('bar')).toBeTruthy();
+
+        object.emit('foo');
+        object.emit('bar');
+        expect(listener1).toHaveBeenCalledTimes(2);
+        expect(listener2).toHaveBeenCalledTimes(2);
+
+        expect(object.off('foo bar', listener1)).toBe(object);
+        expect(object.listens('foo')).toBeTruthy();
+        expect(object.listens('bar')).toBeTruthy();
+
+        object.emit('foo');
+        object.emit('bar');
+        expect(listener1).toHaveBeenCalledTimes(2);
+        expect(listener2).toHaveBeenCalledTimes(4);
+
+        expect(object.off('foo bar')).toBe(object);
+        expect(object.listens('foo')).toBeFalsy();
+        expect(object.listens('bar')).toBeFalsy();
+
+        object.emit('foo');
+        object.emit('bar');
+        expect(listener1).toHaveBeenCalledTimes(2);
+        expect(listener2).toHaveBeenCalledTimes(4);
     });
 
     it('can unregister a listener that should run only once', () => {

@@ -17,7 +17,7 @@
  */
 
 import { Doublemap } from '../models/Doublemap.js';
-import { hasAPI, mixin, pick, validateAPI } from '../helpers';
+import { eachWord, hasAPI, mixin, pick, validateAPI } from '../helpers';
 
 export default eventEmitterMixin;
 
@@ -53,8 +53,10 @@ function eventEmitterMixin(target, ...mixins) {
          */
         on(name, listener) {
             if ('undefined' !== typeof name && 'function' === typeof listener) {
-                events.set(name, listener, {
-                    bind: this
+                eachWord(name, event => {
+                    events.set(event, listener, {
+                        bind: this
+                    });
                 });
             }
             return this;
@@ -75,9 +77,11 @@ function eventEmitterMixin(target, ...mixins) {
          */
         once(name, listener) {
             if ('undefined' !== typeof name && 'function' === typeof listener) {
-                events.set(name, listener, {
-                    once: true,
-                    bind: this
+                eachWord(name, event => {
+                    events.set(event, listener, {
+                        once: true,
+                        bind: this
+                    });
                 });
             }
             return this;
@@ -133,26 +137,30 @@ function eventEmitterMixin(target, ...mixins) {
                         }
                     }
                 }
-            } else if (events.has(name)) {
-                if (this === target) {
-                    // This is the main scope, we can remove any listeners
-                    events.delete(name, listener);
-                } else {
-                    // This is a delegated scope, we can only remove the listeners bound to it
-                    const eventsQueue = events.get(name);
-                    if (listener) {
-                        const options = eventsQueue.get(listener);
-                        if (options && this === options.bind) {
-                            events.delete(name, listener);
-                        }
-                    } else {
-                        for (const [eventListener, options] of eventsQueue) {
-                            if (this === options.bind) {
-                                events.delete(name, eventListener);
+            } else {
+                eachWord(name, event => {
+                    if (events.has(event)) {
+                        if (this === target) {
+                            // This is the main scope, we can remove any listeners
+                            events.delete(event, listener);
+                        } else {
+                            // This is a delegated scope, we can only remove the listeners bound to it
+                            const eventsQueue = events.get(event);
+                            if (listener) {
+                                const options = eventsQueue.get(listener);
+                                if (options && this === options.bind) {
+                                    events.delete(event, listener);
+                                }
+                            } else {
+                                for (const [eventListener, options] of eventsQueue) {
+                                    if (this === options.bind) {
+                                        events.delete(event, eventListener);
+                                    }
+                                }
                             }
                         }
                     }
-                }
+                });
             }
             return this;
         },
