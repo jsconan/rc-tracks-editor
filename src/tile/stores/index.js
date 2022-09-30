@@ -16,5 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as Track } from './Track.svelte';
-export { default as TrackRef } from './TrackRef.svelte';
+export { default as tileCounterStore } from './tileCounterStore.js';
+export { default as tileListStore } from './tileListStore.js';
+export { default as tileModelsStore } from './tileModelsStore.js';

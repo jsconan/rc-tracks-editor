@@ -6,17 +6,17 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { Track, TrackRef } from './track/components';
-    import { buildList, buildTrack } from './track/builders';
-    import { TileCoordList, TileList } from './track/models';
-    import { TileSpecifications } from './track/config';
+    import { buildList, buildTrack } from './tile/builders';
+    import { TileCoordList, TileList } from './tile/models';
+    import { TileSpecifications } from './tile/config';
     import {
         CURVED_TILE_ENLARGED_TYPE,
         CURVED_TILE_TYPE,
         STRAIGHT_TILE_TYPE,
         TILE_DIRECTION_RIGHT
-    } from './track/helpers';
+    } from './tile/helpers';
 
-    const angle = 0;
+    const angle = -90;
     const barrierChunks = config.barrierChunks;
     const barrierWidth = config.barrierWidth;
     const laneWidth = config.laneWidth;
@@ -84,7 +84,7 @@
                         list={trackCoords}
                         on:click={event => {
                             click(event);
-                            track.get(event.detail.id).flipDirection();
+                            track.getById(event.detail.id).flipDirection();
                             track.update();
                         }}
                     />

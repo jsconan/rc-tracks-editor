@@ -17,8 +17,8 @@
  */
 
 import { TileSpecifications } from '../../config';
-import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel';
-import { CurvedTileModel } from '../CurvedTileModel';
+import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
+import { CurvedTileModel } from '../CurvedTileModel.js';
 import { StraightTileModel } from '../StraightTileModel.js';
 import { TileModelCounter } from '../TileModelCounter.js';
 

@@ -17,22 +17,22 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
-import Context from './Context.svelte';
-import CurvedTile from '../CurvedTile.svelte';
+import { tick } from 'svelte';
+import { Context } from '../../../core/components';
+import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { tick } from 'svelte';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-describe('CurvedTile', () => {
+describe('CurvedTileEnlarged', () => {
     it('renders with default values', () => {
         const { container } = render(Context, {
             props: {
-                component: CurvedTile,
+                component: CurvedTileEnlarged,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs
             }
@@ -64,7 +64,7 @@ describe('CurvedTile', () => {
             };
             const { container } = render(Context, {
                 props: {
-                    component: CurvedTile,
+                    component: CurvedTileEnlarged,
                     contextKey: TileSpecifications.CONTEXT_ID,
                     context: specs,
                     props
@@ -93,7 +93,7 @@ describe('CurvedTile', () => {
         };
         const rendered = render(Context, {
             props: {
-                component: CurvedTile,
+                component: CurvedTileEnlarged,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -110,7 +110,7 @@ describe('CurvedTile', () => {
         const onClick = jest.fn();
         const { container, component } = render(Context, {
             props: {
-                component: CurvedTile,
+                component: CurvedTileEnlarged,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs
             }

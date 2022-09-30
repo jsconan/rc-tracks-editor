@@ -16,5 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as Track } from './Track.svelte';
-export { default as TrackRef } from './TrackRef.svelte';
+export { default as CurvedBarrier } from './CurvedBarrier.svelte';
+export { default as CurvedElement } from './CurvedElement.svelte';
+export { default as CurvedElementEnlarged } from './CurvedElementEnlarged.svelte';
+export { default as StraightBarrier } from './StraightBarrier.svelte';
+export { default as StraightElement } from './StraightElement.svelte';

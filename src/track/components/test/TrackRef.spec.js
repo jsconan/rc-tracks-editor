@@ -17,14 +17,19 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
-import Context from './Context.svelte';
+import { tick } from 'svelte';
+import { Context } from '../../../core/components';
 import TrackRef from '../TrackRef.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
-import { buildTrack } from '../../builders';
-import { TileCoordList, TileList } from '../../models';
-import { TileSpecifications } from '../../config';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { tick } from 'svelte';
+import { buildTrack } from '../../../tile/builders';
+import { TileCoordList, TileList } from '../../../tile/models';
+import { TileSpecifications } from '../../../tile/config';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../../../tile/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;

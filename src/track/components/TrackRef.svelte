@@ -4,9 +4,9 @@
 
     import { createEventDispatcher } from 'svelte';
     import { Sketch } from '../elements';
-    import { TILE_DIRECTION_RIGHT } from '../helpers';
-    import { TileCoordList } from '../models';
-    import Tile from './Tile.svelte';
+    import { TILE_DIRECTION_RIGHT } from '../../tile/helpers';
+    import { TileCoordList } from '../../tile/models';
+    import { Tile } from '../../tile/components';
 
     export let list;
     export let x = 0;
@@ -33,7 +33,7 @@
 
     /**
      * Registers the tile models from the list.
-     * @param {import('../models/TileCoordList.js').listCoord} list
+     * @param {import('../../tile/models/TileCoordList.js').listCoord} list
      * @private
      */
     function registerModels(list) {

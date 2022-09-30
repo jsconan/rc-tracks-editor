@@ -17,11 +17,11 @@
  */
 
 import { render, fireEvent } from '@testing-library/svelte';
-import Context from './Context.svelte';
+import { tick } from 'svelte';
+import { Context } from '../../../core/components';
 import StraightTile from '../StraightTile.svelte';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { tick } from 'svelte';
 
 const laneWidth = 80;
 const barrierWidth = 5;

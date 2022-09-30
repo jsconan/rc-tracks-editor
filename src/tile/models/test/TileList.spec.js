@@ -18,8 +18,8 @@
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 import { List } from '../../../core/models';
-import { CurvedTileModel } from '../CurvedTileModel';
-import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel';
+import { CurvedTileModel } from '../CurvedTileModel.js';
+import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
 import { StraightTileModel } from '../StraightTileModel.js';
 import { TileSpecifications } from '../../config';
 import { TileList } from '../TileList.js';

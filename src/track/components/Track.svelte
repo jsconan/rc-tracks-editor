@@ -2,10 +2,10 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { buildTrack } from '../builders';
+    import { buildTrack } from '../../tile/builders';
     import { Sketch } from '../elements';
-    import { TileCoordList, TileList } from '../models';
-    import Tile from './Tile.svelte';
+    import { TileCoordList, TileList } from '../../tile/models';
+    import { Tile } from '../../tile/components';
 
     export let list;
     export let x = 0;
