@@ -189,10 +189,29 @@ export class TileList extends List {
     }
 
     /**
+     * Replace a tile in the list.
+     * If the tile does not exist, it does nothing.
+     * @param {string} id - The unique identifier of the tile to replace.
+     * @param {TileModel} tile - The tile to set in place.
+     * @returns {TileList} - Chains the instance.
+     * @fires set
+     * @throws {TypeError} - If the given tile is not a TileModel.
+     */
+    setById(id, tile) {
+        const index = this.getIndex(id);
+
+        if (index >= 0) {
+            this.set(index, tile);
+        }
+
+        return this;
+    }
+
+    /**
      * Sets a tile at a particular index.
      * @param {number} index - The index where to set the tile.
      * @param {TileModel} tile - The tile to set at the index.
-     * @returns {TileList} - Chains the list.
+     * @returns {TileList} - Chains the instance.
      * @fires set
      * @throws {ReferenceError} - If the given index is out of bounds.
      * @throws {TypeError} - If the given tile is not a TileModel.
@@ -206,7 +225,7 @@ export class TileList extends List {
      * Inserts a tile at a particular index.
      * @param {number} index - The index where to insert the tile.
      * @param {...TileModel} tiles - The tiles to insert at the index.
-     * @returns {TileList} - Chains the list.
+     * @returns {TileList} - Chains the instance.
      * @fires insert
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
      */
@@ -221,7 +240,7 @@ export class TileList extends List {
     /**
      * Adds a tile at the end of the list.
      * @param {...TileModel} tiles - The tiles to add.
-     * @returns {TileList} - Chains the list.
+     * @returns {TileList} - Chains the instance.
      * @fires add
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
      */
@@ -231,6 +250,50 @@ export class TileList extends List {
             identify(tile);
         });
         return super.add(...tiles);
+    }
+
+    /**
+     * Removes a tile from the list.
+     * @param {string} id - The unique identifier of the tile to remove.
+     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
+     * @fires delete
+     */
+    remove(id) {
+        const index = this.getIndex(id);
+
+        if (index < 0) {
+            return false;
+        }
+
+        return this.delete(index) > 0;
+    }
+
+    /**
+     * Loads tiles from another source. The list is cleared before.
+     * @param {*} iterator - An iterable object that can be used to fill the list.
+     * @returns {List} - Chains the instance.
+     * @fires load
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     */
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
+        }
+
+        const list = [];
+        for (const tile of iterator) {
+            TileModel.validateInstance(tile);
+            list.push(identify(tile));
+        }
+        this.list = list;
+
+        /**
+         * Notifies the list was loaded.
+         * @event load
+         */
+        this.emit('load');
+
+        return this;
     }
 
     /**
@@ -267,22 +330,6 @@ export class TileList extends List {
         this.insert(0, tile);
 
         return tile;
-    }
-
-    /**
-     * Removes a tile from the list.
-     * @param {string} id - The unique identifier of the tile to remove.
-     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
-     * @fires delete
-     */
-    remove(id) {
-        const index = this.getIndex(id);
-
-        if (index < 0) {
-            return false;
-        }
-
-        return this.delete(index) > 0;
     }
 
     /**
@@ -406,34 +453,6 @@ export class TileList extends List {
         };
 
         this.load(loadIterator);
-
-        return this;
-    }
-
-    /**
-     * Loads tiles from another source. The list is cleared before.
-     * @param {*} iterator - An iterable object that can be used to fill the list.
-     * @returns {List} - Chains the list.
-     * @fires load
-     * @throws {TypeError} - If one of the given tiles is not a TileModel.
-     */
-    load(iterator) {
-        if (!iterator || !iterator[Symbol.iterator]) {
-            return this;
-        }
-
-        const list = [];
-        for (const tile of iterator) {
-            TileModel.validateInstance(tile);
-            list.push(identify(tile));
-        }
-        this.list = list;
-
-        /**
-         * Notifies the list was loaded.
-         * @event load
-         */
-        this.emit('load');
 
         return this;
     }

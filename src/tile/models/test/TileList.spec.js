@@ -296,15 +296,27 @@ describe('TileList', () => {
         });
     });
 
-    it('can set a tile at a particular index', () => {
-        const list = new TileList(specs, source);
+    describe('can set a tile', () => {
+        it('at a particular index', () => {
+            const list = new TileList(specs, source);
 
-        expect(list.set).toEqual(expect.any(Function));
+            expect(list.set).toEqual(expect.any(Function));
 
-        expect(list.set(0, new StraightTileModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
-        expect(list.set(1, new CurvedTileModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
-        expect(list.set(2, new CurvedTileEnlargedModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
-        expect([...list]).toMatchSnapshot();
+            expect(list.set(0, new StraightTileModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
+            expect(list.set(1, new CurvedTileModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
+            expect(list.set(2, new CurvedTileEnlargedModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
+            expect([...list]).toMatchSnapshot();
+        });
+
+        it('in place of an existing tile', () => {
+            const list = new TileList(specs, source);
+
+            expect(list.setById).toEqual(expect.any(Function));
+
+            expect(list.setById(source[1].id, new StraightTileModel(specs, TILE_DIRECTION_LEFT, 2))).toBe(list);
+            expect(list.setById('id', new StraightTileModel(specs, TILE_DIRECTION_LEFT, 3))).toBe(list);
+            expect([...list]).toMatchSnapshot();
+        });
     });
 
     it('emits an event when setting a tile', () => {
@@ -317,7 +329,8 @@ describe('TileList', () => {
         list.on('set', callback);
 
         list.set(0, new StraightTileModel(specs, TILE_DIRECTION_LEFT, 3));
-        list.set(1, new CurvedTileModel(specs, TILE_DIRECTION_LEFT, 3));
+        list.setById(source[1].id, new CurvedTileModel(specs, TILE_DIRECTION_LEFT, 3));
+        list.setById('id', new CurvedTileModel(specs));
         list.set(2, new CurvedTileEnlargedModel(specs, TILE_DIRECTION_LEFT, 3));
         expect(callback).toHaveBeenCalledTimes(3);
     });
