@@ -19,6 +19,7 @@
 export { default as alternate } from './alternate.js';
 export { default as assign } from './assign.js';
 export { default as defined } from './defined.js';
+export { default as eachWord } from './eachWord.js';
 export { default as getOwnPropertyDescriptors } from './getOwnPropertyDescriptors.js';
 export { default as hasAPI } from './hasAPI.js';
 export { default as mixin } from './mixin.js';
