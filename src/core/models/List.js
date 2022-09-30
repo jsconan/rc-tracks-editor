@@ -184,14 +184,16 @@ export class List {
      * @fires add
      */
     add(...value) {
+        const index = this.list.length;
         this.list.push(...value);
 
         /**
          * Notifies values have been added to the list.
          * @event add
+         * @param {number} index - The index from where the values have been added.
          * @param {...*} value - The added value.
          */
-        this.emit('add', ...value);
+        this.emit('add', index, ...value);
 
         return this;
     }

@@ -401,10 +401,10 @@ describe('TileList', () => {
     });
 
     it('emits an event when adding tiles', () => {
-        const list = new TileList(specs);
+        const list = new TileList(specs, source);
 
-        const callback = jest.fn().mockImplementation((...value) => {
-            expect([...value]).toMatchSnapshot();
+        const callback = jest.fn().mockImplementation((index, ...value) => {
+            expect([index, ...value]).toMatchSnapshot();
         });
 
         list.on('add', callback);
@@ -561,9 +561,10 @@ describe('TileList', () => {
             });
 
             it('emits an event when adding a tile', () => {
-                const list = new TileList(specs);
+                const list = new TileList(specs, source);
 
-                const callback = jest.fn().mockImplementation(tile => {
+                const callback = jest.fn().mockImplementation((index, tile) => {
+                    expect(index).toBe(3);
                     expect(tile).toBeInstanceOf(TileModel);
                 });
 

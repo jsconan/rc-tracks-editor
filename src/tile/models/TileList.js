@@ -220,7 +220,7 @@ export class TileList extends List {
 
     /**
      * Adds a tile at the end of the list.
-     * @param {...*} tiles - The tiles to add.
+     * @param {...TileModel} tiles - The tiles to add.
      * @returns {TileList} - Chains the list.
      * @fires add
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
@@ -441,8 +441,4 @@ export class TileList extends List {
 
 /**
  * @typedef {import('./TileModel').tileExport} tileExport
- */
-
-/**
- * @typedef {import('./TileModel').TileModel} TileModel
  */

@@ -64,6 +64,7 @@ Array [
 
 exports[`List emits an event when adding values 1`] = `
 Array [
+  3,
   4,
   5,
 ]

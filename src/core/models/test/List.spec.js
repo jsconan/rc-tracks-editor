@@ -271,8 +271,8 @@ describe('List', () => {
     it('emits an event when adding values', () => {
         const list = new List(source);
 
-        const callback = jest.fn().mockImplementation((...value) => {
-            expect([...value]).toMatchSnapshot();
+        const callback = jest.fn().mockImplementation((index, ...value) => {
+            expect([index, ...value]).toMatchSnapshot();
         });
 
         list.on('add', callback);

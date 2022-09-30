@@ -1847,6 +1847,7 @@ TileList {
 
 exports[`TileList emits an event when adding tiles 1`] = `
 Array [
+  3,
   StraightTileModel {
     "direction": "left",
     "id": "id-23",
