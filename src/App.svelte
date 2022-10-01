@@ -7,7 +7,7 @@
     import { Sketch } from './track/elements';
     import { Track, TrackRef } from './track/components';
     import { buildList } from './tile/builders';
-    import { TileCoordList, TileList } from './tile/models';
+    import { TileList } from './tile/models';
     import { TileSpecifications } from './tile/config';
     import {
         CURVED_TILE_ENLARGED_TYPE,
@@ -15,6 +15,7 @@
         STRAIGHT_TILE_TYPE,
         TILE_DIRECTION_RIGHT
     } from './tile/helpers';
+    import { tileListStore } from './tile/stores';
     import { TrackModel } from './track/models';
     import { importTiles } from './track/helpers';
 
@@ -43,21 +44,25 @@
         { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 3 },
         { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 4 }
     ]);
-    const menuCoords = new TileCoordList(list, buildList, {
-        tileAngle: -90,
-        centered: true,
-        aligned: true,
-        vertical: true,
-        vPadding: 20
-    });
-    const statsCoords = new TileCoordList(list, buildList, {
-        tileAngle: -0,
-        centered: true,
-        aligned: true,
-        vertical: false,
-        hPadding: 30,
-        vPadding: 50
-    });
+    const menuCoords = tileListStore(list, list =>
+        buildList(list, {
+            tileAngle: -90,
+            centered: true,
+            aligned: true,
+            vertical: true,
+            vPadding: 20
+        })
+    );
+    const statsCoords = tileListStore(list, list =>
+        buildList(list, {
+            tileAngle: -0,
+            centered: true,
+            aligned: true,
+            vertical: false,
+            hPadding: 30,
+            vPadding: 50
+        })
+    );
 </script>
 
 <div class="page">
