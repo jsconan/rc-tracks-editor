@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { eventEmitterMixin } from '../../core/mixins';
 import { validateCallback } from '../../core/helpers';
 import { TileList } from './TileList.js';
 
@@ -30,6 +31,8 @@ export class TileListBuilder {
      * @throws {TypeError} - If the given builder is not a function.
      */
     constructor(builder, options = {}) {
+        eventEmitterMixin(this);
+
         this.setBuilder(builder);
         this.setOptions(options);
     }
@@ -51,9 +54,12 @@ export class TileListBuilder {
      * @param {listCoordBuilder} builder - The reference to the builder.
      * @returns {TileListBuilder} - Chains the instance.
      * @throws {TypeError} - If the given builder is not a function.
+     * @fires builder
      */
     setBuilder(builder) {
         validateCallback(builder, 'builder');
+
+        const previous = this.builder;
 
         /**
          * Process a list of tiles for rendering, computing the coordinates of each tile.
@@ -64,6 +70,8 @@ export class TileListBuilder {
          */
         this.builder = builder;
 
+        this.emit('builder', builder, previous);
+
         return this;
     }
 
@@ -71,9 +79,13 @@ export class TileListBuilder {
      * Sets the options that will be given to the builder on the next call.
      * @param {object} options - Some options for the builder.
      * @returns {TileListBuilder} - Chains the instance.
+     * @fires options
      */
     setOptions(options) {
+        const previous = Object.assign({}, this.options);
         this.options = Object.assign({}, options);
+
+        this.emit('options', options, previous);
 
         return this;
     }
@@ -83,9 +95,13 @@ export class TileListBuilder {
      * @param {string} name - The name of the option to set.
      * @param {*} value - The value for the option.
      * @returns {TileListBuilder} - Chains the instance.
+     * @fires option
      */
     setOption(name, value) {
+        const previous = this.options[name];
         this.options[name] = value;
+
+        this.emit('option', name, value, previous);
 
         return this;
     }
@@ -157,4 +173,26 @@ export class TileListBuilder {
 
 /**
  * @typedef {import('./TileModel.js').TileModel} TileModel
+ */
+
+/**
+ * Notifies the builder has been replaced.
+ * @event builder
+ * @param {listCoordBuilder} newBuilder - The new builder.
+ * @param {listCoordBuilder} oldBuilder - The previous builder.
+ */
+
+/**
+ * Notifies an option has changed.
+ * @event option
+ * @param {string} name - The name of the changed option.
+ * @param {*} newValue - The new value.
+ * @param {*} oldValue - The previous value.
+ */
+
+/**
+ * Notifies the options have been replaced.
+ * @event options
+ * @param {object} newOptions - The new options.
+ * @param {object} oldOptions - The previous options.
  */

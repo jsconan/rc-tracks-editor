@@ -108,6 +108,61 @@ describe('TileListBuilder', () => {
         });
     });
 
+    describe('emit events', () => {
+        it('when replacing the builder', () => {
+            const listBuilder = new TileListBuilder(mockBuilder);
+            const builder = () => {};
+
+            const callback = jest.fn().mockImplementation((newBuilder, oldBuilder) => {
+                expect(newBuilder).toBe(builder);
+                expect(oldBuilder).toBe(mockBuilder);
+            });
+
+            listBuilder.on('builder', callback);
+            listBuilder.setBuilder(builder);
+
+            expect(callback).toHaveBeenCalledTimes(1);
+        });
+
+        it('when replacing the options', () => {
+            const defaultOptions = {
+                foo: 'bar'
+            };
+            const options = {
+                bar: 'foo'
+            };
+            const listBuilder = new TileListBuilder(mockBuilder, defaultOptions);
+
+            const callback = jest.fn().mockImplementation((newOptions, oldOptions) => {
+                expect(newOptions).toEqual(options);
+                expect(oldOptions).toEqual(defaultOptions);
+            });
+
+            listBuilder.on('options', callback);
+            listBuilder.setOptions(options);
+
+            expect(callback).toHaveBeenCalledTimes(1);
+        });
+
+        it.each([
+            ['an existing option', { foo: 'bar' }, 'bar'],
+            ['a new option', {}, void 0]
+        ])('when setting %s', (type, options, previous) => {
+            const listBuilder = new TileListBuilder(mockBuilder, options);
+
+            const callback = jest.fn().mockImplementation((name, newValue, oldValue) => {
+                expect(name).toBe('foo');
+                expect(newValue).toEqual('baz');
+                expect(oldValue).toEqual(previous);
+            });
+
+            listBuilder.on('option', callback);
+            listBuilder.setOption('foo', 'baz');
+
+            expect(callback).toHaveBeenCalledTimes(1);
+        });
+    });
+
     describe('can build coordinates', () => {
         it('with the given builder options', () => {
             const builder = (list, options) => {
