@@ -262,7 +262,7 @@ export class TileList extends List {
     /**
      * Loads tiles from another source. The list is cleared before.
      * @param {*} iterator - An iterable object that can be used to fill the list.
-     * @returns {List} - Chains the instance.
+     * @returns {TileList} - Chains the instance.
      * @fires load
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
      */
