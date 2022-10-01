@@ -16,11 +16,4 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
-export { CurvedTileModel } from './CurvedTileModel.js';
-export { StraightTileModel } from './StraightTileModel.js';
-export { TileCoordList } from './TileCoordList.js';
-export { TileList } from './TileList.js';
-export { TileListBuilder } from './TileListBuilder.js';
-export { TileModel } from './TileModel.js';
-export { TileModelCounter } from './TileModelCounter.js';
+export { TrackModel } from './TrackModel.js';
