@@ -91,13 +91,6 @@ export class Counter extends Map {
         const previous = super.get(key) || 0;
         super.set(key, Math.floor(value) || 0);
 
-        /**
-         * Notifies a value has been set to the list.
-         * @event set
-         * @param {string} key - The key of the counter that was set.
-         * @param {number} newValue - The new value.
-         * @param {number} oldValue - The previous value.
-         */
         this.emit('set', key, value, previous);
 
         return this;
@@ -114,12 +107,6 @@ export class Counter extends Map {
         const deleted = super.delete(key);
 
         if (deleted) {
-            /**
-             * Notifies a counter has been removed.
-             * @event delete
-             * @param {string} key - The key of the counter that was removed.
-             * @param {number} value - The last value of the removed counter.
-             */
             this.emit('delete', key, value);
         }
 
@@ -158,10 +145,6 @@ export class Counter extends Map {
     clear() {
         super.clear();
 
-        /**
-         * Notifies all counter were removed.
-         * @event clear
-         */
         this.emit('clear');
 
         return this;
@@ -193,3 +176,23 @@ export class Counter extends Map {
         }
     }
 }
+
+/**
+ * Notifies a value has been set to a counter.
+ * @event set
+ * @param {string} key - The key of the counter that was set.
+ * @param {number} newValue - The new value.
+ * @param {number} oldValue - The previous value.
+ */
+
+/**
+ * Notifies a counter has been removed.
+ * @event delete
+ * @param {string} key - The key of the counter that was removed.
+ * @param {number} value - The last value of the removed counter.
+ */
+
+/**
+ * Notifies all counter has been removed.
+ * @event clear
+ */

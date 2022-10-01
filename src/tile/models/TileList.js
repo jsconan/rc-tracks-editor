@@ -134,11 +134,6 @@ export class TileList extends List {
         if (this.length) {
             this.forEach(tile => tile.setSpecs(specs));
 
-            /**
-             * Notifies the tile specification have changed.
-             * @event specs
-             * @param {TileSpecifications} specs - The specifications for the tiles.
-             */
             this.emit('specs', specs);
         }
 
@@ -152,10 +147,6 @@ export class TileList extends List {
      * @fires update
      */
     update() {
-        /**
-         * Notifies a change in the tiles.
-         * @event update
-         */
         this.emit('update');
 
         return this;
@@ -287,10 +278,6 @@ export class TileList extends List {
         }
         this.list = list;
 
-        /**
-         * Notifies the list was loaded.
-         * @event load
-         */
         this.emit('load');
 
         return this;
@@ -460,4 +447,20 @@ export class TileList extends List {
 
 /**
  * @typedef {import('./TileModel.js').tileExport} tileExport
+ */
+
+/**
+ * Notifies the tile specification have changed.
+ * @event specs
+ * @param {TileSpecifications} specs - The specifications for the tiles.
+ */
+
+/**
+ * Notifies a change applied to the tiles.
+ * @event update
+ */
+
+/**
+ * Notifies the list has been loaded.
+ * @event load
  */

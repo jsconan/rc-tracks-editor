@@ -144,63 +144,44 @@ export class List {
         const previous = this.list[index];
         this.list[index] = value;
 
-        /**
-         * Notifies a value has been set to the list.
-         * @event set
-         * @param {number} index - The index where the value was set.
-         * @param {*} newValue - The new value.
-         * @param {*} oldValue - The previous value.
-         */
         this.emit('set', index, value, previous);
 
         return this;
     }
 
     /**
-     * Inserts a value at a particular index.
-     * @param {number} index - The index where to insert the value.
-     * @param {...*} value - The value to insert at the index.
+     * Inserts values at a particular index.
+     * @param {number} index - The index where to insert the values.
+     * @param {...*} values - The values to insert at the index.
      * @returns {List} - Chains the list.
      * @fires add
      */
-    insert(index, ...value) {
-        this.list.splice(index, 0, ...value);
+    insert(index, ...values) {
+        this.list.splice(index, 0, ...values);
 
-        /**
-         * Notifies values have been added to the list.
-         * @event add
-         * @param {number} index - The index from where the values have been added.
-         * @param {...*} value - The added value.
-         */
-        this.emit('add', index, ...value);
+        this.emit('add', index, ...values);
 
         return this;
     }
 
     /**
-     * Adds a value at the end of the list.
-     * @param {...*} value - The value to add.
+     * Adds values at the end of the list.
+     * @param {...*} values - The values to add.
      * @returns {List} - Chains the list.
      * @fires add
      */
-    add(...value) {
+    add(...values) {
         const index = this.list.length;
-        this.list.push(...value);
+        this.list.push(...values);
 
-        /**
-         * Notifies values have been added to the list.
-         * @event add
-         * @param {number} index - The index from where the values have been added.
-         * @param {...*} value - The added value.
-         */
-        this.emit('add', index, ...value);
+        this.emit('add', index, ...values);
 
         return this;
     }
 
     /**
-     * Removes a value from the given index.
-     * @param {number} index - The index from where remove the value.
+     * Removes values from the given index.
+     * @param {number} index - The index from where remove the values.
      * @param {number} count - The number of values to remove from the index.
      * @returns {number} - The number of deleted values.
      * @fires delete
@@ -210,12 +191,6 @@ export class List {
         const deleted = removed.length;
 
         if (deleted) {
-            /**
-             * Notifies values have been removed from the list.
-             * @event delete
-             * @param {number} index - The index from where the values were removed.
-             * @param {...*} value - The removed value.
-             */
             this.emit('delete', index, ...removed);
         }
 
@@ -230,10 +205,6 @@ export class List {
     clear() {
         this.list = [];
 
-        /**
-         * Notifies the list was cleared.
-         * @event clear
-         */
         this.emit('clear');
 
         return this;
@@ -252,10 +223,6 @@ export class List {
 
         this.list = [...iterator];
 
-        /**
-         * Notifies the list was loaded.
-         * @event load
-         */
         this.emit('load');
 
         return this;
@@ -288,4 +255,36 @@ export class List {
  * @param {number} index - The index of the current value being traversed.
  * @returns {*} - Returns a value expected by the context.
  * @callback listCallback
+ */
+
+/**
+ * Notifies a value has been set to the list.
+ * @event set
+ * @param {number} index - The index where the value was set.
+ * @param {*} newValue - The new value.
+ * @param {*} oldValue - The previous value.
+ */
+
+/**
+ * Notifies values have been added to the list.
+ * @event add
+ * @param {number} index - The index from where the values have been added.
+ * @param {...*} values - The added values.
+ */
+
+/**
+ * Notifies values have been removed from the list.
+ * @event delete
+ * @param {number} index - The index from where the values were removed.
+ * @param {...*} values - The removed values.
+ */
+
+/**
+ * Notifies the list has been cleared.
+ * @event clear
+ */
+
+/**
+ * Notifies the list has been loaded.
+ * @event load
  */

@@ -88,20 +88,9 @@ export class TileModelCounter extends Counter {
             const model = tile.clone().setDirection(TILE_DIRECTION_RIGHT);
             this.models.set(modelId, model);
 
-            /**
-             * Notifies a tile model has been added.
-             * @event addmodel
-             * @param {string} key - The key of the tile model that was added.
-             * @param {TileModel} model - The tile model that was added.
-             */
             this.emit('addmodel', modelId, model);
         }
 
-        /**
-         * Notifies a tile has been added.
-         * @event addtile
-         * @param {TileModel} tile - The tile that was added.
-         */
         this.emit('addtile', tile);
 
         return this;
@@ -128,11 +117,6 @@ export class TileModelCounter extends Counter {
                 this.delete(modelId);
             }
 
-            /**
-             * Notifies a tile has been removed.
-             * @event removetile
-             * @param {TileModel} tile - The tile that was removed.
-             */
             this.emit('removetile', tile);
         }
 
@@ -151,12 +135,6 @@ export class TileModelCounter extends Counter {
         const deleted = this.models.delete(key);
 
         if (deleted) {
-            /**
-             * Notifies a tile model has been removed.
-             * @event deletemodel
-             * @param {string} key - The key of the tile model that was removed.
-             * @param {TileModel} model - The tile model that was removed.
-             */
             this.emit('deletemodel', key, model);
         }
 
@@ -188,4 +166,30 @@ export class TileModelCounter extends Counter {
 
 /**
  * @typedef {import('./TileModel.js').TileModel} TileModel
+ */
+
+/**
+ * Notifies a tile model has been added.
+ * @event addmodel
+ * @param {string} key - The key of the tile model that was added.
+ * @param {TileModel} model - The tile model that was added.
+ */
+
+/**
+ * Notifies a tile model has been removed.
+ * @event deletemodel
+ * @param {string} key - The key of the tile model that was removed.
+ * @param {TileModel} model - The tile model that was removed.
+ */
+
+/**
+ * Notifies a tile has been added.
+ * @event addtile
+ * @param {TileModel} tile - The tile that was added.
+ */
+
+/**
+ * Notifies a tile has been removed.
+ * @event removetile
+ * @param {TileModel} tile - The tile that was removed.
  */
