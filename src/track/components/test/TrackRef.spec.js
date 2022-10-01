@@ -21,8 +21,7 @@ import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import TrackRef from '../TrackRef.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
-import { buildTrack } from '../../../tile/builders';
-import { TileCoordList, TileList } from '../../../tile/models';
+import { TrackModel } from '../../models';
 import { TileSpecifications } from '../../../tile/config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
@@ -35,17 +34,17 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const tileList = new TileList(specs);
-tileList.import([
+const track = new TrackModel(specs);
+track.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
 ]);
-const listCoord = new TileCoordList(tileList, buildTrack, { hPadding: 10, vPadding: 20, startAngle: 90 });
+track.setBuilderOptions({ hPadding: 10, vPadding: 20, startAngle: 90 });
 
 describe('TrackRef', () => {
     it('renders with default values', () => {
-        const props = { list: listCoord };
+        const props = { track };
         const { container } = render(Context, {
             props: {
                 component: TrackRef,
@@ -60,7 +59,7 @@ describe('TrackRef', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            list: listCoord,
+            track,
             x: 100,
             y: 200,
             width: 400,
@@ -80,7 +79,7 @@ describe('TrackRef', () => {
 
     it('updates when the model is modified', async () => {
         const props = {
-            list: listCoord,
+            track,
             x: 100,
             y: 200,
             width: 400,
@@ -96,7 +95,7 @@ describe('TrackRef', () => {
         });
 
         await tick();
-        tileList.append();
+        track.append();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });
@@ -105,27 +104,21 @@ describe('TrackRef', () => {
         expect(() =>
             render(TrackRef, {
                 props: {
-                    list: {}
-                }
-            })
-        ).toThrow("'list' is not a store with a 'subscribe' method");
-
-        expect(() =>
-            render(TrackRef, {
-                props: {
-                    list: {
+                    track: {
                         subscribe() {
                             return () => {};
                         }
                     }
                 }
             })
-        ).toThrow('The object must be an instance of TileCoordList!');
+        ).toThrow('The object must be an instance of TrackModel!');
     });
 
     it('fires click', () => {
-        const onClick = jest.fn();
-        const props = { list: listCoord };
+        const onClick = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        const props = { track };
         const { container, component } = render(Context, {
             props: {
                 component: TrackRef,
@@ -143,7 +136,7 @@ describe('TrackRef', () => {
     });
 
     it('renders with the given element in slots', () => {
-        const props = { list: listCoord, component: TrackRef };
+        const props = { track, component: TrackRef };
         const { container } = render(Context, {
             props: {
                 component: TrackWithSlot,

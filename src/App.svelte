@@ -6,7 +6,7 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { Track, TrackRef } from './track/components';
-    import { buildList, buildTrack } from './tile/builders';
+    import { buildList } from './tile/builders';
     import { TileCoordList, TileList } from './tile/models';
     import { TileSpecifications } from './tile/config';
     import {
@@ -15,6 +15,7 @@
         STRAIGHT_TILE_TYPE,
         TILE_DIRECTION_RIGHT
     } from './tile/helpers';
+    import { TrackModel } from './track/models';
 
     const angle = -90;
     const barrierChunks = config.barrierChunks;
@@ -28,9 +29,9 @@
         console.log(event.detail);
     }
 
-    const track = new TileList(specs);
-    const trackCoords = new TileCoordList(track, buildTrack, { startAngle: angle, hPadding: 20, vPadding: 20 });
-    track.subscribe(() => console.log(JSON.stringify(track.export())));
+    const track = new TrackModel(specs);
+    track.setBuilderOptions({ startAngle: angle, hPadding: 20, vPadding: 20 });
+    track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
 
     const list = new TileList(specs);
     list.import([
@@ -64,7 +65,7 @@
         <aside>
             <Sketch width="100%" height="100%">
                 <Track
-                    list={menuCoords}
+                    track={menuCoords}
                     on:click={event => {
                         click(event);
                         track.append(event.detail.type, event.detail.direction, event.detail.ratio);
@@ -75,13 +76,13 @@
         <section>
             <nav>
                 <Sketch width="100%" height="100%">
-                    <Track list={statsCoords} on:click={click} />
+                    <Track track={statsCoords} on:click={click} />
                 </Sketch>
             </nav>
             <article>
                 <Sketch width="100%" height="100%" style="background-color: gray;">
                     <TrackRef
-                        list={trackCoords}
+                        {track}
                         on:click={event => {
                             click(event);
                             track.getById(event.detail.id).flipDirection();

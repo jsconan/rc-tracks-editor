@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TrackRef fires click 1`] = `
+Object {
+  "angle": 90,
+  "direction": "right",
+  "id": "id-0",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TrackRef fires click 2`] = `
+Object {
+  "angle": 90,
+  "direction": "right",
+  "id": "id-1",
+  "ratio": 1,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`TrackRef fires click 3`] = `
+Object {
+  "angle": 180,
+  "direction": "right",
+  "id": "id-2",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+  "x": -165,
+  "y": -54.99999999999999,
+}
+`;
+
 exports[`TrackRef renders with default values 1`] = `
 <body>
   <div>
@@ -259,7 +295,6 @@ exports[`TrackRef renders with default values 1`] = `
 
 exports[`TrackRef renders with the given element in slots 1`] = `
 <body>
-  <div />
   <div />
   <div>
     <svg

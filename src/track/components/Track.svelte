@@ -2,26 +2,18 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { buildTrack } from '../../tile/builders';
     import { Sketch } from '../elements';
-    import { TileCoordList, TileList } from '../../tile/models';
     import { Tile } from '../../tile/components';
 
-    export let list;
+    export let track;
     export let x = 0;
     export let y = 0;
     export let width = void 0;
     export let height = void 0;
-
-    if (!(list instanceof TileList) && !(list instanceof TileCoordList)) {
-        throw 'The list must be either an instance of TileList or TileCoordList!';
-    }
-
-    $: track = list instanceof TileList ? buildTrack($list) : $list;
 </script>
 
-<Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
-    {#each track.tiles as { id, type, direction, ratio, x, y, angle } (id)}
+<Sketch {x} {y} {width} {height} viewX={$track.x} viewY={$track.y} viewWidth={$track.width} viewHeight={$track.height}>
+    {#each $track.tiles as { id, type, direction, ratio, x, y, angle } (id)}
         <Tile {type} {direction} {ratio} {angle} {x} {y} {id} on:click />
     {/each}
     <slot name="defs" slot="defs" />

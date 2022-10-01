@@ -22,7 +22,8 @@ import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../../tile/builders';
-import { TileCoordList, TileList } from '../../../tile/models';
+import { TileList } from '../../../tile/models';
+import { tileListStore } from '../../../tile/stores';
 import { TileSpecifications } from '../../../tile/config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
@@ -41,14 +42,11 @@ tileList.import([
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
 ]);
-const listCoord = new TileCoordList(tileList, buildTrack, { hPadding: 10, vPadding: 20, startAngle: 90 });
+const track = tileListStore(tileList, list => buildTrack(list, { hPadding: 10, vPadding: 20, startAngle: 90 }));
 
 describe('Track', () => {
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with default values using a %s', (type, list) => {
-        const props = { list };
+    it('renders with default values', () => {
+        const props = { track };
         const { container } = render(Context, {
             props: {
                 component: Track,
@@ -61,12 +59,9 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with the given parameters using a %s', (type, list) => {
+    it('renders with the given parameters', () => {
         const props = {
-            list,
+            track,
             x: 100,
             y: 200,
             width: 400,
@@ -84,12 +79,9 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('updates when the %s model is modified', async (type, list) => {
+    it('updates when the store is modified', async () => {
         const props = {
-            list,
+            track,
             x: 100,
             y: 200,
             width: 400,
@@ -110,34 +102,21 @@ describe('Track', () => {
         expect(rendered.container).toMatchSnapshot();
     });
 
-    it('needs a valid model', () => {
+    it('needs a valid store', () => {
         expect(() =>
             render(Track, {
                 props: {
-                    list: {}
+                    track: {}
                 }
             })
-        ).toThrow("'list' is not a store with a 'subscribe' method");
-
-        expect(() =>
-            render(Track, {
-                props: {
-                    list: {
-                        subscribe() {
-                            return () => {};
-                        }
-                    }
-                }
-            })
-        ).toThrow('The list must be either an instance of TileList or TileCoordList!');
+        ).toThrow("'track' is not a store with a 'subscribe' method");
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('fires click from a track built with a %s', (type, list) => {
-        const onClick = jest.fn();
-        const props = { list };
+    it('fires click event', () => {
+        const onClick = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        const props = { track };
         const { container, component } = render(Context, {
             props: {
                 component: Track,
@@ -154,11 +133,8 @@ describe('Track', () => {
         expect(onClick).toHaveBeenCalledTimes(3);
     });
 
-    it.each([
-        ['TileList', tileList],
-        ['TileCoordList', listCoord]
-    ])('renders with the given element in slots using a %s', (type, list) => {
-        const props = { list, component: Track };
+    it('renders with the given element in slots', () => {
+        const props = { track, component: Track };
         const { container } = render(Context, {
             props: {
                 component: TrackWithSlot,
