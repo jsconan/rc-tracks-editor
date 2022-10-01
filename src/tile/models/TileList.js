@@ -461,6 +461,33 @@ export class TileList extends List {
  */
 
 /**
+ * Notifies a tile has been set to the list.
+ * @event set
+ * @param {number} index - The index where the tile was set.
+ * @param {TileModel} newTile - The new tile.
+ * @param {TileModel} oldTile - The previous tile.
+ */
+
+/**
+ * Notifies tiles have been added to the list.
+ * @event add
+ * @param {number} index - The index from where the tiles have been added.
+ * @param {...TileModel} tiles - The added tiles.
+ */
+
+/**
+ * Notifies tiles have been removed from the list.
+ * @event delete
+ * @param {number} index - The index from where the tiles were removed.
+ * @param {...TileModel} tiles - The removed tiles.
+ */
+
+/**
+ * Notifies the list has been cleared.
+ * @event clear
+ */
+
+/**
  * Notifies the list has been loaded.
  * @event load
  */
