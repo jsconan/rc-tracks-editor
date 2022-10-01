@@ -133,40 +133,40 @@ describe('TileList', () => {
 
     describe('throws error', () => {
         it('when trying to set an invalid specifications object', () => {
-            const track = new TileList(specs);
-            expect(() => track.setSpecs({})).toThrow(
+            const list = new TileList(specs);
+            expect(() => list.setSpecs({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
         });
 
         it('when trying to add a tile that is not a TileModel', () => {
-            const track = new TileList(specs);
-            expect(() => track.add({})).toThrow('The object must be an instance of TileModel!');
-            expect(() => track.set(0, {})).toThrow('The object must be an instance of TileModel!');
-            expect(() => track.insert(0, {})).toThrow('The object must be an instance of TileModel!');
-            expect(() => track.load([{}])).toThrow('The object must be an instance of TileModel!');
+            const list = new TileList(specs);
+            expect(() => list.add({})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.set(0, {})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.insert(0, {})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.load([{}])).toThrow('The object must be an instance of TileModel!');
         });
 
         it('when trying to add a tile with an invalid type', () => {
-            const track = new TileList(specs);
-            const tile = track.append();
-            expect(() => track.append('')).toThrow('A valid type of tile is needed!');
-            expect(() => track.prepend('')).toThrow('A valid type of tile is needed!');
-            expect(() => track.replace(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => track.insertBefore(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => track.insertAfter(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => track.import([{ type: '' }])).toThrow('A valid type of tile is needed!');
+            const list = new TileList(specs);
+            const tile = list.append();
+            expect(() => list.append('')).toThrow('A valid type of tile is needed!');
+            expect(() => list.prepend('')).toThrow('A valid type of tile is needed!');
+            expect(() => list.replace(tile.id, '')).toThrow('A valid type of tile is needed!');
+            expect(() => list.insertBefore(tile.id, '')).toThrow('A valid type of tile is needed!');
+            expect(() => list.insertAfter(tile.id, '')).toThrow('A valid type of tile is needed!');
+            expect(() => list.import([{ type: '' }])).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
-            const track = new TileList(specs);
-            const tile = track.append();
-            expect(() => track.append(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.prepend(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.replace(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.insertBefore(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.insertAfter(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.import([{ type: CURVED_TILE_TYPE, direction: '' }])).toThrow(
+            const list = new TileList(specs);
+            const tile = list.append();
+            expect(() => list.append(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.prepend(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.replace(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.insertBefore(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.insertAfter(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.import([{ type: CURVED_TILE_TYPE, direction: '' }])).toThrow(
                 'A valid direction is needed!'
             );
         });
