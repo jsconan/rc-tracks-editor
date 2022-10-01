@@ -102,7 +102,7 @@ export class TileModelCounter extends Counter {
      * @param {TileModel} tile - The tile to count.
      * @returns {TileModelCounter} - Chains the counter.
      * @fires set
-     * @fires deletemodel
+     * @fires removemodel
      * @fires delete
      * @fires removetile
      */
@@ -127,7 +127,7 @@ export class TileModelCounter extends Counter {
      * Removes a counter together with its related tile model.
      * @param {string} key - The key of the counter to delete.
      * @returns {boolean} - Returns `true` if a counter was deleted.
-     * @fires deletemodel
+     * @fires removemodel
      * @fires delete
      */
     delete(key) {
@@ -135,7 +135,7 @@ export class TileModelCounter extends Counter {
         const deleted = this.models.delete(key);
 
         if (deleted) {
-            this.emit('deletemodel', key, model);
+            this.emit('removemodel', key, model);
         }
 
         return super.delete(key);
@@ -177,7 +177,7 @@ export class TileModelCounter extends Counter {
 
 /**
  * Notifies a tile model has been removed.
- * @event deletemodel
+ * @event removemodel
  * @param {string} key - The key of the tile model that was removed.
  * @param {TileModel} model - The tile model that was removed.
  */

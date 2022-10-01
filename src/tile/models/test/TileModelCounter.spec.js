@@ -208,18 +208,18 @@ describe('TileModelCounter', () => {
             expect(value).toBe(1);
         });
 
-        const deleteModelCallback = jest.fn().mockImplementation((key, model) => {
+        const removeModelCallback = jest.fn().mockImplementation((key, model) => {
             expect(key).toBe(keys[1]);
             expect(model).toBe(tileModel);
         });
 
         counters.on('delete', deleteCallback);
-        counters.on('deletemodel', deleteModelCallback);
+        counters.on('removemodel', removeModelCallback);
 
         counters.delete(keys[1]);
         counters.delete(keys[1]);
         expect(deleteCallback).toHaveBeenCalledTimes(1);
-        expect(deleteModelCallback).toHaveBeenCalledTimes(1);
+        expect(removeModelCallback).toHaveBeenCalledTimes(1);
     });
 
     it('can increment a counter', () => {
@@ -388,7 +388,7 @@ describe('TileModelCounter', () => {
             expect(model).toBe(tile);
         });
 
-        counters.on('deletemodel', modelCallback);
+        counters.on('removemodel', modelCallback);
         counters.on('removetile', tileCallback);
 
         expect(counters.get(tile.modelId)).toBe(2);
