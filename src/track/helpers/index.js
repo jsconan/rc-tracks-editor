@@ -17,3 +17,4 @@
  */
 
 export { default as createTile } from './createTile.js';
+export { default as importTiles } from './importTiles.js';

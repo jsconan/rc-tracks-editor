@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`importTiles imports tiles from an object 1`] = `
+TileList {
+  "delegate": [Function],
+  "emit": [Function],
+  "list": Array [],
+  "listens": [Function],
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+}
+`;
+
+exports[`importTiles imports tiles from an object 2`] = `
+TileList {
+  "delegate": [Function],
+  "emit": [Function],
+  "list": Array [
+    CurvedTileModel {
+      "direction": "left",
+      "id": "id-0",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+    StraightTileModel {
+      "direction": "right",
+      "id": "id-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+    CurvedTileModel {
+      "direction": "right",
+      "id": "id-2",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+      },
+    },
+  ],
+  "listens": [Function],
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+  },
+  "subscribe": [Function],
+}
+`;

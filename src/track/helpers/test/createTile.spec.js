@@ -32,7 +32,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-describe('', () => {
+describe('createTile', () => {
     it('is a function', () => {
         expect(createTile).toEqual(expect.any(Function));
     });
