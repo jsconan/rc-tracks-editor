@@ -239,9 +239,9 @@ export class TileCoordList {
  */
 
 /**
- * @typedef {import('../models/TileModel.js').tileRect} tileRect
+ * @typedef {import('./TileModel.js').tileRect} tileRect
  */
 
 /**
- * @typedef {import('../models').TileModel} TileModel
+ * @typedef {import('./TileModel.js').TileModel} TileModel
  */

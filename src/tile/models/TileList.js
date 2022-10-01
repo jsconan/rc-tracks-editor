@@ -459,5 +459,5 @@ export class TileList extends List {
 }
 
 /**
- * @typedef {import('./TileModel').tileExport} tileExport
+ * @typedef {import('./TileModel.js').tileExport} tileExport
  */
