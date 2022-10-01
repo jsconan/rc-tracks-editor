@@ -16,6 +16,7 @@
         TILE_DIRECTION_RIGHT
     } from './tile/helpers';
     import { TrackModel } from './track/models';
+    import { importTiles } from './track/helpers';
 
     const angle = -90;
     const barrierChunks = config.barrierChunks;
@@ -34,7 +35,7 @@
     track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
 
     const list = new TileList(specs);
-    list.import([
+    importTiles(list, [
         { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
         { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
         { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },

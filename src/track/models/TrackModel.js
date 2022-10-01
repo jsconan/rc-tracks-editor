@@ -22,7 +22,7 @@ import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
 import { TileList, TileListBuilder, TileModelCounter } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileListStore } from '../../tile/stores';
-import { createTile } from '../helpers';
+import { createTile, importTiles } from '../helpers';
 
 /**
  * Represents a race track.
@@ -315,32 +315,7 @@ export class TrackModel {
      * @fires load
      */
     import(data) {
-        if (!data || !data[Symbol.iterator]) {
-            return this;
-        }
-
-        const specs = this.specs;
-        const dataIterator = data[Symbol.iterator]();
-        const loadIterator = {
-            next() {
-                const next = dataIterator.next();
-
-                if (next.done) {
-                    return next;
-                }
-
-                const { type, direction, ratio } = next.value || {};
-                const tile = createTile(specs, type, direction, ratio);
-
-                return { done: false, value: tile };
-            },
-
-            [Symbol.iterator]() {
-                return this;
-            }
-        };
-
-        this.tiles.load(loadIterator);
+        importTiles(this.tiles, data);
 
         return this;
     }
