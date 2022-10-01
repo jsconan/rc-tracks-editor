@@ -18,50 +18,11 @@
 
 import { eventEmitterMixin } from '../../core/mixins';
 import { buildTrack } from '../../tile/builders';
-import {
-    validateType,
-    CURVED_TILE_ENLARGED_TYPE,
-    CURVED_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    TILE_DIRECTION_RIGHT
-} from '../../tile/helpers';
-import {
-    CurvedTileEnlargedModel,
-    CurvedTileModel,
-    StraightTileModel,
-    TileList,
-    TileListBuilder,
-    TileModelCounter
-} from '../../tile/models';
+import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
+import { TileList, TileListBuilder, TileModelCounter } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileListStore } from '../../tile/stores';
-
-/**
- * @type {object} - Maps the types of tile to their respective model.
- * @private
- */
-const modelsMap = {
-    [STRAIGHT_TILE_TYPE]: StraightTileModel,
-    [CURVED_TILE_TYPE]: CurvedTileModel,
-    [CURVED_TILE_ENLARGED_TYPE]: CurvedTileEnlargedModel
-};
-
-/**
- * Creates the tile model with respect to the given type.
- * @param {TileSpecifications} specs - The specifications for the tiles.
- * @param {string} type - The type of tile.
- * @param {string} direction - The direction of the tile.
- * @param {number} ratio - The size ratio of the tile.
- * @returns {TileModel} - Returns a tile model of the expected type.
- * @throws {TypeError} - If the given specifications object is not valid.
- * @throws {TypeError} - If the given type is not valid.
- * @throws {TypeError} - If the given direction is not valid.
- * @private
- */
-function createTile(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-    validateType(type);
-    return new modelsMap[type](specs, direction, ratio);
-}
+import { createTile } from '../helpers';
 
 /**
  * Represents a race track.
