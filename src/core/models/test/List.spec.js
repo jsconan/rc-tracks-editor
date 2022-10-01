@@ -251,7 +251,7 @@ describe('List', () => {
             expect([index, ...value]).toMatchSnapshot();
         });
 
-        list.on('insert', callback);
+        list.on('add', callback);
 
         list.insert(3, 4, 5);
         list.insert(1, 2.5, 2.75);

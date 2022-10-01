@@ -389,7 +389,7 @@ describe('TileList', () => {
             expect([index, ...value]).toMatchSnapshot();
         });
 
-        list.on('insert', callback);
+        list.on('add', callback);
 
         list.insert(
             1,
@@ -672,7 +672,7 @@ describe('TileList', () => {
                     expect(tile).toBeInstanceOf(TileModel);
                 });
 
-                list.on('insert', callback);
+                list.on('add', callback);
 
                 list.prepend();
                 expect(callback).toHaveBeenCalledTimes(1);
@@ -751,7 +751,7 @@ describe('TileList', () => {
                     expect(newTile).not.toBe(tile);
                 });
 
-                list.on('insert', callback);
+                list.on('add', callback);
 
                 list.insertBefore(tile.id);
                 expect(callback).toHaveBeenCalledTimes(1);
@@ -830,7 +830,7 @@ describe('TileList', () => {
                     expect(newTile).not.toBe(tile);
                 });
 
-                list.on('insert', callback);
+                list.on('add', callback);
 
                 list.insertAfter(tile.id);
                 expect(callback).toHaveBeenCalledTimes(1);

@@ -161,18 +161,18 @@ export class List {
      * @param {number} index - The index where to insert the value.
      * @param {...*} value - The value to insert at the index.
      * @returns {List} - Chains the list.
-     * @fires insert
+     * @fires add
      */
     insert(index, ...value) {
         this.list.splice(index, 0, ...value);
 
         /**
-         * Notifies values have been inserted into the list.
-         * @event insert
-         * @param {number} index - The index where the values have been inserted.
-         * @param {...*} value - The inserted values.
+         * Notifies values have been added to the list.
+         * @event add
+         * @param {number} index - The index from where the values have been added.
+         * @param {...*} value - The added value.
          */
-        this.emit('insert', index, ...value);
+        this.emit('add', index, ...value);
 
         return this;
     }

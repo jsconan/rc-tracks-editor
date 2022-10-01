@@ -32,7 +32,6 @@ export default (boundTo = null, update = null) => {
         [
             // List events
             'set',
-            'insert',
             'add',
             'delete',
             'clear',

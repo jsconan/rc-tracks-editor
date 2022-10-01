@@ -226,7 +226,7 @@ export class TileList extends List {
      * @param {number} index - The index where to insert the tile.
      * @param {...TileModel} tiles - The tiles to insert at the index.
      * @returns {TileList} - Chains the instance.
-     * @fires insert
+     * @fires add
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
      */
     insert(index, ...tiles) {
@@ -322,7 +322,7 @@ export class TileList extends List {
      * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
-     * @fires insert
+     * @fires add
      */
     prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const tile = createTile(this.specs, type, direction, ratio);
@@ -368,7 +368,7 @@ export class TileList extends List {
      * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
-     * @fires insert
+     * @fires add
      */
     insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getIndex(id);
@@ -394,7 +394,7 @@ export class TileList extends List {
      * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
-     * @fires insert
+     * @fires add
      */
     insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         const index = this.getIndex(id);
