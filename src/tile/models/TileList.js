@@ -42,19 +42,6 @@ const modelsMap = {
 };
 
 /**
- * Makes sure a tile has a unique identifier.
- * @param {TileModel} tile - The tile for which set the identifier.
- * @returns {TileModel} - Returns the given tile model.
- * @private
- */
-function identify(tile) {
-    if (tile.id === tile.modelId) {
-        tile.id = uid();
-    }
-    return tile;
-}
-
-/**
  * Represents a list of tiles.
  */
 export class TileList extends List {
@@ -166,7 +153,7 @@ export class TileList extends List {
      */
     set(index, tile) {
         TileModel.validateInstance(tile);
-        return super.set(index, identify(tile));
+        return super.set(index, TileList.identify(tile));
     }
 
     /**
@@ -180,7 +167,7 @@ export class TileList extends List {
     insert(index, ...tiles) {
         tiles.forEach(tile => {
             TileModel.validateInstance(tile);
-            identify(tile);
+            TileList.identify(tile);
         });
         return super.insert(index, ...tiles);
     }
@@ -195,7 +182,7 @@ export class TileList extends List {
     add(...tiles) {
         tiles.forEach(tile => {
             TileModel.validateInstance(tile);
-            identify(tile);
+            TileList.identify(tile);
         });
         return super.add(...tiles);
     }
@@ -231,7 +218,7 @@ export class TileList extends List {
         const list = [];
         for (const tile of iterator) {
             TileModel.validateInstance(tile);
-            list.push(identify(tile));
+            list.push(TileList.identify(tile));
         }
         this.list = list;
 
@@ -416,6 +403,19 @@ export class TileList extends List {
     static createTile(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
         validateType(type);
         return new modelsMap[type](specs, direction, ratio);
+    }
+
+    /**
+     * Makes sure a tile has a unique identifier.
+     * @param {TileModel} tile - The tile for which set the identifier.
+     * @returns {TileModel} - Returns the given tile model.
+     * @private
+     */
+    static identify(tile) {
+        if (tile && tile.id === tile.modelId) {
+            tile.id = uid();
+        }
+        return tile;
     }
 }
 

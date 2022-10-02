@@ -931,6 +931,27 @@ describe('TileList', () => {
             });
         });
 
+        describe('identify', () => {
+            it('which can assign a unique identifier to a tile', () => {
+                const tile = TileList.createTile(specs);
+                expect(tile.id).toBe(tile.modelId);
+                expect(TileList.identify(tile)).toBe(tile);
+                expect(tile.id).not.toBe(tile.modelId);
+
+                const tile2 = TileList.createTile(specs);
+                TileList.identify(tile2);
+                expect(tile2.modelId).toBe(tile.modelId);
+                expect(tile2.id).not.toBe(tile.id);
+
+                const obj = {};
+                expect(obj.id).toBeUndefined();
+                expect(TileList.identify(obj)).toBe(obj);
+                expect(obj.id).toEqual(expect.any(String));
+
+                expect(TileList.identify()).toBeUndefined();
+            });
+        });
+
         describe('validateInstance', () => {
             it('which can validate an object is an instance of the class', () => {
                 const list = new TileList(specs);
