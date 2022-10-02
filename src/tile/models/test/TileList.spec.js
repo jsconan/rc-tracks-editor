@@ -939,33 +939,4 @@ describe('TileList', () => {
             });
         });
     });
-
-    it('can notify changes', () => {
-        const list = new TileList(specs);
-
-        const callback = jest.fn().mockImplementation(value => {
-            expect(value).toBe(list);
-            expect(value).toMatchSnapshot();
-        });
-
-        const unsubscribe = list.subscribe(callback); // callback called
-
-        list.setSpecs(specs);
-        const tile1 = list.append(CURVED_TILE_TYPE); // callback called
-        const tile2 = list.prepend(CURVED_TILE_TYPE); // callback called
-        list.remove(tile1.id); // callback called
-        const tile3 = list.replace(tile2.id); // callback called
-        list.insertBefore(tile3.id); // callback called
-        list.insertAfter(tile3.id); // callback called
-        const data = list.export();
-        list.clear(); // callback called
-        list.import(data); // callback called
-        list.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
-        list.update(); // callback called
-
-        unsubscribe();
-        list.append();
-
-        expect(callback).toHaveBeenCalledTimes(11);
-    });
 });
