@@ -19,7 +19,8 @@
 import { eventEmitterMixin } from '../../core/mixins';
 import { buildTrack } from '../helpers';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
-import { TileList, TileListBuilder, TileModelCounter } from '../../tile/models';
+import { TileList, TileModelCounter } from '../../tile/models';
+import { TrackBuilder } from './TrackBuilder.js';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileListStore } from '../../tile/stores';
 
@@ -38,7 +39,7 @@ export class TrackModel {
         this.specs = specs;
         this.tiles = new TileList(specs);
         this.counter = new TileModelCounter();
-        this.builder = new TileListBuilder(buildTrack);
+        this.builder = new TrackBuilder(buildTrack);
 
         this.tilesStore = tileListStore(this.tiles, list => this.builder.build(list));
         this.modelsStore = tileCounterStore(this.counter);
@@ -309,7 +310,7 @@ export class TrackModel {
 
     /**
      * Changes the builder.
-     * @param {listCoordBuilder} builder - The reference to the builder.
+     * @param {trackCoordBuilder} builder - The reference to the builder.
      * @returns {TrackModel} - Chains the instance.
      * @throws {TypeError} - If the given builder is not a function.
      */
@@ -382,7 +383,7 @@ export class TrackModel {
  */
 
 /**
- * @typedef {import('../../tile/model/TileListBuilder.js').listCoordBuilder} listCoordBuilder
+ * @typedef {import('./TrackBuilder.js').trackCoordBuilder} trackCoordBuilder
  */
 
 /**

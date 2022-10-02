@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TileListBuilder can build coordinates with a new builder 1`] = `
+exports[`TrackBuilder can build coordinates with a new builder 1`] = `
 Object {
   "tiles": Array [
     "coord-id-0",
@@ -10,7 +10,7 @@ Object {
 }
 `;
 
-exports[`TileListBuilder can build coordinates with a new builder 2`] = `
+exports[`TrackBuilder can build coordinates with a new builder 2`] = `
 Array [
   "coord-id-0",
   "coord-id-1",
@@ -18,7 +18,7 @@ Array [
 ]
 `;
 
-exports[`TileListBuilder can build coordinates with the given builder options 1`] = `
+exports[`TrackBuilder can build coordinates with the given builder options 1`] = `
 Object {
   "tiles": Array [
     "coord-id-0",

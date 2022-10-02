@@ -40,7 +40,7 @@ Array [
 
 exports[`TrackModel can create tiles after a position in the middle 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -205,7 +205,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles after an inexistent position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -304,7 +304,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles after the first position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -447,7 +447,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles after the last position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -590,7 +590,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles after with a particular type 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -713,7 +713,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles at the first position with a particular type 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -836,7 +836,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles at the first position with the default specifications 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -957,7 +957,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles at the last position with a particular type 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1056,7 +1056,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles at the last position with the default specifications 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1155,7 +1155,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles before a position in the middle 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1320,7 +1320,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles before an inexistent position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1419,7 +1419,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles before the first position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1562,7 +1562,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles before the last position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1705,7 +1705,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles before with a particular type 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1828,7 +1828,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles replacing tiles at inexistent position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -1927,7 +1927,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles replacing tiles with a tile having a particular type 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -2072,7 +2072,7 @@ TrackModel {
 
 exports[`TrackModel can create tiles replacing tiles with a tile having default specifications 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -2225,7 +2225,7 @@ Array [
 
 exports[`TrackModel can import from an object 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -2324,7 +2324,7 @@ TrackModel {
 
 exports[`TrackModel can import from an object 2`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -3858,7 +3858,7 @@ Array [
 
 exports[`TrackModel can remove tiles from the track at inexistent position 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -4005,7 +4005,7 @@ TrackModel {
 
 exports[`TrackModel can remove tiles from the track from the end 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -4128,7 +4128,7 @@ TrackModel {
 
 exports[`TrackModel can remove tiles from the track from the middle 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -4251,7 +4251,7 @@ TrackModel {
 
 exports[`TrackModel can remove tiles from the track from the start 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],
@@ -4374,7 +4374,7 @@ TrackModel {
 
 exports[`TrackModel can set the specifications of the tiles 1`] = `
 TrackModel {
-  "builder": TileListBuilder {
+  "builder": TrackBuilder {
     "builder": [Function],
     "delegate": [Function],
     "emit": [Function],

@@ -18,15 +18,15 @@
 
 import { eventEmitterMixin } from '../../core/mixins';
 import { validateCallback } from '../../core/helpers';
-import { TileList } from './TileList.js';
+import { TileList } from '../../tile/models/TileList.js';
 
 /**
- * Binds a tile list builder with a set of options.
+ * Binds a track builder with a set of options.
  */
-export class TileListBuilder {
+export class TrackBuilder {
     /**
-     * Binds a tile list builder with a set of options.
-     * @param {listCoordBuilder} builder - The reference to the builder.
+     * Binds a track builder with a set of options.
+     * @param {trackCoordBuilder} builder - The reference to the builder.
      * @param {object} [options] - Some options for the builder.
      * @throws {TypeError} - If the given builder is not a function.
      */
@@ -40,7 +40,7 @@ export class TileListBuilder {
     /**
      * Computes the coordinates of each tile in the list.
      * @param {TileList} list - The list of tiles for which compute the coordinates.
-     * @returns {listCoord} - Returns the list of coordinates.
+     * @returns {trackCoord} - Returns the list of coordinates.
      * @throws {TypeError} - If the given list is not a valid instance of TileList.
      */
     build(list) {
@@ -51,8 +51,8 @@ export class TileListBuilder {
 
     /**
      * Binds the builder.
-     * @param {listCoordBuilder} builder - The reference to the builder.
-     * @returns {TileListBuilder} - Chains the instance.
+     * @param {trackCoordBuilder} builder - The reference to the builder.
+     * @returns {TrackBuilder} - Chains the instance.
      * @throws {TypeError} - If the given builder is not a function.
      * @fires builder
      */
@@ -66,7 +66,7 @@ export class TileListBuilder {
          * @function builder
          * @param {TileList} list - The list of tiles from which compute the coordinates of each tile.
          * @param {object} [config] - A set of config options.
-         * @returns {listCoord} - Returns the list of coordinates.
+         * @returns {trackCoord} - Returns the list of coordinates.
          */
         this.builder = builder;
 
@@ -78,7 +78,7 @@ export class TileListBuilder {
     /**
      * Sets the options that will be given to the builder on the next call.
      * @param {object} options - Some options for the builder.
-     * @returns {TileListBuilder} - Chains the instance.
+     * @returns {TrackBuilder} - Chains the instance.
      * @fires options
      */
     setOptions(options) {
@@ -94,7 +94,7 @@ export class TileListBuilder {
      * Sets an option that will be given to the builder on the next call.
      * @param {string} name - The name of the option to set.
      * @param {*} value - The value for the option.
-     * @returns {TileListBuilder} - Chains the instance.
+     * @returns {TrackBuilder} - Chains the instance.
      * @fires option
      */
     setOption(name, value) {
@@ -138,15 +138,6 @@ export class TileListBuilder {
 }
 
 /**
- * @typedef {object} listCoord - Represents a list of tiles ready to be rendered.
- * @property {number} x - The left coordinate of the list of tiles.
- * @property {number} y - The top coordinate of the list of tiles.
- * @property {number} width - The width of the list of tiles.
- * @property {number} height - The height of the list of tiles.
- * @property {tileCoord[]} tiles - The list of tiles.
- */
-
-/**
  * @typedef {object} tileCoord - Represents a positioned tile.
  * @property {string} id - The unique identifier of the tile.
  * @property {string} type - The type of tile.
@@ -160,26 +151,35 @@ export class TileListBuilder {
  */
 
 /**
+ * @typedef {object} trackCoord - Represents a list of tiles ready to be rendered.
+ * @property {number} x - The left coordinate of the list of tiles.
+ * @property {number} y - The top coordinate of the list of tiles.
+ * @property {number} width - The width of the list of tiles.
+ * @property {number} height - The height of the list of tiles.
+ * @property {tileCoord[]} tiles - The list of tiles.
+ */
+
+/**
  * Process a list of tiles for rendering, computing the coordinates of each tile.
  * @param {TileList} list - The list of tiles from which compute the coordinates of each tile.
  * @param {object} [config] - A set of config options.
- * @returns {listCoord} - Returns the list of coordinates.
- * @callback listCoordBuilder
+ * @returns {trackCoord} - Returns the list of coordinates.
+ * @callback trackCoordBuilder
  */
 
 /**
- * @typedef {import('./TileModel.js').tileRect} tileRect
+ * @typedef {import('../../tile/models/TileModel.js').tileRect} tileRect
  */
 
 /**
- * @typedef {import('./TileModel.js').TileModel} TileModel
+ * @typedef {import('../../tile/models/TileModel.js').TileModel} TileModel
  */
 
 /**
  * Notifies the builder has been replaced.
  * @event builder
- * @param {listCoordBuilder} newBuilder - The new builder.
- * @param {listCoordBuilder} oldBuilder - The previous builder.
+ * @param {trackCoordBuilder} newBuilder - The new builder.
+ * @param {trackCoordBuilder} oldBuilder - The previous builder.
  */
 
 /**

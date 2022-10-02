@@ -34,7 +34,7 @@ import { TILE_DIRECTION_LEFT } from '../../tile/helpers';
  * @param {boolean} [config.centered] - Whether or not center the tiles.
  * @param {boolean} [config.aligned] - Whether or not align the tiles.
  * @param {boolean} [config.vertical] - Position the tiles vertically.
- * @returns {listCoord} - Returns the list of coordinates.
+ * @returns {trackCoord} - Returns the list of coordinates.
  * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (
@@ -98,5 +98,5 @@ export default (
 };
 
 /**
- * @typedef {import('../../tile/models/TileListBuilder.js').listCoord} listCoord
+ * @typedef {import('../models/TrackBuilder.js').trackCoord} trackCoord
  */

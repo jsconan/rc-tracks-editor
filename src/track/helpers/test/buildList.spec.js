@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import buildList from '../buildList.js';
 import {
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,
@@ -26,6 +25,7 @@ import {
 } from '../../../tile/helpers';
 import { TileSpecifications } from '../../../tile/config';
 import { TileList } from '../../../tile/models';
+import buildList from '../buildList.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;

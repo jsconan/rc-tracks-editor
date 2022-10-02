@@ -16,10 +16,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { TileSpecifications } from '../../config';
-import { TileList } from '../TileList.js';
-import { TileListBuilder } from '../TileListBuilder.js';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../../../tile/helpers';
+import { TileSpecifications } from '../../../tile/config';
+import { TileList } from '../../../tile/models/TileList.js';
+import { TrackBuilder } from '../TrackBuilder.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -38,79 +43,79 @@ tileList.import([
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
 ]);
 
-describe('TileListBuilder', () => {
+describe('TrackBuilder', () => {
     it('is a class', () => {
-        expect(TileListBuilder).toEqual(expect.any(Function));
+        expect(TrackBuilder).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid builder', () => {
-            expect(() => new TileListBuilder({})).toThrow('A builder function is expected!');
+            expect(() => new TrackBuilder({})).toThrow('A builder function is expected!');
         });
 
         it('when trying to build an invalid list', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
-            expect(() => listBuilder.build({})).toThrow('The object must be an instance of TileList!');
+            const trackBuilder = new TrackBuilder(mockBuilder);
+            expect(() => trackBuilder.build({})).toThrow('The object must be an instance of TileList!');
         });
 
         it('when trying to set an invalid builder', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
-            expect(() => listBuilder.setBuilder({})).toThrow('A builder function is expected!');
+            const trackBuilder = new TrackBuilder(mockBuilder);
+            expect(() => trackBuilder.setBuilder({})).toThrow('A builder function is expected!');
         });
     });
 
     describe('can set', () => {
         it('a builder function', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
             const builder = () => {};
 
-            expect(listBuilder.builder).not.toBe(builder);
-            expect(listBuilder.setBuilder(builder)).toBe(listBuilder);
-            expect(listBuilder.builder).toBe(builder);
+            expect(trackBuilder.builder).not.toBe(builder);
+            expect(trackBuilder.setBuilder(builder)).toBe(trackBuilder);
+            expect(trackBuilder.builder).toBe(builder);
         });
 
         it('the options for the builder', () => {
-            const listBuilder = new TileListBuilder(mockBuilder, { dummy: true });
+            const trackBuilder = new TrackBuilder(mockBuilder, { dummy: true });
             const options = { foo: 'bar' };
 
-            expect(listBuilder.hasOption('dummy')).toBeTruthy();
-            expect(listBuilder.setOptions(options)).toBe(listBuilder);
-            expect(listBuilder.options).not.toBe(options);
-            expect(listBuilder.hasOption('dummy')).toBeFalsy();
-            expect(listBuilder.getOption('foo')).toBe(options.foo);
+            expect(trackBuilder.hasOption('dummy')).toBeTruthy();
+            expect(trackBuilder.setOptions(options)).toBe(trackBuilder);
+            expect(trackBuilder.options).not.toBe(options);
+            expect(trackBuilder.hasOption('dummy')).toBeFalsy();
+            expect(trackBuilder.getOption('foo')).toBe(options.foo);
         });
     });
 
     describe('manage options for the builder', () => {
         it('setting the value of an option', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
 
-            expect(listBuilder.hasOption('foo')).toBeFalsy();
-            expect(listBuilder.setOption('foo', 'bar')).toBe(listBuilder);
-            expect(listBuilder.hasOption('foo')).toBeTruthy();
-            expect(listBuilder.getOption('foo')).toBe('bar');
+            expect(trackBuilder.hasOption('foo')).toBeFalsy();
+            expect(trackBuilder.setOption('foo', 'bar')).toBe(trackBuilder);
+            expect(trackBuilder.hasOption('foo')).toBeTruthy();
+            expect(trackBuilder.getOption('foo')).toBe('bar');
         });
 
         it('getting the value of an option', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
 
-            expect(listBuilder.getOption('foo')).toBeUndefined();
-            listBuilder.setOption('foo', 'bar');
-            expect(listBuilder.getOption('foo')).toBe('bar');
+            expect(trackBuilder.getOption('foo')).toBeUndefined();
+            trackBuilder.setOption('foo', 'bar');
+            expect(trackBuilder.getOption('foo')).toBe('bar');
         });
 
         it('checking if an option is assigned', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
 
-            expect(listBuilder.hasOption('foo')).toBeFalsy();
-            listBuilder.setOption('foo', 'bar');
-            expect(listBuilder.hasOption('foo')).toBeTruthy();
+            expect(trackBuilder.hasOption('foo')).toBeFalsy();
+            trackBuilder.setOption('foo', 'bar');
+            expect(trackBuilder.hasOption('foo')).toBeTruthy();
         });
     });
 
     describe('emit events', () => {
         it('when replacing the builder', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
             const builder = () => {};
 
             const callback = jest.fn().mockImplementation((newBuilder, oldBuilder) => {
@@ -118,8 +123,8 @@ describe('TileListBuilder', () => {
                 expect(oldBuilder).toBe(mockBuilder);
             });
 
-            listBuilder.on('builder', callback);
-            listBuilder.setBuilder(builder);
+            trackBuilder.on('builder', callback);
+            trackBuilder.setBuilder(builder);
 
             expect(callback).toHaveBeenCalledTimes(1);
         });
@@ -131,15 +136,15 @@ describe('TileListBuilder', () => {
             const options = {
                 bar: 'foo'
             };
-            const listBuilder = new TileListBuilder(mockBuilder, defaultOptions);
+            const trackBuilder = new TrackBuilder(mockBuilder, defaultOptions);
 
             const callback = jest.fn().mockImplementation((newOptions, oldOptions) => {
                 expect(newOptions).toEqual(options);
                 expect(oldOptions).toEqual(defaultOptions);
             });
 
-            listBuilder.on('options', callback);
-            listBuilder.setOptions(options);
+            trackBuilder.on('options', callback);
+            trackBuilder.setOptions(options);
 
             expect(callback).toHaveBeenCalledTimes(1);
         });
@@ -148,7 +153,7 @@ describe('TileListBuilder', () => {
             ['an existing option', { foo: 'bar' }, 'bar'],
             ['a new option', {}, void 0]
         ])('when setting %s', (type, options, previous) => {
-            const listBuilder = new TileListBuilder(mockBuilder, options);
+            const trackBuilder = new TrackBuilder(mockBuilder, options);
 
             const callback = jest.fn().mockImplementation((name, newValue, oldValue) => {
                 expect(name).toBe('foo');
@@ -156,8 +161,8 @@ describe('TileListBuilder', () => {
                 expect(oldValue).toEqual(previous);
             });
 
-            listBuilder.on('option', callback);
-            listBuilder.setOption('foo', 'baz');
+            trackBuilder.on('option', callback);
+            trackBuilder.setOption('foo', 'baz');
 
             expect(callback).toHaveBeenCalledTimes(1);
         });
@@ -172,28 +177,26 @@ describe('TileListBuilder', () => {
                 return mockBuilder(list);
             };
 
-            const listBuilder = new TileListBuilder(builder, { foo: 'bar' });
+            const trackBuilder = new TrackBuilder(builder, { foo: 'bar' });
 
-            expect(listBuilder.build(tileList)).toMatchSnapshot();
+            expect(trackBuilder.build(tileList)).toMatchSnapshot();
         });
 
         it('with a new builder', () => {
-            const listBuilder = new TileListBuilder(mockBuilder);
+            const trackBuilder = new TrackBuilder(mockBuilder);
 
-            expect(listBuilder.build(tileList)).toMatchSnapshot();
+            expect(trackBuilder.build(tileList)).toMatchSnapshot();
 
             const newBuilder = list => list.map(tile => `coord-${tile.id}`);
-            listBuilder.setBuilder(newBuilder);
+            trackBuilder.setBuilder(newBuilder);
 
-            expect(listBuilder.build(tileList)).toMatchSnapshot();
+            expect(trackBuilder.build(tileList)).toMatchSnapshot();
         });
     });
 
     it('can validate an object is an instance of the class', () => {
-        const listBuilder = new TileListBuilder(mockBuilder);
-        expect(() => TileListBuilder.validateInstance(listBuilder)).not.toThrow();
-        expect(() => TileListBuilder.validateInstance({})).toThrow(
-            'The object must be an instance of TileListBuilder!'
-        );
+        const trackBuilder = new TrackBuilder(mockBuilder);
+        expect(() => TrackBuilder.validateInstance(trackBuilder)).not.toThrow();
+        expect(() => TrackBuilder.validateInstance({})).toThrow('The object must be an instance of TrackBuilder!');
     });
 });

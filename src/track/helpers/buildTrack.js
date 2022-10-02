@@ -28,7 +28,7 @@ import { TileList } from '../../tile/models';
  * @param {number} [config.startAngle] - The rotation angle of the first tile.
  * @param {number} [config.hPadding] - An horizontal padding added around the track.
  * @param {number} [config.vPadding] - A vertical padding added around the tracks.
- * @returns {listCoord} - Returns the list of coordinates.
+ * @returns {trackCoord} - Returns the list of coordinates.
  * @throws {TypeError} - If the given list is not a valid instance of TileList.
  */
 export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vPadding = 0 } = {}) => {
@@ -65,5 +65,5 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 };
 
 /**
- * @typedef {import('../../tile/models/TileListBuilder.js').listCoord} listCoord
+ * @typedef {import('../models/TrackBuilder.js').trackCoord} trackCoord
  */

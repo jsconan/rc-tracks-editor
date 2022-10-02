@@ -16,11 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import buildTrack from '../buildTrack.js';
-
 import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../../tile/helpers';
 import { TileSpecifications } from '../../../tile/config';
 import { TileList } from '../../../tile/models';
+import buildTrack from '../buildTrack.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
