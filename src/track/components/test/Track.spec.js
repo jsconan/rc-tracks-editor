@@ -19,7 +19,7 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
-import TrackRef from '../TrackRef.svelte';
+import Track from '../Track.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { TrackModel } from '../../models';
 import { TileSpecifications } from '../../../tile/config';
@@ -42,12 +42,12 @@ track.import([
 ]);
 track.setBuilderOptions({ hPadding: 10, vPadding: 20, startAngle: 90 });
 
-describe('TrackRef', () => {
+describe('Track', () => {
     it('renders with default values', () => {
         const props = { track };
         const { container } = render(Context, {
             props: {
-                component: TrackRef,
+                component: Track,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -67,7 +67,7 @@ describe('TrackRef', () => {
         };
         const { container } = render(Context, {
             props: {
-                component: TrackRef,
+                component: Track,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -87,7 +87,7 @@ describe('TrackRef', () => {
         };
         const rendered = render(Context, {
             props: {
-                component: TrackRef,
+                component: Track,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -102,7 +102,7 @@ describe('TrackRef', () => {
 
     it('needs a valid model', () => {
         expect(() =>
-            render(TrackRef, {
+            render(Track, {
                 props: {
                     track: {
                         subscribe() {
@@ -121,7 +121,7 @@ describe('TrackRef', () => {
         const props = { track };
         const { container, component } = render(Context, {
             props: {
-                component: TrackRef,
+                component: Track,
                 contextKey: TileSpecifications.CONTEXT_ID,
                 context: specs,
                 props
@@ -136,7 +136,7 @@ describe('TrackRef', () => {
     });
 
     it('renders with the given element in slots', () => {
-        const props = { track, component: TrackRef };
+        const props = { track, component: Track };
         const { container } = render(Context, {
             props: {
                 component: TrackWithSlot,

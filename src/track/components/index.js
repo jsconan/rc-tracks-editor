@@ -17,4 +17,4 @@
  */
 
 export { default as SimpleTrack } from './SimpleTrack.svelte';
-export { default as TrackRef } from './TrackRef.svelte';
+export { default as Track } from './Track.svelte';

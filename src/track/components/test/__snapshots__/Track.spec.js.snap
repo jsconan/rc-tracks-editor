@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TrackRef fires click 1`] = `
+exports[`Track fires click 1`] = `
 Object {
   "angle": 90,
   "direction": "right",
@@ -12,7 +12,7 @@ Object {
 }
 `;
 
-exports[`TrackRef fires click 2`] = `
+exports[`Track fires click 2`] = `
 Object {
   "angle": 90,
   "direction": "right",
@@ -24,7 +24,7 @@ Object {
 }
 `;
 
-exports[`TrackRef fires click 3`] = `
+exports[`Track fires click 3`] = `
 Object {
   "angle": 180,
   "direction": "right",
@@ -36,7 +36,7 @@ Object {
 }
 `;
 
-exports[`TrackRef renders with default values 1`] = `
+exports[`Track renders with default values 1`] = `
 <body>
   <div>
     <svg
@@ -293,7 +293,7 @@ exports[`TrackRef renders with default values 1`] = `
 </body>
 `;
 
-exports[`TrackRef renders with the given element in slots 1`] = `
+exports[`Track renders with the given element in slots 1`] = `
 <body>
   <div />
   <div>
@@ -572,7 +572,7 @@ exports[`TrackRef renders with the given element in slots 1`] = `
 </body>
 `;
 
-exports[`TrackRef renders with the given parameters 1`] = `
+exports[`Track renders with the given parameters 1`] = `
 <body>
   <div>
     <svg
@@ -831,7 +831,7 @@ exports[`TrackRef renders with the given parameters 1`] = `
 </body>
 `;
 
-exports[`TrackRef updates when the model is modified 1`] = `
+exports[`Track updates when the model is modified 1`] = `
 <body>
   <div>
     <svg
