@@ -5,7 +5,7 @@
     import { setContext } from 'svelte';
     import config from './config.js';
     import { Sketch } from './track/elements';
-    import { Track, TrackRef } from './track/components';
+    import { SimpleTrack, TrackRef } from './track/components';
     import { buildList } from './track/helpers';
     import { TileList } from './tile/models';
     import { TileSpecifications } from './tile/config';
@@ -69,7 +69,7 @@
     <main>
         <aside>
             <Sketch width="100%" height="100%">
-                <Track
+                <SimpleTrack
                     track={menuCoords}
                     on:click={event => {
                         click(event);
@@ -81,7 +81,7 @@
         <section>
             <nav>
                 <Sketch width="100%" height="100%">
-                    <Track track={statsCoords} on:click={click} />
+                    <SimpleTrack track={statsCoords} on:click={click} />
                 </Sketch>
             </nav>
             <article>

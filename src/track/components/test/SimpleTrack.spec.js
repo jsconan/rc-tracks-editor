@@ -19,7 +19,7 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
-import Track from '../Track.svelte';
+import Track from '../SimpleTrack.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../helpers';
 import { TileList } from '../../../tile/models';
@@ -44,7 +44,7 @@ tileList.import([
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
 ]);
 
-describe('Track', () => {
+describe('SimpleTrack', () => {
     it('renders with default values', () => {
         const props = { track };
         const { container } = render(Context, {
