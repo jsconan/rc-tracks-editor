@@ -11,7 +11,7 @@
     --color-even: #eec;
     --color-odd: #c24;
     --color-control: #2a2;
-    --tile-stroke-width: 0.1;
+    --tile-stroke-width: 1px;
 
     /* default scheme */
     --color-fg: var(--color-fg-dark);
@@ -54,7 +54,7 @@ body,
 
 .ground {
     fill: var(--color-ground);
-    stroke: var(--color-fg);
+    stroke: var(--color-bg);
     stroke-width: var(--tile-stroke-width);
 }
 

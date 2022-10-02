@@ -85,7 +85,7 @@
                 </Sketch>
             </nav>
             <article>
-                <Sketch width="100%" height="100%" style="background-color: gray;">
+                <Sketch width="100%" height="100%">
                     <Track
                         {track}
                         on:click={event => {
@@ -140,6 +140,7 @@
 
     article {
         flex: 1 1 auto;
+        background-color: gray;
     }
 
     footer {
