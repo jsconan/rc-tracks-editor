@@ -16,7 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT
+} from '../../helpers';
 import { List } from '../../../core/models';
 import { CurvedTileModel } from '../CurvedTileModel.js';
 import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
@@ -874,6 +880,66 @@ describe('TileList', () => {
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
+    describe('has a static method', () => {
+        describe('createTile', () => {
+            describe('which throws error', () => {
+                it('when trying to create a tile with an invalid specifications object', () => {
+                    expect(() => TileList.createTile({})).toThrow(
+                        'The specifications object must be an instance of TileSpecifications!'
+                    );
+                });
+
+                it('when trying to create a tile with an invalid type', () => {
+                    expect(() => TileList.createTile(specs, '')).toThrow('A valid type of tile is needed!');
+                    expect(() => TileList.createTile(specs, 'tile')).toThrow('A valid type of tile is needed!');
+                });
+
+                it('when trying to create a tile with an invalid direction', () => {
+                    expect(() => TileList.createTile(specs, CURVED_TILE_TYPE, '')).toThrow(
+                        'A valid direction is needed!'
+                    );
+                    expect(() => TileList.createTile(specs, CURVED_TILE_TYPE, 'top')).toThrow(
+                        'A valid direction is needed!'
+                    );
+                });
+            });
+
+            describe('which creates a tile', () => {
+                it.each([
+                    [STRAIGHT_TILE_TYPE, StraightTileModel],
+                    [CURVED_TILE_TYPE, CurvedTileModel],
+                    [CURVED_TILE_ENLARGED_TYPE, CurvedTileEnlargedModel]
+                ])('of the type %s', (type, constructor) => {
+                    const tile = TileList.createTile(specs, type);
+                    expect(tile).toBeInstanceOf(constructor);
+                    expect(tile.type).toBe(type);
+                });
+
+                it.each([TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT])('having the direction %s', direction => {
+                    const straightTile = TileList.createTile(specs, STRAIGHT_TILE_TYPE, direction);
+                    const curvedTile = TileList.createTile(specs, CURVED_TILE_TYPE, direction);
+                    const enlargedTile = TileList.createTile(specs, CURVED_TILE_ENLARGED_TYPE, direction);
+                    expect(straightTile.direction).toBe(direction);
+                    expect(curvedTile.direction).toBe(direction);
+                    expect(enlargedTile.direction).toBe(direction);
+                });
+
+                it.each([1, 2, 3, 4])('with the size ratio %s', ratio => {
+                    const curvedTile = TileList.createTile(specs, CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, ratio);
+                    expect(curvedTile.ratio).toBe(ratio);
+                });
+            });
+        });
+
+        describe('validateInstance', () => {
+            it('which can validate an object is an instance of the class', () => {
+                const list = new TileList(specs);
+                expect(() => TileList.validateInstance(list)).not.toThrow();
+                expect(() => TileList.validateInstance({})).toThrow('The object must be an instance of TileList!');
+            });
+        });
+    });
+
     it('can notify changes', () => {
         const list = new TileList(specs);
 
@@ -901,11 +967,5 @@ describe('TileList', () => {
         list.append();
 
         expect(callback).toHaveBeenCalledTimes(11);
-    });
-
-    it('can validate an object is an instance of the class', () => {
-        const list = new TileList(specs);
-        expect(() => TileList.validateInstance(list)).not.toThrow();
-        expect(() => TileList.validateInstance({})).toThrow('The object must be an instance of TileList!');
     });
 });

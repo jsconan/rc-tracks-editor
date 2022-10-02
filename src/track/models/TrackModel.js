@@ -22,7 +22,6 @@ import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
 import { TileList, TileListBuilder, TileModelCounter } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileListStore } from '../../tile/stores';
-import { createTile, importTiles } from '../helpers';
 
 /**
  * Represents a race track.
@@ -195,11 +194,7 @@ export class TrackModel {
      * @fires add
      */
     append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createTile(this.specs, type, direction, ratio);
-
-        this.tiles.add(tile);
-
-        return tile;
+        return this.tiles.append(type, direction, ratio);
     }
 
     /**
@@ -213,11 +208,7 @@ export class TrackModel {
      * @fires add
      */
     prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createTile(this.specs, type, direction, ratio);
-
-        this.tiles.insert(0, tile);
-
-        return tile;
+        return this.tiles.prepend(type, direction, ratio);
     }
 
     /**
@@ -234,17 +225,7 @@ export class TrackModel {
      * @fires add
      */
     replace(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.tiles.getIndex(id);
-
-        if (index >= 0) {
-            const tile = createTile(this.specs, type, direction, ratio);
-
-            this.tiles.set(index, tile);
-
-            return tile;
-        }
-
-        return null;
+        return this.tiles.replace(id, type, direction, ratio);
     }
 
     /**
@@ -260,17 +241,7 @@ export class TrackModel {
      * @fires add
      */
     insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.tiles.getIndex(id);
-
-        if (index >= 0) {
-            const tile = createTile(this.specs, type, direction, ratio);
-
-            this.tiles.insert(index, tile);
-
-            return tile;
-        }
-
-        return null;
+        return this.tiles.insertBefore(id, type, direction, ratio);
     }
 
     /**
@@ -286,17 +257,7 @@ export class TrackModel {
      * @fires add
      */
     insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.tiles.getIndex(id);
-
-        if (index >= 0) {
-            const tile = createTile(this.specs, type, direction, ratio);
-
-            this.tiles.insert(index + 1, tile);
-
-            return tile;
-        }
-
-        return null;
+        return this.tiles.insertAfter(id, type, direction, ratio);
     }
 
     /**
@@ -312,10 +273,12 @@ export class TrackModel {
      * The track is emptied before importing, any existing tile will be deleted.
      * @param {tileExport[]} data - An iterable object containing a representation of the track.
      * @returns {TrackModel} - Chains the instance.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
      * @fires load
      */
     import(data) {
-        importTiles(this.tiles, data);
+        this.tiles.import(data);
 
         return this;
     }
@@ -335,8 +298,8 @@ export class TrackModel {
      * Loads tiles from another source. The track is cleared before.
      * @param {*} iterator - An iterable object that can be used to fill the track.
      * @returns {TrackModel} - Chains the instance.
-     * @fires load
      * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     * @fires load
      */
     load(iterator) {
         this.tiles.load(iterator);

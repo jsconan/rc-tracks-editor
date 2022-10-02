@@ -21,7 +21,6 @@ import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
-import { importTiles } from '../../helpers';
 import { buildTrack } from '../../../tile/builders';
 import { TileList } from '../../../tile/models';
 import { tileListStore } from '../../../tile/stores';
@@ -39,7 +38,7 @@ const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 const tileList = new TileList(specs);
 const track = tileListStore(tileList, list => buildTrack(list, { hPadding: 10, vPadding: 20, startAngle: 90 }));
-importTiles(tileList, [
+tileList.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
