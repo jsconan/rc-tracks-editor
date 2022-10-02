@@ -44,8 +44,8 @@
         <use data-id={id} {x} {y} href="#{model.modelId}" transform={model.getRotateTransform(x, y, angle)} />
     {/each}
     <svelte:fragment slot="defs">
-        {#each $modelsStore as { model, modelId } (modelId)}
-            <Tile type={model.type} ratio={model.ratio} id={modelId} />
+        {#each $modelsStore as { id, type, ratio } (id)}
+            <Tile {id} {type} {ratio} />
         {/each}
         <slot name="defs" />
     </svelte:fragment>

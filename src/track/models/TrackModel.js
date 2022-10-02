@@ -22,7 +22,7 @@ import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
 import { TileList, TileModelCounter } from '../../tile/models';
 import { TrackBuilder } from './TrackBuilder.js';
 import { TileSpecifications } from '../../tile/config';
-import { tileCounterStore, tileListStore } from '../../tile/stores';
+import { tileCounterStore, tileListStore, tileModelsStore } from '../../tile/stores';
 
 /**
  * Represents a race track.
@@ -42,7 +42,8 @@ export class TrackModel {
         this.builder = new TrackBuilder(buildTrack);
 
         this.tilesStore = tileListStore(this.tiles, list => this.builder.build(list));
-        this.modelsStore = tileCounterStore(this.counter);
+        this.modelsStore = tileModelsStore(this.counter);
+        this.counterStore = tileCounterStore(this.counter);
 
         eventEmitterMixin(this);
 
@@ -66,9 +67,13 @@ export class TrackModel {
         this.on('remove', (...tiles) => tiles.forEach(tile => this.counter.remove(tile)));
         this.on('clear load', () => {
             this.modelsStore.unbind();
+            this.counterStore.unbind();
+
             this.counter.clear();
             this.tiles.forEach(tile => this.counter.add(tile));
+
             this.modelsStore.bind(this.counter);
+            this.counterStore.bind(this.counter);
         });
 
         if (source) {

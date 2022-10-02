@@ -660,67 +660,40 @@ describe('TrackModel', () => {
     });
 
     describe('can notify changes', () => {
-        it('through the tiles store', () => {
+        it.each([
+            ['tilesStore', 14],
+            ['modelsStore', 6],
+            ['counterStore', 10]
+        ])('through the %s', (name, count) => {
             const track = new TrackModel(specs);
-            const store = track.tilesStore;
+            const store = track[name];
 
             const callback = jest.fn().mockImplementation(value => {
-                expect(value).not.toBe(track);
                 expect(value).toMatchSnapshot();
             });
 
             const unsubscribe = store.subscribe(callback); // callback called
 
             track.setSpecs(specs);
-            const tile1 = track.append(CURVED_TILE_TYPE); // callback called
-            const tile2 = track.prepend(CURVED_TILE_TYPE); // callback called
-            track.remove(tile1.id); // callback called
-            const tile3 = track.replace(tile2.id); // callback called
-            track.insertBefore(tile3.id); // callback called
-            track.insertAfter(tile3.id); // callback called
+            const tile1 = track.append(CURVED_TILE_TYPE); // event: add (add) / (addtile, addmodel)
+            const tile2 = track.prepend(CURVED_TILE_TYPE); // event: add (add) / (addtile)
+            track.remove(tile1.id); // event: delete (remove) / (removetile)
+            const tile3 = track.replace(tile2.id); // event: set (add, remove) / (removetile, removemodel, addtile, addmodel)
+            track.insertBefore(tile3.id); // event: add (add) / (addtile)
+            track.insertAfter(tile3.id); // event: add (add) / (addtile)
             const data = track.export();
-            track.clear(); // callback called
-            track.import(data); // callback called
-            track.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
-            track.update(); // callback called
-            track.setBuilderOption('startAngle', 90); // callback called
-            track.setBuilderOptions({ startX: 10, startY: 10 }); // callback called
-            track.setBuilder(buildList); // callback called
+            track.clear(); // event: clear (clear) / (rebuild)
+            track.import(data); // event: load (load) / (rebuild)
+            track.setSpecs(new TileSpecifications(10, 1, 2)); // event: specs (specs) / (none)
+            track.update(); // event: update (update) / (none)
+            track.setBuilderOption('startAngle', 90); // event: option (rebuild) / (none)
+            track.setBuilderOptions({ startX: 10, startY: 10 }); // event: options (rebuild) / (none)
+            track.setBuilder(buildList); // event: builder (rebuild) / (none)
 
             unsubscribe();
             track.append();
 
-            expect(callback).toHaveBeenCalledTimes(14);
-        });
-
-        it('through the models store', () => {
-            const track = new TrackModel(specs);
-            const store = track.modelsStore;
-
-            const callback = jest.fn().mockImplementation(value => {
-                expect(value).not.toBe(track);
-                expect(value).toMatchSnapshot();
-            });
-
-            const unsubscribe = store.subscribe(callback); // callback called
-
-            track.setSpecs(specs);
-            const tile1 = track.append(CURVED_TILE_TYPE); // callback called
-            const tile2 = track.prepend(CURVED_TILE_TYPE); // callback called
-            track.remove(tile1.id); // callback called
-            const tile3 = track.replace(tile2.id); // callback called x2
-            track.insertBefore(tile3.id, CURVED_TILE_TYPE); // callback called
-            track.insertAfter(tile3.id, CURVED_TILE_TYPE); // callback called
-            const data = track.export();
-            track.clear(); // callback called
-            track.import(data); // callback called
-            track.setSpecs(new TileSpecifications(10, 1, 2));
-            track.update();
-
-            unsubscribe();
-            track.append();
-
-            expect(callback).toHaveBeenCalledTimes(10);
+            expect(callback).toHaveBeenCalledTimes(count);
         });
     });
 
