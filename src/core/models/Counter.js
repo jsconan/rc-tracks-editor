@@ -28,21 +28,21 @@ export class Counter extends Map {
      * Each change in the counters will be notified to the subscribers.
      * @param {*} source - An iterable object that can be used to initialize the counters.
      */
-    constructor(source = []) {
+    constructor(source = null) {
         super();
 
         eventEmitterMixin(this);
 
-        for (const [key, value] of source) {
-            this.set(key, value);
+        if (source) {
+            this.load(source);
+            source = void 0;
         }
-        source = void 0;
     }
 
     /**
      * Applies a callback to each counter from the list.
      * @param {function} walker - A callback that will be applied to each counter of the list.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @throws {TypeError} - If the given callback is not a function.
      */
     forEach(walker) {
@@ -84,7 +84,7 @@ export class Counter extends Map {
      * Sets the value for a particular counter.
      * @param {string} key - The key of the counter to set.
      * @param {number} value  - The new value of the counter. It must be a whole number.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @fires set
      */
     set(key, value) {
@@ -117,7 +117,7 @@ export class Counter extends Map {
      * Increments a counter.
      * @param {string} key - The key of the counter to increment.
      * @param {number} amount - The amount to add to the counter.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @fires set
      */
     increment(key, amount = 1) {
@@ -129,7 +129,7 @@ export class Counter extends Map {
      * Decrements a counter.
      * @param {string} key - The key of the counter to decrement.
      * @param {number} amount - The amount to subtract from the counter.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @fires set
      */
     decrement(key, amount = 1) {
@@ -139,13 +139,34 @@ export class Counter extends Map {
 
     /**
      * Removes all counters.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @fires clear
      */
     clear() {
         super.clear();
 
         this.emit('clear');
+
+        return this;
+    }
+
+    /**
+     * Loads counter from another source. The counters are cleared before.
+     * @param {*} iterator - An iterable object that can be used to set the counters.
+     * @returns {Counter} - Chains the instance.
+     * @fires load
+     */
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
+        }
+
+        super.clear();
+        for (const [key, value] of iterator) {
+            super.set(key, Math.floor(value) || 0);
+        }
+
+        this.emit('load');
 
         return this;
     }
@@ -195,4 +216,9 @@ export class Counter extends Map {
 /**
  * Notifies all counter has been removed.
  * @event clear
+ */
+
+/**
+ * Notifies the counters has been loaded.
+ * @event load
  */

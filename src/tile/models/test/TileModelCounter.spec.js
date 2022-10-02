@@ -422,6 +422,28 @@ describe('TileModelCounter', () => {
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
+    it('can load counters from a source', () => {
+        const counters = new TileModelCounter();
+
+        expect([...counters]).toStrictEqual([]);
+        expect(counters.load({})).toBe(counters);
+        expect([...counters]).toStrictEqual([]);
+        expect(counters.load(source)).toBe(counters);
+        expect([...counters]).toStrictEqual(entries);
+    });
+
+    it('emits an event when loading counters', () => {
+        const counters = new TileModelCounter();
+
+        const callback = jest.fn();
+
+        counters.on('load', callback);
+
+        counters.load({});
+        counters.load(source);
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
     it('can export counters', () => {
         const counters = new TileModelCounter(source);
 

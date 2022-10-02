@@ -20,6 +20,14 @@ import { Counter } from '../../core/models';
 import { TILE_DIRECTION_RIGHT } from '../helpers';
 
 /**
+ * Extracts the tile model from a tile.
+ * @param {TileModel} tile - The tile from which get the model.
+ * @returns {TileModel} - The base model of the given tile.
+ * @private
+ */
+const getModel = tile => tile.clone().setDirection(TILE_DIRECTION_RIGHT);
+
+/**
  * Represents an observable counter for tile models.
  */
 export class TileModelCounter extends Counter {
@@ -33,9 +41,7 @@ export class TileModelCounter extends Counter {
         this.models = new Map();
 
         if (source) {
-            for (const tile of source) {
-                this.add(tile);
-            }
+            this.load(source);
             source = void 0;
         }
     }
@@ -87,7 +93,7 @@ export class TileModelCounter extends Counter {
         this.increment(modelId, 1);
 
         if (!this.models.has(modelId)) {
-            const model = tile.clone().setDirection(TILE_DIRECTION_RIGHT);
+            const model = getModel(tile);
             this.models.set(modelId, model);
 
             this.emit('addmodel', modelId, model);
@@ -153,6 +159,47 @@ export class TileModelCounter extends Counter {
 
         return super.clear();
     }
+
+    /**
+     * Loads counter from a list of tiles. The counters are cleared before, including the related tile models.
+     * @param {*} iterator - An iterable object that can be used to set the counters.
+     * @returns {TileModelCounter} - Chains the instance.
+     * @fires load
+     */
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
+        }
+
+        this.models.clear();
+
+        const dataIterator = iterator[Symbol.iterator]();
+        const loadIterator = {
+            next: () => {
+                const next = dataIterator.next();
+
+                if (next.done) {
+                    return next;
+                }
+
+                const tile = next.value;
+                const { modelId } = tile;
+
+                if (!this.models.has(modelId)) {
+                    this.models.set(modelId, getModel(tile));
+                }
+
+                const count = this.get(modelId) + 1;
+                return { done: false, value: [modelId, count] };
+            },
+
+            [Symbol.iterator]() {
+                return this;
+            }
+        };
+
+        return super.load(loadIterator);
+    }
 }
 
 /**
@@ -194,4 +241,29 @@ export class TileModelCounter extends Counter {
  * Notifies a tile has been removed.
  * @event removetile
  * @param {TileModel} tile - The tile that was removed.
+ */
+
+/**
+ * Notifies a value has been set to a counter.
+ * @event set
+ * @param {string} key - The key of the counter that was set.
+ * @param {number} newValue - The new value.
+ * @param {number} oldValue - The previous value.
+ */
+
+/**
+ * Notifies a counter has been removed.
+ * @event delete
+ * @param {string} key - The key of the counter that was removed.
+ * @param {number} value - The last value of the removed counter.
+ */
+
+/**
+ * Notifies all counter has been removed.
+ * @event clear
+ */
+
+/**
+ * Notifies the counters has been loaded.
+ * @event load
  */
