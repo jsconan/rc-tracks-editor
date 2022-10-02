@@ -302,5 +302,19 @@
         { "type": "straight-tile", "direction": "right", "ratio": 1 },
         { "type": "straight-tile", "direction": "right", "ratio": 1 },
         { "type": "straight-tile", "direction": "right", "ratio": 1 }
+    ],
+    "bean": [
+        { "type": "curved-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 2 },
+        { "type": "curved-tile", "direction": "left", "ratio": 2 },
+        { "type": "curved-tile", "direction": "right", "ratio": 2 },
+        { "type": "curved-tile", "direction": "right", "ratio": 2 },
+        { "type": "curved-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "right", "ratio": 1 },
+        { "type": "curved-tile", "direction": "left", "ratio": 1 },
+        { "type": "curved-tile", "direction": "right", "ratio": 3 },
+        { "type": "curved-tile", "direction": "right", "ratio": 3 },
+        { "type": "curved-tile", "direction": "right", "ratio": 3 }
     ]
 }
