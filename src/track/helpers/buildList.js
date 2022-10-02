@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { validateAPI } from '../../core/helpers';
 import { Vector2D } from '../../core/models';
-import { TileList } from '../../tile/models';
 import { TILE_DIRECTION_LEFT } from '../../tile/helpers';
 
 /**
  * Process a list of tiles for rendering, computing the coordinates of each tile.
- * @param {TileList} list - The list of tiles from which prepare the rendering.
+ * @param {*} list - The list of tiles from which build the track. It must implement a map method.
  * @param {object} config - A set of config options.
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
@@ -35,7 +35,7 @@ import { TILE_DIRECTION_LEFT } from '../../tile/helpers';
  * @param {boolean} [config.aligned] - Whether or not align the tiles.
  * @param {boolean} [config.vertical] - Position the tiles vertically.
  * @returns {trackCoord} - Returns the list of coordinates.
- * @throws {TypeError} - If the given list is not a valid instance of TileList.
+ * @throws {TypeError} - If the given list does not implement the map method.
  */
 export default (
     list,
@@ -52,7 +52,7 @@ export default (
         vertical = false
     } = {}
 ) => {
-    TileList.validateInstance(list);
+    validateAPI(list, ['map']);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();

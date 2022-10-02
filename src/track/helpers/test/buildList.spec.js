@@ -53,7 +53,9 @@ describe('buildList', () => {
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
-        expect(() => buildList([])).toThrow('The object must be an instance of TileList!');
+        expect(() => buildList({})).toThrow('The object must implement the function: map');
+        expect(() => buildList([])).not.toThrow();
+        expect(() => buildList({ map() {} })).not.toThrow();
     });
 
     describe('process a list of tiles for rendering', () => {

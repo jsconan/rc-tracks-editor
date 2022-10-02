@@ -43,7 +43,9 @@ describe('buildTrack', () => {
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
-        expect(() => buildTrack([])).toThrow('The object must be an instance of TileList!');
+        expect(() => buildTrack({})).toThrow('The object must implement the function: map');
+        expect(() => buildTrack([])).not.toThrow();
+        expect(() => buildTrack({ map() {} })).not.toThrow();
     });
 
     describe('process a list of tiles for rendering a track', () => {
