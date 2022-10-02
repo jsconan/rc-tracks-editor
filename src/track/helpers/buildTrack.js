@@ -17,7 +17,7 @@
  */
 
 import { Vector2D } from '../../core/models';
-import { TileList } from '../models';
+import { TileList } from '../../tile/models';
 
 /**
  * Process a list of tiles for rendering a track, computing the coordinates of each tile.
@@ -65,5 +65,5 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 };
 
 /**
- * @typedef {import('../models/TileListBuilder.js').listCoord} listCoord
+ * @typedef {import('../../tile/models/TileListBuilder.js').listCoord} listCoord
  */

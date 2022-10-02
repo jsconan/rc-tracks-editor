@@ -21,7 +21,7 @@ import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
-import { buildTrack } from '../../../tile/builders';
+import { buildTrack } from '../../helpers';
 import { TileList } from '../../../tile/models';
 import { tileListStore } from '../../../tile/stores';
 import { TileSpecifications } from '../../../tile/config';

@@ -17,8 +17,8 @@
  */
 
 import { Vector2D } from '../../core/models';
-import { TILE_DIRECTION_LEFT } from '../helpers';
-import { TileList } from '../models';
+import { TileList } from '../../tile/models';
+import { TILE_DIRECTION_LEFT } from '../../tile/helpers';
 
 /**
  * Process a list of tiles for rendering, computing the coordinates of each tile.
@@ -98,5 +98,5 @@ export default (
 };
 
 /**
- * @typedef {import('../models/TileListBuilder.js').listCoord} listCoord
+ * @typedef {import('../../tile/models/TileListBuilder.js').listCoord} listCoord
  */

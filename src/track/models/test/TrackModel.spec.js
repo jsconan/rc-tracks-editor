@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { buildList } from '../../../tile/builders';
+import { buildList } from '../../helpers';
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../../tile/helpers';
 import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel, TileModel } from '../../../tile/models';
 import { TileSpecifications } from '../../../tile/config';

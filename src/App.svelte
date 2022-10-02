@@ -6,7 +6,7 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { Track, TrackRef } from './track/components';
-    import { buildList } from './tile/builders';
+    import { buildList } from './track/helpers';
     import { TileList } from './tile/models';
     import { TileSpecifications } from './tile/config';
     import {

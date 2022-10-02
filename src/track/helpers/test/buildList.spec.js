@@ -23,9 +23,9 @@ import {
     STRAIGHT_TILE_TYPE,
     TILE_DIRECTION_LEFT,
     TILE_DIRECTION_RIGHT
-} from '../../helpers';
-import { TileSpecifications } from '../../config';
-import { TileList } from '../../models';
+} from '../../../tile/helpers';
+import { TileSpecifications } from '../../../tile/config';
+import { TileList } from '../../../tile/models';
 
 const laneWidth = 80;
 const barrierWidth = 5;

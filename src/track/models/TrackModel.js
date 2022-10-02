@@ -17,7 +17,7 @@
  */
 
 import { eventEmitterMixin } from '../../core/mixins';
-import { buildTrack } from '../../tile/builders';
+import { buildTrack } from '../helpers';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
 import { TileList, TileListBuilder, TileModelCounter } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';

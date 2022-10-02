@@ -18,9 +18,9 @@
 
 import buildTrack from '../buildTrack.js';
 
-import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { TileSpecifications } from '../../config';
-import { TileList } from '../../models';
+import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../../tile/helpers';
+import { TileSpecifications } from '../../../tile/config';
+import { TileList } from '../../../tile/models';
 
 const laneWidth = 80;
 const barrierWidth = 5;
