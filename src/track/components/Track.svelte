@@ -6,6 +6,7 @@
     import { Sketch } from '../elements';
     import { Tile } from '../../tile/components';
     import { TrackModel } from '../models';
+    import { uid } from '../../core/helpers';
 
     export let track;
     export let x = 0;
@@ -17,6 +18,9 @@
 
     const tilesStore = track.tilesStore;
     const modelsStore = track.modelsStore;
+
+    const trackId = uid();
+    const getId = id => `${trackId}-${id}`;
 
     const dispatch = createEventDispatcher();
 
@@ -41,11 +45,11 @@
     on:click={click}
 >
     {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
-        <use data-id={id} {x} {y} href="#{model.modelId}" transform={model.getRotateTransform(x, y, angle)} />
+        <use data-id={id} {x} {y} href="#{getId(model.modelId)}" transform={model.getRotateTransform(x, y, angle)} />
     {/each}
     <svelte:fragment slot="defs">
-        {#each $modelsStore as { id, type, ratio } (id)}
-            <Tile {id} {type} {ratio} />
+        {#each $modelsStore as { id, type, ratio, modelId } (id)}
+            <Tile id={getId(modelId)} {type} {ratio} />
         {/each}
         <slot name="defs" />
     </svelte:fragment>

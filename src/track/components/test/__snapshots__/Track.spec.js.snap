@@ -48,7 +48,7 @@ exports[`Track renders with default values 1`] = `
         
         <g
           class="tile straight-tile"
-          id="straight-tile-1"
+          id="id-3-straight-tile-1"
           transform=""
         >
           <rect
@@ -135,7 +135,7 @@ exports[`Track renders with default values 1`] = `
         
         <g
           class="tile curved-tile"
-          id="curved-tile-1"
+          id="id-3-curved-tile-1"
           transform=""
         >
           <path
@@ -185,7 +185,7 @@ exports[`Track renders with default values 1`] = `
         
         <g
           class="tile curved-tile-enlarged"
-          id="curved-tile-enlarged-1"
+          id="id-3-curved-tile-enlarged-1"
           transform=""
         >
           <path
@@ -267,21 +267,21 @@ exports[`Track renders with default values 1`] = `
       
       <use
         data-id="id-0"
-        href="#straight-tile-1"
+        href="#id-3-straight-tile-1"
         transform="rotate(90 0 0)"
         x="0"
         y="0"
       />
       <use
         data-id="id-1"
-        href="#curved-tile-1"
+        href="#id-3-curved-tile-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
         x="-110"
         y="6.735557395310443e-15"
       />
       <use
         data-id="id-2"
-        href="#curved-tile-enlarged-1"
+        href="#id-3-curved-tile-enlarged-1"
         transform="rotate(180 -165 -54.99999999999999)"
         x="-165"
         y="-54.99999999999999"
@@ -306,7 +306,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile straight-tile"
-          id="straight-tile-1"
+          id="id-8-straight-tile-1"
           transform=""
         >
           <rect
@@ -393,7 +393,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile curved-tile"
-          id="curved-tile-1"
+          id="id-8-curved-tile-1"
           transform=""
         >
           <path
@@ -443,7 +443,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile curved-tile-enlarged"
-          id="curved-tile-enlarged-1"
+          id="id-8-curved-tile-enlarged-1"
           transform=""
         >
           <path
@@ -532,28 +532,28 @@ exports[`Track renders with the given element in slots 1`] = `
       
       <use
         data-id="id-0"
-        href="#straight-tile-1"
+        href="#id-8-straight-tile-1"
         transform="rotate(90 0 0)"
         x="0"
         y="0"
       />
       <use
         data-id="id-1"
-        href="#curved-tile-1"
+        href="#id-8-curved-tile-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
         x="-110"
         y="6.735557395310443e-15"
       />
       <use
         data-id="id-2"
-        href="#curved-tile-enlarged-1"
+        href="#id-8-curved-tile-enlarged-1"
         transform="rotate(180 -165 -54.99999999999999)"
         x="-165"
         y="-54.99999999999999"
       />
       <use
-        data-id="id-3"
-        href="#straight-tile-1"
+        data-id="id-6"
+        href="#id-8-straight-tile-1"
         transform="rotate(270 -110 -110)"
         x="-110"
         y="-110"
@@ -586,7 +586,7 @@ exports[`Track renders with the given parameters 1`] = `
         
         <g
           class="tile straight-tile"
-          id="straight-tile-1"
+          id="id-4-straight-tile-1"
           transform=""
         >
           <rect
@@ -673,7 +673,7 @@ exports[`Track renders with the given parameters 1`] = `
         
         <g
           class="tile curved-tile"
-          id="curved-tile-1"
+          id="id-4-curved-tile-1"
           transform=""
         >
           <path
@@ -723,7 +723,7 @@ exports[`Track renders with the given parameters 1`] = `
         
         <g
           class="tile curved-tile-enlarged"
-          id="curved-tile-enlarged-1"
+          id="id-4-curved-tile-enlarged-1"
           transform=""
         >
           <path
@@ -805,21 +805,21 @@ exports[`Track renders with the given parameters 1`] = `
       
       <use
         data-id="id-0"
-        href="#straight-tile-1"
+        href="#id-4-straight-tile-1"
         transform="rotate(90 0 0)"
         x="0"
         y="0"
       />
       <use
         data-id="id-1"
-        href="#curved-tile-1"
+        href="#id-4-curved-tile-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
         x="-110"
         y="6.735557395310443e-15"
       />
       <use
         data-id="id-2"
-        href="#curved-tile-enlarged-1"
+        href="#id-4-curved-tile-enlarged-1"
         transform="rotate(180 -165 -54.99999999999999)"
         x="-165"
         y="-54.99999999999999"
@@ -845,7 +845,7 @@ exports[`Track updates when the model is modified 1`] = `
         
         <g
           class="tile straight-tile"
-          id="straight-tile-1"
+          id="id-5-straight-tile-1"
           transform=""
         >
           <rect
@@ -932,7 +932,7 @@ exports[`Track updates when the model is modified 1`] = `
         
         <g
           class="tile curved-tile"
-          id="curved-tile-1"
+          id="id-5-curved-tile-1"
           transform=""
         >
           <path
@@ -982,7 +982,7 @@ exports[`Track updates when the model is modified 1`] = `
         
         <g
           class="tile curved-tile-enlarged"
-          id="curved-tile-enlarged-1"
+          id="id-5-curved-tile-enlarged-1"
           transform=""
         >
           <path
@@ -1064,28 +1064,28 @@ exports[`Track updates when the model is modified 1`] = `
       
       <use
         data-id="id-0"
-        href="#straight-tile-1"
+        href="#id-5-straight-tile-1"
         transform="rotate(90 0 0)"
         x="0"
         y="0"
       />
       <use
         data-id="id-1"
-        href="#curved-tile-1"
+        href="#id-5-curved-tile-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
         x="-110"
         y="6.735557395310443e-15"
       />
       <use
         data-id="id-2"
-        href="#curved-tile-enlarged-1"
+        href="#id-5-curved-tile-enlarged-1"
         transform="rotate(180 -165 -54.99999999999999)"
         x="-165"
         y="-54.99999999999999"
       />
       <use
-        data-id="id-3"
-        href="#straight-tile-1"
+        data-id="id-6"
+        href="#id-5-straight-tile-1"
         transform="rotate(270 -110 -110)"
         x="-110"
         y="-110"
