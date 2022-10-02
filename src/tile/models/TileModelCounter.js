@@ -27,15 +27,17 @@ export class TileModelCounter extends Counter {
      * Creates an observable counter for tile models.
      * @param {TileModel[]|TileList} source - A list of tile model to initialize the counters.
      */
-    constructor(source = []) {
+    constructor(source = null) {
         super();
 
         this.models = new Map();
 
-        for (const tile of source) {
-            this.add(tile);
+        if (source) {
+            for (const tile of source) {
+                this.add(tile);
+            }
+            source = void 0;
         }
-        source = void 0;
     }
 
     /**
@@ -74,7 +76,7 @@ export class TileModelCounter extends Counter {
      * Increments the counter for the given tile model.
      * If the tile model was not yet listed, it will be added.
      * @param {TileModel} tile - The tile to count.
-     * @returns {TileModelCounter} - Chains the counter.
+     * @returns {TileModelCounter} - Chains the instance.
      * @fires set
      * @fires addmodel
      * @fires addtile
@@ -100,7 +102,7 @@ export class TileModelCounter extends Counter {
      * Decrements the counter for the given tile model.
      * If the counter reaches 0, it will be removed together with the related tile model.
      * @param {TileModel} tile - The tile to count.
-     * @returns {TileModelCounter} - Chains the counter.
+     * @returns {TileModelCounter} - Chains the instance.
      * @fires set
      * @fires removemodel
      * @fires delete
@@ -143,7 +145,7 @@ export class TileModelCounter extends Counter {
 
     /**
      * Removes all counters, including the related tile models.
-     * @returns {TileModelCounter} - Chains the counter.
+     * @returns {TileModelCounter} - Chains the instance.
      * @fires clear
      */
     clear() {

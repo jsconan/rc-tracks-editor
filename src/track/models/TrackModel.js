@@ -37,9 +37,10 @@ export class TrackModel {
      */
     constructor(specs, source = null) {
         this.specs = specs;
-        this.tiles = new TileList(specs);
-        this.counter = new TileModelCounter();
+        this.tiles = new TileList(specs, source);
+        this.counter = new TileModelCounter(source);
         this.builder = new TrackBuilder(buildTrack);
+        source = void 0;
 
         this.tilesStore = tileListStore(this.tiles, list => this.builder.build(list));
         this.modelsStore = tileModelsStore(this.counter);
@@ -75,11 +76,6 @@ export class TrackModel {
             this.modelsStore.bind(this.counter);
             this.counterStore.bind(this.counter);
         });
-
-        if (source) {
-            this.tiles.load(source);
-            source = void 0;
-        }
     }
 
     /**
