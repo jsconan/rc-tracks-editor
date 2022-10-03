@@ -5,7 +5,7 @@
     import { setContext } from 'svelte';
     import config from './config.js';
     import { Sketch } from './track/elements';
-    import { SimpleTrack, Track } from './track/components';
+    import { SimpleTrack, Track, TrackStats } from './track/components';
     import { buildList } from './track/helpers';
     import { TileList } from './tile/models';
     import { TileSpecifications } from './tile/config';
@@ -17,6 +17,7 @@
     } from './tile/helpers';
     import { tileListStore } from './tile/stores';
     import { TrackModel } from './track/models';
+    import samples from './data/tracks.json';
 
     const angle = -90;
     const barrierChunks = config.barrierChunks;
@@ -33,6 +34,7 @@
     const track = new TrackModel(specs);
     track.setBuilderOptions({ startAngle: angle, hPadding: 20, vPadding: 20 });
     track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
+    // track.import(samples.spiral);
 
     const list = new TileList(specs);
     list.import([
@@ -81,7 +83,7 @@
         <section>
             <nav>
                 <Sketch width="100%" height="100%">
-                    <SimpleTrack track={statsCoords} on:click={click} />
+                    <TrackStats {track} />
                 </Sketch>
             </nav>
             <article>

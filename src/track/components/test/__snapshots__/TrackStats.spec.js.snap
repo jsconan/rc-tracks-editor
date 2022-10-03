@@ -1,0 +1,600 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Track renders with default values 1`] = `
+<body>
+  <div>
+    <svg
+      viewBox="-30 -155 310 210"
+      x="0"
+      y="0"
+    >
+      
+      
+      <g
+        class="tile straight-tile"
+        transform=""
+      >
+        <rect
+          class="ground"
+          height="110"
+          width="90"
+          x="0"
+          y="-105"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-22.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-22.5"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="45"
+        y="-50"
+      >
+        1
+      </text>
+      
+      <g
+        class="tile curved-tile"
+        transform=""
+      >
+        <path
+          class="ground"
+          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk even"
+            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="200"
+        y="-50"
+      >
+        1
+      </text>
+      
+    </svg>
+    
+  </div>
+</body>
+`;
+
+exports[`Track renders with the given parameters 1`] = `
+<body>
+  <div>
+    <svg
+      height="400"
+      viewBox="-30 -155 310 210"
+      width="400"
+      x="100"
+      y="200"
+    >
+      
+      
+      <g
+        class="tile straight-tile"
+        transform=""
+      >
+        <rect
+          class="ground"
+          height="110"
+          width="90"
+          x="0"
+          y="-105"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-22.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-22.5"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="45"
+        y="-50"
+      >
+        1
+      </text>
+      
+      <g
+        class="tile curved-tile"
+        transform=""
+      >
+        <path
+          class="ground"
+          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk even"
+            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="200"
+        y="-50"
+      >
+        1
+      </text>
+      
+    </svg>
+    
+  </div>
+</body>
+`;
+
+exports[`Track updates when the model is modified 1`] = `
+<body>
+  <div>
+    <svg
+      height="400"
+      viewBox="-30 -155 470 210"
+      width="400"
+      x="100"
+      y="200"
+    >
+      
+      
+      <g
+        class="tile straight-tile"
+        transform=""
+      >
+        <rect
+          class="ground"
+          height="110"
+          width="90"
+          x="0"
+          y="-105"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="0"
+            y="-22.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-105"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-77.5"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-50"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="85"
+            y="-22.5"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="45"
+        y="-50"
+      >
+        2
+      </text>
+      
+      <g
+        class="tile curved-tile"
+        transform=""
+      >
+        <path
+          class="ground"
+          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk even"
+            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="200"
+        y="-50"
+      >
+        1
+      </text>
+      
+      <g
+        class="tile curved-tile-enlarged"
+        transform=""
+      >
+        <path
+          class="ground"
+          d="M 320 -100 A 10 10 0 0 1 310 -90 L 310 0 L 365 0 A 45 45 0 0 0 410 -45 L 410 -100 Z"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk even"
+            d="M 320 -100 A 10 10 0 0 1 317.0710678118655 -92.92893218813452 L 320.6066017177982 -89.39339828220179 A 15 15 0 0 0 325 -100 Z"
+          />
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 317.0710678118655 -92.92893218813452 A 10 10 0 0 1 310 -90 L 310 -85 A 15 15 0 0 0 320.6066017177982 -89.39339828220179 Z"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            class="barrier-chunk odd"
+            d="M 405 -45 A 40 40 0 0 1 393.2842712474619 -16.7157287525381 L 396.81980515339467 -13.180194846605364 A 45 45 0 0 0 410 -45 Z"
+          />
+          
+          <path
+            class="barrier-chunk even"
+            d="M 393.2842712474619 -16.7157287525381 A 40 40 0 0 1 365 -5 L 365 0 A 45 45 0 0 0 396.81980515339467 -13.180194846605364 Z"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk even"
+            height="5"
+            width="27.5"
+            x="310"
+            y="-5"
+          />
+          
+          <rect
+            class="barrier-chunk odd"
+            height="5"
+            width="27.5"
+            x="337.5"
+            y="-5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="405"
+            y="-100"
+          />
+          
+          <rect
+            class="barrier-chunk even"
+            height="27.5"
+            width="5"
+            x="405"
+            y="-72.5"
+          />
+        </g>
+      </g>
+      
+       
+      <text
+        class="svelte-3b6zon"
+        dominant-baseline="middle"
+        x="360"
+        y="-50"
+      >
+        1
+      </text>
+      
+    </svg>
+    
+  </div>
+</body>
+`;
