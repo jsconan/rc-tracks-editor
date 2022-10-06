@@ -1,0 +1,945 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreeNode deletes nodes from a subtree removing the key 0 1`] = `
+Object {
+  "key": 2,
+  "left": Object {
+    "key": 1,
+    "value": 1,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 3,
+      "value": 3,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+        "value": 6,
+      },
+      "value": 5,
+    },
+    "value": 4,
+  },
+  "value": 2,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 1 1`] = `
+Object {
+  "key": 2,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 3,
+      "value": 3,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+        "value": 6,
+      },
+      "value": 5,
+    },
+    "value": 4,
+  },
+  "value": 2,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 2 1`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 3,
+      "value": 3,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+        "value": 6,
+      },
+      "value": 5,
+    },
+    "value": 4,
+  },
+  "value": 1,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 3 1`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "value": 2,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+        "value": 6,
+      },
+      "value": 5,
+    },
+    "value": 4,
+  },
+  "value": 1,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 4 1`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 5,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+        "value": 3,
+      },
+      "value": 2,
+    },
+    "right": Object {
+      "key": 6,
+      "value": 6,
+    },
+    "value": 5,
+  },
+  "value": 1,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 5 1`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+        "value": 3,
+      },
+      "value": 2,
+    },
+    "right": Object {
+      "key": 6,
+      "value": 6,
+    },
+    "value": 4,
+  },
+  "value": 1,
+}
+`;
+
+exports[`TreeNode deletes nodes from a subtree removing the key 6 1`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+    "value": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+        "value": 3,
+      },
+      "value": 2,
+    },
+    "right": Object {
+      "key": 5,
+      "value": 5,
+    },
+    "value": 4,
+  },
+  "value": 1,
+}
+`;
+
+exports[`TreeNode deletes nodes having keys implementing the compare method 1`] = `
+Object {
+  "key": Comparable {
+    "key": 1,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 0,
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 4,
+    },
+    "left": Object {
+      "key": Comparable {
+        "key": 2,
+      },
+    },
+    "right": Object {
+      "key": Comparable {
+        "key": 5,
+      },
+      "right": Object {
+        "key": Comparable {
+          "key": 6,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a single branch 1`] = `
+Object {
+  "key": "A",
+  "right": Object {
+    "key": "B",
+  },
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a single branch having values 1`] = `
+Object {
+  "key": "A",
+  "right": Object {
+    "key": "B",
+    "value": "b",
+  },
+  "value": "a",
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a single node 1`] = `
+Object {
+  "key": "A",
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a single node having a value 1`] = `
+Object {
+  "key": "A",
+  "value": "a",
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a subtree 1`] = `
+Object {
+  "key": "B",
+  "left": Object {
+    "key": "A",
+  },
+  "right": Object {
+    "key": "C",
+  },
+}
+`;
+
+exports[`TreeNode exports a subtree to JSON from a subtree with values 1`] = `
+Object {
+  "key": "B",
+  "left": Object {
+    "key": "A",
+    "value": "a",
+  },
+  "right": Object {
+    "key": "C",
+    "value": "c",
+  },
+  "value": "b",
+}
+`;
+
+exports[`TreeNode gets the next node in the subtree 1`] = `
+Object {
+  "key": "B",
+}
+`;
+
+exports[`TreeNode gets the next node in the subtree 2`] = `
+Object {
+  "key": "C",
+}
+`;
+
+exports[`TreeNode gets the next node in the subtree 3`] = `
+Object {
+  "key": "E",
+}
+`;
+
+exports[`TreeNode gets the previous node in the subtree 1`] = `
+Object {
+  "key": "A",
+}
+`;
+
+exports[`TreeNode gets the previous node in the subtree 2`] = `
+Object {
+  "key": "A",
+}
+`;
+
+exports[`TreeNode gets the previous node in the subtree 3`] = `
+Object {
+  "key": "C",
+}
+`;
+
+exports[`TreeNode implements the iteration protocol 1`] = `
+Array [
+  Object {
+    "key": 0,
+    "value": 0,
+  },
+  Object {
+    "key": 1,
+    "left": Object {
+      "key": 0,
+      "value": 0,
+    },
+    "right": Object {
+      "key": 4,
+      "left": Object {
+        "key": 2,
+        "right": Object {
+          "key": 3,
+          "value": 3,
+        },
+        "value": 2,
+      },
+      "right": Object {
+        "key": 5,
+        "right": Object {
+          "key": 6,
+          "value": 6,
+        },
+        "value": 5,
+      },
+      "value": 4,
+    },
+    "value": 1,
+  },
+  Object {
+    "key": 2,
+    "right": Object {
+      "key": 3,
+      "value": 3,
+    },
+    "value": 2,
+  },
+  Object {
+    "key": 3,
+    "value": 3,
+  },
+  Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+        "value": 3,
+      },
+      "value": 2,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+        "value": 6,
+      },
+      "value": 5,
+    },
+    "value": 4,
+  },
+  Object {
+    "key": 5,
+    "right": Object {
+      "key": 6,
+      "value": 6,
+    },
+    "value": 5,
+  },
+  Object {
+    "key": 6,
+    "value": 6,
+  },
+]
+`;
+
+exports[`TreeNode inserts nodes from a random list 1`] = `
+Object {
+  "key": 4,
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 2`] = `
+Object {
+  "key": 1,
+  "right": Object {
+    "key": 4,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 3`] = `
+Object {
+  "key": 4,
+  "left": Object {
+    "key": 1,
+  },
+  "right": Object {
+    "key": 5,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 4`] = `
+Object {
+  "key": 4,
+  "left": Object {
+    "key": 1,
+    "right": Object {
+      "key": 3,
+    },
+  },
+  "right": Object {
+    "key": 5,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 5`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 3,
+    },
+    "right": Object {
+      "key": 5,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 6`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 3,
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from a random list 7`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+      },
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 1`] = `
+Object {
+  "key": 0,
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 2`] = `
+Object {
+  "key": 0,
+  "right": Object {
+    "key": 1,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 3`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 2,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 4`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 2,
+    "right": Object {
+      "key": 3,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 5`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 3,
+    "left": Object {
+      "key": 2,
+    },
+    "right": Object {
+      "key": 4,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 6`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 3,
+    "left": Object {
+      "key": 2,
+    },
+    "right": Object {
+      "key": 4,
+      "right": Object {
+        "key": 5,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes from an ordered list 7`] = `
+Object {
+  "key": 3,
+  "left": Object {
+    "key": 1,
+    "left": Object {
+      "key": 0,
+    },
+    "right": Object {
+      "key": 2,
+    },
+  },
+  "right": Object {
+    "key": 5,
+    "left": Object {
+      "key": 4,
+    },
+    "right": Object {
+      "key": 6,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 1`] = `
+Object {
+  "key": Comparable {
+    "key": 4,
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 2`] = `
+Object {
+  "key": Comparable {
+    "key": 1,
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 4,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 3`] = `
+Object {
+  "key": Comparable {
+    "key": 4,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 1,
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 5,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 4`] = `
+Object {
+  "key": Comparable {
+    "key": 4,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 1,
+    },
+    "right": Object {
+      "key": Comparable {
+        "key": 3,
+      },
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 5,
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 5`] = `
+Object {
+  "key": Comparable {
+    "key": 1,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 0,
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 4,
+    },
+    "left": Object {
+      "key": Comparable {
+        "key": 3,
+      },
+    },
+    "right": Object {
+      "key": Comparable {
+        "key": 5,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 6`] = `
+Object {
+  "key": Comparable {
+    "key": 1,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 0,
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 4,
+    },
+    "left": Object {
+      "key": Comparable {
+        "key": 3,
+      },
+    },
+    "right": Object {
+      "key": Comparable {
+        "key": 5,
+      },
+      "right": Object {
+        "key": Comparable {
+          "key": 6,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes having keys implementing the compare method 7`] = `
+Object {
+  "key": Comparable {
+    "key": 1,
+  },
+  "left": Object {
+    "key": Comparable {
+      "key": 0,
+    },
+  },
+  "right": Object {
+    "key": Comparable {
+      "key": 4,
+    },
+    "left": Object {
+      "key": Comparable {
+        "key": 2,
+      },
+      "right": Object {
+        "key": Comparable {
+          "key": 3,
+        },
+      },
+    },
+    "right": Object {
+      "key": Comparable {
+        "key": 5,
+      },
+      "right": Object {
+        "key": Comparable {
+          "key": 6,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode inserts nodes on the terminator 1`] = `
+Object {
+  "key": 1,
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 1`] = `
+Object {
+  "key": 0,
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 2`] = `
+Object {
+  "key": 4,
+  "left": Object {
+    "key": 2,
+    "right": Object {
+      "key": 3,
+    },
+  },
+  "right": Object {
+    "key": 5,
+    "right": Object {
+      "key": 6,
+    },
+  },
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 3`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+      },
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 4`] = `
+Object {
+  "key": 5,
+  "right": Object {
+    "key": 6,
+  },
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 5`] = `
+Object {
+  "key": 3,
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 6`] = `
+Object {
+  "key": 0,
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 7`] = `
+Object {
+  "key": 6,
+}
+`;
+
+exports[`TreeNode lookups for a node in the subtree 8`] = `
+Object {
+  "key": 2,
+  "right": Object {
+    "key": 3,
+  },
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 1`] = `
+Object {
+  "key": 0,
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 2`] = `
+Object {
+  "key": 4,
+  "left": Object {
+    "key": 2,
+    "right": Object {
+      "key": 3,
+    },
+  },
+  "right": Object {
+    "key": 5,
+    "right": Object {
+      "key": 6,
+    },
+  },
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 3`] = `
+Object {
+  "key": 1,
+  "left": Object {
+    "key": 0,
+  },
+  "right": Object {
+    "key": 4,
+    "left": Object {
+      "key": 2,
+      "right": Object {
+        "key": 3,
+      },
+    },
+    "right": Object {
+      "key": 5,
+      "right": Object {
+        "key": 6,
+      },
+    },
+  },
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 4`] = `
+Object {
+  "key": 5,
+  "right": Object {
+    "key": 6,
+  },
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 5`] = `
+Object {
+  "key": 3,
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 6`] = `
+Object {
+  "key": 0,
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 7`] = `
+Object {
+  "key": 6,
+}
+`;
+
+exports[`TreeNode searches for a node in the subtree 8`] = `
+Object {
+  "key": 2,
+  "right": Object {
+    "key": 3,
+  },
+}
+`;
