@@ -107,8 +107,8 @@ export class TreeNode {
      * @generator
      */
     *keys() {
-        for (const node of this) {
-            yield node.key;
+        for (const { key } of this) {
+            yield key;
         }
     }
 
@@ -118,8 +118,8 @@ export class TreeNode {
      * @generator
      */
     *values() {
-        for (const node of this) {
-            yield node.value;
+        for (const { value } of this) {
+            yield value;
         }
     }
 
