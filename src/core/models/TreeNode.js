@@ -74,6 +74,7 @@ export class TreeNode {
      * Visits each node of a subtree in order.
      * @param {eachCallback} callback - A function called on each node of the subtree.
      * @returns {TreeNode} - Returns the root of the subtree.
+     * @throws {TypeError} - If the callback is not supplied or is not a function.
      */
     forEach(callback) {
         validateCallback(callback);
@@ -89,6 +90,7 @@ export class TreeNode {
      * Creates an array, visiting each node of a subtree in order and mapping it.
      * @param {eachCallback} callback - A function called on each node of the subtree.
      * @returns {Array} - Returns a array produced from the visit of each node in order.
+     * @throws {TypeError} - If the callback is not supplied or is not a function.
      */
     map(callback) {
         validateCallback(callback);
@@ -148,6 +150,7 @@ export class TreeNode {
      * Searches for a node in a subtree.
      * @param {lookupCallback} compare - A function called to search for a node in the subtree.
      * @returns {TreeNode} - Returns the node corresponding to the search, or NIL if not found.
+     * @throws {TypeError} - If the callback is not supplied or is not a function.
      */
     search(compare) {
         validateCallback(compare);
