@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Doublemap } from '../models/Doublemap.js';
+import { DoubleMap } from '../models/DoubleMap.js';
 import { eachWord, hasAPI, mixin, pick, validateAPI } from '../helpers';
 
 export default eventEmitterMixin;
@@ -28,7 +28,7 @@ export default eventEmitterMixin;
  * @returns {EventEmitter} - Returns the supplied object, augmented with the `EventEmitter` API.
  */
 function eventEmitterMixin(target, ...mixins) {
-    const events = new Doublemap();
+    const events = new DoubleMap();
     target = target || {};
 
     /**

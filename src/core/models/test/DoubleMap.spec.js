@@ -16,9 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Doublemap } from '../Doublemap.js';
+import { DoubleMap } from '../DoubleMap.js';
 
-describe('Doublemap', () => {
+describe('DoubleMap', () => {
     const source = [
         ['C1', 'L1', 1],
         ['C1', 'L2', 2],
@@ -29,34 +29,34 @@ describe('Doublemap', () => {
     const nbSecondaryKeys = 4;
 
     it('is a class', () => {
-        expect(Doublemap).toEqual(expect.any(Function));
+        expect(DoubleMap).toEqual(expect.any(Function));
     });
 
     it('is a kind of Map', () => {
-        expect(new Doublemap()).toBeInstanceOf(Map);
+        expect(new DoubleMap()).toBeInstanceOf(Map);
     });
 
     it('can be initialized with values', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
         expect([...doublemap]).toMatchSnapshot();
     });
 
     it('can be initialized with another instance', () => {
-        const other = new Doublemap(source);
-        const doublemap = new Doublemap(other);
+        const other = new DoubleMap(source);
+        const doublemap = new DoubleMap(other);
         expect([...doublemap]).toMatchSnapshot();
     });
 
     it('has a size', () => {
-        expect(new Doublemap().size).toBe(0);
-        expect(new Doublemap().size2).toBe(0);
+        expect(new DoubleMap().size).toBe(0);
+        expect(new DoubleMap().size2).toBe(0);
 
-        expect(new Doublemap(source).size).toBe(nbPrimaryKeys);
-        expect(new Doublemap(source).size2).toBe(nbSecondaryKeys);
+        expect(new DoubleMap(source).size).toBe(nbPrimaryKeys);
+        expect(new DoubleMap(source).size2).toBe(nbSecondaryKeys);
     });
 
     it('is an iterator', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap[Symbol.iterator]).toEqual(expect.any(Function));
         expect(doublemap[Symbol.iterator]()).not.toBe(doublemap[Symbol.iterator]());
@@ -64,7 +64,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the entries', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.entries).toEqual(expect.any(Function));
         expect(doublemap.entries()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -73,7 +73,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the entries for a particular primary key', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.entries).toEqual(expect.any(Function));
         expect(doublemap.entries('C1')[Symbol.iterator]).toEqual(expect.any(Function));
@@ -84,7 +84,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the values', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.values).toEqual(expect.any(Function));
         expect(doublemap.values()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -93,7 +93,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the values for a particular primary key', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.values).toEqual(expect.any(Function));
         expect(doublemap.values('C1')[Symbol.iterator]).toEqual(expect.any(Function));
@@ -104,7 +104,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the keys', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.keys).toEqual(expect.any(Function));
         expect(doublemap.keys()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -113,7 +113,7 @@ describe('Doublemap', () => {
     });
 
     it('can produce an iterator to the keys for a particular primary key', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.keys).toEqual(expect.any(Function));
         expect(doublemap.keys('C1')[Symbol.iterator]).toEqual(expect.any(Function));
@@ -124,7 +124,7 @@ describe('Doublemap', () => {
     });
 
     it('allows iterating using a callback', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         const iterator = source.values();
         const callback = jest.fn().mockImplementation(function (value, secondaryKey, primaryKey, map) {
@@ -141,7 +141,7 @@ describe('Doublemap', () => {
     });
 
     it('allows iterating using a callback, with binding', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         const context = {};
         const iterator = source.values();
@@ -159,12 +159,12 @@ describe('Doublemap', () => {
     });
 
     it('needs a callback to iterate over entries', () => {
-        const doublemap = new Doublemap();
+        const doublemap = new DoubleMap();
         expect(() => doublemap.forEach()).toThrow('A callback function is expected!');
     });
 
     it('tells if a key exists', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.has('C1')).toBeTruthy();
         expect(doublemap.has('C2')).toBeTruthy();
@@ -172,7 +172,7 @@ describe('Doublemap', () => {
     });
 
     it('tells if a key pair exists', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.has('C1', 'L1')).toBeTruthy();
         expect(doublemap.has('C1', 'L2')).toBeTruthy();
@@ -185,7 +185,7 @@ describe('Doublemap', () => {
     });
 
     it('tells if a keys/value set exists', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.has('C1', 'L1', 1)).toBeTruthy();
         expect(doublemap.has('C2', 'L2', 4)).toBeTruthy();
@@ -193,7 +193,7 @@ describe('Doublemap', () => {
     });
 
     it('can get the value of a key', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.get('C1')).toBeDefined();
         expect(doublemap.get('C1')).toEqual(expect.any(Map));
@@ -203,7 +203,7 @@ describe('Doublemap', () => {
     });
 
     it('can get the value of a couple of keys', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.get('C1', 'L1')).toBeDefined();
         expect(doublemap.get('C1', 'L1')).toBe(1);
@@ -212,7 +212,7 @@ describe('Doublemap', () => {
     });
 
     it('can set values', () => {
-        const doublemap = new Doublemap();
+        const doublemap = new DoubleMap();
 
         expect(doublemap.size).toBe(0);
         expect(doublemap.has('C1')).toBeFalsy();
@@ -227,7 +227,7 @@ describe('Doublemap', () => {
     });
 
     it('cannot set incomplete keys', () => {
-        const doublemap = new Doublemap();
+        const doublemap = new DoubleMap();
 
         expect(doublemap.set('C1')).toBe(doublemap);
 
@@ -236,7 +236,7 @@ describe('Doublemap', () => {
     });
 
     it('can delete keys', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.size).toBe(nbPrimaryKeys);
         expect(doublemap.size2).toBe(nbSecondaryKeys);
@@ -252,7 +252,7 @@ describe('Doublemap', () => {
     });
 
     it('can delete a couple of keys', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.size).toBe(nbPrimaryKeys);
         expect(doublemap.size2).toBe(nbSecondaryKeys);
@@ -274,7 +274,7 @@ describe('Doublemap', () => {
     });
 
     it('can delete values', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.size).toBe(nbPrimaryKeys);
         expect(doublemap.size2).toBe(nbSecondaryKeys);
@@ -300,7 +300,7 @@ describe('Doublemap', () => {
     });
 
     it('does not delete values without a match', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect(doublemap.size).toBe(nbPrimaryKeys);
         expect(doublemap.size2).toBe(nbSecondaryKeys);
@@ -311,7 +311,7 @@ describe('Doublemap', () => {
     });
 
     it('can clear the map', () => {
-        const doublemap = new Doublemap(source);
+        const doublemap = new DoubleMap(source);
 
         expect([...doublemap]).toStrictEqual(source);
         expect(doublemap.size).toBe(nbPrimaryKeys);

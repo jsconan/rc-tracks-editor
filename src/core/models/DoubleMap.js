@@ -26,7 +26,7 @@ import { validateCallback } from '../helpers';
  * is associated with a another `Map` object that contains the secondary keys and the related values. In the
  * end, it could be seen as a two-dimensional associative array.
  */
-export class Doublemap extends Map {
+export class DoubleMap extends Map {
     /**
      * Creates a doublemap.
      * @param {*} source - A list of primaryKey/secondaryKey/value sets to inject in the map.
@@ -101,7 +101,7 @@ export class Doublemap extends Map {
      * @param {*} primaryKey - The primary key to check.
      * @param {*} secondaryKey - The secondary key to check.
      * @param {*} value - The value to register under the keys.
-     * @returns {Doublemap} - Chains the instance.
+     * @returns {DoubleMap} - Chains the instance.
      */
     set(primaryKey, secondaryKey, value) {
         if ('undefined' !== typeof secondaryKey) {
@@ -241,11 +241,11 @@ export class Doublemap extends Map {
 }
 
 /**
- * Represents a callback function that is invoked for each primaryKey/secondaryKey/value set of a `Doublemap`
+ * Represents a callback function that is invoked for each primaryKey/secondaryKey/value set of a `DoubleMap`
  * object. Mainly used when applying a traversal algorithm, like `forEach()`.
  * @param {*} value - The current value being traversed.
  * @param {*} secondaryKey - The current secondaryKey being traversed.
  * @param {*} primaryKey - The current primaryKey being traversed.
- * @param {Doublemap} map - The `Doublemap` instance being traversed.
+ * @param {DoubleMap} map - The `DoubleMap` instance being traversed.
  * @callback eachKeysValue
  */
