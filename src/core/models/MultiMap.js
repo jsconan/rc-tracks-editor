@@ -56,7 +56,7 @@ import { validateCallback } from '../helpers';
  *
  * The `get()` method will give direct access to the bucket used to store values.
  */
-export class Multimap extends Map {
+export class MultiMap extends Map {
     /**
      * Tells whether a key exists or not. When the value is supplied, it also tells whether the key/pair exists or not.
      * @param {*} key - The key to check.
@@ -82,7 +82,7 @@ export class Multimap extends Map {
      * to the same key will add values to the bucket.
      * @param {*} key - The key to set.
      * @param {*} value - The value to register under the key.
-     * @returns {Multimap} - Chains the instance.
+     * @returns {MultiMap} - Chains the instance.
      */
     set(key, value) {
         let bucket = this.get(key);
@@ -183,10 +183,10 @@ export class Multimap extends Map {
 }
 
 /**
- * Represents a callback function that is invoked for each key/value pair of a `Multimap` object.
+ * Represents a callback function that is invoked for each key/value pair of a `MultiMap` object.
  * Mainly used when applying a traversal algorithm, like `forEach()`.
  * @param {*} value - The current value being traversed.
  * @param {*} key - The current key being traversed.
- * @param {Multimap} map - The `Multimap` instance being traversed.
+ * @param {MultiMap} map - The `MultiMap` instance being traversed.
  * @callback eachKeyValue
  */

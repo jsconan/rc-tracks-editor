@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multimap can be initialized with another instance 1`] = `
+exports[`MultiMap can be initialized with another instance 1`] = `
 Array [
   Array [
     1,
@@ -29,7 +29,7 @@ Array [
 ]
 `;
 
-exports[`Multimap can be initialized with values 1`] = `
+exports[`MultiMap can be initialized with values 1`] = `
 Array [
   Array [
     1,

@@ -19,6 +19,6 @@
 export { Counter } from './Counter.js';
 export { DoubleMap } from './DoubleMap.js';
 export { List } from './List.js';
-export { Multimap } from './Multimap.js';
+export { MultiMap } from './MultiMap.js';
 export { TreeNode } from './TreeNode.js';
 export { Vector2D } from './Vector2D.js';

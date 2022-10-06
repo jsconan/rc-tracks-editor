@@ -16,19 +16,19 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Multimap } from '../Multimap.js';
+import { MultiMap } from '../MultiMap.js';
 
-describe('Multimap', () => {
+describe('MultiMap', () => {
     it('is a class', () => {
-        expect(Multimap).toEqual(expect.any(Function));
+        expect(MultiMap).toEqual(expect.any(Function));
     });
 
     it('is a kind of Map', () => {
-        expect(new Multimap()).toBeInstanceOf(Map);
+        expect(new MultiMap()).toBeInstanceOf(Map);
     });
 
     it('can be initialized with values', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, '1'],
             [2, '2'],
             [3, '3'],
@@ -40,7 +40,7 @@ describe('Multimap', () => {
     });
 
     it('can be initialized with another instance', () => {
-        const source = new Multimap([
+        const source = new MultiMap([
             [1, '1'],
             [2, '2'],
             [3, '3'],
@@ -48,22 +48,22 @@ describe('Multimap', () => {
             [2, 'II'],
             [3, 'III']
         ]);
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
         expect([...multimap]).toMatchSnapshot();
     });
 
     it('has a size', () => {
-        expect(new Multimap().size).toBe(0);
+        expect(new MultiMap().size).toBe(0);
 
         expect(
-            new Multimap([
+            new MultiMap([
                 [1, 1],
                 [1, 2]
             ]).size
         ).toBe(1);
 
         expect(
-            new Multimap([
+            new MultiMap([
                 [1, 2],
                 [2, 3]
             ]).size
@@ -77,7 +77,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         expect(multimap[Symbol.iterator]).toEqual(expect.any(Function));
         expect(multimap[Symbol.iterator]()).not.toBe(multimap[Symbol.iterator]());
@@ -91,7 +91,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         expect(multimap.entries).toEqual(expect.any(Function));
         expect(multimap.entries()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -106,7 +106,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         expect(multimap.values).toEqual(expect.any(Function));
         expect(multimap.values()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -121,7 +121,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         expect(multimap.keys).toEqual(expect.any(Function));
         expect(multimap.keys()[Symbol.iterator]).toEqual(expect.any(Function));
@@ -136,7 +136,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         const iterator = source.values();
         const callback = jest.fn().mockImplementation(function (value, key, map) {
@@ -158,7 +158,7 @@ describe('Multimap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         const context = {};
         const iterator = source.values();
@@ -175,12 +175,12 @@ describe('Multimap', () => {
     });
 
     it('needs a callback to iterate over entries', () => {
-        const multimap = new Multimap();
+        const multimap = new MultiMap();
         expect(() => multimap.forEach()).toThrow('A callback function is expected!');
     });
 
     it('tells if a key exists', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
@@ -191,7 +191,7 @@ describe('Multimap', () => {
     });
 
     it('tells if a key/value pair exists', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
@@ -205,7 +205,7 @@ describe('Multimap', () => {
     });
 
     it('can get the value of a key', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, 1],
             [1, 2],
             [2, 2]
@@ -223,7 +223,7 @@ describe('Multimap', () => {
     });
 
     it('can set values', () => {
-        const multimap = new Multimap();
+        const multimap = new MultiMap();
 
         expect(multimap.size).toBe(0);
         expect(multimap.has(1)).toBeFalsy();
@@ -233,7 +233,7 @@ describe('Multimap', () => {
     });
 
     it('sets values in a bucket', () => {
-        const multimap = new Multimap();
+        const multimap = new MultiMap();
 
         multimap.set(1, 2);
         expect(multimap.get(1)).toEqual(expect.any(Set));
@@ -241,7 +241,7 @@ describe('Multimap', () => {
     });
 
     it('can set multiple values under the same key', () => {
-        const multimap = new Multimap();
+        const multimap = new MultiMap();
 
         expect(multimap.size).toBe(0);
         multimap.set(1, 2);
@@ -253,7 +253,7 @@ describe('Multimap', () => {
     });
 
     it('can delete keys', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
@@ -267,7 +267,7 @@ describe('Multimap', () => {
     });
 
     it('can delete values', () => {
-        const multimap = new Multimap([
+        const multimap = new MultiMap([
             [1, 1],
             [1, 2]
         ]);
@@ -289,7 +289,7 @@ describe('Multimap', () => {
             [1, 1],
             [1, 2]
         ];
-        const multimap = new Multimap(values);
+        const multimap = new MultiMap(values);
 
         expect(multimap.size).toBe(1);
         expect(multimap.delete(1, 3)).toBeFalsy();
@@ -302,7 +302,7 @@ describe('Multimap', () => {
             [1, 2],
             [2, 3]
         ];
-        const multimap = new Multimap(source);
+        const multimap = new MultiMap(source);
 
         expect([...multimap]).toStrictEqual(source);
         expect(multimap.size).toBe(source.length);
