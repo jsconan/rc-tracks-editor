@@ -99,6 +99,7 @@ exports[`Track renders with default values 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="45"
         y="-50"
       >
@@ -157,6 +158,7 @@ exports[`Track renders with default values 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="200"
         y="-50"
       >
@@ -270,6 +272,7 @@ exports[`Track renders with the given parameters 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="45"
         y="-50"
       >
@@ -328,6 +331,7 @@ exports[`Track renders with the given parameters 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="200"
         y="-50"
       >
@@ -441,6 +445,7 @@ exports[`Track updates when the model is modified 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="45"
         y="-50"
       >
@@ -499,6 +504,7 @@ exports[`Track updates when the model is modified 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="200"
         y="-50"
       >
@@ -587,6 +593,7 @@ exports[`Track updates when the model is modified 1`] = `
       <text
         class="svelte-3b6zon"
         dominant-baseline="middle"
+        text-anchor="middle"
         x="360"
         y="-50"
       >

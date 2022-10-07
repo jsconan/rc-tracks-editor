@@ -21,14 +21,6 @@
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
 
-    function sortModels(a, b) {
-        const typeCompare = -a.type.localeCompare(b.type);
-        if (!typeCompare) {
-            return a.ratio - b.ratio;
-        }
-        return typeCompare;
-    }
-
     $: models = buildList($modelsStore, {
         tileAngle: -0,
         centered: true,
@@ -42,7 +34,9 @@
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
     {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
         <Tile {type} {direction} {ratio} {angle} {x} {y} />
-        <text x={getTextX(x, rect)} y={getTextY(y, rect)} dominant-baseline="middle">{$counterStore[i].count}</text>
+        <text x={getTextX(x, rect)} y={getTextY(y, rect)} text-anchor="middle" dominant-baseline="middle">
+            {$counterStore[i].count}
+        </text>
     {/each}
 </Sketch>
 
