@@ -26,6 +26,8 @@ export {
     CURVED_TILE_TYPE,
     CURVED_TILE_ENLARGED_TYPE,
     flipTileDirection,
+    getDirectionRank,
+    getTypeRank,
     isDirectionValid,
     isTypeValid,
     validateDirection,

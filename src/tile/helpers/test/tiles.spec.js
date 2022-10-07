@@ -21,6 +21,8 @@ import {
     CURVED_TILE_TYPE,
     DEFAULT_TILE_TYPE,
     flipTileDirection,
+    getDirectionRank,
+    getTypeRank,
     isDirectionValid,
     isTypeValid,
     STRAIGHT_TILE_TYPE,
@@ -29,6 +31,46 @@ import {
     validateDirection,
     validateType
 } from '../tiles.js';
+
+describe('flipTileDirection', () => {
+    it('is a function', () => {
+        expect(flipTileDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT],
+        [TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT]
+    ])('flips the direction from %s to %s', (direction, flippedDirection) => {
+        expect(flipTileDirection(direction)).toBe(flippedDirection);
+    });
+});
+
+describe('getDirectionRank', () => {
+    it('is a function', () => {
+        expect(getDirectionRank).toEqual(expect.any(Function));
+    });
+
+    it('gives the rank for a tile direction', () => {
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toEqual(expect.any(Number));
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toBeGreaterThan(getDirectionRank('foo'));
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toBeGreaterThan(getDirectionRank(TILE_DIRECTION_RIGHT));
+        expect(getDirectionRank(TILE_DIRECTION_RIGHT)).toBeLessThan(getDirectionRank(TILE_DIRECTION_LEFT));
+    });
+});
+
+describe('getTypeRank', () => {
+    it('is a function', () => {
+        expect(getTypeRank).toEqual(expect.any(Function));
+    });
+
+    it('gives the rank for a tile type', () => {
+        expect(getTypeRank(DEFAULT_TILE_TYPE)).toEqual(expect.any(Number));
+        expect(getTypeRank(STRAIGHT_TILE_TYPE)).toBeGreaterThan(getTypeRank(DEFAULT_TILE_TYPE));
+        expect(getTypeRank(STRAIGHT_TILE_TYPE)).toBeGreaterThan(getTypeRank('foo'));
+        expect(getTypeRank(CURVED_TILE_ENLARGED_TYPE)).toBeGreaterThan(getTypeRank(STRAIGHT_TILE_TYPE));
+        expect(getTypeRank(CURVED_TILE_TYPE)).toBeGreaterThan(getTypeRank(CURVED_TILE_ENLARGED_TYPE));
+    });
+});
 
 describe('isDirectionValid', () => {
     it('is a function', () => {
@@ -41,33 +83,6 @@ describe('isDirectionValid', () => {
 
     it.each([-1, 0, 1, 2])('tells the direction "%s" is not valid', direction => {
         expect(isDirectionValid(direction)).toBeFalsy();
-    });
-});
-
-describe('validateDirection', () => {
-    it('is a function', () => {
-        expect(validateDirection).toEqual(expect.any(Function));
-    });
-
-    it.each([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT])('validates the direction "%s"', direction => {
-        expect(() => validateDirection(direction)).not.toThrow();
-    });
-
-    it.each([-1, 0, 1, 2])('throws an error if the direction is not valid, example with "%s"', direction => {
-        expect(() => validateDirection(direction)).toThrow('A valid direction is needed!');
-    });
-});
-
-describe('flipTileDirection', () => {
-    it('is a function', () => {
-        expect(flipTileDirection).toEqual(expect.any(Function));
-    });
-
-    it.each([
-        [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT],
-        [TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT]
-    ])('flips the direction from %s to %s', (direction, flippedDirection) => {
-        expect(flipTileDirection(direction)).toBe(flippedDirection);
     });
 });
 
@@ -85,6 +100,20 @@ describe('isTypeValid', () => {
 
     it.each([DEFAULT_TILE_TYPE, 'left', 'right'])('tells the type "%s" is not valid', direction => {
         expect(isTypeValid(direction)).toBeFalsy();
+    });
+});
+
+describe('validateDirection', () => {
+    it('is a function', () => {
+        expect(validateDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT])('validates the direction "%s"', direction => {
+        expect(() => validateDirection(direction)).not.toThrow();
+    });
+
+    it.each([-1, 0, 1, 2])('throws an error if the direction is not valid, example with "%s"', direction => {
+        expect(() => validateDirection(direction)).toThrow('A valid direction is needed!');
     });
 });
 

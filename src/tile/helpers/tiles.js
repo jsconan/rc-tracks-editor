@@ -59,22 +59,29 @@ export const CURVED_TILE_ENLARGED_TYPE = 'curved-tile-enlarged';
 const allowedDirection = [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT];
 
 /**
- * Checks if a given direction is valid for a tile.
- * @param {*} direction - The direction to check.
- * @returns {boolean} - Returns `true` if the direction is valid.
+ * @type {string[]} - The list of allowed tile types.
+ * @private
  */
-export const isDirectionValid = direction => allowedDirection.includes(direction);
+const allowedTypes = [STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE];
 
 /**
- * Validates that a given direction is valid for a tile.
- * Otherwise, an error is thrown.
- * @param {*} direction - The direction to validate.
- * @throws {TypeError} - If the given direction is not valid.
+ * @type {object} - A mapping to give an order rank to each tile direction.
+ * @private
  */
-export const validateDirection = direction => {
-    if (!isDirectionValid(direction)) {
-        throw new TypeError('A valid direction is needed!');
-    }
+const directionRanks = {
+    [TILE_DIRECTION_RIGHT]: 0,
+    [TILE_DIRECTION_LEFT]: 1
+};
+
+/**
+ * @type {object} - A mapping to give an order rank to each tile type.
+ * @private
+ */
+const typeRanks = {
+    [DEFAULT_TILE_TYPE]: 0,
+    [STRAIGHT_TILE_TYPE]: 1,
+    [CURVED_TILE_ENLARGED_TYPE]: 2,
+    [CURVED_TILE_TYPE]: 3
 };
 
 /**
@@ -90,10 +97,25 @@ export const flipTileDirection = direction => {
 };
 
 /**
- * @type {string[]} - The list of allowed tile types.
- * @private
+ * Gets the order rank for a given direction.
+ * @param {*} direction - The direction to rank.
+ * @returns {number} - Returns a number ranking the direction.
  */
-const allowedTypes = [STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE];
+export const getDirectionRank = direction => directionRanks[direction] || 0;
+
+/**
+ * Gets the order rank for a given tile type.
+ * @param {*} direction - The type to rank.
+ * @returns {number} - Returns a number ranking the type.
+ */
+export const getTypeRank = type => typeRanks[type] || 0;
+
+/**
+ * Checks if a given direction is valid for a tile.
+ * @param {*} direction - The direction to check.
+ * @returns {boolean} - Returns `true` if the direction is valid.
+ */
+export const isDirectionValid = direction => allowedDirection.includes(direction);
 
 /**
  * Checks if a given type is valid for a tile.
@@ -101,6 +123,18 @@ const allowedTypes = [STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED
  * @returns {boolean} - Returns `true` if the type is valid.
  */
 export const isTypeValid = type => allowedTypes.includes(type);
+
+/**
+ * Validates that a given direction is valid for a tile.
+ * Otherwise, an error is thrown.
+ * @param {*} direction - The direction to validate.
+ * @throws {TypeError} - If the given direction is not valid.
+ */
+export const validateDirection = direction => {
+    if (!isDirectionValid(direction)) {
+        throw new TypeError('A valid direction is needed!');
+    }
+};
 
 /**
  * Validates that a given type is valid for a tile.
