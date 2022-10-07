@@ -116,24 +116,6 @@ export class SortedMap {
     }
 
     /**
-     * Creates an array, visiting each node of a subtree in order and mapping it.
-     * @param {eachCallback} callback - A function called on each node of the subtree.
-     * @param {*} [thisArg] - An optional call context for the callback. If omitted it will be defaulted to `undefined`.
-     * @returns {Array} - Returns a array produced from the visit of each node in order.
-     * @throws {TypeError} - If the callback is not supplied or is not a function.
-     */
-    map(callback, thisArg) {
-        validateCallback(callback);
-
-        const result = [];
-        for (const { key, value } of this.tree) {
-            result.push(callback.call(thisArg, value, key, this));
-        }
-
-        return result;
-    }
-
-    /**
      * Produces an iterator to loop over all the keys.
      * @yields {*} - The next key in the map.
      * @generator

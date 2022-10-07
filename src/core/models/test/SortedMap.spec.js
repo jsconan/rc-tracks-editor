@@ -141,46 +141,6 @@ describe('SortedMap', () => {
         expect(() => map.forEach()).toThrow('A callback function is expected!');
     });
 
-    it('allows mapping using a callback', () => {
-        const map = new SortedMap(random);
-
-        const iterator = ordered.values();
-        const callback = jest.fn().mockImplementation(function (value, key, thisMap) {
-            const current = iterator.next().value;
-            expect(this).toBeUndefined();
-            expect(thisMap).toBe(map);
-            expect(key).toBe(current[0]);
-            expect(value).toStrictEqual(current[1]);
-            return key;
-        });
-
-        expect(map.map(callback)).toEqual(keys);
-        expect(callback).toHaveBeenCalledTimes(ordered.length);
-    });
-
-    it('allows mapping using a callback, with binding', () => {
-        const map = new SortedMap(random);
-
-        const context = {};
-        const iterator = ordered.values();
-        const callback = jest.fn().mockImplementation(function (value, key, thisMap) {
-            const current = iterator.next().value;
-            expect(this).toBe(context);
-            expect(thisMap).toBe(map);
-            expect(key).toBe(current[0]);
-            expect(value).toStrictEqual(current[1]);
-            return key;
-        });
-
-        expect(map.map(callback, context)).toEqual(keys);
-        expect(callback).toHaveBeenCalledTimes(ordered.length);
-    });
-
-    it('needs a mapping to iterate over entries', () => {
-        const map = new SortedMap();
-        expect(() => map.map()).toThrow('A callback function is expected!');
-    });
-
     it('tells if a key exists', () => {
         const map = new SortedMap([
             [1, 2],
