@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Counter, TreeNode } from '../../core/models';
+import { Counter, SortedSet } from '../../core/models';
 import { TILE_DIRECTION_RIGHT } from '../helpers';
 
 /**
@@ -39,7 +39,7 @@ export class TileModelCounter extends Counter {
         super();
 
         this.models = new Map();
-        this.sortedModels = TreeNode.create();
+        this.sortedModels = new SortedSet();
 
         if (source) {
             this.load(source);
@@ -54,7 +54,7 @@ export class TileModelCounter extends Counter {
     getCounterList() {
         const counters = [];
 
-        for (const model of this.sortedModels.keys()) {
+        for (const model of this.sortedModels) {
             const { modelId } = model;
             const count = this.get(modelId);
             counters.push({ modelId, model, count });
@@ -68,7 +68,7 @@ export class TileModelCounter extends Counter {
      * @returns {TileModel[]} - Returns the list of counted tile models.
      */
     getModelList() {
-        return [...this.sortedModels.keys()];
+        return [...this.sortedModels];
     }
 
     /**
@@ -97,7 +97,7 @@ export class TileModelCounter extends Counter {
         if (!this.models.has(modelId)) {
             const model = extractModel(tile);
             this.models.set(modelId, model);
-            this.sortedModels = this.sortedModels.insert(model);
+            this.sortedModels.add(model);
 
             this.emit('addmodel', modelId, model);
         }
@@ -145,7 +145,7 @@ export class TileModelCounter extends Counter {
         const model = this.models.get(key);
         if (model) {
             this.models.delete(key);
-            this.sortedModels = this.sortedModels.delete(model);
+            this.sortedModels.delete(model);
 
             this.emit('removemodel', key, model);
         }
@@ -160,7 +160,7 @@ export class TileModelCounter extends Counter {
      */
     clear() {
         this.models.clear();
-        this.sortedModels = TreeNode.create();
+        this.sortedModels.clear();
 
         return super.clear();
     }
@@ -177,7 +177,7 @@ export class TileModelCounter extends Counter {
         }
 
         this.models.clear();
-        this.sortedModels = TreeNode.create();
+        this.sortedModels.clear();
 
         const dataIterator = iterator[Symbol.iterator]();
         const loadIterator = {
@@ -194,7 +194,7 @@ export class TileModelCounter extends Counter {
                 if (!this.models.has(modelId)) {
                     const model = extractModel(tile);
                     this.models.set(modelId, model);
-                    this.sortedModels = this.sortedModels.insert(model);
+                    this.sortedModels.add(model);
                 }
 
                 const count = this.get(modelId) + 1;
