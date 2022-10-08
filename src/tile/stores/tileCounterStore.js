@@ -18,11 +18,11 @@
 
 import { assign } from '../../core/helpers';
 import { eventStore } from '../../core/stores';
-import { TileModelCounter } from '../models';
+import { TileCounter } from '../models';
 
 /**
  * The default updater assigned to the EventStore.
- * @param {TileModelCounter} counter - The tiles counter bound with the store.
+ * @param {TileCounter} counter - The tiles counter bound with the store.
  * @returns {tileCounter[]} - A list of tile counters.
  * @private
  */
@@ -43,10 +43,10 @@ export default (boundTo = null, update = defaultUpdater) => {
         /**
          * Binds a tiles counter with the store.
          * @param {TileList} list - The tiles counter to bind with the store.
-         * @throws {TypeError} - If the given object is not a TileModelCounter.
+         * @throws {TypeError} - If the given object is not a TileCounter.
          */
         bind(list) {
-            TileModelCounter.validateInstance(list);
+            TileCounter.validateInstance(list);
             return bind.call(this, list);
         }
     });
@@ -67,5 +67,5 @@ export default (boundTo = null, update = defaultUpdater) => {
  */
 
 /**
- * @typedef {import('../models/TileModelCounter').tileCounter} tileCounter
+ * @typedef {import('../models/TileCounter').tileCounter} tileCounter
  */

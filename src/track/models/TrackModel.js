@@ -19,7 +19,7 @@
 import { eventEmitterMixin } from '../../core/mixins';
 import { buildTrack } from '../helpers';
 import { STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
-import { TileList, TileModelCounter } from '../../tile/models';
+import { TileList, TileCounter } from '../../tile/models';
 import { TrackBuilder } from './TrackBuilder.js';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileListStore, tileModelsStore } from '../../tile/stores';
@@ -38,7 +38,7 @@ export class TrackModel {
     constructor(specs, source = null) {
         this.specs = specs;
         this.tiles = new TileList(specs, source);
-        this.counter = new TileModelCounter(source);
+        this.counter = new TileCounter(source);
         this.builder = new TrackBuilder(buildTrack);
         source = void 0;
 

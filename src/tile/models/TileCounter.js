@@ -30,7 +30,7 @@ const extractModel = tile => tile.clone().setDirection(TILE_DIRECTION_RIGHT);
 /**
  * Represents an observable counter for tile models.
  */
-export class TileModelCounter extends Counter {
+export class TileCounter extends Counter {
     /**
      * Creates an observable counter for tile models.
      * @param {TileModel[]|TileList} source - A list of tile model to initialize the counters.
@@ -84,7 +84,7 @@ export class TileModelCounter extends Counter {
      * Increments the counter for the given tile model.
      * If the tile model was not yet listed, it will be added.
      * @param {TileModel} tile - The tile to count.
-     * @returns {TileModelCounter} - Chains the instance.
+     * @returns {TileCounter} - Chains the instance.
      * @fires set
      * @fires addmodel
      * @fires addtile
@@ -111,7 +111,7 @@ export class TileModelCounter extends Counter {
      * Decrements the counter for the given tile model.
      * If the counter reaches 0, it will be removed together with the related tile model.
      * @param {TileModel} tile - The tile to count.
-     * @returns {TileModelCounter} - Chains the instance.
+     * @returns {TileCounter} - Chains the instance.
      * @fires set
      * @fires removemodel
      * @fires delete
@@ -155,7 +155,7 @@ export class TileModelCounter extends Counter {
 
     /**
      * Removes all counters, including the related tile models.
-     * @returns {TileModelCounter} - Chains the instance.
+     * @returns {TileCounter} - Chains the instance.
      * @fires clear
      */
     clear() {
@@ -168,7 +168,7 @@ export class TileModelCounter extends Counter {
     /**
      * Loads counter from a list of tiles. The counters are cleared before, including the related tile models.
      * @param {*} iterator - An iterable object that can be used to set the counters.
-     * @returns {TileModelCounter} - Chains the instance.
+     * @returns {TileCounter} - Chains the instance.
      * @fires load
      */
     load(iterator) {

@@ -21,4 +21,4 @@ export { CurvedTileModel } from './CurvedTileModel.js';
 export { StraightTileModel } from './StraightTileModel.js';
 export { TileList } from './TileList.js';
 export { TileModel } from './TileModel.js';
-export { TileModelCounter } from './TileModelCounter.js';
+export { TileCounter } from './TileCounter.js';
