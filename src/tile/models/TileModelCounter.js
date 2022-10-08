@@ -259,7 +259,7 @@ export class TileModelCounter extends Counter {
  */
 
 /**
- * Notifies all counter has been removed.
+ * Notifies all counters has been removed.
  * @event clear
  */
 

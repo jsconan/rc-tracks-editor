@@ -214,7 +214,7 @@ export class Counter extends Map {
  */
 
 /**
- * Notifies all counter has been removed.
+ * Notifies all counters has been removed.
  * @event clear
  */
 
