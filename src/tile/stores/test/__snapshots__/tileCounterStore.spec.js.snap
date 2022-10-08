@@ -15,6 +15,7 @@ Array [
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     "modelId": "straight-tile-1",

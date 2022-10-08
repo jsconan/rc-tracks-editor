@@ -5,23 +5,25 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-22",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-23",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -38,6 +40,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -49,6 +52,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -60,6 +64,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -79,6 +84,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -90,6 +96,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -101,6 +108,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -112,6 +120,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -124,6 +133,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -142,6 +152,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -154,6 +165,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -172,6 +184,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -183,6 +196,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -194,6 +208,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -206,6 +221,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -224,6 +240,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -235,6 +252,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -246,6 +264,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -258,6 +277,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -276,6 +296,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileModel {
@@ -287,6 +308,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -299,6 +321,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -317,6 +340,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -328,6 +352,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -340,6 +365,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -358,6 +384,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -369,6 +396,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -381,6 +409,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -399,6 +428,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -411,6 +441,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -429,6 +460,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -441,6 +473,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -459,6 +492,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -470,6 +504,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -481,6 +516,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -492,6 +528,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -504,6 +541,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -522,6 +560,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -534,6 +573,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -552,6 +592,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -563,6 +604,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -574,6 +616,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -586,6 +629,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -604,6 +648,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -615,6 +660,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -626,6 +672,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -638,6 +685,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -656,6 +704,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -667,6 +716,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -679,6 +729,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -697,6 +748,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -709,6 +761,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -727,6 +780,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -738,6 +792,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileModel {
@@ -749,6 +804,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -761,6 +817,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -779,6 +836,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -790,6 +848,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -801,6 +860,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -813,6 +873,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -841,6 +902,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -853,6 +915,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -871,6 +934,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     StraightTileModel {
@@ -882,6 +946,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileModel {
@@ -893,6 +958,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -905,6 +971,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -920,28 +987,31 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-14",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-15",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -953,6 +1023,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -964,6 +1035,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -974,23 +1046,25 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-16",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-17",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
@@ -1002,6 +1076,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1013,6 +1088,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1024,6 +1100,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1040,6 +1117,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1051,6 +1129,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1062,28 +1141,31 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-18",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-19",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1108,6 +1190,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1119,6 +1202,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1130,6 +1214,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1149,6 +1234,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileModel {
@@ -1160,6 +1246,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileEnlargedModel {
@@ -1171,6 +1258,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -1183,6 +1271,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -1201,6 +1290,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileModel {
@@ -1212,6 +1302,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -1224,6 +1315,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -1242,6 +1334,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileEnlargedModel {
@@ -1253,6 +1346,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -1265,6 +1359,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -1283,6 +1378,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
     CurvedTileEnlargedModel {
@@ -1294,6 +1390,7 @@ TileList {
         "barrierWidth": 5,
         "laneWidth": 80,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -1306,6 +1403,7 @@ TileList {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -1321,6 +1419,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1331,12 +1430,13 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-7",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1348,17 +1448,19 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
     "direction": "left",
     "id": "id-9",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1375,17 +1477,19 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-10",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1397,6 +1501,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1416,6 +1521,7 @@ TileList {
         "barrierWidth": 1,
         "laneWidth": 10,
         "maxRatio": 4,
+        "unlockRatio": false,
       },
     },
   ],
@@ -1428,6 +1534,7 @@ TileList {
     "barrierWidth": 1,
     "laneWidth": 10,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -1438,23 +1545,25 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-24",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-25",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1466,23 +1575,25 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-20",
-    "ratio": 2,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
     "direction": "left",
     "id": "id-21",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1500,6 +1611,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1511,6 +1623,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1522,12 +1635,13 @@ Array [
   StraightTileModel {
     "direction": "left",
     "id": "id-11",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   StraightTileModel {
@@ -1539,6 +1653,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1556,6 +1671,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1567,6 +1683,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1578,12 +1695,13 @@ Array [
   CurvedTileEnlargedModel {
     "direction": "left",
     "id": "id-13",
-    "ratio": 3,
+    "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1595,6 +1713,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -1611,6 +1730,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileModel {
@@ -1622,6 +1742,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
   CurvedTileEnlargedModel {
@@ -1633,6 +1754,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]

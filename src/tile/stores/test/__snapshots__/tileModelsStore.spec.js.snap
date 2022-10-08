@@ -13,6 +13,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]
@@ -31,6 +32,7 @@ Array [
       "barrierWidth": 5,
       "laneWidth": 80,
       "maxRatio": 4,
+      "unlockRatio": false,
     },
   },
 ]

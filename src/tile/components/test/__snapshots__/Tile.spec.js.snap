@@ -770,7 +770,7 @@ exports[`Tile updates when the parameter ratio is modified 1`] = `
     >
       <rect
         class="ground"
-        height="220"
+        height="110"
         width="90"
         x="55"
         y="200"
@@ -810,38 +810,6 @@ exports[`Tile updates when the parameter ratio is modified 1`] = `
           x="55"
           y="282.5"
         />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="310"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="337.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="365"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="392.5"
-        />
       </g>
       <g
         class="barrier straight-barrier"
@@ -877,38 +845,6 @@ exports[`Tile updates when the parameter ratio is modified 1`] = `
           width="5"
           x="140"
           y="282.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="310"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="337.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="365"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="392.5"
         />
       </g>
     </g>

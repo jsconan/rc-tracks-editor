@@ -45,11 +45,12 @@ describe('TileSpecifications', () => {
         expect(specs.padding).toBe(2.5);
         expect(specs.barrierLength).toBe(6.75);
         expect(specs.maxRatio).toBe(4);
+        expect(specs.unlockRatio).toBeFalsy();
         expect(specs.contextId).toBe(contextId);
     });
 
     it('defines the specifications for the tiles', () => {
-        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
 
         expect(specs).toBeInstanceOf(TileSpecifications);
         expect(specs.laneWidth).toBe(laneWidth);
@@ -60,6 +61,7 @@ describe('TileSpecifications', () => {
         expect(specs.padding).toBe(tilePadding);
         expect(specs.barrierLength).toBe(barrierLength);
         expect(specs.maxRatio).toBe(maxRatio);
+        expect(specs.unlockRatio).toBeTruthy();
         expect(specs.contextId).toBe(contextId);
     });
 
@@ -107,6 +109,12 @@ describe('TileSpecifications', () => {
             const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
             expect(specs.setMaxRatio(value)).toBe(specs);
             expect(specs.maxRatio).toBe(expected);
+        });
+
+        it.each([false, true])('the ratio unlocking as %s', value => {
+            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, !value);
+            expect(specs.setUnlockRatio(value)).toBe(specs);
+            expect(specs.unlockRatio).toBe(value);
         });
     });
 
