@@ -453,12 +453,12 @@ exports[`Track updates when the model is modified 1`] = `
       </text>
       
       <g
-        class="tile curved-tile"
+        class="tile curved-tile-enlarged"
         transform=""
       >
         <path
           class="ground"
-          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 L 205 0 A 45 45 0 0 0 250 -45 L 250 -100 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -480,22 +480,52 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+            d="M 245 -45 A 40 40 0 0 1 233.2842712474619 -16.7157287525381 L 236.81980515339464 -13.180194846605364 A 45 45 0 0 0 250 -45 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+            d="M 233.2842712474619 -16.7157287525381 A 40 40 0 0 1 205 -5 L 205 0 A 45 45 0 0 0 236.81980515339464 -13.180194846605364 Z"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk even"
+            height="5"
+            width="27.5"
+            x="150"
+            y="-5"
           />
           
-          <path
+          <rect
             class="barrier-chunk odd"
-            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+            height="5"
+            width="27.5"
+            x="177.5"
+            y="-5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            class="barrier-chunk odd"
+            height="27.5"
+            width="5"
+            x="245"
+            y="-100"
           />
           
-          <path
+          <rect
             class="barrier-chunk even"
-            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+            height="27.5"
+            width="5"
+            x="245"
+            y="-72.5"
           />
         </g>
       </g>
@@ -512,12 +542,12 @@ exports[`Track updates when the model is modified 1`] = `
       </text>
       
       <g
-        class="tile curved-tile-enlarged"
+        class="tile curved-tile"
         transform=""
       >
         <path
           class="ground"
-          d="M 320 -100 A 10 10 0 0 1 310 -90 L 310 0 L 365 0 A 45 45 0 0 0 410 -45 L 410 -100 Z"
+          d="M 320 -100 A 10 10 0 0 1 310 -90 L 310 0 A 100 100 0 0 0 410 -100 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -539,52 +569,22 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 405 -45 A 40 40 0 0 1 393.2842712474619 -16.7157287525381 L 396.81980515339467 -13.180194846605364 A 45 45 0 0 0 410 -45 Z"
+            d="M 405 -100 A 95 95 0 0 1 397.7685555885722 -63.645073925316474 L 402.3879532511287 -61.731656763491024 A 100 100 0 0 0 410 -100 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 393.2842712474619 -16.7157287525381 A 40 40 0 0 1 365 -5 L 365 0 A 45 45 0 0 0 396.81980515339467 -13.180194846605364 Z"
-          />
-        </g>
-        <g
-          class="barrier straight-barrier"
-        >
-          
-          <rect
-            class="barrier-chunk even"
-            height="5"
-            width="27.5"
-            x="310"
-            y="-5"
+            d="M 397.7685555885722 -63.645073925316474 A 95 95 0 0 1 377.175144212722 -32.824855787278 L 380.71067811865476 -29.28932188134526 A 100 100 0 0 0 402.3879532511287 -61.731656763491024 Z"
           />
           
-          <rect
+          <path
             class="barrier-chunk odd"
-            height="5"
-            width="27.5"
-            x="337.5"
-            y="-5"
-          />
-        </g>
-        <g
-          class="barrier straight-barrier"
-        >
-          
-          <rect
-            class="barrier-chunk odd"
-            height="27.5"
-            width="5"
-            x="405"
-            y="-100"
+            d="M 377.175144212722 -32.824855787278 A 95 95 0 0 1 346.35492607468353 -12.23144441142776 L 348.268343236509 -7.612046748871322 A 100 100 0 0 0 380.71067811865476 -29.28932188134526 Z"
           />
           
-          <rect
+          <path
             class="barrier-chunk even"
-            height="27.5"
-            width="5"
-            x="405"
-            y="-72.5"
+            d="M 346.35492607468353 -12.23144441142776 A 95 95 0 0 1 310 -5 L 310 0 A 100 100 0 0 0 348.268343236509 -7.612046748871322 Z"
           />
         </g>
       </g>

@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Counter } from '../../core/models';
+import { Counter, TreeNode } from '../../core/models';
 import { TILE_DIRECTION_RIGHT } from '../helpers';
 
 /**
@@ -25,7 +25,7 @@ import { TILE_DIRECTION_RIGHT } from '../helpers';
  * @returns {TileModel} - The base model of the given tile.
  * @private
  */
-const getModel = tile => tile.clone().setDirection(TILE_DIRECTION_RIGHT);
+const extractModel = tile => tile.clone().setDirection(TILE_DIRECTION_RIGHT);
 
 /**
  * Represents an observable counter for tile models.
@@ -39,6 +39,7 @@ export class TileModelCounter extends Counter {
         super();
 
         this.models = new Map();
+        this.sortedModels = TreeNode.create();
 
         if (source) {
             this.load(source);
@@ -53,8 +54,9 @@ export class TileModelCounter extends Counter {
     getCounterList() {
         const counters = [];
 
-        for (const [modelId, count] of this.entries()) {
-            const model = this.getModel(modelId);
+        for (const model of this.sortedModels.keys()) {
+            const { modelId } = model;
+            const count = this.get(modelId);
             counters.push({ modelId, model, count });
         }
 
@@ -66,7 +68,7 @@ export class TileModelCounter extends Counter {
      * @returns {TileModel[]} - Returns the list of counted tile models.
      */
     getModelList() {
-        return [...this.models.values()];
+        return [...this.sortedModels.keys()];
     }
 
     /**
@@ -93,8 +95,9 @@ export class TileModelCounter extends Counter {
         this.increment(modelId, 1);
 
         if (!this.models.has(modelId)) {
-            const model = getModel(tile);
+            const model = extractModel(tile);
             this.models.set(modelId, model);
+            this.sortedModels = this.sortedModels.insert(model);
 
             this.emit('addmodel', modelId, model);
         }
@@ -140,9 +143,10 @@ export class TileModelCounter extends Counter {
      */
     delete(key) {
         const model = this.models.get(key);
-        const deleted = this.models.delete(key);
+        if (model) {
+            this.models.delete(key);
+            this.sortedModels = this.sortedModels.delete(model);
 
-        if (deleted) {
             this.emit('removemodel', key, model);
         }
 
@@ -156,6 +160,7 @@ export class TileModelCounter extends Counter {
      */
     clear() {
         this.models.clear();
+        this.sortedModels = TreeNode.create();
 
         return super.clear();
     }
@@ -172,6 +177,7 @@ export class TileModelCounter extends Counter {
         }
 
         this.models.clear();
+        this.sortedModels = TreeNode.create();
 
         const dataIterator = iterator[Symbol.iterator]();
         const loadIterator = {
@@ -186,7 +192,9 @@ export class TileModelCounter extends Counter {
                 const { modelId } = tile;
 
                 if (!this.models.has(modelId)) {
-                    this.models.set(modelId, getModel(tile));
+                    const model = extractModel(tile);
+                    this.models.set(modelId, model);
+                    this.sortedModels = this.sortedModels.insert(model);
                 }
 
                 const count = this.get(modelId) + 1;
