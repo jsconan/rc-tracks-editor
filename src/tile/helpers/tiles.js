@@ -97,6 +97,18 @@ export const flipTileDirection = direction => {
 };
 
 /**
+ * Gets the list of allowed directions.
+ * @returns {string[]} - Returns the list of directions.
+ */
+export const getDirections = () => [...allowedDirection];
+
+/**
+ * Gets the list of allowed types.
+ * @returns {string[]} - Returns the list of types.
+ */
+export const getTypes = () => [...allowedTypes];
+
+/**
  * Gets the order rank for a given direction.
  * @param {*} direction - The direction to rank.
  * @returns {number} - Returns a number ranking the direction.

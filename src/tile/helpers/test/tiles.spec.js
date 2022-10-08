@@ -22,7 +22,9 @@ import {
     DEFAULT_TILE_TYPE,
     flipTileDirection,
     getDirectionRank,
+    getDirections,
     getTypeRank,
+    getTypes,
     isDirectionValid,
     isTypeValid,
     STRAIGHT_TILE_TYPE,
@@ -42,6 +44,26 @@ describe('flipTileDirection', () => {
         [TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT]
     ])('flips the direction from %s to %s', (direction, flippedDirection) => {
         expect(flipTileDirection(direction)).toBe(flippedDirection);
+    });
+});
+
+describe('getDirections', () => {
+    it('is a function', () => {
+        expect(getDirections).toEqual(expect.any(Function));
+    });
+
+    it('gives the list of tile directions', () => {
+        expect(getDirections()).toStrictEqual([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT]);
+    });
+});
+
+describe('getTypes', () => {
+    it('is a function', () => {
+        expect(getTypes).toEqual(expect.any(Function));
+    });
+
+    it('gives the list of tile types', () => {
+        expect(getTypes()).toStrictEqual([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE]);
     });
 });
 
