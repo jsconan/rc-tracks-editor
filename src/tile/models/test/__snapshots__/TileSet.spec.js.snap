@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileSet can export counters 1`] = `
+Object {
+  "curved-tile-1": 2,
+  "curved-tile-enlarged-1": 1,
+  "straight-tile-1": 3,
+}
+`;
+
+exports[`TileSet can get the tile model for a given key 1`] = `
+StraightTileModel {
+  "direction": "right",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileSet can get the tile model for a given key 2`] = `
+CurvedTileEnlargedModel {
+  "direction": "right",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileSet can get the tile model for a given key 3`] = `
+CurvedTileModel {
+  "direction": "right",
+  "id": "curved-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileSet can list the counted tile models 1`] = `
+Array [
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileEnlargedModel {
+    "direction": "right",
+    "id": "curved-tile-enlarged-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`TileSet can list the counters 1`] = `
+Array [
+  Object {
+    "count": 3,
+    "model": StraightTileModel {
+      "direction": "right",
+      "id": "straight-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "straight-tile-1",
+  },
+  Object {
+    "count": 1,
+    "model": CurvedTileEnlargedModel {
+      "direction": "right",
+      "id": "curved-tile-enlarged-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "curved-tile-enlarged-1",
+  },
+  Object {
+    "count": 2,
+    "model": CurvedTileModel {
+      "direction": "right",
+      "id": "curved-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "curved-tile-1",
+  },
+]
+`;
+
+exports[`TileSet can map its counters 1`] = `
+Object {
+  "curved-tile-1": 20,
+  "curved-tile-enlarged-1": 10,
+  "straight-tile-1": 30,
+}
+`;
+
+exports[`TileSet can set the specifications of the tiles 1`] = `
+Map {
+  "straight-tile-1" => Infinity,
+  "curved-tile-1" => Infinity,
+  "curved-tile-2" => Infinity,
+  "curved-tile-3" => Infinity,
+  "curved-tile-4" => Infinity,
+  "curved-tile-enlarged-1" => Infinity,
+}
+`;
+
+exports[`TileSet emits an event when setting a counter 1`] = `
+Array [
+  "straight-tile-1",
+  3,
+  3,
+]
+`;
+
+exports[`TileSet emits an event when setting a counter 2`] = `
+Array [
+  "curved-tile-enlarged-1",
+  4,
+  1,
+]
+`;
+
+exports[`TileSet emits an event when setting a counter 3`] = `
+Array [
+  "curved-tile-1",
+  5,
+  2,
+]
+`;
