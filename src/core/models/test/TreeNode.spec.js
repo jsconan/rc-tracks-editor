@@ -169,6 +169,12 @@ describe('TreeNode', () => {
         expect(tree.lookup(10)).toBe(TreeNode.NIL);
     });
 
+    it('tells if a subtree is empty', () => {
+        expect(TreeNode.NIL.empty()).toBeTruthy();
+        expect(TreeNode.create().empty()).toBeTruthy();
+        expect(TreeNode.create('A').empty()).toBeFalsy();
+    });
+
     it('tells if a key exists in the subtree', () => {
         let tree = TreeNode.create();
         expect(tree.has(1)).toBeFalsy();

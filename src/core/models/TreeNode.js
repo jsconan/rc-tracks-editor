@@ -37,6 +37,14 @@ export class TreeNode {
     }
 
     /**
+     * Tells if the subtree is empty.
+     * @returns {boolean} - Returns `true` if the subtree is empty.
+     */
+    empty() {
+        return this === TreeNode.NIL;
+    }
+
+    /**
      * Lookups for a key in the subtree and tells whether it exists or not.
      * @param {*} key - The searched key.
      * @returns {boolean} - Returns `true` if the key exists in the subtree.
