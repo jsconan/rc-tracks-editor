@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { validateCallback } from '../helpers';
+import { getCompare, validateCallback } from '../helpers';
 
 /**
  * Represents a node in an auto-balanced tree.
@@ -67,7 +67,8 @@ export class TreeNode {
      * @returns {TreeNode} - Returns the node corresponding to the searched key, or NIL if not found.
      */
     lookup(key) {
-        return this.search(node => TreeNode.compare(key, node.key));
+        const compare = getCompare(key);
+        return this.search(node => compare(key, node.key));
     }
 
     /**
@@ -205,30 +206,41 @@ export class TreeNode {
      * @returns {TreeNode} - The new root of the balanced tree.
      */
     insert(key, value = null, feedback = {}) {
-        // We reached a leaf, we can add a new node.
-        if (this === TreeNode.NIL) {
-            feedback.added = true;
-            return new this.constructor(key, value);
+        const compare = getCompare(key);
+        feedback.added = false;
+
+        /**
+         * @param {TreeNode} node
+         * @returns {TreeNode}
+         * @private
+         */
+        function insertNode(node) {
+            // We reached a leaf, we can add a new node.
+            if (node === TreeNode.NIL) {
+                feedback.added = true;
+                return new node.constructor(key, value);
+            }
+
+            const comparison = compare(key, node.key);
+
+            if (!comparison) {
+                // We found a node with the same key, we update it.
+                node.key = key;
+                node.value = value;
+                return node;
+            }
+
+            if (comparison < 0) {
+                node.left = node.left.insert(key, value, feedback);
+            } else {
+                node.right = node.right.insert(key, value, feedback);
+            }
+
+            // Balance the tree
+            return node.skew().split();
         }
 
-        const comparison = TreeNode.compare(key, this.key);
-
-        if (!comparison) {
-            // We found a node with the same key, we update it.
-            feedback.added = false;
-            this.key = key;
-            this.value = value;
-            return this;
-        }
-
-        if (comparison < 0) {
-            this.left = this.left.insert(key, value, feedback);
-        } else {
-            this.right = this.right.insert(key, value, feedback);
-        }
-
-        // Balance the tree
-        return this.skew().split();
+        return insertNode(this);
     }
 
     /**
@@ -239,9 +251,10 @@ export class TreeNode {
      * @returns {TreeNode} - The new root of the balanced tree.
      */
     delete(key, feedback = {}) {
-        feedback.deleted = false;
+        const compare = getCompare(key);
         let last = TreeNode.NIL;
         let deleted = TreeNode.NIL;
+        feedback.deleted = false;
 
         /**
          * @param {TreeNode} node
@@ -255,7 +268,7 @@ export class TreeNode {
 
             // Search down the tree.
             last = node;
-            if (TreeNode.compare(key, node.key) < 0) {
+            if (compare(key, node.key) < 0) {
                 node.left = deleteNode(node.left);
             } else {
                 deleted = node;
@@ -263,7 +276,7 @@ export class TreeNode {
             }
 
             // At the bottom of the tree, we remove the node if it exists.
-            if (node === last && deleted !== TreeNode.NIL && !TreeNode.compare(key, deleted.key)) {
+            if (node === last && deleted !== TreeNode.NIL && !compare(key, deleted.key)) {
                 deleted.key = node.key;
                 deleted.value = node.value;
                 deleted = TreeNode.NIL;
@@ -387,30 +400,6 @@ export class TreeNode {
         }
 
         return new this(key, value);
-    }
-
-    /**
-     * Compares two values and returns a number indicating whether the first
-     * comes before, or after, or is the same as the second.
-     * If the first value implements a compare function, it will be called.
-     * @param {*} a - The first value to compare.
-     * @param {*} b - The second value to compare.
-     * @returns {number} - Returns -1 if a < b, or 1 if a > b, or 0 is a = b.
-     */
-    static compare(a, b) {
-        if (a && 'function' === typeof a.compare) {
-            return a.compare(b);
-        }
-
-        if (a < b) {
-            return -1;
-        }
-
-        if (a > b) {
-            return 1;
-        }
-
-        return 0;
     }
 }
 

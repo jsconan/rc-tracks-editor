@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { compare } from '../../helpers';
 import { TreeNode } from '../TreeNode.js';
 
 const ordered = [0, 1, 2, 3, 4, 5, 6];
@@ -35,16 +36,27 @@ describe('TreeNode', () => {
         expect(TreeNode).toEqual(expect.any(Function));
     });
 
-    it('creates a tree node', () => {
-        expect(TreeNode.create()).toBe(TreeNode.NIL);
-        expect(TreeNode.create(null, 'foo')).toBe(TreeNode.NIL);
+    describe('creates a tree node', () => {
+        it('using the constructor', () => {
+            const node = new TreeNode('foo', 'bar');
+            expect(node.key).toBe('foo');
+            expect(node.value).toBe('bar');
+            expect(node.level).toBe(1);
+            expect(node.left).toBe(TreeNode.NIL);
+            expect(node.right).toBe(TreeNode.NIL);
+        });
 
-        const node = TreeNode.create('foo', 'bar');
-        expect(node.key).toBe('foo');
-        expect(node.value).toBe('bar');
-        expect(node.level).toBe(1);
-        expect(node.left).toBe(TreeNode.NIL);
-        expect(node.right).toBe(TreeNode.NIL);
+        it('using the static method create', () => {
+            expect(TreeNode.create()).toBe(TreeNode.NIL);
+            expect(TreeNode.create(null, 'foo')).toBe(TreeNode.NIL);
+
+            const node = TreeNode.create('foo', 'bar');
+            expect(node.key).toBe('foo');
+            expect(node.value).toBe('bar');
+            expect(node.level).toBe(1);
+            expect(node.left).toBe(TreeNode.NIL);
+            expect(node.right).toBe(TreeNode.NIL);
+        });
     });
 
     it('implements the iteration protocol', () => {
@@ -125,17 +137,17 @@ describe('TreeNode', () => {
 
     it('searches for a node in the subtree', () => {
         let tree = TreeNode.create();
-        expect(tree.search(node => TreeNode.compare(1, node.key))).toBe(TreeNode.NIL);
+        expect(tree.search(node => compare(1, node.key))).toBe(TreeNode.NIL);
 
         tree = tree.insert(0);
-        expect(tree.search(node => TreeNode.compare(0, node.key))).toMatchSnapshot();
-        expect(tree.search(node => TreeNode.compare(1, node.key))).toBe(TreeNode.NIL);
+        expect(tree.search(node => compare(0, node.key))).toMatchSnapshot();
+        expect(tree.search(node => compare(1, node.key))).toBe(TreeNode.NIL);
 
         random.forEach(node => (tree = tree.insert(node)));
-        random.forEach(value => expect(tree.search(node => TreeNode.compare(value, node.key))).toMatchSnapshot());
+        random.forEach(value => expect(tree.search(node => compare(value, node.key))).toMatchSnapshot());
 
-        expect(tree.search(node => TreeNode.compare(-10, node.key))).toBe(TreeNode.NIL);
-        expect(tree.search(node => TreeNode.compare(10, node.key))).toBe(TreeNode.NIL);
+        expect(tree.search(node => compare(-10, node.key))).toBe(TreeNode.NIL);
+        expect(tree.search(node => compare(10, node.key))).toBe(TreeNode.NIL);
     });
 
     it('needs a valid callback for searching a node', () => {
@@ -540,22 +552,6 @@ describe('TreeNode', () => {
 
             tree = tree.delete(3, feedback);
             expect(feedback.deleted).toBeFalsy();
-        });
-    });
-
-    describe('has a static property', () => {
-        describe('compare', () => {
-            it('which compares values', () => {
-                expect(TreeNode.compare(1, 2)).toBe(-1);
-                expect(TreeNode.compare(2, 1)).toBe(1);
-                expect(TreeNode.compare(3, 3)).toBe(0);
-            });
-
-            it('which compares object implementing a compare method', () => {
-                expect(TreeNode.compare(new Comparable(1), new Comparable(2))).toBe(-1);
-                expect(TreeNode.compare(new Comparable(2), new Comparable(1))).toBe(1);
-                expect(TreeNode.compare(new Comparable(3), new Comparable(3))).toBe(0);
-            });
         });
     });
 });
