@@ -188,7 +188,15 @@ export class TileCounter extends Counter {
                     return next;
                 }
 
-                const tile = next.value;
+                let tile, count;
+                if (Array.isArray(next.value)) {
+                    tile = next.value[0];
+                    count = next.value[1];
+                } else {
+                    tile = next.value;
+                    count = this.get(tile.modelId) + 1;
+                }
+
                 const { modelId } = tile;
 
                 if (!this.models.has(modelId)) {
@@ -197,7 +205,6 @@ export class TileCounter extends Counter {
                     this.sortedModels.add(model);
                 }
 
-                const count = this.get(modelId) + 1;
                 return { done: false, value: [modelId, count] };
             },
 

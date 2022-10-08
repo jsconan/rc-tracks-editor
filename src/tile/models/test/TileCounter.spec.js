@@ -27,7 +27,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
-const source = [
+const tiles = [
     new StraightTileModel(specs),
     new CurvedTileEnlargedModel(specs),
     new StraightTileModel(specs),
@@ -36,60 +36,72 @@ const source = [
     new StraightTileModel(specs)
 ];
 const entries = [
-    [source[0].modelId, 3],
-    [source[1].modelId, 1],
-    [source[3].modelId, 2]
+    [tiles[0].modelId, 3],
+    [tiles[1].modelId, 1],
+    [tiles[3].modelId, 2]
 ];
 const keys = entries.map(entry => entry[0]);
+const counters = [
+    [tiles[0], 3],
+    [tiles[1], 1],
+    [tiles[3], 2]
+];
 
 describe('TileCounter', () => {
     it('is a class', () => {
         expect(TileCounter).toEqual(expect.any(Function));
     });
 
-    it('can be initialized with a source', () => {
+    it('is created empty', () => {
         expect([...new TileCounter()]).toEqual([]);
-        expect([...new TileCounter(source)]).toEqual(entries);
+    });
+
+    it('can be initialized with a list of tiles', () => {
+        expect([...new TileCounter(tiles)]).toEqual(entries);
+    });
+
+    it('can be initialized with a list of model counters', () => {
+        expect([...new TileCounter(counters)]).toEqual(entries);
     });
 
     it('has a size', () => {
         expect(new TileCounter().size).toBe(0);
-        expect(new TileCounter(source).size).toBe(entries.length);
+        expect(new TileCounter(tiles).size).toBe(entries.length);
     });
 
     it('implements the iteration protocol', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(counters[Symbol.iterator]()).not.toBe(counters[Symbol.iterator]());
-        expect([...counters]).toStrictEqual(entries);
+        expect(counter[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(counter[Symbol.iterator]()).not.toBe(counter[Symbol.iterator]());
+        expect([...counter]).toStrictEqual(entries);
     });
 
     it('can produce an iterator for getting the keys', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.keys).toEqual(expect.any(Function));
-        expect(counters.keys()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(counter.keys).toEqual(expect.any(Function));
+        expect(counter.keys()[Symbol.iterator]).toEqual(expect.any(Function));
 
-        expect(counters.keys()).not.toBe(counters.keys());
-        expect([...counters.keys()]).toStrictEqual(keys);
+        expect(counter.keys()).not.toBe(counter.keys());
+        expect([...counter.keys()]).toStrictEqual(keys);
     });
 
     it('can walk over its counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.forEach).toEqual(expect.any(Function));
+        expect(counter.forEach).toEqual(expect.any(Function));
 
         const iterator = entries[Symbol.iterator]();
         const callback = jest.fn().mockImplementation(function (value, key, thisCounters) {
-            expect(this).toBe(counters);
-            expect(thisCounters).toBe(counters);
+            expect(this).toBe(counter);
+            expect(thisCounters).toBe(counter);
             const [iteratorKey, iteratorValue] = iterator.next().value;
             expect(value).toBe(iteratorValue);
             expect(key).toBe(iteratorKey);
         });
 
-        expect(counters.forEach(callback)).toBe(counters);
+        expect(counter.forEach(callback)).toBe(counter);
         expect(callback).toHaveBeenCalledTimes(entries.length);
     });
 
@@ -98,22 +110,22 @@ describe('TileCounter', () => {
     });
 
     it('can map its counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.map).toEqual(expect.any(Function));
+        expect(counter.map).toEqual(expect.any(Function));
 
         const iterator = entries[Symbol.iterator]();
         const callback = jest.fn().mockImplementation(function (value, key, thisCounter) {
-            expect(this).toBe(counters);
-            expect(thisCounter).toBe(counters);
+            expect(this).toBe(counter);
+            expect(thisCounter).toBe(counter);
             const [iteratorKey, iteratorValue] = iterator.next().value;
             expect(value).toBe(iteratorValue);
             expect(key).toBe(iteratorKey);
             return value * 10;
         });
 
-        const mapped = counters.map(callback);
-        expect(mapped).not.toBe(counters);
+        const mapped = counter.map(callback);
+        expect(mapped).not.toBe(counter);
         expect(mapped).toMatchSnapshot();
         expect(callback).toHaveBeenCalledTimes(entries.length);
     });
@@ -123,85 +135,85 @@ describe('TileCounter', () => {
     });
 
     it('can tell if a counter exists', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.has(keys[0])).toBeTruthy();
-        expect(counters.has(keys[1])).toBeTruthy();
-        expect(counters.has(keys[2])).toBeTruthy();
-        expect(counters.has('key')).toBeFalsy();
+        expect(counter.has(keys[0])).toBeTruthy();
+        expect(counter.has(keys[1])).toBeTruthy();
+        expect(counter.has(keys[2])).toBeTruthy();
+        expect(counter.has('key')).toBeFalsy();
     });
 
     it('can get the value of a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.get(keys[0])).toBe(3);
-        expect(counters.get(keys[1])).toBe(1);
-        expect(counters.get(keys[2])).toBe(2);
-        expect(counters.get('key')).toBe(0);
+        expect(counter.get(keys[0])).toBe(3);
+        expect(counter.get(keys[1])).toBe(1);
+        expect(counter.get(keys[2])).toBe(2);
+        expect(counter.get('key')).toBe(0);
     });
 
     it('can set the value of a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.get(keys[0])).toBe(3);
-        expect(counters.set(keys[0], 10)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(10);
+        expect(counter.get(keys[0])).toBe(3);
+        expect(counter.set(keys[0], 10)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(10);
 
-        expect(counters.get('key')).toBe(0);
-        expect(counters.set('key', 1)).toBe(counters);
-        expect(counters.get('key')).toBe(1);
+        expect(counter.get('key')).toBe(0);
+        expect(counter.set('key', 1)).toBe(counter);
+        expect(counter.get('key')).toBe(1);
     });
 
     it('can only set whole numbers', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.get(keys[0])).toBe(3);
-        expect(counters.set(keys[0], 1.2)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(1);
+        expect(counter.get(keys[0])).toBe(3);
+        expect(counter.set(keys[0], 1.2)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(1);
 
-        expect(counters.set(keys[0], 2.9)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(2);
+        expect(counter.set(keys[0], 2.9)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(2);
 
-        expect(counters.set(keys[0], 'c')).toBe(counters);
-        expect(counters.get(keys[0])).toBe(0);
+        expect(counter.set(keys[0], 'c')).toBe(counter);
+        expect(counter.get(keys[0])).toBe(0);
     });
 
     it('emits an event when setting a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
         const callback = jest.fn().mockImplementation((key, value, previous) => {
             expect([key, value, previous]).toMatchSnapshot();
         });
 
-        counters.on('set', callback);
+        counter.on('set', callback);
 
-        counters.set(keys[0], 3);
-        counters.set(keys[1], 4);
-        counters.set(keys[2], 5);
+        counter.set(keys[0], 3);
+        counter.set(keys[1], 4);
+        counter.set(keys[2], 5);
         expect(callback).toHaveBeenCalledTimes(3);
     });
 
     it('can delete a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.has(keys[0])).toBeTruthy();
-        expect(counters.delete(keys[0])).toBeTruthy();
-        expect(counters.has(keys[0])).toBeFalsy();
-        expect(counters.get(keys[0])).toBe(0);
-        expect(counters.delete(keys[0])).toBeFalsy();
+        expect(counter.has(keys[0])).toBeTruthy();
+        expect(counter.delete(keys[0])).toBeTruthy();
+        expect(counter.has(keys[0])).toBeFalsy();
+        expect(counter.get(keys[0])).toBe(0);
+        expect(counter.delete(keys[0])).toBeFalsy();
     });
 
     it('can delete a model', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.getModel(keys[0])).not.toBeNull();
-        expect(counters.delete(keys[0])).toBeTruthy();
-        expect(counters.getModel(keys[0])).toBeNull();
+        expect(counter.getModel(keys[0])).not.toBeNull();
+        expect(counter.delete(keys[0])).toBeTruthy();
+        expect(counter.getModel(keys[0])).toBeNull();
     });
 
     it('emits an event when removing a counter', () => {
-        const counters = new TileCounter(source);
-        const tileModel = counters.getModel(keys[1]);
+        const counter = new TileCounter(tiles);
+        const tileModel = counter.getModel(keys[1]);
 
         const deleteCallback = jest.fn().mockImplementation((key, value) => {
             expect(key).toBe(keys[1]);
@@ -213,33 +225,33 @@ describe('TileCounter', () => {
             expect(model).toBe(tileModel);
         });
 
-        counters.on('delete', deleteCallback);
-        counters.on('removemodel', removeModelCallback);
+        counter.on('delete', deleteCallback);
+        counter.on('removemodel', removeModelCallback);
 
-        counters.delete(keys[1]);
-        counters.delete(keys[1]);
+        counter.delete(keys[1]);
+        counter.delete(keys[1]);
         expect(deleteCallback).toHaveBeenCalledTimes(1);
         expect(removeModelCallback).toHaveBeenCalledTimes(1);
     });
 
     it('can increment a counter', () => {
-        const counters = new TileCounter();
+        const counter = new TileCounter();
 
-        expect(counters.get(keys[0])).toBe(0);
-        expect(counters.increment(keys[0])).toBe(counters);
-        expect(counters.get(keys[0])).toBe(1);
-        expect(counters.increment(keys[0], 2)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(3);
+        expect(counter.get(keys[0])).toBe(0);
+        expect(counter.increment(keys[0])).toBe(counter);
+        expect(counter.get(keys[0])).toBe(1);
+        expect(counter.increment(keys[0], 2)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(3);
 
-        expect(counters.increment(keys[0], 2.5)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(5);
+        expect(counter.increment(keys[0], 2.5)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(5);
 
-        expect(counters.increment(keys[0], 0)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(6);
+        expect(counter.increment(keys[0], 0)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(6);
     });
 
     it('emits an event when incrementing a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
         const callback = jest.fn().mockImplementation((key, value, previous) => {
             expect(key).toBe(keys[1]);
@@ -247,31 +259,31 @@ describe('TileCounter', () => {
             expect(previous).toBe(1);
         });
 
-        counters.on('set', callback);
+        counter.on('set', callback);
 
-        counters.increment(keys[1]);
+        counter.increment(keys[1]);
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can decrement a counter', () => {
-        const counters = new TileCounter();
+        const counter = new TileCounter();
 
-        expect(counters.get(keys[0])).toBe(0);
-        expect(counters.decrement(keys[0])).toBe(counters);
-        expect(counters.get(keys[0])).toBe(-1);
-        expect(counters.decrement(keys[0], 2)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(-3);
+        expect(counter.get(keys[0])).toBe(0);
+        expect(counter.decrement(keys[0])).toBe(counter);
+        expect(counter.get(keys[0])).toBe(-1);
+        expect(counter.decrement(keys[0], 2)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(-3);
 
-        expect(counters.decrement(keys[0], 2.5)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(-5);
+        expect(counter.decrement(keys[0], 2.5)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(-5);
 
-        expect(counters.decrement(keys[0], 0)).toBe(counters);
-        expect(counters.get(keys[0])).toBe(-6);
+        expect(counter.decrement(keys[0], 0)).toBe(counter);
+        expect(counter.get(keys[0])).toBe(-6);
     });
 
     it('emits an event when decrementing a counter', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
         const callback = jest.fn().mockImplementation((key, value, previous) => {
             expect(key).toBe(keys[1]);
@@ -279,57 +291,57 @@ describe('TileCounter', () => {
             expect(previous).toBe(1);
         });
 
-        counters.on('set', callback);
+        counter.on('set', callback);
 
-        counters.decrement(keys[1]);
+        counter.decrement(keys[1]);
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can list the counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.getCounterList()).toMatchSnapshot();
+        expect(counter.getCounterList()).toMatchSnapshot();
     });
 
     it('can list the counted tile models', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.getModelList()).toMatchSnapshot();
+        expect(counter.getModelList()).toMatchSnapshot();
     });
 
     it('can get the tile model for a given key', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.getModel(keys[0])).toMatchSnapshot();
-        expect(counters.getModel(keys[1])).toMatchSnapshot();
-        expect(counters.getModel(keys[2])).toMatchSnapshot();
-        expect(counters.getModel(keys[3])).toBeNull();
+        expect(counter.getModel(keys[0])).toMatchSnapshot();
+        expect(counter.getModel(keys[1])).toMatchSnapshot();
+        expect(counter.getModel(keys[2])).toMatchSnapshot();
+        expect(counter.getModel(keys[3])).toBeNull();
     });
 
     it('can add a tile to the counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.get(keys[2])).toBe(2);
-        expect(counters.add(new CurvedTileModel(specs))).toBe(counters);
-        expect(counters.get(keys[2])).toBe(3);
+        expect(counter.get(keys[2])).toBe(2);
+        expect(counter.add(new CurvedTileModel(specs))).toBe(counter);
+        expect(counter.get(keys[2])).toBe(3);
     });
 
     it('can register a tile model', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
         const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
 
-        expect(counters.get(tile.modelId)).toBe(0);
-        expect(counters.getModel(tile.modelId)).toBeNull();
+        expect(counter.get(tile.modelId)).toBe(0);
+        expect(counter.getModel(tile.modelId)).toBeNull();
 
-        counters.add(tile);
+        counter.add(tile);
 
-        expect(counters.get(tile.modelId)).toBe(1);
-        expect(counters.getModel(tile.modelId)).not.toBeNull();
+        expect(counter.get(tile.modelId)).toBe(1);
+        expect(counter.getModel(tile.modelId)).not.toBeNull();
     });
 
     it('emits an event when registering a tile model', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
         const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
 
         const modelCallback = jest.fn().mockImplementation((key, model) => {
@@ -341,42 +353,42 @@ describe('TileCounter', () => {
             expect(model).toBe(tile);
         });
 
-        counters.on('addmodel', modelCallback);
-        counters.on('addtile', tileCallback);
+        counter.on('addmodel', modelCallback);
+        counter.on('addtile', tileCallback);
 
-        expect(counters.get(tile.modelId)).toBe(0);
+        expect(counter.get(tile.modelId)).toBe(0);
 
-        counters.add(tile);
-        counters.add(tile);
+        counter.add(tile);
+        counter.add(tile);
 
-        expect(counters.get(tile.modelId)).toBe(2);
+        expect(counter.get(tile.modelId)).toBe(2);
         expect(modelCallback).toHaveBeenCalledTimes(1);
         expect(tileCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can remove a tile from the counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.get(keys[2])).toBe(2);
-        expect(counters.remove(new CurvedTileModel(specs))).toBe(counters);
-        expect(counters.get(keys[2])).toBe(1);
+        expect(counter.get(keys[2])).toBe(2);
+        expect(counter.remove(new CurvedTileModel(specs))).toBe(counter);
+        expect(counter.get(keys[2])).toBe(1);
     });
 
     it('can unregister a tile model', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
         const tile = new CurvedTileEnlargedModel(specs);
 
-        expect(counters.get(tile.modelId)).toBe(1);
-        expect(counters.getModel(tile.modelId)).not.toBeNull();
+        expect(counter.get(tile.modelId)).toBe(1);
+        expect(counter.getModel(tile.modelId)).not.toBeNull();
 
-        counters.remove(tile);
+        counter.remove(tile);
 
-        expect(counters.get(tile.modelId)).toBe(0);
-        expect(counters.getModel(tile.modelId)).toBeNull();
+        expect(counter.get(tile.modelId)).toBe(0);
+        expect(counter.getModel(tile.modelId)).toBeNull();
     });
 
     it('emits an event when un-registering a tile model', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
         const tile = new CurvedTileModel(specs);
 
         const modelCallback = jest.fn().mockImplementation((key, model) => {
@@ -388,65 +400,73 @@ describe('TileCounter', () => {
             expect(model).toBe(tile);
         });
 
-        counters.on('removemodel', modelCallback);
-        counters.on('removetile', tileCallback);
+        counter.on('removemodel', modelCallback);
+        counter.on('removetile', tileCallback);
 
-        expect(counters.get(tile.modelId)).toBe(2);
+        expect(counter.get(tile.modelId)).toBe(2);
 
-        counters.remove(tile);
-        counters.remove(tile);
-        counters.remove(tile);
+        counter.remove(tile);
+        counter.remove(tile);
+        counter.remove(tile);
 
-        expect(counters.get(tile.modelId)).toBe(0);
+        expect(counter.get(tile.modelId)).toBe(0);
         expect(modelCallback).toHaveBeenCalledTimes(1);
         expect(tileCallback).toHaveBeenCalledTimes(2);
     });
 
     it('can removes all counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect([...counters]).toStrictEqual(entries);
-        expect(counters.clear()).toBe(counters);
-        expect([...counters]).toStrictEqual([]);
-        expect(counters.getModelList()).toStrictEqual([]);
+        expect([...counter]).toStrictEqual(entries);
+        expect(counter.clear()).toBe(counter);
+        expect([...counter]).toStrictEqual([]);
+        expect(counter.getModelList()).toStrictEqual([]);
     });
 
     it('emits an event when removing all counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
         const callback = jest.fn();
 
-        counters.on('clear', callback);
+        counter.on('clear', callback);
 
-        counters.clear();
+        counter.clear();
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
-    it('can load counters from a source', () => {
-        const counters = new TileCounter();
+    it('can load counters from a list of tiles', () => {
+        const counter = new TileCounter();
 
-        expect([...counters]).toStrictEqual([]);
-        expect(counters.load({})).toBe(counters);
-        expect([...counters]).toStrictEqual([]);
-        expect(counters.load(source)).toBe(counters);
-        expect([...counters]).toStrictEqual(entries);
+        expect([...counter]).toStrictEqual([]);
+        expect(counter.load({})).toBe(counter);
+        expect([...counter]).toStrictEqual([]);
+        expect(counter.load(tiles)).toBe(counter);
+        expect([...counter]).toStrictEqual(entries);
+    });
+
+    it('can load counters from a list of model counters', () => {
+        const counter = new TileCounter();
+
+        expect([...counter]).toStrictEqual([]);
+        expect(counter.load(counters)).toBe(counter);
+        expect([...counter]).toStrictEqual(entries);
     });
 
     it('emits an event when loading counters', () => {
-        const counters = new TileCounter();
+        const counter = new TileCounter();
 
         const callback = jest.fn();
 
-        counters.on('load', callback);
+        counter.on('load', callback);
 
-        counters.load({});
-        counters.load(source);
+        counter.load({});
+        counter.load(tiles);
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
     it('can export counters', () => {
-        const counters = new TileCounter(source);
+        const counter = new TileCounter(tiles);
 
-        expect(counters.toObject()).toMatchSnapshot();
+        expect(counter.toObject()).toMatchSnapshot();
     });
 });
