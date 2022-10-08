@@ -43,7 +43,7 @@ export class SortedMap {
     /**
      * Tells whether a key exists or not.
      * @param {*} key - The key to check.
-     * @returns {boolean} - Returns `true` if the keys exist.
+     * @returns {boolean} - Returns `true` if the key exist.
      */
     has(key) {
         return this.tree.has(key);
