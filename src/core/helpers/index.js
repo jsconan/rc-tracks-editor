@@ -28,5 +28,6 @@ export { default as uid } from './uid.js';
 export { default as validateAPI } from './validateAPI.js';
 export { default as validateCallback } from './validateCallback.js';
 export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+export * from './svg.js';
+export * from './transform.js';
+export * from './compare.js';
