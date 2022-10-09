@@ -46,6 +46,7 @@ function eventStore(events, boundTo = null, update = null) {
     const { subscribe, set } = writable();
     const updater = update || (() => boundTo);
     let wrapper = null;
+    let paused = false;
 
     /**
      * @lends EventStore
@@ -68,7 +69,36 @@ function eventStore(events, boundTo = null, update = null) {
         },
 
         /**
-         * Notifies the subscribers.
+         * Tells whether or not the store is listening to the bound emitter.
+         * @returns {boolean} - Returns `true` if the store is not listening anymore.
+         */
+        get paused() {
+            return paused;
+        },
+
+        /**
+         * Pauses the listening to the bound emitter.
+         * @returns {EventStore} - Chains the instance.
+         */
+        pause() {
+            paused = true;
+
+            return this;
+        },
+
+        /**
+         * Resumes the listening to the bound emitter.
+         * The store is refreshed and the subscribers are notified.
+         * @returns {EventStore} - Chains the instance.
+         */
+        resume() {
+            paused = false;
+
+            return this.notify(null);
+        },
+
+        /**
+         * Refreshes the store and notifies the subscribers.
          * @param {string} event - The event name that originated the notification.
          * @returns {EventStore} - Chains the instance.
          */
@@ -80,6 +110,7 @@ function eventStore(events, boundTo = null, update = null) {
 
         /**
          * Captures an event emitter.
+         * The store is refreshed and the subscribers are notified.
          * @param {EventEmitter} emitter - The event emitter to bind with the store.
          * @returns {EventStore} - Chains the instance.
          * @throws {TypeError} - If the given object is not an event emitter.
@@ -92,10 +123,10 @@ function eventStore(events, boundTo = null, update = null) {
             boundTo = emitter;
             wrapper = eventEmitterMixin.delegateListener(emitter);
             events.forEach(event => {
-                wrapper.on(event, () => this.notify(event));
+                wrapper.on(event, () => paused || this.notify(event));
             });
 
-            return this.notify(null);
+            return this.resume();
         },
 
         /**

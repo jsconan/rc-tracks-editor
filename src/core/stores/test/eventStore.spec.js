@@ -69,9 +69,12 @@ describe('eventStore', () => {
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
         expect(store.notify).toEqual(expect.any(Function));
+        expect(store.pause).toEqual(expect.any(Function));
+        expect(store.resume).toEqual(expect.any(Function));
         expect(store.bind).toEqual(expect.any(Function));
         expect(store.unbind).toEqual(expect.any(Function));
         expect(store.boundTo).toBe(eventEmitter);
+        expect(store.paused).toBeFalsy();
     });
 
     it('updates the store each time a listed event is emitted', () => {
@@ -237,5 +240,51 @@ describe('eventStore', () => {
         eventEmitter.emit('set');
 
         expect(listener).toHaveBeenCalledTimes(2);
+    });
+
+    it('can pause the listening', () => {
+        const eventEmitter = eventEmitterMixin();
+        const store = eventStore(['set', 'add'], eventEmitter);
+
+        expect(store.boundTo).toBe(eventEmitter);
+
+        const callback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(eventEmitter);
+        });
+
+        store.subscribe(callback);
+
+        store.pause();
+
+        expect(store.paused).toBeTruthy();
+
+        eventEmitter.emit('set');
+        eventEmitter.emit('add');
+
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
+    it('can resume the listening', () => {
+        const eventEmitter = eventEmitterMixin();
+        const store = eventStore(['set', 'add'], eventEmitter);
+
+        expect(store.boundTo).toBe(eventEmitter);
+
+        const callback = jest.fn().mockImplementation(value => {
+            expect(value).toBe(eventEmitter);
+        });
+
+        store.subscribe(callback);
+
+        store.pause();
+        expect(store.paused).toBeTruthy();
+
+        store.resume();
+        expect(store.paused).toBeFalsy();
+
+        eventEmitter.emit('set');
+        eventEmitter.emit('add');
+
+        expect(callback).toHaveBeenCalledTimes(4);
     });
 });
