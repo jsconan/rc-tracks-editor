@@ -18,7 +18,8 @@
 
 import { Counter, SortedSet } from '../../core/models';
 import { TileSpecifications } from '../config';
-import { TILE_DIRECTION_RIGHT } from '../helpers';
+import { getTypes, TILE_DIRECTION_RIGHT } from '../helpers';
+import { TileList } from './TileList.js';
 
 /**
  * Extracts the tile model from a tile.
@@ -51,7 +52,7 @@ export class TileCounter extends Counter {
     /**
      * Sets the specifications for the counted tile models.
      * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @returns {TileList} - Chains the instance.
+     * @returns {TileCounter} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
      * @fires specs
      */
@@ -186,7 +187,47 @@ export class TileCounter extends Counter {
     }
 
     /**
-     * Loads counter from a list of tiles. The counters are cleared before, including the related tile models.
+     * Loads counters from the list of all available tile models.
+     * The counters are cleared before, including the related tile models.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {number} count - The initial count given to each counter.
+     * @returns {TileCounter} - Chains the instance.
+     * @fires load
+     */
+    loadAllModels(specs, count = Number.POSITIVE_INFINITY) {
+        TileSpecifications.validateInstance(specs);
+
+        this.models.clear();
+        this.sortedModels.clear();
+
+        /**
+         * @param {TileCounter} counter
+         * @yields {Array}
+         * @generator
+         * @private
+         */
+        function* loadAll(counter) {
+            for (const type of getTypes()) {
+                let ratio = 1;
+                let maxRatio = 1;
+                do {
+                    const model = TileList.createTile(specs, type, TILE_DIRECTION_RIGHT, ratio);
+                    counter.models.set(model.modelId, model);
+                    counter.sortedModels.add(model);
+
+                    yield [model.modelId, count];
+
+                    maxRatio = model.maxRatio;
+                } while (ratio++ < maxRatio);
+            }
+        }
+
+        return super.load(loadAll(this));
+    }
+
+    /**
+     * Loads counters from a list of tiles.
+     * The counters are cleared before, including the related tile models.
      * @param {*} iterator - An iterable object that can be used to set the counters.
      * @returns {TileCounter} - Chains the instance.
      * @fires load
@@ -199,41 +240,36 @@ export class TileCounter extends Counter {
         this.models.clear();
         this.sortedModels.clear();
 
-        const dataIterator = iterator[Symbol.iterator]();
-        const loadIterator = {
-            next: () => {
-                const next = dataIterator.next();
-
-                if (next.done) {
-                    return next;
-                }
-
+        /**
+         * @param {TileCounter} counter
+         * @yields {Array}
+         * @generator
+         * @private
+         */
+        function* loadTiles(counter) {
+            for (const value of iterator) {
                 let tile, count;
-                if (Array.isArray(next.value)) {
-                    tile = next.value[0];
-                    count = next.value[1];
+                if (Array.isArray(value)) {
+                    tile = value[0];
+                    count = value[1];
                 } else {
-                    tile = next.value;
-                    count = this.get(tile.modelId) + 1;
+                    tile = value;
+                    count = counter.get(tile.modelId) + 1;
                 }
 
                 const { modelId } = tile;
 
-                if (!this.models.has(modelId)) {
+                if (!counter.models.has(modelId)) {
                     const model = extractModel(tile);
-                    this.models.set(modelId, model);
-                    this.sortedModels.add(model);
+                    counter.models.set(modelId, model);
+                    counter.sortedModels.add(model);
                 }
 
-                return { done: false, value: [modelId, count] };
-            },
-
-            [Symbol.iterator]() {
-                return this;
+                yield [modelId, count];
             }
-        };
+        }
 
-        return super.load(loadIterator);
+        return super.load(loadTiles(this));
     }
 }
 
