@@ -4,7 +4,7 @@ exports[`Track renders with default values 1`] = `
 <body>
   <div>
     <svg
-      viewBox="-30 -155 310 210"
+      viewBox="-10 -75 230 130"
       x="0"
       y="0"
     >
@@ -19,7 +19,7 @@ exports[`Track renders with default values 1`] = `
           height="110"
           width="90"
           x="0"
-          y="-105"
+          y="-65"
         />
         <g
           class="barrier straight-barrier"
@@ -30,7 +30,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -38,7 +38,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -46,7 +46,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -54,7 +54,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-22.5"
+            y="17.5"
           />
         </g>
         <g
@@ -66,7 +66,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -74,7 +74,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -82,7 +82,7 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -90,18 +90,19 @@ exports[`Track renders with default values 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-22.5"
+            y="17.5"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
         x="45"
-        y="-50"
+        y="-10"
       >
         1
       </text>
@@ -112,7 +113,7 @@ exports[`Track renders with default values 1`] = `
       >
         <path
           class="ground"
-          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+          d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -120,12 +121,12 @@ exports[`Track renders with default values 1`] = `
           
           <path
             class="barrier-chunk even"
-            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+            d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+            d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
           />
         </g>
         <g
@@ -134,33 +135,34 @@ exports[`Track renders with default values 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+            d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+            d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+            d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+            d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
-        x="200"
-        y="-50"
+        x="160"
+        y="-10"
       >
         1
       </text>
@@ -176,7 +178,7 @@ exports[`Track renders with the given parameters 1`] = `
   <div>
     <svg
       height="400"
-      viewBox="-30 -155 310 210"
+      viewBox="-10 -75 230 130"
       width="400"
       x="100"
       y="200"
@@ -192,7 +194,7 @@ exports[`Track renders with the given parameters 1`] = `
           height="110"
           width="90"
           x="0"
-          y="-105"
+          y="-65"
         />
         <g
           class="barrier straight-barrier"
@@ -203,7 +205,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -211,7 +213,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -219,7 +221,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -227,7 +229,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-22.5"
+            y="17.5"
           />
         </g>
         <g
@@ -239,7 +241,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -247,7 +249,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -255,7 +257,7 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -263,18 +265,19 @@ exports[`Track renders with the given parameters 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-22.5"
+            y="17.5"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
         x="45"
-        y="-50"
+        y="-10"
       >
         1
       </text>
@@ -285,7 +288,7 @@ exports[`Track renders with the given parameters 1`] = `
       >
         <path
           class="ground"
-          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 A 100 100 0 0 0 250 -100 Z"
+          d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -293,12 +296,12 @@ exports[`Track renders with the given parameters 1`] = `
           
           <path
             class="barrier-chunk even"
-            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+            d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+            d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
           />
         </g>
         <g
@@ -307,33 +310,34 @@ exports[`Track renders with the given parameters 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 245 -100 A 95 95 0 0 1 237.76855558857224 -63.645073925316474 L 242.3879532511287 -61.731656763491024 A 100 100 0 0 0 250 -100 Z"
+            d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 237.76855558857224 -63.645073925316474 A 95 95 0 0 1 217.17514421272202 -32.824855787278 L 220.71067811865476 -29.28932188134526 A 100 100 0 0 0 242.3879532511287 -61.731656763491024 Z"
+            d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 217.17514421272202 -32.824855787278 A 95 95 0 0 1 186.35492607468353 -12.23144441142776 L 188.268343236509 -7.612046748871322 A 100 100 0 0 0 220.71067811865476 -29.28932188134526 Z"
+            d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 186.35492607468353 -12.23144441142776 A 95 95 0 0 1 150 -5 L 150 0 A 100 100 0 0 0 188.268343236509 -7.612046748871322 Z"
+            d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
-        x="200"
-        y="-50"
+        x="160"
+        y="-10"
       >
         1
       </text>
@@ -349,7 +353,7 @@ exports[`Track updates when the model is modified 1`] = `
   <div>
     <svg
       height="400"
-      viewBox="-30 -155 470 210"
+      viewBox="-10 -75 350 130"
       width="400"
       x="100"
       y="200"
@@ -365,7 +369,7 @@ exports[`Track updates when the model is modified 1`] = `
           height="110"
           width="90"
           x="0"
-          y="-105"
+          y="-65"
         />
         <g
           class="barrier straight-barrier"
@@ -376,7 +380,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -384,7 +388,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -392,7 +396,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -400,7 +404,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="0"
-            y="-22.5"
+            y="17.5"
           />
         </g>
         <g
@@ -412,7 +416,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-105"
+            y="-65"
           />
           
           <rect
@@ -420,7 +424,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-77.5"
+            y="-37.5"
           />
           
           <rect
@@ -428,7 +432,7 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-50"
+            y="-10"
           />
           
           <rect
@@ -436,18 +440,19 @@ exports[`Track updates when the model is modified 1`] = `
             height="27.5"
             width="5"
             x="85"
-            y="-22.5"
+            y="17.5"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
         x="45"
-        y="-50"
+        y="-10"
       >
         2
       </text>
@@ -458,7 +463,7 @@ exports[`Track updates when the model is modified 1`] = `
       >
         <path
           class="ground"
-          d="M 160 -100 A 10 10 0 0 1 150 -90 L 150 0 L 205 0 A 45 45 0 0 0 250 -45 L 250 -100 Z"
+          d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 L 165 40 A 45 45 0 0 0 210 -5 L 210 -60 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -466,12 +471,12 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk even"
-            d="M 160 -100 A 10 10 0 0 1 157.07106781186548 -92.92893218813452 L 160.6066017177982 -89.39339828220179 A 15 15 0 0 0 165 -100 Z"
+            d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 157.07106781186548 -92.92893218813452 A 10 10 0 0 1 150 -90 L 150 -85 A 15 15 0 0 0 160.6066017177982 -89.39339828220179 Z"
+            d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
           />
         </g>
         <g
@@ -480,12 +485,12 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 245 -45 A 40 40 0 0 1 233.2842712474619 -16.7157287525381 L 236.81980515339464 -13.180194846605364 A 45 45 0 0 0 250 -45 Z"
+            d="M 205 -5 A 40 40 0 0 1 193.2842712474619 23.2842712474619 L 196.81980515339464 26.819805153394636 A 45 45 0 0 0 210 -5 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 233.2842712474619 -16.7157287525381 A 40 40 0 0 1 205 -5 L 205 0 A 45 45 0 0 0 236.81980515339464 -13.180194846605364 Z"
+            d="M 193.2842712474619 23.2842712474619 A 40 40 0 0 1 165 35 L 165 40 A 45 45 0 0 0 196.81980515339464 26.819805153394636 Z"
           />
         </g>
         <g
@@ -496,16 +501,16 @@ exports[`Track updates when the model is modified 1`] = `
             class="barrier-chunk even"
             height="5"
             width="27.5"
-            x="150"
-            y="-5"
+            x="110"
+            y="35"
           />
           
           <rect
             class="barrier-chunk odd"
             height="5"
             width="27.5"
-            x="177.5"
-            y="-5"
+            x="137.5"
+            y="35"
           />
         </g>
         <g
@@ -516,27 +521,28 @@ exports[`Track updates when the model is modified 1`] = `
             class="barrier-chunk odd"
             height="27.5"
             width="5"
-            x="245"
-            y="-100"
+            x="205"
+            y="-60"
           />
           
           <rect
             class="barrier-chunk even"
             height="27.5"
             width="5"
-            x="245"
-            y="-72.5"
+            x="205"
+            y="-32.5"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
-        x="200"
-        y="-50"
+        x="160"
+        y="-10"
       >
         1
       </text>
@@ -547,7 +553,7 @@ exports[`Track updates when the model is modified 1`] = `
       >
         <path
           class="ground"
-          d="M 320 -100 A 10 10 0 0 1 310 -90 L 310 0 A 100 100 0 0 0 410 -100 Z"
+          d="M 240 -60 A 10 10 0 0 1 230 -50 L 230 40 A 100 100 0 0 0 330 -60 Z"
         />
         <g
           class="barrier curved-barrier"
@@ -555,12 +561,12 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk even"
-            d="M 320 -100 A 10 10 0 0 1 317.0710678118655 -92.92893218813452 L 320.6066017177982 -89.39339828220179 A 15 15 0 0 0 325 -100 Z"
+            d="M 240 -60 A 10 10 0 0 1 237.07106781186548 -52.928932188134524 L 240.6066017177982 -49.39339828220179 A 15 15 0 0 0 245 -60 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 317.0710678118655 -92.92893218813452 A 10 10 0 0 1 310 -90 L 310 -85 A 15 15 0 0 0 320.6066017177982 -89.39339828220179 Z"
+            d="M 237.07106781186548 -52.928932188134524 A 10 10 0 0 1 230 -50 L 230 -45 A 15 15 0 0 0 240.6066017177982 -49.39339828220179 Z"
           />
         </g>
         <g
@@ -569,33 +575,34 @@ exports[`Track updates when the model is modified 1`] = `
           
           <path
             class="barrier-chunk odd"
-            d="M 405 -100 A 95 95 0 0 1 397.7685555885722 -63.645073925316474 L 402.3879532511287 -61.731656763491024 A 100 100 0 0 0 410 -100 Z"
+            d="M 325 -60 A 95 95 0 0 1 317.7685555885722 -23.645073925316474 L 322.3879532511287 -21.731656763491024 A 100 100 0 0 0 330 -60 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 397.7685555885722 -63.645073925316474 A 95 95 0 0 1 377.175144212722 -32.824855787278 L 380.71067811865476 -29.28932188134526 A 100 100 0 0 0 402.3879532511287 -61.731656763491024 Z"
+            d="M 317.7685555885722 -23.645073925316474 A 95 95 0 0 1 297.175144212722 7.175144212722003 L 300.71067811865476 10.71067811865474 A 100 100 0 0 0 322.3879532511287 -21.731656763491024 Z"
           />
           
           <path
             class="barrier-chunk odd"
-            d="M 377.175144212722 -32.824855787278 A 95 95 0 0 1 346.35492607468353 -12.23144441142776 L 348.268343236509 -7.612046748871322 A 100 100 0 0 0 380.71067811865476 -29.28932188134526 Z"
+            d="M 297.175144212722 7.175144212722003 A 95 95 0 0 1 266.35492607468353 27.76855558857224 L 268.268343236509 32.38795325112868 A 100 100 0 0 0 300.71067811865476 10.71067811865474 Z"
           />
           
           <path
             class="barrier-chunk even"
-            d="M 346.35492607468353 -12.23144441142776 A 95 95 0 0 1 310 -5 L 310 0 A 100 100 0 0 0 348.268343236509 -7.612046748871322 Z"
+            d="M 266.35492607468353 27.76855558857224 A 95 95 0 0 1 230 35 L 230 40 A 100 100 0 0 0 268.268343236509 32.38795325112868 Z"
           />
         </g>
       </g>
       
        
       <text
-        class="svelte-3b6zon"
+        class="svelte-15ppvz7"
         dominant-baseline="middle"
+        style="--font-size: 30px;"
         text-anchor="middle"
-        x="360"
-        y="-50"
+        x="280"
+        y="-10"
       >
         1
       </text>

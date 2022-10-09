@@ -4,8 +4,8 @@
 
     import { Sketch } from '../elements';
     import { Tile } from '../../tile/components';
-    import { TrackModel } from '../models';
     import { buildList } from '../helpers';
+    import { TrackModel } from '../models';
 
     export let track;
     export let x = 0;
@@ -17,6 +17,7 @@
 
     const counterStore = track.counterStore;
     const modelsStore = track.modelsStore;
+    const specs = track.specs;
 
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
@@ -26,15 +27,21 @@
         centered: true,
         aligned: true,
         vertical: false,
-        hPadding: 30,
-        vPadding: 50
+        hPadding: specs.padding,
+        vPadding: specs.padding
     });
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
     {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
         <Tile {type} {direction} {ratio} {angle} {x} {y} />
-        <text x={getTextX(x, rect)} y={getTextY(y, rect)} text-anchor="middle" dominant-baseline="middle">
+        <text
+            x={getTextX(x, rect)}
+            y={getTextY(y, rect)}
+            text-anchor="middle"
+            dominant-baseline="middle"
+            style="--font-size: {specs.width / 3}px"
+        >
             {$counterStore[i].count}
         </text>
     {/each}
@@ -42,7 +49,7 @@
 
 <style>
     text {
-        font: bold 40px sans-serif;
+        font: var(--font-size) sans-serif;
         fill: var(--color-fg);
     }
 </style>
