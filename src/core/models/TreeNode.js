@@ -37,6 +37,30 @@ export class TreeNode {
     }
 
     /**
+     * The number of nodes in the subtree. Caution: it does a full traversal
+     * of the subtree. For better performance please consider wrapping the
+     * tree and relying on the feedback objects to maintains the size.
+     * @type {number}
+     */
+    get size() {
+        if (this === TreeNode.NIL) {
+            return 0;
+        }
+
+        let size = 1;
+
+        if (this.left !== TreeNode.NIL) {
+            size += this.left.size;
+        }
+
+        if (this.right !== TreeNode.NIL) {
+            size += this.right.size;
+        }
+
+        return size;
+    }
+
+    /**
      * Tells if the subtree is empty.
      * @returns {boolean} - Returns `true` if the subtree is empty.
      */

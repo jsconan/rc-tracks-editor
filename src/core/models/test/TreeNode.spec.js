@@ -169,6 +169,14 @@ describe('TreeNode', () => {
         expect(tree.lookup(10)).toBe(TreeNode.NIL);
     });
 
+    it('computes the size of a subtree', () => {
+        expect(TreeNode.NIL.size).toBe(0);
+
+        let tree = TreeNode.create();
+        random.forEach(node => (tree = tree.insert(node, node)));
+        expect(tree.size).toBe(random.length);
+    });
+
     it('tells if a subtree is empty', () => {
         expect(TreeNode.NIL.empty()).toBeTruthy();
         expect(TreeNode.create().empty()).toBeTruthy();
