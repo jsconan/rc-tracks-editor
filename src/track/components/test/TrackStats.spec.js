@@ -40,7 +40,7 @@ track.import([
 ]);
 track.setBuilderOptions({ hPadding: 10, vPadding: 20, startAngle: 90 });
 
-describe('Track', () => {
+describe('TrackStats', () => {
     it('renders with default values', () => {
         const props = { track };
         const { container } = render(Context, {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Track renders with default values 1`] = `
+exports[`TrackStats renders with default values 1`] = `
 <body>
   <div>
     <svg
@@ -173,7 +173,7 @@ exports[`Track renders with default values 1`] = `
 </body>
 `;
 
-exports[`Track renders with the given parameters 1`] = `
+exports[`TrackStats renders with the given parameters 1`] = `
 <body>
   <div>
     <svg
@@ -348,7 +348,7 @@ exports[`Track renders with the given parameters 1`] = `
 </body>
 `;
 
-exports[`Track updates when the model is modified 1`] = `
+exports[`TrackStats updates when the model is modified 1`] = `
 <body>
   <div>
     <svg
