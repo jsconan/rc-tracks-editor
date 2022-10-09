@@ -345,6 +345,14 @@ describe('TileCounter', () => {
         expect(counter.get(keys[2])).toBe(3);
     });
 
+    it('can add multiple tiles to the counters', () => {
+        const counter = new TileCounter(tiles);
+
+        expect(counter.get(keys[2])).toBe(2);
+        expect(counter.add(new CurvedTileModel(specs), 3)).toBe(counter);
+        expect(counter.get(keys[2])).toBe(5);
+    });
+
     it('can register a tile model', () => {
         const counter = new TileCounter(tiles);
         const tile = new CurvedTileModel(specs, CurvedTileModel.DIRECTION_LEFT, 2);
@@ -367,8 +375,9 @@ describe('TileCounter', () => {
             expect(model).toBeInstanceOf(CurvedTileModel);
             expect(model.modelId).toBe(tile.modelId);
         });
-        const tileCallback = jest.fn().mockImplementation(model => {
+        const tileCallback = jest.fn().mockImplementation((model, amount) => {
             expect(model).toBe(tile);
+            expect(amount).toBe(2);
         });
 
         counter.on('addmodel', modelCallback);
@@ -376,10 +385,10 @@ describe('TileCounter', () => {
 
         expect(counter.get(tile.modelId)).toBe(0);
 
-        counter.add(tile);
-        counter.add(tile);
+        counter.add(tile, 2);
+        counter.add(tile, 2);
 
-        expect(counter.get(tile.modelId)).toBe(2);
+        expect(counter.get(tile.modelId)).toBe(4);
         expect(modelCallback).toHaveBeenCalledTimes(1);
         expect(tileCallback).toHaveBeenCalledTimes(2);
     });
@@ -390,6 +399,14 @@ describe('TileCounter', () => {
         expect(counter.get(keys[2])).toBe(2);
         expect(counter.remove(new CurvedTileModel(specs))).toBe(counter);
         expect(counter.get(keys[2])).toBe(1);
+    });
+
+    it('can remove multiple tiles from the counters', () => {
+        const counter = new TileCounter(tiles);
+
+        expect(counter.get(keys[2])).toBe(2);
+        expect(counter.remove(new CurvedTileModel(specs), 2)).toBe(counter);
+        expect(counter.get(keys[2])).toBe(0);
     });
 
     it('can unregister a tile model', () => {
@@ -408,14 +425,16 @@ describe('TileCounter', () => {
     it('emits an event when un-registering a tile model', () => {
         const counter = new TileCounter(tiles);
         const tile = new CurvedTileModel(specs);
+        let count = 2;
 
         const modelCallback = jest.fn().mockImplementation((key, model) => {
             expect(key).toBe(tile.modelId);
             expect(model).toBeInstanceOf(CurvedTileModel);
             expect(model.modelId).toBe(tile.modelId);
         });
-        const tileCallback = jest.fn().mockImplementation(model => {
+        const tileCallback = jest.fn().mockImplementation((model, amount) => {
             expect(model).toBe(tile);
+            expect(amount).toBe(count);
         });
 
         counter.on('removemodel', modelCallback);
@@ -423,9 +442,11 @@ describe('TileCounter', () => {
 
         expect(counter.get(tile.modelId)).toBe(2);
 
-        counter.remove(tile);
-        counter.remove(tile);
-        counter.remove(tile);
+        counter.add(tile);
+        counter.remove(tile, 2);
+        count = 1;
+        counter.remove(tile, 2);
+        counter.remove(tile, 2);
 
         expect(counter.get(tile.modelId)).toBe(0);
         expect(modelCallback).toHaveBeenCalledTimes(1);

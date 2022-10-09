@@ -105,15 +105,16 @@ export class TileCounter extends Counter {
      * Increments the counter for the given tile model.
      * If the tile model was not yet listed, it will be added.
      * @param {TileModel} tile - The tile to count.
+     * @param {number} amount - The amount to add to the counter, say the number of similar tiles.
      * @returns {TileCounter} - Chains the instance.
      * @fires set
      * @fires addmodel
      * @fires addtile
      */
-    add(tile) {
+    add(tile, amount = 1) {
         const { modelId } = tile;
 
-        this.increment(modelId, 1);
+        this.increment(modelId, amount);
 
         if (!this.models.has(modelId)) {
             const model = extractModel(tile);
@@ -123,7 +124,7 @@ export class TileCounter extends Counter {
             this.emit('addmodel', modelId, model);
         }
 
-        this.emit('addtile', tile);
+        this.emit('addtile', tile, amount);
 
         return this;
     }
@@ -132,24 +133,26 @@ export class TileCounter extends Counter {
      * Decrements the counter for the given tile model.
      * If the counter reaches 0, it will be removed together with the related tile model.
      * @param {TileModel} tile - The tile to count.
+     * @param {number} amount - The amount to subtract from the counter, say the number of similar tiles.
      * @returns {TileCounter} - Chains the instance.
      * @fires set
      * @fires removemodel
      * @fires delete
      * @fires removetile
      */
-    remove(tile) {
+    remove(tile, amount = 1) {
         const { modelId } = tile;
         const count = this.get(modelId);
 
         if (count > 0) {
-            if (count > 1) {
-                this.decrement(modelId, 1);
+            if (count > amount) {
+                this.decrement(modelId, amount);
             } else {
+                amount = count;
                 this.delete(modelId);
             }
 
-            this.emit('removetile', tile);
+            this.emit('removetile', tile, amount);
         }
 
         return this;
@@ -312,12 +315,14 @@ export class TileCounter extends Counter {
  * Notifies a tile has been added.
  * @event addtile
  * @param {TileModel} tile - The tile that was added.
+ * @param {number} amount - The number of similar tiles that was added.
  */
 
 /**
  * Notifies a tile has been removed.
  * @event removetile
  * @param {TileModel} tile - The tile that was removed.
+ * @param {number} amount - The number of similar tiles that was removed.
  */
 
 /**
