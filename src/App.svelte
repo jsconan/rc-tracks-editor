@@ -5,18 +5,9 @@
     import { setContext } from 'svelte';
     import config from './config.js';
     import { Sketch } from './track/elements';
-    import { SimpleTrack, Track, TrackStats } from './track/components';
-    import { buildList } from './track/helpers';
-    import { TileList } from './tile/models';
+    import { TileSelector, Track, TrackStats } from './track/components';
     import { TileSpecifications } from './tile/config';
-    import {
-        CURVED_TILE_ENLARGED_TYPE,
-        CURVED_TILE_TYPE,
-        STRAIGHT_TILE_TYPE,
-        TILE_DIRECTION_RIGHT
-    } from './tile/helpers';
-    import { tileListStore } from './tile/stores';
-    import { TrackModel } from './track/models';
+    import { TileSet, TrackModel } from './track/models';
     import samples from './data/tracks.json';
 
     const angle = -90;
@@ -31,39 +22,16 @@
         console.log(event.detail);
     }
 
-    const track = new TrackModel(specs);
-    track.setBuilderOptions({ startAngle: angle, hPadding: 20, vPadding: 20 });
-    track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
-    // track.import(samples.spiral);
+    const tiles = new TileSet(specs);
 
-    const list = new TileList(specs);
-    list.import([
-        { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-        { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-        { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
-        { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 2 },
-        { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 3 },
-        { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 4 }
-    ]);
-    const menuCoords = tileListStore(list, list =>
-        buildList(list, {
-            tileAngle: -90,
-            centered: true,
-            aligned: true,
-            vertical: true,
-            vPadding: 20
-        })
-    );
-    const statsCoords = tileListStore(list, list =>
-        buildList(list, {
-            tileAngle: -0,
-            centered: true,
-            aligned: true,
-            vertical: false,
-            hPadding: 30,
-            vPadding: 50
-        })
-    );
+    const track = new TrackModel(specs);
+    track.setBuilderOptions({
+        startAngle: angle,
+        hPadding: specs.padding,
+        vPadding: specs.padding
+    });
+    track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
+    track.import(samples.track1);
 </script>
 
 <div class="page">
@@ -71,11 +39,12 @@
     <main>
         <aside>
             <Sketch width="100%" height="100%">
-                <SimpleTrack
-                    track={menuCoords}
+                <TileSelector
+                    {tiles}
                     on:click={event => {
                         click(event);
-                        track.append(event.detail.type, event.detail.direction, event.detail.ratio);
+                        const tile = track.append(event.detail.type, event.detail.direction, event.detail.ratio);
+                        tiles.remove(tile);
                     }}
                 />
             </Sketch>
