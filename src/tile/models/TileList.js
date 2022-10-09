@@ -363,28 +363,20 @@ export class TileList extends List {
             return this;
         }
 
-        const specs = this.specs;
-        const dataIterator = data[Symbol.iterator]();
-        const loadIterator = {
-            next() {
-                const next = dataIterator.next();
-
-                if (next.done) {
-                    return next;
-                }
-
-                const { type, direction, ratio } = next.value || {};
-                const tile = TileList.createTile(specs, type, direction, ratio);
-
-                return { done: false, value: tile };
-            },
-
-            [Symbol.iterator]() {
-                return this;
+        /**
+         * @param {TileSpecifications} specs
+         * @yields {TileModel}
+         * @generator
+         * @private
+         */
+        function* loadData(specs) {
+            for (const value of data) {
+                const { type, direction, ratio } = value || {};
+                yield TileList.createTile(specs, type, direction, ratio);
             }
-        };
+        }
 
-        this.load(loadIterator);
+        this.load(loadData(this.specs));
 
         return this;
     }
