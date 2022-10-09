@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { Counter } from '../../../core/models';
 import { TileSpecifications } from '../../config';
 import { CurvedTileEnlargedModel } from '../CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from '../CurvedTileModel.js';
@@ -50,6 +51,10 @@ const counters = [
 describe('TileCounter', () => {
     it('is a class', () => {
         expect(TileCounter).toEqual(expect.any(Function));
+    });
+
+    it('extends the class Counter', () => {
+        expect(new TileCounter(specs)).toBeInstanceOf(Counter);
     });
 
     it('is created empty', () => {
