@@ -17,6 +17,7 @@
  */
 
 import { Counter, SortedSet } from '../../core/models';
+import { TileSpecifications } from '../config';
 import { TILE_DIRECTION_RIGHT } from '../helpers';
 
 /**
@@ -45,6 +46,25 @@ export class TileCounter extends Counter {
             this.load(source);
             source = void 0;
         }
+    }
+
+    /**
+     * Sets the specifications for the counted tile models.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     * @fires specs
+     */
+    setSpecs(specs) {
+        TileSpecifications.validateInstance(specs);
+
+        if (this.models.size) {
+            this.models.forEach(model => model.setSpecs(specs));
+
+            this.emit('specs', specs);
+        }
+
+        return this;
     }
 
     /**
@@ -230,6 +250,12 @@ export class TileCounter extends Counter {
 
 /**
  * @typedef {import('./TileModel.js').TileModel} TileModel
+ */
+
+/**
+ * Notifies the tile specification have changed.
+ * @event specs
+ * @param {TileSpecifications} specs - The specifications for the tiles.
  */
 
 /**

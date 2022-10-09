@@ -64,6 +64,24 @@ describe('TileCounter', () => {
         expect([...new TileCounter(counters)]).toEqual(entries);
     });
 
+    it('can set the specifications of the tile models', () => {
+        const counter = new TileCounter();
+        const newSpecs = new TileSpecifications(10, 1, 2);
+        const callback = jest.fn().mockImplementation(s => {
+            expect(s).toBe(newSpecs);
+        });
+
+        counter.on('specs', callback);
+
+        expect(counter.setSpecs(newSpecs)).toBe(counter);
+        counter.load(tiles);
+        expect(callback).toHaveBeenCalledTimes(0);
+
+        expect(counter.setSpecs(newSpecs)).toBe(counter);
+        expect(counter.getModelList()).toMatchSnapshot();
+        expect(callback).toHaveBeenCalledTimes(1);
+    });
+
     it('has a size', () => {
         expect(new TileCounter().size).toBe(0);
         expect(new TileCounter(tiles).size).toBe(entries.length);
