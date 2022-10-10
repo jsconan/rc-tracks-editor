@@ -5,9 +5,11 @@
     import { setContext } from 'svelte';
     import config from './config.js';
     import { Sketch } from './track/elements';
-    import { TileSelector, Track, TrackStats } from './track/components';
+    import { TileSelector } from './editor/components';
+    import { TileSet } from './editor/models';
     import { TileSpecifications } from './tile/config';
-    import { TileSet, TrackModel } from './track/models';
+    import { Track, TrackStats } from './track/components';
+    import { TrackModel } from './track/models';
     import samples from './data/tracks.json';
 
     const angle = -90;

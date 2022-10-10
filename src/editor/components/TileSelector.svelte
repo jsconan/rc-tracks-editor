@@ -2,9 +2,9 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { Sketch } from '../elements';
+    import { buildList } from '../../track/helpers';
+    import { Sketch } from '../../track/elements';
     import { Tile } from '../../tile/components';
-    import { buildList } from '../helpers';
     import { TileSet } from '../models';
 
     export let tiles;

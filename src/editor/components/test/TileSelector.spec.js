@@ -19,10 +19,10 @@
 import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
-import TileSelector from '../TileSelector.svelte';
+import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../../tile/models';
 import { TileSet } from '../../models';
 import { TileSpecifications } from '../../../tile/config';
-import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../../tile/models';
+import TileSelector from '../TileSelector.svelte';
 
 const laneWidth = 80;
 const barrierWidth = 5;

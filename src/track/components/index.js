@@ -17,6 +17,5 @@
  */
 
 export { default as SimpleTrack } from './SimpleTrack.svelte';
-export { default as TileSelector } from './TileSelector.svelte';
 export { default as Track } from './Track.svelte';
 export { default as TrackStats } from './TrackStats.svelte';
