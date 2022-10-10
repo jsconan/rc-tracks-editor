@@ -539,10 +539,10 @@ describe('TileSet', () => {
 
         expect([...counter]).toStrictEqual([]);
 
-        expect(counter.loadAllModels(specs)).toBe(counter);
+        expect(counter.loadAllModels()).toBe(counter);
         expect([...counter]).toMatchSnapshot();
 
-        expect(counter.loadAllModels(specs, 10)).toBe(counter);
+        expect(counter.loadAllModels(10)).toBe(counter);
         expect([...counter]).toMatchSnapshot();
 
         expect(callback).toHaveBeenCalledTimes(2);
@@ -564,10 +564,12 @@ describe('TileSet', () => {
 
         counter.remove(tile, 3);
         expect(counter.toObject()).toMatchSnapshot();
+        expect(counter.counter.toObject()).toMatchSnapshot();
 
         counter.reset();
 
         expect(counter.toObject()).toMatchSnapshot();
+        expect(counter.counter.toObject()).toMatchSnapshot();
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
@@ -584,6 +586,7 @@ describe('TileSet', () => {
         counter.consume([tile, tile, tile]);
 
         expect(counter.toObject()).toMatchSnapshot();
+        expect(counter.counter.toObject()).toMatchSnapshot();
         expect(callback).toHaveBeenCalledTimes(1);
     });
 });

@@ -16,7 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { TileCounter } from '../../tile/models';
+import { getTypes, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
+import { TileCounter, TileList } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';
 import { tileCounterStore, tileModelsStore } from '../../tile/stores';
 
@@ -34,16 +35,16 @@ export class TileSet extends TileCounter {
     constructor(specs, source = null) {
         super(source);
 
+        this.counter = new TileCounter();
+        this.setSpecs(specs);
+
         if (!source) {
-            this.loadAllModels(specs);
+            this.loadAllModels();
         }
         source = void 0;
 
-        this.counter = new TileCounter();
         this.modelsStore = tileModelsStore(this);
         this.counterStore = tileCounterStore(this);
-
-        this.setSpecs(specs);
 
         this.on('removetile', (tile, amount) => this.counter.add(tile, amount));
         this.on('addtile', (tile, amount) => this.counter.remove(tile, amount));
@@ -107,7 +108,6 @@ export class TileSet extends TileCounter {
         for (const tile of tiles) {
             this.remove(tile);
         }
-        this.counter.clear();
 
         this.modelsStore.bind(this);
         this.counterStore.bind(this);
@@ -115,6 +115,55 @@ export class TileSet extends TileCounter {
         this.emit('consume');
 
         return this;
+    }
+
+    /**
+     * Loads counters from the list of all available tile models.
+     * The counters are cleared before, including the related tile models.
+     * @param {number} count - The initial count given to each counter.
+     * @returns {TileSet} - Chains the instance.
+     * @fires load
+     */
+    loadAllModels(count = Number.POSITIVE_INFINITY) {
+        /**
+         * @param {TileCounter} counter
+         * @yields {Array}
+         * @generator
+         * @private
+         */
+        function* loadAll(counter) {
+            for (const type of getTypes()) {
+                let ratio = 1;
+                let maxRatio = 1;
+                do {
+                    const model = TileList.createTile(counter.specs, type, TILE_DIRECTION_RIGHT, ratio);
+
+                    yield [model, count];
+
+                    maxRatio = model.maxRatio;
+                } while (ratio++ < maxRatio);
+            }
+        }
+
+        return this.load(loadAll(this));
+    }
+
+    /**
+     * Loads counters from a list of tiles.
+     * The counters are cleared before, including the related tile models.
+     * @param {*} iterator - An iterable object that can be used to set the counters.
+     * @returns {TileSet} - Chains the instance.
+     * @fires load
+     */
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
+        }
+
+        if (this.counter) {
+            this.counter.clear();
+        }
+        return super.load(iterator);
     }
 
     /**

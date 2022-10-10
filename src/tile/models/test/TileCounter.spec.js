@@ -508,24 +508,6 @@ describe('TileCounter', () => {
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
-    it('can load counters from the full list of tile models', () => {
-        const counter = new TileCounter();
-
-        const callback = jest.fn();
-
-        counter.on('load', callback);
-
-        expect([...counter]).toStrictEqual([]);
-
-        expect(counter.loadAllModels(specs)).toBe(counter);
-        expect([...counter]).toMatchSnapshot();
-
-        expect(counter.loadAllModels(specs, 10)).toBe(counter);
-        expect([...counter]).toMatchSnapshot();
-
-        expect(callback).toHaveBeenCalledTimes(2);
-    });
-
     it('can export counters', () => {
         const counter = new TileCounter(tiles);
 

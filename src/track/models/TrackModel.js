@@ -116,6 +116,7 @@ export class TrackModel {
 
         this.specs = specs;
         this.tiles.setSpecs(specs);
+        this.counter.setSpecs(specs);
 
         return this;
     }

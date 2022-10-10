@@ -18,8 +18,7 @@
 
 import { Counter, SortedSet } from '../../core/models';
 import { TileSpecifications } from '../config';
-import { getTypes, TILE_DIRECTION_RIGHT } from '../helpers';
-import { TileList } from './TileList.js';
+import { TILE_DIRECTION_RIGHT } from '../helpers';
 
 /**
  * Extracts the tile model from a tile.
@@ -190,45 +189,6 @@ export class TileCounter extends Counter {
     }
 
     /**
-     * Loads counters from the list of all available tile models.
-     * The counters are cleared before, including the related tile models.
-     * @param {TileSpecifications} specs - The specifications for the tiles.
-     * @param {number} count - The initial count given to each counter.
-     * @returns {TileCounter} - Chains the instance.
-     * @fires load
-     */
-    loadAllModels(specs, count = Number.POSITIVE_INFINITY) {
-        TileSpecifications.validateInstance(specs);
-
-        this.models.clear();
-        this.sortedModels.clear();
-
-        /**
-         * @param {TileCounter} counter
-         * @yields {Array}
-         * @generator
-         * @private
-         */
-        function* loadAll(counter) {
-            for (const type of getTypes()) {
-                let ratio = 1;
-                let maxRatio = 1;
-                do {
-                    const model = TileList.createTile(specs, type, TILE_DIRECTION_RIGHT, ratio);
-                    counter.models.set(model.modelId, model);
-                    counter.sortedModels.add(model);
-
-                    yield [model.modelId, count];
-
-                    maxRatio = model.maxRatio;
-                } while (ratio++ < maxRatio);
-            }
-        }
-
-        return super.load(loadAll(this));
-    }
-
-    /**
      * Loads counters from a list of tiles.
      * The counters are cleared before, including the related tile models.
      * @param {*} iterator - An iterable object that can be used to set the counters.
@@ -239,9 +199,6 @@ export class TileCounter extends Counter {
         if (!iterator || !iterator[Symbol.iterator]) {
             return this;
         }
-
-        this.models.clear();
-        this.sortedModels.clear();
 
         /**
          * @param {TileCounter} counter
@@ -272,6 +229,8 @@ export class TileCounter extends Counter {
             }
         }
 
+        this.models.clear();
+        this.sortedModels.clear();
         return super.load(loadTiles(this));
     }
 }

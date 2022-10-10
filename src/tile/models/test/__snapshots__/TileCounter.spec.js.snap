@@ -147,64 +147,6 @@ Array [
 ]
 `;
 
-exports[`TileCounter can load counters from the full list of tile models 1`] = `
-Array [
-  Array [
-    "straight-tile-1",
-    Infinity,
-  ],
-  Array [
-    "curved-tile-1",
-    Infinity,
-  ],
-  Array [
-    "curved-tile-2",
-    Infinity,
-  ],
-  Array [
-    "curved-tile-3",
-    Infinity,
-  ],
-  Array [
-    "curved-tile-4",
-    Infinity,
-  ],
-  Array [
-    "curved-tile-enlarged-1",
-    Infinity,
-  ],
-]
-`;
-
-exports[`TileCounter can load counters from the full list of tile models 2`] = `
-Array [
-  Array [
-    "straight-tile-1",
-    10,
-  ],
-  Array [
-    "curved-tile-1",
-    10,
-  ],
-  Array [
-    "curved-tile-2",
-    10,
-  ],
-  Array [
-    "curved-tile-3",
-    10,
-  ],
-  Array [
-    "curved-tile-4",
-    10,
-  ],
-  Array [
-    "curved-tile-enlarged-1",
-    10,
-  ],
-]
-`;
-
 exports[`TileCounter can map its counters 1`] = `
 Object {
   "curved-tile-1": 20,
