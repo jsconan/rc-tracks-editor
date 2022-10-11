@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackEditorModel can limit the available set of tiles 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    2,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+  Array [
+    "curved-tile-1",
+    2,
+  ],
+]
+`;
+
+exports[`TrackEditorModel can load a track 1`] = `
+Array [
+  CurvedTileModel {
+    "direction": "left",
+    "id": "id-6",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  StraightTileModel {
+    "direction": "right",
+    "id": "id-7",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileModel {
+    "direction": "right",
+    "id": "id-8",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`TrackEditorModel can remove the limit for the available set of tiles 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    Infinity,
+  ],
+  Array [
+    "curved-tile-1",
+    Infinity,
+  ],
+  Array [
+    "curved-tile-2",
+    Infinity,
+  ],
+  Array [
+    "curved-tile-3",
+    Infinity,
+  ],
+  Array [
+    "curved-tile-4",
+    Infinity,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    Infinity,
+  ],
+]
+`;
+
+exports[`TrackEditorModel can set the specifications of the tile models 1`] = `
+TrackModel {
+  "builder": TrackBuilder {
+    "builder": [Function],
+    "delegate": [Function],
+    "emit": [Function],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "options": Object {
+      "hPadding": 10,
+      "startAngle": 0,
+      "vPadding": 10,
+    },
+  },
+  "counter": Map {
+    "straight-tile-1" => 1,
+    "curved-tile-enlarged-1" => 1,
+    "curved-tile-1" => 1,
+  },
+  "counterStore": Object {
+    "bind": [Function],
+    "boundTo": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-enlarged-1" => 1,
+      "curved-tile-1" => 1,
+    },
+    "notify": [Function],
+    "pause": [Function],
+    "paused": false,
+    "resume": [Function],
+    "subscribe": [Function],
+    "unbind": [Function],
+  },
+  "delegate": [Function],
+  "emit": [Function],
+  "listens": [Function],
+  "modelsStore": Object {
+    "bind": [Function],
+    "boundTo": Map {
+      "straight-tile-1" => 1,
+      "curved-tile-enlarged-1" => 1,
+      "curved-tile-1" => 1,
+    },
+    "notify": [Function],
+    "pause": [Function],
+    "paused": false,
+    "resume": [Function],
+    "subscribe": [Function],
+    "unbind": [Function],
+  },
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 2,
+    "barrierWidth": 1,
+    "laneWidth": 10,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+  "tiles": TileList {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": Array [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "specs": TileSpecifications {
+      "barrierChunks": 2,
+      "barrierWidth": 1,
+      "laneWidth": 10,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "tilesStore": Object {
+    "bind": [Function],
+    "boundTo": TileList {
+      "delegate": [Function],
+      "emit": [Function],
+      "list": Array [
+        StraightTileModel {
+          "direction": "right",
+          "id": "id-0",
+          "ratio": 1,
+          "specs": TileSpecifications {
+            "barrierChunks": 2,
+            "barrierWidth": 1,
+            "laneWidth": 10,
+            "maxRatio": 4,
+            "unlockRatio": false,
+          },
+        },
+        CurvedTileEnlargedModel {
+          "direction": "right",
+          "id": "id-1",
+          "ratio": 1,
+          "specs": TileSpecifications {
+            "barrierChunks": 2,
+            "barrierWidth": 1,
+            "laneWidth": 10,
+            "maxRatio": 4,
+            "unlockRatio": false,
+          },
+        },
+        CurvedTileModel {
+          "direction": "right",
+          "id": "id-2",
+          "ratio": 1,
+          "specs": TileSpecifications {
+            "barrierChunks": 2,
+            "barrierWidth": 1,
+            "laneWidth": 10,
+            "maxRatio": 4,
+            "unlockRatio": false,
+          },
+        },
+      ],
+      "listens": [Function],
+      "off": [Function],
+      "on": [Function],
+      "once": [Function],
+      "specs": TileSpecifications {
+        "barrierChunks": 2,
+        "barrierWidth": 1,
+        "laneWidth": 10,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "notify": [Function],
+    "pause": [Function],
+    "paused": false,
+    "resume": [Function],
+    "subscribe": [Function],
+    "unbind": [Function],
+  },
+}
+`;
+
+exports[`TrackEditorModel resets the set of tiles when clearing the editor 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    2,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+  Array [
+    "curved-tile-1",
+    2,
+  ],
+]
+`;
+
+exports[`TrackEditorModel resets the set of tiles when loading a track 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    2,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+  Array [
+    "curved-tile-1",
+    1,
+  ],
+]
+`;
+
+exports[`TrackEditorModel takes the existing track into account when limiting the available set of tiles 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    1,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+]
+`;
+
+exports[`TrackEditorModel updates the set of tiles when adding a tile to the track 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    1,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+  Array [
+    "curved-tile-1",
+    2,
+  ],
+]
+`;
+
+exports[`TrackEditorModel updates the set of tiles when loading a track 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    1,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+]
+`;
+
+exports[`TrackEditorModel updates the set of tiles when removing a tile from the track 1`] = `
+Array [
+  Array [
+    "straight-tile-1",
+    1,
+  ],
+  Array [
+    "curved-tile-enlarged-1",
+    2,
+  ],
+  Array [
+    "curved-tile-1",
+    1,
+  ],
+]
+`;

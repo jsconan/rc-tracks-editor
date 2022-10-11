@@ -17,3 +17,4 @@
  */
 
 export { TileSet } from './TileSet.js';
+export { TrackEditorModel } from './TrackEditorModel.js';
