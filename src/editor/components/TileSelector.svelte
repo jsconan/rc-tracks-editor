@@ -27,6 +27,7 @@
         centered: true,
         aligned: true,
         vertical: true,
+        hPadding: specs.padding,
         vPadding: specs.padding
     });
 </script>
