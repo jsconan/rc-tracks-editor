@@ -6,10 +6,9 @@
     import config from './config.js';
     import { Sketch } from './track/elements';
     import { TileSelector } from './editor/components';
-    import { TileSet } from './editor/models';
+    import { TrackEditorModel } from './editor/models';
     import { TileSpecifications } from './tile/config';
     import { Track, TrackStats } from './track/components';
-    import { TrackModel } from './track/models';
     import samples from './data/tracks.json';
 
     const angle = -90;
@@ -24,16 +23,8 @@
         console.log(event.detail);
     }
 
-    const tiles = new TileSet(specs);
-
-    const track = new TrackModel(specs);
-    track.setBuilderOptions({
-        startAngle: angle,
-        hPadding: specs.padding,
-        vPadding: specs.padding
-    });
-    track.tilesStore.subscribe(() => console.log(JSON.stringify(track.export())));
-    track.import(samples.track1);
+    const trackEditor = new TrackEditorModel(specs, angle);
+    trackEditor.load(samples.track1);
 </script>
 
 <div class="page">
@@ -42,11 +33,10 @@
         <aside>
             <Sketch width="100%" height="100%">
                 <TileSelector
-                    {tiles}
+                    tiles={trackEditor.tiles}
                     on:click={event => {
                         click(event);
-                        const tile = track.append(event.detail.type, event.detail.direction, event.detail.ratio);
-                        tiles.remove(tile);
+                        trackEditor.track.append(event.detail.type, event.detail.direction, event.detail.ratio);
                     }}
                 />
             </Sketch>
@@ -54,17 +44,17 @@
         <section>
             <nav>
                 <Sketch width="100%" height="100%">
-                    <TrackStats {track} />
+                    <TrackStats track={trackEditor.track} />
                 </Sketch>
             </nav>
             <article>
                 <Sketch width="100%" height="100%">
                     <Track
-                        {track}
+                        track={trackEditor.track}
                         on:click={event => {
                             click(event);
-                            track.getById(event.detail.id).flipDirection();
-                            track.update();
+                            trackEditor.track.getById(event.detail.id).flipDirection();
+                            trackEditor.track.update();
                         }}
                     />
                 </Sketch>
