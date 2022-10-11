@@ -241,10 +241,11 @@ describe('tileModelsStore', () => {
         counter.add(tile); // callback called
 
         counter.clear(); // callback called
+        counter.load([tile]); // callback called
 
         unsubscribe();
         counter.add(tile);
 
-        expect(callback).toHaveBeenCalledTimes(5);
+        expect(callback).toHaveBeenCalledTimes(6);
     });
 });

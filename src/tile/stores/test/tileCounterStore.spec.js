@@ -235,10 +235,11 @@ describe('tileCounterStore', () => {
         counter.remove(tile); // callback called
 
         counter.clear(); // callback called
+        counter.load([tile]); // callback called
 
         unsubscribe();
         counter.clear();
 
-        expect(callback).toHaveBeenCalledTimes(4);
+        expect(callback).toHaveBeenCalledTimes(5);
     });
 });

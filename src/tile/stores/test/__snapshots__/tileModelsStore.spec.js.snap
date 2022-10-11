@@ -39,3 +39,20 @@ Array [
 `;
 
 exports[`tileModelsStore can notify changes applied to the counter 5`] = `Array []`;
+
+exports[`tileModelsStore can notify changes applied to the counter 6`] = `
+Array [
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;

@@ -36,7 +36,7 @@ const defaultUpdater = counter => counter.getCounterList();
  * @return {EventStore}
  */
 export default (boundTo = null, update = defaultUpdater) => {
-    const store = eventStore(['addtile', 'removetile', 'clear'], null, update);
+    const store = eventStore(['addtile', 'removetile', 'load', 'clear'], null, update);
     const bind = store.bind;
 
     assign(store, {
