@@ -268,7 +268,7 @@ export class TrackModel {
      * @returns {tileExport[]} - An object representation of the track.
      */
     export() {
-        return this.tiles.map(tile => tile.export());
+        return this.tiles.export();
     }
 
     /**
