@@ -513,4 +513,10 @@ describe('TileCounter', () => {
 
         expect(counter.toObject()).toMatchSnapshot();
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const counter = new TileCounter();
+        expect(() => TileCounter.validateInstance(counter)).not.toThrow();
+        expect(() => TileCounter.validateInstance({})).toThrow('The object must be an instance of TileCounter!');
+    });
 });

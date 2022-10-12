@@ -253,4 +253,12 @@ describe('TrackEditorModel', () => {
         editor.track.remove(editor.track.last().id);
         expect([...editor.tiles]).toMatchSnapshot();
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const counter = new TrackEditorModel(specs);
+        expect(() => TrackEditorModel.validateInstance(counter)).not.toThrow();
+        expect(() => TrackEditorModel.validateInstance({})).toThrow(
+            'The object must be an instance of TrackEditorModel!'
+        );
+    });
 });

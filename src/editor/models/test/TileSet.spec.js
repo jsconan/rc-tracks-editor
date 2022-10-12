@@ -589,4 +589,10 @@ describe('TileSet', () => {
         expect(counter.counter.toObject()).toMatchSnapshot();
         expect(callback).toHaveBeenCalledTimes(1);
     });
+
+    it('can validate an object is an instance of the class', () => {
+        const counter = new TileSet(specs);
+        expect(() => TileSet.validateInstance(counter)).not.toThrow();
+        expect(() => TileSet.validateInstance({})).toThrow('The object must be an instance of TileSet!');
+    });
 });

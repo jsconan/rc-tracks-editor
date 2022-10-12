@@ -142,6 +142,18 @@ export class TrackEditorModel {
 
         return this;
     }
+
+    /**
+     * Validates that the given model is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} model - The instance to validate.
+     * @throws {TypeError} - If the given model is not a valid instance.
+     */
+    static validateInstance(model) {
+        if (!(model instanceof this)) {
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
+        }
+    }
 }
 
 /**
