@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render } from '@testing-library/svelte';
+import { fireEvent, render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../../tile/models';
@@ -108,5 +108,27 @@ describe('TileSelector', () => {
                 }
             })
         ).toThrow('The object must be an instance of TileSet!');
+    });
+
+    it('fires click', () => {
+        const props = { tiles: allTiles };
+        const onClick = jest.fn().mockImplementation(event => {
+            expect(event.detail).toEqual(expect.any(Object));
+            expect(event.detail.type).toBe(CurvedTileModel.TYPE);
+            expect(event.detail.direction).toBe(CurvedTileModel.DIRECTION_RIGHT);
+            expect(event.detail.ratio).toBe(1);
+        });
+        const { container, component } = render(Context, {
+            props: {
+                component: TileSelector,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        component.$on('click', onClick);
+        fireEvent.click(container.querySelector('.curved-tile'));
+        expect(onClick).toHaveBeenCalledTimes(1);
     });
 });
