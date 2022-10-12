@@ -17,3 +17,4 @@
  */
 
 export { default as TileSelector } from './TileSelector.svelte';
+export { default as TrackEditor } from './TrackEditor.svelte';
