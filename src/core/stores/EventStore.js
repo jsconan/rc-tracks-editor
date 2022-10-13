@@ -29,19 +29,8 @@ export class EventStore {
     #updater;
     #set;
     #events;
-
     #boundTo = null;
-
-    /**
-     * @type {EventEmitter}
-     * @private
-     */
     #wrapper = null;
-
-    /**
-     * @type {boolean}
-     * @private
-     */
     #paused = false;
 
     /**
