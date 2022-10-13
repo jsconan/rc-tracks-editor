@@ -17,15 +17,13 @@
  */
 
 module.exports = function babelConfig(api) {
-    const minNodeVersion = '14';
-    const shouldPrintComment = val => /Copyright|License/.test(val);
     const ignore = [];
     const presets = [
         [
             '@babel/preset-env',
             {
                 targets: {
-                    node: minNodeVersion
+                    node: 'current'
                 }
             }
         ]
@@ -38,7 +36,6 @@ module.exports = function babelConfig(api) {
     api.cache(true);
 
     return {
-        shouldPrintComment,
         presets,
         plugins,
         ignore
