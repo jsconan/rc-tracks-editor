@@ -27,7 +27,7 @@ import TrackEditor from '../TrackEditor.svelte';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 const tiles = [
     [new StraightTileModel(specs), 2],
     [new CurvedTileModel(specs), 2],

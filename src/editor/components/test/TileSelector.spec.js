@@ -27,7 +27,7 @@ import TileSelector from '../TileSelector.svelte';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 const models = [
     [new StraightTileModel(specs), 2],
     [new CurvedTileModel(specs), 2],

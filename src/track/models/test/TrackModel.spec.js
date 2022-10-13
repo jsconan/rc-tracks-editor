@@ -25,7 +25,7 @@ import { TrackModel } from '../TrackModel.js';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 const source = [new StraightTileModel(specs), new CurvedTileModel(specs), new CurvedTileEnlargedModel(specs)];
 
 describe('TrackModel', () => {
@@ -123,7 +123,7 @@ describe('TrackModel', () => {
 
     it('can set the specifications of the tiles', () => {
         const track = new TrackModel(specs);
-        const newSpecs = new TileSpecifications(10, 1, 2);
+        const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
         const callback = jest.fn().mockImplementation(s => {
             expect(s).toBe(newSpecs);
         });
@@ -684,7 +684,7 @@ describe('TrackModel', () => {
             const data = track.export();
             track.clear(); // event: clear (clear) / (rebuild)
             track.import(data); // event: load (load) / (rebuild)
-            track.setSpecs(new TileSpecifications(10, 1, 2)); // event: specs (specs) / (none)
+            track.setSpecs(new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 })); // event: specs (specs) / (none)
             track.update(); // event: update (update) / (none)
             track.setBuilderOption('startAngle', 90); // event: option (rebuild) / (none)
             track.setBuilderOptions({ startX: 10, startY: 10 }); // event: options (rebuild) / (none)

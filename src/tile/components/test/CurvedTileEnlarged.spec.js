@@ -26,7 +26,7 @@ import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 describe('CurvedTileEnlarged', () => {
     it('renders with default values', () => {

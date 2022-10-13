@@ -29,7 +29,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const minRatio = 1 / barrierChunks;
 const maxRatio = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 
 describe('StraightTileModel', () => {
     it('is a class', () => {
@@ -128,7 +128,13 @@ describe('StraightTileModel', () => {
         });
 
         it.each(tileRatios)('with the given size and an unlocked ratio of %s', ratio => {
-            const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
             const tile = new StraightTileModel(unlockedSpecs, StraightTileModel.DIRECTION_LEFT, ratio);
             const modelId = `${StraightTileModel.TYPE}-${ratio}`;
 
@@ -147,7 +153,7 @@ describe('StraightTileModel', () => {
     describe('can set', () => {
         it('the specifications of the tile', () => {
             const tile = new StraightTileModel(specs);
-            const newSpecs = new TileSpecifications(10, 1, 2);
+            const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
 
             expect(tile.specs).toBeInstanceOf(TileSpecifications);
             expect(tile.specs).not.toBe(newSpecs);
@@ -177,7 +183,13 @@ describe('StraightTileModel', () => {
         });
 
         it('the unlocked size ratio', () => {
-            const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
             const tile = new StraightTileModel(unlockedSpecs);
             expect(tile.setRatio(1)).toBe(tile);
             expect(tile.ratio).toBe(1);
@@ -389,7 +401,13 @@ describe('StraightTileModel', () => {
     });
 
     it('compares tiles together', () => {
-        const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+        const unlockedSpecs = new TileSpecifications({
+            laneWidth,
+            barrierWidth,
+            barrierChunks,
+            maxRatio,
+            unlockRatio: true
+        });
         const left1 = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, 1);
         const left2 = new StraightTileModel(unlockedSpecs, StraightTileModel.DIRECTION_LEFT, 2);
         const right = new StraightTileModel(specs, StraightTileModel.DIRECTION_RIGHT, 1);

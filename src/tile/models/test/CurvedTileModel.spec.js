@@ -29,7 +29,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const minRatio = 2 / barrierChunks;
 const maxRatio = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 
 describe('CurvedTileModel', () => {
     it('is a class', () => {
@@ -130,7 +130,7 @@ describe('CurvedTileModel', () => {
     describe('can set', () => {
         it('the specifications of the tile', () => {
             const tile = new CurvedTileModel(specs);
-            const newSpecs = new TileSpecifications(10, 1, 2);
+            const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
 
             expect(tile.specs).toBeInstanceOf(TileSpecifications);
             expect(tile.specs).not.toBe(newSpecs);

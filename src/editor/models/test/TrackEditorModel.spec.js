@@ -27,7 +27,7 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 const models = [
     new StraightTileModel(specs),
     new CurvedTileModel(specs, CurvedTileModel.DIRECTION_RIGHT, 1),
@@ -111,7 +111,7 @@ describe('TrackEditorModel', () => {
 
     it('can set the specifications of the tile models', () => {
         const editor = new TrackEditorModel(specs);
-        const newSpecs = new TileSpecifications(10, 1, 2);
+        const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
         const callback = jest.fn().mockImplementation(s => {
             expect(s).toBe(newSpecs);
         });

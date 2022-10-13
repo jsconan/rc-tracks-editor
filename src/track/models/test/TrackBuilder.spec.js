@@ -29,7 +29,7 @@ import { TrackBuilder } from '../TrackBuilder.js';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 const mockBuilder = list => {
     const tiles = list.map(tile => `coord-${tile.id}`);

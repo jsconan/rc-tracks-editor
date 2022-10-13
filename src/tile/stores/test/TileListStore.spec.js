@@ -24,7 +24,7 @@ import { TileListStore } from '../TileListStore.js';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 describe('tileListStore', () => {
     it('is a class', () => {
@@ -241,7 +241,8 @@ describe('tileListStore', () => {
         const data = list.export();
         list.clear(); // callback called
         list.import(data); // callback called
-        list.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+        list.setSpecs(new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 })); // callback called
+
         list.update(); // callback called
 
         unsubscribe();

@@ -29,7 +29,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const minRatio = 1;
 const maxRatio = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 
 describe('CurvedTileEnlargedModel', () => {
     it('is a class', () => {
@@ -128,7 +128,13 @@ describe('CurvedTileEnlargedModel', () => {
         });
 
         it.each(tileRatios)('with the given size and an unlocked ratio of %s', ratio => {
-            const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
             const tile = new CurvedTileEnlargedModel(unlockedSpecs, CurvedTileEnlargedModel.DIRECTION_LEFT, ratio);
             const sizeRatio = Math.max(1, ratio);
             const modelId = `${CurvedTileEnlargedModel.TYPE}-${sizeRatio}`;
@@ -148,7 +154,7 @@ describe('CurvedTileEnlargedModel', () => {
     describe('can set', () => {
         it('the specifications of the tile', () => {
             const tile = new CurvedTileEnlargedModel(specs);
-            const newSpecs = new TileSpecifications(10, 1, 2);
+            const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
 
             expect(tile.specs).toBeInstanceOf(TileSpecifications);
             expect(tile.specs).not.toBe(newSpecs);
@@ -178,7 +184,13 @@ describe('CurvedTileEnlargedModel', () => {
         });
 
         it('the unlocked size ratio', () => {
-            const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
             const tile = new CurvedTileEnlargedModel(unlockedSpecs);
             expect(tile.setRatio(1)).toBe(tile);
             expect(tile.ratio).toBe(1);
@@ -266,7 +278,13 @@ describe('CurvedTileEnlargedModel', () => {
             });
 
             it.each(tileRatios)('with an unlocked ratio of %s', ratio => {
-                const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+                const unlockedSpecs = new TileSpecifications({
+                    laneWidth,
+                    barrierWidth,
+                    barrierChunks,
+                    maxRatio,
+                    unlockRatio: true
+                });
                 const tile = new CurvedTileEnlargedModel(unlockedSpecs, CurvedTileEnlargedModel.DIRECTION_RIGHT, ratio);
                 expect(tile.getInnerBarrierChunks()).toMatchSnapshot();
             });
@@ -396,7 +414,13 @@ describe('CurvedTileEnlargedModel', () => {
     });
 
     it('compares tiles together', () => {
-        const unlockedSpecs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio, true);
+        const unlockedSpecs = new TileSpecifications({
+            laneWidth,
+            barrierWidth,
+            barrierChunks,
+            maxRatio,
+            unlockRatio: true
+        });
         const left1 = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, 1);
         const left2 = new CurvedTileEnlargedModel(unlockedSpecs, CurvedTileEnlargedModel.DIRECTION_LEFT, 2);
         const right = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, 1);

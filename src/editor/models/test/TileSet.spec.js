@@ -24,7 +24,7 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, maxRatio);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 const tiles = [
     new StraightTileModel(specs),
     new CurvedTileEnlargedModel(specs),
@@ -93,7 +93,7 @@ describe('TileSet', () => {
 
     it('can set the specifications of the tile models', () => {
         const counter = new TileSet(specs);
-        const newSpecs = new TileSpecifications(10, 1, 2);
+        const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
         const callback = jest.fn().mockImplementation(s => {
             expect(s).toBe(newSpecs);
         });

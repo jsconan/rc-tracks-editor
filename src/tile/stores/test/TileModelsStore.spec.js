@@ -23,7 +23,7 @@ import { TileModelsStore } from '../TileModelsStore.js';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 describe('tileModelsStore', () => {
     it('is a class', () => {

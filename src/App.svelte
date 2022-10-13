@@ -9,11 +9,7 @@
     import { TrackEditor } from './editor/components';
 
     const angle = -90;
-    const barrierChunks = config.barrierChunks;
-    const barrierWidth = config.barrierWidth;
-    const laneWidth = config.laneWidth;
-
-    const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks, 5);
+    const specs = new TileSpecifications(config);
     const trackEditor = new TrackEditorModel(specs, angle);
 
     trackEditor.load(samples.track1);
