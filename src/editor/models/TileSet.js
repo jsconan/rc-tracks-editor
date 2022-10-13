@@ -19,7 +19,7 @@
 import { getTypes, TILE_DIRECTION_RIGHT } from '../../tile/helpers';
 import { TileCounter, TileList } from '../../tile/models';
 import { TileSpecifications } from '../../tile/config';
-import { tileCounterStore, tileModelsStore } from '../../tile/stores';
+import { TileCounterStore, TileModelsStore } from '../../tile/stores';
 
 /**
  * Represents a set of tile models that can be consumed.
@@ -43,8 +43,8 @@ export class TileSet extends TileCounter {
         }
         source = void 0;
 
-        this.modelsStore = tileModelsStore(this);
-        this.counterStore = tileCounterStore(this);
+        this.modelsStore = new TileModelsStore(this);
+        this.counterStore = new TileCounterStore(this);
 
         this.on('removetile', (tile, amount) => this.counter.add(tile, amount));
         this.on('addtile', (tile, amount) => this.counter.remove(tile, amount));

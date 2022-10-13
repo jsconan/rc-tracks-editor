@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tileCounterStore can notify changes applied to the counter 1`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 1`] = `Array []`;
 
-exports[`tileCounterStore can notify changes applied to the counter 2`] = `
+exports[`TileCounterStore can notify changes applied to the counter 2`] = `
 Array [
   Object {
     "count": 1,
@@ -23,11 +23,11 @@ Array [
 ]
 `;
 
-exports[`tileCounterStore can notify changes applied to the counter 3`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 3`] = `Array []`;
 
-exports[`tileCounterStore can notify changes applied to the counter 4`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 4`] = `Array []`;
 
-exports[`tileCounterStore can notify changes applied to the counter 5`] = `
+exports[`TileCounterStore can notify changes applied to the counter 5`] = `
 Array [
   Object {
     "count": 1,

@@ -23,7 +23,7 @@ import Track from '../SimpleTrack.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { buildTrack } from '../../helpers';
 import { TileList } from '../../../tile/models';
-import { tileListStore } from '../../../tile/stores';
+import { TileListStore } from '../../../tile/stores';
 import { TileSpecifications } from '../../../tile/config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
@@ -37,7 +37,7 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 const tileList = new TileList(specs);
-const track = tileListStore(tileList, list => buildTrack(list, { hPadding: 10, vPadding: 20, startAngle: 90 }));
+const track = new TileListStore(tileList, list => buildTrack(list, { hPadding: 10, vPadding: 20, startAngle: 90 }));
 tileList.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },

@@ -18,7 +18,7 @@
 
 import { TileSpecifications } from '../../config';
 import { StraightTileModel, TileCounter } from '../../models';
-import tileModelsStore from '../tileModelsStore.js';
+import { TileModelsStore } from '../TileModelsStore.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -26,22 +26,29 @@ const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('tileModelsStore', () => {
-    it('is a function', () => {
-        expect(tileModelsStore).toEqual(expect.any(Function));
+    it('is a class', () => {
+        expect(TileModelsStore).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('if the given object is not a TileCounter', () => {
-            expect(() => tileModelsStore({})).toThrow('The object must be an instance of TileCounter!');
+            expect(() => new TileModelsStore({})).toThrow('The object must be an instance of TileCounter!');
 
-            const store = tileModelsStore();
+            const store = new TileModelsStore();
             expect(() => store.bind({})).toThrow('The object must be an instance of TileCounter!');
+        });
+
+        it('if the given object is not a TileModelsStore', () => {
+            expect(() => TileModelsStore.validateInstance({})).toThrow(
+                'The object must be an instance of TileModelsStore'
+            );
+            expect(() => TileModelsStore.validateInstance(new TileModelsStore())).not.toThrow();
         });
     });
 
     it('creates a store', () => {
         const counter = new TileCounter();
-        const store = tileModelsStore(counter);
+        const store = new TileModelsStore(counter);
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
@@ -53,7 +60,7 @@ describe('tileModelsStore', () => {
 
     it('updates the store each time a counter is modified', () => {
         const counter = new TileCounter();
-        const store = tileModelsStore(counter);
+        const store = new TileModelsStore(counter);
 
         expect(store.boundTo).toBe(counter);
 
@@ -79,7 +86,7 @@ describe('tileModelsStore', () => {
             expect(value).toBe(counter);
             return value;
         });
-        const store = tileModelsStore(counter, updateCallback);
+        const store = new TileModelsStore(counter, updateCallback);
 
         expect(store.boundTo).toBe(counter);
 
@@ -98,7 +105,7 @@ describe('tileModelsStore', () => {
 
     it('can bind the counter later', () => {
         const counter = new TileCounter();
-        const store = tileModelsStore();
+        const store = new TileModelsStore();
 
         const callback = jest.fn().mockImplementation(value => {
             if (value) {
@@ -124,7 +131,7 @@ describe('tileModelsStore', () => {
     it('can replace the event emitter later', () => {
         const counter1 = new TileCounter();
         const counter2 = new TileCounter();
-        const store = tileModelsStore(counter1);
+        const store = new TileModelsStore(counter1);
 
         const callback1 = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter1);
@@ -167,7 +174,7 @@ describe('tileModelsStore', () => {
             return data;
         });
 
-        const store = tileModelsStore(counter, update);
+        const store = new TileModelsStore(counter, update);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(data);
@@ -184,7 +191,7 @@ describe('tileModelsStore', () => {
 
     it('can release the listeners', () => {
         const counter = new TileCounter();
-        const store = tileModelsStore(counter);
+        const store = new TileModelsStore(counter);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter);
@@ -209,7 +216,7 @@ describe('tileModelsStore', () => {
 
     it('does not impact the other listeners when releasing', () => {
         const clear = new TileCounter();
-        const store = tileModelsStore(clear);
+        const store = new TileModelsStore(clear);
 
         const listener = jest.fn();
 
@@ -226,7 +233,7 @@ describe('tileModelsStore', () => {
 
     it('can notify changes applied to the counter', () => {
         const counter = new TileCounter();
-        const store = tileModelsStore(counter);
+        const store = new TileModelsStore(counter);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).not.toBe(counter);

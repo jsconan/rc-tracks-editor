@@ -19,7 +19,7 @@
 import { CURVED_TILE_TYPE } from '../../helpers';
 import { TileSpecifications } from '../../config';
 import { TileList } from '../../models';
-import tileListStore from '../tileListStore.js';
+import { TileListStore } from '../TileListStore.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -27,22 +27,27 @@ const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
 describe('tileListStore', () => {
-    it('is a function', () => {
-        expect(tileListStore).toEqual(expect.any(Function));
+    it('is a class', () => {
+        expect(TileListStore).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('if the given object is not a TileList', () => {
-            expect(() => tileListStore({})).toThrow('The object must be an instance of TileList!');
+            expect(() => new TileListStore({})).toThrow('The object must be an instance of TileList!');
 
-            const store = tileListStore();
+            const store = new TileListStore();
             expect(() => store.bind({})).toThrow('The object must be an instance of TileList!');
+        });
+
+        it('if the given object is not a TileListStore', () => {
+            expect(() => TileListStore.validateInstance({})).toThrow('The object must be an instance of TileListStore');
+            expect(() => TileListStore.validateInstance(new TileListStore())).not.toThrow();
         });
     });
 
     it('creates a store', () => {
         const list = new TileList(specs);
-        const store = tileListStore(list);
+        const store = new TileListStore(list);
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
@@ -54,7 +59,7 @@ describe('tileListStore', () => {
 
     it('updates the store each time the list of tiles is modified', () => {
         const list = new TileList(specs);
-        const store = tileListStore(list);
+        const store = new TileListStore(list);
 
         expect(store.boundTo).toBe(list);
 
@@ -79,7 +84,7 @@ describe('tileListStore', () => {
             expect(value).toBe(list);
             return value;
         });
-        const store = tileListStore(list, updateCallback);
+        const store = new TileListStore(list, updateCallback);
 
         expect(store.boundTo).toBe(list);
 
@@ -98,7 +103,7 @@ describe('tileListStore', () => {
 
     it('can bind the list of tiles later', () => {
         const list = new TileList(specs);
-        const store = tileListStore();
+        const store = new TileListStore();
 
         const callback = jest.fn().mockImplementation(value => {
             if (value) {
@@ -122,7 +127,7 @@ describe('tileListStore', () => {
     it('can replace the event emitter later', () => {
         const list1 = new TileList(specs);
         const list2 = new TileList(specs);
-        const store = tileListStore(list1);
+        const store = new TileListStore(list1);
 
         const callback1 = jest.fn().mockImplementation(value => {
             expect(value).toBe(list1);
@@ -160,7 +165,7 @@ describe('tileListStore', () => {
             return data;
         });
 
-        const store = tileListStore(list, update);
+        const store = new TileListStore(list, update);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(data);
@@ -177,7 +182,7 @@ describe('tileListStore', () => {
 
     it('can release the listeners', () => {
         const list = new TileList(specs);
-        const store = tileListStore(list);
+        const store = new TileListStore(list);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(list);
@@ -200,7 +205,7 @@ describe('tileListStore', () => {
 
     it('does not impact the other listeners when releasing', () => {
         const list = new TileList(specs);
-        const store = tileListStore(list);
+        const store = new TileListStore(list);
 
         const listener = jest.fn();
 
@@ -217,7 +222,7 @@ describe('tileListStore', () => {
 
     it('can notify changes applied to the list', () => {
         const list = new TileList(specs);
-        const store = tileListStore(list);
+        const store = new TileListStore(list);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(list);
