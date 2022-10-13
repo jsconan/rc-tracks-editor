@@ -17,54 +17,48 @@
  */
 
 import { eventEmitterMixin } from '../../mixins';
-import eventStore from '../eventStore.js';
+import { EventStore } from '../EventStore.js';
 
-describe('eventStore', () => {
-    it('is a function', () => {
-        expect(eventStore).toEqual(expect.any(Function));
+describe('EventStore', () => {
+    it('is a class', () => {
+        expect(EventStore).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('if the given object cannot listen to events', () => {
-            expect(() => eventStore(['set'], {})).toThrow(
+            expect(() => new EventStore(['set'], {})).toThrow(
                 'The object must implement the functions: on, once, off, listens, delegate'
             );
 
-            const store = eventStore(['set']);
+            const store = new EventStore(['set']);
             expect(() => store.bind({})).toThrow(
                 'The object must implement the functions: on, once, off, listens, delegate'
             );
         });
 
         it('if the list of events is missing', () => {
-            expect(() => eventStore()).toThrow('A list of events is required!');
+            expect(() => new EventStore()).toThrow('A list of events is required!');
         });
 
         it('if the list of events is empty', () => {
-            expect(() => eventStore([])).toThrow('A list of events is required!');
+            expect(() => new EventStore([])).toThrow('A list of events is required!');
         });
 
         it('if the callback is not a function', () => {
-            expect(() => eventStore(['set'], eventEmitterMixin(), true)).toThrow('A callback function is expected!');
-        });
-
-        it('if the given object does not implement the EventStore API', () => {
-            expect(() => eventStore.validateInstance({})).toThrow(
-                'The object must implement the functions: subscribe, notify, bind, unbind'
+            expect(() => new EventStore(['set'], eventEmitterMixin(), true)).toThrow(
+                'A callback function is expected!'
             );
-            expect(() => eventStore.validateInstance(eventStore(['set']))).not.toThrow();
         });
-    });
 
-    it('checks if an object is an event store', () => {
-        expect(eventStore.isEventStore(eventStore(['set']))).toBeTruthy();
-        expect(eventStore.isEventStore({})).toBeFalsy();
-        expect(eventStore.isEventStore(void 0)).toBeFalsy();
+        it('if the given object is not an EventStore', () => {
+            expect(() => EventStore.validateInstance({})).toThrow('The object must be an instance of EventStore');
+            expect(() => EventStore.validateInstance(new EventStore(['set']))).not.toThrow();
+        });
     });
 
     it('creates a store', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set'], eventEmitter);
+        const store = new EventStore(['set'], eventEmitter);
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
@@ -79,7 +73,7 @@ describe('eventStore', () => {
 
     it('updates the store each time a listed event is emitted', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set', 'add'], eventEmitter);
+        const store = new EventStore(['set', 'add'], eventEmitter);
 
         expect(store.boundTo).toBe(eventEmitter);
 
@@ -103,7 +97,7 @@ describe('eventStore', () => {
             expect(value).toBe(eventEmitter);
             return value;
         });
-        const store = eventStore(['set', 'add'], eventEmitter, updateCallback);
+        const store = new EventStore(['set', 'add'], eventEmitter, updateCallback);
 
         expect(store.boundTo).toBe(eventEmitter);
 
@@ -122,7 +116,7 @@ describe('eventStore', () => {
 
     it('can bind the event emitter later', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set', 'add']);
+        const store = new EventStore(['set', 'add']);
 
         const callback = jest.fn().mockImplementation(value => {
             if (value) {
@@ -148,7 +142,7 @@ describe('eventStore', () => {
     it('can replace the event emitter later', () => {
         const eventEmitter1 = eventEmitterMixin();
         const eventEmitter2 = eventEmitterMixin();
-        const store = eventStore(['set', 'add'], eventEmitter1);
+        const store = new EventStore(['set', 'add'], eventEmitter1);
 
         const callback1 = jest.fn().mockImplementation(value => {
             expect(value).toBe(eventEmitter1);
@@ -187,7 +181,7 @@ describe('eventStore', () => {
             return data;
         });
 
-        const store = eventStore(['set'], eventEmitter, update);
+        const store = new EventStore(['set'], eventEmitter, update);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(data);
@@ -204,7 +198,7 @@ describe('eventStore', () => {
 
     it('can release the listeners', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set'], eventEmitter);
+        const store = new EventStore(['set'], eventEmitter);
 
         const callback = jest.fn().mockImplementation(value => {
             expect(value).toBe(eventEmitter);
@@ -227,7 +221,7 @@ describe('eventStore', () => {
 
     it('does not impact the other listeners when releasing', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set'], eventEmitter);
+        const store = new EventStore(['set'], eventEmitter);
 
         const listener = jest.fn();
 
@@ -244,7 +238,7 @@ describe('eventStore', () => {
 
     it('can pause the listening', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set', 'add'], eventEmitter);
+        const store = new EventStore(['set', 'add'], eventEmitter);
 
         expect(store.boundTo).toBe(eventEmitter);
 
@@ -266,7 +260,7 @@ describe('eventStore', () => {
 
     it('can resume the listening', () => {
         const eventEmitter = eventEmitterMixin();
-        const store = eventStore(['set', 'add'], eventEmitter);
+        const store = new EventStore(['set', 'add'], eventEmitter);
 
         expect(store.boundTo).toBe(eventEmitter);
 

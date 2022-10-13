@@ -56,32 +56,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 4,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 4,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 4,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -158,79 +142,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-47",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-48",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-50",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-49",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -250,32 +164,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -316,43 +214,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-40",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -372,32 +236,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 3,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -462,67 +310,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-41",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-43",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-42",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -542,32 +332,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 3,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -632,67 +406,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-44",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-45",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-46",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -713,34 +429,16 @@ TrackModel {
     "straight-tile-1" => 1,
     "curved-tile-2" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -793,55 +491,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-51",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-52",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -862,34 +514,16 @@ TrackModel {
     "straight-tile-1" => 1,
     "curved-tile-2" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -942,55 +576,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-23",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-22",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1010,32 +598,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 2,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 2,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 2,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1088,55 +660,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-21",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-20",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1156,32 +682,16 @@ TrackModel {
   "counter": Map {
     "curved-tile-2" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1222,43 +732,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-7",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1278,32 +754,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1344,43 +804,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-6",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1400,32 +826,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 4,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 4,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 4,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1502,79 +912,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-32",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-35",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-33",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-34",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1594,32 +934,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1660,43 +984,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-25",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1716,32 +1006,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 3,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1806,67 +1080,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-28",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-26",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-27",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -1886,32 +1102,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 3,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -1976,67 +1176,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-29",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-31",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-30",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2057,34 +1199,16 @@ TrackModel {
     "straight-tile-1" => 1,
     "curved-tile-2" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2137,55 +1261,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-37",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-36",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2205,32 +1283,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2271,43 +1333,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-17",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2328,34 +1356,16 @@ TrackModel {
     "straight-tile-1" => 2,
     "curved-tile-2" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 2,
-      "curved-tile-2" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2420,67 +1430,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-13",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-14",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-16",
-          "ratio": 2,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2500,32 +1452,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 3,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 3,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2590,67 +1526,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-9",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-12",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-11",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2680,32 +1558,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2746,43 +1608,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-56",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -2803,34 +1631,16 @@ TrackModel {
     "curved-tile-1" => 2,
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-1" => 2,
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-1" => 2,
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -2895,67 +1705,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        CurvedTileModel {
-          "direction": "left",
-          "id": "id-57",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-58",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "right",
-          "id": "id-59",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -4416,36 +3168,16 @@ TrackModel {
     "curved-tile-1" => 1,
     "curved-tile-enlarged-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -4510,67 +3242,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-0",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "right",
-          "id": "id-1",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileEnlargedModel {
-          "direction": "right",
-          "id": "id-2",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -4591,34 +3265,16 @@ TrackModel {
     "straight-tile-1" => 1,
     "curved-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -4671,55 +3327,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-0",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "right",
-          "id": "id-1",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -4740,34 +3350,16 @@ TrackModel {
     "straight-tile-1" => 1,
     "curved-tile-enlarged-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -4820,55 +3412,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-0",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileEnlargedModel {
-          "direction": "right",
-          "id": "id-2",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -4889,34 +3435,16 @@ TrackModel {
     "curved-tile-1" => 1,
     "curved-tile-enlarged-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "curved-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -4969,55 +3497,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        CurvedTileModel {
-          "direction": "right",
-          "id": "id-1",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileEnlargedModel {
-          "direction": "right",
-          "id": "id-2",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 4,
-            "barrierWidth": 5,
-            "laneWidth": 80,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
@@ -5037,32 +3519,16 @@ TrackModel {
   "counter": Map {
     "straight-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -5103,43 +3569,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-5",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;

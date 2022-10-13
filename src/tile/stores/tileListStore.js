@@ -17,7 +17,7 @@
  */
 
 import { assign } from '../../core/helpers';
-import { eventStore } from '../../core/stores';
+import { EventStore } from '../../core/stores';
 import { TileList } from '../models';
 
 /**
@@ -28,7 +28,7 @@ import { TileList } from '../models';
  * @return {EventStore}
  */
 export default (boundTo = null, update = null) => {
-    const store = eventStore(
+    const store = new EventStore(
         [
             // List events
             'set',

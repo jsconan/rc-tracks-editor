@@ -16,4 +16,4 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as eventStore } from './eventStore.js';
+export { EventStore } from './EventStore.js';

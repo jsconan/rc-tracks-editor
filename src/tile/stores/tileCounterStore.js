@@ -17,7 +17,7 @@
  */
 
 import { assign } from '../../core/helpers';
-import { eventStore } from '../../core/stores';
+import { EventStore } from '../../core/stores';
 import { TileCounter } from '../models';
 
 /**
@@ -36,7 +36,7 @@ const defaultUpdater = counter => counter.getCounterList();
  * @return {EventStore}
  */
 export default (boundTo = null, update = defaultUpdater) => {
-    const store = eventStore(['addtile', 'removetile', 'load', 'clear'], null, update);
+    const store = new EventStore(['addtile', 'removetile', 'load', 'clear'], null, update);
     const bind = store.bind;
 
     assign(store, {

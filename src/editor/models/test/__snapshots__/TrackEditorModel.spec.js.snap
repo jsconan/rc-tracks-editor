@@ -108,36 +108,16 @@ TrackModel {
     "curved-tile-enlarged-1" => 1,
     "curved-tile-1" => 1,
   },
-  "counterStore": Object {
+  "counterStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-      "curved-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": Object {
+  "modelsStore": EventStore {
     "bind": [Function],
-    "boundTo": Map {
-      "straight-tile-1" => 1,
-      "curved-tile-enlarged-1" => 1,
-      "curved-tile-1" => 1,
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
   "off": [Function],
   "on": [Function],
@@ -202,67 +182,9 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": Object {
+  "tilesStore": EventStore {
     "bind": [Function],
-    "boundTo": TileList {
-      "delegate": [Function],
-      "emit": [Function],
-      "list": Array [
-        StraightTileModel {
-          "direction": "right",
-          "id": "id-0",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileEnlargedModel {
-          "direction": "right",
-          "id": "id-1",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-        CurvedTileModel {
-          "direction": "right",
-          "id": "id-2",
-          "ratio": 1,
-          "specs": TileSpecifications {
-            "barrierChunks": 2,
-            "barrierWidth": 1,
-            "laneWidth": 10,
-            "maxRatio": 4,
-            "unlockRatio": false,
-          },
-        },
-      ],
-      "listens": [Function],
-      "off": [Function],
-      "on": [Function],
-      "once": [Function],
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "notify": [Function],
-    "pause": [Function],
-    "paused": false,
-    "resume": [Function],
     "subscribe": [Function],
-    "unbind": [Function],
   },
 }
 `;
