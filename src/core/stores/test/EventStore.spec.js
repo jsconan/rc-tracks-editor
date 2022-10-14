@@ -57,8 +57,9 @@ describe('EventStore', () => {
     });
 
     it('creates a store', () => {
+        const events = ['set'];
         const eventEmitter = eventEmitterMixin();
-        const store = new EventStore(['set'], eventEmitter);
+        const store = new EventStore(events, eventEmitter);
 
         expect(store).toEqual(expect.any(Object));
         expect(store.subscribe).toEqual(expect.any(Function));
@@ -67,8 +68,56 @@ describe('EventStore', () => {
         expect(store.resume).toEqual(expect.any(Function));
         expect(store.bind).toEqual(expect.any(Function));
         expect(store.unbind).toEqual(expect.any(Function));
+        expect(store.events).toEqual(events);
         expect(store.boundTo).toBe(eventEmitter);
         expect(store.paused).toBeFalsy();
+    });
+
+    describe('can read', () => {
+        it('the list of events', () => {
+            const events = ['set'];
+            const eventEmitter = eventEmitterMixin();
+            const store = new EventStore(events, eventEmitter);
+
+            expect(store.events).toStrictEqual(events);
+
+            store.events.push('add');
+
+            expect(store.events).toStrictEqual(events);
+
+            expect(() => (store.events = [])).toThrow();
+        });
+
+        it('the bound to emitter', () => {
+            const eventEmitter = eventEmitterMixin();
+            const store = new EventStore(['set'], eventEmitter);
+
+            expect(store.paused).toBeFalsy();
+
+            store.pause();
+
+            expect(store.paused).toBeTruthy();
+
+            store.resume();
+
+            expect(store.paused).toBeFalsy();
+
+            expect(() => (store.paused = true)).toThrow();
+        });
+
+        it('the paused state', () => {
+            const eventEmitter1 = eventEmitterMixin();
+            const eventEmitter2 = eventEmitterMixin();
+            const store = new EventStore(['set'], eventEmitter1);
+
+            expect(store.boundTo).toBe(eventEmitter1);
+
+            store.bind(eventEmitter2);
+
+            expect(store.boundTo).toBe(eventEmitter2);
+
+            expect(() => (store.boundTo = {})).toThrow();
+        });
     });
 
     it('updates the store each time a listed event is emitted', () => {

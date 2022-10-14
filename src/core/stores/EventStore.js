@@ -26,11 +26,46 @@ import { validateCallback } from '../helpers';
  * or with the event emitter itself if no callback was given.
  */
 export class EventStore {
-    #updater;
-    #set;
+    /**
+     * The update function called to refresh the store.
+     * @type {eventStoreUpdater}
+     * @private
+     */
+    #update;
+
+    /**
+     * A list of events to listen to.
+     * @type {string[]}
+     * @private
+     */
     #events;
+
+    /**
+     * The internal store that is refreshed each time an event is captured.
+     * @type {store}
+     * @private
+     */
+    #store;
+
+    /**
+     * The event emitter bound with the store.
+     * @type {EventEmitter}
+     * @private
+     */
     #boundTo = null;
+
+    /**
+     * A wrapper for scoping the events.
+     * @type {EventEmitter}
+     * @private
+     */
     #wrapper = null;
+
+    /**
+     * Tells whether or not the store is listening to the bound emitter.
+     * @type {boolean}
+     * @private
+     */
     #paused = false;
 
     /**
@@ -53,11 +88,9 @@ export class EventStore {
             validateCallback(update);
         }
 
-        const { subscribe, set } = writable();
-        this.subscribe = subscribe;
-        this.#set = set;
         this.#events = events;
-        this.#updater = update || (() => this.#boundTo);
+        this.#store = writable();
+        this.#update = update || (() => this.#boundTo);
 
         if (boundTo) {
             this.bind(boundTo);
@@ -70,8 +103,16 @@ export class EventStore {
      * @param {function} subscriber - A callback that will receive notifications when a listened event is emitted.
      * @returns {function} - Returns a callback for removing the subscription.
      */
-    subscribe() {
-        // Empty method, it will be replaced by the actual implementation upon construct.
+    subscribe(subscriber) {
+        return this.#store.subscribe(subscriber);
+    }
+
+    /**
+     * The list of listened to events.
+     * @type {string[]}
+     */
+    get events() {
+        return [...this.#events];
     }
 
     /**
@@ -117,7 +158,7 @@ export class EventStore {
      * @returns {EventStore} - Chains the instance.
      */
     notify(event) {
-        this.#set(this.#updater(this.#boundTo, event));
+        this.#store.set(this.#update(this.#boundTo, event));
 
         return this;
     }

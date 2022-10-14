@@ -108,15 +108,11 @@ TrackModel {
     "curved-tile-enlarged-1" => 1,
     "curved-tile-1" => 1,
   },
-  "counterStore": TileCounterStore {
-    "subscribe": [Function],
-  },
+  "counterStore": TileCounterStore {},
   "delegate": [Function],
   "emit": [Function],
   "listens": [Function],
-  "modelsStore": TileModelsStore {
-    "subscribe": [Function],
-  },
+  "modelsStore": TileModelsStore {},
   "off": [Function],
   "on": [Function],
   "once": [Function],
@@ -180,9 +176,7 @@ TrackModel {
       "unlockRatio": false,
     },
   },
-  "tilesStore": TileListStore {
-    "subscribe": [Function],
-  },
+  "tilesStore": TileListStore {},
 }
 `;
 
