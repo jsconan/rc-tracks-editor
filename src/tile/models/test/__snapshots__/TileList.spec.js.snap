@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TileList can add tiles to the list 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "left",
     "id": "id-22",
@@ -30,7 +30,7 @@ Array [
 `;
 
 exports[`TileList can be initialized with a source 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -74,7 +74,7 @@ exports[`TileList can create tiles after a position in the middle 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-67",
@@ -142,7 +142,7 @@ exports[`TileList can create tiles after an inexistent position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-60",
@@ -174,7 +174,7 @@ exports[`TileList can create tiles after the first position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-61",
@@ -230,7 +230,7 @@ exports[`TileList can create tiles after the last position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-64",
@@ -286,7 +286,7 @@ exports[`TileList can create tiles after with a particular type 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-71",
@@ -330,7 +330,7 @@ exports[`TileList can create tiles at the first position with a particular type 
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "left",
       "id": "id-43",
@@ -374,7 +374,7 @@ exports[`TileList can create tiles at the first position with the default specif
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-41",
@@ -418,7 +418,7 @@ exports[`TileList can create tiles at the last position with a particular type 1
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "left",
       "id": "id-27",
@@ -450,7 +450,7 @@ exports[`TileList can create tiles at the last position with the default specifi
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-26",
@@ -482,7 +482,7 @@ exports[`TileList can create tiles before a position in the middle 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-52",
@@ -550,7 +550,7 @@ exports[`TileList can create tiles before an inexistent position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-45",
@@ -582,7 +582,7 @@ exports[`TileList can create tiles before the first position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-48",
@@ -638,7 +638,7 @@ exports[`TileList can create tiles before the last position 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-49",
@@ -694,7 +694,7 @@ exports[`TileList can create tiles before with a particular type 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "left",
       "id": "id-57",
@@ -738,7 +738,7 @@ exports[`TileList can create tiles replacing tiles at inexistent position 1`] = 
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-37",
@@ -770,7 +770,7 @@ exports[`TileList can create tiles replacing tiles with a tile having a particul
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-33",
@@ -826,7 +826,7 @@ exports[`TileList can create tiles replacing tiles with a tile having default sp
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-29",
@@ -879,8 +879,8 @@ TileList {
 `;
 
 exports[`TileList can export to an object 1`] = `
-Array [
-  Object {
+[
+  {
     "direction": "right",
     "ratio": 1,
     "type": "curved-tile",
@@ -892,7 +892,7 @@ exports[`TileList can import from an object 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-76",
@@ -924,7 +924,7 @@ exports[`TileList can import from an object 2`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "left",
       "id": "id-77",
@@ -977,7 +977,7 @@ TileList {
 `;
 
 exports[`TileList can insert tiles at a particular index 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -1042,7 +1042,7 @@ Array [
 `;
 
 exports[`TileList can insert tiles at the beginning 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "left",
     "id": "id-16",
@@ -1107,7 +1107,7 @@ Array [
 `;
 
 exports[`TileList can insert tiles at the end 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -1172,7 +1172,7 @@ Array [
 `;
 
 exports[`TileList can map its values 1`] = `
-Array [
+[
   "straight-tile-1",
   "curved-tile-1",
   "curved-tile-enlarged-1",
@@ -1180,7 +1180,7 @@ Array [
 `;
 
 exports[`TileList can produce an iterator 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -1224,7 +1224,7 @@ exports[`TileList can remove tiles by their identifier at inexistent position 1`
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-0",
@@ -1280,7 +1280,7 @@ exports[`TileList can remove tiles by their identifier from the end 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-0",
@@ -1324,7 +1324,7 @@ exports[`TileList can remove tiles by their identifier from the middle 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-0",
@@ -1368,7 +1368,7 @@ exports[`TileList can remove tiles by their identifier from the start 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "right",
       "id": "id-1",
@@ -1409,7 +1409,7 @@ TileList {
 `;
 
 exports[`TileList can remove tiles from a particular index 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -1426,7 +1426,7 @@ Array [
 `;
 
 exports[`TileList can set a tile at a particular index 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "left",
     "id": "id-7",
@@ -1467,7 +1467,7 @@ Array [
 `;
 
 exports[`TileList can set a tile in place of an existing tile 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",
@@ -1511,7 +1511,7 @@ exports[`TileList can set the specifications of the tiles 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-6",
@@ -1540,7 +1540,7 @@ TileList {
 `;
 
 exports[`TileList emits an event when adding tiles 1`] = `
-Array [
+[
   3,
   StraightTileModel {
     "direction": "left",
@@ -1570,7 +1570,7 @@ Array [
 `;
 
 exports[`TileList emits an event when inserting values 1`] = `
-Array [
+[
   1,
   StraightTileModel {
     "direction": "left",
@@ -1600,7 +1600,7 @@ Array [
 `;
 
 exports[`TileList emits an event when removing tiles from a particular index 1`] = `
-Array [
+[
   1,
   CurvedTileModel {
     "direction": "right",
@@ -1630,7 +1630,7 @@ Array [
 `;
 
 exports[`TileList emits an event when setting a tile 1`] = `
-Array [
+[
   0,
   StraightTileModel {
     "direction": "left",
@@ -1660,7 +1660,7 @@ Array [
 `;
 
 exports[`TileList emits an event when setting a tile 2`] = `
-Array [
+[
   1,
   CurvedTileModel {
     "direction": "left",
@@ -1690,7 +1690,7 @@ Array [
 `;
 
 exports[`TileList emits an event when setting a tile 3`] = `
-Array [
+[
   2,
   CurvedTileEnlargedModel {
     "direction": "left",
@@ -1720,7 +1720,7 @@ Array [
 `;
 
 exports[`TileList implements the iteration protocol 1`] = `
-Array [
+[
   StraightTileModel {
     "direction": "right",
     "id": "id-0",

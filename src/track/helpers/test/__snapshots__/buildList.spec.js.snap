@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`buildList process a list of tiles for rendering using config options { aligned: false } 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -21,14 +21,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -41,7 +41,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -58,14 +58,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -78,7 +78,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -95,14 +95,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -115,7 +115,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -132,14 +132,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -152,7 +152,7 @@ Object {
       "x": 370.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -169,14 +169,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -189,7 +189,7 @@ Object {
       "x": 490.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -206,14 +206,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -226,7 +226,7 @@ Object {
       "x": 606.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -243,14 +243,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -263,7 +263,7 @@ Object {
       "x": 696.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -280,14 +280,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -300,7 +300,7 @@ Object {
       "x": 786.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -317,14 +317,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -337,7 +337,7 @@ Object {
       "x": 886.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -354,14 +354,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -374,7 +374,7 @@ Object {
       "x": 986.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -391,14 +391,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -411,7 +411,7 @@ Object {
       "x": 1111.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -428,14 +428,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -456,10 +456,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { aligned: true } 1`] = `
-Object {
+{
   "height": 167.7776769338703,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -476,14 +476,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -496,7 +496,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -513,14 +513,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -533,7 +533,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -550,14 +550,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -570,7 +570,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": -22.5,
       "direction": "right",
       "id": "id-3",
@@ -587,14 +587,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 160.72704159333767,
-        "input": Object {
+        "input": {
           "angle": 337.5,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": 0,
           "y": 126.28553268047962,
@@ -607,7 +607,7 @@ Object {
       "x": 331.5745789630079,
       "y": 17.22075445642904,
     },
-    Object {
+    {
       "angle": -15,
       "direction": "right",
       "id": "id-4",
@@ -624,14 +624,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 165.64418886561327,
-        "input": Object {
+        "input": {
           "angle": 345,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 15,
           "x": 1.4210854715202004e-14,
           "y": 142.3504748063864,
@@ -644,7 +644,7 @@ Object {
       "x": 432.60111828165367,
       "y": 11.646857029613432,
     },
-    Object {
+    {
       "angle": -11.25,
       "direction": "right",
       "id": "id-5",
@@ -661,14 +661,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 167.7776769338703,
-        "input": Object {
+        "input": {
           "angle": 348.75,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 11.25,
           "x": -1.4210854715202004e-14,
           "y": 150.2195479524188,
@@ -681,7 +681,7 @@ Object {
       "x": 531.1068536703053,
       "y": 8.779064490725771,
     },
-    Object {
+    {
       "angle": -360,
       "direction": "left",
       "id": "id-6",
@@ -698,14 +698,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110.00000000000003,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": -2.694222958124177e-14,
           "y": 110,
@@ -718,7 +718,7 @@ Object {
       "x": 628.5045207150616,
       "y": 1.1021821192326179e-14,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -735,14 +735,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -755,7 +755,7 @@ Object {
       "x": 718.5045207150616,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -772,14 +772,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -792,7 +792,7 @@ Object {
       "x": 818.5045207150616,
       "y": 0,
     },
-    Object {
+    {
       "angle": -337.5,
       "direction": "left",
       "id": "id-9",
@@ -809,14 +809,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 160.7270415933377,
-        "input": Object {
+        "input": {
           "angle": 22.5,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 4.263256414560601e-14,
           "y": 126.28553268047963,
@@ -829,7 +829,7 @@ Object {
       "x": 931.0643978506993,
       "y": 17.220754456429006,
     },
-    Object {
+    {
       "angle": -345,
       "direction": "left",
       "id": "id-10",
@@ -846,14 +846,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 165.64418886561322,
-        "input": Object {
+        "input": {
           "angle": 15,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 345,
           "x": -7.105427357601002e-15,
           "y": 142.3504748063864,
@@ -866,7 +866,7 @@ Object {
       "x": 1027.0093745842134,
       "y": 11.646857029613393,
     },
-    Object {
+    {
       "angle": -348.75,
       "direction": "left",
       "id": "id-11",
@@ -883,14 +883,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 167.7776769338703,
-        "input": Object {
+        "input": {
           "angle": 11.25,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 348.75,
           "x": -6.394884621840902e-14,
           "y": 150.2195479524188,
@@ -911,10 +911,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { centered: false } 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -931,14 +931,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -951,7 +951,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -968,14 +968,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -988,7 +988,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -1005,14 +1005,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -1025,7 +1025,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -1042,14 +1042,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -1062,7 +1062,7 @@ Object {
       "x": 370.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -1079,14 +1079,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -1099,7 +1099,7 @@ Object {
       "x": 490.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -1116,14 +1116,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -1136,7 +1136,7 @@ Object {
       "x": 606.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -1153,14 +1153,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -1173,7 +1173,7 @@ Object {
       "x": 696.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -1190,14 +1190,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -1210,7 +1210,7 @@ Object {
       "x": 786.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -1227,14 +1227,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -1247,7 +1247,7 @@ Object {
       "x": 886.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -1264,14 +1264,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -1284,7 +1284,7 @@ Object {
       "x": 986.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -1301,14 +1301,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -1321,7 +1321,7 @@ Object {
       "x": 1111.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -1338,14 +1338,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -1366,10 +1366,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { centered: true } 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -1386,14 +1386,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -1406,7 +1406,7 @@ Object {
       "x": 45,
       "y": -55,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -1423,14 +1423,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -1443,7 +1443,7 @@ Object {
       "x": 145,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -1460,14 +1460,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -1480,7 +1480,7 @@ Object {
       "x": 245,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -1497,14 +1497,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -1517,7 +1517,7 @@ Object {
       "x": 370.1471862576143,
       "y": -74.24621202458748,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -1534,14 +1534,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -1554,7 +1554,7 @@ Object {
       "x": 490.9613433871934,
       "y": -79.99999999999999,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -1571,14 +1571,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -1591,7 +1591,7 @@ Object {
       "x": 606.842302333356,
       "y": -82.2769379584943,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -1608,14 +1608,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -1628,7 +1628,7 @@ Object {
       "x": 696.842302333356,
       "y": -55,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -1645,14 +1645,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -1665,7 +1665,7 @@ Object {
       "x": 786.842302333356,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -1682,14 +1682,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -1702,7 +1702,7 @@ Object {
       "x": 886.842302333356,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -1719,14 +1719,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -1739,7 +1739,7 @@ Object {
       "x": 986.842302333356,
       "y": -74.24621202458749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -1756,14 +1756,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -1776,7 +1776,7 @@ Object {
       "x": 1111.9894885909703,
       "y": -79.99999999999999,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -1793,14 +1793,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -1821,10 +1821,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { centered: true, vertical: true } 1`] = `
-Object {
+{
   "height": 1566.0925999323272,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -1841,14 +1841,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -1861,7 +1861,7 @@ Object {
       "x": 0,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -1878,14 +1878,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -1898,7 +1898,7 @@ Object {
       "x": 5,
       "y": 110,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -1915,14 +1915,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -1935,7 +1935,7 @@ Object {
       "x": 5,
       "y": 210,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -1952,14 +1952,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -1972,7 +1972,7 @@ Object {
       "x": 17.573593128807147,
       "y": 310,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -1989,14 +1989,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -2009,7 +2009,7 @@ Object {
       "x": 15.407078564789543,
       "y": 458.49242404917493,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -2026,14 +2026,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -2046,7 +2046,7 @@ Object {
       "x": 12.940479473081268,
       "y": 618.4924240491749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -2063,14 +2063,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -2083,7 +2083,7 @@ Object {
       "x": 0,
       "y": 783.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -2100,14 +2100,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -2120,7 +2120,7 @@ Object {
       "x": -5,
       "y": 893.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -2137,14 +2137,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -2157,7 +2157,7 @@ Object {
       "x": -5,
       "y": 993.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -2174,14 +2174,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -2194,7 +2194,7 @@ Object {
       "x": -17.573593128807154,
       "y": 1093.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -2211,14 +2211,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -2231,7 +2231,7 @@ Object {
       "x": -15.407078564789543,
       "y": 1241.5387240153386,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -2248,14 +2248,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -2276,10 +2276,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: false } 1`] = `
-Object {
+{
   "height": 184.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -2296,14 +2296,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -2316,7 +2316,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -2333,14 +2333,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -2353,7 +2353,7 @@ Object {
       "x": 185,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -2370,14 +2370,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -2390,7 +2390,7 @@ Object {
       "x": 325,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -2407,14 +2407,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -2427,7 +2427,7 @@ Object {
       "x": 490.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -2444,14 +2444,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -2464,7 +2464,7 @@ Object {
       "x": 650.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -2481,14 +2481,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -2501,7 +2501,7 @@ Object {
       "x": 806.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -2518,14 +2518,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -2538,7 +2538,7 @@ Object {
       "x": 936.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -2555,14 +2555,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -2575,7 +2575,7 @@ Object {
       "x": 1066.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -2592,14 +2592,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -2612,7 +2612,7 @@ Object {
       "x": 1206.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -2629,14 +2629,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -2649,7 +2649,7 @@ Object {
       "x": 1346.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -2666,14 +2666,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -2686,7 +2686,7 @@ Object {
       "x": 1511.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -2703,14 +2703,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -2731,10 +2731,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { hPadding: 20, vPadding: 10, vertical: true } 1`] = `
-Object {
+{
   "height": 1806.0925999323272,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -2751,14 +2751,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -2771,7 +2771,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -2788,14 +2788,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -2808,7 +2808,7 @@ Object {
       "x": 55,
       "y": 130,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -2825,14 +2825,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -2845,7 +2845,7 @@ Object {
       "x": 55,
       "y": 250,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -2862,14 +2862,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -2882,7 +2882,7 @@ Object {
       "x": 80.1471862576143,
       "y": 370,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -2899,14 +2899,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -2919,7 +2919,7 @@ Object {
       "x": 75.81415712957909,
       "y": 538.4924240491749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -2936,14 +2936,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -2956,7 +2956,7 @@ Object {
       "x": 70.88095894616254,
       "y": 718.4924240491749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -2973,14 +2973,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -2993,7 +2993,7 @@ Object {
       "x": 45,
       "y": 903.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -3010,14 +3010,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -3030,7 +3030,7 @@ Object {
       "x": 45,
       "y": 1033.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -3047,14 +3047,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -3067,7 +3067,7 @@ Object {
       "x": 45,
       "y": 1153.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -3084,14 +3084,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -3104,7 +3104,7 @@ Object {
       "x": 45,
       "y": 1273.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -3121,14 +3121,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -3141,7 +3141,7 @@ Object {
       "x": 45,
       "y": 1441.5387240153386,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -3158,14 +3158,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -3186,10 +3186,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100 } 1`] = `
-Object {
+{
   "height": 264.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -3206,14 +3206,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -3226,7 +3226,7 @@ Object {
       "x": 145,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -3243,14 +3243,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -3263,7 +3263,7 @@ Object {
       "x": 245,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -3280,14 +3280,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -3300,7 +3300,7 @@ Object {
       "x": 345,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -3317,14 +3317,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -3337,7 +3337,7 @@ Object {
       "x": 470.1471862576143,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -3354,14 +3354,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -3374,7 +3374,7 @@ Object {
       "x": 590.9613433871934,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -3391,14 +3391,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -3411,7 +3411,7 @@ Object {
       "x": 706.842302333356,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -3428,14 +3428,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -3448,7 +3448,7 @@ Object {
       "x": 796.842302333356,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -3465,14 +3465,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -3485,7 +3485,7 @@ Object {
       "x": 886.842302333356,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -3502,14 +3502,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -3522,7 +3522,7 @@ Object {
       "x": 986.842302333356,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -3539,14 +3539,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -3559,7 +3559,7 @@ Object {
       "x": 1086.842302333356,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -3576,14 +3576,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -3596,7 +3596,7 @@ Object {
       "x": 1211.9894885909703,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -3613,14 +3613,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -3641,10 +3641,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: false } 1`] = `
-Object {
+{
   "height": 273.94354890608497,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -3661,14 +3661,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -3681,7 +3681,7 @@ Object {
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -3698,14 +3698,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 115.71067811865476,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -3718,7 +3718,7 @@ Object {
       "x": 351.02290732122435,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-2",
@@ -3735,14 +3735,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 92.92893218813452,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -3755,7 +3755,7 @@ Object {
       "x": 492.44426355853386,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-3",
@@ -3772,14 +3772,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 125.1471862576143,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -116.67261889578032,
           "y": 48.32738110421966,
@@ -3792,7 +3792,7 @@ Object {
       "x": 640.9366876077089,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-4",
@@ -3809,14 +3809,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 146.46170473959592,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 75,
           "x": -123.27912742310733,
           "y": 71.17523740319322,
@@ -3829,7 +3829,7 @@ Object {
       "x": 807.6824772138243,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-5",
@@ -3846,14 +3846,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 156.85189337642714,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 67.5,
           "x": -124.90298929626124,
           "y": 83.45750926002461,
@@ -3866,7 +3866,7 @@ Object {
       "x": 981.6260261199093,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-6",
@@ -3883,14 +3883,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -3903,7 +3903,7 @@ Object {
       "x": 1123.0473823572188,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-7",
@@ -3920,14 +3920,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -3940,7 +3940,7 @@ Object {
       "x": 1238.7580604758734,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-8",
@@ -3957,14 +3957,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -3977,7 +3977,7 @@ Object {
       "x": 1331.6869926640081,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-9",
@@ -3994,14 +3994,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": -48.32738110421965,
           "y": 116.67261889578036,
@@ -4014,7 +4014,7 @@ Object {
       "x": 1456.8341789216224,
       "y": 131.8198051533946,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-10",
@@ -4031,14 +4031,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 166.74578960611538,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 15,
           "x": -71.1752374031932,
           "y": 123.27912742310733,
@@ -4051,7 +4051,7 @@ Object {
       "x": 1603.2958836612183,
       "y": 131.8198051533946,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-11",
@@ -4068,14 +4068,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 173.94354890608494,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -83.45750926002461,
           "y": 124.90298929626127,
@@ -4096,10 +4096,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { startX: 100, startY: 100, tileAngle: 45, vertical: true } 1`] = `
-Object {
+{
   "height": 1791.96758219104,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -4116,14 +4116,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -4136,7 +4136,7 @@ Object {
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -4153,14 +4153,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 115.71067811865476,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -4173,7 +4173,7 @@ Object {
       "x": 209.60155108391484,
       "y": 273.2411613907041,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-2",
@@ -4190,14 +4190,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 92.92893218813452,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -4210,7 +4210,7 @@ Object {
       "x": 209.60155108391484,
       "y": 388.9518395093589,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-3",
@@ -4227,14 +4227,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 125.1471862576143,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -116.67261889578032,
           "y": 48.32738110421966,
@@ -4247,7 +4247,7 @@ Object {
       "x": 216.67261889578032,
       "y": 481.8807716974934,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-4",
@@ -4264,14 +4264,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 146.46170473959592,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 75,
           "x": -123.27912742310733,
           "y": 71.17523740319322,
@@ -4284,7 +4284,7 @@ Object {
       "x": 234.92598445272077,
       "y": 607.0279579551078,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-5",
@@ -4301,14 +4301,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 156.85189337642714,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 67.5,
           "x": -124.90298929626124,
           "y": 83.45750926002461,
@@ -4321,7 +4321,7 @@ Object {
       "x": 242.1237437526903,
       "y": 753.4896626947037,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-6",
@@ -4338,14 +4338,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -4358,7 +4358,7 @@ Object {
       "x": 209.60155108391484,
       "y": 910.3415560711309,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-7",
@@ -4375,14 +4375,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -4395,7 +4395,7 @@ Object {
       "x": 183.89087296526012,
       "y": 1051.7629123084403,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-8",
@@ -4412,14 +4412,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -4432,7 +4432,7 @@ Object {
       "x": 161.10912703473988,
       "y": 1193.1842685457498,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-9",
@@ -4449,14 +4449,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": -48.32738110421965,
           "y": 116.67261889578036,
@@ -4469,7 +4469,7 @@ Object {
       "x": 193.32738110421963,
       "y": 1334.6056247830593,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-10",
@@ -4486,14 +4486,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 166.74578960611538,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 15,
           "x": -71.1752374031932,
           "y": 123.27912742310733,
@@ -4506,7 +4506,7 @@ Object {
       "x": 214.64189958620128,
       "y": 1483.0980488322343,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-11",
@@ -4523,14 +4523,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 173.94354890608494,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -83.45750926002461,
           "y": 124.90298929626127,
@@ -4551,10 +4551,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { tileAngle: 45 } 1`] = `
-Object {
+{
   "height": 173.94354890608494,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -4571,14 +4571,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -4591,7 +4591,7 @@ Object {
       "x": 109.60155108391486,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -4608,14 +4608,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 115.71067811865476,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -4628,7 +4628,7 @@ Object {
       "x": 251.02290732122435,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-2",
@@ -4645,14 +4645,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 92.92893218813452,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 135,
           "x": -77.78174593052023,
           "y": 7.105427357601002e-15,
@@ -4665,7 +4665,7 @@ Object {
       "x": 392.44426355853386,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-3",
@@ -4682,14 +4682,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 125.1471862576143,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -116.67261889578032,
           "y": 48.32738110421966,
@@ -4702,7 +4702,7 @@ Object {
       "x": 540.9366876077089,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-4",
@@ -4719,14 +4719,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 146.46170473959592,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 75,
           "x": -123.27912742310733,
           "y": 71.17523740319322,
@@ -4739,7 +4739,7 @@ Object {
       "x": 707.6824772138243,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-5",
@@ -4756,14 +4756,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 156.85189337642714,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 67.5,
           "x": -124.90298929626124,
           "y": 83.45750926002461,
@@ -4776,7 +4776,7 @@ Object {
       "x": 881.6260261199093,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-6",
@@ -4793,14 +4793,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -77.78174593052022,
           "y": 77.78174593052023,
@@ -4813,7 +4813,7 @@ Object {
       "x": 1023.0473823572188,
       "y": 31.819805153394636,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-7",
@@ -4830,14 +4830,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -4850,7 +4850,7 @@ Object {
       "x": 1138.7580604758734,
       "y": 31.81980515339463,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-8",
@@ -4867,14 +4867,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 141.4213562373095,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 7.105427357601002e-15,
           "y": 77.78174593052023,
@@ -4887,7 +4887,7 @@ Object {
       "x": 1231.6869926640081,
       "y": 31.81980515339463,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-9",
@@ -4904,14 +4904,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": -48.32738110421965,
           "y": 116.67261889578036,
@@ -4924,7 +4924,7 @@ Object {
       "x": 1356.8341789216224,
       "y": 31.81980515339462,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-10",
@@ -4941,14 +4941,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 166.74578960611538,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 15,
           "x": -71.1752374031932,
           "y": 123.27912742310733,
@@ -4961,7 +4961,7 @@ Object {
       "x": 1503.2958836612183,
       "y": 31.819805153394608,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "left",
       "id": "id-11",
@@ -4978,14 +4978,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 173.94354890608494,
-        "input": Object {
+        "input": {
           "angle": 45,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -83.45750926002461,
           "y": 124.90298929626127,
@@ -5006,10 +5006,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: false } 1`] = `
-Object {
+{
   "height": 200,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -5026,14 +5026,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -5046,7 +5046,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -5063,14 +5063,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -5083,7 +5083,7 @@ Object {
       "x": 255,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -5100,14 +5100,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -5120,7 +5120,7 @@ Object {
       "x": 455,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -5137,14 +5137,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -5157,7 +5157,7 @@ Object {
       "x": 680.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -5174,14 +5174,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -5194,7 +5194,7 @@ Object {
       "x": 875.8141571295791,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -5211,14 +5211,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -5231,7 +5231,7 @@ Object {
       "x": 1070.8809589461625,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -5248,14 +5248,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -5268,7 +5268,7 @@ Object {
       "x": 1245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -5285,14 +5285,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -5305,7 +5305,7 @@ Object {
       "x": 1445,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -5322,14 +5322,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -5342,7 +5342,7 @@ Object {
       "x": 1645,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -5359,14 +5359,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -5379,7 +5379,7 @@ Object {
       "x": 1845,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -5396,14 +5396,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -5416,7 +5416,7 @@ Object {
       "x": 2045,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -5433,14 +5433,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -5461,10 +5461,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { tileWidth: 200, tileHeight: 200, centered: true } 1`] = `
-Object {
+{
   "height": 200,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -5481,14 +5481,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -5501,7 +5501,7 @@ Object {
       "x": 100,
       "y": -55,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -5518,14 +5518,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -5538,7 +5538,7 @@ Object {
       "x": 305,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -5555,14 +5555,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -5575,7 +5575,7 @@ Object {
       "x": 505,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -5592,14 +5592,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -5612,7 +5612,7 @@ Object {
       "x": 717.5735931288071,
       "y": -74.24621202458748,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -5629,14 +5629,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -5649,7 +5649,7 @@ Object {
       "x": 915.4070785647896,
       "y": -79.99999999999999,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -5666,14 +5666,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -5686,7 +5686,7 @@ Object {
       "x": 1112.9404794730813,
       "y": -82.2769379584943,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -5703,14 +5703,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -5723,7 +5723,7 @@ Object {
       "x": 1300,
       "y": -55,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -5740,14 +5740,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -5760,7 +5760,7 @@ Object {
       "x": 1495,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -5777,14 +5777,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -5797,7 +5797,7 @@ Object {
       "x": 1695,
       "y": -50,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -5814,14 +5814,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -5834,7 +5834,7 @@ Object {
       "x": 1882.4264068711927,
       "y": -74.24621202458749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -5851,14 +5851,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -5871,7 +5871,7 @@ Object {
       "x": 2084.5929214352104,
       "y": -79.99999999999999,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -5888,14 +5888,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -5916,10 +5916,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { vertical: false } 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -5936,14 +5936,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -5956,7 +5956,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -5973,14 +5973,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -5993,7 +5993,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -6010,14 +6010,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -6030,7 +6030,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -6047,14 +6047,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -6067,7 +6067,7 @@ Object {
       "x": 370.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -6084,14 +6084,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -6104,7 +6104,7 @@ Object {
       "x": 490.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -6121,14 +6121,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -6141,7 +6141,7 @@ Object {
       "x": 606.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -6158,14 +6158,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -6178,7 +6178,7 @@ Object {
       "x": 696.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -6195,14 +6195,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -6215,7 +6215,7 @@ Object {
       "x": 786.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -6232,14 +6232,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -6252,7 +6252,7 @@ Object {
       "x": 886.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -6269,14 +6269,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -6289,7 +6289,7 @@ Object {
       "x": 986.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -6306,14 +6306,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -6326,7 +6326,7 @@ Object {
       "x": 1111.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -6343,14 +6343,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -6371,10 +6371,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options { vertical: true } 1`] = `
-Object {
+{
   "height": 1566.0925999323272,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -6391,14 +6391,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -6411,7 +6411,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -6428,14 +6428,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -6448,7 +6448,7 @@ Object {
       "x": 55,
       "y": 110,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -6465,14 +6465,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -6485,7 +6485,7 @@ Object {
       "x": 55,
       "y": 210,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -6502,14 +6502,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -6522,7 +6522,7 @@ Object {
       "x": 80.1471862576143,
       "y": 310,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -6539,14 +6539,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -6559,7 +6559,7 @@ Object {
       "x": 75.81415712957909,
       "y": 458.49242404917493,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -6576,14 +6576,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -6596,7 +6596,7 @@ Object {
       "x": 70.88095894616254,
       "y": 618.4924240491749,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -6613,14 +6613,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -6633,7 +6633,7 @@ Object {
       "x": 45,
       "y": 783.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -6650,14 +6650,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -6670,7 +6670,7 @@ Object {
       "x": 45,
       "y": 893.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -6687,14 +6687,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -6707,7 +6707,7 @@ Object {
       "x": 45,
       "y": 993.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -6724,14 +6724,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -6744,7 +6744,7 @@ Object {
       "x": 45,
       "y": 1093.0462999661636,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -6761,14 +6761,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -6781,7 +6781,7 @@ Object {
       "x": 45,
       "y": 1241.5387240153386,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -6798,14 +6798,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -6826,10 +6826,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using config options {} 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -6846,14 +6846,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -6866,7 +6866,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -6883,14 +6883,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -6903,7 +6903,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -6920,14 +6920,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -6940,7 +6940,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -6957,14 +6957,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -6977,7 +6977,7 @@ Object {
       "x": 370.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -6994,14 +6994,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -7014,7 +7014,7 @@ Object {
       "x": 490.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -7031,14 +7031,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -7051,7 +7051,7 @@ Object {
       "x": 606.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -7068,14 +7068,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -7088,7 +7088,7 @@ Object {
       "x": 696.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -7105,14 +7105,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -7125,7 +7125,7 @@ Object {
       "x": 786.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -7142,14 +7142,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -7162,7 +7162,7 @@ Object {
       "x": 886.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -7179,14 +7179,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -7199,7 +7199,7 @@ Object {
       "x": 986.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -7216,14 +7216,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -7236,7 +7236,7 @@ Object {
       "x": 1111.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -7253,14 +7253,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,
@@ -7281,10 +7281,10 @@ Object {
 `;
 
 exports[`buildList process a list of tiles for rendering using default position 1`] = `
-Object {
+{
   "height": 164.55387591698866,
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -7301,14 +7301,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -7321,7 +7321,7 @@ Object {
       "x": 45,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -7338,14 +7338,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -7358,7 +7358,7 @@ Object {
       "x": 145,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-2",
@@ -7375,14 +7375,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 90,
           "x": -55,
           "y": 55,
@@ -7395,7 +7395,7 @@ Object {
       "x": 245,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-3",
@@ -7412,14 +7412,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917496,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 45,
           "x": -48.327381104219654,
           "y": 116.67261889578033,
@@ -7432,7 +7432,7 @@ Object {
       "x": 370.1471862576143,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-4",
@@ -7449,14 +7449,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 30,
           "x": -36.84301395927935,
           "y": 137.49999999999997,
@@ -7469,7 +7469,7 @@ Object {
       "x": 490.9613433871934,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-5",
@@ -7486,14 +7486,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.5538759169886,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 22.5,
           "x": -29.306379983154613,
           "y": 147.33312146055957,
@@ -7506,7 +7506,7 @@ Object {
       "x": 606.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-6",
@@ -7523,14 +7523,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 110,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 0,
           "x": 0,
           "y": 110,
@@ -7543,7 +7543,7 @@ Object {
       "x": 696.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-7",
@@ -7560,14 +7560,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -7580,7 +7580,7 @@ Object {
       "x": 786.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-8",
@@ -7597,14 +7597,14 @@ Object {
         },
       },
       "ratio": 1,
-      "rect": Object {
+      "rect": {
         "height": 100,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 270,
           "x": 55,
           "y": 55,
@@ -7617,7 +7617,7 @@ Object {
       "x": 886.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-9",
@@ -7634,14 +7634,14 @@ Object {
         },
       },
       "ratio": 2,
-      "rect": Object {
+      "rect": {
         "height": 148.49242404917499,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 315,
           "x": 48.32738110421967,
           "y": 116.67261889578035,
@@ -7654,7 +7654,7 @@ Object {
       "x": 986.842302333356,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-10",
@@ -7671,14 +7671,14 @@ Object {
         },
       },
       "ratio": 3,
-      "rect": Object {
+      "rect": {
         "height": 159.99999999999997,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 330,
           "x": 36.84301395927935,
           "y": 137.49999999999997,
@@ -7691,7 +7691,7 @@ Object {
       "x": 1111.9894885909703,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "left",
       "id": "id-11",
@@ -7708,14 +7708,14 @@ Object {
         },
       },
       "ratio": 4,
-      "rect": Object {
+      "rect": {
         "height": 164.55387591698866,
-        "input": Object {
+        "input": {
           "angle": 0,
           "x": 0,
           "y": 0,
         },
-        "output": Object {
+        "output": {
           "angle": 337.5,
           "x": 29.306379983154613,
           "y": 147.3331214605596,

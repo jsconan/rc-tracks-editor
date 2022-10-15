@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DoubleMap can be initialized with another instance 1`] = `
-Array [
-  Array [
+[
+  [
     "C1",
     "L1",
     1,
   ],
-  Array [
+  [
     "C1",
     "L2",
     2,
   ],
-  Array [
+  [
     "C2",
     "L1",
     3,
   ],
-  Array [
+  [
     "C2",
     "L2",
     4,
@@ -26,23 +26,23 @@ Array [
 `;
 
 exports[`DoubleMap can be initialized with values 1`] = `
-Array [
-  Array [
+[
+  [
     "C1",
     "L1",
     1,
   ],
-  Array [
+  [
     "C1",
     "L2",
     2,
   ],
-  Array [
+  [
     "C2",
     "L1",
     3,
   ],
-  Array [
+  [
     "C2",
     "L2",
     4,
@@ -51,12 +51,12 @@ Array [
 `;
 
 exports[`DoubleMap can produce an iterator to the entries for a particular primary key 1`] = `
-Array [
-  Array [
+[
+  [
     "L1",
     1,
   ],
-  Array [
+  [
     "L2",
     2,
   ],
@@ -64,12 +64,12 @@ Array [
 `;
 
 exports[`DoubleMap can produce an iterator to the entries for a particular primary key 2`] = `
-Array [
-  Array [
+[
+  [
     "L1",
     3,
   ],
-  Array [
+  [
     "L2",
     4,
   ],
@@ -77,20 +77,20 @@ Array [
 `;
 
 exports[`DoubleMap can produce an iterator to the keys 1`] = `
-Array [
-  Array [
+[
+  [
     "C1",
     "L1",
   ],
-  Array [
+  [
     "C1",
     "L2",
   ],
-  Array [
+  [
     "C2",
     "L1",
   ],
-  Array [
+  [
     "C2",
     "L2",
   ],
@@ -98,21 +98,21 @@ Array [
 `;
 
 exports[`DoubleMap can produce an iterator to the keys for a particular primary key 1`] = `
-Array [
+[
   "L1",
   "L2",
 ]
 `;
 
 exports[`DoubleMap can produce an iterator to the keys for a particular primary key 2`] = `
-Array [
+[
   "L1",
   "L2",
 ]
 `;
 
 exports[`DoubleMap can produce an iterator to the values 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -121,148 +121,14 @@ Array [
 `;
 
 exports[`DoubleMap can produce an iterator to the values for a particular primary key 1`] = `
-Array [
+[
   1,
   2,
 ]
 `;
 
 exports[`DoubleMap can produce an iterator to the values for a particular primary key 2`] = `
-Array [
-  3,
-  4,
-]
-`;
-
-exports[`DoubleMap can be initialized with another instance 1`] = `
-Array [
-  Array [
-    "C1",
-    "L1",
-    1,
-  ],
-  Array [
-    "C1",
-    "L2",
-    2,
-  ],
-  Array [
-    "C2",
-    "L1",
-    3,
-  ],
-  Array [
-    "C2",
-    "L2",
-    4,
-  ],
-]
-`;
-
-exports[`DoubleMap can be initialized with values 1`] = `
-Array [
-  Array [
-    "C1",
-    "L1",
-    1,
-  ],
-  Array [
-    "C1",
-    "L2",
-    2,
-  ],
-  Array [
-    "C2",
-    "L1",
-    3,
-  ],
-  Array [
-    "C2",
-    "L2",
-    4,
-  ],
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the entries for a particular primary key 1`] = `
-Array [
-  Array [
-    "L1",
-    1,
-  ],
-  Array [
-    "L2",
-    2,
-  ],
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the entries for a particular primary key 2`] = `
-Array [
-  Array [
-    "L1",
-    3,
-  ],
-  Array [
-    "L2",
-    4,
-  ],
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the keys 1`] = `
-Array [
-  Array [
-    "C1",
-    "L1",
-  ],
-  Array [
-    "C1",
-    "L2",
-  ],
-  Array [
-    "C2",
-    "L1",
-  ],
-  Array [
-    "C2",
-    "L2",
-  ],
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the keys for a particular primary key 1`] = `
-Array [
-  "L1",
-  "L2",
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the keys for a particular primary key 2`] = `
-Array [
-  "L1",
-  "L2",
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the values 1`] = `
-Array [
-  1,
-  2,
-  3,
-  4,
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the values for a particular primary key 1`] = `
-Array [
-  1,
-  2,
-]
-`;
-
-exports[`DoubleMap can produce an iterator to the values for a particular primary key 2`] = `
-Array [
+[
   3,
   4,
 ]

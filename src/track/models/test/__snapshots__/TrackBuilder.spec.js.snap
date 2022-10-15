@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TrackBuilder can build coordinates with a new builder 1`] = `
-Object {
-  "tiles": Array [
+{
+  "tiles": [
     "coord-id-0",
     "coord-id-1",
     "coord-id-2",
@@ -11,7 +11,7 @@ Object {
 `;
 
 exports[`TrackBuilder can build coordinates with a new builder 2`] = `
-Array [
+[
   "coord-id-0",
   "coord-id-1",
   "coord-id-2",
@@ -19,8 +19,8 @@ Array [
 `;
 
 exports[`TrackBuilder can build coordinates with the given builder options 1`] = `
-Object {
-  "tiles": Array [
+{
+  "tiles": [
     "coord-id-0",
     "coord-id-1",
     "coord-id-2",

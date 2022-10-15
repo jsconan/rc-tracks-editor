@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TrackEditorModel can limit the available set of tiles 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-1",
     2,
   ],
@@ -18,7 +18,7 @@ Array [
 `;
 
 exports[`TrackEditorModel can load a track 1`] = `
-Array [
+[
   CurvedTileModel {
     "direction": "left",
     "id": "id-6",
@@ -59,28 +59,28 @@ Array [
 `;
 
 exports[`TrackEditorModel can remove the limit for the available set of tiles 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     Infinity,
   ],
-  Array [
+  [
     "curved-tile-1",
     Infinity,
   ],
-  Array [
+  [
     "curved-tile-2",
     Infinity,
   ],
-  Array [
+  [
     "curved-tile-3",
     Infinity,
   ],
-  Array [
+  [
     "curved-tile-4",
     Infinity,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     Infinity,
   ],
@@ -97,7 +97,7 @@ TrackModel {
     "off": [Function],
     "on": [Function],
     "once": [Function],
-    "options": Object {
+    "options": {
       "hPadding": 10,
       "startAngle": 0,
       "vPadding": 10,
@@ -126,7 +126,7 @@ TrackModel {
   "tiles": TileList {
     "delegate": [Function],
     "emit": [Function],
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-0",
@@ -181,16 +181,16 @@ TrackModel {
 `;
 
 exports[`TrackEditorModel resets the set of tiles when clearing the editor 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-1",
     2,
   ],
@@ -198,16 +198,16 @@ Array [
 `;
 
 exports[`TrackEditorModel resets the set of tiles when loading a track 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-1",
     1,
   ],
@@ -215,12 +215,12 @@ Array [
 `;
 
 exports[`TrackEditorModel takes the existing track into account when limiting the available set of tiles 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     1,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
@@ -228,16 +228,16 @@ Array [
 `;
 
 exports[`TrackEditorModel updates the set of tiles when adding a tile to the track 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     1,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-1",
     2,
   ],
@@ -245,12 +245,12 @@ Array [
 `;
 
 exports[`TrackEditorModel updates the set of tiles when loading a track 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     1,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
@@ -258,16 +258,16 @@ Array [
 `;
 
 exports[`TrackEditorModel updates the set of tiles when removing a tile from the track 1`] = `
-Array [
-  Array [
+[
+  [
     "straight-tile-1",
     1,
   ],
-  Array [
+  [
     "curved-tile-enlarged-1",
     2,
   ],
-  Array [
+  [
     "curved-tile-1",
     1,
   ],

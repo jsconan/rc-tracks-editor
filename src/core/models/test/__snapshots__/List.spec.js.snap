@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List can add values to the list 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -11,7 +11,7 @@ Array [
 `;
 
 exports[`List can insert values at a particular index 1`] = `
-Array [
+[
   1,
   4,
   5,
@@ -21,7 +21,7 @@ Array [
 `;
 
 exports[`List can insert values at the beginning 1`] = `
-Array [
+[
   4,
   5,
   1,
@@ -31,7 +31,7 @@ Array [
 `;
 
 exports[`List can insert values at the end 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -41,7 +41,7 @@ Array [
 `;
 
 exports[`List can map its values 1`] = `
-Array [
+[
   10,
   20,
   30,
@@ -49,13 +49,13 @@ Array [
 `;
 
 exports[`List can remove values from a particular index 1`] = `
-Array [
+[
   1,
 ]
 `;
 
 exports[`List can write a value at a particular index 1`] = `
-Array [
+[
   3,
   4,
   5,
@@ -63,7 +63,7 @@ Array [
 `;
 
 exports[`List emits an event when adding values 1`] = `
-Array [
+[
   3,
   4,
   5,
@@ -71,7 +71,7 @@ Array [
 `;
 
 exports[`List emits an event when inserting values 1`] = `
-Array [
+[
   3,
   4,
   5,
@@ -79,7 +79,7 @@ Array [
 `;
 
 exports[`List emits an event when inserting values 2`] = `
-Array [
+[
   1,
   2.5,
   2.75,
@@ -87,7 +87,7 @@ Array [
 `;
 
 exports[`List emits an event when inserting values 3`] = `
-Array [
+[
   0,
   0.5,
   0.75,
@@ -95,7 +95,7 @@ Array [
 `;
 
 exports[`List emits an event when removing values 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -103,7 +103,7 @@ Array [
 `;
 
 exports[`List emits an event when setting a value 1`] = `
-Array [
+[
   0,
   3,
   1,
@@ -111,7 +111,7 @@ Array [
 `;
 
 exports[`List emits an event when setting a value 2`] = `
-Array [
+[
   1,
   4,
   2,
@@ -119,7 +119,7 @@ Array [
 `;
 
 exports[`List emits an event when setting a value 3`] = `
-Array [
+[
   2,
   5,
   3,

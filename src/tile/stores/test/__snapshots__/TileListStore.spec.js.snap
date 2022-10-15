@@ -4,7 +4,7 @@ exports[`tileListStore can notify changes applied to the list 1`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [],
+  "list": [],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
@@ -23,7 +23,7 @@ exports[`tileListStore can notify changes applied to the list 2`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "right",
       "id": "id-1",
@@ -55,7 +55,7 @@ exports[`tileListStore can notify changes applied to the list 3`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "right",
       "id": "id-2",
@@ -99,7 +99,7 @@ exports[`tileListStore can notify changes applied to the list 4`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     CurvedTileModel {
       "direction": "right",
       "id": "id-2",
@@ -131,7 +131,7 @@ exports[`tileListStore can notify changes applied to the list 5`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-3",
@@ -163,7 +163,7 @@ exports[`tileListStore can notify changes applied to the list 6`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-4",
@@ -207,7 +207,7 @@ exports[`tileListStore can notify changes applied to the list 7`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-4",
@@ -263,7 +263,7 @@ exports[`tileListStore can notify changes applied to the list 8`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [],
+  "list": [],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
@@ -282,7 +282,7 @@ exports[`tileListStore can notify changes applied to the list 9`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-6",
@@ -338,7 +338,7 @@ exports[`tileListStore can notify changes applied to the list 10`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-6",
@@ -394,7 +394,7 @@ exports[`tileListStore can notify changes applied to the list 11`] = `
 TileList {
   "delegate": [Function],
   "emit": [Function],
-  "list": Array [
+  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-6",

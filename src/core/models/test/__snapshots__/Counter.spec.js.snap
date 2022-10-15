@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Counter can export counters 1`] = `
-Object {
+{
   "c1": 0,
   "c2": 1,
   "c3": -1,
@@ -9,7 +9,7 @@ Object {
 `;
 
 exports[`Counter can map its counters 1`] = `
-Object {
+{
   "c1": 0,
   "c2": 10,
   "c3": -10,
@@ -17,7 +17,7 @@ Object {
 `;
 
 exports[`Counter emits an event when setting a counter 1`] = `
-Array [
+[
   "c1",
   3,
   0,
@@ -25,7 +25,7 @@ Array [
 `;
 
 exports[`Counter emits an event when setting a counter 2`] = `
-Array [
+[
   "c2",
   4,
   1,
@@ -33,7 +33,7 @@ Array [
 `;
 
 exports[`Counter emits an event when setting a counter 3`] = `
-Array [
+[
   "c3",
   5,
   -1,

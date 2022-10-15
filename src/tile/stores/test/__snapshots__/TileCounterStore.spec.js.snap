@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TileCounterStore can notify changes applied to the counter 1`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 1`] = `[]`;
 
 exports[`TileCounterStore can notify changes applied to the counter 2`] = `
-Array [
-  Object {
+[
+  {
     "count": 1,
     "model": StraightTileModel {
       "direction": "right",
@@ -23,13 +23,13 @@ Array [
 ]
 `;
 
-exports[`TileCounterStore can notify changes applied to the counter 3`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 3`] = `[]`;
 
-exports[`TileCounterStore can notify changes applied to the counter 4`] = `Array []`;
+exports[`TileCounterStore can notify changes applied to the counter 4`] = `[]`;
 
 exports[`TileCounterStore can notify changes applied to the counter 5`] = `
-Array [
-  Object {
+[
+  {
     "count": 1,
     "model": StraightTileModel {
       "direction": "right",
