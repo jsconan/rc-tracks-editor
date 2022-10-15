@@ -16,28 +16,19 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = function babelConfig(api) {
-    const ignore = [];
-    const presets = [
-        [
-            '@babel/preset-env',
-            {
-                targets: {
-                    node: 'current'
-                }
-            }
-        ]
-    ];
-    const plugins = ['babel-plugin-transform-vite-meta-env'];
-
-    if (!api.env('test')) {
-        ignore.push('**/*.spec.js');
-    }
+module.exports = api => {
     api.cache(true);
 
     return {
-        presets,
-        plugins,
-        ignore
+        presets: [
+            [
+                '@babel/preset-env',
+                {
+                    targets: {
+                        node: 'current'
+                    }
+                }
+            ]
+        ]
     };
 };
