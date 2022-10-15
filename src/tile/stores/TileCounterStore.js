@@ -45,15 +45,14 @@ export class TileCounterStore extends EventStore {
     }
 
     /**
-     * Binds a tiles counter with the store.
-     * The store is refreshed and the subscribers are notified.
+     * Validates that the given object is a TileCounter and can be bound to store.
      * @param {TileCounter} counter - The tiles counter to bind with the store.
      * @returns {TileCounterStore} - Chains the instance.
      * @throws {TypeError} - If the given object is not a TileCounter.
      */
-    bind(counter) {
+    validate(counter) {
         TileCounter.validateInstance(counter);
-        return super.bind(counter);
+        return super.validate(counter);
     }
 }
 

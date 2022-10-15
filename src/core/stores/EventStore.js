@@ -164,6 +164,17 @@ export class EventStore {
     }
 
     /**
+     * Validates that the given object is an event emitter and can be bound to store.
+     * @param {EventEmitter} emitter - The event emitter to bind with the store.
+     * @returns {EventStore} - Chains the instance.
+     * @throws {TypeError} - If the given object is not an event emitter.
+     */
+    validate(emitter) {
+        eventEmitterMixin.validateListener(emitter);
+        return this;
+    }
+
+    /**
      * Captures an event emitter.
      * The store is refreshed and the subscribers are notified.
      * @param {EventEmitter} emitter - The event emitter to bind with the store.
@@ -171,8 +182,7 @@ export class EventStore {
      * @throws {TypeError} - If the given object is not an event emitter.
      */
     bind(emitter) {
-        eventEmitterMixin.validateListener(emitter);
-
+        this.validate(emitter);
         this.unbind();
 
         this.#boundTo = emitter;

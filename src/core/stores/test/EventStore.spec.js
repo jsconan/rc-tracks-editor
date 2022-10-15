@@ -31,6 +31,9 @@ describe('EventStore', () => {
             );
 
             const store = new EventStore(['set']);
+            expect(() => store.validate({})).toThrow(
+                'The object must implement the functions: on, once, off, listens, delegate'
+            );
             expect(() => store.bind({})).toThrow(
                 'The object must implement the functions: on, once, off, listens, delegate'
             );

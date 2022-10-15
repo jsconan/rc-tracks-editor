@@ -50,15 +50,14 @@ export class TileListStore extends EventStore {
     }
 
     /**
-     * Binds a list of tiles with the store.
-     * The store is refreshed and the subscribers are notified.
+     * Validates that the given object is a TileList and can be bound to store.
      * @param {TileList} list - The list of tiles to bind with the store.
      * @returns {TileListStore} - Chains the instance.
      * @throws {TypeError} - If the given object is not a TileList.
      */
-    bind(list) {
+    validate(list) {
         TileList.validateInstance(list);
-        return super.bind(list);
+        return super.validate(list);
     }
 }
 

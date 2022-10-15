@@ -35,6 +35,7 @@ describe('tileModelsStore', () => {
             expect(() => new TileModelsStore({})).toThrow('The object must be an instance of TileCounter!');
 
             const store = new TileModelsStore();
+            expect(() => store.validate({})).toThrow('The object must be an instance of TileCounter!');
             expect(() => store.bind({})).toThrow('The object must be an instance of TileCounter!');
         });
 
