@@ -120,4 +120,14 @@ describe('Sketch', () => {
         fireEvent.click(element);
         expect(onClick).toHaveBeenCalled();
     });
+
+    it('fires keypress', () => {
+        const onKeyPress = jest.fn();
+        const { container, component } = render(Sketch);
+        const element = container.querySelector('svg');
+
+        component.$on('keypress', onKeyPress);
+        fireEvent.keyPress(element);
+        expect(onKeyPress).toHaveBeenCalled();
+    });
 });

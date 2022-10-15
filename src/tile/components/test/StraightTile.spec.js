@@ -121,4 +121,20 @@ describe('StraightTile', () => {
         fireEvent.click(element);
         expect(onClick).toHaveBeenCalled();
     });
+
+    it('fires keypress', () => {
+        const onKeyPress = jest.fn();
+        const { container, component } = render(Context, {
+            props: {
+                component: StraightTile,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs
+            }
+        });
+        const element = container.querySelector('.ground');
+
+        component.$on('keypress', onKeyPress);
+        fireEvent.keyPress(element);
+        expect(onKeyPress).toHaveBeenCalled();
+    });
 });
