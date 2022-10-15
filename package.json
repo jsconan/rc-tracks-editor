@@ -29,7 +29,7 @@
         "coverage:html": "open-cli .coverage/lcov-report/index.html",
         "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore --ignore-path .eslintignore .",
         "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-        "spell": "cspell lint '**/*.{js,md}'"
+        "spell": "cspell lint 'src/**/*.{svelte,js,md}'"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.19.4",
