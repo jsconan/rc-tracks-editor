@@ -4,12 +4,14 @@
 
     import { setContext } from 'svelte';
 
-    export let contextKey;
-    export let context;
-    export let component;
+    export let contextKey = '';
+    export let context = null;
     export let props = {};
+    export let component;
 
-    setContext(contextKey, context);
+    if (contextKey) {
+        setContext(contextKey, context);
+    }
 </script>
 
-<svelte:component this={component} on:click {...props} />
+<svelte:component this={component} on:click on:keypress {...props} />

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Context renders with default values 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          default
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          none
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
+
+exports[`Context renders with the given context 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          default
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          bar
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
+
+exports[`Context renders with the given parameters 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          defined
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          bar
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
+
+exports[`Context renders with the given props 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          defined
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          none
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
