@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Vector2D } from '../../models/Vector2D.js';
+import { Vector2D } from '../../models';
 import { arcTo, lineTo, moveTo } from '../svg.js';
 
 describe('moveTo', () => {
