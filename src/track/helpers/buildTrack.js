@@ -17,7 +17,7 @@
  */
 
 import { validateAPI } from '../../core/helpers';
-import { Counter, Vector2D } from '../../core/models';
+import { Vector2D } from '../../core/models';
 
 /**
  * Process a list of tiles for rendering a track, computing the coordinates of each tile.
@@ -40,31 +40,28 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
     let inputY = startY;
     let inputAngle = startAngle;
 
-    const stats = new Counter();
     const tiles = list.map(model => {
-        const bounds = model.getBoundingRect(inputX, inputY, inputAngle);
-        const { x, y, angle } = bounds.input;
+        const rect = model.getBoundingRect(inputX, inputY, inputAngle);
+        const { x, y, angle } = rect.input;
         const { id, type, direction, ratio } = model;
 
-        stats.increment(model.modelId);
+        inputX = rect.output.x;
+        inputY = rect.output.y;
+        inputAngle = rect.output.angle;
 
-        inputX = bounds.output.x;
-        inputY = bounds.output.y;
-        inputAngle = bounds.output.angle;
+        topLeft.x = Math.min(topLeft.x, rect.x);
+        topLeft.y = Math.min(topLeft.y, rect.y);
 
-        topLeft.x = Math.min(topLeft.x, bounds.x);
-        topLeft.y = Math.min(topLeft.y, bounds.y);
+        bottomRight.x = Math.max(bottomRight.x, rect.x + rect.width);
+        bottomRight.y = Math.max(bottomRight.y, rect.y + rect.height);
 
-        bottomRight.x = Math.max(bottomRight.x, bounds.x + bounds.width);
-        bottomRight.y = Math.max(bottomRight.y, bounds.y + bounds.height);
-
-        return { id, type, direction, ratio, x, y, angle, model };
+        return { id, type, direction, ratio, x, y, angle, rect, model };
     });
 
     const { x, y } = topLeft.subCoord(hPadding, vPadding);
     const { x: width, y: height } = bottomRight.sub(topLeft).addCoord(hPadding * 2, vPadding * 2);
 
-    return { x, y, width, height, tiles, stats };
+    return { x, y, width, height, tiles };
 };
 
 /**
@@ -74,7 +71,6 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
  * @property {number} width - The width of the track.
  * @property {number} height - The height of the track.
  * @property {tileCoord[]} tiles - The list of tiles.
- * @property {Counter} stats - An object listing the stats for the track.
  */
 
 /**
