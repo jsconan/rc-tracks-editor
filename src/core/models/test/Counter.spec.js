@@ -77,7 +77,6 @@ describe('Counter', () => {
     });
 
     it('needs a valid callback to walk over counters', () => {
-        // @ts-expect-error
         expect(() => new Counter().forEach()).toThrow('A callback function is expected!');
     });
 
@@ -103,7 +102,6 @@ describe('Counter', () => {
     });
 
     it('needs a valid callback to map counters', () => {
-        // @ts-expect-error
         expect(() => new Counter().map()).toThrow('A callback function is expected!');
     });
 
@@ -147,7 +145,6 @@ describe('Counter', () => {
         expect(counters.set('c1', 2.9)).toBe(counters);
         expect(counters.get('c1')).toBe(2);
 
-        // @ts-expect-error
         expect(counters.set('c1', 'c')).toBe(counters);
         expect(counters.get('c1')).toBe(0);
     });

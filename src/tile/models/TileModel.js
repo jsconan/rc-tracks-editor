@@ -51,7 +51,6 @@ export class TileModel {
      * @type {string}
      */
     get type() {
-        // @ts-expect-error
         return this.constructor.TYPE;
     }
 

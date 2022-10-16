@@ -38,7 +38,6 @@ describe('TileModel', () => {
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
-            // @ts-expect-error
             expect(() => new TileModel({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
@@ -50,7 +49,6 @@ describe('TileModel', () => {
 
         it('when trying to set an invalid specifications object', () => {
             const tile = new TileModel(specs);
-            // @ts-expect-error
             expect(() => tile.setSpecs({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );

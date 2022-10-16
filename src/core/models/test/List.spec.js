@@ -72,7 +72,6 @@ describe('List', () => {
     });
 
     it('needs a valid callback to walk over values', () => {
-        // @ts-expect-error
         expect(() => new List().forEach()).toThrow('A callback function is expected!');
     });
 
@@ -98,7 +97,6 @@ describe('List', () => {
     });
 
     it('needs a valid callback to map values', () => {
-        // @ts-expect-error
         expect(() => new List().map()).toThrow('A callback function is expected!');
     });
 

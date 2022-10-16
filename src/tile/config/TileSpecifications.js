@@ -39,7 +39,6 @@ export class TileSpecifications {
      * @type {string}
      */
     get contextId() {
-        // @ts-expect-error
         return this.constructor.CONTEXT_ID;
     }
 
