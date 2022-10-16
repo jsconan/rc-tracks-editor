@@ -16,195 +16,26 @@ exports[`Counter can map its counters 1`] = `
 }
 `;
 
-exports[`Counter can notify changes 1`] = `
+exports[`Counter emits an event when setting a counter 1`] = `
 [
-  [
-    "c1",
-    0,
-  ],
-  [
-    "c2",
-    1,
-  ],
-  [
-    "c3",
-    -1,
-  ],
+  "c1",
+  3,
+  0,
 ]
 `;
 
-exports[`Counter can notify changes 2`] = `
+exports[`Counter emits an event when setting a counter 2`] = `
 [
-  [
-    "c1",
-    0,
-  ],
-  [
-    "c2",
-    1,
-  ],
-  [
-    "c3",
-    -1,
-  ],
+  "c2",
+  4,
+  1,
 ]
 `;
 
-exports[`Counter can notify changes 3`] = `
+exports[`Counter emits an event when setting a counter 3`] = `
 [
-  [
-    "c1",
-    3,
-  ],
-  [
-    "c2",
-    1,
-  ],
-  [
-    "c3",
-    -1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 4`] = `
-[
-  [
-    "c1",
-    3,
-  ],
-  [
-    "c3",
-    -1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 5`] = `
-[
-  [
-    "c1",
-    3,
-  ],
-  [
-    "c3",
-    -1,
-  ],
-  [
-    "c2",
-    1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 6`] = `
-[
-  [
-    "c1",
-    3,
-  ],
-  [
-    "c3",
-    -1,
-  ],
-  [
-    "c2",
-    0,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 7`] = `[]`;
-
-exports[`Counter can notify changes 8`] = `
-[
-  [
-    "c1",
-    0,
-  ],
-  [
-    "c2",
-    1,
-  ],
-  [
-    "c3",
-    -1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 9`] = `
-[
-  [
-    "c1",
-    0,
-  ],
-  [
-    "c2",
-    0,
-  ],
-  [
-    "c3",
-    0,
-  ],
-  [
-    [
-      "c1",
-      0,
-    ],
-    1,
-  ],
-  [
-    [
-      "c2",
-      1,
-    ],
-    1,
-  ],
-  [
-    [
-      "c3",
-      -1,
-    ],
-    1,
-  ],
-]
-`;
-
-exports[`Counter can notify changes 10`] = `
-[
-  [
-    "c1",
-    0,
-  ],
-  [
-    "c2",
-    0,
-  ],
-  [
-    "c3",
-    0,
-  ],
-  [
-    [
-      "c1",
-      0,
-    ],
-    0,
-  ],
-  [
-    [
-      "c2",
-      1,
-    ],
-    0,
-  ],
-  [
-    [
-      "c3",
-      -1,
-    ],
-    0,
-  ],
+  "c3",
+  5,
+  -1,
 ]
 `;
