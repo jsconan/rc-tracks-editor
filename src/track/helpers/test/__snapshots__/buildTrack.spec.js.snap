@@ -7,7 +7,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   hPadding: 10,
   vPadding: 20
 } 1`] = `
-Object {
+{
   "height": 395.56349186104046,
   "stats": Counter {
     "counters": Map {
@@ -17,8 +17,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -38,7 +38,7 @@ Object {
       "x": 100,
       "y": 100,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -58,7 +58,7 @@ Object {
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-2",
@@ -78,7 +78,7 @@ Object {
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-3",
@@ -98,7 +98,7 @@ Object {
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-4",
@@ -118,7 +118,7 @@ Object {
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-5",
@@ -138,7 +138,7 @@ Object {
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-6",
@@ -158,7 +158,7 @@ Object {
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-7",
@@ -186,7 +186,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using config options { hPadding: 10, vPadding: 20 } 1`] = `
-Object {
+{
   "height": 350,
   "stats": Counter {
     "counters": Map {
@@ -196,8 +196,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -217,7 +217,7 @@ Object {
       "x": 0,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -237,7 +237,7 @@ Object {
       "x": 0,
       "y": 110,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-2",
@@ -257,7 +257,7 @@ Object {
       "x": -55,
       "y": 165,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-3",
@@ -277,7 +277,7 @@ Object {
       "x": -165,
       "y": 165,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-4",
@@ -297,7 +297,7 @@ Object {
       "x": -220,
       "y": 110,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-5",
@@ -317,7 +317,7 @@ Object {
       "x": -220,
       "y": 0,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-6",
@@ -337,7 +337,7 @@ Object {
       "x": -165,
       "y": -55.00000000000001,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-7",
@@ -365,7 +365,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using config options { startAngle: 45 } 1`] = `
-Object {
+{
   "height": 355.56349186104046,
   "stats": Counter {
     "counters": Map {
@@ -375,8 +375,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -396,7 +396,7 @@ Object {
       "x": 0,
       "y": 0,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -416,7 +416,7 @@ Object {
       "x": -77.78174593052022,
       "y": 77.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-2",
@@ -436,7 +436,7 @@ Object {
       "x": -155.56349186104046,
       "y": 77.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-3",
@@ -456,7 +456,7 @@ Object {
       "x": -233.3452377915607,
       "y": 1.4210854715202004e-14,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-4",
@@ -476,7 +476,7 @@ Object {
       "x": -233.3452377915607,
       "y": -77.78174593052022,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-5",
@@ -496,7 +496,7 @@ Object {
       "x": -155.56349186104046,
       "y": -155.56349186104046,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-6",
@@ -516,7 +516,7 @@ Object {
       "x": -77.78174593052023,
       "y": -155.56349186104046,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-7",
@@ -544,7 +544,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using config options { startX: 100, startY: 100 } 1`] = `
-Object {
+{
   "height": 310,
   "stats": Counter {
     "counters": Map {
@@ -554,8 +554,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -575,7 +575,7 @@ Object {
       "x": 100,
       "y": 100,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -595,7 +595,7 @@ Object {
       "x": 100,
       "y": 210,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-2",
@@ -615,7 +615,7 @@ Object {
       "x": 45,
       "y": 265,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-3",
@@ -635,7 +635,7 @@ Object {
       "x": -65,
       "y": 265,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-4",
@@ -655,7 +655,7 @@ Object {
       "x": -120,
       "y": 210,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-5",
@@ -675,7 +675,7 @@ Object {
       "x": -120.00000000000001,
       "y": 100,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-6",
@@ -695,7 +695,7 @@ Object {
       "x": -65.00000000000003,
       "y": 44.99999999999999,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-7",
@@ -723,7 +723,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using config options { startX: 100, startY: 100, startAngle: 45 } 1`] = `
-Object {
+{
   "height": 355.56349186104046,
   "stats": Counter {
     "counters": Map {
@@ -733,8 +733,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-0",
@@ -754,7 +754,7 @@ Object {
       "x": 100,
       "y": 100,
     },
-    Object {
+    {
       "angle": 45,
       "direction": "right",
       "id": "id-1",
@@ -774,7 +774,7 @@ Object {
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-2",
@@ -794,7 +794,7 @@ Object {
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
-    Object {
+    {
       "angle": 135,
       "direction": "right",
       "id": "id-3",
@@ -814,7 +814,7 @@ Object {
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-4",
@@ -834,7 +834,7 @@ Object {
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
-    Object {
+    {
       "angle": 225,
       "direction": "right",
       "id": "id-5",
@@ -854,7 +854,7 @@ Object {
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-6",
@@ -874,7 +874,7 @@ Object {
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
-    Object {
+    {
       "angle": 315,
       "direction": "right",
       "id": "id-7",
@@ -902,7 +902,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using config options {} 1`] = `
-Object {
+{
   "height": 310,
   "stats": Counter {
     "counters": Map {
@@ -912,8 +912,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -933,7 +933,7 @@ Object {
       "x": 0,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -953,7 +953,7 @@ Object {
       "x": 0,
       "y": 110,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-2",
@@ -973,7 +973,7 @@ Object {
       "x": -55,
       "y": 165,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-3",
@@ -993,7 +993,7 @@ Object {
       "x": -165,
       "y": 165,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-4",
@@ -1013,7 +1013,7 @@ Object {
       "x": -220,
       "y": 110,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-5",
@@ -1033,7 +1033,7 @@ Object {
       "x": -220,
       "y": 0,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-6",
@@ -1053,7 +1053,7 @@ Object {
       "x": -165,
       "y": -55.00000000000001,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-7",
@@ -1081,7 +1081,7 @@ Object {
 `;
 
 exports[`buildTrack process a list of tiles for rendering a track using default position 1`] = `
-Object {
+{
   "height": 310,
   "stats": Counter {
     "counters": Map {
@@ -1091,8 +1091,8 @@ Object {
     "notify": [Function],
     "subscribe": [Function],
   },
-  "tiles": Array [
-    Object {
+  "tiles": [
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-0",
@@ -1112,7 +1112,7 @@ Object {
       "x": 0,
       "y": 0,
     },
-    Object {
+    {
       "angle": 0,
       "direction": "right",
       "id": "id-1",
@@ -1132,7 +1132,7 @@ Object {
       "x": 0,
       "y": 110,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-2",
@@ -1152,7 +1152,7 @@ Object {
       "x": -55,
       "y": 165,
     },
-    Object {
+    {
       "angle": 90,
       "direction": "right",
       "id": "id-3",
@@ -1172,7 +1172,7 @@ Object {
       "x": -165,
       "y": 165,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-4",
@@ -1192,7 +1192,7 @@ Object {
       "x": -220,
       "y": 110,
     },
-    Object {
+    {
       "angle": 180,
       "direction": "right",
       "id": "id-5",
@@ -1212,7 +1212,7 @@ Object {
       "x": -220,
       "y": 0,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-6",
@@ -1232,7 +1232,7 @@ Object {
       "x": -165,
       "y": -55.00000000000001,
     },
-    Object {
+    {
       "angle": 270,
       "direction": "right",
       "id": "id-7",

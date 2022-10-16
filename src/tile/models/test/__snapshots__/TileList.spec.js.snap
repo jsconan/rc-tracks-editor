@@ -18,7 +18,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "left",
         "id": "id-15",
@@ -65,7 +65,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-13",
@@ -112,7 +112,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "left",
         "id": "id-11",
@@ -148,7 +148,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-10",
@@ -184,7 +184,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-55",
@@ -253,7 +253,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-48",
@@ -289,7 +289,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-49",
@@ -347,7 +347,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-52",
@@ -406,7 +406,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-59",
@@ -453,7 +453,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-42",
@@ -522,7 +522,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-35",
@@ -558,7 +558,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-38",
@@ -616,7 +616,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-39",
@@ -675,7 +675,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "left",
         "id": "id-47",
@@ -722,7 +722,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-25",
@@ -758,7 +758,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-22",
@@ -805,7 +805,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-19",
@@ -852,7 +852,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-17",
@@ -899,7 +899,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-34",
@@ -936,7 +936,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-30",
@@ -994,7 +994,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-26",
@@ -1050,7 +1050,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [],
+    "list": [],
     "notify": [Function],
     "subscribe": [Function],
   },
@@ -1072,7 +1072,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [],
+    "list": [],
     "notify": [Function],
     "subscribe": [Function],
   },
@@ -1080,8 +1080,8 @@ TileList {
 `;
 
 exports[`TileList can export to an object 1`] = `
-Array [
-  Object {
+[
+  {
     "direction": "right",
     "ratio": 1,
     "type": "curved-tile",
@@ -1106,7 +1106,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-63",
@@ -1143,7 +1143,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "left",
         "id": "id-64",
@@ -1308,7 +1308,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [],
+    "list": [],
     "notify": [Function],
     "subscribe": [Function],
   },
@@ -1332,7 +1332,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "right",
         "id": "id-68",
@@ -1368,7 +1368,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "right",
         "id": "id-69",
@@ -1415,7 +1415,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       CurvedTileModel {
         "direction": "right",
         "id": "id-69",
@@ -1452,7 +1452,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-70",
@@ -1489,7 +1489,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-71",
@@ -1537,7 +1537,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-71",
@@ -1593,7 +1593,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [],
+    "list": [],
     "notify": [Function],
     "subscribe": [Function],
   },
@@ -1615,7 +1615,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-73",
@@ -1673,7 +1673,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-73",
@@ -1752,7 +1752,7 @@ TileList {
   },
   "subscribe": [Function],
   "tiles": List {
-    "list": Array [
+    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-0",

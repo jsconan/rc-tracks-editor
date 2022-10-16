@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getOwnPropertyDescriptors lists descriptors for a boolean property 1`] = `
-Object {
-  "flag": Object {
+{
+  "flag": {
     "configurable": true,
     "enumerable": true,
     "value": true,
@@ -12,8 +12,8 @@ Object {
 `;
 
 exports[`getOwnPropertyDescriptors lists descriptors for a function property 1`] = `
-Object {
-  "action": Object {
+{
+  "action": {
     "configurable": true,
     "enumerable": true,
     "value": [Function],
@@ -23,8 +23,8 @@ Object {
 `;
 
 exports[`getOwnPropertyDescriptors lists descriptors for a number property 1`] = `
-Object {
-  "answer": Object {
+{
+  "answer": {
     "configurable": true,
     "enumerable": true,
     "value": 42,
@@ -34,8 +34,8 @@ Object {
 `;
 
 exports[`getOwnPropertyDescriptors lists descriptors for a string property 1`] = `
-Object {
-  "message": Object {
+{
+  "message": {
     "configurable": true,
     "enumerable": true,
     "value": "hello",
@@ -45,8 +45,8 @@ Object {
 `;
 
 exports[`getOwnPropertyDescriptors lists descriptors for a symbol property 1`] = `
-Object {
-  Symbol(Symbol.iterator): Object {
+{
+  Symbol(Symbol.iterator): {
     "configurable": true,
     "enumerable": true,
     "value": [Function],
