@@ -20,5 +20,6 @@ export { Counter } from './Counter.js';
 export { DoubleMap } from './DoubleMap.js';
 export { List } from './List.js';
 export { MultiMap } from './MultiMap.js';
+export { SortedMap } from './SortedMap.js';
 export { TreeNode } from './TreeNode.js';
 export { Vector2D } from './Vector2D.js';
