@@ -65,26 +65,5 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 };
 
 /**
- * @typedef {object} trackCoord - Represents a track ready to be rendered.
- * @property {number} x - The left coordinate of the track.
- * @property {number} y - The top coordinate of the track.
- * @property {number} width - The width of the track.
- * @property {number} height - The height of the track.
- * @property {tileCoord[]} tiles - The list of tiles.
- */
-
-/**
- * @typedef {object} tileCoord - Represents a positioned tile.
- * @property {string} id - The unique identifier of the tile.
- * @property {string} type - The type of tile.
- * @property {string} direction - The direction of the tile.
- * @property {number} ratio - The size ratio of the tile.
- * @property {number} x - The left coordinate of the tile.
- * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
- * @property {TileModel} model - A reference to the tile model.
- */
-
-/**
- * @typedef {import('../../tile/models').TileModel} TileModel
+ * @typedef {import('../models/TrackBuilder.js').trackCoord} trackCoord
  */
