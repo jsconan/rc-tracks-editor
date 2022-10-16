@@ -16,11 +16,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import buildTrack from '../buildTrack.js';
-
 import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../../tile/helpers';
 import { TileSpecifications } from '../../../tile/config';
 import { TileList } from '../../../tile/models';
+import buildTrack from '../buildTrack.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -44,7 +43,9 @@ describe('buildTrack', () => {
     });
 
     it('throws error when trying to use a wrong list of tiles', () => {
-        expect(() => buildTrack([])).toThrow('The model must be an instance of TileList!');
+        expect(() => buildTrack({})).toThrow('The object must implement the function: map');
+        expect(() => buildTrack([])).not.toThrow();
+        expect(() => buildTrack({ map() {} })).not.toThrow();
     });
 
     describe('process a list of tiles for rendering a track', () => {

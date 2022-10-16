@@ -16,23 +16,23 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { validateAPI } from '../../core/helpers';
 import { Counter, Vector2D } from '../../core/models';
-import { TileList } from '../../tile/models';
 
 /**
  * Process a list of tiles for rendering a track, computing the coordinates of each tile.
- * @param {TileList} list - The list of tiles from which build the track.
+ * @param {*} list - The list of tiles from which build the track. It must implement a map method.
  * @param {object} config - A set of config options.
  * @param {number} [config.startX] - The X-coordinate of the first tile.
  * @param {number} [config.startY] - The Y-coordinate of the first tile.
  * @param {number} [config.startAngle] - The rotation angle of the first tile.
  * @param {number} [config.hPadding] - An horizontal padding added around the track.
  * @param {number} [config.vPadding] - A vertical padding added around the tracks.
- * @returns {trackCoord}
- * @throws {TypeError} - If the given list is not a valid instance of TileList.
+ * @returns {trackCoord} - Returns the list of coordinates.
+ * @throws {TypeError} - If the given list does not implement the map method.
  */
 export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vPadding = 0 } = {}) => {
-    TileList.validateInstance(list);
+    validateAPI(list, ['map']);
 
     const topLeft = new Vector2D();
     const bottomRight = new Vector2D();
@@ -41,7 +41,7 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
     let inputAngle = startAngle;
 
     const stats = new Counter();
-    const tiles = list.tiles.map(model => {
+    const tiles = list.map(model => {
         const bounds = model.getBoundingRect(inputX, inputY, inputAngle);
         const { x, y, angle } = bounds.input;
         const { id, type, direction, ratio } = model;

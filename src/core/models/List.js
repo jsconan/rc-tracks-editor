@@ -16,12 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
+import { eventEmitterMixin } from '../mixins';
 
 /**
  * Represents an observable list.
  * Each change in the list will be notified to the subscribers.
+ * @mixes EventEmitter
  */
 export class List {
     /**
@@ -30,27 +31,10 @@ export class List {
      * @param {*} source - An iterable object that can be used to initialize the list.
      */
     constructor(source = []) {
+        eventEmitterMixin(this);
+
         this.list = [...source];
-        const { subscribe, set } = writable(this);
         source = void 0;
-
-        /**
-         * Notifies all subscribers.
-         * @returns {List} - Chains the list.
-         */
-        this.notify = () => {
-            set(this);
-
-            return this;
-        };
-
-        /**
-         * Adds a subscriber that will be notified each time the list is modified.
-         * @function subscribe
-         * @param {function} subscriber - A callback that will receive notifications when the list is changed.
-         * @returns {function} - Returns a callback for removing the subscription.
-         */
-        this.subscribe = subscribe;
     }
 
     /**
@@ -81,7 +65,7 @@ export class List {
 
     /**
      * Applies a callback to each value from the list.
-     * @param {function} walker - A callback that will be applied to each value of the list.
+     * @param {listCallback} walker - A callback that will be applied to each value of the list.
      * @returns {List} - Chains the list.
      * @throws {TypeError} - If the given callback is not a function.
      */
@@ -95,7 +79,7 @@ export class List {
 
     /**
      * Maps the values of the list to an array.
-     * @param {function} mapper - A mapper callback that will be applied to each value of the list.
+     * @param {listCallback} mapper - A mapper callback that will be applied to each value of the list.
      * @returns {Array}
      * @throws {TypeError} - If the given callback is not a function.
      */
@@ -107,7 +91,7 @@ export class List {
 
     /**
      * Finds the index of a value from the list. If the values does not exist in the list, `-1` is returned.
-     * @param {function|*} filter - Either a filter callback that will be applied to each value of the list
+     * @param {listCallback|*} filter - Either a filter callback that will be applied to each value of the list
      * and that must return true when the received value matches, or the searched value.
      * @returns {number} - The index of the value in the list, or -1 if not found.
      */
@@ -117,6 +101,22 @@ export class List {
         }
 
         return this.list.indexOf(filter);
+    }
+
+    /**
+     * Gets the first value of the list.
+     * @returns {*} - The value at the first index. It may be undefined.
+     */
+    first() {
+        return this.get(0);
+    }
+
+    /**
+     * Gets the last value of the list.
+     * @returns {*} - The value at the last index. It may be undefined.
+     */
+    last() {
+        return this.get(this.list.length - 1);
     }
 
     /**
@@ -131,49 +131,67 @@ export class List {
     /**
      * Sets a value at a particular index.
      * @param {number} index - The index where to set the value.
-     * @param {*} value  - The value to set at the index.
+     * @param {*} value - The value to set at the index.
      * @returns {List} - Chains the list.
+     * @fires set
+     * @throws {ReferenceError} - If the given index is out of bounds.
      */
     set(index, value) {
+        if (index < 0 || index >= this.length) {
+            throw new ReferenceError('The list index is out of bounds!');
+        }
+
+        const previous = this.list[index];
         this.list[index] = value;
 
-        return this.notify();
+        this.emit('set', index, value, previous);
+
+        return this;
     }
 
     /**
-     * Inserts a value at a particular index.
-     * @param {number} index - The index where to insert the value.
-     * @param {*} value  - The value to insert at the index.
+     * Inserts values at a particular index.
+     * @param {number} index - The index where to insert the values.
+     * @param {...*} values - The values to insert at the index.
      * @returns {List} - Chains the list.
+     * @fires add
      */
-    insert(index, ...value) {
-        this.list.splice(index, 0, ...value);
+    insert(index, ...values) {
+        this.list.splice(index, 0, ...values);
 
-        return this.notify();
+        this.emit('add', index, ...values);
+
+        return this;
     }
 
     /**
-     * Adds a value at the end of the list.
-     * @param {*} value  - The value to add.
+     * Adds values at the end of the list.
+     * @param {...*} values - The values to add.
      * @returns {List} - Chains the list.
+     * @fires add
      */
-    add(...value) {
-        this.list.push(...value);
+    add(...values) {
+        const index = this.list.length;
+        this.list.push(...values);
 
-        return this.notify();
+        this.emit('add', index, ...values);
+
+        return this;
     }
 
     /**
-     * Removes a value from the given index.
-     * @param {number} index - The index from where remove the value.
+     * Removes values from the given index.
+     * @param {number} index - The index from where remove the values.
      * @param {number} count - The number of values to remove from the index.
      * @returns {number} - The number of deleted values.
+     * @fires delete
      */
     delete(index, count = 1) {
-        const deleted = this.list.splice(index, count).length;
+        const removed = this.list.splice(index, count);
+        const deleted = removed.length;
 
         if (deleted) {
-            this.notify();
+            this.emit('delete', index, ...removed);
         }
 
         return deleted;
@@ -182,17 +200,21 @@ export class List {
     /**
      * Clears the list.
      * @returns {List} - Chains the list.
+     * @fires clear
      */
     clear() {
         this.list = [];
 
-        return this.notify();
+        this.emit('clear');
+
+        return this;
     }
 
     /**
      * Loads values from another source. The list is cleared before.
      * @param {*} iterator - An iterable object that can be used to fill the list.
      * @returns {List} - Chains the list.
+     * @fires load
      */
     load(iterator) {
         if (!iterator || !iterator[Symbol.iterator]) {
@@ -201,7 +223,9 @@ export class List {
 
         this.list = [...iterator];
 
-        return this.notify();
+        this.emit('load');
+
+        return this;
     }
 
     /**
@@ -211,4 +235,56 @@ export class List {
     toArray() {
         return [...this.list];
     }
+
+    /**
+     * Validates that the given object is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} object - The instance to validate.
+     * @throws {TypeError} - If the given object is not a valid instance.
+     */
+    static validateInstance(object) {
+        if (!(object instanceof this)) {
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
+        }
+    }
 }
+
+/**
+ * Callback called from the iteration algorithms.
+ * @param {*} value - The current value being traversed.
+ * @param {number} index - The index of the current value being traversed.
+ * @returns {*} - Returns a value expected by the context.
+ * @callback listCallback
+ */
+
+/**
+ * Notifies a value has been set to the list.
+ * @event set
+ * @param {number} index - The index where the value was set.
+ * @param {*} newValue - The new value.
+ * @param {*} oldValue - The previous value.
+ */
+
+/**
+ * Notifies values have been added to the list.
+ * @event add
+ * @param {number} index - The index from where the values have been added.
+ * @param {...*} values - The added values.
+ */
+
+/**
+ * Notifies values have been removed from the list.
+ * @event delete
+ * @param {number} index - The index from where the values were removed.
+ * @param {...*} values - The removed values.
+ */
+
+/**
+ * Notifies the list has been cleared.
+ * @event clear
+ */
+
+/**
+ * Notifies the list has been loaded.
+ * @event load
+ */

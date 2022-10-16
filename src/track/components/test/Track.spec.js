@@ -99,7 +99,7 @@ describe('Track', () => {
         });
 
         await tick();
-        model.appendTile();
+        model.append();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });
@@ -123,6 +123,6 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TileList!');
+        ).toThrow('The object must be an instance of TileList!');
     });
 });

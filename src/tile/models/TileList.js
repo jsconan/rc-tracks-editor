@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { derived } from 'svelte/store';
 import {
     validateType,
     CURVED_TILE_ENLARGED_TYPE,
@@ -29,7 +28,9 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
-import { Counter, List } from '../../core/models';
+import { EventStore } from '../../core/stores';
+import { List } from '../../core/models';
+import { TileModel } from './TileModel';
 
 /**
  * @type {object} - Maps the types of tile to their respective model.
@@ -42,39 +43,41 @@ const modelsMap = {
 };
 
 /**
- * Creates the tile model with respect to the given type.
- * @param {TileSpecifications} specs - The specifications for the tiles.
- * @param {string} type - The type of tile.
- * @param {string} direction - The direction of the tile.
- * @param {number} ratio - The size ratio of the tile.
- * @returns {TileModel} - Returns a tile model of the expected type.
- * @throws {TypeError} - If the given specifications object is not valid.
- * @throws {TypeError} - If the given type is not valid.
- * @throws {TypeError} - If the given direction is not valid.
- * @private
- */
-function createModel(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-    validateType(type);
-    const model = new modelsMap[type](specs, direction, ratio);
-    model.id = uid();
-    return model;
-}
-
-/**
  * Represents a list of tiles.
  */
-export class TileList {
+export class TileList extends List {
     /**
      * Represents a list of tiles with the given size constraints.
      * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {TileModel[]} source - A list of tiles to initialize the list.
      * @throws {TypeError} - If the given specifications object is not valid.
+     * @throws {TypeError} - If one of the tiles in the source is not a TileModel.
      */
-    constructor(specs) {
-        this.tiles = new List();
-        this.stats = new Counter();
+    constructor(specs, source = null) {
+        super();
+
         this.setSpecs(specs);
 
-        const { subscribe } = derived(this.tiles, () => this);
+        if (source) {
+            this.load(source);
+            source = void 0;
+        }
+
+        // Produces a store linked to the list events and returning the TileList
+        const store = new EventStore(
+            [
+                // List events
+                'set',
+                'add',
+                'delete',
+                'clear',
+                'load',
+                // TileList events
+                'specs',
+                'update'
+            ],
+            this
+        );
 
         /**
          * Adds a subscriber that will be notified each time the list is modified.
@@ -82,7 +85,7 @@ export class TileList {
          * @param {function} subscriber - A callback that will receive notifications when the list is changed.
          * @returns {function} - Return a callback for removing the subscription.
          */
-        this.subscribe = subscribe;
+        this.subscribe = subscriber => store.subscribe(subscriber);
     }
 
     /**
@@ -90,16 +93,30 @@ export class TileList {
      * @param {TileSpecifications} specs - The specifications for the tiles.
      * @returns {TileList} - Chains the instance.
      * @throws {TypeError} - If the given specifications object is not valid.
+     * @fires specs
      */
     setSpecs(specs) {
         TileSpecifications.validateInstance(specs);
 
         this.specs = specs;
 
-        if (this.tiles.length) {
-            this.tiles.forEach(tile => tile.setSpecs(specs));
-            this.tiles.notify();
+        if (this.length) {
+            this.forEach(tile => tile.setSpecs(specs));
+
+            this.emit('specs', specs);
         }
+
+        return this;
+    }
+
+    /**
+     * Notifies an update of the tiles.
+     * This is useful when one or several tiles have been modified internally without calling the list API.
+     * @returns {TileList} - Chains the instance.
+     * @fires update
+     */
+    update() {
+        this.emit('update');
 
         return this;
     }
@@ -109,8 +126,8 @@ export class TileList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {number} - The position of the tile, or `-1` if it does not exist.
      */
-    getTileIndex(id) {
-        return this.tiles.find(tile => tile.id === id);
+    getIndex(id) {
+        return this.find(tile => tile.id === id);
     }
 
     /**
@@ -118,8 +135,8 @@ export class TileList {
      * @param {string} id - The unique identifier of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    getTile(id) {
-        return this.getTileAt(this.getTileIndex(id));
+    getById(id) {
+        return super.get(this.getIndex(id)) || null;
     }
 
     /**
@@ -127,8 +144,112 @@ export class TileList {
      * @param {number} index - The position of the tile.
      * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
      */
-    getTileAt(index) {
-        return this.tiles.get(index) || null;
+    get(index) {
+        return super.get(index) || null;
+    }
+
+    /**
+     * Replace a tile in the list.
+     * If the tile does not exist, it does nothing.
+     * @param {string} id - The unique identifier of the tile to replace.
+     * @param {TileModel} tile - The tile to set in place.
+     * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If the given tile is not a TileModel.
+     * @fires set
+     */
+    setById(id, tile) {
+        const index = this.getIndex(id);
+
+        if (index >= 0) {
+            this.set(index, tile);
+        }
+
+        return this;
+    }
+
+    /**
+     * Sets a tile at a particular index.
+     * @param {number} index - The index where to set the tile.
+     * @param {TileModel} tile - The tile to set at the index.
+     * @returns {TileList} - Chains the instance.
+     * @throws {ReferenceError} - If the given index is out of bounds.
+     * @throws {TypeError} - If the given tile is not a TileModel.
+     * @fires set
+     */
+    set(index, tile) {
+        TileModel.validateInstance(tile);
+        return super.set(index, TileList.identify(tile));
+    }
+
+    /**
+     * Inserts a tile at a particular index.
+     * @param {number} index - The index where to insert the tile.
+     * @param {...TileModel} tiles - The tiles to insert at the index.
+     * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     * @fires add
+     */
+    insert(index, ...tiles) {
+        tiles.forEach(tile => {
+            TileModel.validateInstance(tile);
+            TileList.identify(tile);
+        });
+        return super.insert(index, ...tiles);
+    }
+
+    /**
+     * Adds a tile at the end of the list.
+     * @param {...TileModel} tiles - The tiles to add.
+     * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     * @fires add
+     */
+    add(...tiles) {
+        tiles.forEach(tile => {
+            TileModel.validateInstance(tile);
+            TileList.identify(tile);
+        });
+        return super.add(...tiles);
+    }
+
+    /**
+     * Removes a tile from the list.
+     * @param {string} id - The unique identifier of the tile to remove.
+     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
+     * @fires delete
+     */
+    remove(id) {
+        const index = this.getIndex(id);
+
+        if (index < 0) {
+            return false;
+        }
+
+        return this.delete(index) > 0;
+    }
+
+    /**
+     * Loads tiles from another source. The list is cleared before.
+     * @param {*} iterator - An iterable object that can be used to fill the list.
+     * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If one of the given tiles is not a TileModel.
+     * @fires load
+     */
+    load(iterator) {
+        if (!iterator || !iterator[Symbol.iterator]) {
+            return this;
+        }
+
+        const list = [];
+        for (const tile of iterator) {
+            TileModel.validateInstance(tile);
+            list.push(TileList.identify(tile));
+        }
+        this.list = list;
+
+        this.emit('load');
+
+        return this;
     }
 
     /**
@@ -136,17 +257,17 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
      */
-    appendTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createModel(this.specs, type, direction, ratio);
+    append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-        this.stats.increment(tile.modelId);
-        this.tiles.add(tile);
+        this.add(tile);
 
-        return tile.id;
+        return tile;
     }
 
     /**
@@ -154,34 +275,17 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
      */
-    prependTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = createModel(this.specs, type, direction, ratio);
+    prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-        this.stats.increment(tile.modelId);
-        this.tiles.insert(0, tile);
+        this.insert(0, tile);
 
-        return tile.id;
-    }
-
-    /**
-     * Removes a tile from the list.
-     * @param {string} id - The unique identifier of the tile to remove.
-     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
-     */
-    removeTile(id) {
-        const index = this.getTileIndex(id);
-
-        if (index < 0) {
-            return false;
-        }
-
-        this.stats.decrement(this.tiles.get(index).modelId);
-
-        return this.tiles.delete(index) > 0;
+        return tile;
     }
 
     /**
@@ -191,22 +295,20 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires set
      */
-    replaceTile(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    replace(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-            this.stats.decrement(this.tiles.get(index).modelId);
-            this.stats.increment(tile.modelId);
+            this.set(index, tile);
 
-            this.tiles.set(index, tile);
-
-            return tile.id;
+            return tile;
         }
 
         return null;
@@ -219,20 +321,20 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
      */
-    insertTileBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-            this.stats.increment(tile.modelId);
-            this.tiles.insert(index, tile);
+            this.insert(index, tile);
 
-            return tile.id;
+            return tile;
         }
 
         return null;
@@ -245,51 +347,23 @@ export class TileList {
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {string} - Returns the unique identifier of the added tile.
+     * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
      */
-    insertTileAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getTileIndex(id);
+    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = createModel(this.specs, type, direction, ratio);
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-            this.stats.increment(tile.modelId);
-            this.tiles.insert(index + 1, tile);
+            this.insert(index + 1, tile);
 
-            return tile.id;
+            return tile;
         }
 
         return null;
-    }
-
-    /**
-     * Rebuilds the stats regarding the number of identified types.
-     * @returns {TileList} - Chains the instance.
-     */
-    rebuildStats() {
-        const dataIterator = this.tiles.values();
-        const loadIterator = {
-            next: () => {
-                const next = dataIterator.next();
-
-                if (next.done) {
-                    return next;
-                }
-
-                const { modelId } = next.value;
-                return { done: false, value: modelId };
-            },
-
-            [Symbol.iterator]() {
-                return this;
-            }
-        };
-
-        this.stats.reset(loadIterator);
-
-        return this;
     }
 
     /**
@@ -297,7 +371,7 @@ export class TileList {
      * @returns {tileExport[]} - An object representation of the list.
      */
     export() {
-        return this.tiles.map(tile => tile.export());
+        return this.map(tile => tile.export());
     }
 
     /**
@@ -305,66 +379,106 @@ export class TileList {
      * The list is emptied before importing, any existing tile will be deleted.
      * @param {tileExport[]} data - An iterable object containing a representation of the list.
      * @returns {TileList} - Chains the instance.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     * @fires load
      */
     import(data) {
         if (!data || !data[Symbol.iterator]) {
             return this;
         }
 
-        const dataIterator = data[Symbol.iterator]();
-        const loadIterator = {
-            next: () => {
-                const next = dataIterator.next();
-
-                if (next.done) {
-                    return next;
-                }
-
-                const { type, direction, ratio } = next.value || {};
-                const tile = createModel(this.specs, type, direction, ratio);
-
-                return { done: false, value: tile };
-            },
-
-            [Symbol.iterator]() {
-                return this;
+        /**
+         * @param {TileSpecifications} specs
+         * @yields {TileModel}
+         * @generator
+         * @private
+         */
+        function* loadData(specs) {
+            for (const value of data) {
+                const { type, direction, ratio } = value || {};
+                yield TileList.createTile(specs, type, direction, ratio);
             }
-        };
-
-        this.tiles.load(loadIterator);
-        this.rebuildStats();
-
-        return this;
-    }
-
-    /**
-     * Removes all tiles from the list.
-     * @returns {TileList} - Chains the instance.
-     */
-    clear() {
-        this.stats.clear();
-        this.tiles.clear();
-
-        return this;
-    }
-
-    /**
-     * Validates that the given model is an instance of the class.
-     * Otherwise, an error is thrown.
-     * @param {object} model - The instance to validate.
-     * @throws {TypeError} - If the given model is not a valid instance.
-     */
-    static validateInstance(model) {
-        if (!(model instanceof this)) {
-            throw new TypeError(`The model must be an instance of ${this.name}!`);
         }
+
+        this.load(loadData(this.specs));
+
+        return this;
+    }
+
+    /**
+     * Creates a tile model with respect to the given type.
+     * @param {TileSpecifications} specs - The specifications for the tiles.
+     * @param {string} type - The type of tile.
+     * @param {string} direction - The direction of the tile.
+     * @param {number} ratio - The size ratio of the tile.
+     * @returns {TileModel} - Returns a tile model of the expected type.
+     * @throws {TypeError} - If the given specifications object is not valid.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     */
+    static createTile(specs, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        validateType(type);
+        return new modelsMap[type](specs, direction, ratio);
+    }
+
+    /**
+     * Makes sure a tile has a unique identifier.
+     * @param {TileModel} tile - The tile for which set the identifier.
+     * @returns {TileModel} - Returns the given tile model.
+     * @private
+     */
+    static identify(tile) {
+        if (tile && tile.id === tile.modelId) {
+            tile.id = uid();
+        }
+        return tile;
     }
 }
 
 /**
- * @typedef {import('./TileModel').tileExport} tileExport
+ * @typedef {import('./TileModel.js').tileExport} tileExport
  */
 
 /**
- * @typedef {import('./TileModel').TileModel} TileModel
+ * Notifies the tile specification have changed.
+ * @event specs
+ * @param {TileSpecifications} specs - The specifications for the tiles.
+ */
+
+/**
+ * Notifies a change applied to the tiles.
+ * @event update
+ */
+
+/**
+ * Notifies a tile has been set to the list.
+ * @event set
+ * @param {number} index - The index where the tile was set.
+ * @param {TileModel} newTile - The new tile.
+ * @param {TileModel} oldTile - The previous tile.
+ */
+
+/**
+ * Notifies tiles have been added to the list.
+ * @event add
+ * @param {number} index - The index from where the tiles have been added.
+ * @param {...TileModel} tiles - The added tiles.
+ */
+
+/**
+ * Notifies tiles have been removed from the list.
+ * @event delete
+ * @param {number} index - The index from where the tiles were removed.
+ * @param {...TileModel} tiles - The removed tiles.
+ */
+
+/**
+ * Notifies the list has been cleared.
+ * @event clear
+ */
+
+/**
+ * Notifies the list has been loaded.
+ * @event load
  */
