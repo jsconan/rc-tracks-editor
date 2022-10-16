@@ -32,7 +32,7 @@ import {
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 const model = new TileList(specs);
 model.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },

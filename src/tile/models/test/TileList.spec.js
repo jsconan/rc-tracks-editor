@@ -34,7 +34,7 @@ import { TileModel } from '../TileModel.js';
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
-const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 const source = [new StraightTileModel(specs), new CurvedTileModel(specs), new CurvedTileEnlargedModel(specs)];
 
@@ -187,7 +187,7 @@ describe('TileList', () => {
 
     it('can set the specifications of the tiles', () => {
         const list = new TileList(specs);
-        const newSpecs = new TileSpecifications(10, 1, 2);
+        const newSpecs = new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 });
         const callback = jest.fn().mockImplementation(s => {
             expect(s).toBe(newSpecs);
         });
@@ -900,7 +900,7 @@ describe('TileList', () => {
         const data = list.export();
         list.clear(); // callback called
         list.import(data); // callback called
-        list.setSpecs(new TileSpecifications(10, 1, 2)); // callback called
+        list.setSpecs(new TileSpecifications({ laneWidth: 10, barrierWidth: 1, barrierChunks: 2 })); // callback called
         list.update(); // callback called
 
         unsubscribe();

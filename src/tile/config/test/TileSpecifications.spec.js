@@ -49,7 +49,7 @@ describe('TileSpecifications', () => {
     });
 
     it('defines the specifications for the tiles', () => {
-        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+        const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio });
 
         expect(specs).toBeInstanceOf(TileSpecifications);
         expect(specs.laneWidth).toBe(laneWidth);
@@ -68,7 +68,7 @@ describe('TileSpecifications', () => {
             [50, 50],
             [-60, 60]
         ])('the width of the track lane as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
             expect(specs.setLaneWidth(value)).toBe(specs);
             expect(specs.laneWidth).toBe(expected);
@@ -78,7 +78,7 @@ describe('TileSpecifications', () => {
             [3, 3],
             [-4, 4]
         ])('the width of a barrier as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
             expect(specs.setBarrierWidth(value)).toBe(specs);
             expect(specs.barrierWidth).toBe(expected);
         });
@@ -91,7 +91,7 @@ describe('TileSpecifications', () => {
             [1.8, 2],
             [2.1, 2]
         ])('the number of a barrier chunks as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
             expect(specs.setBarrierChunks(value)).toBe(specs);
             expect(specs.barrierChunks).toBe(expected);
         });
@@ -104,14 +104,14 @@ describe('TileSpecifications', () => {
             [1.8, 2],
             [2.1, 2]
         ])('the maximum value for size ratio as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
             expect(specs.setMaxRatio(value)).toBe(specs);
             expect(specs.maxRatio).toBe(expected);
         });
     });
 
     it('can validate an object is an instance of the class', () => {
-        const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
+        const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
         expect(() => TileSpecifications.validateInstance(specs)).not.toThrow();
         expect(() => TileSpecifications.validateInstance({})).toThrow(
             'The specifications object must be an instance of TileSpecifications!'
