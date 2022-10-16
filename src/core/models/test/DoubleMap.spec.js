@@ -37,14 +37,14 @@ describe('DoubleMap', () => {
     });
 
     it('can be initialized with values', () => {
-        const doublemap = new DoubleMap(source);
-        expect([...doublemap]).toMatchSnapshot();
+        const map = new DoubleMap(source);
+        expect([...map]).toMatchSnapshot();
     });
 
     it('can be initialized with another instance', () => {
         const other = new DoubleMap(source);
-        const doublemap = new DoubleMap(other);
-        expect([...doublemap]).toMatchSnapshot();
+        const map = new DoubleMap(other);
+        expect([...map]).toMatchSnapshot();
     });
 
     it('has a size', () => {
@@ -56,271 +56,271 @@ describe('DoubleMap', () => {
     });
 
     it('is an iterator', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap[Symbol.iterator]()).not.toBe(doublemap[Symbol.iterator]());
-        expect([...doublemap]).toStrictEqual(source);
+        expect(map[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map[Symbol.iterator]()).not.toBe(map[Symbol.iterator]());
+        expect([...map]).toStrictEqual(source);
     });
 
     it('can produce an iterator to the entries', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.entries).toEqual(expect.any(Function));
-        expect(doublemap.entries()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.entries()).not.toBe(doublemap.entries());
-        expect([...doublemap.entries()]).toStrictEqual(source);
+        expect(map.entries).toEqual(expect.any(Function));
+        expect(map.entries()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.entries()).not.toBe(map.entries());
+        expect([...map.entries()]).toStrictEqual(source);
     });
 
     it('can produce an iterator to the entries for a particular primary key', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.entries).toEqual(expect.any(Function));
-        expect(doublemap.entries('C1')[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.entries('C1')).not.toBe(doublemap.entries('C1'));
-        expect([...doublemap.entries('C1')]).toMatchSnapshot();
-        expect([...doublemap.entries('C2')]).toMatchSnapshot();
-        expect([...doublemap.entries('C3')]).toStrictEqual([]);
+        expect(map.entries).toEqual(expect.any(Function));
+        expect(map.entries('C1')[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.entries('C1')).not.toBe(map.entries('C1'));
+        expect([...map.entries('C1')]).toMatchSnapshot();
+        expect([...map.entries('C2')]).toMatchSnapshot();
+        expect([...map.entries('C3')]).toStrictEqual([]);
     });
 
     it('can produce an iterator to the values', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.values).toEqual(expect.any(Function));
-        expect(doublemap.values()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.values()).not.toBe(doublemap.values());
-        expect([...doublemap.values()]).toMatchSnapshot();
+        expect(map.values).toEqual(expect.any(Function));
+        expect(map.values()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.values()).not.toBe(map.values());
+        expect([...map.values()]).toMatchSnapshot();
     });
 
     it('can produce an iterator to the values for a particular primary key', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.values).toEqual(expect.any(Function));
-        expect(doublemap.values('C1')[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.values('C1')).not.toBe(doublemap.values('C1'));
-        expect([...doublemap.values('C1')]).toMatchSnapshot();
-        expect([...doublemap.values('C2')]).toMatchSnapshot();
-        expect([...doublemap.values('C3')]).toStrictEqual([]);
+        expect(map.values).toEqual(expect.any(Function));
+        expect(map.values('C1')[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.values('C1')).not.toBe(map.values('C1'));
+        expect([...map.values('C1')]).toMatchSnapshot();
+        expect([...map.values('C2')]).toMatchSnapshot();
+        expect([...map.values('C3')]).toStrictEqual([]);
     });
 
     it('can produce an iterator to the keys', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.keys).toEqual(expect.any(Function));
-        expect(doublemap.keys()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.keys()).not.toBe(doublemap.keys());
-        expect([...doublemap.keys()]).toMatchSnapshot();
+        expect(map.keys).toEqual(expect.any(Function));
+        expect(map.keys()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.keys()).not.toBe(map.keys());
+        expect([...map.keys()]).toMatchSnapshot();
     });
 
     it('can produce an iterator to the keys for a particular primary key', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.keys).toEqual(expect.any(Function));
-        expect(doublemap.keys('C1')[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(doublemap.keys('C1')).not.toBe(doublemap.keys('C1'));
-        expect([...doublemap.keys('C1')]).toMatchSnapshot();
-        expect([...doublemap.keys('C2')]).toMatchSnapshot();
-        expect([...doublemap.keys('C3')]).toStrictEqual([]);
+        expect(map.keys).toEqual(expect.any(Function));
+        expect(map.keys('C1')[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.keys('C1')).not.toBe(map.keys('C1'));
+        expect([...map.keys('C1')]).toMatchSnapshot();
+        expect([...map.keys('C2')]).toMatchSnapshot();
+        expect([...map.keys('C3')]).toStrictEqual([]);
     });
 
     it('allows iterating using a callback', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
         const iterator = source.values();
-        const callback = jest.fn().mockImplementation(function (value, secondaryKey, primaryKey, map) {
+        const callback = jest.fn().mockImplementation(function (value, secondaryKey, primaryKey, thisMap) {
             const current = iterator.next().value;
             expect(this).toBeUndefined();
-            expect(map).toBe(doublemap);
+            expect(thisMap).toBe(map);
             expect(primaryKey).toBe(current[0]);
             expect(secondaryKey).toBe(current[1]);
             expect(value).toBe(current[2]);
         });
 
-        expect(doublemap.forEach(callback)).toBeUndefined();
+        expect(map.forEach(callback)).toBeUndefined();
         expect(callback).toHaveBeenCalledTimes(source.length);
     });
 
     it('allows iterating using a callback, with binding', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
         const context = {};
         const iterator = source.values();
-        const callback = jest.fn().mockImplementation(function (value, secondaryKey, primaryKey, map) {
+        const callback = jest.fn().mockImplementation(function (value, secondaryKey, primaryKey, thisMap) {
             const current = iterator.next().value;
             expect(this).toBe(context);
-            expect(map).toBe(doublemap);
+            expect(thisMap).toBe(map);
             expect(primaryKey).toBe(current[0]);
             expect(secondaryKey).toBe(current[1]);
             expect(value).toBe(current[2]);
         });
 
-        expect(doublemap.forEach(callback, context)).toBeUndefined();
+        expect(map.forEach(callback, context)).toBeUndefined();
         expect(callback).toHaveBeenCalledTimes(source.length);
     });
 
     it('needs a callback to iterate over entries', () => {
-        const doublemap = new DoubleMap();
-        expect(() => doublemap.forEach()).toThrow('A callback function is expected!');
+        const map = new DoubleMap();
+        expect(() => map.forEach()).toThrow('A callback function is expected!');
     });
 
     it('tells if a key exists', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.has('C1')).toBeTruthy();
-        expect(doublemap.has('C2')).toBeTruthy();
-        expect(doublemap.has('C3')).toBeFalsy();
+        expect(map.has('C1')).toBeTruthy();
+        expect(map.has('C2')).toBeTruthy();
+        expect(map.has('C3')).toBeFalsy();
     });
 
     it('tells if a key pair exists', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.has('C1', 'L1')).toBeTruthy();
-        expect(doublemap.has('C1', 'L2')).toBeTruthy();
-        expect(doublemap.has('C2', 'L1')).toBeTruthy();
-        expect(doublemap.has('C2', 'L2')).toBeTruthy();
+        expect(map.has('C1', 'L1')).toBeTruthy();
+        expect(map.has('C1', 'L2')).toBeTruthy();
+        expect(map.has('C2', 'L1')).toBeTruthy();
+        expect(map.has('C2', 'L2')).toBeTruthy();
 
-        expect(doublemap.has('C1', 'L3')).toBeFalsy();
-        expect(doublemap.has('C2', 'L3')).toBeFalsy();
-        expect(doublemap.has('C3', 'L3')).toBeFalsy();
+        expect(map.has('C1', 'L3')).toBeFalsy();
+        expect(map.has('C2', 'L3')).toBeFalsy();
+        expect(map.has('C3', 'L3')).toBeFalsy();
     });
 
     it('tells if a keys/value set exists', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.has('C1', 'L1', 1)).toBeTruthy();
-        expect(doublemap.has('C2', 'L2', 4)).toBeTruthy();
-        expect(doublemap.has('C3', 'L3', 9)).toBeFalsy();
+        expect(map.has('C1', 'L1', 1)).toBeTruthy();
+        expect(map.has('C2', 'L2', 4)).toBeTruthy();
+        expect(map.has('C3', 'L3', 9)).toBeFalsy();
     });
 
     it('can get the value of a key', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.get('C1')).toBeDefined();
-        expect(doublemap.get('C1')).toEqual(expect.any(Map));
-        expect([...doublemap.get('C1')]).toMatchSnapshot;
+        expect(map.get('C1')).toBeDefined();
+        expect(map.get('C1')).toEqual(expect.any(Map));
+        expect([...map.get('C1')]).toMatchSnapshot;
 
-        expect(doublemap.get('C3')).toBeUndefined();
+        expect(map.get('C3')).toBeUndefined();
     });
 
     it('can get the value of a couple of keys', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.get('C1', 'L1')).toBeDefined();
-        expect(doublemap.get('C1', 'L1')).toBe(1);
+        expect(map.get('C1', 'L1')).toBeDefined();
+        expect(map.get('C1', 'L1')).toBe(1);
 
-        expect(doublemap.get('C3', 'L3')).toBeUndefined();
+        expect(map.get('C3', 'L3')).toBeUndefined();
     });
 
     it('can set values', () => {
-        const doublemap = new DoubleMap();
+        const map = new DoubleMap();
 
-        expect(doublemap.size).toBe(0);
-        expect(doublemap.has('C1')).toBeFalsy();
-        expect(doublemap.set('C1', 'L1', 1)).toBe(doublemap);
+        expect(map.size).toBe(0);
+        expect(map.has('C1')).toBeFalsy();
+        expect(map.set('C1', 'L1', 1)).toBe(map);
 
-        expect(doublemap.has('C1')).toBeTruthy();
-        expect(doublemap.has('C1', 'L1')).toBeTruthy();
-        expect(doublemap.has('C1', 'L1', 1)).toBeTruthy();
-        expect(doublemap.has('C1', 'L2')).toBeFalsy();
-        expect(doublemap.size).toBe(1);
-        expect(doublemap.size2).toBe(1);
+        expect(map.has('C1')).toBeTruthy();
+        expect(map.has('C1', 'L1')).toBeTruthy();
+        expect(map.has('C1', 'L1', 1)).toBeTruthy();
+        expect(map.has('C1', 'L2')).toBeFalsy();
+        expect(map.size).toBe(1);
+        expect(map.size2).toBe(1);
     });
 
     it('cannot set incomplete keys', () => {
-        const doublemap = new DoubleMap();
+        const map = new DoubleMap();
 
-        expect(doublemap.set('C1')).toBe(doublemap);
+        expect(map.set('C1')).toBe(map);
 
-        expect(doublemap.size).toBe(0);
-        expect(doublemap.size2).toBe(0);
+        expect(map.size).toBe(0);
+        expect(map.size2).toBe(0);
     });
 
     it('can delete keys', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
-        expect(doublemap.get('C1', 'L1')).toBe(1);
-        expect(doublemap.get('C1', 'L2')).toBe(2);
-        expect(doublemap.delete('C1')).toBeTruthy();
-        expect(doublemap.delete('C1')).toBeFalsy();
-        expect(doublemap.get('C1')).toBeUndefined();
-        expect(doublemap.get('C1', 'L1')).toBeUndefined();
-        expect(doublemap.get('C1', 'L2')).toBeUndefined();
-        expect(doublemap.size).toBe(nbPrimaryKeys - 1);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 2);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
+        expect(map.get('C1', 'L1')).toBe(1);
+        expect(map.get('C1', 'L2')).toBe(2);
+        expect(map.delete('C1')).toBeTruthy();
+        expect(map.delete('C1')).toBeFalsy();
+        expect(map.get('C1')).toBeUndefined();
+        expect(map.get('C1', 'L1')).toBeUndefined();
+        expect(map.get('C1', 'L2')).toBeUndefined();
+        expect(map.size).toBe(nbPrimaryKeys - 1);
+        expect(map.size2).toBe(nbSecondaryKeys - 2);
     });
 
     it('can delete a couple of keys', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
-        expect(doublemap.get('C1', 'L1')).toBe(1);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
+        expect(map.get('C1', 'L1')).toBe(1);
 
-        expect(doublemap.delete('C1', 'L1')).toBeTruthy();
-        expect(doublemap.delete('C1', 'L1')).toBeFalsy();
+        expect(map.delete('C1', 'L1')).toBeTruthy();
+        expect(map.delete('C1', 'L1')).toBeFalsy();
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 1);
-        expect(doublemap.get('C1', 'L2')).toBe(2);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys - 1);
+        expect(map.get('C1', 'L2')).toBe(2);
 
-        expect(doublemap.delete('C1', 'L2')).toBeTruthy();
-        expect(doublemap.delete('C1', 'L2')).toBeFalsy();
+        expect(map.delete('C1', 'L2')).toBeTruthy();
+        expect(map.delete('C1', 'L2')).toBeFalsy();
 
-        expect(doublemap.get('C1')).toBeUndefined();
-        expect(doublemap.size).toBe(nbPrimaryKeys - 1);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 2);
+        expect(map.get('C1')).toBeUndefined();
+        expect(map.size).toBe(nbPrimaryKeys - 1);
+        expect(map.size2).toBe(nbSecondaryKeys - 2);
     });
 
     it('can delete values', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
-        expect(doublemap.get('C1', 'L1')).toBe(1);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
+        expect(map.get('C1', 'L1')).toBe(1);
 
-        expect(doublemap.delete('C1', 'L1', 1)).toBeTruthy();
-        expect(doublemap.delete('C1', 'L1', 1)).toBeFalsy();
+        expect(map.delete('C1', 'L1', 1)).toBeTruthy();
+        expect(map.delete('C1', 'L1', 1)).toBeFalsy();
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 1);
-        expect(doublemap.get('C1', 'L2')).toBe(2);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys - 1);
+        expect(map.get('C1', 'L2')).toBe(2);
 
-        expect(doublemap.delete('C1', 'L3', 3)).toBeFalsy();
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 1);
+        expect(map.delete('C1', 'L3', 3)).toBeFalsy();
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys - 1);
 
-        expect(doublemap.delete('C1', 'L2', 2)).toBeTruthy();
-        expect(doublemap.delete('C1', 'L2', 2)).toBeFalsy();
+        expect(map.delete('C1', 'L2', 2)).toBeTruthy();
+        expect(map.delete('C1', 'L2', 2)).toBeFalsy();
 
-        expect(doublemap.size).toBe(nbPrimaryKeys - 1);
-        expect(doublemap.size2).toBe(nbSecondaryKeys - 2);
-        expect(doublemap.get('C1')).toBeUndefined();
+        expect(map.size).toBe(nbPrimaryKeys - 1);
+        expect(map.size2).toBe(nbSecondaryKeys - 2);
+        expect(map.get('C1')).toBeUndefined();
     });
 
     it('does not delete values without a match', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
-        expect(doublemap.delete('C3', 'C3', 9)).toBeFalsy();
-        expect([...doublemap]).toStrictEqual(source);
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
+        expect(map.delete('C3', 'C3', 9)).toBeFalsy();
+        expect([...map]).toStrictEqual(source);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
     });
 
     it('can clear the map', () => {
-        const doublemap = new DoubleMap(source);
+        const map = new DoubleMap(source);
 
-        expect([...doublemap]).toStrictEqual(source);
-        expect(doublemap.size).toBe(nbPrimaryKeys);
-        expect(doublemap.size2).toBe(nbSecondaryKeys);
+        expect([...map]).toStrictEqual(source);
+        expect(map.size).toBe(nbPrimaryKeys);
+        expect(map.size2).toBe(nbSecondaryKeys);
 
-        expect(doublemap.clear()).toBeUndefined();
+        expect(map.clear()).toBeUndefined();
 
-        expect([...doublemap]).toStrictEqual([]);
-        expect(doublemap.size).toBe(0);
-        expect(doublemap.size2).toBe(0);
+        expect([...map]).toStrictEqual([]);
+        expect(map.size).toBe(0);
+        expect(map.size2).toBe(0);
     });
 });

@@ -28,7 +28,7 @@ describe('MultiMap', () => {
     });
 
     it('can be initialized with values', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, '1'],
             [2, '2'],
             [3, '3'],
@@ -36,7 +36,7 @@ describe('MultiMap', () => {
             [2, 'II'],
             [3, 'III']
         ]);
-        expect([...multimap]).toMatchSnapshot();
+        expect([...map]).toMatchSnapshot();
     });
 
     it('can be initialized with another instance', () => {
@@ -48,8 +48,8 @@ describe('MultiMap', () => {
             [2, 'II'],
             [3, 'III']
         ]);
-        const multimap = new MultiMap(source);
-        expect([...multimap]).toMatchSnapshot();
+        const map = new MultiMap(source);
+        expect([...map]).toMatchSnapshot();
     });
 
     it('has a size', () => {
@@ -77,11 +77,11 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
-        expect(multimap[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(multimap[Symbol.iterator]()).not.toBe(multimap[Symbol.iterator]());
-        expect([...multimap]).toStrictEqual(source);
+        expect(map[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map[Symbol.iterator]()).not.toBe(map[Symbol.iterator]());
+        expect([...map]).toStrictEqual(source);
     });
 
     it('can produce an iterator to the entries', () => {
@@ -91,12 +91,12 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
-        expect(multimap.entries).toEqual(expect.any(Function));
-        expect(multimap.entries()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(multimap.entries()).not.toBe(multimap.entries());
-        expect([...multimap.entries()]).toStrictEqual(source);
+        expect(map.entries).toEqual(expect.any(Function));
+        expect(map.entries()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.entries()).not.toBe(map.entries());
+        expect([...map.entries()]).toStrictEqual(source);
     });
 
     it('can produce an iterator to the values', () => {
@@ -106,12 +106,12 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
-        expect(multimap.values).toEqual(expect.any(Function));
-        expect(multimap.values()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(multimap.values()).not.toBe(multimap.values());
-        expect([...multimap.values()]).toStrictEqual([1, 2, 2, 3]);
+        expect(map.values).toEqual(expect.any(Function));
+        expect(map.values()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.values()).not.toBe(map.values());
+        expect([...map.values()]).toStrictEqual([1, 2, 2, 3]);
     });
 
     it('can produce an iterator to the keys', () => {
@@ -121,12 +121,12 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
-        expect(multimap.keys).toEqual(expect.any(Function));
-        expect(multimap.keys()[Symbol.iterator]).toEqual(expect.any(Function));
-        expect(multimap.keys()).not.toBe(multimap.keys());
-        expect([...multimap.keys()]).toStrictEqual([1, 2]);
+        expect(map.keys).toEqual(expect.any(Function));
+        expect(map.keys()[Symbol.iterator]).toEqual(expect.any(Function));
+        expect(map.keys()).not.toBe(map.keys());
+        expect([...map.keys()]).toStrictEqual([1, 2]);
     });
 
     it('allows iterating using a callback', () => {
@@ -136,18 +136,18 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
         const iterator = source.values();
-        const callback = jest.fn().mockImplementation(function (value, key, map) {
+        const callback = jest.fn().mockImplementation(function (value, key, thisMap) {
             const current = iterator.next().value;
             expect(this).toBeUndefined();
-            expect(map).toBe(multimap);
+            expect(thisMap).toBe(map);
             expect(key).toBe(current[0]);
             expect(value).toStrictEqual(current[1]);
         });
 
-        expect(multimap.forEach(callback)).toBeUndefined();
+        expect(map.forEach(callback)).toBeUndefined();
         expect(callback).toHaveBeenCalledTimes(source.length);
     });
 
@@ -158,130 +158,130 @@ describe('MultiMap', () => {
             [2, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
         const context = {};
         const iterator = source.values();
-        const callback = jest.fn().mockImplementation(function (value, key, map) {
+        const callback = jest.fn().mockImplementation(function (value, key, thisMap) {
             const current = iterator.next().value;
             expect(this).toBe(context);
-            expect(map).toBe(multimap);
+            expect(thisMap).toBe(map);
             expect(key).toBe(current[0]);
             expect(value).toStrictEqual(current[1]);
         });
 
-        expect(multimap.forEach(callback, context)).toBeUndefined();
+        expect(map.forEach(callback, context)).toBeUndefined();
         expect(callback).toHaveBeenCalledTimes(source.length);
     });
 
     it('needs a callback to iterate over entries', () => {
-        const multimap = new MultiMap();
-        expect(() => multimap.forEach()).toThrow('A callback function is expected!');
+        const map = new MultiMap();
+        expect(() => map.forEach()).toThrow('A callback function is expected!');
     });
 
     it('tells if a key exists', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
 
-        expect(multimap.has(1)).toBeTruthy();
-        expect(multimap.has(2)).toBeTruthy();
-        expect(multimap.has(3)).toBeFalsy();
+        expect(map.has(1)).toBeTruthy();
+        expect(map.has(2)).toBeTruthy();
+        expect(map.has(3)).toBeFalsy();
     });
 
     it('tells if a key/value pair exists', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
 
-        expect(multimap.has(1, 2)).toBeTruthy();
-        expect(multimap.has(2, 3)).toBeTruthy();
+        expect(map.has(1, 2)).toBeTruthy();
+        expect(map.has(2, 3)).toBeTruthy();
 
-        expect(multimap.has(1, 3)).toBeFalsy();
-        expect(multimap.has(2, 4)).toBeFalsy();
-        expect(multimap.has(3, 5)).toBeFalsy();
+        expect(map.has(1, 3)).toBeFalsy();
+        expect(map.has(2, 4)).toBeFalsy();
+        expect(map.has(3, 5)).toBeFalsy();
     });
 
     it('can get the value of a key', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, 1],
             [1, 2],
             [2, 2]
         ]);
 
-        expect(multimap.get(1)).toBeDefined();
-        expect(multimap.get(1)).toEqual(expect.any(Set));
-        expect([...multimap.get(1)]).toStrictEqual([1, 2]);
+        expect(map.get(1)).toBeDefined();
+        expect(map.get(1)).toEqual(expect.any(Set));
+        expect([...map.get(1)]).toStrictEqual([1, 2]);
 
-        expect(multimap.get(2)).toBeDefined();
-        expect(multimap.get(2)).toEqual(expect.any(Set));
-        expect([...multimap.get(2)]).toStrictEqual([2]);
+        expect(map.get(2)).toBeDefined();
+        expect(map.get(2)).toEqual(expect.any(Set));
+        expect([...map.get(2)]).toStrictEqual([2]);
 
-        expect(multimap.get(3)).toBeUndefined();
+        expect(map.get(3)).toBeUndefined();
     });
 
     it('can set values', () => {
-        const multimap = new MultiMap();
+        const map = new MultiMap();
 
-        expect(multimap.size).toBe(0);
-        expect(multimap.has(1)).toBeFalsy();
-        expect(multimap.set(1, 2)).toBe(multimap);
-        expect(multimap.has(1)).toBeTruthy();
-        expect(multimap.size).toBe(1);
+        expect(map.size).toBe(0);
+        expect(map.has(1)).toBeFalsy();
+        expect(map.set(1, 2)).toBe(map);
+        expect(map.has(1)).toBeTruthy();
+        expect(map.size).toBe(1);
     });
 
     it('sets values in a bucket', () => {
-        const multimap = new MultiMap();
+        const map = new MultiMap();
 
-        multimap.set(1, 2);
-        expect(multimap.get(1)).toEqual(expect.any(Set));
-        expect(multimap.get(1).has(2)).toBeTruthy();
+        map.set(1, 2);
+        expect(map.get(1)).toEqual(expect.any(Set));
+        expect(map.get(1).has(2)).toBeTruthy();
     });
 
     it('can set multiple values under the same key', () => {
-        const multimap = new MultiMap();
+        const map = new MultiMap();
 
-        expect(multimap.size).toBe(0);
-        multimap.set(1, 2);
-        multimap.set(1, 3);
-        expect(multimap.size).toBe(1);
-        expect(multimap.get(1).has(2)).toBeTruthy();
-        expect(multimap.get(1).has(3)).toBeTruthy();
-        expect([...multimap.get(1)]).toStrictEqual([2, 3]);
+        expect(map.size).toBe(0);
+        map.set(1, 2);
+        map.set(1, 3);
+        expect(map.size).toBe(1);
+        expect(map.get(1).has(2)).toBeTruthy();
+        expect(map.get(1).has(3)).toBeTruthy();
+        expect([...map.get(1)]).toStrictEqual([2, 3]);
     });
 
     it('can delete keys', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, 2],
             [2, 3]
         ]);
 
-        expect(multimap.size).toBe(2);
-        expect(multimap.get(1)).toEqual(expect.any(Set));
-        expect(multimap.delete(1)).toBeTruthy();
-        expect(multimap.delete(1)).toBeFalsy();
-        expect(multimap.get(1)).toBeUndefined();
-        expect(multimap.size).toBe(1);
+        expect(map.size).toBe(2);
+        expect(map.get(1)).toEqual(expect.any(Set));
+        expect(map.delete(1)).toBeTruthy();
+        expect(map.delete(1)).toBeFalsy();
+        expect(map.get(1)).toBeUndefined();
+        expect(map.size).toBe(1);
     });
 
     it('can delete values', () => {
-        const multimap = new MultiMap([
+        const map = new MultiMap([
             [1, 1],
             [1, 2]
         ]);
 
-        expect(multimap.size).toBe(1);
-        expect(multimap.delete(1, 2)).toBeTruthy();
-        expect(multimap.delete(1, 2)).toBeFalsy();
-        expect(multimap.get(1)).toEqual(expect.any(Set));
-        expect(multimap.size).toBe(1);
+        expect(map.size).toBe(1);
+        expect(map.delete(1, 2)).toBeTruthy();
+        expect(map.delete(1, 2)).toBeFalsy();
+        expect(map.get(1)).toEqual(expect.any(Set));
+        expect(map.size).toBe(1);
 
-        expect(multimap.delete(1, 1)).toBeTruthy();
-        expect(multimap.delete(1, 1)).toBeFalsy();
-        expect(multimap.get(1)).toBeUndefined();
-        expect(multimap.size).toBe(0);
+        expect(map.delete(1, 1)).toBeTruthy();
+        expect(map.delete(1, 1)).toBeFalsy();
+        expect(map.get(1)).toBeUndefined();
+        expect(map.size).toBe(0);
     });
 
     it('does not delete values without a match', () => {
@@ -289,12 +289,12 @@ describe('MultiMap', () => {
             [1, 1],
             [1, 2]
         ];
-        const multimap = new MultiMap(values);
+        const map = new MultiMap(values);
 
-        expect(multimap.size).toBe(1);
-        expect(multimap.delete(1, 3)).toBeFalsy();
-        expect([...multimap]).toStrictEqual(values);
-        expect(multimap.size).toBe(1);
+        expect(map.size).toBe(1);
+        expect(map.delete(1, 3)).toBeFalsy();
+        expect([...map]).toStrictEqual(values);
+        expect(map.size).toBe(1);
     });
 
     it('can clear the map', () => {
@@ -302,14 +302,14 @@ describe('MultiMap', () => {
             [1, 2],
             [2, 3]
         ];
-        const multimap = new MultiMap(source);
+        const map = new MultiMap(source);
 
-        expect([...multimap]).toStrictEqual(source);
-        expect(multimap.size).toBe(source.length);
+        expect([...map]).toStrictEqual(source);
+        expect(map.size).toBe(source.length);
 
-        expect(multimap.clear()).toBeUndefined();
+        expect(map.clear()).toBeUndefined();
 
-        expect([...multimap]).toStrictEqual([]);
-        expect(multimap.size).toBe(0);
+        expect([...map]).toStrictEqual([]);
+        expect(map.size).toBe(0);
     });
 });

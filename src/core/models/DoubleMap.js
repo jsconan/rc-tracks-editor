@@ -19,16 +19,16 @@
 import { validateCallback } from '../helpers';
 
 /**
- * Defines a doublemap structure.
+ * Defines a DoubleMap structure.
  *
- * A doublemap is a `Map` where each value is indexed by two keys, a primary and a secondary. Internally, it
+ * A DoubleMap is a `Map` where each value is indexed by two keys, a primary and a secondary. Internally, it
  * relies on a combination of `Map` objects. The primary keys are managed by a first `Map`, then each key
  * is associated with a another `Map` object that contains the secondary keys and the related values. In the
  * end, it could be seen as a two-dimensional associative array.
  */
 export class DoubleMap extends Map {
     /**
-     * Creates a doublemap.
+     * Creates a DoubleMap.
      * @param {*} source - A list of primaryKey/secondaryKey/value sets to inject in the map.
      */
     constructor(source) {

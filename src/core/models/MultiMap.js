@@ -19,9 +19,9 @@
 import { validateCallback } from '../helpers';
 
 /**
- * Defines a multimap structure.
+ * Defines a MultiMap structure.
  *
- * A multimap is a `Map` where each key can have multiple values. Internally, each key receives a bucket that
+ * A MultiMap is a `Map` where each key can have multiple values. Internally, each key receives a bucket that
  * contains the values. This bucket is represented by a `Set`, which contains the list of values registered
  * under the key.
  *
@@ -33,7 +33,7 @@ import { validateCallback } from '../helpers';
  *
  * When a key is deleted, the bucket is deleted, removing all registered values as well.
  *
- * The iterators work as follow, considering a multimap such as `{ one: [1, 2], two:[3, 4] }`:
+ * The iterators work as follow, considering a MultiMap such as `{ one: [1, 2], two:[3, 4] }`:
  * - `keys()` allows to loop over all the unique keys registered.
  *
  *   Say with the above example: `['one', 'two']`
@@ -46,11 +46,11 @@ import { validateCallback } from '../helpers';
  *
  *   Say with the above example: `[['one', 1], ['one', 2], ['two', 3], ['two', 4]]`
  *
- * - Exporting a multimap to an array, like with `[...multimap]`, will produce an array of key/value pairs.
+ * - Exporting a MultiMap to an array, like with `[...MultiMap]`, will produce an array of key/value pairs.
  *
  *   Say with the above example: `[['one', 1], ['one', 2], ['two', 3], ['two', 4]]`
  *
- * A multimap can be initialized from either an array or another instance. When an array is used, it must be an array
+ * A MultiMap can be initialized from either an array or another instance. When an array is used, it must be an array
  * of key/value pairs. To assign multiple values to a key, the key can be duplicated in several pairs, for example:
  * `[['one', 1], ['one', 2], ['two', 3], ['two', 4]]`.
  *
@@ -140,7 +140,7 @@ export class MultiMap extends Map {
     /**
      * Produces an iterator to loop over all the values. This iterator will give an access to each single value. If a
      * key has several values, each of them will be iterated separately.
-     * Say if we have a multimap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
+     * Say if we have a MultiMap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
      * values: `[1, 2, 3, 4]`.
      * @yields {*} - The next value in the map.
      * @generator
@@ -156,7 +156,7 @@ export class MultiMap extends Map {
     /**
      * Produces an iterator to loop over all the key/value pairs. This iterator will give an access to each single
      * key/value pair. If a key have several values, each of them will be iterated separately together with its key.
-     * Say if we have a multimap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
+     * Say if we have a MultiMap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
      * entries: `[['one', 1], ['one', 2], ['two', 3], ['two', 4]]`.
      * @yields {*} - The next key/value pair in the map.
      * @generator
@@ -172,7 +172,7 @@ export class MultiMap extends Map {
     /**
      * Produces an iterator to loop over all the key/value pairs. This iterator will give an access to each single
      * key/value pair. If a key have several values, each of them will be iterated separately together with its key.
-     * Say if we have a multimap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
+     * Say if we have a MultiMap such as `{ one: [1, 2], two:[3, 4] }`, the iterator will successively loop over the
      * entries: `[['one', 1], ['one', 2], ['two', 3], ['two', 4]]`.
      * @yields {*} - The next key/value pair in the map.
      * @generator
