@@ -1,5 +1,5 @@
 {
     "language": "en",
     "ignorePaths": [],
-    "words": ["Sébastien", "multimap", "doublemap", "addmodel", "removemodel", "addtile", "removetile", "keypress"]
+    "words": ["Sébastien", "addmodel", "removemodel", "addtile", "removetile", "keypress"]
 }
