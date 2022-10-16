@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileCounter can export counters 1`] = `
+{
+  "curved-tile-1": 2,
+  "curved-tile-enlarged-1": 1,
+  "straight-tile-1": 3,
+}
+`;
+
+exports[`TileCounter can get the tile model for a given key 1`] = `
+StraightTileModel {
+  "direction": "right",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileCounter can get the tile model for a given key 2`] = `
+CurvedTileEnlargedModel {
+  "direction": "right",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileCounter can get the tile model for a given key 3`] = `
+CurvedTileModel {
+  "direction": "right",
+  "id": "curved-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`TileCounter can list the counted tile models 1`] = `
+[
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileEnlargedModel {
+    "direction": "right",
+    "id": "curved-tile-enlarged-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`TileCounter can list the counters 1`] = `
+[
+  {
+    "count": 3,
+    "model": StraightTileModel {
+      "direction": "right",
+      "id": "straight-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "straight-tile-1",
+  },
+  {
+    "count": 1,
+    "model": CurvedTileEnlargedModel {
+      "direction": "right",
+      "id": "curved-tile-enlarged-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "curved-tile-enlarged-1",
+  },
+  {
+    "count": 2,
+    "model": CurvedTileModel {
+      "direction": "right",
+      "id": "curved-tile-1",
+      "ratio": 1,
+      "specs": TileSpecifications {
+        "barrierChunks": 4,
+        "barrierWidth": 5,
+        "laneWidth": 80,
+        "maxRatio": 4,
+        "unlockRatio": false,
+      },
+    },
+    "modelId": "curved-tile-1",
+  },
+]
+`;
+
+exports[`TileCounter can map its counters 1`] = `
+{
+  "curved-tile-1": 20,
+  "curved-tile-enlarged-1": 10,
+  "straight-tile-1": 30,
+}
+`;
+
+exports[`TileCounter can set the specifications of the tile models 1`] = `
+[
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 2,
+      "barrierWidth": 1,
+      "laneWidth": 10,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileEnlargedModel {
+    "direction": "right",
+    "id": "curved-tile-enlarged-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 2,
+      "barrierWidth": 1,
+      "laneWidth": 10,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  CurvedTileModel {
+    "direction": "right",
+    "id": "curved-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 2,
+      "barrierWidth": 1,
+      "laneWidth": 10,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`TileCounter emits an event when setting a counter 1`] = `
+[
+  "straight-tile-1",
+  3,
+  3,
+]
+`;
+
+exports[`TileCounter emits an event when setting a counter 2`] = `
+[
+  "curved-tile-enlarged-1",
+  4,
+  1,
+]
+`;
+
+exports[`TileCounter emits an event when setting a counter 3`] = `
+[
+  "curved-tile-1",
+  5,
+  2,
+]
+`;
