@@ -68,6 +68,6 @@ describe('ControlPoints', () => {
         const props = {
             model: {}
         };
-        expect(() => render(ControlPoints, { props })).toThrow('The model must be an instance of TileModel!');
+        expect(() => render(ControlPoints, { props })).toThrow('The object must be an instance of TileModel!');
     });
 });

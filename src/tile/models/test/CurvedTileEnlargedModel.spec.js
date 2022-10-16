@@ -36,6 +36,26 @@ describe('CurvedTileEnlargedModel', () => {
         expect(CurvedTileEnlargedModel).toEqual(expect.any(Function));
     });
 
+    describe('can clone', () => {
+        it('its instance', () => {
+            const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, 2);
+            const clone = tile.clone();
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(CurvedTileEnlargedModel);
+        });
+
+        it('a given instance', () => {
+            const tile = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, 2);
+            const clone = CurvedTileEnlargedModel.clone(tile);
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(CurvedTileEnlargedModel);
+        });
+    });
+
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             expect(() => new CurvedTileEnlargedModel({})).toThrow(
@@ -424,7 +444,7 @@ describe('CurvedTileEnlargedModel', () => {
         const tile = new CurvedTileEnlargedModel(specs);
         expect(() => CurvedTileEnlargedModel.validateInstance(tile)).not.toThrow();
         expect(() => CurvedTileEnlargedModel.validateInstance({})).toThrow(
-            'The model must be an instance of CurvedTileEnlargedModel!'
+            'The object must be an instance of CurvedTileEnlargedModel!'
         );
     });
 });

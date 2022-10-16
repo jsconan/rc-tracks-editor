@@ -147,10 +147,10 @@ describe('TileList', () => {
 
         it('when trying to add a tile that is not a TileModel', () => {
             const list = new TileList(specs);
-            expect(() => list.add({})).toThrow('The model must be an instance of TileModel!');
-            expect(() => list.set(0, {})).toThrow('The model must be an instance of TileModel!');
-            expect(() => list.insert(0, {})).toThrow('The model must be an instance of TileModel!');
-            expect(() => list.load([{}])).toThrow('The model must be an instance of TileModel!');
+            expect(() => list.add({})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.set(0, {})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.insert(0, {})).toThrow('The object must be an instance of TileModel!');
+            expect(() => list.load([{}])).toThrow('The object must be an instance of TileModel!');
         });
 
         it('when trying to add a tile with an invalid type', () => {

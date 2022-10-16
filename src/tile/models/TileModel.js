@@ -49,6 +49,14 @@ export class TileModel {
     }
 
     /**
+     * Creates a copy of the instance.
+     * @returns {TileModel} - Another instance of the same type with the same properties.
+     */
+    clone() {
+        return this.constructor.clone(this);
+    }
+
+    /**
      * The type of tile.
      * @type {string}
      */
@@ -396,6 +404,15 @@ export class TileModel {
     }
 
     /**
+     * Creates a copy of the given instance.
+     * @param {TileModel} tile - The instance to copy.
+     * @returns {TileModel} - Another instance of the same type with the same properties.
+     */
+    static clone(tile) {
+        return new this(tile.specs, tile.direction, tile.ratio);
+    }
+
+    /**
      * Validates that the given model is an instance of the class.
      * Otherwise, an error is thrown.
      * @param {object} model - The instance to validate.
@@ -403,7 +420,7 @@ export class TileModel {
      */
     static validateInstance(model) {
         if (!(model instanceof this)) {
-            throw new TypeError(`The model must be an instance of ${this.name}!`);
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
         }
     }
 }

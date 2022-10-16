@@ -36,6 +36,26 @@ describe('StraightTileModel', () => {
         expect(StraightTileModel).toEqual(expect.any(Function));
     });
 
+    describe('can clone', () => {
+        it('its instance', () => {
+            const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, 2);
+            const clone = tile.clone();
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(StraightTileModel);
+        });
+
+        it('a given instance', () => {
+            const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, 2);
+            const clone = StraightTileModel.clone(tile);
+
+            expect(clone).not.toBe(tile);
+            expect(clone).toStrictEqual(tile);
+            expect(clone).toBeInstanceOf(StraightTileModel);
+        });
+    });
+
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             expect(() => new StraightTileModel({})).toThrow(
@@ -411,7 +431,7 @@ describe('StraightTileModel', () => {
         const tile = new StraightTileModel(specs);
         expect(() => StraightTileModel.validateInstance(tile)).not.toThrow();
         expect(() => StraightTileModel.validateInstance({})).toThrow(
-            'The model must be an instance of StraightTileModel!'
+            'The object must be an instance of StraightTileModel!'
         );
     });
 });
