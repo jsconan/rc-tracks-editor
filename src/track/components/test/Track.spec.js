@@ -20,7 +20,9 @@ import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
+import { buildTrack } from '../../helpers';
 import { TileList } from '../../../tile/models';
+import { TileListStore } from '../../../tile/stores';
 import { TileSpecifications } from '../../../tile/config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
@@ -33,8 +35,9 @@ const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
-const model = new TileList(specs);
-model.import([
+const tileList = new TileList(specs);
+const track = new TileListStore(tileList, list => buildTrack(list, { hPadding: 10, vPadding: 20, startAngle: 90 }));
+tileList.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 }
@@ -42,7 +45,7 @@ model.import([
 
 describe('Track', () => {
     it('renders with default values', () => {
-        const props = { model };
+        const props = { track };
         const { container } = render(Context, {
             props: {
                 component: Track,
@@ -57,14 +60,11 @@ describe('Track', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            model,
+            track,
             x: 100,
             y: 200,
             width: 400,
-            height: 400,
-            hPadding: 10,
-            vPadding: 20,
-            angle: 90
+            height: 400
         };
         const { container } = render(Context, {
             props: {
@@ -78,16 +78,13 @@ describe('Track', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('update when the model is modified', async () => {
+    it('updates when the store is modified', async () => {
         const props = {
-            model,
+            track,
             x: 100,
             y: 200,
             width: 400,
-            height: 400,
-            hPadding: 10,
-            vPadding: 20,
-            angle: 90
+            height: 400
         };
         const rendered = render(Context, {
             props: {
@@ -99,30 +96,18 @@ describe('Track', () => {
         });
 
         await tick();
-        model.append();
+        tileList.append();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });
 
-    it('needs a valid model', () => {
+    it('needs a valid store', () => {
         expect(() =>
             render(Track, {
                 props: {
-                    model: {}
+                    track: {}
                 }
             })
-        ).toThrow("'model' is not a store with a 'subscribe' method");
-
-        expect(() =>
-            render(Track, {
-                props: {
-                    model: {
-                        subscribe() {
-                            return () => {};
-                        }
-                    }
-                }
-            })
-        ).toThrow('The object must be an instance of TileList!');
+        ).toThrow("'track' is not a store with a 'subscribe' method");
     });
 });

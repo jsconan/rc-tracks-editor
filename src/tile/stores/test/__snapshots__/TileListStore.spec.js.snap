@@ -16,7 +16,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -49,7 +48,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -94,7 +92,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -127,7 +124,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -160,7 +156,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -205,7 +200,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -262,7 +256,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -282,7 +275,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -339,7 +331,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -396,7 +387,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -453,6 +443,5 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;

@@ -28,7 +28,6 @@ import { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
 import { CurvedTileModel } from './CurvedTileModel.js';
 import { StraightTileModel } from './StraightTileModel.js';
 import { TileSpecifications } from '../config';
-import { EventStore } from '../../core/stores';
 import { List } from '../../core/models';
 import { TileModel } from './TileModel';
 
@@ -62,30 +61,6 @@ export class TileList extends List {
             this.load(source);
             source = void 0;
         }
-
-        // Produces a store linked to the list events and returning the TileList
-        const store = new EventStore(
-            [
-                // List events
-                'set',
-                'add',
-                'delete',
-                'clear',
-                'load',
-                // TileList events
-                'specs',
-                'update'
-            ],
-            this
-        );
-
-        /**
-         * Adds a subscriber that will be notified each time the list is modified.
-         * @function subscribe
-         * @param {function} subscriber - A callback that will receive notifications when the list is changed.
-         * @returns {function} - Return a callback for removing the subscription.
-         */
-        this.subscribe = subscriber => store.subscribe(subscriber);
     }
 
     /**

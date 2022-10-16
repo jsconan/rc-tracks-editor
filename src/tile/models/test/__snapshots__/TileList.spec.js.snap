@@ -135,7 +135,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -168,7 +167,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -225,7 +223,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -282,7 +279,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -327,7 +323,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -372,7 +367,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -417,7 +411,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -450,7 +443,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -483,7 +475,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -552,7 +543,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -585,7 +575,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -642,7 +631,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -699,7 +687,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -744,7 +731,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -777,7 +763,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -834,7 +819,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -891,7 +875,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -934,7 +917,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -991,7 +973,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -1198,463 +1179,6 @@ exports[`TileList can map its values 1`] = `
 ]
 `;
 
-exports[`TileList can notify changes 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 2`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    CurvedTileModel {
-      "direction": "right",
-      "id": "id-80",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 3`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    CurvedTileModel {
-      "direction": "right",
-      "id": "id-81",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    CurvedTileModel {
-      "direction": "right",
-      "id": "id-80",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 4`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    CurvedTileModel {
-      "direction": "right",
-      "id": "id-81",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 5`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-82",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 6`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-83",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-82",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 7`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-83",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-82",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-84",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 8`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 9`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-85",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-86",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-87",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 10`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-85",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-86",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-87",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 2,
-    "barrierWidth": 1,
-    "laneWidth": 10,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
-exports[`TileList can notify changes 11`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-85",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-86",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-87",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 2,
-    "barrierWidth": 1,
-    "laneWidth": 10,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "subscribe": [Function],
-}
-`;
-
 exports[`TileList can produce an iterator 1`] = `
 [
   StraightTileModel {
@@ -1749,7 +1273,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -1794,7 +1317,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -1839,7 +1361,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -1884,7 +1405,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
@@ -2016,7 +1536,6 @@ TileList {
     "maxRatio": 4,
     "unlockRatio": false,
   },
-  "subscribe": [Function],
 }
 `;
 
