@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tileModelsStore can notify changes applied to the counter 1`] = `[]`;
+
+exports[`tileModelsStore can notify changes applied to the counter 2`] = `
+[
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`tileModelsStore can notify changes applied to the counter 3`] = `[]`;
+
+exports[`tileModelsStore can notify changes applied to the counter 4`] = `
+[
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
+
+exports[`tileModelsStore can notify changes applied to the counter 5`] = `[]`;
+
+exports[`tileModelsStore can notify changes applied to the counter 6`] = `
+[
+  StraightTileModel {
+    "direction": "right",
+    "id": "straight-tile-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+]
+`;
