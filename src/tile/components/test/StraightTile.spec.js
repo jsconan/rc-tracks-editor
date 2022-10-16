@@ -17,7 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
-import Context from './Context.svelte';
+import { Context } from '../../../core/components';
 import StraightTile from '../StraightTile.svelte';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';

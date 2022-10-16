@@ -2,10 +2,10 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { buildTrack } from '../builders';
+    import { buildTrack } from '../helpers';
     import { Sketch } from '../elements';
-    import { TilesList } from '../models';
-    import Tile from './Tile.svelte';
+    import { TileList } from '../../tile/models';
+    import { Tile } from '../../tile/components';
 
     export let model;
     export let angle = 0;
@@ -16,7 +16,7 @@
     export let hPadding = void 0;
     export let vPadding = void 0;
 
-    TilesList.validateInstance(model);
+    TileList.validateInstance(model);
 
     $: track = buildTrack($model, { startAngle: angle, hPadding, vPadding });
 </script>

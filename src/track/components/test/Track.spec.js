@@ -17,18 +17,23 @@
  */
 
 import { render } from '@testing-library/svelte';
-import Context from './Context.svelte';
+import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
-import { TilesList } from '../../models';
-import { TileSpecifications } from '../../config';
+import { TileList } from '../../../tile/models';
+import { TileSpecifications } from '../../../tile/config';
 import { wait } from '../../../core/helpers';
-import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_RIGHT
+} from '../../../tile/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const model = new TilesList(specs);
+const model = new TileList(specs);
 model.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
@@ -118,6 +123,6 @@ describe('Track', () => {
                     }
                 }
             })
-        ).toThrow('The model must be an instance of TilesList!');
+        ).toThrow('The model must be an instance of TileList!');
     });
 });

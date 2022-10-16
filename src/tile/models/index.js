@@ -16,4 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as buildTrack } from './buildTrack.js';
+export { CurvedTileEnlargedModel } from './CurvedTileEnlargedModel.js';
+export { CurvedTileModel } from './CurvedTileModel.js';
+export { StraightTileModel } from './StraightTileModel.js';
+export { TileList } from './TileList.js';
+export { TileModel } from './TileModel.js';

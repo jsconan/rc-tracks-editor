@@ -19,28 +19,28 @@
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
 import { StraightTileModel } from '../StraightTileModel.js';
 import { TileSpecifications } from '../../config';
-import { TilesList } from '../TilesList.js';
+import { TileList } from '../TileList.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
 
-describe('TilesList', () => {
+describe('TileList', () => {
     it('is a class', () => {
-        expect(TilesList).toEqual(expect.any(Function));
+        expect(TileList).toEqual(expect.any(Function));
     });
 
     describe('throws error', () => {
         it('when trying to create an instance with an invalid specifications object', () => {
             // @ts-expect-error
-            expect(() => new TilesList({})).toThrow(
+            expect(() => new TileList({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
         });
 
         it('when trying to set an invalid specifications object', () => {
-            const track = new TilesList(specs);
+            const track = new TileList(specs);
             // @ts-expect-error
             expect(() => track.setSpecs({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
@@ -48,18 +48,18 @@ describe('TilesList', () => {
         });
 
         it('when trying to add a tile with an invalid type', () => {
-            const track = new TilesList(specs);
+            const track = new TileList(specs);
             expect(() => track.appendTile('')).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
-            const track = new TilesList(specs);
+            const track = new TileList(specs);
             expect(() => track.appendTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
         });
     });
 
     it('can set the specifications of the tile', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         const newSpecs = new TileSpecifications(10, 1, 2);
         list.appendTile();
 
@@ -71,7 +71,7 @@ describe('TilesList', () => {
     });
 
     it('can get the index of a tile in the track', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
 
         list.appendTile();
         const id = list.appendTile();
@@ -83,7 +83,7 @@ describe('TilesList', () => {
 
     describe('can get a tile from the track', () => {
         it('by its identifier', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
 
             list.appendTile();
             const id = list.appendTile();
@@ -95,7 +95,7 @@ describe('TilesList', () => {
         });
 
         it('by its index', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
 
             list.appendTile();
             list.appendTile();
@@ -109,16 +109,16 @@ describe('TilesList', () => {
 
     describe('can build a track', () => {
         it('with the given size', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
 
-            expect(list).toBeInstanceOf(TilesList);
+            expect(list).toBeInstanceOf(TileList);
             expect(list).toMatchSnapshot();
         });
 
         describe('adding tiles', () => {
             describe('at the last position', () => {
                 it('with the default specifications', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile();
 
@@ -127,7 +127,7 @@ describe('TilesList', () => {
                 });
 
                 it('with a particular type', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
@@ -138,7 +138,7 @@ describe('TilesList', () => {
 
             describe('at the first position', () => {
                 it('with the default specifications', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.prependTile();
@@ -148,7 +148,7 @@ describe('TilesList', () => {
                 });
 
                 it('with a particular type', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.prependTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -161,7 +161,7 @@ describe('TilesList', () => {
 
         describe('removing tiles', () => {
             it('from the start', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 const id = list.appendTile();
                 list.appendTile();
@@ -172,7 +172,7 @@ describe('TilesList', () => {
             });
 
             it('from the middle', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
                 const id = list.appendTile();
@@ -183,7 +183,7 @@ describe('TilesList', () => {
             });
 
             it('from the end', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
                 list.appendTile();
@@ -194,7 +194,7 @@ describe('TilesList', () => {
             });
 
             it('at inexistent position', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
 
@@ -205,7 +205,7 @@ describe('TilesList', () => {
 
         describe('replacing tiles', () => {
             it('with a tile having default specifications', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
                 const id = list.appendTile();
@@ -218,7 +218,7 @@ describe('TilesList', () => {
             });
 
             it('with a tile having a particular type', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
                 list.appendTile();
@@ -231,7 +231,7 @@ describe('TilesList', () => {
             });
 
             it('at inexistent position', () => {
-                const list = new TilesList(specs);
+                const list = new TileList(specs);
 
                 list.appendTile();
                 expect(list.replaceTile('id')).toBeNull();
@@ -242,7 +242,7 @@ describe('TilesList', () => {
         describe('inserting tiles', () => {
             describe('before', () => {
                 it('an inexistent position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
 
@@ -251,7 +251,7 @@ describe('TilesList', () => {
                 });
 
                 it('the first position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile();
                     list.appendTile();
@@ -263,7 +263,7 @@ describe('TilesList', () => {
                 });
 
                 it('the last position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.appendTile();
@@ -275,7 +275,7 @@ describe('TilesList', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.appendTile();
@@ -288,7 +288,7 @@ describe('TilesList', () => {
                 });
 
                 it('with a particular type', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile();
                     const newId = list.insertTileBefore(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -301,7 +301,7 @@ describe('TilesList', () => {
 
             describe('after', () => {
                 it('an inexistent position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
 
@@ -310,7 +310,7 @@ describe('TilesList', () => {
                 });
 
                 it('the first position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile();
                     list.appendTile();
@@ -322,7 +322,7 @@ describe('TilesList', () => {
                 });
 
                 it('the last position', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.appendTile();
@@ -334,7 +334,7 @@ describe('TilesList', () => {
                 });
 
                 it('a position in the middle', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     list.appendTile();
                     const id = list.appendTile();
@@ -347,7 +347,7 @@ describe('TilesList', () => {
                 });
 
                 it('with a particular type', () => {
-                    const list = new TilesList(specs);
+                    const list = new TileList(specs);
 
                     const id = list.appendTile();
                     const newId = list.insertTileAfter(id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
@@ -361,7 +361,7 @@ describe('TilesList', () => {
     });
 
     it('can rebuilds the stats', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
 
         expect([...list.stats]).toEqual([]);
         expect(list.rebuildStats()).toBe(list);
@@ -378,14 +378,14 @@ describe('TilesList', () => {
     });
 
     it('can export to an object', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         list.appendTile(CURVED_TILE_TYPE);
 
         expect(list.export()).toMatchSnapshot();
     });
 
     it('can import from an object', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         const data = [
             {
                 type: CURVED_TILE_TYPE,
@@ -411,7 +411,7 @@ describe('TilesList', () => {
     });
 
     it('can clear the list', () => {
-        const list = new TilesList(specs);
+        const list = new TileList(specs);
         list.appendTile(CURVED_TILE_TYPE);
 
         expect(list.clear()).toBe(list);
@@ -420,7 +420,7 @@ describe('TilesList', () => {
 
     describe('can notify changes', () => {
         it('for changes applying to the tiles', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
                 expect(value).toBe(list);
@@ -449,7 +449,7 @@ describe('TilesList', () => {
         });
 
         it('for changes applying to the stats', () => {
-            const list = new TilesList(specs);
+            const list = new TileList(specs);
 
             const callback = jest.fn().mockImplementation(value => {
                 expect(value).toBe(list.stats);
@@ -479,8 +479,8 @@ describe('TilesList', () => {
     });
 
     it('can validate an object is an instance of the class', () => {
-        const list = new TilesList(specs);
-        expect(() => TilesList.validateInstance(list)).not.toThrow();
-        expect(() => TilesList.validateInstance({})).toThrow('The model must be an instance of TilesList!');
+        const list = new TileList(specs);
+        expect(() => TileList.validateInstance(list)).not.toThrow();
+        expect(() => TileList.validateInstance({})).toThrow('The model must be an instance of TileList!');
     });
 });

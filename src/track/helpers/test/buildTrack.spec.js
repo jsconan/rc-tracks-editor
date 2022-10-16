@@ -18,15 +18,15 @@
 
 import buildTrack from '../buildTrack.js';
 
-import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { TileSpecifications } from '../../config';
-import { TilesList } from '../../models';
+import { CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../../../tile/helpers';
+import { TileSpecifications } from '../../../tile/config';
+import { TileList } from '../../../tile/models';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications(laneWidth, barrierWidth, barrierChunks);
-const list = new TilesList(specs);
+const list = new TileList(specs);
 list.import([
     { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
     { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_RIGHT, ratio: 1 },
@@ -45,7 +45,7 @@ describe('buildTrack', () => {
 
     it('throws error when trying to use a wrong list of tiles', () => {
         // @ts-expect-error
-        expect(() => buildTrack([])).toThrow('The model must be an instance of TilesList!');
+        expect(() => buildTrack([])).toThrow('The model must be an instance of TileList!');
     });
 
     describe('process a list of tiles for rendering a track', () => {
