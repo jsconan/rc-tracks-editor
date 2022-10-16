@@ -49,7 +49,6 @@ describe('CurvedTileEnlargedModel', () => {
 
         it('when trying to set an invalid specifications object', () => {
             const tile = new CurvedTileEnlargedModel(specs);
-
             expect(() => tile.setSpecs({})).toThrow(
                 'The specifications object must be an instance of TileSpecifications!'
             );
@@ -392,6 +391,33 @@ describe('CurvedTileEnlargedModel', () => {
         const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
 
         expect(tile.export()).toMatchSnapshot();
+    });
+
+    it('compares tiles together', () => {
+        const unlockedSpecs = new TileSpecifications({
+            laneWidth,
+            barrierWidth,
+            barrierChunks,
+            maxRatio,
+            unlockRatio: true
+        });
+        const left1 = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_LEFT, 1);
+        const left2 = new CurvedTileEnlargedModel(unlockedSpecs, CurvedTileEnlargedModel.DIRECTION_LEFT, 2);
+        const right = new CurvedTileEnlargedModel(specs, CurvedTileEnlargedModel.DIRECTION_RIGHT, 1);
+
+        class T extends CurvedTileEnlargedModel {}
+        Object.defineProperty(T, 'TYPE', { value: 'T' });
+        const t = new T(specs);
+
+        expect(left1.compare()).toBe(1);
+        expect(left1.compare(t)).toBe(2);
+
+        expect(left1.compare(left2)).toBe(-1);
+        expect(left2.compare(left1)).toBe(1);
+        expect(left1.compare(left1)).toBe(0);
+
+        expect(left1.compare(right)).toBe(1);
+        expect(right.compare(left1)).toBe(-1);
     });
 
     it('can validate an object is an instance of the class', () => {

@@ -17,17 +17,5 @@
  */
 
 export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export { quadrantAngle, quadrantRange } from './angles.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    flipTileDirection,
-    isDirectionValid,
-    isTypeValid,
-    validateDirection,
-    validateType
-} from './tiles.js';
+export * from './angles.js';
+export * from './tiles.js';

@@ -337,6 +337,21 @@ describe('TileModel', () => {
         expect(tile.export()).toMatchSnapshot();
     });
 
+    it('compares tiles together', () => {
+        const left1 = new TileModel(specs, TileModel.DIRECTION_LEFT, 1);
+        const left2 = new TileModel(specs, TileModel.DIRECTION_LEFT, 2);
+        const right = new TileModel(specs, TileModel.DIRECTION_RIGHT, 1);
+
+        expect(left1.compare()).toBe(1);
+
+        expect(left1.compare(left2)).toBe(-1);
+        expect(left2.compare(left1)).toBe(1);
+        expect(left1.compare(left1)).toBe(0);
+
+        expect(left1.compare(right)).toBe(1);
+        expect(right.compare(left1)).toBe(-1);
+    });
+
     it('can validate an object is an instance of the class', () => {
         const tile = new TileModel(specs);
         expect(() => TileModel.validateInstance(tile)).not.toThrow();

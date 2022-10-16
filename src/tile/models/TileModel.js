@@ -21,7 +21,9 @@ import {
     validateDirection,
     DEFAULT_TILE_TYPE,
     TILE_DIRECTION_LEFT,
-    TILE_DIRECTION_RIGHT
+    TILE_DIRECTION_RIGHT,
+    getTypeRank,
+    getDirectionRank
 } from '../helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
@@ -367,6 +369,30 @@ export class TileModel {
     export() {
         const { type, direction, ratio } = this;
         return { type, direction, ratio };
+    }
+
+    /**
+     * Compares the model with another tile model and returns a number indicating whether the first
+     * comes before, or after, or is the same as the second.
+     * @param {TileModel} tile - The tile model to compare with.
+     * @returns {number} - Returns -1 if the model comes before, or 1 if it comes after, or 0 if it is similar.
+     */
+    compare(tile) {
+        if (!(tile instanceof TileModel)) {
+            return 1;
+        }
+
+        let comparison = getTypeRank(this.type) - getTypeRank(tile.type);
+        if (comparison) {
+            return comparison;
+        }
+
+        comparison = this.ratio - tile.ratio;
+        if (comparison) {
+            return comparison;
+        }
+
+        return getDirectionRank(this.direction) - getDirectionRank(tile.direction);
     }
 
     /**
