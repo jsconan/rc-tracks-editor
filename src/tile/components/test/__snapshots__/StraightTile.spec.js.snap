@@ -447,7 +447,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
     >
       <rect
         class="ground"
-        height="220"
+        height="110"
         width="90"
         x="55"
         y="150"
@@ -487,38 +487,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="342.5"
-        />
       </g>
       <g
         class="barrier straight-barrier"
@@ -554,38 +522,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           width="5"
           x="140"
           y="232.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="342.5"
         />
       </g>
     </g>
@@ -605,7 +541,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
     >
       <rect
         class="ground"
-        height="330"
+        height="110"
         width="90"
         x="55"
         y="150"
@@ -645,70 +581,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="342.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="370"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="397.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="425"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="452.5"
-        />
       </g>
       <g
         class="barrier straight-barrier"
@@ -744,70 +616,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           width="5"
           x="140"
           y="232.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="342.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="370"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="397.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="425"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="452.5"
         />
       </g>
     </g>
@@ -827,7 +635,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
     >
       <rect
         class="ground"
-        height="440"
+        height="110"
         width="90"
         x="55"
         y="150"
@@ -867,102 +675,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           x="55"
           y="232.5"
         />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="342.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="370"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="397.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="425"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="452.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="480"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="507.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="535"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="562.5"
-        />
       </g>
       <g
         class="barrier straight-barrier"
@@ -998,102 +710,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
           width="5"
           x="140"
           y="232.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="342.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="370"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="397.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="425"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="452.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="480"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="507.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="535"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="562.5"
         />
       </g>
     </g>
@@ -1395,7 +1011,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
     >
       <rect
         class="ground"
-        height="220"
+        height="110"
         width="90"
         x="55"
         y="150"
@@ -1435,38 +1051,6 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
           x="55"
           y="232.5"
         />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="55"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="55"
-          y="342.5"
-        />
       </g>
       <g
         class="barrier straight-barrier"
@@ -1502,38 +1086,6 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
           width="5"
           x="140"
           y="232.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="260"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="287.5"
-        />
-        
-        <rect
-          class="barrier-chunk odd"
-          height="27.5"
-          width="5"
-          x="140"
-          y="315"
-        />
-        
-        <rect
-          class="barrier-chunk even"
-          height="27.5"
-          width="5"
-          x="140"
-          y="342.5"
         />
       </g>
     </g>

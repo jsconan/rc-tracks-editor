@@ -74,7 +74,7 @@ describe('StraightTileModel', () => {
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
             expect(tile.minRatio).toBe(minRatio);
-            expect(tile.maxRatio).toBe(maxRatio);
+            expect(tile.maxRatio).toBe(1);
         });
 
         it('with the given size and direction', () => {
@@ -89,11 +89,34 @@ describe('StraightTileModel', () => {
             expect(tile.length).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
             expect(tile.minRatio).toBe(minRatio);
-            expect(tile.maxRatio).toBe(maxRatio);
+            expect(tile.maxRatio).toBe(1);
         });
 
         it.each(tileRatios)('with the given size and a ratio of %s', ratio => {
             const tile = new StraightTileModel(specs, StraightTileModel.DIRECTION_LEFT, ratio);
+            const sizeRatio = Math.min(ratio, 1);
+            const modelId = `${StraightTileModel.TYPE}-${sizeRatio}`;
+
+            expect(tile).toBeInstanceOf(StraightTileModel);
+            expect(tile).toMatchSnapshot();
+            expect(tile.type).toBe(StraightTileModel.TYPE);
+            expect(tile.modelId).toBe(modelId);
+            expect(tile.id).toBe(modelId);
+            expect(tile.length).toBe(tileLength * sizeRatio);
+            expect(tile.width).toBe(tileWidth);
+            expect(tile.minRatio).toBe(minRatio);
+            expect(tile.maxRatio).toBe(1);
+        });
+
+        it.each(tileRatios)('with the given size and an unlocked ratio of %s', ratio => {
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
+            const tile = new StraightTileModel(unlockedSpecs, StraightTileModel.DIRECTION_LEFT, ratio);
             const modelId = `${StraightTileModel.TYPE}-${ratio}`;
 
             expect(tile).toBeInstanceOf(StraightTileModel);
@@ -129,6 +152,26 @@ describe('StraightTileModel', () => {
 
         it('the size ratio', () => {
             const tile = new StraightTileModel(specs);
+            expect(tile.setRatio(1)).toBe(tile);
+            expect(tile.ratio).toBe(1);
+            expect(tile.setRatio(-1).ratio).toBe(1);
+            expect(tile.setRatio(0).ratio).toBe(1);
+            expect(tile.setRatio(0.15).ratio).toBe(0.25);
+            expect(tile.setRatio(0.33).ratio).toBe(0.25);
+            expect(tile.setRatio(0.5).ratio).toBe(0.5);
+            expect(tile.setRatio(2.5).ratio).toBe(1);
+            expect(tile.setRatio(5).ratio).toBe(1);
+        });
+
+        it('the unlocked size ratio', () => {
+            const unlockedSpecs = new TileSpecifications({
+                laneWidth,
+                barrierWidth,
+                barrierChunks,
+                maxRatio,
+                unlockRatio: true
+            });
+            const tile = new StraightTileModel(unlockedSpecs);
             expect(tile.setRatio(1)).toBe(tile);
             expect(tile.ratio).toBe(1);
             expect(tile.setRatio(-1).ratio).toBe(1);

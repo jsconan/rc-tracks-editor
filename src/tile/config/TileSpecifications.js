@@ -27,13 +27,15 @@ export class TileSpecifications {
      * @param {number} barrierWidth - The width of the barriers.
      * @param {number} barrierChunks - The number of barrier chunks per tile.
      * @param {number} maxRatio - The maximum value for size ratios.
+     * @param {boolean} unlockRatio - Unlock the maximum size ratio some tiles are applying.
      */
 
-    constructor({ laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4 } = {}) {
+    constructor({ laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4, unlockRatio = false } = {}) {
         this.setLaneWidth(laneWidth);
         this.setBarrierWidth(barrierWidth);
         this.setBarrierChunks(barrierChunks);
         this.setMaxRatio(maxRatio);
+        this.setUnlockRatio(unlockRatio);
     }
 
     /**
@@ -117,6 +119,17 @@ export class TileSpecifications {
      */
     setMaxRatio(maxRatio) {
         this.maxRatio = Math.abs(Math.round(maxRatio) || 1);
+
+        return this;
+    }
+
+    /**
+     * Locks or unlocks the maximum size ratio some tiles are applying.
+     * @param {boolean} unlockRatio - Whether or not unlock the size ratio.
+     * @returns {TileSpecifications} - Chains the instance.
+     */
+    setUnlockRatio(unlockRatio) {
+        this.unlockRatio = !!unlockRatio;
 
         return this;
     }

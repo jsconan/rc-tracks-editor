@@ -33,6 +33,17 @@ export class CurvedTileEnlargedModel extends TileModel {
     }
 
     /**
+     * The maximum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get maxRatio() {
+        if (this.specs.unlockRatio) {
+            return this.specs.maxRatio;
+        }
+        return 1;
+    }
+
+    /**
      * Computes the angle for rotating the tile to the expected direction.
      * @returns {number}
      */
@@ -76,6 +87,7 @@ export class CurvedTileEnlargedModel extends TileModel {
         if (this.ratio <= 1) {
             return this.specs.barrierChunks / 2;
         }
+
         return this.specs.barrierChunks * this.ratio;
     }
 

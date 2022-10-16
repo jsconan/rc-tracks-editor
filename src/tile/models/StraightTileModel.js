@@ -30,6 +30,18 @@ export class StraightTileModel extends TileModel {
     get width() {
         return this.specs.width;
     }
+
+    /**
+     * The maximum allowed size ratio for the tile.
+     * @type {number}
+     */
+    get maxRatio() {
+        if (this.specs.unlockRatio) {
+            return this.specs.maxRatio;
+        }
+
+        return 1;
+    }
 }
 
 /**

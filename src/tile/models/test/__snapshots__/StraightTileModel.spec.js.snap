@@ -10,6 +10,7 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -24,6 +25,7 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -38,11 +40,87 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
 
 exports[`StraightTileModel can build a tile with the given size and a ratio of 2 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`StraightTileModel can build a tile with the given size and a ratio of 3 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`StraightTileModel can build a tile with the given size and a ratio of 4 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`StraightTileModel can build a tile with the given size and an unlocked ratio of 0.5 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "id": "straight-tile-0.5",
+  "ratio": 0.5,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`StraightTileModel can build a tile with the given size and an unlocked ratio of 1 1`] = `
+StraightTileModel {
+  "direction": "left",
+  "id": "straight-tile-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`StraightTileModel can build a tile with the given size and an unlocked ratio of 2 1`] = `
 StraightTileModel {
   "direction": "left",
   "id": "straight-tile-2",
@@ -52,11 +130,12 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": true,
   },
 }
 `;
 
-exports[`StraightTileModel can build a tile with the given size and a ratio of 3 1`] = `
+exports[`StraightTileModel can build a tile with the given size and an unlocked ratio of 3 1`] = `
 StraightTileModel {
   "direction": "left",
   "id": "straight-tile-3",
@@ -66,11 +145,12 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": true,
   },
 }
 `;
 
-exports[`StraightTileModel can build a tile with the given size and a ratio of 4 1`] = `
+exports[`StraightTileModel can build a tile with the given size and an unlocked ratio of 4 1`] = `
 StraightTileModel {
   "direction": "left",
   "id": "straight-tile-4",
@@ -80,6 +160,7 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": true,
   },
 }
 `;
@@ -94,6 +175,7 @@ StraightTileModel {
     "barrierWidth": 5,
     "laneWidth": 80,
     "maxRatio": 4,
+    "unlockRatio": false,
   },
 }
 `;
@@ -207,7 +289,7 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
 
 exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
 {
-  "height": 90.00000000000001,
+  "height": 90,
   "input": {
     "angle": 90,
     "x": 0,
@@ -215,18 +297,18 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
   },
   "output": {
     "angle": 90,
-    "x": -220,
-    "y": 1.3471114790620885e-14,
+    "x": -110,
+    "y": 6.735557395310443e-15,
   },
-  "width": 220,
-  "x": -220,
+  "width": 110,
+  "x": -110,
   "y": -45,
 }
 `;
 
 exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 {
-  "height": 219.20310216782974,
+  "height": 141.4213562373095,
   "input": {
     "angle": 45,
     "x": 100,
@@ -234,11 +316,11 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
   },
   "output": {
     "angle": 45,
-    "x": -55.563491861040404,
-    "y": 255.5634918610405,
+    "x": 22.218254069479798,
+    "y": 177.78174593052023,
   },
-  "width": 219.20310216782968,
-  "x": -87.38329701443504,
+  "width": 141.42135623730948,
+  "x": -9.601551083914842,
   "y": 68.18019484660537,
 }
 `;
@@ -302,7 +384,7 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
 
 exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
 {
-  "height": 90.00000000000001,
+  "height": 90,
   "input": {
     "angle": 90,
     "x": 0,
@@ -310,18 +392,18 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
   },
   "output": {
     "angle": 90,
-    "x": -220,
-    "y": 1.3471114790620885e-14,
+    "x": -110,
+    "y": 6.735557395310443e-15,
   },
-  "width": 220,
-  "x": -220,
+  "width": 110,
+  "x": -110,
   "y": -45,
 }
 `;
 
 exports[`StraightTileModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
 {
-  "height": 219.20310216782974,
+  "height": 141.4213562373095,
   "input": {
     "angle": 45,
     "x": 100,
@@ -329,11 +411,11 @@ exports[`StraightTileModel can compute the bounding rectangle of the tile orient
   },
   "output": {
     "angle": 45,
-    "x": -55.563491861040404,
-    "y": 255.5634918610405,
+    "x": 22.218254069479798,
+    "y": 177.78174593052023,
   },
-  "width": 219.20310216782968,
-  "x": -87.38329701443504,
+  "width": 141.42135623730948,
+  "x": -9.601551083914842,
   "y": 68.18019484660537,
 }
 `;
@@ -368,42 +450,42 @@ Vector2D {
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 2 1`] = `
 Vector2D {
-  "x": -165,
+  "x": -55,
   "y": 0,
 }
 `;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 2 2`] = `
 Vector2D {
-  "x": -65,
+  "x": 45,
   "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 3 1`] = `
 Vector2D {
-  "x": -275,
+  "x": -55,
   "y": 0,
 }
 `;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 3 2`] = `
 Vector2D {
-  "x": -175,
+  "x": 45,
   "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 4 1`] = `
 Vector2D {
-  "x": -385,
+  "x": -55,
   "y": 0,
 }
 `;
 
 exports[`StraightTileModel can compute the center of the curve for a tile with a ratio of 4 2`] = `
 Vector2D {
-  "x": -285,
+  "x": 45,
   "y": 100,
 }
 `;
@@ -412,31 +494,31 @@ exports[`StraightTileModel can compute the inner radius of the curve for a tile 
 
 exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 1 1`] = `10`;
 
-exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 2 1`] = `120`;
+exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 2 1`] = `10`;
 
-exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 3 1`] = `230`;
+exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 3 1`] = `10`;
 
-exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 4 1`] = `340`;
+exports[`StraightTileModel can compute the inner radius of the curve for a tile with a ratio of 4 1`] = `10`;
 
 exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 0.5 1`] = `2`;
 
 exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 1 1`] = `4`;
 
-exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 2 1`] = `8`;
+exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 2 1`] = `4`;
 
-exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 3 1`] = `12`;
+exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 3 1`] = `4`;
 
-exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 4 1`] = `16`;
+exports[`StraightTileModel can compute the number of chunks by side for a tile with a ratio of 4 1`] = `4`;
 
 exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 0.5 1`] = `1`;
 
 exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 1 1`] = `2`;
 
-exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 2 1`] = `4`;
+exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 2 1`] = `2`;
 
-exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 3 1`] = `4`;
+exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 3 1`] = `2`;
 
-exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 4 1`] = `4`;
+exports[`StraightTileModel can compute the number of chunks for the inner curve for a tile with a ratio of 4 1`] = `2`;
 
 exports[`StraightTileModel can compute the number of chunks for the outer curve for a tile with a ratio of 0.5 1`] = `2`;
 
@@ -452,11 +534,11 @@ exports[`StraightTileModel can compute the outer radius of the curve for a tile 
 
 exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 1 1`] = `100`;
 
-exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 2 1`] = `210`;
+exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 2 1`] = `100`;
 
-exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 3 1`] = `320`;
+exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 3 1`] = `100`;
 
-exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 4 1`] = `430`;
+exports[`StraightTileModel can compute the outer radius of the curve for a tile with a ratio of 4 1`] = `100`;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 0.5 1`] = `
 Vector2D {
@@ -503,20 +585,20 @@ Vector2D {
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 2 1`] = `
 Vector2D {
   "x": 0,
-  "y": 110,
+  "y": 55,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 2 2`] = `
 Vector2D {
   "x": 100,
-  "y": 210,
+  "y": 155,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 2 3`] = `
 Vector2D {
-  "x": -10,
+  "x": 45,
   "y": 100,
 }
 `;
@@ -524,42 +606,42 @@ Vector2D {
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 3 1`] = `
 Vector2D {
   "x": 0,
-  "y": 165,
+  "y": 55,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 3 2`] = `
 Vector2D {
   "x": 100,
-  "y": 265,
+  "y": 155,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 3 3`] = `
 Vector2D {
-  "x": -65,
-  "y": 100.00000000000001,
+  "x": 45,
+  "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 4 1`] = `
 Vector2D {
   "x": 0,
-  "y": 220,
+  "y": 55,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 4 2`] = `
 Vector2D {
   "x": 100,
-  "y": 320,
+  "y": 155,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the center point for a tile with a ratio of 4 3`] = `
 Vector2D {
-  "x": -120,
-  "y": 100.00000000000001,
+  "x": 45,
+  "y": 100,
 }
 `;
 
@@ -701,11 +783,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 220,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 220,
+    "y": 110,
   },
 ]
 `;
@@ -722,11 +804,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 320,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 320,
+    "y": 210,
   },
 ]
 `;
@@ -742,12 +824,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -120,
+    "x": -10,
     "y": 145,
   },
   Vector2D {
-    "x": -120,
-    "y": 55.000000000000014,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -764,11 +846,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 330,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 330,
+    "y": 110,
   },
 ]
 `;
@@ -785,11 +867,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 430,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 430,
+    "y": 210,
   },
 ]
 `;
@@ -805,12 +887,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -230,
-    "y": 145.00000000000003,
+    "x": -10,
+    "y": 145,
   },
   Vector2D {
-    "x": -230,
-    "y": 55.00000000000002,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -827,11 +909,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 440,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 440,
+    "y": 110,
   },
 ]
 `;
@@ -848,11 +930,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 540,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 540,
+    "y": 210,
   },
 ]
 `;
@@ -868,12 +950,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -340,
-    "y": 145.00000000000003,
+    "x": -10,
+    "y": 145,
   },
   Vector2D {
-    "x": -340,
-    "y": 55.00000000000003,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -1016,11 +1098,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 220,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 220,
+    "y": 110,
   },
 ]
 `;
@@ -1037,11 +1119,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 320,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 320,
+    "y": 210,
   },
 ]
 `;
@@ -1057,12 +1139,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -120,
+    "x": -10,
     "y": 145,
   },
   Vector2D {
-    "x": -120,
-    "y": 55.000000000000014,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -1079,11 +1161,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 330,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 330,
+    "y": 110,
   },
 ]
 `;
@@ -1100,11 +1182,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 430,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 430,
+    "y": 210,
   },
 ]
 `;
@@ -1120,12 +1202,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -230,
-    "y": 145.00000000000003,
+    "x": -10,
+    "y": 145,
   },
   Vector2D {
-    "x": -230,
-    "y": 55.00000000000002,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -1142,11 +1224,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 45,
-    "y": 440,
+    "y": 110,
   },
   Vector2D {
     "x": -45,
-    "y": 440,
+    "y": 110,
   },
 ]
 `;
@@ -1163,11 +1245,11 @@ exports[`StraightTileModel can compute the position of the edge points for a til
   },
   Vector2D {
     "x": 145,
-    "y": 540,
+    "y": 210,
   },
   Vector2D {
     "x": 55,
-    "y": 540,
+    "y": 210,
   },
 ]
 `;
@@ -1183,12 +1265,12 @@ exports[`StraightTileModel can compute the position of the edge points for a til
     "y": 145,
   },
   Vector2D {
-    "x": -340,
-    "y": 145.00000000000003,
+    "x": -10,
+    "y": 145,
   },
   Vector2D {
-    "x": -340,
-    "y": 55.00000000000003,
+    "x": -10,
+    "y": 55.00000000000001,
   },
 ]
 `;
@@ -1238,63 +1320,63 @@ Vector2D {
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 1`] = `
 Vector2D {
   "x": 0,
-  "y": 220,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 2`] = `
 Vector2D {
   "x": 100,
-  "y": 320,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 3`] = `
 Vector2D {
-  "x": -120,
-  "y": 100.00000000000001,
+  "x": -10,
+  "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 1`] = `
 Vector2D {
   "x": 0,
-  "y": 330,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 2`] = `
 Vector2D {
   "x": 100,
-  "y": 430,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 3`] = `
 Vector2D {
-  "x": -230,
-  "y": 100.00000000000001,
+  "x": -10,
+  "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 1`] = `
 Vector2D {
   "x": 0,
-  "y": 440,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 2`] = `
 Vector2D {
   "x": 100,
-  "y": 540,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 3`] = `
 Vector2D {
-  "x": -340,
-  "y": 100.00000000000003,
+  "x": -10,
+  "y": 100,
 }
 `;
 
@@ -1343,63 +1425,63 @@ Vector2D {
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 1`] = `
 Vector2D {
   "x": 0,
-  "y": 220,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 2`] = `
 Vector2D {
   "x": 100,
-  "y": 320,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 3`] = `
 Vector2D {
-  "x": -120,
-  "y": 100.00000000000001,
+  "x": -10,
+  "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 1`] = `
 Vector2D {
   "x": 0,
-  "y": 330,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 2`] = `
 Vector2D {
   "x": 100,
-  "y": 430,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 3`] = `
 Vector2D {
-  "x": -230,
-  "y": 100.00000000000001,
+  "x": -10,
+  "y": 100,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 1`] = `
 Vector2D {
   "x": 0,
-  "y": 440,
+  "y": 110,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 2`] = `
 Vector2D {
   "x": 100,
-  "y": 540,
+  "y": 210,
 }
 `;
 
 exports[`StraightTileModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 3`] = `
 Vector2D {
-  "x": -340,
-  "y": 100.00000000000003,
+  "x": -10,
+  "y": 100,
 }
 `;
 
@@ -1439,9 +1521,9 @@ exports[`StraightTileModel can compute the transform command to rotate the tile 
 
 exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `"rotate(180 0 55)"`;
 
-exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)rotate(180 0 110)"`;
+exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)rotate(180 0 55)"`;
 
-exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)rotate(180 100 210)"`;
+exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)rotate(180 100 155)"`;
 
 exports[`StraightTileModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `""`;
 
@@ -1464,7 +1546,7 @@ exports[`StraightTileModel can export to an object a tile oriented to the left h
 exports[`StraightTileModel can export to an object a tile oriented to the left having a ratio of 2 1`] = `
 {
   "direction": "left",
-  "ratio": 2,
+  "ratio": 1,
   "type": "straight-tile",
 }
 `;
@@ -1480,7 +1562,7 @@ exports[`StraightTileModel can export to an object a tile oriented to the right 
 exports[`StraightTileModel can export to an object a tile oriented to the right having a ratio of 2 1`] = `
 {
   "direction": "right",
-  "ratio": 2,
+  "ratio": 1,
   "type": "straight-tile",
 }
 `;
