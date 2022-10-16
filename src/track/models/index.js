@@ -17,3 +17,4 @@
  */
 
 export { TrackBuilder } from './TrackBuilder.js';
+export { TrackModel } from './TrackModel.js';
