@@ -17,3 +17,4 @@
  */
 
 export { default as SimpleTrack } from './SimpleTrack.svelte';
+export { default as TrackStats } from './TrackStats.svelte';
