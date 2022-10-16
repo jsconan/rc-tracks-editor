@@ -16,16 +16,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as assign } from './assign.js';
-export { default as defined } from './defined.js';
-export { default as getOwnPropertyDescriptors } from './getOwnPropertyDescriptors.js';
-export { default as hasAPI } from './hasAPI.js';
-export { default as mixin } from './mixin.js';
-export { default as pick } from './pick.js';
-export { default as uid } from './uid.js';
-export { default as validateAPI } from './validateAPI.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+/**
+ * Checks if an object implements a list of functions.
+ * @param {*} obj - The object to check.
+ * @param {Array} api - The list of functions to check.
+ * @return {boolean} - Returns `true` if the given object implements the expected API.
+ */
+export default (obj, api) =>
+    'object' === typeof obj && Array.from(api || []).every(method => 'function' === typeof obj[method]);

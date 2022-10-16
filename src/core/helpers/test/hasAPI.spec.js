@@ -16,16 +16,21 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternate } from './alternate.js';
-export { default as assign } from './assign.js';
-export { default as defined } from './defined.js';
-export { default as getOwnPropertyDescriptors } from './getOwnPropertyDescriptors.js';
-export { default as hasAPI } from './hasAPI.js';
-export { default as mixin } from './mixin.js';
-export { default as pick } from './pick.js';
-export { default as uid } from './uid.js';
-export { default as validateAPI } from './validateAPI.js';
-export { default as validateCallback } from './validateCallback.js';
-export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+import hasAPI from '../hasAPI.js';
+
+describe('implementsAPI', () => {
+    it('is a function', () => {
+        expect(hasAPI).toEqual(expect.any(Function));
+    });
+
+    it('checks if an object implements a list of methods', () => {
+        const obj = {
+            get() {},
+            set() {}
+        };
+        expect(hasAPI(obj)).toBeTruthy();
+        expect(hasAPI(obj, ['get'])).toBeTruthy();
+        expect(hasAPI(obj, ['get', 'set'])).toBeTruthy();
+        expect(hasAPI(obj, ['get', 'set', 'delete'])).toBeFalsy();
+    });
+});
