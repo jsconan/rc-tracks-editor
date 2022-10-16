@@ -17,7 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
-import { wait } from '../../../core/helpers';
+import { tick } from 'svelte';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
 
@@ -86,12 +86,14 @@ describe('Sketch', () => {
         };
         const rendered = render(Sketch);
 
-        return wait(10)
-            .then(() => rendered.component.$set(props))
-            .then(() => expect(rendered.container).toMatchSnapshot())
-            .then(() => wait(10))
-            .then(() => rendered.component.$set(unset))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await tick();
+        rendered.component.$set(props);
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
+        await tick();
+        rendered.component.$set(unset);
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('renders with the given element in slots', () => {

@@ -17,11 +17,11 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import StraightTile from '../StraightTile.svelte';
 import { TileSpecifications } from '../../config';
 import { TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT } from '../../helpers';
-import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -100,8 +100,9 @@ describe('StraightTile', () => {
             }
         });
 
-        return wait(10)
-            .then(() => rendered.component.$set({ props: Object.assign({}, props, update) }))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await tick();
+        rendered.component.$set({ props: Object.assign({}, props, update) });
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
     });
 });

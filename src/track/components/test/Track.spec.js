@@ -17,11 +17,11 @@
  */
 
 import { render } from '@testing-library/svelte';
+import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Track from '../Track.svelte';
 import { TileList } from '../../../tile/models';
 import { TileSpecifications } from '../../../tile/config';
-import { wait } from '../../../core/helpers';
 import {
     CURVED_TILE_ENLARGED_TYPE,
     CURVED_TILE_TYPE,
@@ -98,10 +98,10 @@ describe('Track', () => {
             }
         });
 
-        return wait(10)
-            .then(() => model.appendTile())
-            .then(() => wait(10))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await tick();
+        model.appendTile();
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('needs a valid model', () => {
