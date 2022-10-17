@@ -16,82 +16,39 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { writable } from 'svelte/store';
 import { validateCallback } from '../helpers';
+import { eventEmitterMixin } from '../mixins';
 
 /**
- * Represents an observable set of counters.
- * Each change in the counters will be notified to the subscribers.
+ * Represents a set of counters.
  */
-export class Counter {
+export class Counter extends Map {
     /**
      * Creates an observable set of counters.
      * Each change in the counters will be notified to the subscribers.
      * @param {*} source - An iterable object that can be used to initialize the counters.
      */
-    constructor(source = []) {
-        this.counters = new Map();
-        const { subscribe, set } = writable(this);
+    constructor(source = null) {
+        super();
 
-        for (const [key, value] of source) {
-            this.counters.set(key, Math.floor(value) || 0);
+        eventEmitterMixin(this);
+
+        if (source) {
+            this.load(source);
+            source = void 0;
         }
-
-        /**
-         * Notifies all subscribers.
-         * @returns {Counter} - Chains the counter.
-         */
-        this.notify = () => {
-            set(this);
-
-            return this;
-        };
-
-        /**
-         * Adds a subscriber that will be notified each time a counter is modified.
-         * @function subscribe
-         * @param {function} subscriber - A callback that will receive notifications when a counter is changed.
-         * @returns {function} - Returns a callback for removing the subscription.
-         */
-        this.subscribe = subscribe;
-    }
-
-    /**
-     * The number of managed counters.
-     * @type {number}
-     */
-    get size() {
-        return this.counters.size;
-    }
-
-    /**
-     * Iterates over the counters.
-     * @yields {*} - The next counter in the list.
-     * @generator
-     */
-    *[Symbol.iterator]() {
-        yield* this.counters.entries();
-    }
-
-    /**
-     * Iterates over the counter keys.
-     * @yields {*} - The next key in the list.
-     * @generator
-     */
-    *keys() {
-        yield* this.counters.keys();
     }
 
     /**
      * Applies a callback to each counter from the list.
      * @param {function} walker - A callback that will be applied to each counter of the list.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
      * @throws {TypeError} - If the given callback is not a function.
      */
     forEach(walker) {
         validateCallback(walker);
 
-        this.counters.forEach((value, key) => walker.call(this, value, key, this));
+        super.forEach((value, key) => walker.call(this, value, key, this));
 
         return this;
     }
@@ -107,20 +64,11 @@ export class Counter {
 
         const counters = {};
 
-        for (const [key, value] of this.counters.entries()) {
+        for (const [key, value] of this.entries()) {
             counters[key] = mapper.call(this, value, key, this);
         }
 
         return counters;
-    }
-
-    /**
-     * Tells whether a counter exists or not.
-     * @param {string} key - The key of the counter to check.
-     * @returns {boolean} - Returns `true` if the counter exists.
-     */
-    has(key) {
-        return this.counters.has(key);
     }
 
     /**
@@ -129,34 +77,37 @@ export class Counter {
      * @returns {number} - The current value of the counter. It returns 0 if the counter does not exist.
      */
     get(key) {
-        if (this.counters.has(key)) {
-            return this.counters.get(key);
-        }
-        return 0;
+        return super.get(key) || 0;
     }
 
     /**
      * Sets the value for a particular counter.
      * @param {string} key - The key of the counter to set.
      * @param {number} value  - The new value of the counter. It must be a whole number.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
+     * @fires set
      */
     set(key, value) {
-        this.counters.set(key, Math.floor(value) || 0);
+        const previous = super.get(key) || 0;
+        super.set(key, Math.floor(value) || 0);
 
-        return this.notify();
+        this.emit('set', key, value, previous);
+
+        return this;
     }
 
     /**
      * Removes a counter.
      * @param {string} key - The key of the counter to delete.
      * @returns {boolean} - Returns `true` if a counter was deleted.
+     * @fires delete
      */
     delete(key) {
-        const deleted = this.counters.delete(key);
+        const value = super.get(key) || 0;
+        const deleted = super.delete(key);
 
         if (deleted) {
-            this.notify();
+            this.emit('delete', key, value);
         }
 
         return deleted;
@@ -166,73 +117,58 @@ export class Counter {
      * Increments a counter.
      * @param {string} key - The key of the counter to increment.
      * @param {number} amount - The amount to add to the counter.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
+     * @fires set
      */
     increment(key, amount = 1) {
         const value = Math.floor(amount) || 1;
-        this.counters.set(key, this.get(key) + value);
-
-        return this.notify();
+        return this.set(key, this.get(key) + value);
     }
 
     /**
      * Decrements a counter.
      * @param {string} key - The key of the counter to decrement.
      * @param {number} amount - The amount to subtract from the counter.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
+     * @fires set
      */
     decrement(key, amount = 1) {
         const value = Math.floor(amount) || 1;
-        this.counters.set(key, this.get(key) - value);
-
-        return this.notify();
+        return this.set(key, this.get(key) - value);
     }
 
     /**
      * Removes all counters.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
+     * @fires clear
      */
     clear() {
-        this.counters.clear();
+        super.clear();
 
-        return this.notify();
+        this.emit('clear');
+
+        return this;
     }
 
     /**
-     * Loads counters from another source. The existing counters are removed before.
+     * Loads counter from another source. The counters are cleared before.
      * @param {*} iterator - An iterable object that can be used to set the counters.
-     * @returns {Counter} - Chains the counter.
+     * @returns {Counter} - Chains the instance.
+     * @fires load
      */
     load(iterator) {
         if (!iterator || !iterator[Symbol.iterator]) {
             return this;
         }
 
-        this.counters.clear();
+        super.clear();
         for (const [key, value] of iterator) {
-            this.counters.set(key, Math.floor(value) || 0);
+            super.set(key, Math.floor(value) || 0);
         }
 
-        return this.notify();
-    }
+        this.emit('load');
 
-    /**
-     * Counts the occurrences from the given source. The existing counters are reset before.
-     * @param {*} [iterator] - An iterable object that can be used to set the counters.
-     * @returns {Counter} - Chains the counter.
-     */
-    reset(iterator) {
-        for (const key of this.counters.keys()) {
-            this.counters.set(key, 0);
-        }
-
-        if (iterator && iterator[Symbol.iterator]) {
-            for (const key of iterator) {
-                this.counters.set(key, this.get(key) + 1);
-            }
-        }
-
-        return this.notify();
+        return this;
     }
 
     /**
@@ -242,10 +178,47 @@ export class Counter {
     toObject() {
         const counters = {};
 
-        for (const [key, value] of this.counters.entries()) {
+        for (const [key, value] of this.entries()) {
             counters[key] = value;
         }
 
         return counters;
     }
+
+    /**
+     * Validates that the given object is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} object - The instance to validate.
+     * @throws {TypeError} - If the given object is not a valid instance.
+     */
+    static validateInstance(object) {
+        if (!(object instanceof this)) {
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
+        }
+    }
 }
+
+/**
+ * Notifies a value has been set to a counter.
+ * @event set
+ * @param {string} key - The key of the counter that was set.
+ * @param {number} newValue - The new value.
+ * @param {number} oldValue - The previous value.
+ */
+
+/**
+ * Notifies a counter has been removed.
+ * @event delete
+ * @param {string} key - The key of the counter that was removed.
+ * @param {number} value - The last value of the removed counter.
+ */
+
+/**
+ * Notifies all counters has been removed.
+ * @event clear
+ */
+
+/**
+ * Notifies the counters has been loaded.
+ * @event load
+ */

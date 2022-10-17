@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiMap can be initialized with another instance 1`] = `
+[
+  [
+    1,
+    "1",
+  ],
+  [
+    1,
+    "I",
+  ],
+  [
+    2,
+    "2",
+  ],
+  [
+    2,
+    "II",
+  ],
+  [
+    3,
+    "3",
+  ],
+  [
+    3,
+    "III",
+  ],
+]
+`;
+
+exports[`MultiMap can be initialized with values 1`] = `
+[
+  [
+    1,
+    "1",
+  ],
+  [
+    1,
+    "I",
+  ],
+  [
+    2,
+    "2",
+  ],
+  [
+    2,
+    "II",
+  ],
+  [
+    3,
+    "3",
+  ],
+  [
+    3,
+    "III",
+  ],
+]
+`;

@@ -2,27 +2,44 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { buildTrack } from '../builders';
     import { Sketch } from '../elements';
-    import { TilesList } from '../models';
-    import Tile from './Tile.svelte';
+    import { Tile } from '../../tile/components';
+    import { TrackModel } from '../models';
+    import { uid } from '../../core/helpers';
 
-    export let model;
-    export let angle = 0;
+    export let track;
     export let x = 0;
     export let y = 0;
     export let width = void 0;
     export let height = void 0;
-    export let hPadding = void 0;
-    export let vPadding = void 0;
 
-    TilesList.validateInstance(model);
+    TrackModel.validateInstance(track);
 
-    $: track = buildTrack($model, { startAngle: angle, hPadding, vPadding });
+    const tilesStore = track.tilesStore;
+    const modelsStore = track.modelsStore;
+
+    const trackId = uid();
+    const getId = id => `${trackId}-${id}`;
 </script>
 
-<Sketch {x} {y} {width} {height} viewX={track.x} viewY={track.y} viewWidth={track.width} viewHeight={track.height}>
-    {#each track.tiles as { id, type, direction, ratio, x, y, angle } (id)}
-        <Tile {type} {direction} {ratio} {angle} {x} {y} {id} />
+<Sketch
+    {x}
+    {y}
+    {width}
+    {height}
+    viewX={$tilesStore.x}
+    viewY={$tilesStore.y}
+    viewWidth={$tilesStore.width}
+    viewHeight={$tilesStore.height}
+>
+    {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
+        <use data-id={id} {x} {y} href="#{getId(model.modelId)}" transform={model.getRotateTransform(x, y, angle)} />
     {/each}
+    <svelte:fragment slot="defs">
+        {#each $modelsStore as { id, type, ratio, modelId } (id)}
+            <Tile id={getId(modelId)} {type} {ratio} />
+        {/each}
+        <slot name="defs" />
+    </svelte:fragment>
+    <slot />
 </Sketch>

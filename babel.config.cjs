@@ -16,31 +16,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-module.exports = function babelConfig(api) {
-    const minNodeVersion = '14';
-    const shouldPrintComment = val => /Copyright|License/.test(val);
-    const ignore = [];
-    const presets = [
+module.exports = {
+    presets: [
         [
             '@babel/preset-env',
             {
                 targets: {
-                    node: minNodeVersion
+                    node: 'current'
                 }
             }
         ]
-    ];
-    const plugins = ['babel-plugin-transform-vite-meta-env'];
-
-    if (!api.env('test')) {
-        ignore.push('**/*.spec.js');
-    }
-    api.cache(true);
-
-    return {
-        shouldPrintComment,
-        presets,
-        plugins,
-        ignore
-    };
+    ]
 };

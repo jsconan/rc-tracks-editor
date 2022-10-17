@@ -16,18 +16,5 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as alternateBarrierColor } from './alternateBarrierColor.js';
-export { quadrantAngle, quadrantRange } from './angles.js';
-export {
-    TILE_DIRECTION_RIGHT,
-    TILE_DIRECTION_LEFT,
-    DEFAULT_TILE_TYPE,
-    STRAIGHT_TILE_TYPE,
-    CURVED_TILE_TYPE,
-    CURVED_TILE_ENLARGED_TYPE,
-    flipTileDirection,
-    isDirectionValid,
-    isTypeValid,
-    validateDirection,
-    validateType
-} from './tiles.js';
+export { default as buildList } from './buildList.js';
+export { default as buildTrack } from './buildTrack.js';

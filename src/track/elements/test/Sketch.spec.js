@@ -17,7 +17,7 @@
  */
 
 import { render } from '@testing-library/svelte';
-import { wait } from '../../../core/helpers';
+import { tick } from 'svelte';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
 
@@ -38,6 +38,9 @@ describe('Sketch', () => {
     });
 
     it.each([
+        ['class', { class: 'tile' }],
+        ['style', { style: 'fill: #444;' }],
+        ['id', { id: 'foo' }],
         ['width and height', { width, height }],
         ['x, y, width and height', { x, y, width, height }],
         ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
@@ -59,6 +62,9 @@ describe('Sketch', () => {
     });
 
     it.each([
+        ['class', { class: 'tile' }],
+        ['style', { style: 'fill: #444;' }],
+        ['id', { id: 'foo' }],
         ['width and height', { width, height }],
         ['x, y, width and height', { x, y, width, height }],
         ['viewX, viewY, width, and height', { viewX, viewY, width, height }],
@@ -75,6 +81,9 @@ describe('Sketch', () => {
         ]
     ])('updates with the parameters %s', async (title, props) => {
         const unset = {
+            class: void 0,
+            style: void 0,
+            id: void 0,
             x: void 0,
             y: void 0,
             viewX: void 0,
@@ -86,12 +95,14 @@ describe('Sketch', () => {
         };
         const rendered = render(Sketch);
 
-        return wait(10)
-            .then(() => rendered.component.$set(props))
-            .then(() => expect(rendered.container).toMatchSnapshot())
-            .then(() => wait(10))
-            .then(() => rendered.component.$set(unset))
-            .then(() => expect(rendered.container).toMatchSnapshot());
+        await tick();
+        rendered.component.$set(props);
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
+        await tick();
+        rendered.component.$set(unset);
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it('renders with the given element in slots', () => {

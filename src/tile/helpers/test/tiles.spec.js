@@ -1,0 +1,154 @@
+/**
+ * RC Tracks Editor
+ * Copyright (c) 2022 Jean-Sébastien CONAN
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+import {
+    CURVED_TILE_ENLARGED_TYPE,
+    CURVED_TILE_TYPE,
+    DEFAULT_TILE_TYPE,
+    flipTileDirection,
+    getDirectionRank,
+    getDirections,
+    getTypeRank,
+    getTypes,
+    isDirectionValid,
+    isTypeValid,
+    STRAIGHT_TILE_TYPE,
+    TILE_DIRECTION_LEFT,
+    TILE_DIRECTION_RIGHT,
+    validateDirection,
+    validateType
+} from '../tiles.js';
+
+describe('flipTileDirection', () => {
+    it('is a function', () => {
+        expect(flipTileDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT],
+        [TILE_DIRECTION_LEFT, TILE_DIRECTION_RIGHT]
+    ])('flips the direction from %s to %s', (direction, flippedDirection) => {
+        expect(flipTileDirection(direction)).toBe(flippedDirection);
+    });
+});
+
+describe('getDirections', () => {
+    it('is a function', () => {
+        expect(getDirections).toEqual(expect.any(Function));
+    });
+
+    it('gives the list of tile directions', () => {
+        expect(getDirections()).toStrictEqual([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT]);
+    });
+});
+
+describe('getTypes', () => {
+    it('is a function', () => {
+        expect(getTypes).toEqual(expect.any(Function));
+    });
+
+    it('gives the list of tile types', () => {
+        expect(getTypes()).toStrictEqual([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE]);
+    });
+});
+
+describe('getDirectionRank', () => {
+    it('is a function', () => {
+        expect(getDirectionRank).toEqual(expect.any(Function));
+    });
+
+    it('gives the rank for a tile direction', () => {
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toEqual(expect.any(Number));
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toBeGreaterThan(getDirectionRank('foo'));
+        expect(getDirectionRank(TILE_DIRECTION_LEFT)).toBeGreaterThan(getDirectionRank(TILE_DIRECTION_RIGHT));
+        expect(getDirectionRank(TILE_DIRECTION_RIGHT)).toBeLessThan(getDirectionRank(TILE_DIRECTION_LEFT));
+    });
+});
+
+describe('getTypeRank', () => {
+    it('is a function', () => {
+        expect(getTypeRank).toEqual(expect.any(Function));
+    });
+
+    it('gives the rank for a tile type', () => {
+        expect(getTypeRank(DEFAULT_TILE_TYPE)).toEqual(expect.any(Number));
+        expect(getTypeRank(STRAIGHT_TILE_TYPE)).toBeGreaterThan(getTypeRank(DEFAULT_TILE_TYPE));
+        expect(getTypeRank(STRAIGHT_TILE_TYPE)).toBeGreaterThan(getTypeRank('foo'));
+        expect(getTypeRank(CURVED_TILE_ENLARGED_TYPE)).toBeGreaterThan(getTypeRank(STRAIGHT_TILE_TYPE));
+        expect(getTypeRank(CURVED_TILE_TYPE)).toBeGreaterThan(getTypeRank(CURVED_TILE_ENLARGED_TYPE));
+    });
+});
+
+describe('isDirectionValid', () => {
+    it('is a function', () => {
+        expect(isDirectionValid).toEqual(expect.any(Function));
+    });
+
+    it.each([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT])('tells the direction "%s" is valid', direction => {
+        expect(isDirectionValid(direction)).toBeTruthy();
+    });
+
+    it.each([-1, 0, 1, 2])('tells the direction "%s" is not valid', direction => {
+        expect(isDirectionValid(direction)).toBeFalsy();
+    });
+});
+
+describe('isTypeValid', () => {
+    it('is a function', () => {
+        expect(isTypeValid).toEqual(expect.any(Function));
+    });
+
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
+        'tells the type "%s" is valid',
+        direction => {
+            expect(isTypeValid(direction)).toBeTruthy();
+        }
+    );
+
+    it.each([DEFAULT_TILE_TYPE, 'left', 'right'])('tells the type "%s" is not valid', direction => {
+        expect(isTypeValid(direction)).toBeFalsy();
+    });
+});
+
+describe('validateDirection', () => {
+    it('is a function', () => {
+        expect(validateDirection).toEqual(expect.any(Function));
+    });
+
+    it.each([TILE_DIRECTION_RIGHT, TILE_DIRECTION_LEFT])('validates the direction "%s"', direction => {
+        expect(() => validateDirection(direction)).not.toThrow();
+    });
+
+    it.each([-1, 0, 1, 2])('throws an error if the direction is not valid, example with "%s"', direction => {
+        expect(() => validateDirection(direction)).toThrow('A valid direction is needed!');
+    });
+});
+
+describe('validateType', () => {
+    it('is a function', () => {
+        expect(validateType).toEqual(expect.any(Function));
+    });
+
+    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])('validates the type "%s"', type => {
+        expect(() => validateType(type)).not.toThrow();
+    });
+
+    it.each([-1, 0, 1, 2])('throws an error if the type is not valid, example with "%s"', type => {
+        expect(() => validateType(type)).toThrow('A valid type of tile is needed!');
+    });
+});

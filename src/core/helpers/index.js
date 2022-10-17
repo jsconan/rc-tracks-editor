@@ -17,9 +17,17 @@
  */
 
 export { default as alternate } from './alternate.js';
+export { default as assign } from './assign.js';
 export { default as defined } from './defined.js';
+export { default as eachWord } from './eachWord.js';
+export { default as getOwnPropertyDescriptors } from './getOwnPropertyDescriptors.js';
+export { default as hasAPI } from './hasAPI.js';
+export { default as mixin } from './mixin.js';
+export { default as pick } from './pick.js';
 export { default as uid } from './uid.js';
+export { default as validateAPI } from './validateAPI.js';
 export { default as validateCallback } from './validateCallback.js';
 export { default as wait } from './wait.js';
-export { arcTo, lineTo, moveTo } from './svg.js';
-export { rotate } from './transform.js';
+export * from './compare.js';
+export * from './svg.js';
+export * from './transform.js';

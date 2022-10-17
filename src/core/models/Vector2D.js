@@ -660,12 +660,11 @@ export class Vector2D {
  * @constant {Vector2D} Vector2D.ORIGIN
  */
 Object.defineProperty(Vector2D, 'ORIGIN', {
-    value: new Vector2D(),
+    value: Object.freeze(new Vector2D()),
     writable: false,
     enumerable: true,
     configurable: true
 });
-Object.freeze(Vector2D.ORIGIN);
 
 /**
  * A right angle in degrees.

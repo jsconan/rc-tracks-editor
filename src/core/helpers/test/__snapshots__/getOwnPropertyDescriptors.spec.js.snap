@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getOwnPropertyDescriptors lists descriptors for a boolean property 1`] = `
+{
+  "flag": {
+    "configurable": true,
+    "enumerable": true,
+    "value": true,
+    "writable": true,
+  },
+}
+`;
+
+exports[`getOwnPropertyDescriptors lists descriptors for a function property 1`] = `
+{
+  "action": {
+    "configurable": true,
+    "enumerable": true,
+    "value": [Function],
+    "writable": true,
+  },
+}
+`;
+
+exports[`getOwnPropertyDescriptors lists descriptors for a number property 1`] = `
+{
+  "answer": {
+    "configurable": true,
+    "enumerable": true,
+    "value": 42,
+    "writable": true,
+  },
+}
+`;
+
+exports[`getOwnPropertyDescriptors lists descriptors for a string property 1`] = `
+{
+  "message": {
+    "configurable": true,
+    "enumerable": true,
+    "value": "hello",
+    "writable": true,
+  },
+}
+`;
+
+exports[`getOwnPropertyDescriptors lists descriptors for a symbol property 1`] = `
+{
+  Symbol(Symbol.iterator): {
+    "configurable": true,
+    "enumerable": true,
+    "value": [Function],
+    "writable": true,
+  },
+}
+`;

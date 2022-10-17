@@ -20,10 +20,11 @@
  * Validates that the given callback is a function.
  * Otherwise, an error is thrown.
  * @param {*} callback - The callback to validate.
+ * @param {string} [type] - The type of callback.
  * @throws {TypeError} - If the given callback is not a function.
  */
-export default callback => {
+export default (callback, type = 'callback') => {
     if ('function' !== typeof callback) {
-        throw new TypeError('A callback function is expected!');
+        throw new TypeError(`A ${type} function is expected!`);
     }
 };

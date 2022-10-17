@@ -1,0 +1,1818 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "right",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and a ratio of 0.5 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and a ratio of 1 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and a ratio of 2 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and a ratio of 3 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and a ratio of 4 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and an unlocked ratio of 0.5 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and an unlocked ratio of 1 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and an unlocked ratio of 2 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-2",
+  "ratio": 2,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and an unlocked ratio of 3 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-3",
+  "ratio": 3,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and an unlocked ratio of 4 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-4",
+  "ratio": 4,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": true,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can build a tile with the given size and direction 1`] = `
+CurvedTileEnlargedModel {
+  "direction": "left",
+  "id": "curved-tile-enlarged-1",
+  "ratio": 1,
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the curve for a tile with a ratio of 0.5 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the curve for a tile with a ratio of 1 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the curve for a tile with a ratio of 2 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the curve for a tile with a ratio of 3 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the curve for a tile with a ratio of 4 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 0.5 1`] = `270`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 0.5 2`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 1`] = `270`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 1 2`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 1`] = `270`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 2 2`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 1`] = `270`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 3 2`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 1`] = `270`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the left with a ratio of 4 2`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 0.5 2`] = `180`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 1 2`] = `180`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 2 2`] = `180`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 3 2`] = `180`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the angle of the output point for a tile oriented to the right with a ratio of 4 2`] = `180`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `
+{
+  "height": 100,
+  "input": {
+    "angle": 0,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 270,
+    "x": 155,
+    "y": 155,
+  },
+  "width": 100,
+  "x": 55,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+{
+  "height": 141.4213562373095,
+  "input": {
+    "angle": 45,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 315,
+    "x": 100,
+    "y": 177.78174593052023,
+  },
+  "width": 115.71067811865476,
+  "x": 16.109127034739892,
+  "y": 68.18019484660537,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+{
+  "height": 100,
+  "input": {
+    "angle": 0,
+    "x": 0,
+    "y": 0,
+  },
+  "output": {
+    "angle": 270,
+    "x": 55,
+    "y": 55,
+  },
+  "width": 100,
+  "x": -45,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
+{
+  "height": 100.00000000000001,
+  "input": {
+    "angle": 90,
+    "x": 0,
+    "y": 0,
+  },
+  "output": {
+    "angle": 0,
+    "x": -55,
+    "y": 55,
+  },
+  "width": 100,
+  "x": -100,
+  "y": -45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
+{
+  "height": 141.42135623730948,
+  "input": {
+    "angle": 45,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 315,
+    "x": 100.00000000000003,
+    "y": 177.78174593052023,
+  },
+  "width": 115.71067811865474,
+  "x": 16.1091270347399,
+  "y": 68.18019484660539,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `
+{
+  "height": 100,
+  "input": {
+    "angle": 0,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 90,
+    "x": 45,
+    "y": 155,
+  },
+  "width": 100,
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `
+{
+  "height": 115.71067811865476,
+  "input": {
+    "angle": 45,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 135,
+    "x": 22.21825406947977,
+    "y": 100,
+  },
+  "width": 141.42135623730948,
+  "x": -9.601551083914842,
+  "y": 68.18019484660536,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `
+{
+  "height": 100,
+  "input": {
+    "angle": 0,
+    "x": 0,
+    "y": 0,
+  },
+  "output": {
+    "angle": 90,
+    "x": -55,
+    "y": 55,
+  },
+  "width": 100,
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `
+{
+  "height": 100,
+  "input": {
+    "angle": 90,
+    "x": 0,
+    "y": 0,
+  },
+  "output": {
+    "angle": 180,
+    "x": -55,
+    "y": -55,
+  },
+  "width": 100,
+  "x": -100,
+  "y": -55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the bounding rectangle of the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `
+{
+  "height": 115.71067811865474,
+  "input": {
+    "angle": 45,
+    "x": 100,
+    "y": 100,
+  },
+  "output": {
+    "angle": 135,
+    "x": 22.21825406947977,
+    "y": 100.00000000000003,
+  },
+  "width": 141.4213562373095,
+  "x": -9.601551083914856,
+  "y": 68.18019484660537,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 1 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 2 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 2 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 3 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 3 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 4 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 0,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the center of the curve for a tile with a ratio of 4 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the inner radius of the curve for a tile with a ratio of 0.5 1`] = `10`;
+
+exports[`CurvedTileEnlargedModel can compute the inner radius of the curve for a tile with a ratio of 1 1`] = `10`;
+
+exports[`CurvedTileEnlargedModel can compute the inner radius of the curve for a tile with a ratio of 2 1`] = `10`;
+
+exports[`CurvedTileEnlargedModel can compute the inner radius of the curve for a tile with a ratio of 3 1`] = `10`;
+
+exports[`CurvedTileEnlargedModel can compute the inner radius of the curve for a tile with a ratio of 4 1`] = `10`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks by side for a tile with a ratio of 0.5 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks by side for a tile with a ratio of 1 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks by side for a tile with a ratio of 2 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks by side for a tile with a ratio of 3 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks by side for a tile with a ratio of 4 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with a ratio of 0.5 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with a ratio of 1 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with a ratio of 2 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with a ratio of 3 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with a ratio of 4 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with an unlocked ratio of 0.5 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with an unlocked ratio of 1 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with an unlocked ratio of 2 1`] = `8`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with an unlocked ratio of 3 1`] = `12`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the inner curve for a tile with an unlocked ratio of 4 1`] = `16`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the outer curve for a tile with a ratio of 0.5 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the outer curve for a tile with a ratio of 1 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the outer curve for a tile with a ratio of 2 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the outer curve for a tile with a ratio of 3 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the number of chunks for the outer curve for a tile with a ratio of 4 1`] = `2`;
+
+exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 0.5 1`] = `45`;
+
+exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 1 1`] = `45`;
+
+exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 2 1`] = `45`;
+
+exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 3 1`] = `45`;
+
+exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 4 1`] = `45`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 1 1`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 1 2`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 1 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 2 1`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 2 2`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 2 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 3 1`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 3 2`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 3 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 4 1`] = `
+Vector2D {
+  "x": 0,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 4 2`] = `
+Vector2D {
+  "x": 100,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 4 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 100,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 1`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 2`] = `
+[
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 0.5 3`] = `
+[
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 1`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 2`] = `
+[
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 1 3`] = `
+[
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 1`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 2`] = `
+[
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 2 3`] = `
+[
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 1`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 2`] = `
+[
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 3 3`] = `
+[
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 1`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 55.00000000000001,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 55.00000000000001,
+  },
+  Vector2D {
+    "x": -45,
+    "y": 1.2246467991473532e-14,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 1.2246467991473533e-15,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 2`] = `
+[
+  Vector2D {
+    "x": 155,
+    "y": 110,
+  },
+  Vector2D {
+    "x": 155,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 55,
+    "y": 100.00000000000001,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the left with a ratio of 4 3`] = `
+[
+  Vector2D {
+    "x": 90,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 99.99999999999999,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 1`] = `
+[
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 2`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 0.5 3`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 1`] = `
+[
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 2`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 1 3`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 1`] = `
+[
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 2`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 2 3`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 1`] = `
+[
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 2`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 3 3`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 1`] = `
+[
+  Vector2D {
+    "x": -45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 2.7554552980815448e-15,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -54.99999999999999,
+    "y": 100,
+  },
+  Vector2D {
+    "x": -55,
+    "y": 10,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 2`] = `
+[
+  Vector2D {
+    "x": 55,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 145,
+    "y": 155,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45.00000000000001,
+    "y": 200,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 110,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the edge points for a tile oriented to the right with a ratio of 4 3`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 55,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 45,
+    "y": 145,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 45.000000000000014,
+  },
+  Vector2D {
+    "x": 90,
+    "y": 45,
+  },
+]
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 1`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 2`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 1 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 1`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 2`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 2 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 1`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 2`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 3 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 1`] = `
+Vector2D {
+  "x": 55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 2`] = `
+Vector2D {
+  "x": 155,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the left with a ratio of 4 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 0.5 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 1 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 2 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 3 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 1`] = `
+Vector2D {
+  "x": -55,
+  "y": 55,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 2`] = `
+Vector2D {
+  "x": 45,
+  "y": 155,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the position of the output point for a tile oriented to the right with a ratio of 4 3`] = `
+Vector2D {
+  "x": 45,
+  "y": 45,
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the left with a ratio of 0.5 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the left with a ratio of 1 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the left with a ratio of 2 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the left with a ratio of 3 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the left with a ratio of 4 1`] = `90`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the right with a ratio of 0.5 1`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the right with a ratio of 1 1`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the right with a ratio of 2 1`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the right with a ratio of 3 1`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the rotation angle for a tile oriented to the right with a ratio of 4 1`] = `0`;
+
+exports[`CurvedTileEnlargedModel can compute the side of the curve for a tile with a ratio of 0.5 1`] = `55`;
+
+exports[`CurvedTileEnlargedModel can compute the side of the curve for a tile with a ratio of 1 1`] = `55`;
+
+exports[`CurvedTileEnlargedModel can compute the side of the curve for a tile with a ratio of 2 1`] = `55`;
+
+exports[`CurvedTileEnlargedModel can compute the side of the curve for a tile with a ratio of 3 1`] = `55`;
+
+exports[`CurvedTileEnlargedModel can compute the side of the curve for a tile with a ratio of 4 1`] = `55`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `"rotate(90 100 155)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)rotate(90 100 155)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the left with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `"rotate(90 0 55)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)rotate(90 0 55)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the left with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)rotate(90 100 155)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 0 degrees 1`] = `""`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [100, 100] rotated by 45 degrees 1`] = `"rotate(45 100 100)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the right with a ratio of 1 and positioned at [undefined, undefined] rotated by undefined degrees 1`] = `""`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [0, 0] rotated by 90 degrees 1`] = `"rotate(90 0 0)"`;
+
+exports[`CurvedTileEnlargedModel can compute the transform command to rotate the tile oriented to the right with a ratio of 2 and positioned at [100, 100] rotated by 405 degrees 1`] = `"rotate(45 100 100)"`;
+
+exports[`CurvedTileEnlargedModel can export to an object a tile oriented to the left having a ratio of 1 1`] = `
+{
+  "direction": "left",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+}
+`;
+
+exports[`CurvedTileEnlargedModel can export to an object a tile oriented to the left having a ratio of 2 1`] = `
+{
+  "direction": "left",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+}
+`;
+
+exports[`CurvedTileEnlargedModel can export to an object a tile oriented to the right having a ratio of 1 1`] = `
+{
+  "direction": "right",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+}
+`;
+
+exports[`CurvedTileEnlargedModel can export to an object a tile oriented to the right having a ratio of 2 1`] = `
+{
+  "direction": "right",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+}
+`;
