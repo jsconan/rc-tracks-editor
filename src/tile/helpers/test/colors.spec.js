@@ -16,20 +16,42 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import alternateBarrierColor from '../alternateBarrierColor.js';
+import { barrierColor, groundColor } from '../colors.js';
 
-describe('alternateBarrierColor', () => {
+const colorEven = {
+    fill: 'var(--color-even)'
+};
+const colorOdd = {
+    fill: 'var(--color-odd)'
+};
+const colorGround = {
+    fill: 'var(--color-ground)',
+    stroke: 'var(--color-separator)',
+    strokeWidth: 1
+};
+
+describe('barrierColor', () => {
     it('is a function', () => {
-        expect(alternateBarrierColor).toEqual(expect.any(Function));
+        expect(barrierColor).toEqual(expect.any(Function));
     });
 
     it('alternates the colors with respect to the given index', () => {
-        expect(alternateBarrierColor(0)).toBe('even');
-        expect(alternateBarrierColor(1)).toBe('odd');
+        expect(barrierColor(0)).toStrictEqual(colorEven);
+        expect(barrierColor(1)).toStrictEqual(colorOdd);
     });
 
     it('loop back to the beginning when the given index exceeds the length', () => {
-        expect(alternateBarrierColor(2)).toBe('even');
-        expect(alternateBarrierColor(3)).toBe('odd');
+        expect(barrierColor(2)).toStrictEqual(colorEven);
+        expect(barrierColor(3)).toStrictEqual(colorOdd);
+    });
+});
+
+describe('groundColor', () => {
+    it('is a function', () => {
+        expect(groundColor).toEqual(expect.any(Function));
+    });
+
+    it('returns with the color attributes for a tile ground', () => {
+        expect(groundColor()).toStrictEqual(colorGround);
     });
 });

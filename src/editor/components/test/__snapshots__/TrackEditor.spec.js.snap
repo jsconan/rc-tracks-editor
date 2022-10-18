@@ -5,10 +5,10 @@ exports[`TrackEditor add tile to the track 1`] = `
   <div />
   <div>
     <article
-      class="editor svelte-11y0jlr"
+      class="editor svelte-1fjynid"
     >
       <aside
-        class="tiles svelte-11y0jlr"
+        class="tiles svelte-1fjynid"
       >
         <svg
           height="100%"
@@ -27,21 +27,23 @@ exports[`TrackEditor add tile to the track 1`] = `
               transform="rotate(270 -60 45)"
             >
               <path
-                class="ground"
                 d="M -105 45 A 10 10 0 0 1 -115 55 L -115 145 L -60 145 A 45 45 0 0 0 -15 100 L -15 45 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 45 A 10 10 0 0 1 -107.92893218813452 52.071067811865476 L -104.39339828220179 55.60660171779821 A 15 15 0 0 0 -100 45 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 52.071067811865476 A 10 10 0 0 1 -115 55 L -115 60 A 15 15 0 0 0 -104.39339828220179 55.60660171779821 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -49,13 +51,13 @@ exports[`TrackEditor add tile to the track 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 100 A 40 40 0 0 1 -31.715728752538098 128.2842712474619 L -28.18019484660536 131.81980515339464 A 45 45 0 0 0 -15 100 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -31.715728752538098 128.2842712474619 A 40 40 0 0 1 -60 140 L -60 145 A 45 45 0 0 0 -28.18019484660536 131.81980515339464 Z"
+                  fill="var(--color-even)"
                 />
               </g>
               <g
@@ -63,7 +65,7 @@ exports[`TrackEditor add tile to the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="5"
                   width="27.5"
                   x="-115"
@@ -71,7 +73,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="5"
                   width="27.5"
                   x="-87.5"
@@ -83,7 +85,7 @@ exports[`TrackEditor add tile to the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -91,7 +93,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -118,10 +120,10 @@ exports[`TrackEditor add tile to the track 1`] = `
       </aside>
        
       <article
-        class="track svelte-11y0jlr"
+        class="track svelte-1fjynid"
       >
         <aside
-          class="stats svelte-11y0jlr"
+          class="stats svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -140,8 +142,10 @@ exports[`TrackEditor add tile to the track 1`] = `
                 transform=""
               >
                 <rect
-                  class="ground"
+                  fill="var(--color-ground)"
                   height="110"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                   width="90"
                   x="0"
                   y="-65"
@@ -151,7 +155,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -159,7 +163,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -167,7 +171,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -175,7 +179,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -187,7 +191,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -195,7 +199,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -203,7 +207,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -211,7 +215,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -237,21 +241,23 @@ exports[`TrackEditor add tile to the track 1`] = `
                 transform=""
               >
                 <path
-                  class="ground"
                   d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
+                  fill="var(--color-ground)"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                 />
                 <g
                   class="barrier curved-barrier"
                 >
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
+                    fill="var(--color-odd)"
                   />
                 </g>
                 <g
@@ -259,23 +265,23 @@ exports[`TrackEditor add tile to the track 1`] = `
                 >
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
+                    fill="var(--color-even)"
                   />
                 </g>
               </g>
@@ -297,7 +303,7 @@ exports[`TrackEditor add tile to the track 1`] = `
         </aside>
          
         <article
-          class="canvas svelte-11y0jlr"
+          class="canvas svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -317,8 +323,10 @@ exports[`TrackEditor add tile to the track 1`] = `
                   transform=""
                 >
                   <rect
-                    class="ground"
+                    fill="var(--color-ground)"
                     height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                     width="90"
                     x="-45"
                     y="0"
@@ -328,7 +336,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -336,7 +344,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -344,7 +352,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -352,7 +360,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -364,7 +372,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -372,7 +380,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -380,7 +388,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -388,7 +396,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -404,21 +412,23 @@ exports[`TrackEditor add tile to the track 1`] = `
                   transform=""
                 >
                   <path
-                    class="ground"
                     d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                   />
                   <g
                     class="barrier curved-barrier"
                   >
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
                     />
                   </g>
                   <g
@@ -426,23 +436,23 @@ exports[`TrackEditor add tile to the track 1`] = `
                   >
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
                     />
                   </g>
                 </g>
@@ -493,10 +503,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
   <div />
   <div>
     <article
-      class="editor svelte-11y0jlr"
+      class="editor svelte-1fjynid"
     >
       <aside
-        class="tiles svelte-11y0jlr"
+        class="tiles svelte-1fjynid"
       >
         <svg
           height="100%"
@@ -515,8 +525,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
               transform="rotate(270 -65 45)"
             >
               <rect
-                class="ground"
+                fill="var(--color-ground)"
                 height="110"
+                stroke="var(--color-separator)"
+                stroke-width="1"
                 width="90"
                 x="-110"
                 y="45"
@@ -526,7 +538,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -534,7 +546,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -542,7 +554,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -550,7 +562,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -562,7 +574,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -570,7 +582,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -578,7 +590,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -586,7 +598,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -613,21 +625,23 @@ exports[`TrackEditor flip tile in the track 1`] = `
               transform="rotate(270 -60 155)"
             >
               <path
-                class="ground"
                 d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 155 A 10 10 0 0 1 -107.92893218813452 162.07106781186548 L -104.39339828220179 165.6066017177982 A 15 15 0 0 0 -100 155 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 162.07106781186548 A 10 10 0 0 1 -115 165 L -115 170 A 15 15 0 0 0 -104.39339828220179 165.6066017177982 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -635,13 +649,13 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 210 A 40 40 0 0 1 -31.715728752538098 238.2842712474619 L -28.18019484660536 241.81980515339464 A 45 45 0 0 0 -15 210 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -31.715728752538098 238.2842712474619 A 40 40 0 0 1 -60 250 L -60 255 A 45 45 0 0 0 -28.18019484660536 241.81980515339464 Z"
+                  fill="var(--color-even)"
                 />
               </g>
               <g
@@ -649,7 +663,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="5"
                   width="27.5"
                   x="-115"
@@ -657,7 +671,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="5"
                   width="27.5"
                   x="-87.5"
@@ -669,7 +683,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -677,7 +691,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -704,10 +718,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
       </aside>
        
       <article
-        class="track svelte-11y0jlr"
+        class="track svelte-1fjynid"
       >
         <aside
-          class="stats svelte-11y0jlr"
+          class="stats svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -726,8 +740,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 transform=""
               >
                 <rect
-                  class="ground"
+                  fill="var(--color-ground)"
                   height="110"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                   width="90"
                   x="0"
                   y="-65"
@@ -737,7 +753,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -745,7 +761,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -753,7 +769,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -761,7 +777,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -773,7 +789,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -781,7 +797,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -789,7 +805,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -797,7 +813,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -823,21 +839,23 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 transform=""
               >
                 <path
-                  class="ground"
                   d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
+                  fill="var(--color-ground)"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                 />
                 <g
                   class="barrier curved-barrier"
                 >
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
+                    fill="var(--color-odd)"
                   />
                 </g>
                 <g
@@ -845,23 +863,23 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 >
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
+                    fill="var(--color-even)"
                   />
                 </g>
               </g>
@@ -883,7 +901,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
         </aside>
          
         <article
-          class="canvas svelte-11y0jlr"
+          class="canvas svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -903,8 +921,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   transform=""
                 >
                   <rect
-                    class="ground"
+                    fill="var(--color-ground)"
                     height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                     width="90"
                     x="-45"
                     y="0"
@@ -914,7 +934,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -922,7 +942,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -930,7 +950,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -938,7 +958,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -950,7 +970,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -958,7 +978,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -966,7 +986,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -974,7 +994,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -990,21 +1010,23 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   transform=""
                 >
                   <path
-                    class="ground"
                     d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                   />
                   <g
                     class="barrier curved-barrier"
                   >
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
                     />
                   </g>
                   <g
@@ -1012,23 +1034,23 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   >
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
                     />
                   </g>
                 </g>
@@ -1071,10 +1093,10 @@ exports[`TrackEditor renders with default values 1`] = `
 <body>
   <div>
     <article
-      class="editor svelte-11y0jlr"
+      class="editor svelte-1fjynid"
     >
       <aside
-        class="tiles svelte-11y0jlr"
+        class="tiles svelte-1fjynid"
       >
         <svg
           height="100%"
@@ -1093,8 +1115,10 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(270 -65 45)"
             >
               <rect
-                class="ground"
+                fill="var(--color-ground)"
                 height="110"
+                stroke="var(--color-separator)"
+                stroke-width="1"
                 width="90"
                 x="-110"
                 y="45"
@@ -1104,7 +1128,7 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1112,7 +1136,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1120,7 +1144,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1128,7 +1152,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1140,7 +1164,7 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1148,7 +1172,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1156,7 +1180,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1164,7 +1188,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1181,21 +1205,23 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(270 -60 155)"
             >
               <path
-                class="ground"
                 d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 155 A 10 10 0 0 1 -107.92893218813452 162.07106781186548 L -104.39339828220179 165.6066017177982 A 15 15 0 0 0 -100 155 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 162.07106781186548 A 10 10 0 0 1 -115 165 L -115 170 A 15 15 0 0 0 -104.39339828220179 165.6066017177982 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1203,13 +1229,13 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 210 A 40 40 0 0 1 -31.715728752538098 238.2842712474619 L -28.18019484660536 241.81980515339464 A 45 45 0 0 0 -15 210 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -31.715728752538098 238.2842712474619 A 40 40 0 0 1 -60 250 L -60 255 A 45 45 0 0 0 -28.18019484660536 241.81980515339464 Z"
+                  fill="var(--color-even)"
                 />
               </g>
               <g
@@ -1217,7 +1243,7 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="5"
                   width="27.5"
                   x="-115"
@@ -1225,7 +1251,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="5"
                   width="27.5"
                   x="-87.5"
@@ -1237,7 +1263,7 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -1245,7 +1271,7 @@ exports[`TrackEditor renders with default values 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -1262,21 +1288,23 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(270 -60 275)"
             >
               <path
-                class="ground"
                 d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 275 A 10 10 0 0 1 -107.92893218813452 282.0710678118655 L -104.39339828220179 285.6066017177982 A 15 15 0 0 0 -100 275 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 282.0710678118655 A 10 10 0 0 1 -115 285 L -115 290 A 15 15 0 0 0 -104.39339828220179 285.6066017177982 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1284,23 +1312,23 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 275 A 95 95 0 0 1 -27.23144441142776 311.35492607468353 L -22.61204674887132 313.268343236509 A 100 100 0 0 0 -15 275 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -27.23144441142776 311.35492607468353 A 95 95 0 0 1 -47.82485578727798 342.175144212722 L -44.289321881345245 345.71067811865476 A 100 100 0 0 0 -22.61204674887132 313.268343236509 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -47.82485578727798 342.175144212722 A 95 95 0 0 1 -78.64507392531647 362.7685555885722 L -76.73165676349102 367.3879532511287 A 100 100 0 0 0 -44.289321881345245 345.71067811865476 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -78.64507392531647 362.7685555885722 A 95 95 0 0 1 -115 370 L -115 375 A 100 100 0 0 0 -76.73165676349102 367.3879532511287 Z"
+                  fill="var(--color-even)"
                 />
               </g>
             </g>
@@ -1313,31 +1341,33 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(247.5 -73.1427663402398 407.5598771356377)"
             >
               <path
-                class="ground"
                 d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -120.44853269185215 430.9707157775731 L -115.544606289836 431.9461673876537 A 125 125 0 0 0 -113.1427663402398 407.5598771356377 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -120.44853269185215 430.9707157775731 A 120 120 0 0 1 -127.27722243888539 453.4818890194485 L -122.65782477632897 455.3953061812739 A 125 125 0 0 0 -115.544606289836 431.9461673876537 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -127.27722243888539 453.4818890194485 A 120 120 0 0 1 -138.36641286393439 474.22830509798996 L -134.20906480242166 477.006156263088 A 125 125 0 0 0 -122.65782477632897 455.3953061812739 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -138.36641286393439 474.22830509798996 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -149.75441869192136 495.9482247839561 A 125 125 0 0 0 -134.20906480242166 477.006156263088 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1345,23 +1375,23 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -33.1427663402398 407.5598771356377 A 205 205 0 0 1 -37.08178385757756 447.553393148944 L -32.17785745556142 448.52884475902465 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -37.08178385757756 447.553393148944 A 205 205 0 0 1 -48.74746217542602 486.0099807704811 L -44.1280645128696 487.92339793230656 A 210 210 0 0 0 -32.17785745556142 448.52884475902465 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -48.74746217542602 486.0099807704811 A 205 205 0 0 1 -67.69149581821802 521.4517749046561 L -63.534147756705295 524.2296260697542 A 210 210 0 0 0 -44.1280645128696 487.92339793230656 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -67.69149581821802 521.4517749046561 A 205 205 0 0 1 -93.18587619699755 552.5167672788799 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -63.534147756705295 524.2296260697542 Z"
+                  fill="var(--color-even)"
                 />
               </g>
             </g>
@@ -1374,31 +1404,33 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(255 -81.17523740319321 523.5048538691518)"
             >
               <path
-                class="ground"
                 d="M -126.1752374031932 523.5048538691518 A 230 230 0 0 1 -156.98939453277228 638.5048538691518 L -79.0471081921728 683.5048538691518 A 320 320 0 0 0 -36.175237403193194 523.5048538691518 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -126.1752374031932 523.5048538691518 A 230 230 0 0 1 -128.1429192872168 553.5258780797636 L -123.18569498034776 554.1785090408639 A 235 235 0 0 0 -121.1752374031932 523.5048538691518 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -128.1429192872168 553.5258780797636 A 230 230 0 0 1 -134.01229735670748 583.0332342427316 L -129.18266822526215 584.3273294682442 A 235 235 0 0 0 -123.18569498034776 554.1785090408639 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -134.01229735670748 583.0332342427316 A 230 230 0 0 1 -143.68294492559724 611.5220433131225 L -139.06354726304082 613.435460474948 A 235 235 0 0 0 -129.18266822526215 584.3273294682442 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -143.68294492559724 611.5220433131225 A 230 230 0 0 1 -156.98939453277228 638.5048538691518 L -152.6592675138501 641.0048538691518 A 235 235 0 0 0 -139.06354726304082 613.435460474948 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1406,23 +1438,23 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -41.175237403193194 523.5048538691518 A 315 315 0 0 1 -43.870106070442944 564.620604418468 L -38.912881763573864 565.2732353795683 A 320 320 0 0 0 -36.175237403193194 523.5048538691518 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -43.870106070442944 564.620604418468 A 315 315 0 0 1 -51.9086021221367 605.0328530764458 L -47.07897299069134 606.3269483019585 A 320 320 0 0 0 -38.912881763573864 565.2732353795683 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -51.9086021221367 605.0328530764458 A 315 315 0 0 1 -65.15318466213785 644.0501350641551 L -60.53378699958142 645.9635522259805 A 320 320 0 0 0 -47.07897299069134 606.3269483019585 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -65.15318466213785 644.0501350641551 A 315 315 0 0 1 -83.37723521109501 681.0048538691518 L -79.0471081921728 683.5048538691518 A 320 320 0 0 0 -60.53378699958142 645.9635522259805 Z"
+                  fill="var(--color-even)"
                 />
               </g>
             </g>
@@ -1435,31 +1467,33 @@ exports[`TrackEditor renders with default values 1`] = `
               transform="rotate(258.75 -85.10977397620938 639.3691830969162)"
             >
               <path
-                class="ground"
                 d="M -130.1097739762094 639.3691830969162 A 340 340 0 0 1 -155.99073292237193 769.4815501010468 L -72.84157499635609 803.9230590139048 A 430 430 0 0 0 -40.1097739762094 639.3691830969162 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -130.1097739762094 639.3691830969162 A 340 340 0 0 1 -131.74696690766245 672.6950108089668 L -126.77104327430146 673.1850965106146 A 345 345 0 0 0 -125.1097739762094 639.3691830969162 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -131.74696690766245 672.6950108089668 A 340 340 0 0 1 -136.64277863911104 705.6998925823998 L -131.73885223709487 706.6753441924805 A 345 345 0 0 0 -126.77104327430146 673.1850965106146 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -136.64277863911104 705.6998925823998 A 340 340 0 0 1 -144.75005982725838 738.0659733634334 L -139.96535814859737 739.5173967497058 A 345 345 0 0 0 -131.73885223709487 706.6753441924805 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -144.75005982725838 738.0659733634334 A 340 340 0 0 1 -155.99073292237193 769.4815501010468 L -151.37133525981545 771.3949672628722 A 345 345 0 0 0 -139.96535814859737 739.5173967497058 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1467,23 +1501,23 @@ exports[`TrackEditor renders with default values 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -45.1097739762094 639.3691830969162 A 425 425 0 0 1 -47.156265140525704 681.0264677369795 L -42.18034150716471 681.5165534386273 A 430 430 0 0 0 -40.1097739762094 639.3691830969162 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -47.156265140525704 681.0264677369795 A 425 425 0 0 1 -53.27602980483647 722.2825699537707 L -48.3721034028203 723.2580215638513 A 430 430 0 0 0 -42.18034150716471 681.5165534386273 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -53.27602980483647 722.2825699537707 A 425 425 0 0 1 -63.41013129002067 762.7401709300627 L -58.62542961135961 764.191594316335 A 430 430 0 0 0 -48.3721034028203 723.2580215638513 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -63.41013129002067 762.7401709300627 A 425 425 0 0 1 -77.46097265891251 802.0096418520794 L -72.84157499635609 803.9230590139048 A 430 430 0 0 0 -58.62542961135961 764.191594316335 Z"
+                  fill="var(--color-even)"
                 />
               </g>
             </g>
@@ -1496,10 +1530,10 @@ exports[`TrackEditor renders with default values 1`] = `
       </aside>
        
       <article
-        class="track svelte-11y0jlr"
+        class="track svelte-1fjynid"
       >
         <aside
-          class="stats svelte-11y0jlr"
+          class="stats svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -1518,7 +1552,7 @@ exports[`TrackEditor renders with default values 1`] = `
         </aside>
          
         <article
-          class="canvas svelte-11y0jlr"
+          class="canvas svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -1548,10 +1582,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
 <body>
   <div>
     <article
-      class="editor svelte-11y0jlr"
+      class="editor svelte-1fjynid"
     >
       <aside
-        class="tiles svelte-11y0jlr"
+        class="tiles svelte-1fjynid"
       >
         <svg
           height="100%"
@@ -1570,8 +1604,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               transform="rotate(270 -65 45)"
             >
               <rect
-                class="ground"
+                fill="var(--color-ground)"
                 height="110"
+                stroke="var(--color-separator)"
+                stroke-width="1"
                 width="90"
                 x="-110"
                 y="45"
@@ -1581,7 +1617,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1589,7 +1625,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1597,7 +1633,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1605,7 +1641,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-110"
@@ -1617,7 +1653,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1625,7 +1661,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1633,7 +1669,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1641,7 +1677,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-25"
@@ -1668,21 +1704,23 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               transform="rotate(270 -60 155)"
             >
               <path
-                class="ground"
                 d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 155 A 10 10 0 0 1 -107.92893218813452 162.07106781186548 L -104.39339828220179 165.6066017177982 A 15 15 0 0 0 -100 155 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 162.07106781186548 A 10 10 0 0 1 -115 165 L -115 170 A 15 15 0 0 0 -104.39339828220179 165.6066017177982 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -1690,13 +1728,13 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 210 A 40 40 0 0 1 -31.715728752538098 238.2842712474619 L -28.18019484660536 241.81980515339464 A 45 45 0 0 0 -15 210 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -31.715728752538098 238.2842712474619 A 40 40 0 0 1 -60 250 L -60 255 A 45 45 0 0 0 -28.18019484660536 241.81980515339464 Z"
+                  fill="var(--color-even)"
                 />
               </g>
               <g
@@ -1704,7 +1742,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="5"
                   width="27.5"
                   x="-115"
@@ -1712,7 +1750,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="5"
                   width="27.5"
                   x="-87.5"
@@ -1724,7 +1762,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -1732,7 +1770,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -1759,10 +1797,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
       </aside>
        
       <article
-        class="track svelte-11y0jlr"
+        class="track svelte-1fjynid"
       >
         <aside
-          class="stats svelte-11y0jlr"
+          class="stats svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -1781,8 +1819,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 transform=""
               >
                 <rect
-                  class="ground"
+                  fill="var(--color-ground)"
                   height="110"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                   width="90"
                   x="0"
                   y="-65"
@@ -1792,7 +1832,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -1800,7 +1840,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -1808,7 +1848,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -1816,7 +1856,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -1828,7 +1868,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -1836,7 +1876,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -1844,7 +1884,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -1852,7 +1892,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -1878,21 +1918,23 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 transform=""
               >
                 <path
-                  class="ground"
                   d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
+                  fill="var(--color-ground)"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                 />
                 <g
                   class="barrier curved-barrier"
                 >
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
+                    fill="var(--color-odd)"
                   />
                 </g>
                 <g
@@ -1900,23 +1942,23 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 >
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
+                    fill="var(--color-even)"
                   />
                 </g>
               </g>
@@ -1938,7 +1980,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
         </aside>
          
         <article
-          class="canvas svelte-11y0jlr"
+          class="canvas svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -1958,8 +2000,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   transform=""
                 >
                   <rect
-                    class="ground"
+                    fill="var(--color-ground)"
                     height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                     width="90"
                     x="-45"
                     y="0"
@@ -1969,7 +2013,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -1977,7 +2021,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -1985,7 +2029,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -1993,7 +2037,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -2005,7 +2049,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2013,7 +2057,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2021,7 +2065,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2029,7 +2073,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2045,21 +2089,23 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   transform=""
                 >
                   <path
-                    class="ground"
                     d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                   />
                   <g
                     class="barrier curved-barrier"
                   >
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
                     />
                   </g>
                   <g
@@ -2067,23 +2113,23 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   >
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
                     />
                   </g>
                 </g>
@@ -2126,10 +2172,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
 <body>
   <div>
     <article
-      class="editor svelte-11y0jlr"
+      class="editor svelte-1fjynid"
     >
       <aside
-        class="tiles svelte-11y0jlr"
+        class="tiles svelte-1fjynid"
       >
         <svg
           height="100%"
@@ -2148,21 +2194,23 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               transform="rotate(270 -60 45)"
             >
               <path
-                class="ground"
                 d="M -105 45 A 10 10 0 0 1 -115 55 L -115 145 L -60 145 A 45 45 0 0 0 -15 100 L -15 45 Z"
+                fill="var(--color-ground)"
+                stroke="var(--color-separator)"
+                stroke-width="1"
               />
               <g
                 class="barrier curved-barrier"
               >
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -105 45 A 10 10 0 0 1 -107.92893218813452 52.071067811865476 L -104.39339828220179 55.60660171779821 A 15 15 0 0 0 -100 45 Z"
+                  fill="var(--color-even)"
                 />
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -107.92893218813452 52.071067811865476 A 10 10 0 0 1 -115 55 L -115 60 A 15 15 0 0 0 -104.39339828220179 55.60660171779821 Z"
+                  fill="var(--color-odd)"
                 />
               </g>
               <g
@@ -2170,13 +2218,13 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               >
                 
                 <path
-                  class="barrier-chunk odd"
                   d="M -20 100 A 40 40 0 0 1 -31.715728752538098 128.2842712474619 L -28.18019484660536 131.81980515339464 A 45 45 0 0 0 -15 100 Z"
+                  fill="var(--color-odd)"
                 />
                 
                 <path
-                  class="barrier-chunk even"
                   d="M -31.715728752538098 128.2842712474619 A 40 40 0 0 1 -60 140 L -60 145 A 45 45 0 0 0 -28.18019484660536 131.81980515339464 Z"
+                  fill="var(--color-even)"
                 />
               </g>
               <g
@@ -2184,7 +2232,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="5"
                   width="27.5"
                   x="-115"
@@ -2192,7 +2240,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="5"
                   width="27.5"
                   x="-87.5"
@@ -2204,7 +2252,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               >
                 
                 <rect
-                  class="barrier-chunk odd"
+                  fill="var(--color-odd)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -2212,7 +2260,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 />
                 
                 <rect
-                  class="barrier-chunk even"
+                  fill="var(--color-even)"
                   height="27.5"
                   width="5"
                   x="-20"
@@ -2239,10 +2287,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
       </aside>
        
       <article
-        class="track svelte-11y0jlr"
+        class="track svelte-1fjynid"
       >
         <aside
-          class="stats svelte-11y0jlr"
+          class="stats svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -2261,8 +2309,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 transform=""
               >
                 <rect
-                  class="ground"
+                  fill="var(--color-ground)"
                   height="110"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                   width="90"
                   x="0"
                   y="-65"
@@ -2272,7 +2322,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -2280,7 +2330,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -2288,7 +2338,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -2296,7 +2346,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="0"
@@ -2308,7 +2358,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 >
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -2316,7 +2366,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -2324,7 +2374,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk odd"
+                    fill="var(--color-odd)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -2332,7 +2382,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   />
                   
                   <rect
-                    class="barrier-chunk even"
+                    fill="var(--color-even)"
                     height="27.5"
                     width="5"
                     x="85"
@@ -2358,21 +2408,23 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 transform=""
               >
                 <path
-                  class="ground"
                   d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
+                  fill="var(--color-ground)"
+                  stroke="var(--color-separator)"
+                  stroke-width="1"
                 />
                 <g
                   class="barrier curved-barrier"
                 >
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
+                    fill="var(--color-odd)"
                   />
                 </g>
                 <g
@@ -2380,23 +2432,23 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 >
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
+                    fill="var(--color-even)"
                   />
                   
                   <path
-                    class="barrier-chunk odd"
                     d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
+                    fill="var(--color-odd)"
                   />
                   
                   <path
-                    class="barrier-chunk even"
                     d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
+                    fill="var(--color-even)"
                   />
                 </g>
               </g>
@@ -2418,7 +2470,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
         </aside>
          
         <article
-          class="canvas svelte-11y0jlr"
+          class="canvas svelte-1fjynid"
         >
           <svg
             height="100%"
@@ -2438,8 +2490,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   transform=""
                 >
                   <rect
-                    class="ground"
+                    fill="var(--color-ground)"
                     height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                     width="90"
                     x="-45"
                     y="0"
@@ -2449,7 +2503,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -2457,7 +2511,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -2465,7 +2519,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -2473,7 +2527,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="-45"
@@ -2485,7 +2539,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   >
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2493,7 +2547,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2501,7 +2555,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk odd"
+                      fill="var(--color-odd)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2509,7 +2563,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                     />
                     
                     <rect
-                      class="barrier-chunk even"
+                      fill="var(--color-even)"
                       height="27.5"
                       width="5"
                       x="40"
@@ -2525,21 +2579,23 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   transform=""
                 >
                   <path
-                    class="ground"
                     d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="1"
                   />
                   <g
                     class="barrier curved-barrier"
                   >
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
                     />
                   </g>
                   <g
@@ -2547,23 +2603,23 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   >
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
                     />
                     
                     <path
-                      class="barrier-chunk odd"
                       d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
                     />
                     
                     <path
-                      class="barrier-chunk even"
                       d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
                     />
                   </g>
                 </g>

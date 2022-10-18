@@ -25,8 +25,20 @@ import { alternate } from '../../core/helpers';
 const barrierColors = ['even', 'odd'];
 
 /**
- * Returns the color for a barrier element at the given position.
+ * Returns the presentation attributes for a barrier element at the given position.
  * @param {number} i - The position of the barrier element.
- * @returns {string} - The color for the barrier element.
+ * @returns {object} - The color for the barrier element.
  */
-export default i => alternate(i, barrierColors);
+export const barrierColor = i => ({
+    fill: `var(--color-${alternate(i, barrierColors)})`
+});
+
+/**
+ * Returns the presentation attributes for a tile ground.
+ * @returns {object}
+ */
+export const groundColor = () => ({
+    fill: 'var(--color-ground)',
+    stroke: 'var(--color-separator)',
+    strokeWidth: 1
+});

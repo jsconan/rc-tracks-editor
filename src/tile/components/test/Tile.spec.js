@@ -144,7 +144,7 @@ describe('Tile', () => {
                 props
             }
         });
-        const element = container.querySelector('.ground');
+        const element = container.querySelector('.tile');
 
         component.$on('click', onClick);
         fireEvent.click(element);

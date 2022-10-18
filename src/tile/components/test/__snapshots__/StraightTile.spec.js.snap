@@ -8,8 +8,10 @@ exports[`StraightTile renders with default values 1`] = `
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="-45"
         y="0"
@@ -19,7 +21,7 @@ exports[`StraightTile renders with default values 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="-45"
@@ -27,7 +29,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="-45"
@@ -35,7 +37,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="-45"
@@ -43,7 +45,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="-45"
@@ -55,7 +57,7 @@ exports[`StraightTile renders with default values 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="40"
@@ -63,7 +65,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="40"
@@ -71,7 +73,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="40"
@@ -79,7 +81,7 @@ exports[`StraightTile renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="40"
@@ -102,8 +104,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform="rotate(180 100 205)"
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -113,7 +117,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -121,7 +125,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -129,7 +133,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -137,7 +141,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -149,7 +153,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -157,7 +161,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -165,7 +169,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -173,7 +177,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -196,8 +200,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform="rotate(45 100 150)rotate(180 100 205)"
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -207,7 +213,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -215,7 +221,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -223,7 +229,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -231,7 +237,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -243,7 +249,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -251,7 +257,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -259,7 +265,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -267,7 +273,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -290,8 +296,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="55"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -301,7 +309,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -309,7 +317,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -321,7 +329,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -329,7 +337,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -352,8 +360,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -363,7 +373,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -371,7 +381,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -379,7 +389,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -387,7 +397,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -399,7 +409,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -407,7 +417,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -415,7 +425,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -423,7 +433,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -446,8 +456,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -457,7 +469,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -465,7 +477,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -473,7 +485,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -481,7 +493,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -493,7 +505,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -501,7 +513,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -509,7 +521,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -517,7 +529,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -540,8 +552,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -551,7 +565,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -559,7 +573,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -567,7 +581,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -575,7 +589,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -587,7 +601,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -595,7 +609,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -603,7 +617,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -611,7 +625,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -634,8 +648,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -645,7 +661,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -653,7 +669,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -661,7 +677,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -669,7 +685,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -681,7 +697,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -689,7 +705,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -697,7 +713,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -705,7 +721,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -728,8 +744,10 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       transform="rotate(45 100 150)"
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -739,7 +757,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -747,7 +765,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -755,7 +773,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -763,7 +781,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -775,7 +793,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -783,7 +801,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -791,7 +809,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -799,7 +817,7 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -822,8 +840,10 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
       transform="rotate(45 100 150)"
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -833,7 +853,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -841,7 +861,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -849,7 +869,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -857,7 +877,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -869,7 +889,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -877,7 +897,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -885,7 +905,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -893,7 +913,7 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -916,8 +936,10 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
       transform="rotate(180 100 205)"
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -927,7 +949,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -935,7 +957,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -943,7 +965,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -951,7 +973,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -963,7 +985,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -971,7 +993,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -979,7 +1001,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -987,7 +1009,7 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -1010,8 +1032,10 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="150"
@@ -1021,7 +1045,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -1029,7 +1053,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -1037,7 +1061,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -1045,7 +1069,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -1057,7 +1081,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1065,7 +1089,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -1073,7 +1097,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1081,7 +1105,7 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -1104,8 +1128,10 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="-5"
         y="150"
@@ -1115,7 +1141,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="-5"
@@ -1123,7 +1149,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="-5"
@@ -1131,7 +1157,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="-5"
@@ -1139,7 +1165,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="-5"
@@ -1151,7 +1177,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="80"
@@ -1159,7 +1185,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="80"
@@ -1167,7 +1193,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="80"
@@ -1175,7 +1201,7 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="80"
@@ -1198,8 +1224,10 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
       transform=""
     >
       <rect
-        class="ground"
+        fill="var(--color-ground)"
         height="110"
+        stroke="var(--color-separator)"
+        stroke-width="1"
         width="90"
         x="55"
         y="40"
@@ -1209,7 +1237,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -1217,7 +1245,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -1225,7 +1253,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="55"
@@ -1233,7 +1261,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="55"
@@ -1245,7 +1273,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1253,7 +1281,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -1261,7 +1289,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1269,7 +1297,7 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"

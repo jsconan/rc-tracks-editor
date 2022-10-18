@@ -35,7 +35,10 @@ describe('CurvedElementEnlarged', () => {
             cy: 150,
             width: 80,
             side: 60,
-            radius: 50
+            radius: 50,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const { container } = render(CurvedElementEnlarged, { props });
 
@@ -49,7 +52,10 @@ describe('CurvedElementEnlarged', () => {
         ['cy', { cy: 40 }],
         ['width', { width: 40 }],
         ['side', { width: 40 }],
-        ['radius', { radius: 40 }]
+        ['radius', { radius: 40 }],
+        ['fill', { fill: 'blue' }],
+        ['stroke', { stroke: 'blue' }],
+        ['strokeWidth', { strokeWidth: 3 }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
             class: 'tile',
@@ -58,7 +64,10 @@ describe('CurvedElementEnlarged', () => {
             cy: 150,
             width: 80,
             side: 60,
-            radius: 50
+            radius: 50,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const rendered = render(CurvedElementEnlarged, { props });
 

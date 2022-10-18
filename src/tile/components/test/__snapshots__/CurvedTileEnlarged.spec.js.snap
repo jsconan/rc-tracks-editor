@@ -8,21 +8,23 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       transform=""
     >
       <path
-        class="ground"
         d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -30,13 +32,13 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -44,7 +46,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="-55"
@@ -52,7 +54,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="-27.5"
@@ -64,7 +66,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="40"
@@ -72,7 +74,7 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="40"
@@ -95,21 +97,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform="rotate(90 100 205)"
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -117,13 +121,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -131,7 +135,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -139,7 +143,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -151,7 +155,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -159,7 +163,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -182,21 +186,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform="rotate(45 100 150)rotate(90 100 205)"
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -204,13 +210,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -218,7 +224,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -226,7 +232,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -238,7 +244,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -246,7 +252,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -269,21 +275,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -291,13 +299,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -305,7 +313,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -313,7 +321,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -325,7 +333,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -333,7 +341,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -356,21 +364,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -378,13 +388,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -392,7 +402,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -400,7 +410,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -412,7 +422,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -420,7 +430,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -443,21 +453,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -465,13 +477,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -479,7 +491,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -487,7 +499,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -499,7 +511,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -507,7 +519,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -530,21 +542,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -552,13 +566,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -566,7 +580,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -574,7 +588,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -586,7 +600,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -594,7 +608,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -617,21 +631,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -639,13 +655,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -653,7 +669,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -661,7 +677,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -673,7 +689,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -681,7 +697,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -704,21 +720,23 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       transform="rotate(45 100 150)"
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -726,13 +744,13 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -740,7 +758,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -748,7 +766,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -760,7 +778,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -768,7 +786,7 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -791,21 +809,23 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
       transform="rotate(45 100 150)"
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -813,13 +833,13 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -827,7 +847,7 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -835,7 +855,7 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -847,7 +867,7 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -855,7 +875,7 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -878,21 +898,23 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
       transform="rotate(90 100 205)"
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -900,13 +922,13 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -914,7 +936,7 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -922,7 +944,7 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -934,7 +956,7 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -942,7 +964,7 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -965,21 +987,23 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
       transform=""
     >
       <path
-        class="ground"
         d="M 55 150 A 10 10 0 0 1 45 160 L 45 250 L 100 250 A 45 45 0 0 0 145 205 L 145 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 55.60660171779821 160.6066017177982 A 15 15 0 0 0 60 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 157.07106781186548 A 10 10 0 0 1 45 160 L 45 165 A 15 15 0 0 0 55.60660171779821 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -987,13 +1011,13 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 205 A 40 40 0 0 1 128.2842712474619 233.2842712474619 L 131.81980515339464 236.81980515339464 A 45 45 0 0 0 145 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 233.2842712474619 A 40 40 0 0 1 100 245 L 100 250 A 45 45 0 0 0 131.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -1001,7 +1025,7 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -1009,7 +1033,7 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -1021,7 +1045,7 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1029,7 +1053,7 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"
@@ -1052,21 +1076,23 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
       transform=""
     >
       <path
-        class="ground"
         d="M -5 150 A 10 10 0 0 1 -15 160 L -15 250 L 40 250 A 45 45 0 0 0 85 205 L 85 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M -5 150 A 10 10 0 0 1 -7.9289321881345245 157.07106781186548 L -4.393398282201787 160.6066017177982 A 15 15 0 0 0 0 150 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M -7.9289321881345245 157.07106781186548 A 10 10 0 0 1 -15 160 L -14.999999999999998 165 A 15 15 0 0 0 -4.393398282201787 160.6066017177982 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -1074,13 +1100,13 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 80 205 A 40 40 0 0 1 68.2842712474619 233.2842712474619 L 71.81980515339464 236.81980515339464 A 45 45 0 0 0 85 205 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 68.2842712474619 233.2842712474619 A 40 40 0 0 1 40 245 L 40 250 A 45 45 0 0 0 71.81980515339464 236.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -1088,7 +1114,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="-15"
@@ -1096,7 +1122,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="12.5"
@@ -1108,7 +1134,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="80"
@@ -1116,7 +1142,7 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="80"
@@ -1139,21 +1165,23 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
       transform=""
     >
       <path
-        class="ground"
         d="M 55 40 A 10 10 0 0 1 45 50 L 45 140 L 100 140 A 45 45 0 0 0 145 95 L 145 40 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="1"
       />
       <g
         class="barrier curved-barrier"
       >
         
         <path
-          class="barrier-chunk even"
           d="M 55 40 A 10 10 0 0 1 52.071067811865476 47.071067811865476 L 55.60660171779821 50.60660171779821 A 15 15 0 0 0 60 40 Z"
+          fill="var(--color-even)"
         />
         
         <path
-          class="barrier-chunk odd"
           d="M 52.071067811865476 47.071067811865476 A 10 10 0 0 1 45 50 L 45 55 A 15 15 0 0 0 55.60660171779821 50.60660171779821 Z"
+          fill="var(--color-odd)"
         />
       </g>
       <g
@@ -1161,13 +1189,13 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
       >
         
         <path
-          class="barrier-chunk odd"
           d="M 140 95 A 40 40 0 0 1 128.2842712474619 123.2842712474619 L 131.81980515339464 126.81980515339464 A 45 45 0 0 0 145 95 Z"
+          fill="var(--color-odd)"
         />
         
         <path
-          class="barrier-chunk even"
           d="M 128.2842712474619 123.2842712474619 A 40 40 0 0 1 100 135 L 100 140 A 45 45 0 0 0 131.81980515339464 126.81980515339464 Z"
+          fill="var(--color-even)"
         />
       </g>
       <g
@@ -1175,7 +1203,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="5"
           width="27.5"
           x="45"
@@ -1183,7 +1211,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="5"
           width="27.5"
           x="72.5"
@@ -1195,7 +1223,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
       >
         
         <rect
-          class="barrier-chunk odd"
+          fill="var(--color-odd)"
           height="27.5"
           width="5"
           x="140"
@@ -1203,7 +1231,7 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
         />
         
         <rect
-          class="barrier-chunk even"
+          fill="var(--color-even)"
           height="27.5"
           width="5"
           x="140"

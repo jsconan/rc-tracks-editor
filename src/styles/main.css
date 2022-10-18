@@ -7,6 +7,7 @@
     --color-bg-light: rgba(255, 255, 255, 0.87);
 
     /* track tiles */
+    --color-separator: #888;
     --color-ground: #444;
     --color-even: #eec;
     --color-odd: #c24;
@@ -55,22 +56,4 @@ body,
 
 #app {
     display: flex;
-}
-
-.ground {
-    fill: var(--color-ground);
-    stroke: var(--color-bg);
-    stroke-width: var(--tile-stroke-width);
-}
-
-.even {
-    fill: var(--color-even);
-    stroke: var(--color-even);
-    stroke-width: var(--tile-stroke-width);
-}
-
-.odd {
-    fill: var(--color-odd);
-    stroke: var(--color-odd);
-    stroke-width: var(--tile-stroke-width);
 }

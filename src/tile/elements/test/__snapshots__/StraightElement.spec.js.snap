@@ -18,7 +18,10 @@ exports[`StraightElement renders with the given parameters 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
       width="80"
       x="100"
@@ -33,7 +36,28 @@ exports[`StraightElement updates when the parameter class is modified 1`] = `
   <div>
     <rect
       class="curve"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      fill="blue"
+      height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
       width="80"
       x="100"
@@ -48,7 +72,46 @@ exports[`StraightElement updates when the parameter height is modified 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="40"
+      stroke="green"
+      stroke-width="2"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      fill="red"
+      height="100"
+      stroke="blue"
+      stroke-width="2"
+      style="fill: #444;"
+      width="80"
+      x="100"
+      y="150"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightElement updates when the parameter strokeWidth is modified 1`] = `
+<body>
+  <div>
+    <rect
+      class="tile"
+      fill="red"
+      height="100"
+      stroke="green"
+      stroke-width="3"
       style="fill: #444;"
       width="80"
       x="100"
@@ -63,7 +126,10 @@ exports[`StraightElement updates when the parameter style is modified 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #888"
       width="80"
       x="100"
@@ -78,7 +144,10 @@ exports[`StraightElement updates when the parameter width is modified 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
       width="40"
       x="100"
@@ -93,7 +162,10 @@ exports[`StraightElement updates when the parameter x is modified 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
       width="80"
       x="40"
@@ -108,7 +180,10 @@ exports[`StraightElement updates when the parameter y is modified 1`] = `
   <div>
     <rect
       class="tile"
+      fill="red"
       height="100"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
       width="80"
       x="100"

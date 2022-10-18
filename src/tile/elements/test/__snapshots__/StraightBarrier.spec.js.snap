@@ -8,7 +8,7 @@ exports[`StraightBarrier renders with default values 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="0"
@@ -16,7 +16,7 @@ exports[`StraightBarrier renders with default values 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="25"
@@ -24,7 +24,7 @@ exports[`StraightBarrier renders with default values 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="50"
@@ -32,7 +32,7 @@ exports[`StraightBarrier renders with default values 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="75"
@@ -51,7 +51,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="100"
@@ -59,7 +59,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="125"
@@ -67,7 +67,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="150"
@@ -75,7 +75,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="175"
@@ -94,7 +94,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -102,7 +102,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -110,7 +110,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -118,7 +118,7 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -137,7 +137,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
     >
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="100"
@@ -145,7 +145,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="125"
@@ -153,7 +153,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="150"
@@ -161,7 +161,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="175"
@@ -180,7 +180,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
     >
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -188,7 +188,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -196,7 +196,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -204,7 +204,7 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -223,7 +223,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="100"
@@ -231,7 +231,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="125"
@@ -239,7 +239,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="150"
@@ -247,7 +247,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="175"
@@ -255,7 +255,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="200"
@@ -274,7 +274,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="100"
@@ -282,7 +282,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="125"
@@ -290,7 +290,7 @@ exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="150"
@@ -309,7 +309,7 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="40"
@@ -317,7 +317,7 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="65"
@@ -325,7 +325,7 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="90"
@@ -333,7 +333,7 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="115"
@@ -352,7 +352,7 @@ exports[`StraightBarrier updates when the parameter length is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="20"
         x="100"
@@ -360,7 +360,7 @@ exports[`StraightBarrier updates when the parameter length is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="20"
         x="120"
@@ -368,7 +368,7 @@ exports[`StraightBarrier updates when the parameter length is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="20"
         x="140"
@@ -376,7 +376,7 @@ exports[`StraightBarrier updates when the parameter length is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="20"
         x="160"
@@ -395,7 +395,7 @@ exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="100"
@@ -403,7 +403,7 @@ exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="125"
@@ -411,7 +411,7 @@ exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="150"
@@ -419,7 +419,7 @@ exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="175"
@@ -438,7 +438,7 @@ exports[`StraightBarrier updates when the parameter top is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="100"
@@ -446,7 +446,7 @@ exports[`StraightBarrier updates when the parameter top is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="125"
@@ -454,7 +454,7 @@ exports[`StraightBarrier updates when the parameter top is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="6"
         width="25"
         x="150"
@@ -462,7 +462,7 @@ exports[`StraightBarrier updates when the parameter top is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="6"
         width="25"
         x="175"
@@ -481,7 +481,7 @@ exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -489,7 +489,7 @@ exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -497,7 +497,7 @@ exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="25"
         width="6"
         x="100"
@@ -505,7 +505,7 @@ exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="25"
         width="6"
         x="100"
@@ -524,7 +524,7 @@ exports[`StraightBarrier updates when the parameter width is modified 1`] = `
     >
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="4"
         width="25"
         x="100"
@@ -532,7 +532,7 @@ exports[`StraightBarrier updates when the parameter width is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="4"
         width="25"
         x="125"
@@ -540,7 +540,7 @@ exports[`StraightBarrier updates when the parameter width is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk even"
+        fill="var(--color-even)"
         height="4"
         width="25"
         x="150"
@@ -548,7 +548,7 @@ exports[`StraightBarrier updates when the parameter width is modified 1`] = `
       />
       
       <rect
-        class="barrier-chunk odd"
+        fill="var(--color-odd)"
         height="4"
         width="25"
         x="175"

@@ -115,7 +115,7 @@ describe('CurvedTileEnlarged', () => {
                 context: specs
             }
         });
-        const element = container.querySelector('.ground');
+        const element = container.querySelector('.tile');
 
         component.$on('click', onClick);
         fireEvent.click(element);
@@ -131,7 +131,7 @@ describe('CurvedTileEnlarged', () => {
                 context: specs
             }
         });
-        const element = container.querySelector('.ground');
+        const element = container.querySelector('.tile');
 
         component.$on('keypress', onKeyPress);
         fireEvent.keyPress(element);

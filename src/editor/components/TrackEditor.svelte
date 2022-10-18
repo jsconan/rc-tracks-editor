@@ -47,11 +47,13 @@
     .editor {
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
 
     .track {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .tiles {

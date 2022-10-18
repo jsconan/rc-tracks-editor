@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { alternateBarrierColor } from '../helpers';
+    import { barrierColor } from '../helpers';
     import StraightElement from './StraightElement.svelte';
 
     export let chunks;
@@ -28,7 +28,7 @@
         const segments = [];
 
         for (let i = 0; i < chunkCount; i++) {
-            const color = alternateBarrierColor(i + colorShift);
+            const color = barrierColor(i + colorShift);
             const d = i * chunkLength;
 
             const x = verticalSegment ? startX : startX + d;
@@ -36,7 +36,7 @@
             const w = verticalSegment ? chunkWidth : chunkLength;
             const h = verticalSegment ? chunkLength : chunkWidth;
 
-            segments.push({ color, x, y, w, h, i });
+            segments.push({ x, y, w, h, color, i });
         }
 
         return segments;
@@ -46,7 +46,7 @@
 </script>
 
 <g class="barrier straight-barrier">
-    {#each segments as { color, x, y, w, h, i } (i)}
-        <StraightElement class="barrier-chunk {color}" {x} {y} width={w} height={h} />
+    {#each segments as { x, y, w, h, color, i } (i)}
+        <StraightElement {x} {y} width={w} height={h} {...color} />
     {/each}
 </g>

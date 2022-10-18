@@ -53,8 +53,10 @@ exports[`SimpleTrack renders with default values 1`] = `
         transform="rotate(90 0 0)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-45"
           y="0"
@@ -64,7 +66,7 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -72,7 +74,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -80,7 +82,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -88,7 +90,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -100,7 +102,7 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -108,7 +110,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -116,7 +118,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -124,7 +126,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -140,21 +142,23 @@ exports[`SimpleTrack renders with default values 1`] = `
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
-          class="ground"
           d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -157.92893218813452 7.071067811865482 L -154.3933982822018 10.606601717798219 A 15 15 0 0 0 -150 6.735557395310443e-15 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -157.92893218813452 7.071067811865482 A 10 10 0 0 1 -165 10.000000000000007 L -165 15.000000000000007 A 15 15 0 0 0 -154.3933982822018 10.606601717798219 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -162,23 +166,23 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -70 6.735557395310443e-15 A 95 95 0 0 1 -77.23144441142776 36.35492607468353 L -72.61204674887132 38.26834323650898 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -77.23144441142776 36.35492607468353 A 95 95 0 0 1 -97.82485578727798 67.175144212722 L -94.28932188134524 70.71067811865474 A 100 100 0 0 0 -72.61204674887132 38.26834323650898 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -97.82485578727798 67.175144212722 A 95 95 0 0 1 -128.64507392531647 87.76855558857224 L -126.73165676349102 92.38795325112868 A 100 100 0 0 0 -94.28932188134524 70.71067811865474 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -128.64507392531647 87.76855558857224 A 95 95 0 0 1 -165 95 L -165 100 A 100 100 0 0 0 -126.73165676349102 92.38795325112868 Z"
+            fill="var(--color-even)"
           />
         </g>
       </g>
@@ -190,21 +194,23 @@ exports[`SimpleTrack renders with default values 1`] = `
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
-          class="ground"
           d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -210 -54.99999999999999 A 10 10 0 0 1 -212.92893218813452 -47.92893218813452 L -209.3933982822018 -44.39339828220178 A 15 15 0 0 0 -205 -54.99999999999999 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -212.92893218813452 -47.92893218813452 A 10 10 0 0 1 -220 -44.99999999999999 L -220 -39.99999999999999 A 15 15 0 0 0 -209.3933982822018 -44.39339828220178 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -212,13 +218,13 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -125 7.105427357601002e-15 A 40 40 0 0 1 -136.7157287525381 28.284271247461906 L -133.18019484660536 31.819805153394643 A 45 45 0 0 0 -120 7.105427357601002e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -136.7157287525381 28.284271247461906 A 40 40 0 0 1 -165 40.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -133.18019484660536 31.819805153394643 Z"
+            fill="var(--color-even)"
           />
         </g>
         <g
@@ -226,7 +232,7 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="5"
             width="27.5"
             x="-220"
@@ -234,7 +240,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="5"
             width="27.5"
             x="-192.5"
@@ -246,7 +252,7 @@ exports[`SimpleTrack renders with default values 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-125"
@@ -254,7 +260,7 @@ exports[`SimpleTrack renders with default values 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-125"
@@ -296,8 +302,10 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         transform="rotate(90 0 0)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-45"
           y="0"
@@ -307,7 +315,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -315,7 +323,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -323,7 +331,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -331,7 +339,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -343,7 +351,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -351,7 +359,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -359,7 +367,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -367,7 +375,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -383,21 +391,23 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
-          class="ground"
           d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -157.92893218813452 7.071067811865482 L -154.3933982822018 10.606601717798219 A 15 15 0 0 0 -150 6.735557395310443e-15 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -157.92893218813452 7.071067811865482 A 10 10 0 0 1 -165 10.000000000000007 L -165 15.000000000000007 A 15 15 0 0 0 -154.3933982822018 10.606601717798219 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -405,23 +415,23 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -70 6.735557395310443e-15 A 95 95 0 0 1 -77.23144441142776 36.35492607468353 L -72.61204674887132 38.26834323650898 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -77.23144441142776 36.35492607468353 A 95 95 0 0 1 -97.82485578727798 67.175144212722 L -94.28932188134524 70.71067811865474 A 100 100 0 0 0 -72.61204674887132 38.26834323650898 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -97.82485578727798 67.175144212722 A 95 95 0 0 1 -128.64507392531647 87.76855558857224 L -126.73165676349102 92.38795325112868 A 100 100 0 0 0 -94.28932188134524 70.71067811865474 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -128.64507392531647 87.76855558857224 A 95 95 0 0 1 -165 95 L -165 100 A 100 100 0 0 0 -126.73165676349102 92.38795325112868 Z"
+            fill="var(--color-even)"
           />
         </g>
       </g>
@@ -433,21 +443,23 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
-          class="ground"
           d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -210 -54.99999999999999 A 10 10 0 0 1 -212.92893218813452 -47.92893218813452 L -209.3933982822018 -44.39339828220178 A 15 15 0 0 0 -205 -54.99999999999999 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -212.92893218813452 -47.92893218813452 A 10 10 0 0 1 -220 -44.99999999999999 L -220 -39.99999999999999 A 15 15 0 0 0 -209.3933982822018 -44.39339828220178 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -455,13 +467,13 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -125 7.105427357601002e-15 A 40 40 0 0 1 -136.7157287525381 28.284271247461906 L -133.18019484660536 31.819805153394643 A 45 45 0 0 0 -120 7.105427357601002e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -136.7157287525381 28.284271247461906 A 40 40 0 0 1 -165 40.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -133.18019484660536 31.819805153394643 Z"
+            fill="var(--color-even)"
           />
         </g>
         <g
@@ -469,7 +481,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="5"
             width="27.5"
             x="-220"
@@ -477,7 +489,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="5"
             width="27.5"
             x="-192.5"
@@ -489,7 +501,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-125"
@@ -497,7 +509,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-125"
@@ -513,8 +525,10 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         transform="rotate(270 -110 -110)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-155"
           y="-110"
@@ -524,7 +538,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-155"
@@ -532,7 +546,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-155"
@@ -540,7 +554,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-155"
@@ -548,7 +562,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-155"
@@ -560,7 +574,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-70"
@@ -568,7 +582,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-70"
@@ -576,7 +590,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-70"
@@ -584,7 +598,7 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-70"
@@ -626,8 +640,10 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         transform="rotate(90 0 0)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-45"
           y="0"
@@ -637,7 +653,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -645,7 +661,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -653,7 +669,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -661,7 +677,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -673,7 +689,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -681,7 +697,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -689,7 +705,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -697,7 +713,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -713,21 +729,23 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
-          class="ground"
           d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -157.92893218813452 7.071067811865482 L -154.3933982822018 10.606601717798219 A 15 15 0 0 0 -150 6.735557395310443e-15 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -157.92893218813452 7.071067811865482 A 10 10 0 0 1 -165 10.000000000000007 L -165 15.000000000000007 A 15 15 0 0 0 -154.3933982822018 10.606601717798219 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -735,23 +753,23 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -70 6.735557395310443e-15 A 95 95 0 0 1 -77.23144441142776 36.35492607468353 L -72.61204674887132 38.26834323650898 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -77.23144441142776 36.35492607468353 A 95 95 0 0 1 -97.82485578727798 67.175144212722 L -94.28932188134524 70.71067811865474 A 100 100 0 0 0 -72.61204674887132 38.26834323650898 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -97.82485578727798 67.175144212722 A 95 95 0 0 1 -128.64507392531647 87.76855558857224 L -126.73165676349102 92.38795325112868 A 100 100 0 0 0 -94.28932188134524 70.71067811865474 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -128.64507392531647 87.76855558857224 A 95 95 0 0 1 -165 95 L -165 100 A 100 100 0 0 0 -126.73165676349102 92.38795325112868 Z"
+            fill="var(--color-even)"
           />
         </g>
       </g>
@@ -763,21 +781,23 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
-          class="ground"
           d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -210 -54.99999999999999 A 10 10 0 0 1 -212.92893218813452 -47.92893218813452 L -209.3933982822018 -44.39339828220178 A 15 15 0 0 0 -205 -54.99999999999999 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -212.92893218813452 -47.92893218813452 A 10 10 0 0 1 -220 -44.99999999999999 L -220 -39.99999999999999 A 15 15 0 0 0 -209.3933982822018 -44.39339828220178 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -785,13 +805,13 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -125 7.105427357601002e-15 A 40 40 0 0 1 -136.7157287525381 28.284271247461906 L -133.18019484660536 31.819805153394643 A 45 45 0 0 0 -120 7.105427357601002e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -136.7157287525381 28.284271247461906 A 40 40 0 0 1 -165 40.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -133.18019484660536 31.819805153394643 Z"
+            fill="var(--color-even)"
           />
         </g>
         <g
@@ -799,7 +819,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="5"
             width="27.5"
             x="-220"
@@ -807,7 +827,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="5"
             width="27.5"
             x="-192.5"
@@ -819,7 +839,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-125"
@@ -827,7 +847,7 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-125"
@@ -862,8 +882,10 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         transform="rotate(90 0 0)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-45"
           y="0"
@@ -873,7 +895,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -881,7 +903,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -889,7 +911,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-45"
@@ -897,7 +919,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-45"
@@ -909,7 +931,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -917,7 +939,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -925,7 +947,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="40"
@@ -933,7 +955,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="40"
@@ -949,21 +971,23 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
-          class="ground"
           d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -157.92893218813452 7.071067811865482 L -154.3933982822018 10.606601717798219 A 15 15 0 0 0 -150 6.735557395310443e-15 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -157.92893218813452 7.071067811865482 A 10 10 0 0 1 -165 10.000000000000007 L -165 15.000000000000007 A 15 15 0 0 0 -154.3933982822018 10.606601717798219 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -971,23 +995,23 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -70 6.735557395310443e-15 A 95 95 0 0 1 -77.23144441142776 36.35492607468353 L -72.61204674887132 38.26834323650898 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -77.23144441142776 36.35492607468353 A 95 95 0 0 1 -97.82485578727798 67.175144212722 L -94.28932188134524 70.71067811865474 A 100 100 0 0 0 -72.61204674887132 38.26834323650898 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -97.82485578727798 67.175144212722 A 95 95 0 0 1 -128.64507392531647 87.76855558857224 L -126.73165676349102 92.38795325112868 A 100 100 0 0 0 -94.28932188134524 70.71067811865474 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -128.64507392531647 87.76855558857224 A 95 95 0 0 1 -165 95 L -165 100 A 100 100 0 0 0 -126.73165676349102 92.38795325112868 Z"
+            fill="var(--color-even)"
           />
         </g>
       </g>
@@ -999,21 +1023,23 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
-          class="ground"
           d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="1"
         />
         <g
           class="barrier curved-barrier"
         >
           
           <path
-            class="barrier-chunk even"
             d="M -210 -54.99999999999999 A 10 10 0 0 1 -212.92893218813452 -47.92893218813452 L -209.3933982822018 -44.39339828220178 A 15 15 0 0 0 -205 -54.99999999999999 Z"
+            fill="var(--color-even)"
           />
           
           <path
-            class="barrier-chunk odd"
             d="M -212.92893218813452 -47.92893218813452 A 10 10 0 0 1 -220 -44.99999999999999 L -220 -39.99999999999999 A 15 15 0 0 0 -209.3933982822018 -44.39339828220178 Z"
+            fill="var(--color-odd)"
           />
         </g>
         <g
@@ -1021,13 +1047,13 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <path
-            class="barrier-chunk odd"
             d="M -125 7.105427357601002e-15 A 40 40 0 0 1 -136.7157287525381 28.284271247461906 L -133.18019484660536 31.819805153394643 A 45 45 0 0 0 -120 7.105427357601002e-15 Z"
+            fill="var(--color-odd)"
           />
           
           <path
-            class="barrier-chunk even"
             d="M -136.7157287525381 28.284271247461906 A 40 40 0 0 1 -165 40.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -133.18019484660536 31.819805153394643 Z"
+            fill="var(--color-even)"
           />
         </g>
         <g
@@ -1035,7 +1061,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="5"
             width="27.5"
             x="-220"
@@ -1043,7 +1069,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="5"
             width="27.5"
             x="-192.5"
@@ -1055,7 +1081,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-125"
@@ -1063,7 +1089,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-125"
@@ -1079,8 +1105,10 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         transform="rotate(270 -110 -110)"
       >
         <rect
-          class="ground"
+          fill="var(--color-ground)"
           height="110"
+          stroke="var(--color-separator)"
+          stroke-width="1"
           width="90"
           x="-155"
           y="-110"
@@ -1090,7 +1118,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-155"
@@ -1098,7 +1126,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-155"
@@ -1106,7 +1134,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-155"
@@ -1114,7 +1142,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-155"
@@ -1126,7 +1154,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         >
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-70"
@@ -1134,7 +1162,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-70"
@@ -1142,7 +1170,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk odd"
+            fill="var(--color-odd)"
             height="27.5"
             width="5"
             x="-70"
@@ -1150,7 +1178,7 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           />
           
           <rect
-            class="barrier-chunk even"
+            fill="var(--color-even)"
             height="27.5"
             width="5"
             x="-70"

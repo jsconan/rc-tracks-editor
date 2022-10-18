@@ -36,7 +36,10 @@ describe('CurvedElement', () => {
             width: 80,
             radius: 50,
             angle: 30,
-            start: 60
+            start: 60,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const { container } = render(CurvedElement, { props });
 
@@ -51,7 +54,10 @@ describe('CurvedElement', () => {
         ['width', { width: 40 }],
         ['radius', { radius: 40 }],
         ['angle', { angle: 40 }],
-        ['start', { start: 40 }]
+        ['start', { start: 40 }],
+        ['fill', { fill: 'blue' }],
+        ['stroke', { stroke: 'blue' }],
+        ['strokeWidth', { strokeWidth: 3 }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
             class: 'tile',
@@ -61,7 +67,10 @@ describe('CurvedElement', () => {
             width: 80,
             radius: 50,
             angle: 30,
-            start: 60
+            start: 60,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const rendered = render(CurvedElement, { props });
 

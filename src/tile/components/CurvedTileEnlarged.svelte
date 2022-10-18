@@ -3,6 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
+    import { groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { CurvedElementEnlarged, CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
@@ -74,12 +75,12 @@
 
 <g class="tile curved-tile-enlarged" {transform} {filter} {id} on:click on:keypress>
     <CurvedElementEnlarged
-        class="ground"
         cx={tile.curveCenter.x}
         cy={tile.curveCenter.y}
         {width}
         side={tile.side}
         radius={tile.innerRadius}
+        {...groundColor()}
     />
     <CurvedBarrier
         chunks={tile.innerChunks}

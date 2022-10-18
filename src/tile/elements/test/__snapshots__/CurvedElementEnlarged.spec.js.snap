@@ -16,6 +16,9 @@ exports[`CurvedElementEnlarged renders with the given parameters 1`] = `
     <path
       class="tile"
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>
@@ -28,6 +31,9 @@ exports[`CurvedElementEnlarged updates when the parameter class is modified 1`] 
     <path
       class="curve"
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>
@@ -40,6 +46,9 @@ exports[`CurvedElementEnlarged updates when the parameter cx is modified 1`] = `
     <path
       class="tile"
       d="M 90 150 A 50 50 0 0 1 40 200 L 40 280 L 100 280 A 70 70 0 0 0 170 210 L 170 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>
@@ -52,6 +61,24 @@ exports[`CurvedElementEnlarged updates when the parameter cy is modified 1`] = `
     <path
       class="tile"
       d="M 150 40 A 50 50 0 0 1 100 90 L 100 170 L 160 170 A 70 70 0 0 0 230 100 L 230 40 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      style="fill: #444;"
+    />
+  </div>
+</body>
+`;
+
+exports[`CurvedElementEnlarged updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <path
+      class="tile"
+      d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="blue"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>
@@ -64,6 +91,9 @@ exports[`CurvedElementEnlarged updates when the parameter radius is modified 1`]
     <path
       class="tile"
       d="M 140 150 A 40 40 0 0 1 100 190 L 100 270 L 160 270 A 60 60 0 0 0 220 210 L 220 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>
@@ -76,6 +106,39 @@ exports[`CurvedElementEnlarged updates when the parameter side is modified 1`] =
     <path
       class="tile"
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 240 L 160 240 A 30 30 0 0 0 190 210 L 190 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      style="fill: #444;"
+    />
+  </div>
+</body>
+`;
+
+exports[`CurvedElementEnlarged updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <path
+      class="tile"
+      d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="red"
+      stroke="blue"
+      stroke-width="2"
+      style="fill: #444;"
+    />
+  </div>
+</body>
+`;
+
+exports[`CurvedElementEnlarged updates when the parameter strokeWidth is modified 1`] = `
+<body>
+  <div>
+    <path
+      class="tile"
+      d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="3"
       style="fill: #444;"
     />
   </div>
@@ -88,6 +151,9 @@ exports[`CurvedElementEnlarged updates when the parameter style is modified 1`] 
     <path
       class="tile"
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #888"
     />
   </div>
@@ -100,6 +166,9 @@ exports[`CurvedElementEnlarged updates when the parameter width is modified 1`] 
     <path
       class="tile"
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 240 L 160 240 A 30 30 0 0 0 190 210 L 190 150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
       style="fill: #444;"
     />
   </div>

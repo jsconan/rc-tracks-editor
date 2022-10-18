@@ -9,6 +9,9 @@
     export let y = 0;
     export let width = 1;
     export let height = 1;
+    export let fill = void 0;
+    export let stroke = void 0;
+    export let strokeWidth = void 0;
 </script>
 
-<rect class={cls} {style} {x} {y} {width} {height} />
+<rect class={cls} {style} {x} {y} {width} {height} {fill} {stroke} stroke-width={strokeWidth} />

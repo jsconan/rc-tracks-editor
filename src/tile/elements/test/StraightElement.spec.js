@@ -34,7 +34,10 @@ describe('StraightElement', () => {
             x: 100,
             y: 150,
             width: 80,
-            height: 100
+            height: 100,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const { container } = render(StraightElement, { props });
 
@@ -47,7 +50,10 @@ describe('StraightElement', () => {
         ['x', { x: 40 }],
         ['y', { y: 40 }],
         ['width', { width: 40 }],
-        ['height', { height: 40 }]
+        ['height', { height: 40 }],
+        ['fill', { fill: 'blue' }],
+        ['stroke', { stroke: 'blue' }],
+        ['strokeWidth', { strokeWidth: 3 }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
             class: 'tile',
@@ -55,7 +61,10 @@ describe('StraightElement', () => {
             x: 100,
             y: 150,
             width: 80,
-            height: 100
+            height: 100,
+            fill: 'red',
+            stroke: 'green',
+            strokeWidth: 2
         };
         const rendered = render(StraightElement, { props });
 

@@ -52,8 +52,10 @@ exports[`Track renders with default values 1`] = `
           transform=""
         >
           <rect
-            class="ground"
+            fill="var(--color-ground)"
             height="110"
+            stroke="var(--color-separator)"
+            stroke-width="1"
             width="90"
             x="-45"
             y="0"
@@ -63,7 +65,7 @@ exports[`Track renders with default values 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -71,7 +73,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -79,7 +81,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -87,7 +89,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -99,7 +101,7 @@ exports[`Track renders with default values 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -107,7 +109,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -115,7 +117,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -123,7 +125,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -139,21 +141,23 @@ exports[`Track renders with default values 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -161,13 +165,13 @@ exports[`Track renders with default values 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+              fill="var(--color-even)"
             />
           </g>
           <g
@@ -175,7 +179,7 @@ exports[`Track renders with default values 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="5"
               width="27.5"
               x="-55"
@@ -183,7 +187,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="5"
               width="27.5"
               x="-27.5"
@@ -195,7 +199,7 @@ exports[`Track renders with default values 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -203,7 +207,7 @@ exports[`Track renders with default values 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -219,21 +223,23 @@ exports[`Track renders with default values 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -241,23 +247,23 @@ exports[`Track renders with default values 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>
@@ -310,8 +316,10 @@ exports[`Track renders with the given element in slots 1`] = `
           transform=""
         >
           <rect
-            class="ground"
+            fill="var(--color-ground)"
             height="110"
+            stroke="var(--color-separator)"
+            stroke-width="1"
             width="90"
             x="-45"
             y="0"
@@ -321,7 +329,7 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -329,7 +337,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -337,7 +345,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -345,7 +353,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -357,7 +365,7 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -365,7 +373,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -373,7 +381,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -381,7 +389,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -397,21 +405,23 @@ exports[`Track renders with the given element in slots 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -419,13 +429,13 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+              fill="var(--color-even)"
             />
           </g>
           <g
@@ -433,7 +443,7 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="5"
               width="27.5"
               x="-55"
@@ -441,7 +451,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="5"
               width="27.5"
               x="-27.5"
@@ -453,7 +463,7 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -461,7 +471,7 @@ exports[`Track renders with the given element in slots 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -477,21 +487,23 @@ exports[`Track renders with the given element in slots 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -499,23 +511,23 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>
@@ -527,31 +539,33 @@ exports[`Track renders with the given element in slots 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 120 120 0 0 1 -80.1471862576143 84.85281374238569 L -16.507575950825014 148.49242404917496 A 210 210 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 120 120 0 0 1 -47.30576635161235 23.41083864193539 L -42.401839949596194 24.386290252016032 A 125 125 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.30576635161235 23.41083864193539 A 120 120 0 0 1 -54.134456098645586 45.922011883810775 L -49.51505843608916 47.835429045636225 A 125 125 0 0 0 -42.401839949596194 24.386290252016032 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -54.134456098645586 45.922011883810775 A 120 120 0 0 1 -65.22364652369457 66.66842796235227 L -61.06629846218185 69.44627912745027 A 125 125 0 0 0 -49.51505843608916 47.835429045636225 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -65.22364652369457 66.66842796235227 A 120 120 0 0 1 -80.1471862576143 84.85281374238569 L -76.61165235168156 88.38834764831843 A 125 125 0 0 0 -61.06629846218185 69.44627912745027 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -559,23 +573,23 @@ exports[`Track renders with the given element in slots 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 205 205 0 0 1 36.06098248266224 39.99351601330629 L 40.96490888467838 40.96896762338693 A 210 210 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 36.06098248266224 39.99351601330629 A 205 205 0 0 1 24.39530416481378 78.4501036348434 L 29.014701827370203 80.36352079666885 A 210 210 0 0 0 40.96490888467838 40.96896762338693 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 24.39530416481378 78.4501036348434 A 205 205 0 0 1 5.451270522021787 113.89189776901844 L 9.608618583534508 116.66974893411646 A 210 210 0 0 0 29.014701827370203 80.36352079666885 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 5.451270522021787 113.89189776901844 A 205 205 0 0 1 -20.043109856757752 144.95689014324222 L -16.507575950825014 148.49242404917496 A 210 210 0 0 0 9.608618583534508 116.66974893411646 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>
@@ -650,8 +664,10 @@ exports[`Track renders with the given parameters 1`] = `
           transform=""
         >
           <rect
-            class="ground"
+            fill="var(--color-ground)"
             height="110"
+            stroke="var(--color-separator)"
+            stroke-width="1"
             width="90"
             x="-45"
             y="0"
@@ -661,7 +677,7 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -669,7 +685,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -677,7 +693,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -685,7 +701,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -697,7 +713,7 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -705,7 +721,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -713,7 +729,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -721,7 +737,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -737,21 +753,23 @@ exports[`Track renders with the given parameters 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -759,13 +777,13 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+              fill="var(--color-even)"
             />
           </g>
           <g
@@ -773,7 +791,7 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="5"
               width="27.5"
               x="-55"
@@ -781,7 +799,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="5"
               width="27.5"
               x="-27.5"
@@ -793,7 +811,7 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -801,7 +819,7 @@ exports[`Track renders with the given parameters 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -817,21 +835,23 @@ exports[`Track renders with the given parameters 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -839,23 +859,23 @@ exports[`Track renders with the given parameters 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>
@@ -909,8 +929,10 @@ exports[`Track updates when the model is modified 1`] = `
           transform=""
         >
           <rect
-            class="ground"
+            fill="var(--color-ground)"
             height="110"
+            stroke="var(--color-separator)"
+            stroke-width="1"
             width="90"
             x="-45"
             y="0"
@@ -920,7 +942,7 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -928,7 +950,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -936,7 +958,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="-45"
@@ -944,7 +966,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="-45"
@@ -956,7 +978,7 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -964,7 +986,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -972,7 +994,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -980,7 +1002,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -996,21 +1018,23 @@ exports[`Track updates when the model is modified 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -1018,13 +1042,13 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+              fill="var(--color-even)"
             />
           </g>
           <g
@@ -1032,7 +1056,7 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="5"
               width="27.5"
               x="-55"
@@ -1040,7 +1064,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="5"
               width="27.5"
               x="-27.5"
@@ -1052,7 +1076,7 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <rect
-              class="barrier-chunk odd"
+              fill="var(--color-odd)"
               height="27.5"
               width="5"
               x="40"
@@ -1060,7 +1084,7 @@ exports[`Track updates when the model is modified 1`] = `
             />
             
             <rect
-              class="barrier-chunk even"
+              fill="var(--color-even)"
               height="27.5"
               width="5"
               x="40"
@@ -1076,21 +1100,23 @@ exports[`Track updates when the model is modified 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -1098,23 +1124,23 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>
@@ -1126,31 +1152,33 @@ exports[`Track updates when the model is modified 1`] = `
           transform=""
         >
           <path
-            class="ground"
             d="M -45 0 A 120 120 0 0 1 -80.1471862576143 84.85281374238569 L -16.507575950825014 148.49242404917496 A 210 210 0 0 0 45 0 Z"
+            fill="var(--color-ground)"
+            stroke="var(--color-separator)"
+            stroke-width="1"
           />
           <g
             class="barrier curved-barrier"
           >
             
             <path
-              class="barrier-chunk even"
               d="M -45 0 A 120 120 0 0 1 -47.30576635161235 23.41083864193539 L -42.401839949596194 24.386290252016032 A 125 125 0 0 0 -40 0 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -47.30576635161235 23.41083864193539 A 120 120 0 0 1 -54.134456098645586 45.922011883810775 L -49.51505843608916 47.835429045636225 A 125 125 0 0 0 -42.401839949596194 24.386290252016032 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M -54.134456098645586 45.922011883810775 A 120 120 0 0 1 -65.22364652369457 66.66842796235227 L -61.06629846218185 69.44627912745027 A 125 125 0 0 0 -49.51505843608916 47.835429045636225 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M -65.22364652369457 66.66842796235227 A 120 120 0 0 1 -80.1471862576143 84.85281374238569 L -76.61165235168156 88.38834764831843 A 125 125 0 0 0 -61.06629846218185 69.44627912745027 Z"
+              fill="var(--color-odd)"
             />
           </g>
           <g
@@ -1158,23 +1186,23 @@ exports[`Track updates when the model is modified 1`] = `
           >
             
             <path
-              class="barrier-chunk odd"
               d="M 40 0 A 205 205 0 0 1 36.06098248266224 39.99351601330629 L 40.96490888467838 40.96896762338693 A 210 210 0 0 0 45 0 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 36.06098248266224 39.99351601330629 A 205 205 0 0 1 24.39530416481378 78.4501036348434 L 29.014701827370203 80.36352079666885 A 210 210 0 0 0 40.96490888467838 40.96896762338693 Z"
+              fill="var(--color-even)"
             />
             
             <path
-              class="barrier-chunk odd"
               d="M 24.39530416481378 78.4501036348434 A 205 205 0 0 1 5.451270522021787 113.89189776901844 L 9.608618583534508 116.66974893411646 A 210 210 0 0 0 29.014701827370203 80.36352079666885 Z"
+              fill="var(--color-odd)"
             />
             
             <path
-              class="barrier-chunk even"
               d="M 5.451270522021787 113.89189776901844 A 205 205 0 0 1 -20.043109856757752 144.95689014324222 L -16.507575950825014 148.49242404917496 A 210 210 0 0 0 9.608618583534508 116.66974893411646 Z"
+              fill="var(--color-even)"
             />
           </g>
         </g>

@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { alternateBarrierColor } from '../helpers';
+    import { barrierColor } from '../helpers';
     import CurvedElement from './CurvedElement.svelte';
 
     export let chunks;
@@ -30,10 +30,10 @@
         const segments = [];
 
         for (let i = 0; i < curveChunks; i++) {
-            const color = alternateBarrierColor(i + colorShift);
+            const color = barrierColor(i + colorShift);
             const start = chunkAngle * i;
 
-            segments.push({ cx, cy, chunkAngle, color, start, i });
+            segments.push({ cx, cy, chunkAngle, start, color, i });
         }
 
         return segments;
@@ -43,7 +43,7 @@
 </script>
 
 <g class="barrier curved-barrier">
-    {#each segments as { cx, cy, chunkAngle, color, start, i } (i)}
-        <CurvedElement class="barrier-chunk {color}" {cx} {cy} {width} {radius} angle={chunkAngle} {start} />
+    {#each segments as { cx, cy, chunkAngle, start, color, i } (i)}
+        <CurvedElement {cx} {cy} {width} {radius} angle={chunkAngle} {start} {...color} />
     {/each}
 </g>

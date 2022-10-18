@@ -3,6 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
+    import { groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
@@ -50,7 +51,7 @@
 </script>
 
 <g class="tile straight-tile" {transform} {filter} {id} on:click on:keypress>
-    <StraightElement class="ground" x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} />
+    <StraightElement x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} {...groundColor()} />
     <StraightBarrier
         chunks={tile.chunks}
         width={barrierWidth}
