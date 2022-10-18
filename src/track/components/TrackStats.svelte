@@ -40,7 +40,8 @@
             y={getTextY(y, rect)}
             text-anchor="middle"
             dominant-baseline="middle"
-            style="--font-size: {specs.width / 3}px"
+            font-size="{specs.width / 3}px"
+            fill="var(--color-fg)"
         >
             {$counterStore[i].count}
         </text>
@@ -49,7 +50,6 @@
 
 <style>
     text {
-        font: var(--font-size) sans-serif;
-        fill: var(--color-fg);
+        user-select: none;
     }
 </style>

@@ -546,9 +546,10 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="45"
@@ -641,9 +642,10 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="160"
@@ -706,9 +708,10 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="280"
@@ -826,9 +829,10 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="45"
@@ -921,9 +925,10 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="160"
@@ -986,9 +991,10 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="280"
@@ -1061,9 +1067,10 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-15ppvz7"
+          class="svelte-uqimmx"
           dominant-baseline="middle"
-          style="--font-size: 30px;"
+          fill="var(--color-fg)"
+          font-size="30px"
           text-anchor="middle"
           x="-10"
           y="399.5672280493228"

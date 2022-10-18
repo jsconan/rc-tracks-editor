@@ -106,9 +106,10 @@ exports[`TrackEditor add tile to the track 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="50"
@@ -228,9 +229,10 @@ exports[`TrackEditor add tile to the track 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="45"
                 y="-10"
@@ -290,9 +292,10 @@ exports[`TrackEditor add tile to the track 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="160"
                 y="-10"
@@ -613,9 +616,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="45"
@@ -708,9 +712,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="160"
@@ -830,9 +835,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="45"
                 y="-10"
@@ -892,9 +898,10 @@ exports[`TrackEditor flip tile in the track 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="160"
                 y="-10"
@@ -1708,9 +1715,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="45"
@@ -1803,9 +1811,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="160"
@@ -1925,9 +1934,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="45"
                 y="-10"
@@ -1987,9 +1997,10 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="160"
                 y="-10"
@@ -2295,9 +2306,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               </g>
               
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="-10"
                 y="50"
@@ -2417,9 +2429,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="45"
                 y="-10"
@@ -2479,9 +2492,10 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               
                
               <text
-                class="svelte-15ppvz7"
+                class="svelte-uqimmx"
                 dominant-baseline="middle"
-                style="--font-size: 30px;"
+                fill="var(--color-fg)"
+                font-size="30px"
                 text-anchor="middle"
                 x="160"
                 y="-10"

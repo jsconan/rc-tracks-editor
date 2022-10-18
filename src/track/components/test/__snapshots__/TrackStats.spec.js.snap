@@ -99,9 +99,10 @@ exports[`TrackStats renders with default values 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="45"
         y="-10"
@@ -161,9 +162,10 @@ exports[`TrackStats renders with default values 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="160"
         y="-10"
@@ -278,9 +280,10 @@ exports[`TrackStats renders with the given parameters 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="45"
         y="-10"
@@ -340,9 +343,10 @@ exports[`TrackStats renders with the given parameters 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="160"
         y="-10"
@@ -457,9 +461,10 @@ exports[`TrackStats updates when the model is modified 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="45"
         y="-10"
@@ -549,9 +554,10 @@ exports[`TrackStats updates when the model is modified 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="160"
         y="-10"
@@ -611,9 +617,10 @@ exports[`TrackStats updates when the model is modified 1`] = `
       
        
       <text
-        class="svelte-15ppvz7"
+        class="svelte-uqimmx"
         dominant-baseline="middle"
-        style="--font-size: 30px;"
+        fill="var(--color-fg)"
+        font-size="30px"
         text-anchor="middle"
         x="280"
         y="-10"
