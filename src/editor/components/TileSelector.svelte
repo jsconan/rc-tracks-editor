@@ -19,7 +19,7 @@
     const counterStore = tiles.counterStore;
     const modelsStore = tiles.modelsStore;
     const specs = tiles.specs;
-    const selectorClass = 'model';
+    const modelClass = 'model';
 
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
@@ -27,7 +27,7 @@
     const dispatch = createEventDispatcher();
 
     function click(event) {
-        const tile = event.target.closest(`.${selectorClass}`);
+        const tile = event.target.closest(`.${modelClass}`);
         const id = tile && tile.dataset.id;
         const model = $modelsStore.find(tile => tile.id === id);
         if (model) {
@@ -58,7 +58,7 @@
     on:click={click}
 >
     {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
-        <g class={selectorClass} data-id={id}>
+        <g class={modelClass} data-id={id}>
             <Tile {type} {direction} {ratio} {angle} {x} {y} />
             {#if $counterStore[i].count !== Number.POSITIVE_INFINITY}
                 <text
@@ -77,6 +77,10 @@
 </Sketch>
 
 <style>
+    .model {
+        cursor: pointer;
+    }
+
     text {
         user-select: none;
     }

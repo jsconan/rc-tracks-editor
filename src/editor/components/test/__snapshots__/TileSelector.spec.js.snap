@@ -10,7 +10,7 @@ exports[`TileSelector renders with default values 1`] = `
     >
       
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="straight-tile-1"
       >
         <g
@@ -102,7 +102,7 @@ exports[`TileSelector renders with default values 1`] = `
         
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-enlarged-1"
       >
         <g
@@ -187,7 +187,7 @@ exports[`TileSelector renders with default values 1`] = `
         
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-1"
       >
         <g
@@ -242,7 +242,7 @@ exports[`TileSelector renders with default values 1`] = `
         
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-2"
       >
         <g
@@ -307,7 +307,7 @@ exports[`TileSelector renders with default values 1`] = `
         
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-3"
       >
         <g
@@ -372,7 +372,7 @@ exports[`TileSelector renders with default values 1`] = `
         
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-4"
       >
         <g
@@ -455,7 +455,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
     >
       
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="straight-tile-1"
       >
         <g
@@ -546,7 +546,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -558,7 +558,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </text>
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-enlarged-1"
       >
         <g
@@ -642,7 +642,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -654,7 +654,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </text>
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-1"
       >
         <g
@@ -708,7 +708,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -738,7 +738,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
     >
       
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="straight-tile-1"
       >
         <g
@@ -829,7 +829,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -841,7 +841,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </text>
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-enlarged-1"
       >
         <g
@@ -925,7 +925,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -937,7 +937,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </text>
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-1"
       >
         <g
@@ -991,7 +991,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"
@@ -1003,7 +1003,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </text>
       </g>
       <g
-        class="model"
+        class="model svelte-bflex8"
         data-id="curved-tile-2"
       >
         <g
@@ -1067,7 +1067,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
         </g>
         
         <text
-          class="svelte-uqimmx"
+          class="svelte-bflex8"
           dominant-baseline="middle"
           fill="var(--color-fg)"
           font-size="30px"

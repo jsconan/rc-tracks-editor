@@ -18,6 +18,7 @@
     const counterStore = track.counterStore;
     const modelsStore = track.modelsStore;
     const specs = track.specs;
+    const modelClass = 'model';
 
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
@@ -34,21 +35,27 @@
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
     {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
-        <Tile {type} {direction} {ratio} {angle} {x} {y} />
-        <text
-            x={getTextX(x, rect)}
-            y={getTextY(y, rect)}
-            text-anchor="middle"
-            dominant-baseline="middle"
-            font-size="{specs.width / 3}px"
-            fill="var(--color-fg)"
-        >
-            {$counterStore[i].count}
-        </text>
+        <g class={modelClass} data-id={id}>
+            <Tile {type} {direction} {ratio} {angle} {x} {y} />
+            <text
+                x={getTextX(x, rect)}
+                y={getTextY(y, rect)}
+                text-anchor="middle"
+                dominant-baseline="middle"
+                font-size="{specs.width / 3}px"
+                fill="var(--color-fg)"
+            >
+                {$counterStore[i].count}
+            </text>
+        </g>
     {/each}
 </Sketch>
 
 <style>
+    .model {
+        cursor: default;
+    }
+
     text {
         user-select: none;
     }
