@@ -1,5 +1,4 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
@@ -25,9 +24,6 @@
 
     validateType(type);
 
-    const dispatch = createEventDispatcher();
-    const click = () => dispatch('click', { id, type, direction, ratio, x, y, angle });
-
     const componentsMap = {
         [STRAIGHT_TILE_TYPE]: StraightTile,
         [CURVED_TILE_TYPE]: CurvedTile,
@@ -37,4 +33,4 @@
     $: component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {direction} {ratio} {angle} {x} {y} {filter} {id} on:click={click} />
+<svelte:component this={component} {direction} {ratio} {angle} {x} {y} {filter} {id} />

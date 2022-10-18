@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import CurvedTileEnlarged from '../CurvedTileEnlarged.svelte';
@@ -104,37 +104,5 @@ describe('CurvedTileEnlarged', () => {
         rendered.component.$set({ props: Object.assign({}, props, update) });
         await tick();
         expect(rendered.container).toMatchSnapshot();
-    });
-
-    it('fires click', () => {
-        const onClick = jest.fn();
-        const { container, component } = render(Context, {
-            props: {
-                component: CurvedTileEnlarged,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs
-            }
-        });
-        const element = container.querySelector('.tile');
-
-        component.$on('click', onClick);
-        fireEvent.click(element);
-        expect(onClick).toHaveBeenCalled();
-    });
-
-    it('fires keypress', () => {
-        const onKeyPress = jest.fn();
-        const { container, component } = render(Context, {
-            props: {
-                component: CurvedTileEnlarged,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs
-            }
-        });
-        const element = container.querySelector('.tile');
-
-        component.$on('keypress', onKeyPress);
-        fireEvent.keyPress(element);
-        expect(onKeyPress).toHaveBeenCalled();
     });
 });

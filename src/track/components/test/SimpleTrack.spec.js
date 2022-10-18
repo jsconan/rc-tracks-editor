@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Track from '../SimpleTrack.svelte';
@@ -110,27 +110,6 @@ describe('SimpleTrack', () => {
                 }
             })
         ).toThrow("'track' is not a store with a 'subscribe' method");
-    });
-
-    it('fires click event', () => {
-        const onClick = jest.fn().mockImplementation(event => {
-            expect(event.detail).toMatchSnapshot();
-        });
-        const props = { track };
-        const { container, component } = render(Context, {
-            props: {
-                component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
-                props
-            }
-        });
-
-        component.$on('click', onClick);
-        fireEvent.click(container.querySelector(`#id-0`));
-        fireEvent.click(container.querySelector(`#id-1`));
-        fireEvent.click(container.querySelector(`#id-2`));
-        expect(onClick).toHaveBeenCalledTimes(3);
     });
 
     it('renders with the given element in slots', () => {

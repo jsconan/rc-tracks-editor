@@ -73,7 +73,7 @@
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
-<g class="tile curved-tile-enlarged" {transform} {filter} {id} on:click on:keypress>
+<g class="tile curved-tile-enlarged" {transform} {filter} {id}>
     <CurvedElementEnlarged
         cx={tile.curveCenter.x}
         cy={tile.curveCenter.y}

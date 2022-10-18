@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import Tile from '../Tile.svelte';
@@ -114,40 +114,5 @@ describe('Tile', () => {
     it('needs a valid type', () => {
         const props = { type: 'tile' };
         expect(() => render(Tile, { props })).toThrow('A valid type of tile is needed!');
-    });
-
-    it.each([STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])('fires click from a %s tile', type => {
-        const props = {
-            type,
-            id: 'id-10',
-            direction: TILE_DIRECTION_LEFT,
-            ratio: 2,
-            x: 10,
-            y: 20,
-            angle: 30
-        };
-        const onClick = jest.fn().mockImplementation(event => {
-            expect(event.detail).toEqual(expect.any(Object));
-            expect(event.detail.id).toBe(props.id);
-            expect(event.detail.type).toBe(props.type);
-            expect(event.detail.direction).toBe(props.direction);
-            expect(event.detail.ratio).toBe(props.ratio);
-            expect(event.detail.x).toBe(props.x);
-            expect(event.detail.y).toBe(props.y);
-            expect(event.detail.angle).toBe(props.angle);
-        });
-        const { container, component } = render(Context, {
-            props: {
-                component: Tile,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
-                props
-            }
-        });
-        const element = container.querySelector('.tile');
-
-        component.$on('click', onClick);
-        fireEvent.click(element);
-        expect(onClick).toHaveBeenCalled();
     });
 });

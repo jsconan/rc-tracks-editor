@@ -1,41 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SimpleTrack fires click event 1`] = `
-{
-  "angle": 90,
-  "direction": "right",
-  "id": "id-0",
-  "ratio": 1,
-  "type": "straight-tile",
-  "x": 0,
-  "y": 0,
-}
-`;
-
-exports[`SimpleTrack fires click event 2`] = `
-{
-  "angle": 90,
-  "direction": "right",
-  "id": "id-1",
-  "ratio": 1,
-  "type": "curved-tile",
-  "x": -110,
-  "y": 6.735557395310443e-15,
-}
-`;
-
-exports[`SimpleTrack fires click event 3`] = `
-{
-  "angle": 180,
-  "direction": "right",
-  "id": "id-2",
-  "ratio": 1,
-  "type": "curved-tile-enlarged",
-  "x": -165,
-  "y": -54.99999999999999,
-}
-`;
-
 exports[`SimpleTrack renders with default values 1`] = `
 <body>
   <div>

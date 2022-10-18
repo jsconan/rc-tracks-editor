@@ -50,7 +50,7 @@
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
-<g class="tile straight-tile" {transform} {filter} {id} on:click on:keypress>
+<g class="tile straight-tile" {transform} {filter} {id}>
     <StraightElement x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} {...groundColor()} />
     <StraightBarrier
         chunks={tile.chunks}
