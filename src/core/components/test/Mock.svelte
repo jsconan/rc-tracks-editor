@@ -10,7 +10,7 @@
 </script>
 
 <div on:click on:keypress>
-    <dl>
+    <dl on:mouseenter on:mouseleave>
         <dt>param</dt>
         <dd>{param}</dd>
 

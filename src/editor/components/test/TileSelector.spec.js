@@ -110,9 +110,14 @@ describe('TileSelector', () => {
         ).toThrow('The object must be an instance of TileSet!');
     });
 
-    it('fires click', () => {
+    it.each([
+        ['click', 'click'],
+        ['keypress', 'keyPress'],
+        ['mouseenter', 'mouseEnter'],
+        ['mouseleave', 'mouseLeave']
+    ])('fires %s', async (eventName, eventAction) => {
         const props = { tiles: allTiles };
-        const onClick = jest.fn().mockImplementation(event => {
+        const onEvent = jest.fn().mockImplementation(event => {
             expect(event.detail).toEqual(expect.any(Object));
             expect(event.detail.type).toBe(CurvedTileModel.TYPE);
             expect(event.detail.direction).toBe(CurvedTileModel.DIRECTION_RIGHT);
@@ -127,8 +132,8 @@ describe('TileSelector', () => {
             }
         });
 
-        component.$on('click', onClick);
-        fireEvent.click(container.querySelector('.curved-tile'));
-        expect(onClick).toHaveBeenCalledTimes(1);
+        component.$on(eventName, onEvent);
+        await fireEvent[eventAction](container.querySelector('[data-id=curved-tile-1]'));
+        expect(onEvent).toHaveBeenCalledTimes(1);
     });
 });

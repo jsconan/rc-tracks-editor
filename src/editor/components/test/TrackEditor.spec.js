@@ -104,8 +104,7 @@ describe('TrackEditor', () => {
         const props = { editor };
         const { container } = render(TrackEditor, { props });
 
-        fireEvent.click(container.querySelector('.tiles .straight-tile'));
-        await tick();
+        await fireEvent.click(container.querySelector('.tiles .straight-tile'));
         expect(container).toMatchSnapshot();
     });
 
@@ -116,8 +115,7 @@ describe('TrackEditor', () => {
         const props = { editor };
         const { container } = render(TrackEditor, { props });
 
-        fireEvent.click(container.querySelector('.track [data-id=id-15]'));
-        await tick();
+        await fireEvent.click(container.querySelector('.track [data-id=id-15]'));
         expect(container).toMatchSnapshot();
     });
 });

@@ -111,23 +111,23 @@ describe('Sketch', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('fires click', () => {
+    it('fires click', async () => {
         const onClick = jest.fn();
         const { container, component } = render(Sketch);
         const element = container.querySelector('svg');
 
         component.$on('click', onClick);
-        fireEvent.click(element);
+        await fireEvent.click(element);
         expect(onClick).toHaveBeenCalled();
     });
 
-    it('fires keypress', () => {
+    it('fires keypress', async () => {
         const onKeyPress = jest.fn();
         const { container, component } = render(Sketch);
         const element = container.querySelector('svg');
 
         component.$on('keypress', onKeyPress);
-        fireEvent.keyPress(element);
+        await fireEvent.keyPress(element);
         expect(onKeyPress).toHaveBeenCalled();
     });
 });

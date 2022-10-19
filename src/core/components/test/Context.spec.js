@@ -67,29 +67,21 @@ describe('Context', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('fires click', () => {
-        const onClick = jest.fn();
+    it.each([
+        ['click', 'click'],
+        ['keypress', 'keyPress'],
+        ['mouseenter', 'mouseEnter'],
+        ['mouseleave', 'mouseLeave']
+    ])('fires %s', async (eventName, eventAction) => {
+        const onEvent = jest.fn();
         const props = {
             component: Mock
         };
         const { container, component } = render(Context, { props });
         const element = container.querySelector('dl');
 
-        component.$on('click', onClick);
-        fireEvent.click(element);
-        expect(onClick).toHaveBeenCalled();
-    });
-
-    it('fires keypress', () => {
-        const onKeyPress = jest.fn();
-        const props = {
-            component: Mock
-        };
-        const { container, component } = render(Context, { props });
-        const element = container.querySelector('dl');
-
-        component.$on('keypress', onKeyPress);
-        fireEvent.keyPress(element);
-        expect(onKeyPress).toHaveBeenCalled();
+        component.$on(eventName, onEvent);
+        await fireEvent[eventAction](element);
+        expect(onEvent).toHaveBeenCalled();
     });
 });

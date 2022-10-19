@@ -116,8 +116,13 @@ describe('Track', () => {
         ).toThrow('The object must be an instance of TrackModel!');
     });
 
-    it('fires click', () => {
-        const onClick = jest.fn().mockImplementation(event => {
+    it.each([
+        ['click', 'click'],
+        ['keypress', 'keyPress'],
+        ['mouseenter', 'mouseEnter'],
+        ['mouseleave', 'mouseLeave']
+    ])('fires %s', async (eventName, eventAction) => {
+        const onEvent = jest.fn().mockImplementation(event => {
             expect(event.detail).toMatchSnapshot();
         });
         const props = { track };
@@ -130,11 +135,11 @@ describe('Track', () => {
             }
         });
 
-        component.$on('click', onClick);
-        fireEvent.click(container.querySelector(`[data-id=id-0]`));
-        fireEvent.click(container.querySelector(`[data-id=id-1]`));
-        fireEvent.click(container.querySelector(`[data-id=id-2]`));
-        expect(onClick).toHaveBeenCalledTimes(3);
+        component.$on(eventName, onEvent);
+        await fireEvent[eventAction](container.querySelector(`[data-id=id-0]`));
+        await fireEvent[eventAction](container.querySelector(`[data-id=id-1]`));
+        await fireEvent[eventAction](container.querySelector(`[data-id=id-2]`));
+        expect(onEvent).toHaveBeenCalledTimes(3);
     });
 
     it('renders with the given element in slots', () => {

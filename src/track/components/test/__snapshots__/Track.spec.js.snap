@@ -4,6 +4,9 @@ exports[`Track fires click 1`] = `
 {
   "angle": 90,
   "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
   "id": "id-0",
   "ratio": 1,
   "type": "straight-tile",
@@ -16,6 +19,9 @@ exports[`Track fires click 2`] = `
 {
   "angle": 90,
   "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
   "id": "id-1",
   "ratio": 1,
   "type": "curved-tile",
@@ -28,6 +34,144 @@ exports[`Track fires click 3`] = `
 {
   "angle": 180,
   "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-2",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+  "x": -165,
+  "y": -54.99999999999999,
+}
+`;
+
+exports[`Track fires keypress 1`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": KeyboardEvent {
+    "isTrusted": false,
+  },
+  "id": "id-0",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Track fires keypress 2`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": KeyboardEvent {
+    "isTrusted": false,
+  },
+  "id": "id-1",
+  "ratio": 1,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`Track fires keypress 3`] = `
+{
+  "angle": 180,
+  "direction": "right",
+  "event": KeyboardEvent {
+    "isTrusted": false,
+  },
+  "id": "id-2",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+  "x": -165,
+  "y": -54.99999999999999,
+}
+`;
+
+exports[`Track fires mouseenter 1`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-0",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Track fires mouseenter 2`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-1",
+  "ratio": 1,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`Track fires mouseenter 3`] = `
+{
+  "angle": 180,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-2",
+  "ratio": 1,
+  "type": "curved-tile-enlarged",
+  "x": -165,
+  "y": -54.99999999999999,
+}
+`;
+
+exports[`Track fires mouseleave 1`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-0",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Track fires mouseleave 2`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
+  "id": "id-1",
+  "ratio": 1,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`Track fires mouseleave 3`] = `
+{
+  "angle": 180,
+  "direction": "right",
+  "event": MouseEvent {
+    "isTrusted": false,
+  },
   "id": "id-2",
   "ratio": 1,
   "type": "curved-tile-enlarged",
@@ -312,7 +456,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile straight-tile"
-          id="id-9-straight-tile-1"
+          id="id-12-straight-tile-1"
           transform=""
         >
           <rect
@@ -401,7 +545,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile curved-tile-enlarged"
-          id="id-9-curved-tile-enlarged-1"
+          id="id-12-curved-tile-enlarged-1"
           transform=""
         >
           <path
@@ -483,7 +627,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile curved-tile"
-          id="id-9-curved-tile-1"
+          id="id-12-curved-tile-1"
           transform=""
         >
           <path
@@ -535,7 +679,7 @@ exports[`Track renders with the given element in slots 1`] = `
         
         <g
           class="tile curved-tile"
-          id="id-9-curved-tile-2"
+          id="id-12-curved-tile-2"
           transform=""
         >
           <path
@@ -606,28 +750,28 @@ exports[`Track renders with the given element in slots 1`] = `
       
       <use
         data-id="id-0"
-        href="#id-9-straight-tile-1"
+        href="#id-12-straight-tile-1"
         transform="rotate(90 0 0)"
         x="0"
         y="0"
       />
       <use
         data-id="id-1"
-        href="#id-9-curved-tile-1"
+        href="#id-12-curved-tile-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
         x="-110"
         y="6.735557395310443e-15"
       />
       <use
         data-id="id-2"
-        href="#id-9-curved-tile-enlarged-1"
+        href="#id-12-curved-tile-enlarged-1"
         transform="rotate(180 -165 -54.99999999999999)"
         x="-165"
         y="-54.99999999999999"
       />
       <use
         data-id="id-7"
-        href="#id-9-curved-tile-2"
+        href="#id-12-curved-tile-2"
         transform="rotate(270 -110 -110)"
         x="-110"
         y="-110"

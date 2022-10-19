@@ -24,11 +24,11 @@
 
     const dispatch = createEventDispatcher();
 
-    function click(event) {
+    function dispatchEvent(event) {
         const index = track.getIndex(event.target.dataset.id);
         if (index > -1) {
             const { id, type, direction, ratio, x, y, angle } = $tilesStore.tiles[index];
-            dispatch('click', { id, type, direction, ratio, x, y, angle });
+            dispatch(event.type, { id, type, direction, ratio, x, y, angle, event });
         }
     }
 </script>
@@ -42,10 +42,19 @@
     viewY={$tilesStore.y}
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
-    on:click={click}
+    on:click={dispatchEvent}
+    on:keypress={dispatchEvent}
 >
     {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
-        <use data-id={id} {x} {y} href="#{getId(model.modelId)}" transform={model.getRotateTransform(x, y, angle)} />
+        <use
+            data-id={id}
+            {x}
+            {y}
+            href="#{getId(model.modelId)}"
+            transform={model.getRotateTransform(x, y, angle)}
+            on:mouseenter={dispatchEvent}
+            on:mouseleave={dispatchEvent}
+        />
     {/each}
     <svelte:fragment slot="defs">
         {#each $modelsStore as { id, type, ratio, modelId } (id)}

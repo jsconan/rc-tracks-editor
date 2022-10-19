@@ -14,4 +14,4 @@
     }
 </script>
 
-<svelte:component this={component} on:click on:keypress {...props} />
+<svelte:component this={component} on:click on:keypress on:mouseenter on:mouseleave {...props} />

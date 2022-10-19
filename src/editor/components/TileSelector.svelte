@@ -26,13 +26,13 @@
 
     const dispatch = createEventDispatcher();
 
-    function click(event) {
-        const tile = event.target.closest(`.${modelClass}`);
-        const id = tile && tile.dataset.id;
-        const model = $modelsStore.find(tile => tile.id === id);
-        if (model) {
-            const { id, type, direction, ratio, x, y, angle } = model;
-            dispatch('click', { id, type, direction, ratio, x, y, angle });
+    function dispatchEvent(event) {
+        const target = event.target.closest(`.${modelClass}`);
+        const targetId = target && target.dataset.id;
+        const index = $modelsStore.findIndex(tile => tile.id === targetId);
+        if (index > -1) {
+            const { id, type, direction, ratio, x, y, angle } = models.tiles[index];
+            dispatch(event.type, { id, type, direction, ratio, x, y, angle, event });
         }
     }
 
@@ -55,10 +55,11 @@
     viewY={models.y}
     viewWidth={models.width}
     viewHeight={models.height}
-    on:click={click}
+    on:click={dispatchEvent}
+    on:keypress={dispatchEvent}
 >
     {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
-        <g class={modelClass} data-id={id}>
+        <g class={modelClass} data-id={id} on:mouseenter={dispatchEvent} on:mouseleave={dispatchEvent}>
             <Tile {type} {direction} {ratio} {angle} {x} {y} />
             {#if $counterStore[i].count !== Number.POSITIVE_INFINITY}
                 <text
