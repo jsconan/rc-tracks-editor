@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { groundColor } from '../helpers';
+    import { tileParameters, groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
@@ -21,32 +21,8 @@
     const barrierWidth = specs.barrierWidth;
     const vertical = true;
 
-    /**
-     * Computes the parameters for rendering the tile at the expected position.
-     * @param {StraightTileModel} model
-     * @param {number} tileX
-     * @param {number} tileY
-     * @returns {object}
-     * @private
-     */
-    function getTileParameters(model, tileX, tileY) {
-        const width = model.width;
-        const height = model.length;
-        const chunks = model.getSideBarrierChunks();
-        const innerRadius = model.getInnerRadius();
-        const outerRadius = model.getOuterRadius();
-        const curveCenter = model.getCurveCenter(tileX, tileY);
-
-        const leftX = curveCenter.x + innerRadius;
-        const leftY = curveCenter.y;
-        const rightX = curveCenter.x + outerRadius - barrierWidth;
-        const rightY = curveCenter.y;
-
-        return { width, height, chunks, leftX, leftY, rightX, rightY };
-    }
-
     $: model = new StraightTileModel(specs, direction, ratio);
-    $: tile = getTileParameters(model, x, y);
+    $: tile = tileParameters.straight(model, x, y);
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 

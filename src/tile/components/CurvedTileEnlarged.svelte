@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { groundColor } from '../helpers';
+    import { tileParameters, groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { CurvedElementEnlarged, CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
@@ -21,55 +21,8 @@
     const barrierWidth = specs.barrierWidth;
     const width = specs.width;
 
-    /**
-     * Computes the parameters for rendering the tile at the expected position.
-     * @param {CurvedTileEnlargedModel} model
-     * @param {number} tileX
-     * @param {number} tileY
-     * @returns {object}
-     * @private
-     */
-    function getTileParameters(model, tileX, tileY) {
-        const side = model.getCurveSide();
-        const innerRadius = model.getInnerRadius();
-        const outerRadius = model.getOuterRadius() - barrierWidth;
-        const sideChunks = model.getSideBarrierChunks();
-        const innerChunks = model.getInnerBarrierChunks();
-        const outerChunks = model.getOuterBarrierChunks();
-        const curveAngle = model.getCurveAngle();
-        const curveCenter = model.getCurveCenter(tileX, tileY);
-        const outerBarrier = width - barrierWidth;
-
-        const { x: innerX, y: innerY } = curveCenter.addScalarX(innerRadius);
-        const { x: outerX, y: outerY } = curveCenter.addCoord(
-            side + outerRadius,
-            innerRadius + outerBarrier - outerRadius
-        );
-        const { x: horizontalX, y: horizontalY } = curveCenter.addScalarY(innerRadius + outerBarrier);
-        const { x: verticalX, y: verticalY } = curveCenter.addScalarX(innerRadius + outerBarrier);
-
-        return {
-            side,
-            innerRadius,
-            outerRadius,
-            curveAngle,
-            curveCenter,
-            sideChunks,
-            innerChunks,
-            outerChunks,
-            innerX,
-            innerY,
-            outerX,
-            outerY,
-            horizontalX,
-            horizontalY,
-            verticalX,
-            verticalY
-        };
-    }
-
     $: model = new CurvedTileEnlargedModel(specs, direction, ratio);
-    $: tile = getTileParameters(model, x, y);
+    $: tile = tileParameters.enlargedCurve(model, x, y);
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 

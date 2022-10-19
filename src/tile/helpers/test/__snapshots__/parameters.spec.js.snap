@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tileParameters computes the parameters for rendering a curved tile at the expected position 1`] = `
+{
+  "curveAngle": 90,
+  "curveCenter": Vector2D {
+    "x": -45,
+    "y": 20,
+  },
+  "innerChunks": 2,
+  "innerRadius": 10,
+  "innerX": -35,
+  "innerY": 20,
+  "outerChunks": 4,
+  "outerRadius": 95,
+  "outerX": 50,
+  "outerY": 20,
+}
+`;
+
+exports[`tileParameters computes the parameters for rendering a curved tile enlarged at the expected position 1`] = `
+{
+  "curveAngle": 90,
+  "curveCenter": Vector2D {
+    "x": -45,
+    "y": 20,
+  },
+  "horizontalX": -45,
+  "horizontalY": 115,
+  "innerChunks": 2,
+  "innerRadius": 10,
+  "innerX": -35,
+  "innerY": 20,
+  "outerChunks": 2,
+  "outerRadius": 40,
+  "outerX": 50,
+  "outerY": 75,
+  "side": 55,
+  "sideChunks": 2,
+  "verticalX": 50,
+  "verticalY": 20,
+}
+`;
+
+exports[`tileParameters computes the parameters for rendering a straight tile at the expected position 1`] = `
+{
+  "chunks": 4,
+  "height": 110,
+  "leftX": -35,
+  "leftY": 20,
+  "rightX": 50,
+  "rightY": 20,
+  "width": 90,
+}
+`;

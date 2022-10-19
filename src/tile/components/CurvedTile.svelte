@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { groundColor } from '../helpers';
+    import { tileParameters, groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { CurvedBarrier, CurvedElement } from '../elements';
     import { CurvedTileModel } from '../models';
@@ -20,43 +20,8 @@
     const barrierWidth = specs.barrierWidth;
     const width = specs.width;
 
-    /**
-     * Computes the parameters for rendering the tile at the expected position.
-     * @param {CurvedTileModel} model
-     * @param {number} tileX
-     * @param {number} tileY
-     * @returns {object}
-     * @private
-     */
-    function getTileParameters(model, tileX, tileY) {
-        const innerRadius = model.getInnerRadius();
-        const outerRadius = model.getOuterRadius() - barrierWidth;
-        const innerChunks = model.getInnerBarrierChunks();
-        const outerChunks = model.getOuterBarrierChunks();
-        const curveAngle = model.getCurveAngle();
-        const curveCenter = model.getCurveCenter(tileX, tileY);
-
-        const innerX = curveCenter.x + innerRadius;
-        const innerY = curveCenter.y;
-        const outerX = curveCenter.x + outerRadius;
-        const outerY = curveCenter.y;
-
-        return {
-            innerRadius,
-            outerRadius,
-            curveAngle,
-            curveCenter,
-            innerChunks,
-            outerChunks,
-            innerX,
-            innerY,
-            outerX,
-            outerY
-        };
-    }
-
     $: model = new CurvedTileModel(specs, direction, ratio);
-    $: tile = getTileParameters(model, x, y);
+    $: tile = tileParameters.curve(model, x, y);
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 

@@ -57,11 +57,11 @@ export class TileModelsStore extends EventStore {
 }
 
 /**
- * @typedef {import('../../tiles/models').TileList} TileList
+ * @typedef {import('../models').TileList} TileList
  */
 
 /**
- * @typedef {import('../../tiles/models').TileModel} TileModel
+ * @typedef {import('../models').TileModel} TileModel
  */
 
 /**
