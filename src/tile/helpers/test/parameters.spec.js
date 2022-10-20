@@ -19,32 +19,34 @@
 import { CurvedTileModel } from '../../models/CurvedTileModel.js';
 import { CurvedTileEnlargedModel } from '../../models/CurvedTileEnlargedModel.js';
 import { StraightTileModel } from '../../models/StraightTileModel.js';
+import { TileModel } from '../../models/TileModel.js';
 import { TileSpecifications } from '../../config/TileSpecifications.js';
-import tileParameters from '../parameters.js';
+import { getTileParameters } from '../parameters.js';
 
 const laneWidth = 80;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
-describe('tileParameters', () => {
-    it('is an object', () => {
-        expect(tileParameters).toEqual(expect.any(Object));
-    });
-
-    it.each(['curve', 'enlargedCurve', 'straight'])('has a %s method', methodName => {
-        expect(tileParameters[methodName]).toEqual(expect.any(Function));
+describe('getTileParameters', () => {
+    it('is a function', () => {
+        expect(getTileParameters).toEqual(expect.any(Function));
     });
 
     it('computes the parameters for rendering a curved tile at the expected position', () => {
-        expect(tileParameters.curve(new CurvedTileModel(specs), 10, 20)).toMatchSnapshot();
+        expect(getTileParameters(new CurvedTileModel(specs), 10, 20)).toMatchSnapshot();
     });
 
     it('computes the parameters for rendering a curved tile enlarged at the expected position', () => {
-        expect(tileParameters.enlargedCurve(new CurvedTileEnlargedModel(specs), 10, 20)).toMatchSnapshot();
+        expect(getTileParameters(new CurvedTileEnlargedModel(specs), 10, 20)).toMatchSnapshot();
     });
 
     it('computes the parameters for rendering a straight tile at the expected position', () => {
-        expect(tileParameters.straight(new StraightTileModel(specs), 10, 20)).toMatchSnapshot();
+        expect(getTileParameters(new StraightTileModel(specs), 10, 20)).toMatchSnapshot();
+    });
+
+    it('throws an error if the given tile is not valid', () => {
+        expect(() => getTileParameters({}, 10, 20)).toThrow('A valid type of tile is needed!');
+        expect(() => getTileParameters(new TileModel(specs), 10, 20)).toThrow('A valid type of tile is needed!');
     });
 });

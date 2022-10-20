@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { tileParameters, groundColor } from '../helpers';
+    import { getTileParameters, groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
@@ -17,33 +17,14 @@
     export let id = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
-    const barrierLength = specs.barrierLength;
-    const barrierWidth = specs.barrierWidth;
-    const vertical = true;
 
     $: model = new StraightTileModel(specs, direction, ratio);
-    $: tile = tileParameters.straight(model, x, y);
+    $: parameters = getTileParameters(model, x, y);
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
 <g class="tile straight-tile" {transform} {filter} {id}>
-    <StraightElement x={tile.leftX} y={tile.leftY} width={tile.width} height={tile.height} {...groundColor()} />
-    <StraightBarrier
-        chunks={tile.chunks}
-        width={barrierWidth}
-        length={barrierLength}
-        left={tile.leftX}
-        top={tile.leftY}
-        shift={0}
-        {vertical}
-    />
-    <StraightBarrier
-        chunks={tile.chunks}
-        width={barrierWidth}
-        length={barrierLength}
-        left={tile.rightX}
-        top={tile.rightY}
-        shift={1}
-        {vertical}
-    />
+    <StraightElement {...parameters.ground} {...groundColor()} />
+    <StraightBarrier {...parameters.leftBarrier} />
+    <StraightBarrier {...parameters.rightBarrier} />
 </g>

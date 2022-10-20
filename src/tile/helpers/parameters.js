@@ -16,11 +16,14 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, validateType } from './tiles';
+
 /**
  * Computes the parameters for rendering a tile at the expected position.
  * @type {object}
+ * @private
  */
-export default {
+const tileParameters = {
     /**
      * Computes the parameters for rendering a curved tile at the expected position.
      * @param {CurvedTileModel} model - A reference to the tile model.
@@ -28,8 +31,9 @@ export default {
      * @param {number} tileY - The Y-coordinate of the tile.
      * @returns {object} - Returns a set parameters for rendering the tile at the expected position.
      */
-    curve(model, tileX, tileY) {
+    [CURVED_TILE_TYPE](model, tileX, tileY) {
         const specs = model.specs;
+        const width = specs.width;
         const barrierWidth = specs.barrierWidth;
         const innerRadius = model.getInnerRadius();
         const outerRadius = model.getOuterRadius() - barrierWidth;
@@ -43,17 +47,37 @@ export default {
         const outerX = curveCenter.x + outerRadius;
         const outerY = curveCenter.y;
 
+        const ground = {
+            cx: curveCenter.x,
+            cy: curveCenter.y,
+            width,
+            radius: innerRadius,
+            angle: curveAngle,
+            start: 0
+        };
+        const innerBarrier = {
+            chunks: innerChunks,
+            width: barrierWidth,
+            radius: innerRadius,
+            angle: curveAngle,
+            left: innerX,
+            top: innerY,
+            shift: 0
+        };
+        const outerBarrier = {
+            chunks: outerChunks,
+            width: barrierWidth,
+            radius: outerRadius,
+            angle: curveAngle,
+            left: outerX,
+            top: outerY,
+            shift: 1
+        };
+
         return {
-            innerRadius,
-            outerRadius,
-            curveAngle,
-            curveCenter,
-            innerChunks,
-            outerChunks,
-            innerX,
-            innerY,
-            outerX,
-            outerY
+            ground,
+            innerBarrier,
+            outerBarrier
         };
     },
 
@@ -64,10 +88,11 @@ export default {
      * @param {number} tileY - The Y-coordinate of the tile.
      * @returns {object} - Returns a set parameters for rendering the tile at the expected position.
      */
-    enlargedCurve(model, tileX, tileY) {
+    [CURVED_TILE_ENLARGED_TYPE](model, tileX, tileY) {
         const specs = model.specs;
-        const barrierWidth = specs.barrierWidth;
         const width = specs.width;
+        const barrierLength = specs.barrierLength;
+        const barrierWidth = specs.barrierWidth;
         const side = model.getCurveSide();
         const innerRadius = model.getInnerRadius();
         const outerRadius = model.getOuterRadius() - barrierWidth;
@@ -76,33 +101,66 @@ export default {
         const outerChunks = model.getOuterBarrierChunks();
         const curveAngle = model.getCurveAngle();
         const curveCenter = model.getCurveCenter(tileX, tileY);
-        const outerBarrier = width - barrierWidth;
+        const outerBarrierPosition = width - barrierWidth;
 
         const { x: innerX, y: innerY } = curveCenter.addScalarX(innerRadius);
         const { x: outerX, y: outerY } = curveCenter.addCoord(
             side + outerRadius,
-            innerRadius + outerBarrier - outerRadius
+            innerRadius + outerBarrierPosition - outerRadius
         );
-        const { x: horizontalX, y: horizontalY } = curveCenter.addScalarY(innerRadius + outerBarrier);
-        const { x: verticalX, y: verticalY } = curveCenter.addScalarX(innerRadius + outerBarrier);
+        const { x: horizontalX, y: horizontalY } = curveCenter.addScalarY(innerRadius + outerBarrierPosition);
+        const { x: verticalX, y: verticalY } = curveCenter.addScalarX(innerRadius + outerBarrierPosition);
+
+        const ground = {
+            cx: curveCenter.x,
+            cy: curveCenter.y,
+            width,
+            side,
+            radius: innerRadius
+        };
+        const innerBarrier = {
+            chunks: innerChunks,
+            width: barrierWidth,
+            radius: innerRadius,
+            angle: curveAngle,
+            left: innerX,
+            top: innerY,
+            shift: 0
+        };
+        const outerBarrier = {
+            chunks: outerChunks,
+            width: barrierWidth,
+            radius: outerRadius,
+            angle: curveAngle,
+            left: outerX,
+            top: outerY,
+            shift: 1
+        };
+        const horizontalBarrier = {
+            chunks: sideChunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: horizontalX,
+            top: horizontalY,
+            shift: 0,
+            vertical: false
+        };
+        const verticalBarrier = {
+            chunks: sideChunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: verticalX,
+            top: verticalY,
+            shift: 1,
+            vertical: true
+        };
 
         return {
-            side,
-            innerRadius,
-            outerRadius,
-            curveAngle,
-            curveCenter,
-            sideChunks,
-            innerChunks,
-            outerChunks,
-            innerX,
-            innerY,
-            outerX,
-            outerY,
-            horizontalX,
-            horizontalY,
-            verticalX,
-            verticalY
+            ground,
+            innerBarrier,
+            outerBarrier,
+            horizontalBarrier,
+            verticalBarrier
         };
     },
 
@@ -113,8 +171,9 @@ export default {
      * @param {number} tileY - The Y-coordinate of the tile.
      * @returns {object} - Returns a set parameters for rendering the tile at the expected position.
      */
-    straight(model, tileX, tileY) {
+    [STRAIGHT_TILE_TYPE](model, tileX, tileY) {
         const specs = model.specs;
+        const barrierLength = specs.barrierLength;
         const barrierWidth = specs.barrierWidth;
         const width = model.width;
         const height = model.length;
@@ -127,10 +186,55 @@ export default {
         const leftY = curveCenter.y;
         const rightX = curveCenter.x + outerRadius - barrierWidth;
         const rightY = curveCenter.y;
+        const vertical = true;
 
-        return { width, height, chunks, leftX, leftY, rightX, rightY };
+        const ground = {
+            x: leftX,
+            y: leftY,
+            width,
+            height
+        };
+        const leftBarrier = {
+            chunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: leftX,
+            top: leftY,
+            shift: 0,
+            vertical
+        };
+        const rightBarrier = {
+            chunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: rightX,
+            top: rightY,
+            shift: 1,
+            vertical
+        };
+
+        return { ground, leftBarrier, rightBarrier };
     }
 };
+
+/**
+ * Computes the parameters for rendering a tile at the expected position.
+ * @param {TileModel} model - A reference to the tile model.
+ * @param {number} tileX - The X-coordinate of the tile.
+ * @param {number} tileY - The Y-coordinate of the tile.
+ * @returns {object} - Returns a set parameters for rendering the tile at the expected position.
+ * @throws {TypeError} - If the given type is not valid.
+ */
+
+export function getTileParameters(model, tileX, tileY) {
+    const { type } = model;
+    validateType(type);
+    return tileParameters[type](model, tileX, tileY);
+}
+
+/**
+ * @typedef {import('../models').TileModel} TileModel
+ */
 
 /**
  * @typedef {import('../models').CurvedTileModel} CurvedTileModel
