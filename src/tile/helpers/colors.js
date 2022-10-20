@@ -40,5 +40,15 @@ export const barrierColor = i => ({
 export const groundColor = () => ({
     fill: 'var(--color-ground)',
     stroke: 'var(--color-separator)',
-    strokeWidth: 1
+    strokeWidth: 'var(--stroke-width-tile)'
+});
+
+/**
+ * Returns the presentation attributes for a tile overlay.
+ * @returns {object}
+ */
+export const overlayColor = () => ({
+    fill: 'var(--color-bg-overlay)',
+    stroke: 'var(--color-fg-overlay)',
+    strokeWidth: 'var(--stroke-width-overlay)'
 });

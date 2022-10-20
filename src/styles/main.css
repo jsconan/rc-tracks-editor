@@ -13,7 +13,10 @@
     --color-odd: #c24;
     --color-control: #2a2;
     --color-canvas: #666;
-    --tile-stroke-width: 1px;
+    --color-bg-overlay: rgba(25, 200, 50, 0.2);
+    --color-fg-overlay: rgba(32, 128, 64, 0.3);
+    --stroke-width-tile: 1px;
+    --stroke-width-overlay: 2px;
 
     /* default scheme */
     --color-fg: var(--color-fg-dark);

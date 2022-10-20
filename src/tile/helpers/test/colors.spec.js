@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { barrierColor, groundColor } from '../colors.js';
+import { barrierColor, groundColor, overlayColor } from '../colors.js';
 
 const colorEven = {
     fill: 'var(--color-even)'
@@ -27,7 +27,12 @@ const colorOdd = {
 const colorGround = {
     fill: 'var(--color-ground)',
     stroke: 'var(--color-separator)',
-    strokeWidth: 1
+    strokeWidth: 'var(--stroke-width-tile)'
+};
+const colorOverlay = {
+    fill: 'var(--color-bg-overlay)',
+    stroke: 'var(--color-fg-overlay)',
+    strokeWidth: 'var(--stroke-width-overlay)'
 };
 
 describe('barrierColor', () => {
@@ -53,5 +58,15 @@ describe('groundColor', () => {
 
     it('returns with the color attributes for a tile ground', () => {
         expect(groundColor()).toStrictEqual(colorGround);
+    });
+});
+
+describe('overlayColor', () => {
+    it('is a function', () => {
+        expect(overlayColor).toEqual(expect.any(Function));
+    });
+
+    it('returns with the color attributes for a tile overlay', () => {
+        expect(overlayColor()).toStrictEqual(colorOverlay);
     });
 });

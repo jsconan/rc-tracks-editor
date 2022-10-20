@@ -11,7 +11,7 @@ exports[`CurvedTile renders with default values 1`] = `
         d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -70,7 +70,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -129,7 +129,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -188,7 +188,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 10 10 0 0 1 52.071067811865476 157.07106781186548 L 115.71067811865476 220.71067811865476 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -232,7 +232,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -291,7 +291,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 120 120 0 0 1 19.852813742385706 234.8528137423857 L 83.49242404917499 298.49242404917493 A 210 210 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -360,7 +360,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 230 230 0 0 1 24.185842870420913 265 L 102.1281292110204 310 A 320 320 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -429,7 +429,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 340 340 0 0 1 29.119041053837464 280.11236700413053 L 112.26819897985331 314.5538759169886 A 430 430 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -498,7 +498,7 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -557,7 +557,7 @@ exports[`CurvedTile updates when the parameter angle is modified 1`] = `
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -616,7 +616,7 @@ exports[`CurvedTile updates when the parameter direction is modified 1`] = `
         d="M 55 150 A 10 10 0 0 1 45 160 L 45.00000000000001 250 A 100 100 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -675,7 +675,7 @@ exports[`CurvedTile updates when the parameter ratio is modified 1`] = `
         d="M 55 150 A 120 120 0 0 1 19.852813742385706 234.8528137423857 L 83.49242404917499 298.49242404917493 A 210 210 0 0 0 145 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -744,7 +744,7 @@ exports[`CurvedTile updates when the parameter x is modified 1`] = `
         d="M -5 150 A 10 10 0 0 1 -15 160 L -14.999999999999995 250 A 100 100 0 0 0 85 150 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"
@@ -803,7 +803,7 @@ exports[`CurvedTile updates when the parameter y is modified 1`] = `
         d="M 55 40 A 10 10 0 0 1 45 50 L 45.00000000000001 140 A 100 100 0 0 0 145 40 Z"
         fill="var(--color-ground)"
         stroke="var(--color-separator)"
-        stroke-width="1"
+        stroke-width="var(--stroke-width-tile)"
       />
       <g
         class="barrier curved-barrier"

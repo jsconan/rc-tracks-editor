@@ -21,7 +21,7 @@ exports[`TileSelector renders with default values 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="-110"
             y="45"
@@ -113,7 +113,7 @@ exports[`TileSelector renders with default values 1`] = `
             d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -198,7 +198,7 @@ exports[`TileSelector renders with default values 1`] = `
             d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -253,7 +253,7 @@ exports[`TileSelector renders with default values 1`] = `
             d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -318,7 +318,7 @@ exports[`TileSelector renders with default values 1`] = `
             d="M -126.1752374031932 523.5048538691518 A 230 230 0 0 1 -156.98939453277228 638.5048538691518 L -79.0471081921728 683.5048538691518 A 320 320 0 0 0 -36.175237403193194 523.5048538691518 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -383,7 +383,7 @@ exports[`TileSelector renders with default values 1`] = `
             d="M -130.1097739762094 639.3691830969162 A 340 340 0 0 1 -155.99073292237193 769.4815501010468 L -72.84157499635609 803.9230590139048 A 430 430 0 0 0 -40.1097739762094 639.3691830969162 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -466,7 +466,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="-110"
             y="45"
@@ -569,7 +569,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
             d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -665,7 +665,7 @@ exports[`TileSelector renders with the given parameters 1`] = `
             d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -749,7 +749,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="-110"
             y="45"
@@ -852,7 +852,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
             d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -948,7 +948,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
             d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -1014,7 +1014,7 @@ exports[`TileSelector updates when the model is modified 1`] = `
             d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"

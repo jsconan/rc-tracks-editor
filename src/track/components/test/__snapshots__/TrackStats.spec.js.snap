@@ -21,7 +21,7 @@ exports[`TrackStats renders with default values 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="0"
             y="-65"
@@ -124,7 +124,7 @@ exports[`TrackStats renders with default values 1`] = `
             d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -208,7 +208,7 @@ exports[`TrackStats renders with the given parameters 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="0"
             y="-65"
@@ -311,7 +311,7 @@ exports[`TrackStats renders with the given parameters 1`] = `
             d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -395,7 +395,7 @@ exports[`TrackStats updates when the model is modified 1`] = `
             fill="var(--color-ground)"
             height="110"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
             width="90"
             x="0"
             y="-65"
@@ -498,7 +498,7 @@ exports[`TrackStats updates when the model is modified 1`] = `
             d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 L 165 40 A 45 45 0 0 0 210 -5 L 210 -60 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
@@ -594,7 +594,7 @@ exports[`TrackStats updates when the model is modified 1`] = `
             d="M 240 -60 A 10 10 0 0 1 230 -50 L 230 40 A 100 100 0 0 0 330 -60 Z"
             fill="var(--color-ground)"
             stroke="var(--color-separator)"
-            stroke-width="1"
+            stroke-width="var(--stroke-width-tile)"
           />
           <g
             class="barrier curved-barrier"
