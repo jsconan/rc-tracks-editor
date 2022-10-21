@@ -465,6 +465,254 @@ exports[`CurvedTileModel can compute the outer radius of the curve for a tile wi
 
 exports[`CurvedTileModel can compute the outer radius of the curve for a tile with a ratio of 4 1`] = `430`;
 
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 1 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "angle": 90,
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 4,
+    "left": 140,
+    "radius": 95,
+    "shift": 1,
+    "top": 100,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 1 and positioned at [undefined, undefined] 1`] = `
+{
+  "ground": {
+    "angle": 90,
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 4,
+    "left": 40,
+    "radius": 95,
+    "shift": 1,
+    "top": 0,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 2 and positioned at [0, 0] 1`] = `
+{
+  "ground": {
+    "angle": 45,
+    "cx": -165,
+    "cy": 0,
+    "radius": 120,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": -45,
+    "radius": 120,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 40,
+    "radius": 205,
+    "shift": 1,
+    "top": 0,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 2 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "angle": 45,
+    "cx": -65,
+    "cy": 100,
+    "radius": 120,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 55,
+    "radius": 120,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 140,
+    "radius": 205,
+    "shift": 1,
+    "top": 100,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 1 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "angle": 90,
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 4,
+    "left": 140,
+    "radius": 95,
+    "shift": 1,
+    "top": 100,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 1 and positioned at [undefined, undefined] 1`] = `
+{
+  "ground": {
+    "angle": 90,
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 4,
+    "left": 40,
+    "radius": 95,
+    "shift": 1,
+    "top": 0,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 2 and positioned at [0, 0] 1`] = `
+{
+  "ground": {
+    "angle": 45,
+    "cx": -165,
+    "cy": 0,
+    "radius": 120,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": -45,
+    "radius": 120,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 40,
+    "radius": 205,
+    "shift": 1,
+    "top": 0,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 2 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "angle": 45,
+    "cx": -65,
+    "cy": 100,
+    "radius": 120,
+    "start": 0,
+    "width": 90,
+  },
+  "innerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 55,
+    "radius": 120,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 45,
+    "chunks": 4,
+    "left": 140,
+    "radius": 205,
+    "shift": 1,
+    "top": 100,
+    "width": 5,
+  },
+}
+`;
+
 exports[`CurvedTileModel can compute the position of the center point for a tile with a ratio of 0.5 1`] = `
 Vector2D {
   "x": 0,

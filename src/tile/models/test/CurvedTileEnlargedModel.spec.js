@@ -400,6 +400,22 @@ describe('CurvedTileEnlargedModel', () => {
                 }
             );
         });
+
+        describe('the parameters for rendering the shapes', () => {
+            it.each([
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 1, 100, 100],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 100, 100],
+                [CurvedTileEnlargedModel.DIRECTION_RIGHT, 2, 0, 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, void 0, void 0],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 1, 100, 100],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 100, 100],
+                [CurvedTileEnlargedModel.DIRECTION_LEFT, 2, 0, 0]
+            ])('oriented to the %s with a ratio of %s and positioned at [%s, %s]', (direction, ratio, x, y) => {
+                const tile = new CurvedTileEnlargedModel(specs, direction, ratio);
+                expect(tile.getShapeParameters(x, y)).toMatchSnapshot();
+            });
+        });
     });
 
     it.each([

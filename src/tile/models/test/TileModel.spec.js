@@ -344,6 +344,22 @@ describe('TileModel', () => {
                 }
             );
         });
+
+        describe('the parameters for rendering the shapes', () => {
+            it.each([
+                [TileModel.DIRECTION_RIGHT, 1, void 0, void 0],
+                [TileModel.DIRECTION_RIGHT, 1, 100, 100],
+                [TileModel.DIRECTION_RIGHT, 2, 100, 100],
+                [TileModel.DIRECTION_RIGHT, 2, 0, 0],
+                [TileModel.DIRECTION_LEFT, 1, void 0, void 0],
+                [TileModel.DIRECTION_LEFT, 1, 100, 100],
+                [TileModel.DIRECTION_LEFT, 2, 100, 100],
+                [TileModel.DIRECTION_LEFT, 2, 0, 0]
+            ])('oriented to the %s with a ratio of %s and positioned at [%s, %s]', (direction, ratio, x, y) => {
+                const tile = new TileModel(specs, direction, ratio);
+                expect(tile.getShapeParameters(x, y)).toMatchSnapshot();
+            });
+        });
     });
 
     it.each([

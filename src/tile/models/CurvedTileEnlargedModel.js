@@ -199,6 +199,88 @@ export class CurvedTileEnlargedModel extends TileModel {
 
         return edges;
     }
+
+    /**
+     * Computes the parameters for rendering tile shapes at the expected position.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @returns {object} - Returns a set of parameters for rendering the tile shapes.
+     */
+    getShapeParameters(x = 0, y = 0) {
+        const width = this.specs.width;
+        const barrierLength = this.specs.barrierLength;
+        const barrierWidth = this.specs.barrierWidth;
+
+        const side = this.getCurveSide();
+        const innerRadius = this.getInnerRadius();
+        const outerRadius = this.getOuterRadius() - barrierWidth;
+        const sideChunks = this.getSideBarrierChunks();
+        const innerChunks = this.getInnerBarrierChunks();
+        const outerChunks = this.getOuterBarrierChunks();
+        const curveAngle = this.getCurveAngle();
+        const curveCenter = this.getCurveCenter(x, y);
+        const outerBarrierPosition = width - barrierWidth;
+
+        const { x: innerX, y: innerY } = curveCenter.addScalarX(innerRadius);
+        const { x: outerX, y: outerY } = curveCenter.addCoord(
+            side + outerRadius,
+            innerRadius + outerBarrierPosition - outerRadius
+        );
+        const { x: horizontalX, y: horizontalY } = curveCenter.addScalarY(innerRadius + outerBarrierPosition);
+        const { x: verticalX, y: verticalY } = curveCenter.addScalarX(innerRadius + outerBarrierPosition);
+
+        const ground = {
+            cx: curveCenter.x,
+            cy: curveCenter.y,
+            width,
+            side,
+            radius: innerRadius
+        };
+        const innerBarrier = {
+            chunks: innerChunks,
+            width: barrierWidth,
+            radius: innerRadius,
+            angle: curveAngle,
+            left: innerX,
+            top: innerY,
+            shift: 0
+        };
+        const outerBarrier = {
+            chunks: outerChunks,
+            width: barrierWidth,
+            radius: outerRadius,
+            angle: curveAngle,
+            left: outerX,
+            top: outerY,
+            shift: 1
+        };
+        const horizontalBarrier = {
+            chunks: sideChunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: horizontalX,
+            top: horizontalY,
+            shift: 0,
+            vertical: false
+        };
+        const verticalBarrier = {
+            chunks: sideChunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: verticalX,
+            top: verticalY,
+            shift: 1,
+            vertical: true
+        };
+
+        return {
+            ground,
+            innerBarrier,
+            outerBarrier,
+            horizontalBarrier,
+            verticalBarrier
+        };
+    }
 }
 
 /**

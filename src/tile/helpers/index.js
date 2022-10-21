@@ -18,5 +18,4 @@
 
 export * from './angles.js';
 export * from './colors.js';
-export * from './parameters.js';
 export * from './tiles.js';

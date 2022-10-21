@@ -3,13 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { CurvedElement, CurvedElementEnlarged, StraightElement } from '../elements';
-    import {
-        getTileParameters,
-        overlayColor,
-        CURVED_TILE_ENLARGED_TYPE,
-        CURVED_TILE_TYPE,
-        STRAIGHT_TILE_TYPE
-    } from '../helpers';
+    import { overlayColor, CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../helpers';
     import { TileModel } from '../models';
 
     export let tile;
@@ -25,7 +19,7 @@
         [CURVED_TILE_ENLARGED_TYPE]: CurvedElementEnlarged
     };
 
-    $: parameters = getTileParameters(tile, x, y);
+    $: parameters = tile.getShapeParameters(x, y);
     $: transform = tile.getRotateTransform(x, y, angle);
     $: component = componentsMap[tile.type];
 </script>

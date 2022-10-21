@@ -371,6 +371,55 @@ export class TileModel {
     }
 
     /**
+     * Computes the parameters for rendering tile shapes at the expected position.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @returns {object} - Returns a set of parameters for rendering the tile shapes.
+     */
+    getShapeParameters(x = 0, y = 0) {
+        const barrierLength = this.specs.barrierLength;
+        const barrierWidth = this.specs.barrierWidth;
+
+        const chunks = this.getSideBarrierChunks();
+        const innerRadius = this.getInnerRadius();
+        const outerRadius = this.getOuterRadius();
+        const curveCenter = this.getCurveCenter(x, y);
+
+        const leftX = curveCenter.x + innerRadius;
+        const leftY = curveCenter.y;
+        const rightX = curveCenter.x + outerRadius - barrierWidth;
+        const rightY = curveCenter.y;
+        const vertical = true;
+
+        const ground = {
+            x: leftX,
+            y: leftY,
+            width: this.width,
+            height: this.length
+        };
+        const leftBarrier = {
+            chunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: leftX,
+            top: leftY,
+            shift: 0,
+            vertical
+        };
+        const rightBarrier = {
+            chunks,
+            width: barrierWidth,
+            length: barrierLength,
+            left: rightX,
+            top: rightY,
+            shift: 1,
+            vertical
+        };
+
+        return { ground, leftBarrier, rightBarrier };
+    }
+
+    /**
      * Exports the model to an object.
      * @returns {tileExport} - An object representation of the model.
      */

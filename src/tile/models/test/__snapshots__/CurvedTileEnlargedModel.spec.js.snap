@@ -550,6 +550,390 @@ exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a
 
 exports[`CurvedTileEnlargedModel can compute the outer radius of the curve for a tile with a ratio of 4 1`] = `45`;
 
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 1 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": 45,
+    "length": 27.5,
+    "shift": 0,
+    "top": 195,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 140,
+    "radius": 40,
+    "shift": 1,
+    "top": 155,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 140,
+    "length": 27.5,
+    "shift": 1,
+    "top": 100,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 1 and positioned at [undefined, undefined] 1`] = `
+{
+  "ground": {
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": -55,
+    "length": 27.5,
+    "shift": 0,
+    "top": 95,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 40,
+    "radius": 40,
+    "shift": 1,
+    "top": 55,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 40,
+    "length": 27.5,
+    "shift": 1,
+    "top": 0,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 2 and positioned at [0, 0] 1`] = `
+{
+  "ground": {
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": -55,
+    "length": 27.5,
+    "shift": 0,
+    "top": 95,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 40,
+    "radius": 40,
+    "shift": 1,
+    "top": 55,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 40,
+    "length": 27.5,
+    "shift": 1,
+    "top": 0,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the left with a ratio of 2 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": 45,
+    "length": 27.5,
+    "shift": 0,
+    "top": 195,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 140,
+    "radius": 40,
+    "shift": 1,
+    "top": 155,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 140,
+    "length": 27.5,
+    "shift": 1,
+    "top": 100,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 1 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": 45,
+    "length": 27.5,
+    "shift": 0,
+    "top": 195,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 140,
+    "radius": 40,
+    "shift": 1,
+    "top": 155,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 140,
+    "length": 27.5,
+    "shift": 1,
+    "top": 100,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 1 and positioned at [undefined, undefined] 1`] = `
+{
+  "ground": {
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": -55,
+    "length": 27.5,
+    "shift": 0,
+    "top": 95,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 40,
+    "radius": 40,
+    "shift": 1,
+    "top": 55,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 40,
+    "length": 27.5,
+    "shift": 1,
+    "top": 0,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 2 and positioned at [0, 0] 1`] = `
+{
+  "ground": {
+    "cx": -55,
+    "cy": 0,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": -55,
+    "length": 27.5,
+    "shift": 0,
+    "top": 95,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": -45,
+    "radius": 10,
+    "shift": 0,
+    "top": 0,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 40,
+    "radius": 40,
+    "shift": 1,
+    "top": 55,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 40,
+    "length": 27.5,
+    "shift": 1,
+    "top": 0,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
+exports[`CurvedTileEnlargedModel can compute the parameters for rendering the shapes oriented to the right with a ratio of 2 and positioned at [100, 100] 1`] = `
+{
+  "ground": {
+    "cx": 45,
+    "cy": 100,
+    "radius": 10,
+    "side": 55,
+    "width": 90,
+  },
+  "horizontalBarrier": {
+    "chunks": 2,
+    "left": 45,
+    "length": 27.5,
+    "shift": 0,
+    "top": 195,
+    "vertical": false,
+    "width": 5,
+  },
+  "innerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 55,
+    "radius": 10,
+    "shift": 0,
+    "top": 100,
+    "width": 5,
+  },
+  "outerBarrier": {
+    "angle": 90,
+    "chunks": 2,
+    "left": 140,
+    "radius": 40,
+    "shift": 1,
+    "top": 155,
+    "width": 5,
+  },
+  "verticalBarrier": {
+    "chunks": 2,
+    "left": 140,
+    "length": 27.5,
+    "shift": 1,
+    "top": 100,
+    "vertical": true,
+    "width": 5,
+  },
+}
+`;
+
 exports[`CurvedTileEnlargedModel can compute the position of the center point for a tile with a ratio of 0.5 1`] = `
 Vector2D {
   "x": 0,

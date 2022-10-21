@@ -177,6 +177,61 @@ export class CurvedTileModel extends TileModel {
 
         return edges;
     }
+
+    /**
+     * Computes the parameters for rendering tile shapes at the expected position.
+     * @param {number} x - The X-coordinate of the tile.
+     * @param {number} y - The Y-coordinate of the tile.
+     * @returns {object} - Returns a set of parameters for rendering the tile shapes.
+     */
+    getShapeParameters(x = 0, y = 0) {
+        const barrierWidth = this.specs.barrierWidth;
+
+        const innerRadius = this.getInnerRadius();
+        const outerRadius = this.getOuterRadius() - barrierWidth;
+        const innerChunks = this.getInnerBarrierChunks();
+        const outerChunks = this.getOuterBarrierChunks();
+        const curveAngle = this.getCurveAngle();
+        const curveCenter = this.getCurveCenter(x, y);
+
+        const innerX = curveCenter.x + innerRadius;
+        const innerY = curveCenter.y;
+        const outerX = curveCenter.x + outerRadius;
+        const outerY = curveCenter.y;
+
+        const ground = {
+            cx: curveCenter.x,
+            cy: curveCenter.y,
+            width: this.specs.width,
+            radius: innerRadius,
+            angle: curveAngle,
+            start: 0
+        };
+        const innerBarrier = {
+            chunks: innerChunks,
+            width: barrierWidth,
+            radius: innerRadius,
+            angle: curveAngle,
+            left: innerX,
+            top: innerY,
+            shift: 0
+        };
+        const outerBarrier = {
+            chunks: outerChunks,
+            width: barrierWidth,
+            radius: outerRadius,
+            angle: curveAngle,
+            left: outerX,
+            top: outerY,
+            shift: 1
+        };
+
+        return {
+            ground,
+            innerBarrier,
+            outerBarrier
+        };
+    }
 }
 
 /**

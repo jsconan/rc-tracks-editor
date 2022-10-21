@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { getTileParameters, groundColor } from '../helpers';
+    import { groundColor } from '../helpers';
     import { TileSpecifications } from '../config';
     import { CurvedBarrier, CurvedElement } from '../elements';
     import { CurvedTileModel } from '../models';
@@ -19,7 +19,7 @@
     const specs = getContext(TileSpecifications.CONTEXT_ID);
 
     $: model = new CurvedTileModel(specs, direction, ratio);
-    $: parameters = getTileParameters(model, x, y);
+    $: parameters = model.getShapeParameters(x, y);
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
