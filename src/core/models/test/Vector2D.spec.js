@@ -18,7 +18,7 @@
 
 import { Vector2D } from '../Vector2D.js';
 
-describe('Vector', () => {
+describe('Vector2D', () => {
     it('is a class', () => {
         expect(Vector2D).toEqual(expect.any(Function));
     });
