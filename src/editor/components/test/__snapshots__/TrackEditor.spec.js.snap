@@ -500,6 +500,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 y="109.99999999999997"
               />
                
+              
             </svg>
           </svg>
         </article>
@@ -1105,6 +1106,18 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 y="55.00000000000001"
               />
                
+              <g
+                class="tile-overlay"
+                transform=""
+              >
+                <path
+                  d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                  fill="var(--color-bg-overlay)"
+                  stroke="var(--color-fg-overlay)"
+                  stroke-width="var(--stroke-width-overlay)"
+                />
+              </g>
+              
             </svg>
           </svg>
         </article>
@@ -1606,6 +1619,7 @@ exports[`TrackEditor renders with default values 1`] = `
               </defs>
               
                
+              
             </svg>
           </svg>
         </article>
@@ -2210,6 +2224,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                 y="54.99999999999998"
               />
                
+              
             </svg>
           </svg>
         </article>
@@ -2718,6 +2733,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                 y="109.99999999999997"
               />
                
+              
             </svg>
           </svg>
         </article>
