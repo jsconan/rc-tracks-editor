@@ -49,7 +49,7 @@ function eventEmitterMixin(target, ...mixins) {
          * event is emitted from another context, if won't have impact on it.
          * @param {string} name - The event to listen to.
          * @param {function} listener - The event listener that will be called when the event will be emitted.
-         * @returns {EventEmitter} - Chains the `EventEmitter` instance.
+         * @returns {EventEmitter} - Chains the instance.
          */
         on(name, listener) {
             if ('undefined' !== typeof name && 'function' === typeof listener) {
@@ -73,7 +73,7 @@ function eventEmitterMixin(target, ...mixins) {
          * event is emitted from another context, if won't have impact on it.
          * @param {string} name - The event to listen to.
          * @param {function} listener - The event listener that will be called when the event will be emitted.
-         * @returns {EventEmitter} - Chains the `EventEmitter` instance.
+         * @returns {EventEmitter} - Chains the instance.
          */
         once(name, listener) {
             if ('undefined' !== typeof name && 'function' === typeof listener) {
@@ -122,7 +122,7 @@ function eventEmitterMixin(target, ...mixins) {
          * ```
          * @param {string} name - The listened to event to unregister.
          * @param {function} listener - The event listener to remove.
-         * @returns {EventEmitter} - Chains the `EventEmitter` instance.
+         * @returns {EventEmitter} - Chains the instance.
          */
         off(name, listener) {
             if ('undefined' === typeof name) {
@@ -183,7 +183,7 @@ function eventEmitterMixin(target, ...mixins) {
          * if the event is emitted from a delegated object, it won't have impact on this context.
          * @param {string} name - The event to emit.
          * @param {...any} args - A list of arguments to pass to every event listeners.
-         * @returns {EventEmitter} - Chains the `EventEmitter` instance.
+         * @returns {EventEmitter} - Chains the instance.
          */
         emit(name, ...args) {
             const eventsQueue = events.get(name);

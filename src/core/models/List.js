@@ -66,7 +66,7 @@ export class List {
     /**
      * Applies a callback to each value from the list.
      * @param {listCallback} walker - A callback that will be applied to each value of the list.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @throws {TypeError} - If the given callback is not a function.
      */
     forEach(walker) {
@@ -132,7 +132,7 @@ export class List {
      * Sets a value at a particular index.
      * @param {number} index - The index where to set the value.
      * @param {*} value - The value to set at the index.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @fires set
      * @throws {ReferenceError} - If the given index is out of bounds.
      */
@@ -153,7 +153,7 @@ export class List {
      * Inserts values at a particular index.
      * @param {number} index - The index where to insert the values.
      * @param {...*} values - The values to insert at the index.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @fires add
      */
     insert(index, ...values) {
@@ -167,7 +167,7 @@ export class List {
     /**
      * Adds values at the end of the list.
      * @param {...*} values - The values to add.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @fires add
      */
     add(...values) {
@@ -199,7 +199,7 @@ export class List {
 
     /**
      * Clears the list.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @fires clear
      */
     clear() {
@@ -213,7 +213,7 @@ export class List {
     /**
      * Loads values from another source. The list is cleared before.
      * @param {*} iterator - An iterable object that can be used to fill the list.
-     * @returns {List} - Chains the list.
+     * @returns {List} - Chains the instance.
      * @fires load
      */
     load(iterator) {
