@@ -20,6 +20,7 @@ export { Counter } from './Counter.js';
 export { DoubleMap } from './DoubleMap.js';
 export { List } from './List.js';
 export { MultiMap } from './MultiMap.js';
+export { Polygon2D } from './Polygon2D.js';
 export { SortedMap } from './SortedMap.js';
 export { SortedSet } from './SortedSet.js';
 export { TreeNode } from './TreeNode.js';

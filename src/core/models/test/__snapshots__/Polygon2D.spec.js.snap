@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Polygon2D can add points to the polygon 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points at a particular index 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points at the beginning 1`] = `
+[
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points at the end 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+]
+`;
+
+exports[`Polygon2D can map its points 1`] = `
+[
+  Vector2D {
+    "x": 100,
+    "y": 40,
+  },
+  Vector2D {
+    "x": 100,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 40,
+    "y": 100,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+]
+`;
+
+exports[`Polygon2D can remove points from a particular index 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+]
+`;
+
+exports[`Polygon2D can set a point to a particular index 1`] = `
+[
+  Vector2D {
+    "x": 4,
+    "y": 5,
+  },
+  Vector2D {
+    "x": 18,
+    "y": 15,
+  },
+  Vector2D {
+    "x": 42,
+    "y": 5,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+]
+`;
