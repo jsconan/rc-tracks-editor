@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { adjust } from '../../core/helpers';
 import { Vector2D } from '../../core/models';
 
 const lastQuadrant = Vector2D.STRAIGHT_ANGLE + Vector2D.RIGHT_ANGLE;
@@ -27,7 +28,7 @@ const shiftAngle = Vector2D.RIGHT_ANGLE / 2;
  * @returns {number} - Returns the angle of the closest quadrant.
  */
 export const quadrantAngle = angle => {
-    const edge = Vector2D.quadrant(angle + shiftAngle) * Vector2D.RIGHT_ANGLE;
+    const edge = Vector2D.quadrant(adjust(angle) + shiftAngle) * Vector2D.RIGHT_ANGLE;
     if (!edge && angle > lastQuadrant) {
         return Vector2D.CIRCLE;
     }
