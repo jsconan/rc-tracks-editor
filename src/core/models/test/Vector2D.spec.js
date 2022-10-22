@@ -733,6 +733,14 @@ describe('Vector2D', () => {
             });
         });
 
+        describe('validateInstance', () => {
+            it('which can validate an object is an instance of the class', () => {
+                const v = new Vector2D();
+                expect(() => Vector2D.validateInstance(v)).not.toThrow();
+                expect(() => Vector2D.validateInstance({})).toThrow('The object must be an instance of Vector2D!');
+            });
+        });
+
         describe('vector', () => {
             describe('which creates a vector', () => {
                 it('at the origin', () => {
