@@ -41,6 +41,26 @@ describe('Vector2D', () => {
         });
     });
 
+    describe('can get', () => {
+        it('the coordinates of the vector', () => {
+            const v = new Vector2D(1, 2);
+
+            expect(v.get(3, 4)).toStrictEqual({ x: 1, y: 2 });
+        });
+
+        it('the X-coordinate of the vector', () => {
+            const v = new Vector2D(1, 2);
+
+            expect(v.getY()).toBe(2);
+        });
+
+        it('the Y-coordinate of the vector', () => {
+            const v = new Vector2D(1, 2);
+
+            expect(v.getX()).toBe(1);
+        });
+    });
+
     describe('can set', () => {
         it('the coordinates of the vector', () => {
             const v = new Vector2D(1, 1);
@@ -667,7 +687,7 @@ describe('Vector2D', () => {
         it('to a string', () => {
             const v = new Vector2D(3, 4);
 
-            expect(v.toString()).toBe('x: 3, y: 4');
+            expect(v.toString()).toBe('x=3 y=4');
         });
 
         it('to an array', () => {

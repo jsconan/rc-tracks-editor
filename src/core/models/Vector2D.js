@@ -39,9 +39,34 @@ export class Vector2D {
     }
 
     /**
+     * Gets the coordinates of the vector.
+     * @returns {coord} - The coordinates of the vector.
+     */
+    get() {
+        return this.toObject();
+    }
+
+    /**
+     * Gets the X-coordinate of the vector.
+     * @returns {number} - The X-coordinate of the vector.
+     */
+    getX() {
+        return this.x;
+    }
+
+    /**
+     * Gets the Y-coordinate of the vector.
+     * @returns {number} - The Y-coordinate of the vector.
+     */
+    getY() {
+        return this.y;
+    }
+
+    /**
      * Sets the coordinates of the vector.
      * @param {number} x - The X-coordinate of the vector.
      * @param {number} y - The Y-coordinate of the vector.
+     * @returns {Vector2D} - Chains the instance.
      */
     set(x, y) {
         this.x = x;
@@ -53,6 +78,7 @@ export class Vector2D {
     /**
      * Sets the X-coordinate of the vector.
      * @param {number} x - The X-coordinate of the vector.
+     * @returns {Vector2D} - Chains the instance.
      */
     setX(x) {
         this.x = x;
@@ -63,6 +89,7 @@ export class Vector2D {
     /**
      * Sets the Y-coordinate of the vector.
      * @param {number} y - The Y-coordinate of the vector.
+     * @returns {Vector2D} - Chains the instance.
      */
     setY(y) {
         this.y = y;
@@ -73,7 +100,7 @@ export class Vector2D {
     /**
      * Copies the coordinates of another vector.
      * @param {Vector2D} vector
-     * @returns {Vector2D}
+     * @returns {Vector2D} - Chains the instance.
      */
     copy(vector) {
         this.x = vector.x;
@@ -85,7 +112,7 @@ export class Vector2D {
     /**
      * Copies the X-coordinate of another vector.
      * @param {Vector2D} vector
-     * @returns {Vector2D}
+     * @returns {Vector2D} - Chains the instance.
      */
     copyX(vector) {
         this.x = vector.x;
@@ -96,7 +123,7 @@ export class Vector2D {
     /**
      * Copies the Y-coordinate of another vector.
      * @param {Vector2D} vector
-     * @returns {Vector2D}
+     * @returns {Vector2D} - Chains the instance.
      */
     copyY(vector) {
         this.y = vector.y;
@@ -532,7 +559,7 @@ export class Vector2D {
      * @returns {string} - The string representation of the vector.
      */
     toString() {
-        return `x: ${this.x}, y: ${this.y}`;
+        return `x=${this.x} y=${this.y}`;
     }
 
     /**
