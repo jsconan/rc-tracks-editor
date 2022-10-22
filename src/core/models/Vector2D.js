@@ -555,15 +555,15 @@ export class Vector2D {
     }
 
     /**
-     * Converts the vector to a string
+     * Converts the vector to a string.
      * @returns {string} - The string representation of the vector.
      */
     toString() {
-        return `x=${this.x} y=${this.y}`;
+        return `${this.x},${this.y}`;
     }
 
     /**
-     * Converts the vector to an array
+     * Converts the vector to an array.
      * @returns {Array} - The array representation of the vector.
      */
     toArray() {
@@ -571,7 +571,7 @@ export class Vector2D {
     }
 
     /**
-     * Converts the vector to an object
+     * Converts the vector to an object.
      * @returns {coord} - The object representation of the vector.
      */
     toObject() {

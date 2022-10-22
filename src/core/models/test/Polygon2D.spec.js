@@ -260,11 +260,20 @@ describe('Polygon2D', () => {
         expect([...polygon]).toEqual(points);
     });
 
-    it('can export the points to an array', () => {
-        const polygon = new Polygon2D(points);
+    describe('can export the points', () => {
+        it('to a string', () => {
+            const polygon = new Polygon2D(points);
 
-        expect(polygon.toArray).toEqual(expect.any(Function));
-        expect(polygon.toArray()).toEqual(points);
+            expect(polygon.toString).toEqual(expect.any(Function));
+            expect(polygon.toString()).toBe('10,4 10,10 4,10 0,0');
+        });
+
+        it('to an array', () => {
+            const polygon = new Polygon2D(points);
+
+            expect(polygon.toArray).toEqual(expect.any(Function));
+            expect(polygon.toArray()).toEqual(points);
+        });
     });
 
     it('can validate a list contains valid points', () => {

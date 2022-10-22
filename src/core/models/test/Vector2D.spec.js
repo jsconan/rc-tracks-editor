@@ -687,7 +687,7 @@ describe('Vector2D', () => {
         it('to a string', () => {
             const v = new Vector2D(3, 4);
 
-            expect(v.toString()).toBe('x=3 y=4');
+            expect(v.toString()).toBe('3,4');
         });
 
         it('to an array', () => {

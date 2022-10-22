@@ -184,6 +184,14 @@ export class Polygon2D {
     }
 
     /**
+     * Converts the polygon to a string.
+     * @returns {string} - The string representation of the polygon.
+     */
+    toString() {
+        return this.points.map(p => p.toString()).join(' ');
+    }
+
+    /**
      * Copy the polygon to an array.
      * @returns {Array} - An array containing the points from the polygon.
      */
