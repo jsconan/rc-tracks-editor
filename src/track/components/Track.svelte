@@ -27,8 +27,8 @@
     function dispatchEvent(event) {
         const index = track.getIndex(event.target.dataset.id);
         if (index > -1) {
-            const { id, type, direction, ratio, x, y, angle } = $tilesStore.tiles[index];
-            dispatch(event.type, { id, type, direction, ratio, x, y, angle, event });
+            const tileCoord = $tilesStore.tiles[index];
+            dispatch(event.type, { ...tileCoord, event });
         }
     }
 </script>

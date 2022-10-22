@@ -31,8 +31,8 @@
         const targetId = target && target.dataset.id;
         const index = $modelsStore.findIndex(tile => tile.id === targetId);
         if (index > -1) {
-            const { id, type, direction, ratio, x, y, angle } = models.tiles[index];
-            dispatch(event.type, { id, type, direction, ratio, x, y, angle, event });
+            const tileCoord = models.tiles[index];
+            dispatch(event.type, { ...tileCoord, event });
         }
     }
 
