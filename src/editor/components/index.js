@@ -16,5 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { default as TileOverlay } from './TileOverlay.svelte';
 export { default as TileSelector } from './TileSelector.svelte';
 export { default as TrackEditor } from './TrackEditor.svelte';

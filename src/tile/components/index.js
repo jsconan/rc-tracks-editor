@@ -21,4 +21,3 @@ export { default as CurvedTile } from './CurvedTile.svelte';
 export { default as CurvedTileEnlarged } from './CurvedTileEnlarged.svelte';
 export { default as StraightTile } from './StraightTile.svelte';
 export { default as Tile } from './Tile.svelte';
-export { default as TileOverlay } from './TileOverlay.svelte';

@@ -2,9 +2,9 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { CurvedElement, CurvedElementEnlarged, StraightElement } from '../elements';
-    import { overlayColor, CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../helpers';
-    import { TileModel } from '../models';
+    import { CurvedElement, CurvedElementEnlarged, StraightElement } from '../../tile/elements';
+    import { overlayColor, CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../../tile/helpers';
+    import { TileModel } from '../../tile/models';
 
     export let tile;
     export let angle = 0;

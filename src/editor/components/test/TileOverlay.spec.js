@@ -18,8 +18,8 @@
 
 import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
-import { TileSpecifications } from '../../config';
-import { CurvedTileModel, CurvedTileEnlargedModel, StraightTileModel } from '../../models';
+import { TileSpecifications } from '../../../tile/config';
+import { CurvedTileModel, CurvedTileEnlargedModel, StraightTileModel } from '../../../tile/models';
 import TileOverlay from '../TileOverlay.svelte';
 
 const laneWidth = 80;
