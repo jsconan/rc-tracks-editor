@@ -95,3 +95,51 @@ exports[`Context renders with the given props 1`] = `
   </div>
 </body>
 `;
+
+exports[`Context updates with the given parameters 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          origin
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          bar
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
+
+exports[`Context updates with the given parameters 2`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          updated
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          bar
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;

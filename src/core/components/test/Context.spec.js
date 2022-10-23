@@ -16,8 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Context } from '..';
 import { render, fireEvent } from '@testing-library/svelte';
+import { tick } from 'svelte';
+import Context from '../Context.svelte';
 import Mock from './Mock.svelte';
 
 describe('Context', () => {
@@ -65,6 +66,23 @@ describe('Context', () => {
         const { container } = render(Context, { props });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it('updates with the given parameters', async () => {
+        const props = {
+            component: Mock,
+            contextKey: 'foo',
+            context: 'bar',
+            props: {
+                param: 'origin'
+            }
+        };
+        const rendered = render(Context, { props });
+
+        expect(rendered.container).toMatchSnapshot();
+        rendered.component.$set({ props: { param: 'updated' } });
+        await tick();
+        expect(rendered.container).toMatchSnapshot();
     });
 
     it.each([
