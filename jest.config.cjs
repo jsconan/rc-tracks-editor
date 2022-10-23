@@ -26,6 +26,8 @@ module.exports = {
     moduleFileExtensions: ['svelte', 'js'],
     testMatch: ['**/*.spec.js'],
     testEnvironment: 'jsdom',
+    sandboxInjectedGlobals: ['Math', 'Object'],
+    cacheDirectory: '.cache',
     coverageDirectory: '.coverage',
     coverageProvider: 'v8',
     testPathIgnorePatterns: ['/node_modules/', '/__fixtures__/'],
