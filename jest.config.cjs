@@ -27,6 +27,7 @@ module.exports = {
     testMatch: ['**/*.spec.js'],
     testEnvironment: 'jsdom',
     coverageDirectory: '.coverage',
+    coverageProvider: 'v8',
     testPathIgnorePatterns: ['/node_modules/', '/__fixtures__/'],
     setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect']
 };

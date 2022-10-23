@@ -16,5 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* c8 ignore start */
 export * from './colors.js';
 export * from './tiles.js';
+/* c8 ignore end */
