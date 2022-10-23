@@ -25,9 +25,9 @@ import {
     getTypeRank,
     getDirectionRank
 } from '../helpers';
+import { degrees, rotate, STRAIGHT_ANGLE } from '../../core/helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
-import { rotate } from '../../core/helpers';
 
 /**
  * Represents a track tile.
@@ -168,7 +168,7 @@ export class TileModel {
      */
     getDirectionAngle() {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return Vector2D.STRAIGHT_ANGLE;
+            return STRAIGHT_ANGLE;
         }
 
         return 0;
@@ -287,7 +287,7 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngle(angle = 0) {
-        return Vector2D.degrees(angle);
+        return degrees(angle);
     }
 
     /**
@@ -343,7 +343,7 @@ export class TileModel {
             input: {
                 x: inputCoord.x,
                 y: inputCoord.y,
-                angle: Vector2D.degrees(angle)
+                angle: degrees(angle)
             },
             output: {
                 x: outputCoord.x,
@@ -363,7 +363,7 @@ export class TileModel {
     getRotateTransform(x = 0, y = 0, angle = 0) {
         const center = this.getCenterCoord(x, y);
         const directionAngle = this.getDirectionAngle();
-        const rotationAngle = Vector2D.degrees(angle);
+        const rotationAngle = degrees(angle);
         const orientation = directionAngle ? rotate(directionAngle, center.x, center.y) : '';
         const rotation = rotationAngle ? rotate(rotationAngle, x, y) : '';
 

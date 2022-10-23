@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { validateAPI } from '../../core/helpers';
+import { validateAPI, RIGHT_ANGLE, STRAIGHT_ANGLE } from '../../core/helpers';
 import { Vector2D } from '../../core/models';
 import { TILE_DIRECTION_LEFT } from '../../tile/helpers';
 
@@ -63,9 +63,8 @@ export default (
         const curveAngle = model.getCurveAngle();
         const { id, type, direction, ratio } = model;
         const alignedAngle = curveAngle / 2;
-        const directionAngle =
-            direction === TILE_DIRECTION_LEFT ? Vector2D.STRAIGHT_ANGLE * 2 - alignedAngle : alignedAngle;
-        const angle = tileAngle - (aligned && curveAngle < Vector2D.RIGHT_ANGLE ? directionAngle : 0);
+        const directionAngle = direction === TILE_DIRECTION_LEFT ? STRAIGHT_ANGLE * 2 - alignedAngle : alignedAngle;
+        const angle = tileAngle - (aligned && curveAngle < RIGHT_ANGLE ? directionAngle : 0);
         const rect = model.getBoundingRect(0, 0, angle);
         const width = Math.max(tileWidth, rect.width) + hPadding * 2;
         const height = Math.max(tileHeight, rect.height) + vPadding * 2;

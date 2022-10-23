@@ -29,6 +29,7 @@ export { default as uid } from './uid.js';
 export { default as validateAPI } from './validateAPI.js';
 export { default as validateCallback } from './validateCallback.js';
 export { default as wait } from './wait.js';
+export * from './angles.js';
 export * from './compare.js';
 export * from './svg.js';
 export * from './transform.js';

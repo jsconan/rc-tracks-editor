@@ -16,7 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { quadrantRange, CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
+import { CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
+import { degrees, quadrantRange, RIGHT_ANGLE } from '../../core/helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -49,7 +50,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      */
     getDirectionAngle() {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return Vector2D.RIGHT_ANGLE;
+            return RIGHT_ANGLE;
         }
 
         return 0;
@@ -60,7 +61,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getCurveAngle() {
-        return Vector2D.RIGHT_ANGLE;
+        return RIGHT_ANGLE;
     }
 
     /**
@@ -143,10 +144,10 @@ export class CurvedTileEnlargedModel extends TileModel {
      */
     getOutputAngle(angle = 0) {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return Vector2D.degrees(angle - Vector2D.RIGHT_ANGLE);
+            return degrees(angle - RIGHT_ANGLE);
         }
 
-        return Vector2D.degrees(angle + Vector2D.RIGHT_ANGLE);
+        return degrees(angle + RIGHT_ANGLE);
     }
 
     /**
@@ -169,13 +170,13 @@ export class CurvedTileEnlargedModel extends TileModel {
         if (this.direction === TILE_DIRECTION_LEFT) {
             center = start.addScalarX(centerRadius);
             curveCenter = center.addCoord(-side, side);
-            startAngle = Vector2D.RIGHT_ANGLE;
+            startAngle = RIGHT_ANGLE;
         } else {
             center = start.subScalarX(centerRadius);
             curveCenter = center.addScalar(side);
             startAngle = 0;
         }
-        const endAngle = startAngle + Vector2D.RIGHT_ANGLE;
+        const endAngle = startAngle + RIGHT_ANGLE;
 
         const p0 = Vector2D.polar(innerRadius, startAngle, center).rotateAround(angle, start);
         const p1 = Vector2D.polar(outerRadius, startAngle, center).rotateAround(angle, start);
@@ -187,8 +188,8 @@ export class CurvedTileEnlargedModel extends TileModel {
         const edges = [p0, p1, p2];
 
         const rotatedCenter = curveCenter.rotateAround(angle, start);
-        const rotatedStartAngle = Vector2D.degrees(p2.sub(rotatedCenter).angle());
-        const rotatedEndAngle = rotatedStartAngle + Vector2D.RIGHT_ANGLE;
+        const rotatedStartAngle = degrees(p2.sub(rotatedCenter).angle());
+        const rotatedEndAngle = rotatedStartAngle + RIGHT_ANGLE;
 
         const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);
         if (edgeAngle !== null) {

@@ -16,6 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { toDegrees, toRadians } from '../helpers';
+
 /**
  * Represents a 2D vector.
  */
@@ -478,7 +480,7 @@ export class Vector2D {
      * @returns {number} - The angle of the vector, in degrees.
      */
     angle() {
-        return Vector2D.toDegrees(Math.atan2(this.y, this.x));
+        return toDegrees(Math.atan2(this.y, this.x));
     }
 
     /**
@@ -487,9 +489,7 @@ export class Vector2D {
      * @returns {number} - The angle between the 2 vectors, in degrees.
      */
     angleWith(vector) {
-        return Vector2D.toDegrees(
-            Math.atan2(this.x * vector.y - this.y * vector.x, this.x * vector.x + this.y * vector.y)
-        );
+        return toDegrees(Math.atan2(this.x * vector.y - this.y * vector.x, this.x * vector.x + this.y * vector.y));
     }
 
     /**
@@ -508,7 +508,7 @@ export class Vector2D {
      * @returns {Vector2D} - A new vector rotated by the given angle.
      */
     rotate(angle) {
-        const rad = Vector2D.toRadians(angle);
+        const rad = toRadians(angle);
         const x = this.x * Math.cos(rad) - this.y * Math.sin(rad);
         const y = this.x * Math.sin(rad) + this.y * Math.cos(rad);
 
@@ -608,7 +608,7 @@ export class Vector2D {
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static polar(radius = 0, angle = 0, center = Vector2D.ORIGIN) {
-        const rad = Vector2D.toRadians(angle);
+        const rad = toRadians(angle);
         const x = center.x + Math.cos(rad) * radius;
         const y = center.y + Math.sin(rad) * radius;
 
@@ -656,42 +656,6 @@ export class Vector2D {
 
         return null;
     }
-
-    /**
-     * Converts an angle given in degrees to radians.
-     * @param {number} angle - The angle given in degrees.
-     * @returns {number} - The angle converted to radians.
-     */
-    static toRadians(angle) {
-        return angle / Vector2D.DEGREES_PER_RADIANS;
-    }
-
-    /**
-     * Converts an angle given in radians to degrees.
-     * @param {number} angle - The angle given in radians.
-     * @returns {number} - The angle converted to degrees.
-     */
-    static toDegrees(angle) {
-        return angle * Vector2D.DEGREES_PER_RADIANS;
-    }
-
-    /**
-     * Adjusts an angle given in degrees so that it remains within the domain.
-     * @param {number} angle - The angle given in degrees.
-     * @returns {number} - The angle adjusted in degrees.
-     */
-    static degrees(angle) {
-        return ((angle % Vector2D.CIRCLE) + Vector2D.CIRCLE) % Vector2D.CIRCLE;
-    }
-
-    /**
-     * Gets the quadrant in which the given angle is contained.
-     * @param {number} angle - The angle given in degrees.
-     * @returns {number} - The quadrant containing the given angle.
-     */
-    static quadrant(angle) {
-        return Math.floor(Vector2D.degrees(angle) / Vector2D.RIGHT_ANGLE);
-    }
 }
 
 /**
@@ -700,50 +664,6 @@ export class Vector2D {
  */
 Object.defineProperty(Vector2D, 'ORIGIN', {
     value: Object.freeze(new Vector2D()),
-    writable: false,
-    enumerable: true,
-    configurable: true
-});
-
-/**
- * A right angle in degrees.
- * @constant {number} Vector2D.RIGHT_ANGLE
- */
-Object.defineProperty(Vector2D, 'RIGHT_ANGLE', {
-    value: 90,
-    writable: false,
-    enumerable: true,
-    configurable: true
-});
-
-/**
- * A straight angle in degrees.
- * @constant {number} Vector2D.STRAIGHT_ANGLE
- */
-Object.defineProperty(Vector2D, 'STRAIGHT_ANGLE', {
-    value: 180,
-    writable: false,
-    enumerable: true,
-    configurable: true
-});
-
-/**
- * Degrees in a circle.
- * @constant {number} Vector2D.CIRCLE
- */
-Object.defineProperty(Vector2D, 'CIRCLE', {
-    value: 360,
-    writable: false,
-    enumerable: true,
-    configurable: true
-});
-
-/**
- * The number of degrees per radian.
- * @constant {number} Vector2D.DEGREES_PER_RADIANS
- */
-Object.defineProperty(Vector2D, 'DEGREES_PER_RADIANS', {
-    value: 180 / Math.PI,
     writable: false,
     enumerable: true,
     configurable: true

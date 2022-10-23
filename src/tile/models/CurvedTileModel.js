@@ -16,7 +16,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { quadrantRange, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
+import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
+import { degrees, quadrantRange, RIGHT_ANGLE, STRAIGHT_ANGLE } from '../../core/helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -54,7 +55,7 @@ export class CurvedTileModel extends TileModel {
      */
     getDirectionAngle() {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return Vector2D.RIGHT_ANGLE + (Vector2D.RIGHT_ANGLE / this.ratio) * (Math.max(1, this.ratio) - 1);
+            return RIGHT_ANGLE + (RIGHT_ANGLE / this.ratio) * (Math.max(1, this.ratio) - 1);
         }
 
         return 0;
@@ -66,10 +67,10 @@ export class CurvedTileModel extends TileModel {
      */
     getCurveAngle() {
         if (this.ratio < 1) {
-            return Vector2D.RIGHT_ANGLE * this.ratio;
+            return RIGHT_ANGLE * this.ratio;
         }
 
-        return Vector2D.RIGHT_ANGLE / this.ratio;
+        return RIGHT_ANGLE / this.ratio;
     }
 
     /**
@@ -89,7 +90,7 @@ export class CurvedTileModel extends TileModel {
         const p1 = Vector2D.polar(radius, 0, curveCenter);
         const p2 = p1.addScalarY(10);
         const p3 = Vector2D.polar(radius, curveAngle, curveCenter);
-        const p4 = p3.add(Vector2D.polar(10, curveAngle + Vector2D.RIGHT_ANGLE));
+        const p4 = p3.add(Vector2D.polar(10, curveAngle + RIGHT_ANGLE));
 
         const center = Vector2D.intersect(p1, p2, p3, p4);
 
@@ -110,7 +111,7 @@ export class CurvedTileModel extends TileModel {
 
         let curveAngle, center;
         if (this.direction === TILE_DIRECTION_LEFT) {
-            curveAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
+            curveAngle = STRAIGHT_ANGLE - this.getCurveAngle();
             center = start.addScalarX(radius);
         } else {
             curveAngle = this.getCurveAngle();
@@ -127,10 +128,10 @@ export class CurvedTileModel extends TileModel {
      */
     getOutputAngle(angle = 0) {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return Vector2D.degrees(angle - this.getCurveAngle());
+            return degrees(angle - this.getCurveAngle());
         }
 
-        return Vector2D.degrees(angle + this.getCurveAngle());
+        return degrees(angle + this.getCurveAngle());
     }
 
     /**
@@ -150,7 +151,7 @@ export class CurvedTileModel extends TileModel {
         let startAngle, center;
         if (this.direction === TILE_DIRECTION_LEFT) {
             center = start.addScalarX(centerRadius);
-            startAngle = Vector2D.STRAIGHT_ANGLE - this.getCurveAngle();
+            startAngle = STRAIGHT_ANGLE - this.getCurveAngle();
         } else {
             center = start.subScalarX(centerRadius);
             startAngle = 0;
@@ -165,7 +166,7 @@ export class CurvedTileModel extends TileModel {
         const edges = [p0, p1];
 
         const rotatedCenter = center.rotateAround(angle, start);
-        const rotatedStartAngle = Vector2D.degrees(p1.sub(rotatedCenter).angle());
+        const rotatedStartAngle = degrees(p1.sub(rotatedCenter).angle());
         const rotatedEndAngle = rotatedStartAngle + this.getCurveAngle();
 
         const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);

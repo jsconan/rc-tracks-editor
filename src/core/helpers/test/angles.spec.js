@@ -16,7 +16,73 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { quadrantAngle, quadrantRange } from '../angles.js';
+import { degrees, quadrant, quadrantAngle, quadrantRange, toDegrees, toRadians } from '../angles.js';
+
+describe('toRadians', () => {
+    it('is a function', () => {
+        expect(toRadians).toEqual(expect.any(Function));
+    });
+
+    it('converts degrees to radians', () => {
+        expect(toRadians(90)).toBe(Math.PI / 2);
+        expect(toRadians(180)).toBe(Math.PI);
+        expect(toRadians(270)).toBe((Math.PI / 2) * 3);
+        expect(toRadians(360)).toBe(Math.PI * 2);
+    });
+});
+
+describe('toDegrees', () => {
+    it('is a function', () => {
+        expect(toDegrees).toEqual(expect.any(Function));
+    });
+
+    it('converts radians to degrees', () => {
+        expect(toDegrees(Math.PI / 2)).toBe(90);
+        expect(toDegrees(Math.PI)).toBe(180);
+        expect(toDegrees((Math.PI / 2) * 3)).toBe(270);
+        expect(toDegrees(Math.PI * 2)).toBe(360);
+    });
+});
+
+describe('degrees', () => {
+    it('is a function', () => {
+        expect(degrees).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [60, 60],
+        [400, 40],
+        [360, 0],
+        [720, 0],
+        [-60, 300],
+        [-400, 320],
+        [-360, 0],
+        [-720, 0]
+    ])('adjusts angles in degrees [%s => %s]', (angle, expected) => {
+        expect(degrees(angle)).toBe(expected);
+    });
+});
+
+describe('quadrant', () => {
+    it('is a function', () => {
+        expect(quadrant).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [60, 0],
+        [100, 1],
+        [200, 2],
+        [300, 3],
+        [400, 0],
+        [-300, 0],
+        [-200, 1],
+        [-100, 2],
+        [-60, 3],
+        [-400, 3]
+    ])('tells in which quadrant is the angle %s', (angle, expected) => {
+        expect(quadrant(angle)).toBe(expected);
+    });
+});
 
 describe('quadrantAngle', () => {
     it('is a function', () => {

@@ -17,10 +17,72 @@
  */
 
 import { adjust } from '../../core/helpers';
-import { Vector2D } from '../../core/models';
 
-const lastQuadrant = Vector2D.STRAIGHT_ANGLE + Vector2D.RIGHT_ANGLE;
-const shiftAngle = Vector2D.RIGHT_ANGLE / 2;
+/**
+ * A right angle in degrees.
+ * @type {number}
+ */
+export const RIGHT_ANGLE = 90;
+
+/**
+ * A straight angle in degrees.
+ * @type {number}
+ */
+export const STRAIGHT_ANGLE = 180;
+
+/**
+ * Degrees in a circle.
+ * @type {number}
+ */
+export const CIRCLE = 360;
+
+/**
+ * The number of degrees per radian.
+ * @type {number}
+ */
+export const DEGREES_PER_RADIANS = 180 / Math.PI;
+
+/**
+ * Converts an angle given in degrees to radians.
+ * @param {number} angle - The angle given in degrees.
+ * @returns {number} - The angle converted to radians.
+ */
+export const toRadians = angle => angle / DEGREES_PER_RADIANS;
+
+/**
+ * Converts an angle given in radians to degrees.
+ * @param {number} angle - The angle given in radians.
+ * @returns {number} - The angle converted to degrees.
+ */
+export const toDegrees = angle => angle * DEGREES_PER_RADIANS;
+
+/**
+ * Adjusts an angle given in degrees so that it remains within the domain.
+ * @param {number} angle - The angle given in degrees.
+ * @returns {number} - The angle adjusted in degrees.
+ */
+export const degrees = angle => ((angle % CIRCLE) + CIRCLE) % CIRCLE;
+
+/**
+ * Gets the quadrant in which the given angle is contained.
+ * @param {number} angle - The angle given in degrees.
+ * @returns {number} - The quadrant containing the given angle.
+ */
+export const quadrant = angle => Math.floor(degrees(angle) / RIGHT_ANGLE);
+
+/**
+ * The angle of the last quadrant.
+ * @type {number}
+ * @private
+ */
+const lastQuadrant = STRAIGHT_ANGLE + RIGHT_ANGLE;
+
+/**
+ * The a value added to an angle for getting the closest quadrant.
+ * @type {number}
+ * @private
+ */
+const shiftAngle = RIGHT_ANGLE / 2;
 
 /**
  * Returns the angle of the closest quadrant with respect to an angle.
@@ -28,9 +90,9 @@ const shiftAngle = Vector2D.RIGHT_ANGLE / 2;
  * @returns {number} - Returns the angle of the closest quadrant.
  */
 export const quadrantAngle = angle => {
-    const edge = Vector2D.quadrant(adjust(angle) + shiftAngle) * Vector2D.RIGHT_ANGLE;
+    const edge = quadrant(adjust(angle) + shiftAngle) * RIGHT_ANGLE;
     if (!edge && angle > lastQuadrant) {
-        return Vector2D.CIRCLE;
+        return CIRCLE;
     }
     return edge;
 };
