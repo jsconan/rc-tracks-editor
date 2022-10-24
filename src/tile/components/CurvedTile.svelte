@@ -13,7 +13,6 @@
     export let angle = 0;
     export let x = 0;
     export let y = 0;
-    export let filter = void 0;
     export let id = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
@@ -23,7 +22,7 @@
     $: transform = model.getRotateTransform(x, y, angle);
 </script>
 
-<g class="tile curved-tile" {transform} {filter} {id}>
+<g class="tile curved-tile" {transform} {id}>
     <CurvedElement {...parameters.ground} {...groundColor()} />
     <CurvedBarrier {...parameters.innerBarrier} />
     <CurvedBarrier {...parameters.outerBarrier} />

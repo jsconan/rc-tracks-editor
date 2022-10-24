@@ -19,7 +19,6 @@
     export let angle = 0;
     export let x = 0;
     export let y = 0;
-    export let filter = void 0;
     export let id = void 0;
 
     validateType(type);
@@ -33,4 +32,4 @@
     $: component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {direction} {ratio} {angle} {x} {y} {filter} {id} />
+<svelte:component this={component} {direction} {ratio} {angle} {x} {y} {id} />

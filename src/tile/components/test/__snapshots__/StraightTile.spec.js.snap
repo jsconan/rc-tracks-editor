@@ -99,7 +99,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(180 100 205)"
     >
@@ -195,7 +194,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)rotate(180 100 205)"
     >
@@ -291,7 +289,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -355,7 +352,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -451,7 +447,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -547,7 +542,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -643,7 +637,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -739,7 +732,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)"
     >
@@ -835,7 +827,6 @@ exports[`StraightTile updates when the parameter angle is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)"
     >
@@ -931,7 +922,6 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(180 100 205)"
     >
@@ -1027,7 +1017,6 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -1123,7 +1112,6 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -1219,7 +1207,6 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform=""
     >

@@ -92,7 +92,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(90 100 205)"
     >
@@ -181,7 +180,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)rotate(90 100 205)"
     >
@@ -270,7 +268,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -359,7 +356,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -448,7 +444,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -537,7 +532,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -626,7 +620,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -715,7 +708,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)"
     >
@@ -804,7 +796,6 @@ exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(45 100 150)"
     >
@@ -893,7 +884,6 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(90 100 205)"
     >
@@ -982,7 +972,6 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -1071,7 +1060,6 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >
@@ -1160,7 +1148,6 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform=""
     >

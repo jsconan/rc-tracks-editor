@@ -13,7 +13,6 @@ exports[`SimpleTrack renders with default values 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -102,7 +101,6 @@ exports[`SimpleTrack renders with default values 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -154,7 +152,6 @@ exports[`SimpleTrack renders with default values 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -262,7 +259,6 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -351,7 +347,6 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -403,7 +398,6 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -485,7 +479,6 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-3"
         transform="rotate(270 -110 -110)"
       >
         <rect
@@ -600,7 +593,6 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -689,7 +681,6 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -741,7 +732,6 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -842,7 +832,6 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-0"
         transform="rotate(90 0 0)"
       >
         <rect
@@ -931,7 +920,6 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
       
       <g
         class="tile curved-tile"
-        id="id-1"
         transform="rotate(90 -110 6.735557395310443e-15)"
       >
         <path
@@ -983,7 +971,6 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
       
       <g
         class="tile curved-tile-enlarged"
-        id="id-2"
         transform="rotate(180 -165 -54.99999999999999)"
       >
         <path
@@ -1065,7 +1052,6 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
       
       <g
         class="tile straight-tile"
-        id="id-3"
         transform="rotate(270 -110 -110)"
       >
         <rect

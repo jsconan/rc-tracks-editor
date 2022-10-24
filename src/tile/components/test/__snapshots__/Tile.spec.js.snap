@@ -63,7 +63,6 @@ exports[`Tile renders a curved-tile tile with the given parameters 1`] = `
   <div>
     <g
       class="tile curved-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)"
     >
@@ -211,7 +210,6 @@ exports[`Tile renders a curved-tile-enlarged tile with the given parameters 1`] 
   <div>
     <g
       class="tile curved-tile-enlarged"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)"
     >
@@ -396,7 +394,6 @@ exports[`Tile renders a straight-tile tile with the given parameters 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)"
     >
@@ -588,7 +585,6 @@ exports[`Tile updates when the parameter angle is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(45 100 200)"
     >
@@ -685,7 +681,6 @@ exports[`Tile updates when the parameter direction is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)rotate(180 100 255)"
     >
@@ -782,7 +777,6 @@ exports[`Tile updates when the parameter ratio is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)"
     >
@@ -879,7 +873,6 @@ exports[`Tile updates when the parameter type is modified 1`] = `
   <div>
     <g
       class="tile curved-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 200)"
     >
@@ -939,7 +932,6 @@ exports[`Tile updates when the parameter x is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 40 200)"
     >
@@ -1036,7 +1028,6 @@ exports[`Tile updates when the parameter y is modified 1`] = `
   <div>
     <g
       class="tile straight-tile"
-      filter="select"
       id="tile"
       transform="rotate(90 100 40)"
     >
