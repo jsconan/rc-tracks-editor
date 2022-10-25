@@ -20,6 +20,7 @@ exports[`CurvedElement renders with the given parameters 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -35,6 +36,7 @@ exports[`CurvedElement updates when the parameter angle is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -50,6 +52,7 @@ exports[`CurvedElement updates when the parameter class is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -65,6 +68,7 @@ exports[`CurvedElement updates when the parameter cx is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -80,6 +84,7 @@ exports[`CurvedElement updates when the parameter cy is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -95,6 +100,7 @@ exports[`CurvedElement updates when the parameter fill is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -110,6 +116,7 @@ exports[`CurvedElement updates when the parameter radius is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -125,6 +132,7 @@ exports[`CurvedElement updates when the parameter start is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -140,6 +148,7 @@ exports[`CurvedElement updates when the parameter stroke is modified 1`] = `
       stroke="blue"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -155,6 +164,7 @@ exports[`CurvedElement updates when the parameter strokeWidth is modified 1`] = 
       stroke="green"
       stroke-width="3"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>
@@ -170,6 +180,23 @@ exports[`CurvedElement updates when the parameter style is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #888"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`CurvedElement updates when the parameter transform is modified 1`] = `
+<body>
+  <div>
+    <path
+      class="tile"
+      d="M 125 193.30127018922192 A 50 50 0 0 1 100 200 L 100.00000000000001 280 A 130 130 0 0 0 165 262.583302491977 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      style="fill: #444;"
+      transform="rotate(180)"
     />
   </div>
 </body>
@@ -185,6 +212,7 @@ exports[`CurvedElement updates when the parameter width is modified 1`] = `
       stroke="green"
       stroke-width="2"
       style="fill: #444;"
+      transform="rotate(90)"
     />
   </div>
 </body>

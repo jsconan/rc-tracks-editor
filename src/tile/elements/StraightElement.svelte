@@ -12,6 +12,7 @@
     export let fill = void 0;
     export let stroke = void 0;
     export let strokeWidth = void 0;
+    export let transform = void 0;
 </script>
 
-<rect class={cls} {style} {x} {y} {width} {height} {fill} {stroke} stroke-width={strokeWidth} />
+<rect class={cls} {style} {x} {y} {width} {height} {fill} {stroke} stroke-width={strokeWidth} {transform} />

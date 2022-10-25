@@ -16,6 +16,7 @@
     export let fill = void 0;
     export let stroke = void 0;
     export let strokeWidth = void 0;
+    export let transform = void 0;
 
     /**
      * Builds the SVG path for rendering a curve.
@@ -46,4 +47,4 @@
     $: path = curvedElementPath(radius, width, side, cx, cy);
 </script>
 
-<path class={cls} {style} d={path} {fill} {stroke} stroke-width={strokeWidth} />
+<path class={cls} {style} d={path} {fill} {stroke} stroke-width={strokeWidth} {transform} />
