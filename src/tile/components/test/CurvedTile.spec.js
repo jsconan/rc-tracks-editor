@@ -59,7 +59,6 @@ describe('CurvedTile', () => {
                 angle,
                 x: 100,
                 y: 150,
-                filter: 'select',
                 id: 'tile'
             };
             const { container } = render(Context, {
@@ -88,7 +87,6 @@ describe('CurvedTile', () => {
             angle: 0,
             x: 100,
             y: 150,
-            filter: 'select',
             id: 'tile'
         };
         const rendered = render(Context, {

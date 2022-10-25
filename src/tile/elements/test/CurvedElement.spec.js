@@ -29,8 +29,6 @@ describe('CurvedElement', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            class: 'tile',
-            style: 'fill: #444;',
             cx: 100,
             cy: 150,
             width: 80,
@@ -48,8 +46,6 @@ describe('CurvedElement', () => {
     });
 
     it.each([
-        ['class', { class: 'curve' }],
-        ['style', { style: 'fill: #888' }],
         ['cx', { cx: 40 }],
         ['cy', { cy: 40 }],
         ['width', { width: 40 }],
@@ -62,8 +58,6 @@ describe('CurvedElement', () => {
         ['transform', { transform: 'rotate(180)' }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
-            class: 'tile',
-            style: 'fill: #444;',
             cx: 100,
             cy: 150,
             width: 80,

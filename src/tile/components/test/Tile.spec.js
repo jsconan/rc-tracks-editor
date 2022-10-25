@@ -62,7 +62,6 @@ describe('Tile', () => {
                 x: 100,
                 y: 200,
                 angle: 90,
-                filter: 'select',
                 id: 'tile'
             };
             const { container } = render(Context, {
@@ -93,7 +92,6 @@ describe('Tile', () => {
             x: 100,
             y: 200,
             angle: 90,
-            filter: 'select',
             id: 'tile'
         };
         const rendered = render(Context, {

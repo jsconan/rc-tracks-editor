@@ -29,8 +29,6 @@ describe('StraightElement', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            class: 'tile',
-            style: 'fill: #444;',
             x: 100,
             y: 150,
             width: 80,
@@ -46,8 +44,6 @@ describe('StraightElement', () => {
     });
 
     it.each([
-        ['class', { class: 'curve' }],
-        ['style', { style: 'fill: #888' }],
         ['x', { x: 40 }],
         ['y', { y: 40 }],
         ['width', { width: 40 }],
@@ -58,8 +54,6 @@ describe('StraightElement', () => {
         ['transform', { transform: 'rotate(180)' }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
-            class: 'tile',
-            style: 'fill: #444;',
             x: 100,
             y: 150,
             width: 80,

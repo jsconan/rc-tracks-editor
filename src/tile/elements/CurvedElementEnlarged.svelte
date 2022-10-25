@@ -5,9 +5,6 @@
     import { Vector2D } from '../../core/models';
     import { arcTo, lineTo, moveTo } from '../../core/helpers';
 
-    let cls = void 0;
-    export { cls as class };
-    export let style = void 0;
     export let cx = 0;
     export let cy = 0;
     export let width = 1;
@@ -47,4 +44,4 @@
     $: path = curvedElementPath(radius, width, side, cx, cy);
 </script>
 
-<path class={cls} {style} d={path} {fill} {stroke} stroke-width={strokeWidth} {transform} />
+<path d={path} {fill} {stroke} stroke-width={strokeWidth} {transform} />
