@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileElement renders a curved-tile element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a curved-tile element with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 55 200 A 10 10 0 0 1 45 210 L 45.00000000000001 300 A 100 100 0 0 0 145 200 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a curved-tile-enlarged element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a curved-tile-enlarged element with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 55 200 A 10 10 0 0 1 45 210 L 45 300 L 100 300 A 45 45 0 0 0 145 255 L 145 200 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a straight-tile element with default values 1`] = `
+<body>
+  <div>
+    <rect
+      height="110"
+      transform=""
+      width="90"
+      x="-45"
+      y="0"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a straight-tile element with the given parameters 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement renders a undefined element with default values 1`] = `
+<body>
+  <div>
+    <rect
+      height="110"
+      transform=""
+      width="90"
+      x="-45"
+      y="0"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter angle is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(45 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter direction is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)rotate(180 100 255)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="blue"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter ratio is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="blue"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter strokeWidth is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="3"
+      transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter type is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 55 200 A 10 10 0 0 1 45 210 L 45.00000000000001 300 A 100 100 0 0 0 145 200 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter x is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 40 200)"
+      width="90"
+      x="-5"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter y is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 40)"
+      width="90"
+      x="55"
+      y="40"
+    />
+    
+    
+  </div>
+</body>
+`;
