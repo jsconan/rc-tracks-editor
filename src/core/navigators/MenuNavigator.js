@@ -17,40 +17,41 @@
  */
 
 import { eventEmitterMixin } from '../mixins';
+import { ListNavigator } from './ListNavigator.js';
 
 /**
- * Represents a navigator for managing a menu using a mouse and/or a keyboard.
+ * Navigates inside a menu.
+ * Differentiates focus and hover.
  */
 export class MenuNavigator {
     /**
-     * The list of elements in the menu.
-     * @type {Array}
+     * Focused element.
+     * @type {ListNavigator}
      * @private
      */
-    #elements = [];
+    #focus = null;
 
     /**
-     * The index of the focused element. -1 means no element is focused.
-     * @type {number}
+     * Hovered element.
+     * @type {ListNavigator}
      * @private
      */
-    #focusedIndex = -1;
+    #hover = null;
 
     /**
-     * The index of the hovered element. -1 means no element is hovered.
-     * @type {number}
-     * @private
-     */
-    #hoveredIndex = -1;
-
-    /**
-     * Creates a navigator for managing a menu using a mouse and/or a keyboard.
+     * Creates a navigator for navigating inside a menu.
      * @param {*} elements - The list of elements in the menu.
      */
     constructor(elements = []) {
         eventEmitterMixin(this);
 
-        this.#elements = Array.from(elements);
+        this.#focus = new ListNavigator(elements);
+        this.#hover = new ListNavigator(elements);
+
+        this.#focus.on('enter', (element, index) => this.emit('focus', element, index));
+        this.#focus.on('leave', (element, index) => this.emit('blur', element, index));
+        this.#hover.delegate('enter', this);
+        this.#hover.delegate('leave', this);
     }
 
     /**
@@ -58,7 +59,7 @@ export class MenuNavigator {
      * @type {Array}
      */
     get elements() {
-        return [...this.#elements];
+        return this.#focus.elements;
     }
 
     /**
@@ -66,7 +67,7 @@ export class MenuNavigator {
      * @type {number}
      */
     get length() {
-        return this.#elements.length;
+        return this.#focus.length;
     }
 
     /**
@@ -74,7 +75,7 @@ export class MenuNavigator {
      * @type {number}
      */
     get focusedIndex() {
-        return this.#focusedIndex;
+        return this.#focus.selectedIndex;
     }
 
     /**
@@ -82,7 +83,7 @@ export class MenuNavigator {
      * @type {number}
      */
     get hoveredIndex() {
-        return this.#hoveredIndex;
+        return this.#hover.selectedIndex;
     }
 
     /**
@@ -90,10 +91,7 @@ export class MenuNavigator {
      * @type {*}
      */
     get focused() {
-        if (this.#focusedIndex > -1) {
-            return this.#elements[this.#focusedIndex];
-        }
-        return null;
+        return this.#focus.selected;
     }
 
     /**
@@ -101,10 +99,7 @@ export class MenuNavigator {
      * @type {*}
      */
     get hovered() {
-        if (this.#hoveredIndex > -1) {
-            return this.#elements[this.#hoveredIndex];
-        }
-        return null;
+        return this.#hover.selected;
     }
 
     /**
@@ -114,9 +109,8 @@ export class MenuNavigator {
      * @fires elements
      */
     setElements(elements) {
-        this.#elements = Array.from(elements);
-        this.#focusedIndex = -1;
-        this.#hoveredIndex = -1;
+        this.#focus.setElements(elements);
+        this.#hover.setElements(elements);
 
         this.emit('elements', this.elements);
 
@@ -132,21 +126,7 @@ export class MenuNavigator {
      * @fires focus
      */
     setFocused(index) {
-        const focusedIndex = Math.min(Math.max(-1, index), this.#elements.length);
-
-        if (this.#focusedIndex === focusedIndex) {
-            return this;
-        }
-
-        if (this.#focusedIndex > -1) {
-            this.emit('blur', this.focused, this.#focusedIndex);
-        }
-
-        this.#focusedIndex = focusedIndex;
-
-        if (this.#focusedIndex > -1) {
-            this.emit('focus', this.focused, this.#focusedIndex);
-        }
+        this.#focus.select(index);
 
         return this;
     }
@@ -160,21 +140,7 @@ export class MenuNavigator {
      * @fires enter
      */
     setHovered(index) {
-        const hoveredIndex = Math.min(Math.max(-1, index), this.#elements.length);
-
-        if (this.#hoveredIndex === hoveredIndex) {
-            return this;
-        }
-
-        if (this.#hoveredIndex > -1) {
-            this.emit('leave', this.hovered, this.#hoveredIndex);
-        }
-
-        this.#hoveredIndex = hoveredIndex;
-
-        if (this.#hoveredIndex > -1) {
-            this.emit('enter', this.hovered, this.#hoveredIndex);
-        }
+        this.#hover.select(index);
 
         return this;
     }
@@ -186,7 +152,7 @@ export class MenuNavigator {
      * @fires enter
      */
     hoverFocused() {
-        return this.setHovered(this.#focusedIndex);
+        this.#hover.select(this.#focus.selectedIndex);
     }
 
     /**
@@ -196,7 +162,7 @@ export class MenuNavigator {
      * @fires focus
      */
     focusHovered() {
-        return this.setFocused(this.#hoveredIndex);
+        this.#focus.select(this.#hover.selectedIndex);
     }
 
     /**
@@ -206,9 +172,9 @@ export class MenuNavigator {
      * @fires focus
      */
     focusNext() {
-        const length = this.#elements.length;
-        const index = (this.#focusedIndex + length + 1) % length;
-        return this.setFocused(index);
+        this.#focus.selectNext();
+
+        return this;
     }
 
     /**
@@ -218,13 +184,9 @@ export class MenuNavigator {
      * @fires focus
      */
     focusPrevious() {
-        if (this.#focusedIndex < 0) {
-            this.#focusedIndex = 0;
-        }
+        this.#focus.selectPrevious();
 
-        const length = this.#elements.length;
-        const index = (this.#focusedIndex + length - 1) % length;
-        return this.setFocused(index);
+        return this;
     }
 }
 
