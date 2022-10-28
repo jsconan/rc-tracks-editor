@@ -1112,9 +1112,9 @@ exports[`TrackEditor flip tile in the track 1`] = `
               >
                 <path
                   d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
-                  fill="var(--color-bg-overlay)"
-                  stroke="var(--color-fg-overlay)"
-                  stroke-width="var(--stroke-width-overlay)"
+                  fill="var(--color-bg-hovered)"
+                  stroke="var(--color-fg-hovered)"
+                  stroke-width="var(--stroke-width-hovered)"
                 />
               </g>
               

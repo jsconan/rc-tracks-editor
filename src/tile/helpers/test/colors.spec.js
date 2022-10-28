@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { barrierColor, groundColor, overlayColor } from '../colors.js';
+import { barrierColor, focusedColor, groundColor, hoveredColor, selectedColor } from '../colors.js';
 
 const colorEven = {
     fill: 'var(--color-even)'
@@ -29,10 +29,20 @@ const colorGround = {
     stroke: 'var(--color-separator)',
     strokeWidth: 'var(--stroke-width-tile)'
 };
-const colorOverlay = {
-    fill: 'var(--color-bg-overlay)',
-    stroke: 'var(--color-fg-overlay)',
-    strokeWidth: 'var(--stroke-width-overlay)'
+const colorSelected = {
+    fill: 'var(--color-bg-selected)',
+    stroke: 'var(--color-fg-selected)',
+    strokeWidth: 'var(--stroke-width-selected)'
+};
+const colorHovered = {
+    fill: 'var(--color-bg-hovered)',
+    stroke: 'var(--color-fg-hovered)',
+    strokeWidth: 'var(--stroke-width-hovered)'
+};
+const colorFocused = {
+    fill: 'var(--color-bg-focused)',
+    stroke: 'var(--color-fg-focused)',
+    strokeWidth: 'var(--stroke-width-focused)'
 };
 
 describe('barrierColor', () => {
@@ -61,12 +71,32 @@ describe('groundColor', () => {
     });
 });
 
-describe('overlayColor', () => {
+describe('selectedColor', () => {
     it('is a function', () => {
-        expect(overlayColor).toEqual(expect.any(Function));
+        expect(selectedColor).toEqual(expect.any(Function));
     });
 
-    it('returns with the color attributes for a tile overlay', () => {
-        expect(overlayColor()).toStrictEqual(colorOverlay);
+    it('returns with the color attributes of a tile overlay for an selected state', () => {
+        expect(selectedColor()).toStrictEqual(colorSelected);
+    });
+});
+
+describe('hoveredColor', () => {
+    it('is a function', () => {
+        expect(hoveredColor).toEqual(expect.any(Function));
+    });
+
+    it('returns with the color attributes of a tile overlay for an hovered state', () => {
+        expect(hoveredColor()).toStrictEqual(colorHovered);
+    });
+});
+
+describe('focusedColor', () => {
+    it('is a function', () => {
+        expect(focusedColor).toEqual(expect.any(Function));
+    });
+
+    it('returns with the color attributes of a tile overlay for a focused state', () => {
+        expect(focusedColor()).toStrictEqual(colorFocused);
     });
 });

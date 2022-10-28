@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { CurvedElement, CurvedElementEnlarged, StraightElement } from '../../tile/elements';
-    import { overlayColor, CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE } from '../../tile/helpers';
+    import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, hoveredColor } from '../../tile/helpers';
     import { TileModel } from '../../tile/models';
 
     export let tile;
@@ -25,5 +25,5 @@
 </script>
 
 <g class="tile-overlay" {transform}>
-    <svelte:component this={component} {...parameters.ground} {...overlayColor()} />
+    <svelte:component this={component} {...parameters.ground} {...hoveredColor()} />
 </g>

@@ -13,10 +13,16 @@
     --color-odd: #c24;
     --color-control: #2a2;
     --color-canvas: #666;
-    --color-bg-overlay: rgba(25, 200, 50, 0.2);
-    --color-fg-overlay: rgba(32, 128, 64, 0.3);
+    --color-bg-selected: rgba(32, 255, 32, 0.3);
+    --color-fg-selected: rgba(64, 200, 64, 0.3);
+    --color-bg-hovered: rgba(50, 200, 50, 0.2);
+    --color-fg-hovered: rgba(32, 128, 32, 0.3);
+    --color-bg-focused: rgba(64, 150, 64, 0.2);
+    --color-fg-focused: rgba(32, 128, 32, 0.3);
     --stroke-width-tile: 1px;
-    --stroke-width-overlay: 2px;
+    --stroke-width-selected: 2px;
+    --stroke-width-hovered: 2px;
+    --stroke-width-focused: 2px;
 
     /* default scheme */
     --color-fg: var(--color-fg-dark);

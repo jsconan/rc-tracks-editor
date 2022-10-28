@@ -44,11 +44,31 @@ export const groundColor = () => ({
 });
 
 /**
- * Returns the presentation attributes for a tile overlay.
+ * Returns the presentation attributes of a tile overlay for a an selected state.
  * @returns {object}
  */
-export const overlayColor = () => ({
-    fill: 'var(--color-bg-overlay)',
-    stroke: 'var(--color-fg-overlay)',
-    strokeWidth: 'var(--stroke-width-overlay)'
+export const selectedColor = () => ({
+    fill: 'var(--color-bg-selected)',
+    stroke: 'var(--color-fg-selected)',
+    strokeWidth: 'var(--stroke-width-selected)'
+});
+
+/**
+ * Returns the presentation attributes of a tile overlay for a an hovered state.
+ * @returns {object}
+ */
+export const hoveredColor = () => ({
+    fill: 'var(--color-bg-hovered)',
+    stroke: 'var(--color-fg-hovered)',
+    strokeWidth: 'var(--stroke-width-hovered)'
+});
+
+/**
+ * Returns the presentation attributes of a tile overlay for a a focused state.
+ * @returns {object}
+ */
+export const focusedColor = () => ({
+    fill: 'var(--color-bg-focused)',
+    stroke: 'var(--color-fg-focused)',
+    strokeWidth: 'var(--stroke-width-focused)'
 });
