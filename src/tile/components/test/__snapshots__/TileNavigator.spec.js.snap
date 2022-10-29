@@ -1,0 +1,1634 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileNavigator can focus and blur 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="110"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can focus and blur 2`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can hover and leave 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-hovered)"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can hover and leave 2`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can hover the focused element 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="110"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <rect
+          fill="var(--color-bg-hovered)"
+          height="110"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="110"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 2`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 3`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile-enlarged"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="5"
+            width="27.5"
+            x="-55"
+            y="95"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="5"
+            width="27.5"
+            x="-27.5"
+            y="95"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 4`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="110"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 5`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 6`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile-enlarged"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="5"
+            width="27.5"
+            x="-55"
+            y="95"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="5"
+            width="27.5"
+            x="-27.5"
+            y="95"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 7`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 8`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="110"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 9`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile-enlarged"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 55 A 40 40 0 0 1 28.284271247461902 83.2842712474619 L 31.81980515339464 86.81980515339464 A 45 45 0 0 0 45 55 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 28.284271247461902 83.2842712474619 A 40 40 0 0 1 2.4492935982947065e-15 95 L 2.7554552980815448e-15 100 A 45 45 0 0 0 31.81980515339464 86.81980515339464 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="5"
+            width="27.5"
+            x="-55"
+            y="95"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="5"
+            width="27.5"
+            x="-27.5"
+            y="95"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
+        class="focus"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can navigate 10`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator fires select 1`] = `
+{
+  "angle": 0,
+  "direction": "left",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileNavigator fires select 2`] = `
+{
+  "angle": 0,
+  "direction": "left",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileNavigator fires select 3`] = `
+{
+  "angle": 0,
+  "direction": "left",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileNavigator fires select 4`] = `
+{
+  "angle": 0,
+  "direction": "left",
+  "ratio": 1,
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`TileNavigator renders with default values 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      
+      
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator renders with the given element in slots 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <rect
+        height="50"
+        width="100"
+        x="10"
+        y="10"
+      />
+       
+      <circle
+        cx="10"
+        cy="10"
+        id="circle"
+        r="10"
+      />
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-hovered)"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+    </g>
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator renders with the given parameters 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-hovered)"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator updates when the parameter elements is modified 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <rect
+          fill="var(--color-bg-hovered)"
+          height="110"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(180 0 55)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator updates when the parameter hoveredIndex is modified 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="hover svelte-1xzc8e9"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-bg-hovered)"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
