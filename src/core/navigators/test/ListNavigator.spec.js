@@ -45,26 +45,55 @@ describe('ListNavigator', () => {
 
     it('emits an event when setting the list of elements', () => {
         const navigator = new ListNavigator();
-        const callback = jest.fn().mockImplementation(elements => {
-            expect(elements).toStrictEqual(source);
-            expect(elements).not.toBe(source);
-            expect(elements).not.toBe(navigator.elements);
-        });
+        const callback = jest.fn();
 
-        navigator.on('elements', callback);
+        navigator.on('setelements', callback);
         navigator.setElements(source);
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
-    it('resets the selection when setting the list of elements', () => {
+    it('emits selection events when setting the list of elements', () => {
+        const navigator = new ListNavigator();
+        let selectedIndex = 1;
+        let deselectedIndex = 1;
+        const enter = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(selectedIndex);
+        });
+        const leave = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(deselectedIndex);
+        });
+
+        navigator.on('enter', enter);
+        navigator.on('leave', leave);
+
+        navigator.setElements(source); // no selection
+
+        navigator.select(1); // enter
+
+        navigator.setElements(source); // leave + enter
+
+        navigator.setElements([]); // leave
+
+        expect(enter).toHaveBeenCalledTimes(2);
+        expect(leave).toHaveBeenCalledTimes(2);
+    });
+
+    it('adjusts the selection when setting the list of elements', () => {
         const navigator = new ListNavigator(source);
 
         navigator.select(2);
 
         expect(navigator.selectedIndex).toBe(2);
 
-        navigator.setElements(source);
+        navigator.setElements(source.slice(0, 2));
+
+        expect(navigator.selectedIndex).toBe(1);
+        expect(navigator.selected).toBe(source[1]);
+
+        navigator.setElements([]);
 
         expect(navigator.selectedIndex).toBe(-1);
         expect(navigator.selected).toBeNull();
@@ -97,6 +126,20 @@ describe('ListNavigator', () => {
 
         navigator.select(1);
         navigator.select(-1);
+
+        expect(navigator.selectedIndex).toBe(-1);
+        expect(navigator.selected).toBeNull();
+    });
+
+    it('cannot select an element outside of the boundaries', () => {
+        const navigator = new ListNavigator(source);
+
+        navigator.select(10);
+
+        expect(navigator.selectedIndex).toBe(3);
+        expect(navigator.selected).toBe(source[3]);
+
+        navigator.select(-10);
 
         expect(navigator.selectedIndex).toBe(-1);
         expect(navigator.selected).toBeNull();

@@ -86,13 +86,17 @@ export class ListNavigator {
      * Sets the list of elements.
      * @param {*} elements - The list of elements.
      * @returns {ListNavigator} - Chains the instance.
-     * @fires elements
+     * @fires setelements
      */
     setElements(elements) {
-        this.#elements = Array.from(elements);
-        this.#selectedIndex = -1;
+        const index = this.#selectedIndex;
+        this.select(-1);
 
-        this.emit('elements', this.elements);
+        this.#elements = Array.from(elements);
+
+        this.emit('setelements');
+
+        this.select(index);
 
         return this;
     }
@@ -106,7 +110,7 @@ export class ListNavigator {
      * @fires leave
      */
     select(index) {
-        const selectedIndex = Math.min(Math.max(-1, index), this.#elements.length);
+        const selectedIndex = Math.min(Math.max(-1, index), this.#elements.length - 1);
 
         if (this.#selectedIndex === selectedIndex) {
             return this;
@@ -155,8 +159,7 @@ export class ListNavigator {
 
 /**
  * Notifies the list of elements has changed.
- * @event elements
- * @param {Array} elements - The list of elements.
+ * @event setelements
  */
 
 /**

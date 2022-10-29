@@ -50,6 +50,7 @@ export class MenuNavigator {
 
         this.#focus.on('enter', (element, index) => this.emit('focus', element, index));
         this.#focus.on('leave', (element, index) => this.emit('blur', element, index));
+        this.#focus.delegate('setelements', this);
         this.#hover.delegate('enter', this);
         this.#hover.delegate('leave', this);
     }
@@ -106,13 +107,11 @@ export class MenuNavigator {
      * Sets the list of elements in the menu.
      * @param {*} elements - The list of elements in the menu.
      * @returns {MenuNavigator} - Chains the instance.
-     * @fires elements
+     * @fires setelements
      */
     setElements(elements) {
         this.#focus.setElements(elements);
         this.#hover.setElements(elements);
-
-        this.emit('elements', this.elements);
 
         return this;
     }
@@ -192,8 +191,7 @@ export class MenuNavigator {
 
 /**
  * Notifies the list of elements has changed.
- * @event elements
- * @param {Array} elements - The list of elements in the menu.
+ * @event setelements
  */
 
 /**
