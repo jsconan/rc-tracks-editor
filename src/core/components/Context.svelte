@@ -23,4 +23,4 @@
     }
 </script>
 
-<svelte:component this={component} bind:this={instance} on:click on:keypress on:mouseenter on:mouseleave {...props} />
+<svelte:component this={component} bind:this={instance} {...props} />

@@ -9,8 +9,8 @@
     const context = getContext('foo') || 'none';
 </script>
 
-<div on:click on:keypress>
-    <dl on:mouseenter on:mouseleave>
+<div>
+    <dl>
         <dt>param</dt>
         <dd>{param}</dd>
 

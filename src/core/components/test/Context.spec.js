@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import Context from '../Context.svelte';
 import Mock from './Mock.svelte';
@@ -99,23 +99,5 @@ describe('Context', () => {
 
         expect(component).toBeInstanceOf(Mock);
         expect(container).toMatchSnapshot();
-    });
-
-    it.each([
-        ['click', 'click'],
-        ['keypress', 'keyPress'],
-        ['mouseenter', 'mouseEnter'],
-        ['mouseleave', 'mouseLeave']
-    ])('fires %s', async (eventName, eventAction) => {
-        const onEvent = jest.fn();
-        const props = {
-            component: Mock
-        };
-        const { container, component } = render(Context, { props });
-        const element = container.querySelector('dl');
-
-        component.$on(eventName, onEvent);
-        await fireEvent[eventAction](element);
-        expect(onEvent).toHaveBeenCalled();
     });
 });

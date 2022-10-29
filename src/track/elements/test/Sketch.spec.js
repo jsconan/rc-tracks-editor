@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { fireEvent, render } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import Sketch from '../Sketch.svelte';
 import SketchWithSlot from './SketchWithSlot.svelte';
@@ -109,25 +109,5 @@ describe('Sketch', () => {
         const { container } = render(SketchWithSlot);
 
         expect(container).toMatchSnapshot();
-    });
-
-    it('fires click', async () => {
-        const onClick = jest.fn();
-        const { container, component } = render(Sketch);
-        const element = container.querySelector('svg');
-
-        component.$on('click', onClick);
-        await fireEvent.click(element);
-        expect(onClick).toHaveBeenCalled();
-    });
-
-    it('fires keypress', async () => {
-        const onKeyPress = jest.fn();
-        const { container, component } = render(Sketch);
-        const element = container.querySelector('svg');
-
-        component.$on('keypress', onKeyPress);
-        await fireEvent.keyPress(element);
-        expect(onKeyPress).toHaveBeenCalled();
     });
 });
