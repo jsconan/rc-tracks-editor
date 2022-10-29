@@ -4,10 +4,11 @@
 
     import { setContext } from 'svelte';
     import { Sketch } from '../../track/elements';
-    import TileOverlay from './TileOverlay.svelte';
+    import { TileElement } from '../../tile/elements';
     import TileSelector from './TileSelector.svelte';
     import { TrackEditorModel } from '../models';
     import { Track, TrackStats } from '../../track/components';
+    import { selectedColor } from '../../tile/helpers';
 
     export let editor;
 
@@ -20,9 +21,11 @@
     const flipTile = event => {
         const { id, angle, x, y } = event.detail;
         const tile = track.getById(id);
-        selected = { tile, angle, x, y };
         tile.flipDirection();
         track.update();
+
+        const { type, direction, ratio } = tile;
+        selected = { type, direction, ratio, angle, x, y };
     };
 
     setContext(specs.contextId, specs);
@@ -31,7 +34,7 @@
 <article class="editor">
     <aside class="tiles">
         <Sketch width="100%" height="100%">
-            <TileSelector {tiles} on:click={addTile} />
+            <TileSelector {tiles} on:select={addTile} />
         </Sketch>
     </aside>
     <article class="track">
@@ -42,9 +45,9 @@
         </aside>
         <article class="canvas">
             <Sketch width="100%" height="100%">
-                <Track {track} on:click={flipTile}>
+                <Track {track} on:select={flipTile}>
                     {#if selected}
-                        <TileOverlay {...selected} />
+                        <TileElement {...selected} {...selectedColor()} />
                     {/if}
                 </Track>
             </Sketch>

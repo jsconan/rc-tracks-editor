@@ -110,20 +110,38 @@ describe('TileSelector', () => {
         ).toThrow('The object must be an instance of TileSet!');
     });
 
-    it.each([
-        ['click', 'click'],
-        ['keypress', 'keyPress'],
-        ['mouseenter', 'mouseEnter'],
-        ['mouseleave', 'mouseLeave']
-    ])('fires %s', async (eventName, eventAction) => {
-        const props = { tiles: allTiles };
+    it('fires select', async () => {
         const onEvent = jest.fn().mockImplementation(event => {
-            expect(event.detail).toEqual(expect.any(Object));
-            expect(event.detail.type).toBe(CurvedTileModel.TYPE);
-            expect(event.detail.direction).toBe(CurvedTileModel.DIRECTION_RIGHT);
-            expect(event.detail.ratio).toBe(1);
+            expect(event.detail).toMatchSnapshot();
         });
-        const { container, component } = render(Context, {
+        let container;
+        const component = await new Promise(resolve => {
+            const props = { tiles: allTiles };
+            const rendered = render(Context, {
+                props: {
+                    component: TileSelector,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    resolve,
+                    props
+                }
+            });
+            container = rendered.container;
+        });
+
+        component.$on('select', onEvent);
+        await fireEvent.mouseEnter(container.querySelector(`[data-id=curved-tile-1]`));
+        await fireEvent.click(container.querySelector('.hover'));
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'ArrowDown' });
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: ' ' });
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Spacebar' });
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Enter' });
+        expect(onEvent).toHaveBeenCalledTimes(4);
+    });
+
+    it('can navigate', async () => {
+        const props = { tiles: allTiles };
+        const { container } = render(Context, {
             props: {
                 component: TileSelector,
                 contextKey: TileSpecifications.CONTEXT_ID,
@@ -132,8 +150,86 @@ describe('TileSelector', () => {
             }
         });
 
-        component.$on(eventName, onEvent);
-        await fireEvent[eventAction](container.querySelector('[data-id=curved-tile-1]'));
-        expect(onEvent).toHaveBeenCalledTimes(1);
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Right' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Down' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Left' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Up' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can focus and blur', async () => {
+        const props = { tiles: allTiles };
+        const { container } = render(Context, {
+            props: {
+                component: TileSelector,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.blur(container.querySelector('[role=menu]'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can hover and leave', async () => {
+        const props = { tiles: allTiles };
+        const { container } = render(Context, {
+            props: {
+                component: TileSelector,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.mouseEnter(container.querySelector(`[data-id=curved-tile-1]`));
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.mouseLeave(container.querySelector('.hover'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can hover the focused element', async () => {
+        const props = { tiles: allTiles };
+        const { container } = render(Context, {
+            props: {
+                component: TileSelector,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.mouseEnter(container.querySelector('.focus'));
+        expect(container).toMatchSnapshot();
     });
 });

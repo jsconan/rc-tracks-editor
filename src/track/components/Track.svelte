@@ -2,9 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher } from 'svelte';
     import { Sketch } from '../elements';
-    import { Tile } from '../../tile/components';
+    import { Tile, TileNavigator } from '../../tile/components';
     import { TrackModel } from '../models';
     import { uid } from '../../core/helpers';
 
@@ -22,15 +21,13 @@
     const trackId = uid();
     const getId = id => `${trackId}-${id}`;
 
-    const dispatch = createEventDispatcher();
-
-    function dispatchEvent(event) {
-        const index = track.getIndex(event.target.dataset.id);
-        if (index > -1) {
-            const tileCoord = $tilesStore.tiles[index];
-            dispatch(event.type, { ...tileCoord, event });
-        }
-    }
+    let hoveredIndex = -1;
+    const enter = event => {
+        hoveredIndex = track.getIndex(event.target.dataset.id);
+    };
+    const leave = () => {
+        hoveredIndex = -1;
+    };
 </script>
 
 <Sketch
@@ -42,20 +39,22 @@
     viewY={$tilesStore.y}
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
-    on:click={dispatchEvent}
-    on:keypress={dispatchEvent}
 >
-    {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
-        <use
-            data-id={id}
-            {x}
-            {y}
-            href="#{getId(model.modelId)}"
-            transform={model.getRotateTransform(x, y, angle)}
-            on:mouseenter={dispatchEvent}
-            on:mouseleave={dispatchEvent}
-        />
-    {/each}
+    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} on:select>
+        {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
+            <use
+                data-id={id}
+                {x}
+                {y}
+                href="#{getId(model.modelId)}"
+                transform={model.getRotateTransform(x, y, angle)}
+                role="menuitem"
+                tabindex="-1"
+                on:mouseenter={enter}
+                on:mouseleave={leave}
+            />
+        {/each}
+    </TileNavigator>
     <svelte:fragment slot="defs">
         {#each $modelsStore as { id, type, ratio, modelId } (id)}
             <Tile id={getId(modelId)} {type} {ratio} />
