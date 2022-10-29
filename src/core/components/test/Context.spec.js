@@ -85,6 +85,22 @@ describe('Context', () => {
         expect(rendered.container).toMatchSnapshot();
     });
 
+    it('resolves with the nested component', async () => {
+        let container;
+        const component = await new Promise(resolve => {
+            const rendered = render(Context, {
+                props: {
+                    component: Mock,
+                    resolve
+                }
+            });
+            container = rendered.container;
+        });
+
+        expect(component).toBeInstanceOf(Mock);
+        expect(container).toMatchSnapshot();
+    });
+
     it.each([
         ['click', 'click'],
         ['keypress', 'keyPress'],

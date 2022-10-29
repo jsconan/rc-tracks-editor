@@ -96,6 +96,30 @@ exports[`Context renders with the given props 1`] = `
 </body>
 `;
 
+exports[`Context resolves with the nested component 1`] = `
+<body>
+  <div>
+    <div>
+      <dl>
+        <dt>
+          param
+        </dt>
+        <dd>
+          default
+        </dd>
+        <dt>
+          context
+        </dt>
+        <dd>
+          none
+        </dd>
+      </dl>
+    </div>
+    
+  </div>
+</body>
+`;
+
 exports[`Context updates with the given parameters 1`] = `
 <body>
   <div>
