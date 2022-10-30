@@ -46,5 +46,14 @@ export default {
      *
      * @type {number}
      */
-    barrierChunks: 4
+    barrierChunks: 4,
+
+    /**
+     * The maximum value for size ratios.
+     *
+     * This value can be modified.
+     *
+     * @type {number}
+     */
+    maxRatio: 4
 };
