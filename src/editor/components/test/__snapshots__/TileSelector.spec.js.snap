@@ -1521,7 +1521,7 @@ exports[`TileSelector can hover and leave 1`] = `
           class="hover svelte-1xzc8e9"
         >
           <path
-            d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
+            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
             fill="var(--color-bg-hovered)"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
@@ -2551,13 +2551,13 @@ exports[`TileSelector can hover the focused element 1`] = `
         >
           <rect
             fill="var(--color-bg-hovered)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
             transform="rotate(270 -65 45)"
-            width="90"
-            x="-110"
-            y="45"
+            width="110"
+            x="-120"
+            y="35"
           />
           
         </g>

@@ -196,7 +196,7 @@ exports[`TileNavigator can hover and leave 1`] = `
         class="hover svelte-1xzc8e9"
       >
         <path
-          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -342,13 +342,13 @@ exports[`TileNavigator can hover the focused element 1`] = `
       >
         <rect
           fill="var(--color-bg-hovered)"
-          height="110"
+          height="130"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="90"
-          x="-45"
-          y="0"
+          width="110"
+          x="-55"
+          y="-10"
         />
         
       </g>
@@ -1357,7 +1357,7 @@ exports[`TileNavigator renders with the given element in slots 1`] = `
         class="hover svelte-1xzc8e9"
       >
         <path
-          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -1435,7 +1435,7 @@ exports[`TileNavigator renders with the given parameters 1`] = `
         class="hover svelte-1xzc8e9"
       >
         <path
-          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -1550,13 +1550,13 @@ exports[`TileNavigator updates when the parameter elements is modified 1`] = `
       >
         <rect
           fill="var(--color-bg-hovered)"
-          height="110"
+          height="130"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="90"
-          x="-45"
-          y="0"
+          width="110"
+          x="-55"
+          y="-10"
         />
         
       </g>
@@ -1629,7 +1629,7 @@ exports[`TileNavigator updates when the parameter hoveredIndex is modified 1`] =
         class="hover svelte-1xzc8e9"
       >
         <path
-          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"

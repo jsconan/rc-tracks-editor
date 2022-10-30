@@ -1196,7 +1196,7 @@ exports[`Track can hover and leave 1`] = `
           class="hover svelte-1xzc8e9"
         >
           <path
-            d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            d="M -165 -9.999999999999993 A 10 10 0 0 1 -175 7.105427357601002e-15 L -174.98623158597576 109.54576750706191 A 110 110 0 0 0 -55.45423249293809 -9.986231585975737 Z"
             fill="var(--color-bg-hovered)"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
@@ -2010,13 +2010,13 @@ exports[`Track can hover the focused element 1`] = `
         >
           <rect
             fill="var(--color-bg-hovered)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
             transform="rotate(90 0 0)"
-            width="90"
-            x="-45"
-            y="0"
+            width="110"
+            x="-55"
+            y="-10"
           />
           
         </g>

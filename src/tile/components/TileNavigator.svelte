@@ -111,7 +111,7 @@
     {/if}
     {#if hoveredOverlay}
         <g on:mouseleave={leave} class="hover">
-            <TileElement {...hoveredOverlay} {...hoveredColor()} />
+            <TileElement {...hoveredOverlay} d={specs.padding} {...hoveredColor()} />
         </g>
     {/if}
 </g>
