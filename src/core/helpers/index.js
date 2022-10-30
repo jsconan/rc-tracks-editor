@@ -31,6 +31,7 @@ export { default as validateCallback } from './validateCallback.js';
 export { default as wait } from './wait.js';
 /* c8 ignore start */
 export * from './angles.js';
+export * from './attributes.js';
 export * from './compare.js';
 export * from './svg.js';
 export * from './transform.js';
