@@ -118,3 +118,20 @@ export const quadrantRange = (start, end) => {
 
     return null;
 };
+
+/**
+ * Adds a length to an arc represented by an angle and a radius.
+ * @param {number} angle - The angle of the arc, given in degrees.
+ * @param {number} radius - The radius of the arc.
+ * @param {number} addition - The length to add to the arc.
+ * @returns {number} - The adjusted angle of the arc
+ */
+export const enlargeArc = (angle, radius, addition) => {
+    if (!addition) {
+        return angle;
+    }
+
+    const circum = Math.PI * radius * 2;
+    const length = (circum * angle) / CIRCLE + addition;
+    return Math.min((length * CIRCLE) / circum, CIRCLE);
+};

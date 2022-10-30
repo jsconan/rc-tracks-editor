@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { degrees, quadrant, quadrantAngle, quadrantRange, toDegrees, toRadians } from '../angles.js';
+import { degrees, enlargeArc, quadrant, quadrantAngle, quadrantRange, toDegrees, toRadians } from '../angles.js';
 
 describe('toRadians', () => {
     it('is a function', () => {
@@ -131,5 +131,21 @@ describe('quadrantRange', () => {
         [280, 360, null]
     ])('returns the quadrant angles for the range [%s : %s]', (start, end, expected) => {
         expect(quadrantRange(start, end)).toEqual(expected);
+    });
+});
+
+describe('enlargeArc', () => {
+    it('is a function', () => {
+        expect(enlargeArc).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 0, 90],
+        [90, 100, 10, 95.72957795130823],
+        [45, 100, 0, 45],
+        [45, 100, 10, 50.72957795130823],
+        [45, 10, 100, 360]
+    ])('enlarges an arc defined by an angle (%s) and a radius (%s) to %s', (angle, radius, addition, expected) => {
+        expect(enlargeArc(angle, radius, addition)).toEqual(expected);
     });
 });
