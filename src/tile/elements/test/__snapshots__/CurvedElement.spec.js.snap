@@ -129,20 +129,18 @@ exports[`CurvedElement updates when the parameter stroke is modified 1`] = `
       d="M 125 193.30127018922192 A 50 50 0 0 1 100 200 L 100.00000000000001 280 A 130 130 0 0 0 165 262.583302491977 Z"
       fill="red"
       stroke="blue"
-      stroke-width="2"
       transform="rotate(90)"
     />
   </div>
 </body>
 `;
 
-exports[`CurvedElement updates when the parameter strokeWidth is modified 1`] = `
+exports[`CurvedElement updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
     <path
       d="M 125 193.30127018922192 A 50 50 0 0 1 100 200 L 100.00000000000001 280 A 130 130 0 0 0 165 262.583302491977 Z"
       fill="red"
-      stroke="green"
       stroke-width="3"
       transform="rotate(90)"
     />

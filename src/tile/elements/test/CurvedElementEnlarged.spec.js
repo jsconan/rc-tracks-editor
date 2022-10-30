@@ -35,8 +35,10 @@ describe('CurvedElementEnlarged', () => {
             side: 60,
             radius: 50,
             fill: 'red',
-            stroke: 'green',
-            strokeWidth: 2,
+            stroke: {
+                stroke: 'green',
+                'stroke-width': 2
+            },
             transform: 'rotate(90)'
         };
         const { container } = render(CurvedElementEnlarged, { props });
@@ -53,7 +55,7 @@ describe('CurvedElementEnlarged', () => {
         ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
-        ['strokeWidth', { strokeWidth: 3 }],
+        ['stroke-width', { stroke: { 'stroke-width': 3 } }],
         ['transform', { transform: 'rotate(180)' }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
@@ -63,8 +65,10 @@ describe('CurvedElementEnlarged', () => {
             side: 60,
             radius: 50,
             fill: 'red',
-            stroke: 'green',
-            strokeWidth: 2,
+            stroke: {
+                stroke: 'green',
+                'stroke-width': 2
+            },
             transform: 'rotate(90)'
         };
         const rendered = render(CurvedElementEnlarged, { props });

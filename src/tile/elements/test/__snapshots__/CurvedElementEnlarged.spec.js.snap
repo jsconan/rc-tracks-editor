@@ -115,20 +115,18 @@ exports[`CurvedElementEnlarged updates when the parameter stroke is modified 1`]
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
       fill="red"
       stroke="blue"
-      stroke-width="2"
       transform="rotate(90)"
     />
   </div>
 </body>
 `;
 
-exports[`CurvedElementEnlarged updates when the parameter strokeWidth is modified 1`] = `
+exports[`CurvedElementEnlarged updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
     <path
       d="M 150 150 A 50 50 0 0 1 100 200 L 100 280 L 160 280 A 70 70 0 0 0 230 210 L 230 150 Z"
       fill="red"
-      stroke="green"
       stroke-width="3"
       transform="rotate(90)"
     />

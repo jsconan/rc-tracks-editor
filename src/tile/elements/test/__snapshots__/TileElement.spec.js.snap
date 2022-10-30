@@ -211,7 +211,6 @@ exports[`TileElement updates when the parameter stroke is modified 1`] = `
       fill="red"
       height="110"
       stroke="blue"
-      stroke-width="2"
       transform="rotate(90 100 200)"
       width="90"
       x="55"
@@ -223,13 +222,12 @@ exports[`TileElement updates when the parameter stroke is modified 1`] = `
 </body>
 `;
 
-exports[`TileElement updates when the parameter strokeWidth is modified 1`] = `
+exports[`TileElement updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
     <rect
       fill="red"
       height="110"
-      stroke="green"
       stroke-width="3"
       transform="rotate(90 100 200)"
       width="90"

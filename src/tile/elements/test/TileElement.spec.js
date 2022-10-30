@@ -63,8 +63,10 @@ describe('TileElement', () => {
                 y: 200,
                 angle: 90,
                 fill: 'red',
-                stroke: 'green',
-                strokeWidth: 2
+                stroke: {
+                    stroke: 'green',
+                    'stroke-width': 2
+                }
             };
             const { container } = render(Context, {
                 props: {
@@ -89,7 +91,7 @@ describe('TileElement', () => {
         ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
-        ['strokeWidth', { strokeWidth: 3 }]
+        ['stroke-width', { stroke: { 'stroke-width': 3 } }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
             type: STRAIGHT_TILE_TYPE,
@@ -99,8 +101,10 @@ describe('TileElement', () => {
             y: 200,
             angle: 90,
             fill: 'red',
-            stroke: 'green',
-            strokeWidth: 2
+            stroke: {
+                stroke: 'green',
+                'stroke-width': 2
+            }
         };
         const rendered = render(Context, {
             props: {

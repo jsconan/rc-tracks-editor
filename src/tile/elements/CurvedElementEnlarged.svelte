@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { Vector2D } from '../../core/models';
-    import { arcTo, lineTo, moveTo } from '../../core/helpers';
+    import { arcTo, attributeList, lineTo, moveTo } from '../../core/helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -13,7 +13,6 @@
     export let d = 0;
     export let fill = void 0;
     export let stroke = void 0;
-    export let strokeWidth = void 0;
     export let transform = void 0;
 
     /**
@@ -44,8 +43,11 @@
 
         return `${moveTo(p1)} ${innerCurve} ${lineTo(p3)} ${lineTo(p4)} ${outerCurve} ${lineTo(p6)} Z`;
     }
-
-    $: path = curvedElementPath(radius, width, side, cx, cy, d);
 </script>
 
-<path d={path} {fill} {stroke} stroke-width={strokeWidth} {transform} />
+<path
+    d={curvedElementPath(radius, width, side, cx, cy, d)}
+    {...attributeList(fill, 'fill')}
+    {...attributeList(stroke, 'stroke')}
+    {transform}
+/>

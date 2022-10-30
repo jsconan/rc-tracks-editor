@@ -19,7 +19,6 @@
     export let d = 0;
     export let fill = void 0;
     export let stroke = void 0;
-    export let strokeWidth = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
 
@@ -35,4 +34,4 @@
     $: component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {...parameters} {d} {fill} {stroke} {strokeWidth} {transform} />
+<svelte:component this={component} {...parameters} {d} {fill} {stroke} {transform} />

@@ -39,8 +39,10 @@ export const barrierColor = i => ({
  */
 export const groundColor = () => ({
     fill: 'var(--color-ground)',
-    stroke: 'var(--color-separator)',
-    strokeWidth: 'var(--stroke-width-tile)'
+    stroke: {
+        stroke: 'var(--color-separator)',
+        'stroke-width': 'var(--stroke-width-tile)'
+    }
 });
 
 /**
@@ -49,8 +51,10 @@ export const groundColor = () => ({
  */
 export const selectedColor = () => ({
     fill: 'var(--color-bg-selected)',
-    stroke: 'var(--color-fg-selected)',
-    strokeWidth: 'var(--stroke-width-selected)'
+    stroke: {
+        stroke: 'var(--color-fg-selected)',
+        'stroke-width': 'var(--stroke-width-selected)'
+    }
 });
 
 /**
@@ -59,8 +63,10 @@ export const selectedColor = () => ({
  */
 export const hoveredColor = () => ({
     fill: 'var(--color-bg-hovered)',
-    stroke: 'var(--color-fg-hovered)',
-    strokeWidth: 'var(--stroke-width-hovered)'
+    stroke: {
+        stroke: 'var(--color-fg-hovered)',
+        'stroke-width': 'var(--stroke-width-hovered)'
+    }
 });
 
 /**
@@ -69,6 +75,8 @@ export const hoveredColor = () => ({
  */
 export const focusedColor = () => ({
     fill: 'var(--color-bg-focused)',
-    stroke: 'var(--color-fg-focused)',
-    strokeWidth: 'var(--stroke-width-focused)'
+    stroke: {
+        stroke: 'var(--color-fg-focused)',
+        'stroke-width': 'var(--stroke-width-focused)'
+    }
 });

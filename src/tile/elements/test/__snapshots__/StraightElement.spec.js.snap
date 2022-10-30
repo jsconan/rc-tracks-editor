@@ -88,7 +88,6 @@ exports[`StraightElement updates when the parameter stroke is modified 1`] = `
       fill="red"
       height="100"
       stroke="blue"
-      stroke-width="2"
       transform="rotate(90)"
       width="80"
       x="100"
@@ -98,13 +97,12 @@ exports[`StraightElement updates when the parameter stroke is modified 1`] = `
 </body>
 `;
 
-exports[`StraightElement updates when the parameter strokeWidth is modified 1`] = `
+exports[`StraightElement updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
     <rect
       fill="red"
       height="100"
-      stroke="green"
       stroke-width="3"
       transform="rotate(90)"
       width="80"
