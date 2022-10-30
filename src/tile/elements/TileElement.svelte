@@ -16,6 +16,7 @@
     export let angle = 0;
     export let x = 0;
     export let y = 0;
+    export let d = 0;
     export let fill = void 0;
     export let stroke = void 0;
     export let strokeWidth = void 0;
@@ -34,4 +35,4 @@
     $: component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {...parameters} {fill} {stroke} {strokeWidth} {transform} />
+<svelte:component this={component} {...parameters} {d} {fill} {stroke} {strokeWidth} {transform} />

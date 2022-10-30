@@ -66,6 +66,20 @@ exports[`CurvedElement updates when the parameter cy is modified 1`] = `
 </body>
 `;
 
+exports[`CurvedElement updates when the parameter d is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 127.94857298266358 178.61603166465832 A 40 40 0 0 1 90.10384162981907 188.75649686842578 L 90.00850123238898 289.6430089634881 A 140 140 0 0 0 178.4743962363761 265.9386438394733 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
 exports[`CurvedElement updates when the parameter fill is modified 1`] = `
 <body>
   <div>

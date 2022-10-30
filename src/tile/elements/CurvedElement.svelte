@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { Vector2D } from '../../core/models';
-    import { arcTo, lineTo, moveTo } from '../../core/helpers';
+    import { arcTo, enlargeArc, lineTo, moveTo, RIGHT_ANGLE } from '../../core/helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -11,6 +11,7 @@
     export let radius = 1;
     export let angle = 1;
     export let start = 0;
+    export let d = 0;
     export let fill = void 0;
     export let stroke = void 0;
     export let strokeWidth = void 0;
@@ -18,28 +19,50 @@
 
     /**
      * Builds the SVG path for rendering a curve.
-     * @param {number} innerRadius - The radius of the inner curve.
+     * @param {number} curveRadius - The radius of the inner curve.
      * @param {number} curveWidth - The width between the inner and the outer curve.
      * @param {number} curveAngle - Tha angle of the curve.
      * @param {number} startAngle - The start angle of the curve.
      * @param {number} centerX - The X-coordinate of the center of the curve.
      * @param {number} centerY - The Y-coordinate of the center of the curve.
+     * @param {number} addition - An additional distance added to the outline.
      * @private
      */
-    function curvedElementPath(innerRadius, curveWidth, curveAngle, startAngle, centerX, centerY) {
-        const outerRadius = innerRadius + curveWidth;
-        const end = startAngle + curveAngle;
+    function curvedElementPath(curveRadius, curveWidth, curveAngle, startAngle, centerX, centerY, addition) {
+        addition = Math.min(addition, curveRadius);
+
         const center = new Vector2D(centerX, centerY);
 
-        const p1 = Vector2D.polar(innerRadius, start, center);
-        const p2 = Vector2D.polar(innerRadius, end, center);
-        const p3 = Vector2D.polar(outerRadius, end, center);
-        const p4 = Vector2D.polar(outerRadius, start, center);
+        let innerRadius, innerAngle, innerCenter;
+
+        if (curveAngle === RIGHT_ANGLE) {
+            innerRadius = curveRadius;
+            innerAngle = curveAngle;
+            innerCenter = center.subScalar(addition);
+        } else {
+            innerRadius = curveRadius - addition;
+            innerAngle = enlargeArc(curveAngle, innerRadius, addition * 2);
+            innerCenter = center;
+        }
+
+        const innerStart = startAngle + (curveAngle - innerAngle) / 2;
+        const innerEnd = innerStart + innerAngle;
+
+        const outerRadius = curveRadius + curveWidth + addition;
+        const outerAngle = enlargeArc(curveAngle, outerRadius, addition * 2);
+        const outerStart = startAngle + (curveAngle - outerAngle) / 2;
+        const outerEnd = outerStart + outerAngle;
+        const outerCenter = center;
+
+        const p1 = Vector2D.polar(innerRadius, innerStart, innerCenter);
+        const p2 = Vector2D.polar(innerRadius, innerEnd, innerCenter);
+        const p3 = Vector2D.polar(outerRadius, outerEnd, outerCenter);
+        const p4 = Vector2D.polar(outerRadius, outerStart, outerCenter);
 
         return `${moveTo(p1)} ${arcTo(innerRadius, p2, 0, 1, 0)} ${lineTo(p3)} ${arcTo(outerRadius, p4, 0, 0, 0)} Z`;
     }
 
-    $: path = curvedElementPath(radius, width, angle, start, cx, cy);
+    $: path = curvedElementPath(radius, width, angle, start, cx, cy, d);
 </script>
 
 <path d={path} {fill} {stroke} stroke-width={strokeWidth} {transform} />

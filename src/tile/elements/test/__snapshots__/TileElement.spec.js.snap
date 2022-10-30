@@ -128,6 +128,25 @@ exports[`TileElement updates when the parameter angle is modified 1`] = `
 </body>
 `;
 
+exports[`TileElement updates when the parameter d is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="130"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+      width="110"
+      x="45"
+      y="190"
+    />
+    
+    
+  </div>
+</body>
+`;
+
 exports[`TileElement updates when the parameter direction is modified 1`] = `
 <body>
   <div>

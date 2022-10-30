@@ -2,14 +2,17 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, getContext } from 'svelte';
     import { focusedColor, hoveredColor } from '../helpers';
     import { MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
+    import { TileSpecifications } from '../config';
     import Tile from './Tile.svelte';
 
     export let elements;
     export let hoveredIndex = -1;
+
+    const specs = getContext(TileSpecifications.CONTEXT_ID);
 
     let focusedOverlay = null;
     let hoveredOverlay = null;
@@ -103,7 +106,7 @@
     {/if}
     {#if focusedOverlay}
         <g on:mouseenter={hoverFocused} class="focus">
-            <TileElement {...focusedOverlay} {...focusedColor()} />
+            <TileElement {...focusedOverlay} d={specs.padding} {...focusedColor()} />
         </g>
     {/if}
     {#if hoveredOverlay}

@@ -52,6 +52,7 @@ describe('CurvedElement', () => {
         ['radius', { radius: 40 }],
         ['angle', { angle: 40 }],
         ['start', { start: 40 }],
+        ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['strokeWidth', { strokeWidth: 3 }],

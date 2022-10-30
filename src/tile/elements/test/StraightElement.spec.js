@@ -48,6 +48,7 @@ describe('StraightElement', () => {
         ['y', { y: 40 }],
         ['width', { width: 40 }],
         ['height', { height: 40 }],
+        ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['strokeWidth', { strokeWidth: 3 }],

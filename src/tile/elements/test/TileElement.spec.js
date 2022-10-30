@@ -86,6 +86,7 @@ describe('TileElement', () => {
         ['angle', { angle: 45 }],
         ['x', { x: 40 }],
         ['y', { y: 40 }],
+        ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['strokeWidth', { strokeWidth: 3 }]

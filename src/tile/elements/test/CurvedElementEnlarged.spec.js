@@ -50,6 +50,7 @@ describe('CurvedElementEnlarged', () => {
         ['width', { width: 40 }],
         ['side', { width: 40 }],
         ['radius', { radius: 40 }],
+        ['d', { d: 10 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['strokeWidth', { strokeWidth: 3 }],

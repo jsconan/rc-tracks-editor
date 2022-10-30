@@ -30,6 +30,23 @@ exports[`StraightElement renders with the given parameters 1`] = `
 </body>
 `;
 
+exports[`StraightElement updates when the parameter d is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="120"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+      width="100"
+      x="90"
+      y="140"
+    />
+  </div>
+</body>
+`;
+
 exports[`StraightElement updates when the parameter fill is modified 1`] = `
 <body>
   <div>

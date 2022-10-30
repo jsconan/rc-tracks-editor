@@ -432,13 +432,13 @@ exports[`Track can focus and blur 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(90 0 0)"
-            width="90"
-            x="-45"
-            y="0"
+            width="110"
+            x="-55"
+            y="-10"
           />
           
         </g>
@@ -1992,13 +1992,13 @@ exports[`Track can hover the focused element 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(90 0 0)"
-            width="90"
-            x="-45"
-            y="0"
+            width="110"
+            x="-55"
+            y="-10"
           />
           
         </g>
@@ -2458,13 +2458,13 @@ exports[`Track can navigate 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(90 0 0)"
-            width="90"
-            x="-45"
-            y="0"
+            width="110"
+            x="-55"
+            y="-10"
           />
           
         </g>
@@ -2871,7 +2871,7 @@ exports[`Track can navigate 2`] = `
           class="focus"
         >
           <path
-            d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            d="M -165 -9.999999999999993 A 10 10 0 0 1 -175 7.105427357601002e-15 L -174.98623158597576 109.54576750706191 A 110 110 0 0 0 -55.45423249293809 -9.986231585975737 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -3312,7 +3312,7 @@ exports[`Track can navigate 3`] = `
           class="focus"
         >
           <path
-            d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+            d="M -220 -65 A 10 10 0 0 1 -230 -55 L -230 55 L -165 55 A 55 55 0 0 0 -110 0 L -110 -65 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -3733,7 +3733,7 @@ exports[`Track can navigate 4`] = `
           class="focus"
         >
           <path
-            d="M -155 -110 A 120 120 0 0 1 -190.1471862576143 -25.147186257614308 L -126.50757595082501 38.49242404917496 A 210 210 0 0 0 -65 -110 Z"
+            d="M -165.4542324929381 -119.98623158597574 A 110 110 0 0 1 -204.6007770184143 -25.478112872528826 L -126.66581968040765 52.471446564972325 A 220 220 0 0 0 -55.22723359898839 -119.99655682954788 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -4503,7 +4503,7 @@ exports[`Track can navigate 6`] = `
           class="focus"
         >
           <path
-            d="M -155 -110 A 120 120 0 0 1 -190.1471862576143 -25.147186257614308 L -126.50757595082501 38.49242404917496 A 210 210 0 0 0 -65 -110 Z"
+            d="M -165.4542324929381 -119.98623158597574 A 110 110 0 0 1 -204.6007770184143 -25.478112872528826 L -126.66581968040765 52.471446564972325 A 220 220 0 0 0 -55.22723359898839 -119.99655682954788 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -4944,7 +4944,7 @@ exports[`Track can navigate 7`] = `
           class="focus"
         >
           <path
-            d="M -210 -54.99999999999999 A 10 10 0 0 1 -220 -44.99999999999999 L -220 45.00000000000001 L -165 45.00000000000001 A 45 45 0 0 0 -120 7.105427357601002e-15 L -120 -54.99999999999999 Z"
+            d="M -220 -65 A 10 10 0 0 1 -230 -55 L -230 55 L -165 55 A 55 55 0 0 0 -110 0 L -110 -65 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -5355,7 +5355,7 @@ exports[`Track can navigate 8`] = `
           class="focus"
         >
           <path
-            d="M -155 6.735557395310443e-15 A 10 10 0 0 1 -165 10.000000000000007 L -165 100 A 100 100 0 0 0 -65 6.735557395310443e-15 Z"
+            d="M -165 -9.999999999999993 A 10 10 0 0 1 -175 7.105427357601002e-15 L -174.98623158597576 109.54576750706191 A 110 110 0 0 0 -55.45423249293809 -9.986231585975737 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -5804,13 +5804,13 @@ exports[`Track can navigate 9`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(90 0 0)"
-            width="90"
-            x="-45"
-            y="0"
+            width="110"
+            x="-55"
+            y="-10"
           />
           
         </g>

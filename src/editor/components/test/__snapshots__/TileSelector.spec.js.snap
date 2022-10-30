@@ -541,13 +541,13 @@ exports[`TileSelector can focus and blur 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="90"
-            x="-110"
-            y="45"
+            width="110"
+            x="-120"
+            y="35"
           />
           
         </g>
@@ -2533,13 +2533,13 @@ exports[`TileSelector can hover the focused element 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="90"
-            x="-110"
-            y="45"
+            width="110"
+            x="-120"
+            y="35"
           />
           
         </g>
@@ -3107,13 +3107,13 @@ exports[`TileSelector can navigate 1`] = `
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="110"
+            height="130"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="90"
-            x="-110"
-            y="45"
+            width="110"
+            x="-120"
+            y="35"
           />
           
         </g>
@@ -3658,7 +3658,7 @@ exports[`TileSelector can navigate 2`] = `
           class="focus"
         >
           <path
-            d="M -105 155 A 10 10 0 0 1 -115 165 L -115 255 L -60 255 A 45 45 0 0 0 -15 210 L -15 155 Z"
+            d="M -115 145 A 10 10 0 0 1 -125 155 L -125 265 L -60 265 A 55 55 0 0 0 -5 210 L -5 145 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -4177,7 +4177,7 @@ exports[`TileSelector can navigate 3`] = `
           class="focus"
         >
           <path
-            d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
+            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -4706,7 +4706,7 @@ exports[`TileSelector can navigate 4`] = `
           class="focus"
         >
           <path
-            d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
+            d="M -128.5969988331779 397.57364554966193 A 110 110 0 0 1 -167.7435433586541 492.0817642631089 L -89.80858602064745 570.0313237006101 A 220 220 0 0 0 -18.369999939228194 397.5633203060898 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -5692,7 +5692,7 @@ exports[`TileSelector can navigate 6`] = `
           class="focus"
         >
           <path
-            d="M -130.1097739762094 639.3691830969162 A 340 340 0 0 1 -155.99073292237193 769.4815501010468 L -72.84157499635609 803.9230590139048 A 430 430 0 0 0 -40.1097739762094 639.3691830969162 Z"
+            d="M -140.2612775337152 629.3707134827248 A 330 330 0 0 1 -169.19574795372387 774.8341193089815 L -67.53426634985038 816.9444084505093 A 440 440 0 0 0 -30.22340544855757 629.3700439562257 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -6221,7 +6221,7 @@ exports[`TileSelector can navigate 7`] = `
           class="focus"
         >
           <path
-            d="M -126.1752374031932 523.5048538691518 A 230 230 0 0 1 -156.98939453277228 638.5048538691518 L -79.0471081921728 683.5048538691518 A 320 320 0 0 0 -36.175237403193194 523.5048538691518 Z"
+            d="M -136.40247100218158 513.5082970396039 A 220 220 0 0 1 -170.84471705470793 642.0485092344209 L -75.5172948909879 697.0880307752554 A 330 330 0 0 0 -26.326740960699 513.5063842549604 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -6750,7 +6750,7 @@ exports[`TileSelector can navigate 8`] = `
           class="focus"
         >
           <path
-            d="M -118.1427663402398 407.5598771356377 A 120 120 0 0 1 -153.2899525978541 492.4126908780234 L -89.65034229106482 556.0523011848127 A 210 210 0 0 0 -28.142766340239803 407.5598771356377 Z"
+            d="M -128.5969988331779 397.57364554966193 A 110 110 0 0 1 -167.7435433586541 492.0817642631089 L -89.80858602064745 570.0313237006101 A 220 220 0 0 0 -18.369999939228194 397.5633203060898 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"
@@ -7269,7 +7269,7 @@ exports[`TileSelector can navigate 9`] = `
           class="focus"
         >
           <path
-            d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
+            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-width="var(--stroke-width-focused)"

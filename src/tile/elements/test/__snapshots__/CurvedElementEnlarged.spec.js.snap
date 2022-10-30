@@ -52,6 +52,20 @@ exports[`CurvedElementEnlarged updates when the parameter cy is modified 1`] = `
 </body>
 `;
 
+exports[`CurvedElementEnlarged updates when the parameter d is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 140 140 A 50 50 0 0 1 90 190 L 90 290 L 160 290 A 80 80 0 0 0 240 210 L 240 140 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
 exports[`CurvedElementEnlarged updates when the parameter fill is modified 1`] = `
 <body>
   <div>
