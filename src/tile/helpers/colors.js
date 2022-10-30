@@ -77,6 +77,7 @@ export const focusedColor = () => ({
     fill: 'var(--color-bg-focused)',
     stroke: {
         stroke: 'var(--color-fg-focused)',
-        'stroke-width': 'var(--stroke-width-focused)'
+        'stroke-width': 'var(--stroke-width-focused)',
+        'stroke-dasharray': 'var(--stroke-dasharray-focused)'
     }
 });

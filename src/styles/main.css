@@ -17,12 +17,13 @@
     --color-fg-selected: rgba(64, 200, 64, 0.3);
     --color-bg-hovered: rgba(50, 200, 50, 0.2);
     --color-fg-hovered: rgba(32, 128, 32, 0.3);
-    --color-bg-focused: rgba(64, 150, 64, 0.2);
-    --color-fg-focused: rgba(32, 128, 32, 0.3);
+    --color-bg-focused: rgba(64, 96, 64, 0.5);
+    --color-fg-focused: #aaa;
     --stroke-width-tile: 1px;
     --stroke-width-selected: 2px;
     --stroke-width-hovered: 2px;
-    --stroke-width-focused: 2px;
+    --stroke-width-focused: 4px;
+    --stroke-dasharray-focused: 20 10;
 
     /* default scheme */
     --color-fg: var(--color-fg-dark);
