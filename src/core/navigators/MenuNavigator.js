@@ -56,14 +56,6 @@ export class MenuNavigator {
     }
 
     /**
-     * Gets the list of elements in the menu.
-     * @type {Array}
-     */
-    get elements() {
-        return this.#focus.elements;
-    }
-
-    /**
      * Gets the number of elements in the menu.
      * @type {number}
      */
@@ -72,19 +64,53 @@ export class MenuNavigator {
     }
 
     /**
-     * Gets the index of the focused element. -1 means no element is focused.
-     * @type {number}
+     * Gets the list of elements in the menu.
+     * @type {Array}
      */
-    get focusedIndex() {
-        return this.#focus.selectedIndex;
+    get elements() {
+        return this.#focus.elements;
     }
 
     /**
-     * Gets the index of the hovered element. -1 means no element is hovered.
+     * Sets the list of elements in the menu.
+     * @param {*} elements - The list of elements in the menu.
+     * @fires setelements
+     */
+    set elements(elements) {
+        this.#focus.elements = elements;
+        this.#hover.elements = elements;
+    }
+
+    /**
+     * Gets the element that will be focused by default.
+     * @type {*}
+     */
+    get defaultFocused() {
+        return this.#focus.defaultSelected;
+    }
+
+    /**
+     * Sets the index of the element that will be focused by default. `null` means no element.
+     * @param {*} element - The element that will be focused by default.
+     */
+    set defaultFocused(element) {
+        this.#focus.defaultSelected = element;
+    }
+
+    /**
+     * Gets the index of the element that will be focused by default. -1 means no element.
      * @type {number}
      */
-    get hoveredIndex() {
-        return this.#hover.selectedIndex;
+    get defaultFocusedIndex() {
+        return this.#focus.defaultSelectedIndex;
+    }
+
+    /**
+     * Sets the index of the element that will be focused by default. -1 means no element.
+     * @param {number} index - The index of the element that will be focused by default.
+     */
+    set defaultFocusedIndex(index) {
+        this.#focus.defaultSelectedIndex = index;
     }
 
     /**
@@ -96,6 +122,34 @@ export class MenuNavigator {
     }
 
     /**
+     * Sets the focused element.
+     * @param {*} - element - The focused element.
+     * @fires blur
+     * @fires focus
+     */
+    set focused(element) {
+        this.#focus.selected = element;
+    }
+
+    /**
+     * Gets the index of the focused element. -1 means no element is focused.
+     * @type {number}
+     */
+    get focusedIndex() {
+        return this.#focus.selectedIndex;
+    }
+
+    /**
+     * Sets the index of the focused element. -1 means no element is focused.
+     * @param {number} index - The index of the focused element in the menu.
+     * @fires blur
+     * @fires focus
+     */
+    set focusedIndex(index) {
+        this.#focus.selectedIndex = index;
+    }
+
+    /**
      * Gets the hovered element.
      * @type {*}
      */
@@ -104,44 +158,31 @@ export class MenuNavigator {
     }
 
     /**
-     * Sets the list of elements in the menu.
-     * @param {*} elements - The list of elements in the menu.
-     * @returns {MenuNavigator} - Chains the instance.
-     * @fires setelements
-     */
-    setElements(elements) {
-        this.#focus.elements = elements;
-        this.#hover.elements = elements;
-
-        return this;
-    }
-
-    /**
-     * Selects the focused element.
-     * An index < 0 will deselect the element.
-     * @param {number} index - The index of the focused element in the menu.
-     * @returns {MenuNavigator} - Chains the instance.
-     * @fires blur
-     * @fires focus
-     */
-    setFocused(index) {
-        this.#focus.selectedIndex = index;
-
-        return this;
-    }
-
-    /**
-     * Selects the hovered element.
-     * An index < 0 will deselect the element.
-     * @param {number} index - The index of the hovered element in the menu.
-     * @returns {MenuNavigator} - Chains the instance.
+     * Sets the hovered element.
+     * @param {*} - element - The hovered element.
      * @fires leave
      * @fires enter
      */
-    setHovered(index) {
-        this.#hover.selectedIndex = index;
+    set hovered(element) {
+        this.#hover.selected = element;
+    }
 
-        return this;
+    /**
+     * Gets the index of the hovered element. -1 means no element is hovered.
+     * @type {number}
+     */
+    get hoveredIndex() {
+        return this.#hover.selectedIndex;
+    }
+
+    /**
+     * Sets the index of the hovered element. -1 means no element is hovered.
+     * @param {number} index - The index of the hovered element in the menu.
+     * @fires leave
+     * @fires enter
+     */
+    set hoveredIndex(index) {
+        this.#hover.selectedIndex = index;
     }
 
     /**
@@ -152,6 +193,8 @@ export class MenuNavigator {
      */
     hoverFocused() {
         this.#hover.selectedIndex = this.#focus.selectedIndex;
+
+        return this;
     }
 
     /**
@@ -162,6 +205,19 @@ export class MenuNavigator {
      */
     focusHovered() {
         this.#focus.selectedIndex = this.#hover.selectedIndex;
+
+        return this;
+    }
+
+    /**
+     * Focuses the default element.
+     * @returns {MenuNavigator} - Chains the instance.
+     * @fires focus
+     */
+    focus() {
+        this.#focus.select();
+
+        return this;
     }
 
     /**

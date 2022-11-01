@@ -35,10 +35,114 @@ describe('MenuNavigator', () => {
         expect(new MenuNavigator(source).length).toBe(source.length);
     });
 
-    it('can set the list of elements', () => {
+    it('has a default focused index', () => {
+        expect(new MenuNavigator().defaultFocusedIndex).toBe(-1);
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.defaultFocusedIndex).toBe(-1);
+
+        navigator.defaultFocusedIndex = 2;
+        expect(navigator.defaultFocusedIndex).toBe(2);
+
+        navigator.defaultFocusedIndex = -2;
+        expect(navigator.defaultFocusedIndex).toBe(-1);
+
+        navigator.defaultFocusedIndex = 4;
+        expect(navigator.defaultFocusedIndex).toBe(3);
+    });
+
+    it('has a default focused element', () => {
+        expect(new MenuNavigator().defaultFocused).toBeNull();
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.defaultFocused).toBeNull();
+
+        navigator.defaultFocused = source[2];
+        expect(navigator.defaultFocused).toBe(source[2]);
+
+        navigator.defaultFocused = null;
+        expect(navigator.defaultFocused).toBeNull();
+
+        navigator.defaultFocused = { name: '' };
+        expect(navigator.defaultFocused).toBeNull();
+    });
+
+    it('has a focused index', () => {
+        expect(new MenuNavigator().focusedIndex).toBe(-1);
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+
+        navigator.focusedIndex = 1;
+        expect(navigator.focusedIndex).toBe(1);
+
+        navigator.focusedIndex = -2;
+        expect(navigator.focusedIndex).toBe(-1);
+
+        navigator.focusedIndex = 4;
+        expect(navigator.focusedIndex).toBe(3);
+    });
+
+    it('has a focused element', () => {
+        expect(new MenuNavigator().focused).toBeNull();
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focused).toBeNull();
+
+        navigator.focusedIndex = 1;
+        expect(navigator.focused).toBe(source[1]);
+
+        navigator.focusedIndex = -2;
+        expect(navigator.focused).toBeNull();
+
+        navigator.focusedIndex = 4;
+        expect(navigator.focused).toBe(source[3]);
+    });
+
+    it('has an hovered index', () => {
+        expect(new MenuNavigator().hoveredIndex).toBe(-1);
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.hoveredIndex).toBe(-1);
+
+        navigator.hoveredIndex = 1;
+        expect(navigator.hoveredIndex).toBe(1);
+
+        navigator.hoveredIndex = -2;
+        expect(navigator.hoveredIndex).toBe(-1);
+
+        navigator.hoveredIndex = 4;
+        expect(navigator.hoveredIndex).toBe(3);
+    });
+
+    it('has an hovered element', () => {
+        expect(new MenuNavigator().hovered).toBeNull();
+
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.hovered).toBeNull();
+
+        navigator.hoveredIndex = 1;
+        expect(navigator.hovered).toBe(source[1]);
+
+        navigator.hoveredIndex = -2;
+        expect(navigator.hovered).toBeNull();
+
+        navigator.hoveredIndex = 4;
+        expect(navigator.hovered).toBe(source[3]);
+    });
+
+    it('has a list of elements', () => {
         const navigator = new MenuNavigator();
 
-        expect(navigator.setElements(source)).toBe(navigator);
+        expect(navigator.elements).toStrictEqual([]);
+
+        navigator.elements = source;
         expect(navigator.elements).toStrictEqual(source);
         expect(navigator.elements).not.toBe(source);
     });
@@ -48,7 +152,7 @@ describe('MenuNavigator', () => {
         const callback = jest.fn();
 
         navigator.on('setelements', callback);
-        navigator.setElements(source);
+        navigator.elements = source;
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
@@ -81,14 +185,14 @@ describe('MenuNavigator', () => {
         navigator.on('enter', enter);
         navigator.on('leave', leave);
 
-        navigator.setElements(source); // no selection
+        navigator.elements = source; // no selection
 
-        navigator.setFocused(1); // focus
-        navigator.setHovered(1); // enter
+        navigator.focusedIndex = 1; // focus
+        navigator.hoveredIndex = 1; // enter
 
-        navigator.setElements(source); // blur + leave + focus + enter
+        navigator.elements = source; // blur + leave + focus + enter
 
-        navigator.setElements([]); // blur + leave
+        navigator.elements = []; // blur + leave
 
         expect(focus).toHaveBeenCalledTimes(2);
         expect(blur).toHaveBeenCalledTimes(2);
@@ -99,13 +203,13 @@ describe('MenuNavigator', () => {
     it('adjusts the selection when setting the list of elements', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.setFocused(1);
-        navigator.setHovered(2);
+        navigator.focusedIndex = 1;
+        navigator.hoveredIndex = 2;
 
         expect(navigator.focusedIndex).toBe(1);
         expect(navigator.hoveredIndex).toBe(2);
 
-        navigator.setElements(source.slice(0, 2));
+        navigator.elements = source.slice(0, 2);
 
         expect(navigator.focusedIndex).toBe(1);
         expect(navigator.hoveredIndex).toBe(1);
@@ -113,7 +217,7 @@ describe('MenuNavigator', () => {
         expect(navigator.focused).toBe(source[1]);
         expect(navigator.hovered).toBe(source[1]);
 
-        navigator.setElements([]);
+        navigator.elements = [];
 
         expect(navigator.focusedIndex).toBe(-1);
         expect(navigator.hoveredIndex).toBe(-1);
@@ -122,53 +226,29 @@ describe('MenuNavigator', () => {
         expect(navigator.hovered).toBeNull();
     });
 
-    it('can select the focused element', () => {
+    it('selects the focused element by its value', () => {
         const navigator = new MenuNavigator(source);
 
         expect(navigator.focusedIndex).toBe(-1);
         expect(navigator.focused).toBeNull();
 
-        expect(navigator.setFocused(1)).toBe(navigator);
+        navigator.focused = source[1];
 
         expect(navigator.focusedIndex).toBe(1);
         expect(navigator.focused).toBe(source[1]);
     });
 
-    it('can change the focused element', () => {
+    it('deselects the focused element by setting null', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.setFocused(1);
-        navigator.setFocused(3);
-
-        expect(navigator.focusedIndex).toBe(3);
-        expect(navigator.focused).toBe(source[3]);
-    });
-
-    it('can unselect the focused element', () => {
-        const navigator = new MenuNavigator(source);
-
-        navigator.setFocused(1);
-        navigator.setFocused(-1);
+        navigator.focused = source[1];
+        navigator.focused = null;
 
         expect(navigator.focusedIndex).toBe(-1);
         expect(navigator.focused).toBeNull();
     });
 
-    it('cannot select a the focused element outside of the boundaries', () => {
-        const navigator = new MenuNavigator(source);
-
-        navigator.setFocused(10);
-
-        expect(navigator.focusedIndex).toBe(3);
-        expect(navigator.focused).toBe(source[3]);
-
-        navigator.setFocused(-10);
-
-        expect(navigator.focusedIndex).toBe(-1);
-        expect(navigator.focused).toBeNull();
-    });
-
-    it('emits events when focusing an element', () => {
+    it('emits events when focusing an element by its value', () => {
         const navigator = new MenuNavigator(source);
         let focusedIndex = 1;
         let blurredIndex = 1;
@@ -184,13 +264,82 @@ describe('MenuNavigator', () => {
         navigator.on('focus', focus);
         navigator.on('blur', blur);
 
-        navigator.setFocused(focusedIndex); // focus
+        navigator.focused = source[focusedIndex]; // focus
 
         focusedIndex = 2;
-        navigator.setFocused(focusedIndex); // blur + focus
+        navigator.focused = source[focusedIndex]; // blur + focus
 
         blurredIndex = 2;
-        navigator.setFocused(-1); // blur
+        navigator.focused = null; // blur
+
+        expect(focus).toHaveBeenCalledTimes(2);
+        expect(blur).toHaveBeenCalledTimes(2);
+    });
+
+    it('selects the focused element by its index', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.focusedIndex = 1;
+
+        expect(navigator.focusedIndex).toBe(1);
+        expect(navigator.focused).toBe(source[1]);
+
+        navigator.focusedIndex = 3;
+
+        expect(navigator.focusedIndex).toBe(3);
+        expect(navigator.focused).toBe(source[3]);
+    });
+
+    it('deselects the focused element by setting the index to -1', () => {
+        const navigator = new MenuNavigator(source);
+
+        navigator.focusedIndex = 1;
+        navigator.focusedIndex = -1;
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+    });
+
+    it('cannot select a the focused element outside of the boundaries', () => {
+        const navigator = new MenuNavigator(source);
+
+        navigator.focusedIndex = 10;
+
+        expect(navigator.focusedIndex).toBe(3);
+        expect(navigator.focused).toBe(source[3]);
+
+        navigator.focusedIndex = -10;
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+    });
+
+    it('emits events when focusing an element by its index', () => {
+        const navigator = new MenuNavigator(source);
+        let focusedIndex = 1;
+        let blurredIndex = 1;
+        const focus = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(focusedIndex);
+        });
+        const blur = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(blurredIndex);
+        });
+
+        navigator.on('focus', focus);
+        navigator.on('blur', blur);
+
+        navigator.focusedIndex = focusedIndex; // focus
+
+        focusedIndex = 2;
+        navigator.focusedIndex = focusedIndex; // blur + focus
+
+        blurredIndex = 2;
+        navigator.focusedIndex = -1; // blur
 
         expect(focus).toHaveBeenCalledTimes(2);
         expect(blur).toHaveBeenCalledTimes(2);
@@ -206,59 +355,36 @@ describe('MenuNavigator', () => {
 
         navigator.on('focus', callback);
 
-        navigator.setFocused(focusedIndex);
-        navigator.setFocused(focusedIndex);
+        navigator.focusedIndex = focusedIndex;
+        navigator.focusedIndex = focusedIndex;
+        navigator.focused = source[focusedIndex];
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
-    it('can select the hovered element', () => {
+    it('selects the hovered element by its value', () => {
         const navigator = new MenuNavigator(source);
 
         expect(navigator.hoveredIndex).toBe(-1);
         expect(navigator.hovered).toBeNull();
 
-        expect(navigator.setHovered(1)).toBe(navigator);
+        navigator.hovered = source[1];
 
         expect(navigator.hoveredIndex).toBe(1);
         expect(navigator.hovered).toBe(source[1]);
     });
 
-    it('can change the hovered element', () => {
+    it('deselects the hovered element by setting null', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.setHovered(1);
-        navigator.setHovered(3);
-
-        expect(navigator.hoveredIndex).toBe(3);
-        expect(navigator.hovered).toBe(source[3]);
-    });
-
-    it('can unselect the hovered element', () => {
-        const navigator = new MenuNavigator(source);
-
-        navigator.setHovered(1);
-        navigator.setHovered(-1);
+        navigator.hovered = source[1];
+        navigator.hovered = null;
 
         expect(navigator.hoveredIndex).toBe(-1);
         expect(navigator.hovered).toBeNull();
     });
 
-    it('cannot select a the hovered element outside of the boundaries', () => {
-        const navigator = new MenuNavigator(source);
-
-        navigator.setHovered(10);
-
-        expect(navigator.hoveredIndex).toBe(3);
-        expect(navigator.hovered).toBe(source[3]);
-
-        navigator.setHovered(-10);
-
-        expect(navigator.hoveredIndex).toBe(-1);
-        expect(navigator.hovered).toBeNull();
-    });
-
-    it('emits events when hovering an element', () => {
+    it('emits events when hovering an element by its value', () => {
         const navigator = new MenuNavigator(source);
         let enteredIndex = 1;
         let leftIndex = 1;
@@ -274,13 +400,82 @@ describe('MenuNavigator', () => {
         navigator.on('enter', enter);
         navigator.on('leave', leave);
 
-        navigator.setHovered(enteredIndex); // enter
+        navigator.hovered = source[enteredIndex]; // enter
 
         enteredIndex = 2;
-        navigator.setHovered(enteredIndex); // leave + enter
+        navigator.hovered = source[enteredIndex]; // leave + enter
 
         leftIndex = 2;
-        navigator.setHovered(-1); // leave
+        navigator.hovered = null; // leave
+
+        expect(enter).toHaveBeenCalledTimes(2);
+        expect(leave).toHaveBeenCalledTimes(2);
+    });
+
+    it('selects the hovered element by its index', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.hoveredIndex).toBe(-1);
+        expect(navigator.hovered).toBeNull();
+
+        navigator.hoveredIndex = 1;
+
+        expect(navigator.hoveredIndex).toBe(1);
+        expect(navigator.hovered).toBe(source[1]);
+
+        navigator.hoveredIndex = 3;
+
+        expect(navigator.hoveredIndex).toBe(3);
+        expect(navigator.hovered).toBe(source[3]);
+    });
+
+    it('deselects the hovered element by setting the index to -1', () => {
+        const navigator = new MenuNavigator(source);
+
+        navigator.hoveredIndex = 1;
+        navigator.hoveredIndex = -1;
+
+        expect(navigator.hoveredIndex).toBe(-1);
+        expect(navigator.hovered).toBeNull();
+    });
+
+    it('cannot select a the hovered element outside of the boundaries', () => {
+        const navigator = new MenuNavigator(source);
+
+        navigator.hoveredIndex = 10;
+
+        expect(navigator.hoveredIndex).toBe(3);
+        expect(navigator.hovered).toBe(source[3]);
+
+        navigator.hoveredIndex = -10;
+
+        expect(navigator.hoveredIndex).toBe(-1);
+        expect(navigator.hovered).toBeNull();
+    });
+
+    it('emits events when hovering an element by its index', () => {
+        const navigator = new MenuNavigator(source);
+        let enteredIndex = 1;
+        let leftIndex = 1;
+        const enter = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(enteredIndex);
+        });
+        const leave = jest.fn().mockImplementation((element, index) => {
+            expect(element).toStrictEqual(source[index]);
+            expect(index).toBe(leftIndex);
+        });
+
+        navigator.on('enter', enter);
+        navigator.on('leave', leave);
+
+        navigator.hoveredIndex = enteredIndex; // enter
+
+        enteredIndex = 2;
+        navigator.hoveredIndex = enteredIndex; // leave + enter
+
+        leftIndex = 2;
+        navigator.hoveredIndex = -1; // leave
 
         expect(enter).toHaveBeenCalledTimes(2);
         expect(leave).toHaveBeenCalledTimes(2);
@@ -296,48 +491,70 @@ describe('MenuNavigator', () => {
 
         navigator.on('enter', callback);
 
-        navigator.setHovered(enteredIndex);
-        navigator.setHovered(enteredIndex);
+        navigator.hoveredIndex = enteredIndex;
+        navigator.hoveredIndex = enteredIndex;
+        navigator.hovered = source[enteredIndex];
 
         expect(callback).toHaveBeenCalledTimes(1);
     });
 
-    it('can hover the focused element', () => {
+    it('hovers the focused element', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.setFocused(3);
-        navigator.hoverFocused();
+        navigator.focusedIndex = 3;
+
+        expect(navigator.hoverFocused()).toBe(navigator);
 
         expect(navigator.hoveredIndex).toBe(3);
         expect(navigator.hovered).toBe(source[3]);
 
-        navigator.setFocused(-1);
+        navigator.focusedIndex = -1;
         navigator.hoverFocused();
 
         expect(navigator.hoveredIndex).toBe(-1);
         expect(navigator.hovered).toBeNull();
     });
 
-    it('can focus the hovered element', () => {
+    it('focuses the hovered element', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.setHovered(3);
-        navigator.focusHovered();
+        navigator.hoveredIndex = 3;
+
+        expect(navigator.focusHovered()).toBe(navigator);
 
         expect(navigator.focusedIndex).toBe(3);
         expect(navigator.focused).toBe(source[3]);
 
-        navigator.setHovered(-1);
+        navigator.hoveredIndex = -1;
         navigator.focusHovered();
 
         expect(navigator.focusedIndex).toBe(-1);
         expect(navigator.focused).toBeNull();
     });
 
-    it('can focus the next element', () => {
+    it('focuses the default element', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.focusNext();
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        expect(navigator.focus()).toBe(navigator);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.defaultFocusedIndex = 1;
+
+        navigator.focus();
+
+        expect(navigator.focusedIndex).toBe(1);
+        expect(navigator.focused).toBe(source[1]);
+    });
+
+    it('focuses the next element', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusNext()).toBe(navigator);
 
         expect(navigator.focusedIndex).toBe(0);
         expect(navigator.focused).toBe(source[0]);
@@ -347,17 +564,17 @@ describe('MenuNavigator', () => {
         expect(navigator.focusedIndex).toBe(1);
         expect(navigator.focused).toBe(source[1]);
 
-        navigator.setFocused(3);
+        navigator.focusedIndex = 3;
         navigator.focusNext();
 
         expect(navigator.focusedIndex).toBe(0);
         expect(navigator.focused).toBe(source[0]);
     });
 
-    it('can focus the previous element', () => {
+    it('focuses the previous element', () => {
         const navigator = new MenuNavigator(source);
 
-        navigator.focusPrevious();
+        expect(navigator.focusPrevious()).toBe(navigator);
 
         expect(navigator.focusedIndex).toBe(3);
         expect(navigator.focused).toBe(source[3]);
@@ -367,10 +584,62 @@ describe('MenuNavigator', () => {
         expect(navigator.focusedIndex).toBe(2);
         expect(navigator.focused).toBe(source[2]);
 
-        navigator.setFocused(0);
+        navigator.focusedIndex = 0;
         navigator.focusPrevious();
 
         expect(navigator.focusedIndex).toBe(3);
         expect(navigator.focused).toBe(source[3]);
+    });
+
+    it('focuses the first element if none is focused when moving forward and no default is set', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.focusNext();
+
+        expect(navigator.focusedIndex).toBe(0);
+        expect(navigator.focused).toBe(source[0]);
+    });
+
+    it('focuses the default element if none is focused when moving forward', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.defaultFocusedIndex = 1;
+
+        navigator.focusNext();
+
+        expect(navigator.focusedIndex).toBe(1);
+        expect(navigator.focused).toBe(source[1]);
+    });
+
+    it('focuses the last element if none is focused when moving back and no default is set', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.focusPrevious();
+
+        expect(navigator.focusedIndex).toBe(3);
+        expect(navigator.focused).toBe(source[3]);
+    });
+
+    it('focuses the default element if none is focused when moving back', () => {
+        const navigator = new MenuNavigator(source);
+
+        expect(navigator.focusedIndex).toBe(-1);
+        expect(navigator.focused).toBeNull();
+
+        navigator.defaultFocusedIndex = 1;
+
+        navigator.focusPrevious();
+
+        expect(navigator.focusedIndex).toBe(1);
+        expect(navigator.focused).toBe(source[1]);
     });
 });

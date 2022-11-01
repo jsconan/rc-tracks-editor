@@ -32,8 +32,8 @@
 
     const navigator = new MenuNavigator();
     const hoverFocused = () => navigator.hoverFocused();
-    const leave = () => navigator.setHovered(-1);
-    const blur = () => navigator.setFocused(-1);
+    const leave = () => (navigator.hovered = null);
+    const blur = () => (navigator.focused = null);
 
     const click = () => {
         if (navigator.focused) {
@@ -93,9 +93,9 @@
             selected = focusedOverlay || hoveredOverlay;
         });
 
-    $: navigator.setElements(elements);
+    $: navigator.elements = elements;
     $: if (hoveredIndex > -1) {
-        navigator.setHovered(hoveredIndex);
+        navigator.hoveredIndex = hoveredIndex;
     }
 </script>
 
