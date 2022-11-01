@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { between, increase } from '../helpers';
 import { eventEmitterMixin } from '../mixins';
 
 /**
@@ -35,6 +36,13 @@ export class ListNavigator {
      * @private
      */
     #selectedIndex = -1;
+
+    /**
+     * The index of the element that will be selected by default. -1 means no element.
+     * @type {number}
+     * @private
+     */
+    #defaultSelectedIndex = -1;
 
     /**
      * Creates a navigator for navigating through a list of elements.
@@ -63,14 +71,6 @@ export class ListNavigator {
     }
 
     /**
-     * Gets the index of the selected element. -1 means no element is selected.
-     * @type {number}
-     */
-    get selectedIndex() {
-        return this.#selectedIndex;
-    }
-
-    /**
      * Gets the selected element.
      * @type {*}
      */
@@ -80,6 +80,30 @@ export class ListNavigator {
         }
 
         return null;
+    }
+
+    /**
+     * Gets the index of the selected element. -1 means no element is selected.
+     * @type {number}
+     */
+    get selectedIndex() {
+        return this.#selectedIndex;
+    }
+
+    /**
+     * Gets the index of the element that will be selected by default. -1 means no element.
+     * @type {number}
+     */
+    get defaultSelectedIndex() {
+        return this.#defaultSelectedIndex;
+    }
+
+    /**
+     * Sets the index of the element that will be selected by default. -1 means no element.
+     * @param {number} index - The index of the element that will be selected by default.
+     */
+    set defaultSelectedIndex(index) {
+        this.#defaultSelectedIndex = between(index, -1, this.#elements.length - 1);
     }
 
     /**
@@ -110,7 +134,7 @@ export class ListNavigator {
      * @fires leave
      */
     select(index) {
-        const selectedIndex = Math.min(Math.max(-1, index), this.#elements.length - 1);
+        const selectedIndex = between(index, -1, this.#elements.length - 1);
 
         if (this.#selectedIndex === selectedIndex) {
             return this;
@@ -137,8 +161,12 @@ export class ListNavigator {
      * @fires leave
      */
     selectNext() {
-        const length = this.#elements.length;
-        const next = (this.#selectedIndex + length + 1) % length;
+        let next = this.#defaultSelectedIndex;
+
+        if (this.#selectedIndex > -1 || this.#defaultSelectedIndex < 0) {
+            next = increase(this.#selectedIndex, 1, this.#elements.length);
+        }
+
         return this.select(next);
     }
 
@@ -150,9 +178,13 @@ export class ListNavigator {
      * @fires leave
      */
     selectPrevious() {
-        const length = this.#elements.length;
-        const current = Math.max(0, this.#selectedIndex);
-        const previous = (current + length - 1) % length;
+        let previous = this.#defaultSelectedIndex;
+
+        if (this.#selectedIndex > -1 || this.#defaultSelectedIndex < 0) {
+            const current = Math.max(0, this.#selectedIndex);
+            previous = increase(current, -1, this.#elements.length);
+        }
+
         return this.select(previous);
     }
 }

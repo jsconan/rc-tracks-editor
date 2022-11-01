@@ -35,8 +35,61 @@ describe('ListNavigator', () => {
         expect(new ListNavigator(source).length).toBe(source.length);
     });
 
-    it('can set the list of elements', () => {
+    it('has a default selected index', () => {
+        expect(new ListNavigator().defaultSelectedIndex).toBe(-1);
+
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.defaultSelectedIndex).toBe(-1);
+
+        navigator.defaultSelectedIndex = 2;
+        expect(navigator.defaultSelectedIndex).toBe(2);
+
+        navigator.defaultSelectedIndex = -2;
+        expect(navigator.defaultSelectedIndex).toBe(-1);
+
+        navigator.defaultSelectedIndex = 4;
+        expect(navigator.defaultSelectedIndex).toBe(3);
+    });
+
+    it('can have a selected index', () => {
+        expect(new ListNavigator().selectedIndex).toBe(-1);
+
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selectedIndex).toBe(-1);
+
+        navigator.select(1);
+        expect(navigator.selectedIndex).toBe(1);
+
+        navigator.select(-2);
+        expect(navigator.selectedIndex).toBe(-1);
+
+        navigator.select(4);
+        expect(navigator.selectedIndex).toBe(3);
+    });
+
+    it('can have a selected element', () => {
+        expect(new ListNavigator().selected).toBeNull();
+
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selected).toBeNull();
+
+        navigator.select(1);
+        expect(navigator.selected).toBe(source[1]);
+
+        navigator.select(-2);
+        expect(navigator.selected).toBeNull();
+
+        navigator.select(4);
+        expect(navigator.selected).toBe(source[3]);
+    });
+
+    it('has a list of elements', () => {
         const navigator = new ListNavigator();
+
+        expect(navigator.elements).toStrictEqual([]);
 
         expect(navigator.setElements(source)).toBe(navigator);
         expect(navigator.elements).toStrictEqual(source);
@@ -227,5 +280,57 @@ describe('ListNavigator', () => {
 
         expect(navigator.selectedIndex).toBe(3);
         expect(navigator.selected).toBe(source[3]);
+    });
+
+    it('selects the first element if none is selected when moving forward and no default is set', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selectedIndex).toBe(-1);
+        expect(navigator.selected).toBeNull();
+
+        navigator.selectNext();
+
+        expect(navigator.selectedIndex).toBe(0);
+        expect(navigator.selected).toBe(source[0]);
+    });
+
+    it('selects the default element if none is selected when moving forward', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selectedIndex).toBe(-1);
+        expect(navigator.selected).toBeNull();
+
+        navigator.defaultSelectedIndex = 1;
+
+        navigator.selectNext();
+
+        expect(navigator.selectedIndex).toBe(1);
+        expect(navigator.selected).toBe(source[1]);
+    });
+
+    it('selects the last element if none is selected when moving back and no default is set', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selectedIndex).toBe(-1);
+        expect(navigator.selected).toBeNull();
+
+        navigator.selectPrevious();
+
+        expect(navigator.selectedIndex).toBe(3);
+        expect(navigator.selected).toBe(source[3]);
+    });
+
+    it('selects the default element if none is selected when moving back', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.selectedIndex).toBe(-1);
+        expect(navigator.selected).toBeNull();
+
+        navigator.defaultSelectedIndex = 1;
+
+        navigator.selectPrevious();
+
+        expect(navigator.selectedIndex).toBe(1);
+        expect(navigator.selected).toBe(source[1]);
     });
 });
