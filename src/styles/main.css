@@ -16,8 +16,8 @@
     --color-bg-selected: rgba(32, 255, 32, 0.3);
     --color-fg-selected: rgba(64, 200, 64, 0.3);
     --color-bg-hovered: rgba(50, 200, 50, 0.2);
-    --color-fg-hovered: rgba(32, 128, 32, 0.3);
-    --color-bg-focused: rgba(64, 96, 64, 0.5);
+    --color-fg-hovered: none;
+    --color-bg-focused: none;
     --color-fg-focused: #aaa;
     --stroke-width-tile: 1px;
     --stroke-width-selected: 2px;
