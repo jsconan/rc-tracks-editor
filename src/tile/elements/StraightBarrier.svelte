@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { barrierColor } from '../helpers';
+    import { getTileStyleBarrier } from '../helpers';
     import StraightElement from './StraightElement.svelte';
 
     export let chunks;
@@ -28,7 +28,7 @@
         const segments = [];
 
         for (let i = 0; i < chunkCount; i++) {
-            const color = barrierColor(i + colorShift);
+            const color = getTileStyleBarrier(i + colorShift);
             const d = i * chunkLength;
 
             const x = verticalSegment ? startX : startX + d;

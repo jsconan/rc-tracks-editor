@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { createEventDispatcher, getContext } from 'svelte';
-    import { focusedColor, hoveredColor } from '../helpers';
+    import { extendTileWithStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
     import { MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
     import { TileSpecifications } from '../config';
@@ -17,7 +17,6 @@
 
     let focusedOverlay = null;
     let hoveredOverlay = null;
-    let selected = null;
 
     const dispatch = createEventDispatcher();
     const select = element => {
@@ -27,18 +26,8 @@
     };
 
     const getTile = tile => {
-        if (!tile) {
-            return null;
-        }
         const { type, direction, ratio, angle, x, y } = tile;
         return { type, direction, ratio, angle, x, y };
-    };
-
-    const getTileParameters = (tile, color = {}, d = 0) => {
-        if (!tile) {
-            return {};
-        }
-        return { ...getTile(tile), d, ...color };
     };
 
     const navigator = new MenuNavigator();
@@ -89,19 +78,17 @@
 
     navigator
         .on('focus', focused => {
-            focusedOverlay = getTileParameters(focused, focusedColor(), specs.barrierWidth);
+            focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
+            focusedOverlay.d = specs.barrierWidth;
         })
         .on('blur', () => {
             focusedOverlay = null;
         })
         .on('enter', hovered => {
-            hoveredOverlay = getTileParameters(hovered, hoveredColor());
+            hoveredOverlay = extendTileWithStyle(TILE_STYLE_HOVERED, getTile(hovered));
         })
         .on('leave', () => {
             hoveredOverlay = null;
-        })
-        .on('focus blur enter leave', () => {
-            selected = getTile(focusedOverlay || hoveredOverlay);
         });
 
     $: navigator.elements = elements;
@@ -109,12 +96,13 @@
     $: if (hoveredIndex > -1) {
         navigator.hoveredIndex = hoveredIndex;
     }
+    $: selected = focusedOverlay || hoveredOverlay;
 </script>
 
 <g on:click={click} on:keyup={keyPress} on:blur={blur} role="menu" tabindex="0">
     <slot />
     {#if selected}
-        <Tile {...selected} />
+        <Tile {...getTile(selected)} />
     {/if}
     {#if hoveredOverlay}
         <g on:mouseleave={leave} class="hover" pointer-events="all">

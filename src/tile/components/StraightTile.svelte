@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { groundColor } from '../helpers';
+    import { extendTileWithStyle, TILE_STYLE_GROUND } from '../helpers';
     import { TileSpecifications } from '../config';
     import { StraightBarrier, StraightElement } from '../elements';
     import { StraightTileModel } from '../models';
@@ -23,7 +23,7 @@
 </script>
 
 <g class="tile straight-tile" {transform} {id}>
-    <StraightElement {...parameters.ground} {...groundColor()} />
+    <StraightElement {...extendTileWithStyle(TILE_STYLE_GROUND, parameters.ground)} />
     <StraightBarrier {...parameters.leftBarrier} />
     <StraightBarrier {...parameters.rightBarrier} />
 </g>

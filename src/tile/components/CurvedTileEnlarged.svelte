@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getContext } from 'svelte';
-    import { groundColor } from '../helpers';
+    import { extendTileWithStyle, TILE_STYLE_GROUND } from '../helpers';
     import { TileSpecifications } from '../config';
     import { CurvedElementEnlarged, CurvedBarrier, StraightBarrier } from '../elements';
     import { CurvedTileEnlargedModel } from '../models';
@@ -23,7 +23,7 @@
 </script>
 
 <g class="tile curved-tile-enlarged" {transform} {id}>
-    <CurvedElementEnlarged {...parameters.ground} {...groundColor()} />
+    <CurvedElementEnlarged {...extendTileWithStyle(TILE_STYLE_GROUND, parameters.ground)} />
     <CurvedBarrier {...parameters.innerBarrier} />
     <CurvedBarrier {...parameters.outerBarrier} />
     <StraightBarrier {...parameters.horizontalBarrier} />

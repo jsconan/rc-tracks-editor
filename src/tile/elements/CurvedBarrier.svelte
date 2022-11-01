@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { barrierColor } from '../helpers';
+    import { getTileStyleBarrier } from '../helpers';
     import CurvedElement from './CurvedElement.svelte';
 
     export let chunks;
@@ -30,7 +30,7 @@
         const segments = [];
 
         for (let i = 0; i < curveChunks; i++) {
-            const color = barrierColor(i + colorShift);
+            const color = getTileStyleBarrier(i + colorShift);
             const start = chunkAngle * i;
 
             segments.push({ cx, cy, chunkAngle, start, color, i });

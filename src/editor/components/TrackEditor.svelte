@@ -8,7 +8,7 @@
     import TileSelector from './TileSelector.svelte';
     import { TrackEditorModel } from '../models';
     import { Track, TrackStats } from '../../track/components';
-    import { selectedColor } from '../../tile/helpers';
+    import { extendTileWithStyle, TILE_STYLE_SELECTED } from '../../tile/helpers';
 
     export let editor;
 
@@ -25,7 +25,7 @@
         track.update();
 
         const { type, direction, ratio } = tile;
-        selected = { type, direction, ratio, angle, x, y };
+        selected = extendTileWithStyle(TILE_STYLE_SELECTED, { type, direction, ratio, angle, x, y });
     };
 
     setContext(specs.contextId, specs);
@@ -47,7 +47,7 @@
             <Sketch width="100%" height="100%">
                 <Track {track} on:select={flipTile}>
                     {#if selected}
-                        <TileElement {...selected} {...selectedColor()} />
+                        <TileElement {...selected} />
                     {/if}
                 </Track>
             </Sketch>

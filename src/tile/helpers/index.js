@@ -17,6 +17,6 @@
  */
 
 /* c8 ignore start */
-export * from './colors.js';
+export * from './style.js';
 export * from './tiles.js';
 /* c8 ignore end */
