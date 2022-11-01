@@ -233,4 +233,54 @@ describe('TileNavigator', () => {
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();
     });
+
+    it('can hover the focused element then leave', async () => {
+        const props = { elements };
+        const { container } = render(Context, {
+            props: {
+                component: TileNavigator,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.mouseEnter(container.querySelector('.focus'));
+        await fireEvent.mouseLeave(container.querySelector('.focus'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can hover then focus', async () => {
+        const props = { elements };
+        const { container, component } = render(Context, {
+            props: {
+                component: TileNavigator,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        component.$set({ props: Object.assign({ hoveredIndex: 0 }, props) });
+        await tick();
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.mouseEnter(container.querySelector('.focus'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can focus the default element', async () => {
+        const props = { elements, selectedIndex: 1 };
+        const { container } = render(Context, {
+            props: {
+                component: TileNavigator,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        expect(container).toMatchSnapshot();
+    });
 });

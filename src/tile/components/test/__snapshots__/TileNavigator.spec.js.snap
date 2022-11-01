@@ -95,23 +95,24 @@ exports[`TileNavigator can focus and blur 1`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-focused)"
-          height="130"
+          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="100"
+          x="-50"
+          y="-5"
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -127,6 +128,85 @@ exports[`TileNavigator can focus and blur 2`] = `
     >
       
       
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can focus the default element 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile curved-tile"
+        transform="rotate(90 0 55)"
+      >
+        <path
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+          fill="var(--color-ground)"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+        />
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+            fill="var(--color-odd)"
+          />
+        </g>
+        <g
+          class="barrier curved-barrier"
+        >
+          
+          <path
+            d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+            fill="var(--color-even)"
+          />
+          
+          <path
+            d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+            fill="var(--color-odd)"
+          />
+          
+          <path
+            d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+            fill="var(--color-even)"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="focus"
+        pointer-events="all"
+      >
+        <path
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -59.99811056948708 104.88097487502289 A 105 105 0 0 0 49.880974875022886 -4.998110569487079 Z"
+          fill="var(--color-bg-focused)"
+          stroke="var(--color-fg-focused)"
+          stroke-dasharray="var(--stroke-dasharray-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(90 0 55)"
+        />
+        
+      </g>
     </g>
     
   </div>
@@ -191,12 +271,12 @@ exports[`TileNavigator can hover and leave 1`] = `
       </g>
       
       
-      
       <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -204,6 +284,7 @@ exports[`TileNavigator can hover and leave 1`] = `
         />
         
       </g>
+      
     </g>
     
   </div>
@@ -321,34 +402,290 @@ exports[`TileNavigator can hover the focused element 1`] = `
       
       
       <g
-        class="focus"
+        class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <rect
-          fill="var(--color-bg-focused)"
-          height="130"
-          stroke="var(--color-fg-focused)"
-          stroke-dasharray="var(--stroke-dasharray-focused)"
-          stroke-width="var(--stroke-width-focused)"
+          fill="var(--color-bg-hovered)"
+          height="110"
+          stroke="var(--color-fg-hovered)"
+          stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="90"
+          x="-45"
+          y="0"
         />
         
       </g>
       
       <g
+        class="focus"
+        pointer-events="all"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="120"
+          stroke="var(--color-fg-focused)"
+          stroke-dasharray="var(--stroke-dasharray-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="100"
+          x="-50"
+          y="-5"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can hover the focused element then leave 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      
+      <g
+        class="focus"
+        pointer-events="all"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="120"
+          stroke="var(--color-fg-focused)"
+          stroke-dasharray="var(--stroke-dasharray-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="100"
+          x="-50"
+          y="-5"
+        />
+        
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`TileNavigator can hover then focus 1`] = `
+<body>
+  <div>
+    <g
+      role="menu"
+      tabindex="0"
+    >
+      <g
+        class="tile straight-tile"
+        transform="rotate(180 0 55)"
+      >
+        <rect
+          fill="var(--color-ground)"
+          height="110"
+          stroke="var(--color-separator)"
+          stroke-width="var(--stroke-width-tile)"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="-45"
+            y="82.5"
+          />
+        </g>
+        <g
+          class="barrier straight-barrier"
+        >
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="0"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="27.5"
+          />
+          
+          <rect
+            fill="var(--color-odd)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="55"
+          />
+          
+          <rect
+            fill="var(--color-even)"
+            height="27.5"
+            width="5"
+            x="40"
+            y="82.5"
+          />
+        </g>
+      </g>
+      
+      
+      <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-hovered)"
-          height="130"
+          height="110"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="90"
+          x="-45"
+          y="0"
+        />
+        
+      </g>
+      
+      <g
+        class="focus"
+        pointer-events="all"
+      >
+        <rect
+          fill="var(--color-bg-focused)"
+          height="120"
+          stroke="var(--color-fg-focused)"
+          stroke-dasharray="var(--stroke-dasharray-focused)"
+          stroke-width="var(--stroke-width-focused)"
+          transform="rotate(180 0 55)"
+          width="100"
+          x="-50"
+          y="-5"
         />
         
       </g>
@@ -453,23 +790,24 @@ exports[`TileNavigator can navigate 1`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-focused)"
-          height="130"
+          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="100"
+          x="-50"
+          y="-5"
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -534,11 +872,13 @@ exports[`TileNavigator can navigate 2`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -59.99811056948708 104.88097487502289 A 105 105 0 0 0 49.880974875022886 -4.998110569487079 Z"
           fill="var(--color-bg-focused)"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -547,7 +887,6 @@ exports[`TileNavigator can navigate 2`] = `
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -642,11 +981,13 @@ exports[`TileNavigator can navigate 3`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -65 110 L 0 110 A 55 55 0 0 0 55 55 L 55 -10 Z"
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -60 105 L 0 105 A 50 50 0 0 0 50 55 L 50 -5 Z"
           fill="var(--color-bg-focused)"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -655,7 +996,6 @@ exports[`TileNavigator can navigate 3`] = `
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -757,23 +1097,24 @@ exports[`TileNavigator can navigate 4`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-focused)"
-          height="130"
+          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="100"
+          x="-50"
+          y="-5"
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -883,11 +1224,13 @@ exports[`TileNavigator can navigate 6`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -65 110 L 0 110 A 55 55 0 0 0 55 55 L 55 -10 Z"
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -60 105 L 0 105 A 50 50 0 0 0 50 55 L 50 -5 Z"
           fill="var(--color-bg-focused)"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -896,7 +1239,6 @@ exports[`TileNavigator can navigate 6`] = `
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -961,11 +1303,13 @@ exports[`TileNavigator can navigate 7`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -59.99811056948708 104.88097487502289 A 105 105 0 0 0 49.880974875022886 -4.998110569487079 Z"
           fill="var(--color-bg-focused)"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -974,7 +1318,6 @@ exports[`TileNavigator can navigate 7`] = `
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -1076,23 +1419,24 @@ exports[`TileNavigator can navigate 8`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-focused)"
-          height="130"
+          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="100"
+          x="-50"
+          y="-5"
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -1187,11 +1531,13 @@ exports[`TileNavigator can navigate 9`] = `
       </g>
       
       
+      
       <g
         class="focus"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -65 110 L 0 110 A 55 55 0 0 0 55 55 L 55 -10 Z"
+          d="M -50 -5 A 10 10 0 0 1 -60 5 L -60 105 L 0 105 A 50 50 0 0 0 50 55 L 50 -5 Z"
           fill="var(--color-bg-focused)"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -1200,7 +1546,6 @@ exports[`TileNavigator can navigate 9`] = `
         />
         
       </g>
-      
     </g>
     
   </div>
@@ -1352,12 +1697,12 @@ exports[`TileNavigator renders with the given element in slots 1`] = `
       </g>
       
       
-      
       <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -1365,6 +1710,7 @@ exports[`TileNavigator renders with the given element in slots 1`] = `
         />
         
       </g>
+      
     </g>
     
     
@@ -1430,12 +1776,12 @@ exports[`TileNavigator renders with the given parameters 1`] = `
       </g>
       
       
-      
       <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -1443,6 +1789,7 @@ exports[`TileNavigator renders with the given parameters 1`] = `
         />
         
       </g>
+      
     </g>
     
   </div>
@@ -1544,22 +1891,23 @@ exports[`TileNavigator updates when the parameter elements is modified 1`] = `
       </g>
       
       
-      
       <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <rect
           fill="var(--color-bg-hovered)"
-          height="130"
+          height="110"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="110"
-          x="-55"
-          y="-10"
+          width="90"
+          x="-45"
+          y="0"
         />
         
       </g>
+      
     </g>
     
   </div>
@@ -1624,12 +1972,12 @@ exports[`TileNavigator updates when the parameter hoveredIndex is modified 1`] =
       </g>
       
       
-      
       <g
         class="hover svelte-1xzc8e9"
+        pointer-events="all"
       >
         <path
-          d="M -55 -10 A 10 10 0 0 1 -65 0 L -64.98623158597574 109.54576750706191 A 110 110 0 0 0 54.54576750706191 -9.986231585975744 Z"
+          d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
           fill="var(--color-bg-hovered)"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
@@ -1637,6 +1985,7 @@ exports[`TileNavigator updates when the parameter hoveredIndex is modified 1`] =
         />
         
       </g>
+      
     </g>
     
   </div>

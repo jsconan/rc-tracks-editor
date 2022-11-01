@@ -11,6 +11,7 @@
 
     export let elements;
     export let hoveredIndex = -1;
+    export let selectedIndex = -1;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
 
@@ -25,9 +26,19 @@
         }
     };
 
-    const getCoord = tile => {
+    const getTile = tile => {
+        if (!tile) {
+            return null;
+        }
         const { type, direction, ratio, angle, x, y } = tile;
         return { type, direction, ratio, angle, x, y };
+    };
+
+    const getTileParameters = (tile, color = {}, d = 0) => {
+        if (!tile) {
+            return {};
+        }
+        return { ...getTile(tile), d, ...color };
     };
 
     const navigator = new MenuNavigator();
@@ -78,22 +89,23 @@
 
     navigator
         .on('focus', focused => {
-            focusedOverlay = getCoord(focused);
+            focusedOverlay = getTileParameters(focused, focusedColor(), specs.barrierWidth);
         })
         .on('blur', () => {
             focusedOverlay = null;
         })
         .on('enter', hovered => {
-            hoveredOverlay = getCoord(hovered);
+            hoveredOverlay = getTileParameters(hovered, hoveredColor());
         })
         .on('leave', () => {
             hoveredOverlay = null;
         })
         .on('focus blur enter leave', () => {
-            selected = focusedOverlay || hoveredOverlay;
+            selected = getTile(focusedOverlay || hoveredOverlay);
         });
 
     $: navigator.elements = elements;
+    $: navigator.defaultFocusedIndex = selectedIndex;
     $: if (hoveredIndex > -1) {
         navigator.hoveredIndex = hoveredIndex;
     }
@@ -104,14 +116,14 @@
     {#if selected}
         <Tile {...selected} />
     {/if}
-    {#if focusedOverlay}
-        <g on:mouseenter={hoverFocused} class="focus">
-            <TileElement {...focusedOverlay} d={specs.padding} {...focusedColor()} />
+    {#if hoveredOverlay}
+        <g on:mouseleave={leave} class="hover" pointer-events="all">
+            <TileElement {...hoveredOverlay} />
         </g>
     {/if}
-    {#if hoveredOverlay}
-        <g on:mouseleave={leave} class="hover">
-            <TileElement {...hoveredOverlay} d={specs.padding} {...hoveredColor()} />
+    {#if focusedOverlay}
+        <g on:mouseenter={hoverFocused} on:mouseleave={leave} class="focus" pointer-events="all">
+            <TileElement {...focusedOverlay} />
         </g>
     {/if}
 </g>

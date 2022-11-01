@@ -536,23 +536,24 @@ exports[`TileSelector can focus and blur 1`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="130"
+            height="120"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="110"
-            x="-120"
-            y="35"
+            width="100"
+            x="-115"
+            y="40"
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -1516,12 +1517,12 @@ exports[`TileSelector can hover and leave 1`] = `
         </g>
         
         
-        
         <g
           class="hover svelte-1xzc8e9"
+          pointer-events="all"
         >
           <path
-            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
+            d="M -105 275 A 10 10 0 0 1 -115 285 L -115 375 A 100 100 0 0 0 -15 275 Z"
             fill="var(--color-bg-hovered)"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
@@ -1529,6 +1530,7 @@ exports[`TileSelector can hover and leave 1`] = `
           />
           
         </g>
+        
       </g>
     </svg>
     
@@ -2530,34 +2532,36 @@ exports[`TileSelector can hover the focused element 1`] = `
         
         
         <g
-          class="focus"
+          class="hover svelte-1xzc8e9"
+          pointer-events="all"
         >
           <rect
-            fill="var(--color-bg-focused)"
-            height="130"
-            stroke="var(--color-fg-focused)"
-            stroke-dasharray="var(--stroke-dasharray-focused)"
-            stroke-width="var(--stroke-width-focused)"
+            fill="var(--color-bg-hovered)"
+            height="110"
+            stroke="var(--color-fg-hovered)"
+            stroke-width="var(--stroke-width-hovered)"
             transform="rotate(270 -65 45)"
-            width="110"
-            x="-120"
-            y="35"
+            width="90"
+            x="-110"
+            y="45"
           />
           
         </g>
         
         <g
-          class="hover svelte-1xzc8e9"
+          class="focus"
+          pointer-events="all"
         >
           <rect
-            fill="var(--color-bg-hovered)"
-            height="130"
-            stroke="var(--color-fg-hovered)"
-            stroke-width="var(--stroke-width-hovered)"
+            fill="var(--color-bg-focused)"
+            height="120"
+            stroke="var(--color-fg-focused)"
+            stroke-dasharray="var(--stroke-dasharray-focused)"
+            stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="110"
-            x="-120"
-            y="35"
+            width="100"
+            x="-115"
+            y="40"
           />
           
         </g>
@@ -3104,23 +3108,24 @@ exports[`TileSelector can navigate 1`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <rect
             fill="var(--color-bg-focused)"
-            height="130"
+            height="120"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="110"
-            x="-120"
-            y="35"
+            width="100"
+            x="-115"
+            y="40"
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -3657,11 +3662,13 @@ exports[`TileSelector can navigate 2`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -115 145 A 10 10 0 0 1 -125 155 L -125 265 L -60 265 A 55 55 0 0 0 -5 210 L -5 145 Z"
+            d="M -110 150 A 10 10 0 0 1 -120 160 L -120 260 L -60 260 A 50 50 0 0 0 -10 210 L -10 150 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -3670,7 +3677,6 @@ exports[`TileSelector can navigate 2`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -4177,11 +4183,13 @@ exports[`TileSelector can navigate 3`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
+            d="M -110 270 A 10 10 0 0 1 -120 280 L -119.99811056948708 379.8809748750229 A 105 105 0 0 0 -10.119025124977114 270.0018894305129 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -4190,7 +4198,6 @@ exports[`TileSelector can navigate 3`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -4707,11 +4714,13 @@ exports[`TileSelector can navigate 4`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -128.5969988331779 397.57364554966193 A 110 110 0 0 1 -167.7435433586541 492.0817642631089 L -89.80858602064745 570.0313237006101 A 220 220 0 0 0 -18.369999939228194 397.5633203060898 Z"
+            d="M -123.25144487067406 402.5614522860572 A 115 115 0 0 1 -160.43675393601603 492.3347297526409 L -89.6911326174129 563.0819413099009 A 215 215 0 0 0 -23.2009032548564 402.5603278175192 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -4720,7 +4729,6 @@ exports[`TileSelector can navigate 4`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -5694,11 +5702,13 @@ exports[`TileSelector can navigate 6`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -140.2612775337152 629.3707134827248 A 330 330 0 0 1 -169.19574795372387 774.8341193089815 L -67.53426634985038 816.9444084505093 A 440 440 0 0 0 -30.22340544855757 629.3700439562257 Z"
+            d="M -135.14708671636765 634.3693687338179 A 335 335 0 0 1 -162.5579491835212 772.1730801281691 L -70.16210033328161 810.4447755921933 A 435 435 0 0 0 -35.13850929202056 634.3692931943965 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -5707,7 +5717,6 @@ exports[`TileSelector can navigate 6`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -6224,11 +6233,13 @@ exports[`TileSelector can navigate 7`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -136.40247100218158 513.5082970396039 A 220 220 0 0 1 -170.84471705470793 642.0485092344209 L -75.5172948909879 697.0880307752554 A 330 330 0 0 0 -26.326740960699 513.5063842549604 Z"
+            d="M -131.23079067254955 518.5052653816247 A 225 225 0 0 1 -163.86742633798394 640.3068478731404 L -77.25019056749414 690.3155796864777 A 325 325 0 0 0 -31.213698183050496 518.5050511054765 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -6237,7 +6248,6 @@ exports[`TileSelector can navigate 7`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -6754,11 +6764,13 @@ exports[`TileSelector can navigate 8`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -128.5969988331779 397.57364554966193 A 110 110 0 0 1 -167.7435433586541 492.0817642631089 L -89.80858602064745 570.0313237006101 A 220 220 0 0 0 -18.369999939228194 397.5633203060898 Z"
+            d="M -123.25144487067406 402.5614522860572 A 115 115 0 0 1 -160.43675393601603 492.3347297526409 L -89.6911326174129 563.0819413099009 A 215 215 0 0 0 -23.2009032548564 402.5603278175192 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -6767,7 +6779,6 @@ exports[`TileSelector can navigate 8`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
@@ -7274,11 +7285,13 @@ exports[`TileSelector can navigate 9`] = `
         </g>
         
         
+        
         <g
           class="focus"
+          pointer-events="all"
         >
           <path
-            d="M -115 265 A 10 10 0 0 1 -125 275 L -124.98623158597574 384.5457675070619 A 110 110 0 0 0 -5.45423249293809 265.01376841402424 Z"
+            d="M -110 270 A 10 10 0 0 1 -120 280 L -119.99811056948708 379.8809748750229 A 105 105 0 0 0 -10.119025124977114 270.0018894305129 Z"
             fill="var(--color-bg-focused)"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
@@ -7287,7 +7300,6 @@ exports[`TileSelector can navigate 9`] = `
           />
           
         </g>
-        
       </g>
     </svg>
     
