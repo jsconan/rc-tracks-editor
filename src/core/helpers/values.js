@@ -28,10 +28,41 @@ const EPSILON = 0.0000000000001;
  * @param {number} number - The number to adjust.
  * @returns {number} - The adjusted number.
  */
-export default number => {
+export const adjust = number => {
     const rounded = Math.round(number);
     if (Math.abs(rounded - number) <= EPSILON) {
         return rounded;
     }
     return number;
+};
+
+/**
+ * Adjusts a value so that it will be comprised between the given boundaries.
+ * @param {number} value - The value to adjust.
+ * @param {number} min - The minimal possible value.
+ * @param {number} max - The maximal possible value.
+ * @returns {number} - The adjusted value.
+ */
+export const between = (value, min, max) => {
+    return Math.min(Math.max(min, value), max);
+};
+
+/**
+ * Increases a value by an amount, keeping it below a limit (say `[0, value, limit - 1]`).
+ * If the increased value is above the limit, it will loop to the beginning of the range:
+ * - 0 + 1 limit 3 = 1
+ * - 1 + 1 limit 3 = 2
+ * - 2 + 1 limit 3 = 0
+ * If the limit is missing (limit <= 0), the value will increase without limit.
+ * @param {number} value - The value to increase.
+ * @param {number} amount - The increase amount to add to the value.
+ * @param {number} limit - The limit below what keep the value.
+ * @returns {number} - The increased value.
+ */
+export const increase = (value, amount = 1, limit = 0) => {
+    if (limit > 0) {
+        return (value + limit + amount) % limit;
+    }
+
+    return value + amount;
 };

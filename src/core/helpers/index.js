@@ -16,7 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as adjust } from './adjust.js';
 export { default as alternate } from './alternate.js';
 export { default as assign } from './assign.js';
 export { default as defined } from './defined.js';
@@ -35,4 +34,5 @@ export * from './attributes.js';
 export * from './compare.js';
 export * from './svg.js';
 export * from './transform.js';
+export * from './values.js';
 /* c8 ignore end */

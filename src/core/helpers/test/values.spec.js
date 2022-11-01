@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import adjust from '../adjust.js';
+import { adjust, between, increase } from '../values.js';
 
 describe('adjust', () => {
     it('is a function', () => {
@@ -32,5 +32,42 @@ describe('adjust', () => {
         [-44.99999999999994, -45]
     ])('adjusts the value %s', (value, expected) => {
         expect(adjust(value)).toBe(expected);
+    });
+});
+
+describe('between', () => {
+    it('is a function', () => {
+        expect(between).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [0, 0, 0, 0],
+        [1, 0, 0, 0],
+        [-1, 0, 0, 0],
+        [1, -1, 1, 1],
+        [2, -1, 1, 1],
+        [-2, -1, 1, -1]
+    ])('adjusts the value %s to be between %s and %s', (value, min, max, expected) => {
+        expect(between(value, min, max)).toBe(expected);
+    });
+});
+
+describe('increase', () => {
+    it('is a function', () => {
+        expect(increase).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [0, 0, 0, 0],
+        [1, 10, 0, 11],
+        [1, -10, 0, -9],
+        [0, 1, 3, 1],
+        [1, 1, 3, 2],
+        [2, 1, 3, 0],
+        [0, -1, 3, 2],
+        [2, -1, 3, 1],
+        [1, -1, 3, 0]
+    ])('increase the value %s by %s having a limit of %s', (value, amount, limit, expected) => {
+        expect(increase(value, amount, limit)).toBe(expected);
     });
 });
