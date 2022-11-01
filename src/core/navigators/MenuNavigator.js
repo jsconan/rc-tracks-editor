@@ -110,8 +110,8 @@ export class MenuNavigator {
      * @fires setelements
      */
     setElements(elements) {
-        this.#focus.setElements(elements);
-        this.#hover.setElements(elements);
+        this.#focus.elements = elements;
+        this.#hover.elements = elements;
 
         return this;
     }
@@ -125,7 +125,7 @@ export class MenuNavigator {
      * @fires focus
      */
     setFocused(index) {
-        this.#focus.select(index);
+        this.#focus.selectedIndex = index;
 
         return this;
     }
@@ -139,7 +139,7 @@ export class MenuNavigator {
      * @fires enter
      */
     setHovered(index) {
-        this.#hover.select(index);
+        this.#hover.selectedIndex = index;
 
         return this;
     }
@@ -151,7 +151,7 @@ export class MenuNavigator {
      * @fires enter
      */
     hoverFocused() {
-        this.#hover.select(this.#focus.selectedIndex);
+        this.#hover.selectedIndex = this.#focus.selectedIndex;
     }
 
     /**
@@ -161,7 +161,7 @@ export class MenuNavigator {
      * @fires focus
      */
     focusHovered() {
-        this.#focus.select(this.#hover.selectedIndex);
+        this.#focus.selectedIndex = this.#hover.selectedIndex;
     }
 
     /**
@@ -171,7 +171,7 @@ export class MenuNavigator {
      * @fires focus
      */
     focusNext() {
-        this.#focus.selectNext();
+        this.#focus.next();
 
         return this;
     }
@@ -183,7 +183,7 @@ export class MenuNavigator {
      * @fires focus
      */
     focusPrevious() {
-        this.#focus.selectPrevious();
+        this.#focus.previous();
 
         return this;
     }

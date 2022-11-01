@@ -55,14 +55,6 @@ export class ListNavigator {
     }
 
     /**
-     * Gets the list of elements.
-     * @type {Array}
-     */
-    get elements() {
-        return [...this.#elements];
-    }
-
-    /**
      * Gets the number of elements in the list.
      * @type {number}
      */
@@ -71,23 +63,52 @@ export class ListNavigator {
     }
 
     /**
-     * Gets the selected element.
+     * Gets the list of elements.
+     * @type {Array}
+     */
+    get elements() {
+        return [...this.#elements];
+    }
+
+    /**
+     * Sets the list of elements.
+     * @param {*} elements - The list of elements.
+     * @fires setelements
+     */
+    set elements(elements) {
+        const index = this.#selectedIndex;
+        this.selectedIndex = -1;
+
+        this.#elements = Array.from(elements);
+
+        this.emit('setelements');
+
+        this.selectedIndex = index;
+    }
+
+    /**
+     * Gets the element that will be selected by default.
      * @type {*}
      */
-    get selected() {
-        if (this.#selectedIndex > -1) {
-            return this.#elements[this.#selectedIndex];
+    get defaultSelected() {
+        if (this.#defaultSelectedIndex > -1) {
+            return this.#elements[this.#defaultSelectedIndex];
         }
 
         return null;
     }
 
     /**
-     * Gets the index of the selected element. -1 means no element is selected.
-     * @type {number}
+     * Sets the index of the element that will be selected by default. `null` means no element.
+     * @param {*} element - The element that will be selected by default.
      */
-    get selectedIndex() {
-        return this.#selectedIndex;
+    set defaultSelected(element) {
+        if (null === element) {
+            this.#defaultSelectedIndex = -1;
+            return;
+        }
+
+        this.#defaultSelectedIndex = this.#elements.indexOf(element);
     }
 
     /**
@@ -107,37 +128,49 @@ export class ListNavigator {
     }
 
     /**
-     * Sets the list of elements.
-     * @param {*} elements - The list of elements.
-     * @returns {ListNavigator} - Chains the instance.
-     * @fires setelements
+     * Gets the selected element.
+     * @type {*}
      */
-    setElements(elements) {
-        const index = this.#selectedIndex;
-        this.select(-1);
+    get selected() {
+        if (this.#selectedIndex > -1) {
+            return this.#elements[this.#selectedIndex];
+        }
 
-        this.#elements = Array.from(elements);
-
-        this.emit('setelements');
-
-        this.select(index);
-
-        return this;
+        return null;
     }
 
     /**
-     * Selects an element.
-     * An index < 0 means not selection.
-     * @param {number} index - The index of the selected element in the list.
-     * @returns {ListNavigator} - Chains the instance.
-     * @fires enter
-     * @fires leave
+     * Sets the selected element.
+     * @param {*} element - The element to select. `null` means no element is selected.
      */
-    select(index) {
+    set selected(element) {
+        if (null === element) {
+            this.selectedIndex = -1;
+            return;
+        }
+
+        this.selectedIndex = this.#elements.indexOf(element);
+    }
+
+    /**
+     * Gets the index of the selected element. -1 means no element is selected.
+     * @type {number}
+     */
+    get selectedIndex() {
+        return this.#selectedIndex;
+    }
+
+    /**
+     * Sets the index of the selected element. -1 means no element is selected.
+     * @param {number} index - The index of the selected element in the list.
+     * @fires leave
+     * @fires enter
+     */
+    set selectedIndex(index) {
         const selectedIndex = between(index, -1, this.#elements.length - 1);
 
         if (this.#selectedIndex === selectedIndex) {
-            return this;
+            return;
         }
 
         if (this.#selectedIndex > -1) {
@@ -149,6 +182,17 @@ export class ListNavigator {
         if (this.#selectedIndex > -1) {
             this.emit('enter', this.selected, this.#selectedIndex);
         }
+    }
+
+    /**
+     * Selects the default element if none is selected.
+     * @returns {ListNavigator} - Chains the instance.
+     * @fires enter
+     */
+    select() {
+        if (this.#selectedIndex < 0 && this.#defaultSelectedIndex > -1) {
+            this.selectedIndex = this.#defaultSelectedIndex;
+        }
 
         return this;
     }
@@ -157,27 +201,29 @@ export class ListNavigator {
      * Selects the next element in the list.
      * If the end is reached, restart from the beginning.
      * @returns {ListNavigator} - Chains the instance.
-     * @fires enter
      * @fires leave
+     * @fires enter
      */
-    selectNext() {
+    next() {
         let next = this.#defaultSelectedIndex;
 
         if (this.#selectedIndex > -1 || this.#defaultSelectedIndex < 0) {
             next = increase(this.#selectedIndex, 1, this.#elements.length);
         }
 
-        return this.select(next);
+        this.selectedIndex = next;
+
+        return this;
     }
 
     /**
      * Selects the previous element in the list.
      * If the beginning is reached, restart from the end.
      * @returns {ListNavigator} - Chains the instance.
-     * @fires enter
      * @fires leave
+     * @fires enter
      */
-    selectPrevious() {
+    previous() {
         let previous = this.#defaultSelectedIndex;
 
         if (this.#selectedIndex > -1 || this.#defaultSelectedIndex < 0) {
@@ -185,7 +231,9 @@ export class ListNavigator {
             previous = increase(current, -1, this.#elements.length);
         }
 
-        return this.select(previous);
+        this.selectedIndex = previous;
+
+        return this;
     }
 }
 
