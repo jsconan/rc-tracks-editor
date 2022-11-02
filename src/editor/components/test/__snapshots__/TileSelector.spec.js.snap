@@ -8789,10 +8789,10 @@ exports[`TileSelector fires select 2`] = `
 {
   "angle": -90,
   "direction": "right",
-  "id": "curved-tile-1",
-  "model": CurvedTileModel {
+  "id": "straight-tile-1",
+  "model": StraightTileModel {
     "direction": "right",
-    "id": "curved-tile-1",
+    "id": "straight-tile-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -8804,24 +8804,24 @@ exports[`TileSelector fires select 2`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 100,
+    "height": 90,
     "input": {
       "angle": 270,
       "x": 0,
       "y": 0,
     },
     "output": {
-      "angle": 0,
-      "x": 55,
-      "y": 55,
+      "angle": 270,
+      "x": 110,
+      "y": 6.735557395310443e-15,
     },
-    "width": 100,
+    "width": 110,
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
-  "type": "curved-tile",
-  "x": -60,
-  "y": 275,
+  "type": "straight-tile",
+  "x": -65,
+  "y": 45,
 }
 `;
 
@@ -8829,10 +8829,10 @@ exports[`TileSelector fires select 3`] = `
 {
   "angle": -90,
   "direction": "right",
-  "id": "curved-tile-1",
-  "model": CurvedTileModel {
+  "id": "straight-tile-1",
+  "model": StraightTileModel {
     "direction": "right",
-    "id": "curved-tile-1",
+    "id": "straight-tile-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -8844,24 +8844,24 @@ exports[`TileSelector fires select 3`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 100,
+    "height": 90,
     "input": {
       "angle": 270,
       "x": 0,
       "y": 0,
     },
     "output": {
-      "angle": 0,
-      "x": 55,
-      "y": 55,
+      "angle": 270,
+      "x": 110,
+      "y": 6.735557395310443e-15,
     },
-    "width": 100,
+    "width": 110,
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
-  "type": "curved-tile",
-  "x": -60,
-  "y": 275,
+  "type": "straight-tile",
+  "x": -65,
+  "y": 45,
 }
 `;
 
@@ -8869,10 +8869,10 @@ exports[`TileSelector fires select 4`] = `
 {
   "angle": -90,
   "direction": "right",
-  "id": "curved-tile-1",
-  "model": CurvedTileModel {
+  "id": "straight-tile-1",
+  "model": StraightTileModel {
     "direction": "right",
-    "id": "curved-tile-1",
+    "id": "straight-tile-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -8884,24 +8884,24 @@ exports[`TileSelector fires select 4`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 100,
+    "height": 90,
     "input": {
       "angle": 270,
       "x": 0,
       "y": 0,
     },
     "output": {
-      "angle": 0,
-      "x": 55,
-      "y": 55,
+      "angle": 270,
+      "x": 110,
+      "y": 6.735557395310443e-15,
     },
-    "width": 100,
+    "width": 110,
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
-  "type": "curved-tile",
-  "x": -60,
-  "y": 275,
+  "type": "straight-tile",
+  "x": -65,
+  "y": 45,
 }
 `;
 

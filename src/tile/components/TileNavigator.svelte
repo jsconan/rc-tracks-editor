@@ -13,6 +13,7 @@
     export let elements;
     export let hoveredIndex = -1;
     export let selectedIndex = -1;
+    export let keepSelection = false;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
@@ -26,10 +27,15 @@
 
     const dispatch = createEventDispatcher();
     const select = (element, index) => {
-        if (element) {
-            selectedIndex = index;
-            dispatch('select', element);
+        if (!element) {
+            return;
         }
+
+        if (keepSelection) {
+            selectedIndex = index;
+        }
+
+        dispatch('select', element);
     };
 
     const getTile = tile => {

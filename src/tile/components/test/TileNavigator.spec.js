@@ -139,6 +139,68 @@ describe('TileNavigator', () => {
         expect(onEvent).toHaveBeenCalledTimes(4);
     });
 
+    it('fires select, not keeping selection', async () => {
+        const onEvent = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        let container;
+        const component = await new Promise(resolve => {
+            const props = {
+                elements,
+                hoveredIndex: 1,
+                keepSelection: false
+            };
+            const rendered = render(Context, {
+                props: {
+                    component: TileNavigator,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    resolve,
+                    props
+                }
+            });
+            container = rendered.container;
+        });
+
+        component.$on('select', onEvent);
+        await fireEvent.click(container.querySelector('.hover'));
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
+        await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Enter' });
+        expect(onEvent).toHaveBeenCalledTimes(2);
+    });
+
+    it('fires select, keeping selection', async () => {
+        const onEvent = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        let container;
+        const component = await new Promise(resolve => {
+            const props = {
+                elements,
+                hoveredIndex: 1,
+                keepSelection: true
+            };
+            const rendered = render(Context, {
+                props: {
+                    component: TileNavigator,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    resolve,
+                    props
+                }
+            });
+            container = rendered.container;
+        });
+
+        component.$on('select', onEvent);
+        await fireEvent.click(container.querySelector('.hover'));
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
+        await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
+        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Enter' });
+        expect(onEvent).toHaveBeenCalledTimes(2);
+    });
+
     it('can navigate', async () => {
         const props = { elements };
         const { container } = render(Context, {

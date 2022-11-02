@@ -42,7 +42,7 @@
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
 >
-    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} {...rect} on:select>
+    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} keepSelection={true} {...rect} on:select>
         {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
             <use
                 data-id={id}
