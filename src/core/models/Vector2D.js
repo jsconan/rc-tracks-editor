@@ -670,7 +670,5 @@ Object.defineProperty(Vector2D, 'ORIGIN', {
 });
 
 /**
- * @typedef {object} coord - Represents coordinates.
- * @property {number} x - The left coordinate.
- * @property {number} y - The top coordinate.
+ * @typedef {import('../helpers/coord.js').coord} coord - Represents coordinates.
  */
