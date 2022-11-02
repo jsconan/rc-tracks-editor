@@ -22,6 +22,7 @@ exports[`TrackEditor add tile to the track 1`] = `
           >
             
             <g
+              class="navigator svelte-rodoie"
               role="menu"
               tabindex="0"
             >
@@ -123,6 +124,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 </text>
               </g>
               
+              
               <g
                 class="tile curved-tile-enlarged"
                 transform="rotate(270 -60 45)"
@@ -205,7 +207,7 @@ exports[`TrackEditor add tile to the track 1`] = `
               
               
               <g
-                class="hover svelte-1xzc8e9"
+                class="hover svelte-rodoie"
                 pointer-events="all"
               >
                 <path
@@ -573,6 +575,7 @@ exports[`TrackEditor add tile to the track 1`] = `
               </defs>
               
               <g
+                class="navigator svelte-rodoie"
                 role="menu"
                 tabindex="0"
               >
@@ -615,6 +618,7 @@ exports[`TrackEditor add tile to the track 1`] = `
                 
                 
                 
+                
               </g>
                
               
@@ -649,6 +653,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
           >
             
             <g
+              class="navigator svelte-rodoie"
               role="menu"
               tabindex="0"
             >
@@ -853,6 +858,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   2
                 </text>
               </g>
+              
               
               
               
@@ -1211,6 +1217,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
               </defs>
               
               <g
+                class="navigator svelte-rodoie"
                 role="menu"
                 tabindex="0"
               >
@@ -1241,6 +1248,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   x="-165"
                   y="55.00000000000001"
                 />
+                
                 
                 <g
                   class="tile curved-tile"
@@ -1294,7 +1302,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 
                 
                 <g
-                  class="hover svelte-1xzc8e9"
+                  class="hover svelte-rodoie"
                   pointer-events="all"
                 >
                   <path
@@ -1348,6 +1356,7 @@ exports[`TrackEditor renders with default values 1`] = `
           >
             
             <g
+              class="navigator svelte-rodoie"
               role="menu"
               tabindex="0"
             >
@@ -1787,6 +1796,7 @@ exports[`TrackEditor renders with default values 1`] = `
               
               
               
+              
             </g>
           </svg>
         </svg>
@@ -1832,9 +1842,11 @@ exports[`TrackEditor renders with default values 1`] = `
               </defs>
               
               <g
+                class="navigator svelte-rodoie"
                 role="menu"
                 tabindex="0"
               >
+                
                 
                 
                 
@@ -1871,6 +1883,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
           >
             
             <g
+              class="navigator svelte-rodoie"
               role="menu"
               tabindex="0"
             >
@@ -2075,6 +2088,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   2
                 </text>
               </g>
+              
               
               
               
@@ -2433,6 +2447,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
               </defs>
               
               <g
+                class="navigator svelte-rodoie"
                 role="menu"
                 tabindex="0"
               >
@@ -2463,6 +2478,7 @@ exports[`TrackEditor renders with the given parameters 1`] = `
                   x="165"
                   y="54.99999999999998"
                 />
+                
                 
                 
                 
@@ -2499,6 +2515,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
           >
             
             <g
+              class="navigator svelte-rodoie"
               role="menu"
               tabindex="0"
             >
@@ -2599,6 +2616,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   2
                 </text>
               </g>
+              
               
               
               
@@ -2957,6 +2975,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
               </defs>
               
               <g
+                class="navigator svelte-rodoie"
                 role="menu"
                 tabindex="0"
               >
@@ -2996,6 +3015,7 @@ exports[`TrackEditor updates when the model is modified 1`] = `
                   x="220"
                   y="109.99999999999997"
                 />
+                
                 
                 
                 

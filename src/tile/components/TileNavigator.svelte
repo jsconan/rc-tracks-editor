@@ -3,7 +3,8 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { createEventDispatcher, getContext } from 'svelte';
-    import { extendTileWithStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
+    import { attributeList } from '../../core/helpers';
+    import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
     import { MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
     import { TileSpecifications } from '../config';
@@ -12,11 +13,16 @@
     export let elements;
     export let hoveredIndex = -1;
     export let selectedIndex = -1;
+    export let x = void 0;
+    export let y = void 0;
+    export let width = void 0;
+    export let height = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
 
     let focusedOverlay = null;
     let hoveredOverlay = null;
+    let containerFocused = null;
 
     const dispatch = createEventDispatcher();
     const select = element => {
@@ -33,7 +39,21 @@
     const navigator = new MenuNavigator();
     const hoverFocused = () => navigator.hoverFocused();
     const leave = () => (navigator.hovered = null);
-    const blur = () => (navigator.focused = null);
+    const blur = () => {
+        navigator.focused = null;
+        containerFocused = null;
+    };
+    const focus = () => {
+        const focusedStyle = getTileStyle(TILE_STYLE_FOCUSED);
+        containerFocused = {
+            x,
+            y,
+            width,
+            height,
+            ...attributeList(focusedStyle.fill, 'fill'),
+            ...attributeList(focusedStyle.stroke, 'stroke')
+        };
+    };
 
     const click = () => {
         if (navigator.focused) {
@@ -42,12 +62,7 @@
         select(navigator.hovered);
     };
 
-    const keyPress = event => {
-        if (event.defaultPrevented) {
-            return;
-        }
-        event.preventDefault();
-
+    const keyDown = event => {
         switch (event.key) {
             case 'Right':
             case 'Down':
@@ -62,7 +77,11 @@
             case 'ArrowUp':
                 navigator.focusPrevious();
                 break;
+        }
+    };
 
+    const keyUp = event => {
+        switch (event.key) {
             case ' ':
             case 'Spacebar':
             case 'Enter':
@@ -72,6 +91,7 @@
             case 'Esc':
             case 'Escape':
                 blur();
+                focus();
                 return;
         }
     };
@@ -80,6 +100,7 @@
         .on('focus', focused => {
             focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
             focusedOverlay.d = specs.barrierWidth;
+            containerFocused = null;
         })
         .on('blur', () => {
             focusedOverlay = null;
@@ -99,8 +120,20 @@
     $: selected = focusedOverlay || hoveredOverlay;
 </script>
 
-<g on:click={click} on:keyup={keyPress} on:blur={blur} role="menu" tabindex="0">
+<g
+    on:click={click}
+    on:keydown={keyDown}
+    on:keyup={keyUp}
+    on:blur={blur}
+    on:focus={focus}
+    class="navigator"
+    role="menu"
+    tabindex="0"
+>
     <slot />
+    {#if containerFocused}
+        <rect {...containerFocused} />
+    {/if}
     {#if selected}
         <Tile {...getTile(selected)} />
     {/if}
@@ -117,6 +150,9 @@
 </g>
 
 <style>
+    .navigator:focus-visible {
+        outline: none;
+    }
     .hover {
         cursor: pointer;
     }

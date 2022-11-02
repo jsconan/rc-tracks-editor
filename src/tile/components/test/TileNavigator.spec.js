@@ -132,7 +132,7 @@ describe('TileNavigator', () => {
 
         component.$on('select', onEvent);
         await fireEvent.click(container.querySelector('.hover'));
-        await fireEvent.keyUp(container.querySelector('.hover'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: ' ' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Spacebar' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Enter' });
@@ -150,38 +150,76 @@ describe('TileNavigator', () => {
             }
         });
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Right' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Right' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Down' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Down' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Left' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Left' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Up' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Up' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
         expect(container).toMatchSnapshot();
     });
 
-    it('can focus and blur', async () => {
+    it('can focus the container and blur it', async () => {
+        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
+        const { container } = render(Context, {
+            props: {
+                component: TileNavigator,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.focus(container.querySelector('[role=menu]'));
+        expect(container).toMatchSnapshot();
+
+        await fireEvent.blur(container.querySelector('[role=menu]'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can focus the container and change its size', async () => {
+        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
+        const { container, component } = render(Context, {
+            props: {
+                component: TileNavigator,
+                contextKey: TileSpecifications.CONTEXT_ID,
+                context: specs,
+                props
+            }
+        });
+
+        await fireEvent.focus(container.querySelector('[role=menu]'));
+        expect(container).toMatchSnapshot();
+
+        component.$set({ props: Object.assign({}, props, { x: -30, y: -10, width: 300, height: 200 }) });
+        await tick();
+        await fireEvent.focus(container.querySelector('[role=menu]'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can focus an element and blur it', async () => {
         const props = { elements };
         const { container } = render(Context, {
             props: {
@@ -192,14 +230,14 @@ describe('TileNavigator', () => {
             }
         });
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
         expect(container).toMatchSnapshot();
     });
 
-    it('can hover and leave', async () => {
+    it('can hover an element and leave it', async () => {
         const props = { elements };
         const { container, component } = render(Context, {
             props: {
@@ -229,7 +267,7 @@ describe('TileNavigator', () => {
             }
         });
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();
     });
@@ -245,13 +283,13 @@ describe('TileNavigator', () => {
             }
         });
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         await fireEvent.mouseLeave(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();
     });
 
-    it('can hover then focus', async () => {
+    it('can hover an element then focus it', async () => {
         const props = { elements };
         const { container, component } = render(Context, {
             props: {
@@ -264,7 +302,7 @@ describe('TileNavigator', () => {
 
         component.$set({ props: Object.assign({ hoveredIndex: 0 }, props) });
         await tick();
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();
     });
@@ -280,7 +318,7 @@ describe('TileNavigator', () => {
             }
         });
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         expect(container).toMatchSnapshot();
     });
 });

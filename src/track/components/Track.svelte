@@ -5,7 +5,7 @@
     import { Sketch } from '../elements';
     import { Tile, TileNavigator } from '../../tile/components';
     import { TrackModel } from '../models';
-    import { uid } from '../../core/helpers';
+    import { getRect, uid } from '../../core/helpers';
 
     export let track;
     export let x = 0;
@@ -28,6 +28,8 @@
     const leave = () => {
         hoveredIndex = -1;
     };
+
+    $: rect = getRect($tilesStore);
 </script>
 
 <Sketch
@@ -40,7 +42,7 @@
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
 >
-    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} on:select>
+    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} {...rect} on:select>
         {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
             <use
                 data-id={id}
