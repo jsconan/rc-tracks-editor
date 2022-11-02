@@ -7003,10 +7003,10 @@ exports[`Track fires select 2`] = `
 {
   "angle": 90,
   "direction": "right",
-  "id": "id-0",
-  "model": StraightTileModel {
+  "id": "id-1",
+  "model": CurvedTileModel {
     "direction": "right",
-    "id": "id-0",
+    "id": "id-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -7018,24 +7018,24 @@ exports[`Track fires select 2`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 90,
+    "height": 100,
     "input": {
-      "angle": 90,
-      "x": 0,
-      "y": 0,
-    },
-    "output": {
       "angle": 90,
       "x": -110,
       "y": 6.735557395310443e-15,
     },
-    "width": 110,
-    "x": -110,
-    "y": -45,
+    "output": {
+      "angle": 180,
+      "x": -165,
+      "y": -54.99999999999999,
+    },
+    "width": 100,
+    "x": -210,
+    "y": -54.99999999999999,
   },
-  "type": "straight-tile",
-  "x": 0,
-  "y": 0,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
 }
 `;
 
@@ -7043,10 +7043,10 @@ exports[`Track fires select 3`] = `
 {
   "angle": 90,
   "direction": "right",
-  "id": "id-0",
-  "model": StraightTileModel {
+  "id": "id-1",
+  "model": CurvedTileModel {
     "direction": "right",
-    "id": "id-0",
+    "id": "id-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -7058,24 +7058,24 @@ exports[`Track fires select 3`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 90,
+    "height": 100,
     "input": {
-      "angle": 90,
-      "x": 0,
-      "y": 0,
-    },
-    "output": {
       "angle": 90,
       "x": -110,
       "y": 6.735557395310443e-15,
     },
-    "width": 110,
-    "x": -110,
-    "y": -45,
+    "output": {
+      "angle": 180,
+      "x": -165,
+      "y": -54.99999999999999,
+    },
+    "width": 100,
+    "x": -210,
+    "y": -54.99999999999999,
   },
-  "type": "straight-tile",
-  "x": 0,
-  "y": 0,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
 }
 `;
 
@@ -7083,10 +7083,10 @@ exports[`Track fires select 4`] = `
 {
   "angle": 90,
   "direction": "right",
-  "id": "id-0",
-  "model": StraightTileModel {
+  "id": "id-1",
+  "model": CurvedTileModel {
     "direction": "right",
-    "id": "id-0",
+    "id": "id-1",
     "ratio": 1,
     "specs": TileSpecifications {
       "barrierChunks": 4,
@@ -7098,24 +7098,24 @@ exports[`Track fires select 4`] = `
   },
   "ratio": 1,
   "rect": {
-    "height": 90,
+    "height": 100,
     "input": {
-      "angle": 90,
-      "x": 0,
-      "y": 0,
-    },
-    "output": {
       "angle": 90,
       "x": -110,
       "y": 6.735557395310443e-15,
     },
-    "width": 110,
-    "x": -110,
-    "y": -45,
+    "output": {
+      "angle": 180,
+      "x": -165,
+      "y": -54.99999999999999,
+    },
+    "width": 100,
+    "x": -210,
+    "y": -54.99999999999999,
   },
-  "type": "straight-tile",
-  "x": 0,
-  "y": 0,
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
 }
 `;
 

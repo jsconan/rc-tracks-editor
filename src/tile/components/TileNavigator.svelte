@@ -25,8 +25,9 @@
     let containerFocused = null;
 
     const dispatch = createEventDispatcher();
-    const select = element => {
+    const select = (element, index) => {
         if (element) {
+            selectedIndex = index;
             dispatch('select', element);
         }
     };
@@ -59,15 +60,20 @@
         if (navigator.focused) {
             navigator.focusHovered();
         }
-        select(navigator.hovered);
+        select(navigator.hovered, navigator.hoveredIndex);
     };
 
     const keyDown = event => {
+        if (event.defaultPrevented) {
+            return;
+        }
+
         switch (event.key) {
             case 'Right':
             case 'Down':
             case 'ArrowRight':
             case 'ArrowDown':
+                event.preventDefault();
                 navigator.focusNext();
                 break;
 
@@ -75,21 +81,28 @@
             case 'Up':
             case 'ArrowLeft':
             case 'ArrowUp':
+                event.preventDefault();
                 navigator.focusPrevious();
                 break;
         }
     };
 
     const keyUp = event => {
+        if (event.defaultPrevented) {
+            return;
+        }
+
         switch (event.key) {
             case ' ':
             case 'Spacebar':
             case 'Enter':
-                select(navigator.focused);
+                event.preventDefault();
+                select(navigator.focused, navigator.focusedIndex);
                 break;
 
             case 'Esc':
             case 'Escape':
+                event.preventDefault();
                 blur();
                 focus();
                 return;
