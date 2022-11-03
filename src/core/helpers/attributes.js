@@ -17,10 +17,10 @@
  */
 
 /**
- * Makes sure to get a list of attributes, even is only one is given.
+ * Makes sure to get a key/value map of attributes, even is only one is given.
  * @param {*} attributes - The value of the attribute or the list of attributes.
  * @param {string} name - The name of the main attribute.
- * @returns {object} - The list of attributes.
+ * @returns {object} - The key/value map of attributes.
  */
 export const attributeList = (attributes, name) => {
     if ('object' !== typeof attributes) {
@@ -28,4 +28,17 @@ export const attributeList = (attributes, name) => {
     }
 
     return attributes;
+};
+
+/**
+ * Makes sure a list of attributes is a key/value map.
+ * @param {object} attributes - The attributes as a key/value map.
+ * @returns {object} - The list of attributes as a key/value map.
+ */
+export const flattenAttributeList = attributes => {
+    let list = {};
+    Object.keys(attributes).forEach(name => {
+        list = { ...list, ...attributeList(attributes[name], name) };
+    });
+    return list;
 };

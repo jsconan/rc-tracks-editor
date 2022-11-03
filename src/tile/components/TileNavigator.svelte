@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { createEventDispatcher, getContext } from 'svelte';
-    import { attributeList } from '../../core/helpers';
+    import { flattenAttributeList } from '../../core/helpers';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
     import { MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
@@ -59,14 +59,7 @@
     };
     const focus = () => {
         const focusedStyle = getTileStyle(TILE_STYLE_FOCUSED);
-        containerFocused = {
-            x,
-            y,
-            width,
-            height,
-            ...attributeList(focusedStyle.fill, 'fill'),
-            ...attributeList(focusedStyle.stroke, 'stroke')
-        };
+        containerFocused = { x, y, width, height, ...flattenAttributeList(focusedStyle) };
     };
 
     const click = () => {
