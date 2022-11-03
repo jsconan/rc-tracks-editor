@@ -12,6 +12,7 @@
     export let y = 0;
     export let width = void 0;
     export let height = void 0;
+    export let selectedIndex = -1;
 
     TrackModel.validateInstance(track);
 
@@ -34,7 +35,7 @@
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
 >
-    <TileNavigator elements={$tilesStore.tiles} keepSelection={true} {...rect} on:select>
+    <TileNavigator elements={$tilesStore.tiles} {...rect} bind:selectedIndex on:select>
         {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
             <use
                 data-id={id}

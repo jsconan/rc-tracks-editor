@@ -2,6 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { createEventDispatcher } from 'svelte';
     import { buildList } from '../../track/helpers';
     import { getRect } from '../../core/helpers';
     import { Sketch } from '../../track/elements';
@@ -23,6 +24,13 @@
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
 
+    const dispatch = createEventDispatcher();
+    let selectedIndex = -1;
+    const select = event => {
+        dispatch('select', event.detail);
+        selectedIndex = -1;
+    };
+
     $: models = buildList($modelsStore, {
         tileAngle: -90,
         centered: true,
@@ -35,7 +43,7 @@
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
-    <TileNavigator elements={models.tiles} {...rect} on:select>
+    <TileNavigator elements={models.tiles} {...rect} bind:selectedIndex on:select={select}>
         {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
             <g data-id={id} role="menuitem" tabindex="-1">
                 <Tile {type} {direction} {ratio} {angle} {x} {y} />

@@ -4,10 +4,9 @@
 
     export let component;
     export let elements;
-    export let hoveredIndex;
 </script>
 
-<svelte:component this={component} {elements} {hoveredIndex}>
+<svelte:component this={component} {elements}>
     <rect x={10} y={10} width={100} height={50} />
     <circle id="circle" cx={10} cy={10} r={10} />
 </svelte:component>

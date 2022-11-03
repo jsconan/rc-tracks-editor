@@ -12,7 +12,6 @@
 
     export let elements;
     export let selectedIndex = -1;
-    export let keepSelection = false;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
@@ -30,9 +29,7 @@
             return;
         }
 
-        if (keepSelection) {
-            selectedIndex = index;
-        }
+        selectedIndex = index;
 
         dispatch('select', element);
     };
