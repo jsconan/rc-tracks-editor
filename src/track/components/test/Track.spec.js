@@ -150,7 +150,7 @@ describe('Track', () => {
         });
 
         component.$on('select', onEvent);
-        await fireEvent.mouseEnter(container.querySelector(`[data-id=id-1]`));
+        await fireEvent.mouseOver(container.querySelector(`[data-id=id-1]`));
         await fireEvent.click(container.querySelector('.hover'));
         await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: ' ' });
@@ -248,7 +248,7 @@ describe('Track', () => {
             }
         });
 
-        await fireEvent.mouseEnter(container.querySelector(`[data-id=id-1]`));
+        await fireEvent.mouseOver(container.querySelector(`[data-id=id-1]`));
         expect(container).toMatchSnapshot();
 
         await fireEvent.mouseLeave(container.querySelector('.hover'));

@@ -23,16 +23,6 @@
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
 
-    let hoveredIndex = -1;
-    const enter = event => {
-        const target = event.target.closest('[data-id]');
-        const targetId = target && target.dataset.id;
-        hoveredIndex = $modelsStore.findIndex(tile => tile.id === targetId);
-    };
-    const leave = () => {
-        hoveredIndex = -1;
-    };
-
     $: models = buildList($modelsStore, {
         tileAngle: -90,
         centered: true,
@@ -45,9 +35,9 @@
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
-    <TileNavigator elements={models.tiles} {hoveredIndex} {...rect} on:select>
+    <TileNavigator elements={models.tiles} {...rect} on:select>
         {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
-            <g data-id={id} role="menuitem" tabindex="-1" on:mouseenter={enter} on:mouseleave={leave}>
+            <g data-id={id} role="menuitem" tabindex="-1">
                 <Tile {type} {direction} {ratio} {angle} {x} {y} />
                 {#if $counterStore[i].count !== Number.POSITIVE_INFINITY}
                     <text

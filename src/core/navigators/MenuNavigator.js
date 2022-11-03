@@ -186,6 +186,24 @@ export class MenuNavigator {
     }
 
     /**
+     * Finds the index of an element in the list.
+     * @param {*} element - A reference to the searched element.
+     * @returns {number} - The index of the element, or `-1` if not found.
+     */
+    indexOf(element) {
+        return this.#focus.indexOf(element);
+    }
+
+    /**
+     * Finds the index of an element in the list.
+     * @param {searchPredicate} predicate - A predicate function that must return `true` for the matching element.
+     * @returns {number} - The index of the element, or `-1` if not found.
+     * @throws {TypeError} - If the predicate is not a function.
+     */
+    findIndex(predicate) {
+        return this.#focus.findIndex(predicate);
+    }
+    /**
      * Hovers the focused element.
      * @returns {MenuNavigator} - Chains the instance.
      * @fires leave
@@ -276,4 +294,12 @@ export class MenuNavigator {
  * @event enter
  * @param {*} element - The element which received the pointer.
  * @param {number} index - The index of the element in the menu.
+ */
+
+/**
+ * Callback called from searching an element in the list.
+ * @param {*} element - The element being traversed.
+ * @param {number} index - The index of the element being traversed.
+ * @returns {boolean} - Returns `true` if the traversed element matches.
+ * @callback searchPredicate
  */

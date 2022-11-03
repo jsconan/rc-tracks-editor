@@ -30,10 +30,22 @@ const barrierChunks = 4;
 const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 const elements = [
-    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0 },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0 },
-    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0 }
+    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-0' },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-1' },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-2' }
 ];
+
+function mockTarget(id) {
+    return {
+        target: {
+            closest() {
+                return {
+                    dataset: { id }
+                };
+            }
+        }
+    };
+}
 
 describe('TileNavigator', () => {
     it('renders with default values', async () => {
@@ -51,10 +63,7 @@ describe('TileNavigator', () => {
     });
 
     it('renders with the given parameters', async () => {
-        const props = {
-            elements,
-            hoveredIndex: 1
-        };
+        const props = { elements };
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
@@ -67,34 +76,30 @@ describe('TileNavigator', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it.each([
-        ['elements', { elements: elements.slice(0, 2) }],
-        ['hoveredIndex', { hoveredIndex: 1 }]
-    ])('updates when the parameter %s is modified', async (title, update) => {
-        const props = {
-            elements,
-            hoveredIndex: 0
-        };
-        const { container, component } = render(Context, {
-            props: {
-                component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
-                props
-            }
-        });
+    it.each([['elements', { elements: elements.slice(0, 2) }]])(
+        'updates when the parameter %s is modified',
+        async (title, update) => {
+            const props = { elements };
+            const { container, component } = render(Context, {
+                props: {
+                    component: TileNavigator,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    props
+                }
+            });
 
-        await tick();
-        component.$set({ props: Object.assign({}, props, update) });
-        await tick();
-        expect(container).toMatchSnapshot();
-    });
+            await tick();
+            component.$set({ props: Object.assign({}, props, update) });
+            await tick();
+            expect(container).toMatchSnapshot();
+        }
+    );
 
-    it('renders with the given element in slots', () => {
+    it('renders with the given element in slots', async () => {
         const props = {
             component: TileNavigator,
-            elements,
-            hoveredIndex: 1
+            elements
         };
         const { container } = render(Context, {
             props: {
@@ -105,6 +110,7 @@ describe('TileNavigator', () => {
             }
         });
 
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-1'));
         expect(container).toMatchSnapshot();
     });
 
@@ -114,10 +120,7 @@ describe('TileNavigator', () => {
         });
         let container;
         const component = await new Promise(resolve => {
-            const props = {
-                elements,
-                hoveredIndex: 0
-            };
+            const props = { elements };
             const rendered = render(Context, {
                 props: {
                     component: TileNavigator,
@@ -131,6 +134,7 @@ describe('TileNavigator', () => {
         });
 
         component.$on('select', onEvent);
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-0'));
         await fireEvent.click(container.querySelector('.hover'));
         await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: ' ' });
@@ -147,7 +151,6 @@ describe('TileNavigator', () => {
         const component = await new Promise(resolve => {
             const props = {
                 elements,
-                hoveredIndex: 1,
                 keepSelection: false
             };
             const rendered = render(Context, {
@@ -163,6 +166,7 @@ describe('TileNavigator', () => {
         });
 
         component.$on('select', onEvent);
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-1'));
         await fireEvent.click(container.querySelector('.hover'));
         await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
         await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
@@ -178,7 +182,6 @@ describe('TileNavigator', () => {
         const component = await new Promise(resolve => {
             const props = {
                 elements,
-                hoveredIndex: 1,
                 keepSelection: true
             };
             const rendered = render(Context, {
@@ -194,6 +197,7 @@ describe('TileNavigator', () => {
         });
 
         component.$on('select', onEvent);
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-1'));
         await fireEvent.click(container.querySelector('.hover'));
         await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
         await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
@@ -301,7 +305,7 @@ describe('TileNavigator', () => {
 
     it('can hover an element and leave it', async () => {
         const props = { elements };
-        const { container, component } = render(Context, {
+        const { container } = render(Context, {
             props: {
                 component: TileNavigator,
                 contextKey: TileSpecifications.CONTEXT_ID,
@@ -310,8 +314,7 @@ describe('TileNavigator', () => {
             }
         });
 
-        component.$set({ props: Object.assign({ hoveredIndex: 1 }, props) });
-        await tick();
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-1'));
         expect(container).toMatchSnapshot();
 
         await fireEvent.mouseLeave(container.querySelector('.hover'));
@@ -334,7 +337,7 @@ describe('TileNavigator', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('can hover the focused element then leave', async () => {
+    it('can hover the focused element then leave it', async () => {
         const props = { elements };
         const { container } = render(Context, {
             props: {
@@ -353,7 +356,7 @@ describe('TileNavigator', () => {
 
     it('can hover an element then focus it', async () => {
         const props = { elements };
-        const { container, component } = render(Context, {
+        const { container } = render(Context, {
             props: {
                 component: TileNavigator,
                 contextKey: TileSpecifications.CONTEXT_ID,
@@ -362,8 +365,7 @@ describe('TileNavigator', () => {
             }
         });
 
-        component.$set({ props: Object.assign({ hoveredIndex: 0 }, props) });
-        await tick();
+        await fireEvent.mouseOver(container.querySelector('[role=menu]'), mockTarget('id-0'));
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();

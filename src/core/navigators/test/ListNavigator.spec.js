@@ -169,6 +169,21 @@ describe('ListNavigator', () => {
         expect(navigator.selected).toBeNull();
     });
 
+    it('searches for the index of an element', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.indexOf({})).toBe(-1);
+        expect(navigator.indexOf(source[1])).toBe(1);
+    });
+
+    it('searches for the index of an element using a predicate', () => {
+        const navigator = new ListNavigator(source);
+
+        expect(navigator.findIndex(() => false)).toBe(-1);
+        expect(navigator.findIndex(element => element.name === 'Alice')).toBe(1);
+        expect(() => navigator.findIndex()).toThrow();
+    });
+
     it('selects an element by its value', () => {
         const navigator = new ListNavigator(source);
 

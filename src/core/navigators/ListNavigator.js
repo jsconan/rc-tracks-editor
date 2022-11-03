@@ -185,6 +185,25 @@ export class ListNavigator {
     }
 
     /**
+     * Finds the index of an element in the list.
+     * @param {*} element - A reference to the searched element.
+     * @returns {number} - The index of the element, or `-1` if not found.
+     */
+    indexOf(element) {
+        return this.#elements.indexOf(element);
+    }
+
+    /**
+     * Finds the index of an element in the list.
+     * @param {searchPredicate} predicate - A predicate function that must return `true` for the matching element.
+     * @returns {number} - The index of the element, or `-1` if not found.
+     * @throws {TypeError} - If the predicate is not a function.
+     */
+    findIndex(predicate) {
+        return this.#elements.findIndex(predicate);
+    }
+
+    /**
      * Selects the default element if none is selected.
      * @returns {ListNavigator} - Chains the instance.
      * @fires enter
@@ -254,4 +273,12 @@ export class ListNavigator {
  * @event enter
  * @param {*} element - The selected element.
  * @param {number} index - The index of the element in the list.
+ */
+
+/**
+ * Callback called from searching an element in the list.
+ * @param {*} element - The element being traversed.
+ * @param {number} index - The index of the element being traversed.
+ * @returns {boolean} - Returns `true` if the traversed element matches.
+ * @callback searchPredicate
  */

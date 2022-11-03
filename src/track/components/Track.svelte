@@ -21,14 +21,6 @@
     const trackId = uid();
     const getId = id => `${trackId}-${id}`;
 
-    let hoveredIndex = -1;
-    const enter = event => {
-        hoveredIndex = track.getIndex(event.target.dataset.id);
-    };
-    const leave = () => {
-        hoveredIndex = -1;
-    };
-
     $: rect = getRect($tilesStore);
 </script>
 
@@ -42,7 +34,7 @@
     viewWidth={$tilesStore.width}
     viewHeight={$tilesStore.height}
 >
-    <TileNavigator elements={$tilesStore.tiles} {hoveredIndex} keepSelection={true} {...rect} on:select>
+    <TileNavigator elements={$tilesStore.tiles} keepSelection={true} {...rect} on:select>
         {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
             <use
                 data-id={id}
@@ -52,8 +44,6 @@
                 transform={model.getRotateTransform(x, y, angle)}
                 role="menuitem"
                 tabindex="-1"
-                on:mouseenter={enter}
-                on:mouseleave={leave}
             />
         {/each}
     </TileNavigator>

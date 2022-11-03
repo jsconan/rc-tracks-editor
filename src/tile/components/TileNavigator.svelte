@@ -11,7 +11,6 @@
     import Tile from './Tile.svelte';
 
     export let elements;
-    export let hoveredIndex = -1;
     export let selectedIndex = -1;
     export let keepSelection = false;
     export let x = void 0;
@@ -45,7 +44,15 @@
 
     const navigator = new MenuNavigator();
     const hoverFocused = () => navigator.hoverFocused();
-    const leave = () => (navigator.hovered = null);
+    const enter = event => {
+        const target = event.target.closest('[data-id]');
+        const targetId = target && target.dataset.id;
+
+        if (targetId) {
+            navigator.hoveredIndex = navigator.findIndex(element => element.id === targetId);
+        }
+    };
+    const leave = () => (navigator.hoveredIndex = -1);
     const blur = () => {
         navigator.focused = null;
         containerFocused = null;
@@ -133,14 +140,12 @@
 
     $: navigator.elements = elements;
     $: navigator.defaultFocusedIndex = selectedIndex;
-    $: if (hoveredIndex > -1) {
-        navigator.hoveredIndex = hoveredIndex;
-    }
     $: selected = focusedOverlay || hoveredOverlay;
 </script>
 
 <g
     on:click={click}
+    on:mouseover={enter}
     on:keydown={keyDown}
     on:keyup={keyUp}
     on:blur={blur}
