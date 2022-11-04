@@ -24,14 +24,15 @@
     let containerFocused = null;
 
     const dispatch = createEventDispatcher();
+    const dispatchEvent = (name, element, index) => dispatch(name, { index, ...element });
+
     const select = (element, index) => {
         if (!element) {
             return;
         }
 
         selectedIndex = index;
-
-        dispatch('select', element);
+        dispatchEvent('select', element, index);
     };
 
     const getTile = tile => {
@@ -60,6 +61,7 @@
     };
 
     const click = () => {
+        containerFocused = null;
         if (navigator.focused) {
             navigator.focusHovered();
         }
@@ -113,19 +115,23 @@
     };
 
     navigator
-        .on('focus', focused => {
+        .on('focus', (focused, index) => {
             focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
             focusedOverlay.d = specs.barrierWidth;
             containerFocused = null;
+            dispatchEvent('focus', focused, index);
         })
-        .on('blur', () => {
+        .on('blur', (focused, index) => {
             focusedOverlay = null;
+            dispatchEvent('blur', focused, index);
         })
-        .on('enter', hovered => {
+        .on('enter', (hovered, index) => {
             hoveredOverlay = extendTileWithStyle(TILE_STYLE_HOVERED, getTile(hovered));
+            dispatchEvent('enter', hovered, index);
         })
-        .on('leave', () => {
+        .on('leave', (hovered, index) => {
             hoveredOverlay = null;
+            dispatchEvent('leave', hovered, index);
         });
 
     $: navigator.elements = elements;

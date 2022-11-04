@@ -1,6 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Track can focus a tile and blur it 1`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "id": "id-0",
+  "index": 0,
+  "model": StraightTileModel {
+    "direction": "right",
+    "id": "id-0",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "ratio": 1,
+  "rect": {
+    "height": 90,
+    "input": {
+      "angle": 90,
+      "x": 0,
+      "y": 0,
+    },
+    "output": {
+      "angle": 90,
+      "x": -110,
+      "y": 6.735557395310443e-15,
+    },
+    "width": 110,
+    "x": -110,
+    "y": -45,
+  },
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Track can focus a tile and blur it 2`] = `
 <body>
   <div />
   <div>
@@ -455,7 +496,48 @@ exports[`Track can focus a tile and blur it 1`] = `
 </body>
 `;
 
-exports[`Track can focus a tile and blur it 2`] = `
+exports[`Track can focus a tile and blur it 3`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "id": "id-0",
+  "index": 0,
+  "model": StraightTileModel {
+    "direction": "right",
+    "id": "id-0",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "ratio": 1,
+  "rect": {
+    "height": 90,
+    "input": {
+      "angle": 90,
+      "x": 0,
+      "y": 0,
+    },
+    "output": {
+      "angle": 90,
+      "x": -110,
+      "y": 6.735557395310443e-15,
+    },
+    "width": 110,
+    "x": -110,
+    "y": -45,
+  },
+  "type": "straight-tile",
+  "x": 0,
+  "y": 0,
+}
+`;
+
+exports[`Track can focus a tile and blur it 4`] = `
 <body>
   <div />
   <div>
@@ -1520,6 +1602,47 @@ exports[`Track can focus the container and blur it 2`] = `
 `;
 
 exports[`Track can hover a tile and leave it 1`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "id": "id-1",
+  "index": 1,
+  "model": CurvedTileModel {
+    "direction": "right",
+    "id": "id-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "ratio": 1,
+  "rect": {
+    "height": 100,
+    "input": {
+      "angle": 90,
+      "x": -110,
+      "y": 6.735557395310443e-15,
+    },
+    "output": {
+      "angle": 180,
+      "x": -165,
+      "y": -54.99999999999999,
+    },
+    "width": 100,
+    "x": -210,
+    "y": -54.99999999999999,
+  },
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`Track can hover a tile and leave it 2`] = `
 <body>
   <div />
   <div>
@@ -1933,7 +2056,48 @@ exports[`Track can hover a tile and leave it 1`] = `
 </body>
 `;
 
-exports[`Track can hover a tile and leave it 2`] = `
+exports[`Track can hover a tile and leave it 3`] = `
+{
+  "angle": 90,
+  "direction": "right",
+  "id": "id-1",
+  "index": 1,
+  "model": CurvedTileModel {
+    "direction": "right",
+    "id": "id-1",
+    "ratio": 1,
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "ratio": 1,
+  "rect": {
+    "height": 100,
+    "input": {
+      "angle": 90,
+      "x": -110,
+      "y": 6.735557395310443e-15,
+    },
+    "output": {
+      "angle": 180,
+      "x": -165,
+      "y": -54.99999999999999,
+    },
+    "width": 100,
+    "x": -210,
+    "y": -54.99999999999999,
+  },
+  "type": "curved-tile",
+  "x": -110,
+  "y": 6.735557395310443e-15,
+}
+`;
+
+exports[`Track can hover a tile and leave it 4`] = `
 <body>
   <div />
   <div>
@@ -6964,6 +7128,7 @@ exports[`Track fires select 1`] = `
   "angle": 90,
   "direction": "right",
   "id": "id-1",
+  "index": 1,
   "model": CurvedTileModel {
     "direction": "right",
     "id": "id-1",
@@ -7004,6 +7169,7 @@ exports[`Track fires select 2`] = `
   "angle": 90,
   "direction": "right",
   "id": "id-1",
+  "index": 1,
   "model": CurvedTileModel {
     "direction": "right",
     "id": "id-1",
@@ -7044,6 +7210,7 @@ exports[`Track fires select 3`] = `
   "angle": 90,
   "direction": "right",
   "id": "id-1",
+  "index": 1,
   "model": CurvedTileModel {
     "direction": "right",
     "id": "id-1",
@@ -7084,6 +7251,7 @@ exports[`Track fires select 4`] = `
   "angle": 90,
   "direction": "right",
   "id": "id-1",
+  "index": 1,
   "model": CurvedTileModel {
     "direction": "right",
     "id": "id-1",

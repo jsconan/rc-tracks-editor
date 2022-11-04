@@ -220,39 +220,73 @@ describe('Track', () => {
     });
 
     it('can focus a tile and blur it', async () => {
-        const props = { track };
-        const { container } = render(Context, {
-            props: {
-                component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
-                props
-            }
+        const onFocus = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
         });
+        const onBlur = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        let container;
+        const component = await new Promise(resolve => {
+            const props = { track };
+            const rendered = render(Context, {
+                props: {
+                    component: Track,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    resolve,
+                    props
+                }
+            });
+            container = rendered.container;
+        });
+
+        component.$on('focus', onFocus);
+        component.$on('blur', onBlur);
 
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
         expect(container).toMatchSnapshot();
+
+        expect(onFocus).toHaveBeenCalledTimes(1);
+        expect(onBlur).toHaveBeenCalledTimes(1);
     });
 
     it('can hover a tile and leave it', async () => {
-        const props = { track };
-        const { container } = render(Context, {
-            props: {
-                component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
-                props
-            }
+        const onEnter = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
         });
+        const onLeave = jest.fn().mockImplementation(event => {
+            expect(event.detail).toMatchSnapshot();
+        });
+        let container;
+        const component = await new Promise(resolve => {
+            const props = { track };
+            const rendered = render(Context, {
+                props: {
+                    component: Track,
+                    contextKey: TileSpecifications.CONTEXT_ID,
+                    context: specs,
+                    resolve,
+                    props
+                }
+            });
+            container = rendered.container;
+        });
+
+        component.$on('enter', onEnter);
+        component.$on('leave', onLeave);
 
         await fireEvent.mouseOver(container.querySelector(`[data-id=id-1]`));
         expect(container).toMatchSnapshot();
 
         await fireEvent.mouseLeave(container.querySelector('.hover'));
         expect(container).toMatchSnapshot();
+
+        expect(onEnter).toHaveBeenCalledTimes(1);
+        expect(onLeave).toHaveBeenCalledTimes(1);
     });
 
     it('can hover the focused element', async () => {
