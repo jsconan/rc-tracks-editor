@@ -685,6 +685,52 @@ describe('TileList', () => {
             });
         });
 
+        describe('at a given position', () => {
+            it('with the default specifications', () => {
+                const list = new TileList(specs);
+
+                list.append();
+                list.append();
+                const tile = list.insertAt(1);
+
+                expect(tile).toBeInstanceOf(TileModel);
+                expect(list).toMatchSnapshot();
+            });
+
+            it('with a particular type', () => {
+                const list = new TileList(specs);
+
+                list.append();
+                list.append();
+                const tile = list.insertAt(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+
+                expect(tile).toBeInstanceOf(TileModel);
+                expect(list).toMatchSnapshot();
+            });
+
+            it('if the index is valid', () => {
+                const list = new TileList(specs);
+
+                const tile = list.insertAt(-1);
+                expect(tile).toBeNull();
+                expect(list).toMatchSnapshot();
+            });
+
+            it('emits an event when adding a tile', () => {
+                const list = new TileList(specs);
+
+                const callback = jest.fn().mockImplementation((index, tile) => {
+                    expect(index).toBe(0);
+                    expect(tile).toBeInstanceOf(TileModel);
+                });
+
+                list.on('add', callback);
+
+                list.insertAt(0);
+                expect(callback).toHaveBeenCalledTimes(1);
+            });
+        });
+
         describe('before', () => {
             it('an inexistent position', () => {
                 const list = new TileList(specs);

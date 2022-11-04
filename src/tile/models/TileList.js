@@ -256,11 +256,7 @@ export class TileList extends List {
      * @fires add
      */
     prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-        this.insert(0, tile);
-
-        return tile;
+        return this.insertAt(0, type, direction, ratio);
     }
 
     /**
@@ -290,6 +286,30 @@ export class TileList extends List {
     }
 
     /**
+     * Inserts a tile at a particular index.
+     * If the index is below 0, it does nothing.
+     * @param {number} index - The index where to insert the tile.
+     * @param {string} type - The type of tile to add.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
+     * @returns {TileModel} - Returns the added tile.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
+     */
+    insertAt(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        if (index >= 0) {
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
+
+            this.insert(index, tile);
+
+            return tile;
+        }
+
+        return null;
+    }
+
+    /**
      * Insert a tile in the list before a particular position.
      * If the position does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile before which add another tile.
@@ -305,11 +325,7 @@ export class TileList extends List {
         const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-            this.insert(index, tile);
-
-            return tile;
+            return this.insertAt(index, type, direction, ratio);
         }
 
         return null;
@@ -331,11 +347,7 @@ export class TileList extends List {
         const index = this.getIndex(id);
 
         if (index >= 0) {
-            const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-            this.insert(index + 1, tile);
-
-            return tile;
+            return this.insertAt(index + 1, type, direction, ratio);
         }
 
         return null;

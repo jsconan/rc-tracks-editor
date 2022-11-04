@@ -419,6 +419,51 @@ describe('TrackModel', () => {
             });
         });
 
+        describe('at a given position', () => {
+            it('with the default specifications', () => {
+                const track = new TrackModel(specs);
+
+                track.append();
+                track.append();
+                const tile = track.insertAt(1);
+
+                expect(tile).toBeInstanceOf(TileModel);
+                expect(track).toMatchSnapshot();
+            });
+
+            it('with a particular type', () => {
+                const track = new TrackModel(specs);
+
+                track.append();
+                track.append();
+                const tile = track.insertAt(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+
+                expect(tile).toBeInstanceOf(TileModel);
+                expect(track).toMatchSnapshot();
+            });
+
+            it('if the index is valid', () => {
+                const track = new TrackModel(specs);
+
+                const tile = track.insertAt(-1);
+                expect(tile).toBeNull();
+                expect(track).toMatchSnapshot();
+            });
+
+            it('emits an event when adding a tile', () => {
+                const track = new TrackModel(specs);
+
+                const callback = jest.fn().mockImplementation(tile => {
+                    expect(tile).toBeInstanceOf(TileModel);
+                });
+
+                track.on('add', callback);
+
+                track.insertAt(0);
+                expect(callback).toHaveBeenCalledTimes(1);
+            });
+        });
+
         describe('before', () => {
             it('an inexistent position', () => {
                 const track = new TrackModel(specs);
