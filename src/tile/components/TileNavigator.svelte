@@ -131,7 +131,7 @@
                 event.preventDefault();
                 blurElement();
                 focusContainer();
-                return;
+                break;
         }
     };
 
