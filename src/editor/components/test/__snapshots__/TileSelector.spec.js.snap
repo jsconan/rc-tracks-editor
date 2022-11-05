@@ -8750,6 +8750,7 @@ exports[`TileSelector fires select 1`] = `
   "angle": -90,
   "direction": "right",
   "id": "curved-tile-1",
+  "index": 2,
   "model": CurvedTileModel {
     "direction": "right",
     "id": "curved-tile-1",
@@ -8790,6 +8791,7 @@ exports[`TileSelector fires select 2`] = `
   "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
+  "index": 0,
   "model": StraightTileModel {
     "direction": "right",
     "id": "straight-tile-1",
@@ -8830,6 +8832,7 @@ exports[`TileSelector fires select 3`] = `
   "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
+  "index": 0,
   "model": StraightTileModel {
     "direction": "right",
     "id": "straight-tile-1",
@@ -8870,6 +8873,7 @@ exports[`TileSelector fires select 4`] = `
   "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
+  "index": 0,
   "model": StraightTileModel {
     "direction": "right",
     "id": "straight-tile-1",

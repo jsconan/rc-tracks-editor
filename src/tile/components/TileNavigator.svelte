@@ -4,6 +4,7 @@
 
     import { createEventDispatcher, getContext } from 'svelte';
     import { flattenAttributeList } from '../../core/helpers';
+    import { DeferredAction } from '../../core/actions';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
     import { MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
@@ -12,6 +13,7 @@
 
     export let elements;
     export let selectedIndex = -1;
+    export let focusDelay = 100;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
@@ -42,7 +44,7 @@
 
     const navigator = new MenuNavigator();
     const hoverFocused = () => navigator.hoverFocused();
-    const enter = event => {
+    const enterElement = event => {
         const target = event.target.closest('[data-id]');
         const targetId = target && target.dataset.id;
 
@@ -50,18 +52,32 @@
             navigator.hoveredIndex = navigator.findIndex(element => element.id === targetId);
         }
     };
-    const leave = () => (navigator.hoveredIndex = -1);
-    const blur = () => {
+    const leaveElement = () => (navigator.hoveredIndex = -1);
+    const blurElement = () => {
         navigator.focused = null;
-        containerFocused = null;
     };
-    const focus = () => {
+
+    const focusContainer = () => {
         const focusedStyle = getTileStyle(TILE_STYLE_FOCUSED);
         containerFocused = { x, y, width, height, ...flattenAttributeList(focusedStyle) };
     };
+    const focusDeferrer = new DeferredAction(focusDelay);
+    focusDeferrer.register(focusContainer);
+    const blurContainer = () => {
+        focusDeferrer.cancel();
+        containerFocused = null;
+    };
+
+    const focus = () => {
+        focusDeferrer.defer();
+    };
+    const blur = () => {
+        blurElement();
+        blurContainer();
+    };
 
     const click = () => {
-        containerFocused = null;
+        blurContainer();
         if (navigator.focused) {
             navigator.focusHovered();
         }
@@ -108,8 +124,8 @@
             case 'Esc':
             case 'Escape':
                 event.preventDefault();
-                blur();
-                focus();
+                blurElement();
+                focusContainer();
                 return;
         }
     };
@@ -141,7 +157,7 @@
 
 <g
     on:click={click}
-    on:mouseover={enter}
+    on:mouseover={enterElement}
     on:keydown={keyDown}
     on:keyup={keyUp}
     on:blur={blur}
@@ -158,12 +174,12 @@
         <Tile {...getTile(selected)} />
     {/if}
     {#if hoveredOverlay}
-        <g on:mouseleave={leave} class="hover" pointer-events="all">
+        <g on:mouseleave={leaveElement} class="hover" pointer-events="all">
             <TileElement {...hoveredOverlay} />
         </g>
     {/if}
     {#if focusedOverlay}
-        <g on:mouseenter={hoverFocused} on:mouseleave={leave} class="focus" pointer-events="all">
+        <g on:mouseenter={hoverFocused} on:mouseleave={leaveElement} class="focus" pointer-events="all">
             <TileElement {...focusedOverlay} />
         </g>
     {/if}

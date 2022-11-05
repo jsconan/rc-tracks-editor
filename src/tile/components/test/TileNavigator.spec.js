@@ -23,6 +23,7 @@ import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_D
 import TileNavigator from '../TileNavigator.svelte';
 import TileNavigatorWithSlot from './TileNavigatorWithSlot.svelte';
 import { TileSpecifications } from '../../config';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -214,7 +215,7 @@ describe('TileNavigator', () => {
     });
 
     it('can focus the container and blur it', async () => {
-        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
+        const props = { elements, focusDelay: 0, x: -10, y: -20, width: 200, height: 100 };
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
@@ -225,6 +226,7 @@ describe('TileNavigator', () => {
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
+        await wait(1);
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
@@ -232,7 +234,7 @@ describe('TileNavigator', () => {
     });
 
     it('can focus the container and change its size', async () => {
-        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
+        const props = { elements, focusDelay: 0, x: -10, y: -20, width: 200, height: 100 };
         const { container, component } = render(Context, {
             props: {
                 component: TileNavigator,
@@ -243,11 +245,13 @@ describe('TileNavigator', () => {
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
+        await wait(1);
         expect(container).toMatchSnapshot();
 
         component.$set({ props: Object.assign({}, props, { x: -30, y: -10, width: 300, height: 200 }) });
         await tick();
         await fireEvent.focus(container.querySelector('[role=menu]'));
+        await wait(1);
         expect(container).toMatchSnapshot();
     });
 

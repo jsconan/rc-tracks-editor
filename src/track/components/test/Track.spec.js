@@ -29,6 +29,7 @@ import {
     STRAIGHT_TILE_TYPE,
     TILE_DIRECTION_RIGHT
 } from '../../../tile/helpers';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -213,6 +214,7 @@ describe('Track', () => {
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
+        await wait(100);
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));

@@ -23,6 +23,7 @@ import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../
 import { TileSet } from '../../models';
 import { TileSpecifications } from '../../../tile/config';
 import TileSelector from '../TileSelector.svelte';
+import { wait } from '../../../core/helpers';
 
 const laneWidth = 80;
 const barrierWidth = 5;
@@ -193,6 +194,7 @@ describe('TileSelector', () => {
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
+        await wait(100);
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
