@@ -34,8 +34,7 @@ describe('Context', () => {
     it('renders with the given context', () => {
         const props = {
             component: Mock,
-            contextKey: 'foo',
-            context: 'bar'
+            context: { foo: 'bar' }
         };
         const { container } = render(Context, { props });
 
@@ -45,9 +44,7 @@ describe('Context', () => {
     it('renders with the given props', () => {
         const props = {
             component: Mock,
-            props: {
-                param: 'defined'
-            }
+            props: { param: 'defined' }
         };
         const { container } = render(Context, { props });
 
@@ -57,11 +54,8 @@ describe('Context', () => {
     it('renders with the given parameters', () => {
         const props = {
             component: Mock,
-            contextKey: 'foo',
-            context: 'bar',
-            props: {
-                param: 'defined'
-            }
+            context: { foo: 'bar' },
+            props: { param: 'defined' }
         };
         const { container } = render(Context, { props });
 
@@ -71,11 +65,8 @@ describe('Context', () => {
     it('updates with the given parameters', async () => {
         const props = {
             component: Mock,
-            contextKey: 'foo',
-            context: 'bar',
-            props: {
-                param: 'origin'
-            }
+            context: { foo: 'bar' },
+            props: { param: 'origin' }
         };
         const rendered = render(Context, { props });
 

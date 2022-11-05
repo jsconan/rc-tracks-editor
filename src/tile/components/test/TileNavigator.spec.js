@@ -54,8 +54,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -68,8 +67,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -84,8 +82,7 @@ describe('TileNavigator', () => {
             const { container, component } = render(Context, {
                 props: {
                     component: TileNavigator,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
             });
@@ -105,8 +102,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigatorWithSlot,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -125,8 +121,7 @@ describe('TileNavigator', () => {
             const rendered = render(Context, {
                 props: {
                     component: TileNavigator,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     resolve,
                     props
                 }
@@ -154,8 +149,7 @@ describe('TileNavigator', () => {
             const rendered = render(Context, {
                 props: {
                     component: TileNavigator,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     resolve,
                     props
                 }
@@ -177,8 +171,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -219,8 +212,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -238,8 +230,7 @@ describe('TileNavigator', () => {
         const { container, component } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -268,8 +259,7 @@ describe('TileNavigator', () => {
             const rendered = render(Context, {
                 props: {
                     component: TileNavigator,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     resolve,
                     props
                 }
@@ -303,8 +293,7 @@ describe('TileNavigator', () => {
             const rendered = render(Context, {
                 props: {
                     component: TileNavigator,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     resolve,
                     props
                 }
@@ -330,8 +319,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -346,8 +334,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -363,8 +350,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -380,8 +366,7 @@ describe('TileNavigator', () => {
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });

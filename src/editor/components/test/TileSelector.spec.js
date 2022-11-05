@@ -43,8 +43,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -63,8 +62,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -83,8 +81,7 @@ describe('TileSelector', () => {
         const rendered = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -121,8 +118,7 @@ describe('TileSelector', () => {
             const rendered = render(Context, {
                 props: {
                     component: TileSelector,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     resolve,
                     props
                 }
@@ -145,8 +141,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -187,8 +182,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -206,8 +200,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -224,8 +217,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -242,8 +234,7 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });

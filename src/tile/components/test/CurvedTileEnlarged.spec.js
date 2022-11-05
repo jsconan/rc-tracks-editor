@@ -33,8 +33,7 @@ describe('CurvedTileEnlarged', () => {
         const { container } = render(Context, {
             props: {
                 component: CurvedTileEnlarged,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs
+                context: { [TileSpecifications.CONTEXT_ID]: specs }
             }
         });
 
@@ -64,8 +63,7 @@ describe('CurvedTileEnlarged', () => {
             const { container } = render(Context, {
                 props: {
                     component: CurvedTileEnlarged,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
             });
@@ -92,8 +90,7 @@ describe('CurvedTileEnlarged', () => {
         const rendered = render(Context, {
             props: {
                 component: CurvedTileEnlarged,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });

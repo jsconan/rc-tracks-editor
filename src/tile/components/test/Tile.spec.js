@@ -42,8 +42,7 @@ describe('Tile', () => {
             const { container } = render(Context, {
                 props: {
                     component: Tile,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
             });
@@ -67,8 +66,7 @@ describe('Tile', () => {
             const { container } = render(Context, {
                 props: {
                     component: Tile,
-                    contextKey: TileSpecifications.CONTEXT_ID,
-                    context: specs,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
             });
@@ -97,8 +95,7 @@ describe('Tile', () => {
         const rendered = render(Context, {
             props: {
                 component: Tile,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });

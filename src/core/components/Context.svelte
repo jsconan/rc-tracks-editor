@@ -4,10 +4,9 @@
 
     import { onMount, setContext } from 'svelte';
 
-    export let contextKey = '';
+    export let component;
     export let context = null;
     export let props = {};
-    export let component;
     export let resolve = null;
 
     let instance;
@@ -18,8 +17,10 @@
         }
     });
 
-    if (contextKey) {
-        setContext(contextKey, context);
+    if (context) {
+        Object.keys(context).forEach(key => {
+            setContext(key, context[key]);
+        });
     }
 </script>
 

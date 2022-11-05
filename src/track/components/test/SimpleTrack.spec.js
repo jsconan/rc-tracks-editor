@@ -50,8 +50,7 @@ describe('SimpleTrack', () => {
         const { container } = render(Context, {
             props: {
                 component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -70,8 +69,7 @@ describe('SimpleTrack', () => {
         const { container } = render(Context, {
             props: {
                 component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -90,8 +88,7 @@ describe('SimpleTrack', () => {
         const rendered = render(Context, {
             props: {
                 component: Track,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
@@ -117,8 +114,7 @@ describe('SimpleTrack', () => {
         const { container } = render(Context, {
             props: {
                 component: TrackWithSlot,
-                contextKey: TileSpecifications.CONTEXT_ID,
-                context: specs,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
         });
