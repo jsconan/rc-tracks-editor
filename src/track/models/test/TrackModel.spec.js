@@ -190,7 +190,51 @@ describe('TrackModel', () => {
         });
     });
 
-    describe('can remove tiles from the track', () => {
+    describe('can delete tiles from the track using index', () => {
+        it('from the start', () => {
+            const track = new TrackModel(specs, source);
+
+            expect(track.delete(0)).toBe(1);
+            expect(track).toMatchSnapshot();
+        });
+
+        it('from the middle', () => {
+            const track = new TrackModel(specs, source);
+
+            expect(track.delete(1)).toBe(1);
+            expect(track).toMatchSnapshot();
+        });
+
+        it('from the end', () => {
+            const track = new TrackModel(specs, source);
+
+            expect(track.delete(2)).toBe(1);
+            expect(track).toMatchSnapshot();
+        });
+
+        it('at inexistent position', () => {
+            const track = new TrackModel(specs, source);
+
+            expect(track.delete(10)).toBe(0);
+            expect(track).toMatchSnapshot();
+        });
+
+        it('and emits an event', () => {
+            const track = new TrackModel(specs, source);
+            const tile = source[0];
+
+            const callback = jest.fn().mockImplementation(removed => {
+                expect(removed).toBe(tile);
+            });
+
+            track.on('remove', callback);
+
+            track.delete(0);
+            expect(callback).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    describe('can remove tiles from the track using identifier', () => {
         it('from the start', () => {
             const track = new TrackModel(specs, source);
             const tile = source[0];

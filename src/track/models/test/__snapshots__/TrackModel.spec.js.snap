@@ -1603,6 +1603,323 @@ TrackModel {
 }
 `;
 
+exports[`TrackModel can delete tiles from the track using index at inexistent position 1`] = `
+TrackModel {
+  "builder": TrackBuilder {
+    "builder": [Function],
+    "delegate": [Function],
+    "emit": [Function],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "options": {},
+  },
+  "counter": Map {
+    "straight-tile-1" => 1,
+    "curved-tile-1" => 1,
+    "curved-tile-enlarged-1" => 1,
+  },
+  "counterStore": TileCounterStore {},
+  "delegate": [Function],
+  "emit": [Function],
+  "listens": [Function],
+  "modelsStore": TileModelsStore {},
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+  "tiles": TileList {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "tilesStore": TileListStore {},
+}
+`;
+
+exports[`TrackModel can delete tiles from the track using index from the end 1`] = `
+TrackModel {
+  "builder": TrackBuilder {
+    "builder": [Function],
+    "delegate": [Function],
+    "emit": [Function],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "options": {},
+  },
+  "counter": Map {
+    "straight-tile-1" => 1,
+    "curved-tile-1" => 1,
+  },
+  "counterStore": TileCounterStore {},
+  "delegate": [Function],
+  "emit": [Function],
+  "listens": [Function],
+  "modelsStore": TileModelsStore {},
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+  "tiles": TileList {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "tilesStore": TileListStore {},
+}
+`;
+
+exports[`TrackModel can delete tiles from the track using index from the middle 1`] = `
+TrackModel {
+  "builder": TrackBuilder {
+    "builder": [Function],
+    "delegate": [Function],
+    "emit": [Function],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "options": {},
+  },
+  "counter": Map {
+    "straight-tile-1" => 1,
+    "curved-tile-enlarged-1" => 1,
+  },
+  "counterStore": TileCounterStore {},
+  "delegate": [Function],
+  "emit": [Function],
+  "listens": [Function],
+  "modelsStore": TileModelsStore {},
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+  "tiles": TileList {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": [
+      StraightTileModel {
+        "direction": "right",
+        "id": "id-0",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "tilesStore": TileListStore {},
+}
+`;
+
+exports[`TrackModel can delete tiles from the track using index from the start 1`] = `
+TrackModel {
+  "builder": TrackBuilder {
+    "builder": [Function],
+    "delegate": [Function],
+    "emit": [Function],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "options": {},
+  },
+  "counter": Map {
+    "curved-tile-1" => 1,
+    "curved-tile-enlarged-1" => 1,
+  },
+  "counterStore": TileCounterStore {},
+  "delegate": [Function],
+  "emit": [Function],
+  "listens": [Function],
+  "modelsStore": TileModelsStore {},
+  "off": [Function],
+  "on": [Function],
+  "once": [Function],
+  "specs": TileSpecifications {
+    "barrierChunks": 4,
+    "barrierWidth": 5,
+    "laneWidth": 80,
+    "maxRatio": 4,
+    "unlockRatio": false,
+  },
+  "tiles": TileList {
+    "delegate": [Function],
+    "emit": [Function],
+    "list": [
+      CurvedTileModel {
+        "direction": "right",
+        "id": "id-1",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      CurvedTileEnlargedModel {
+        "direction": "right",
+        "id": "id-2",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 4,
+          "barrierWidth": 5,
+          "laneWidth": 80,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+    ],
+    "listens": [Function],
+    "off": [Function],
+    "on": [Function],
+    "once": [Function],
+    "specs": TileSpecifications {
+      "barrierChunks": 4,
+      "barrierWidth": 5,
+      "laneWidth": 80,
+      "maxRatio": 4,
+      "unlockRatio": false,
+    },
+  },
+  "tilesStore": TileListStore {},
+}
+`;
+
 exports[`TrackModel can export to an object 1`] = `
 [
   {
@@ -3203,7 +3520,7 @@ exports[`TrackModel can produce an iterator 1`] = `
 ]
 `;
 
-exports[`TrackModel can remove tiles from the track at inexistent position 1`] = `
+exports[`TrackModel can remove tiles from the track using identifier at inexistent position 1`] = `
 TrackModel {
   "builder": TrackBuilder {
     "builder": [Function],
@@ -3292,7 +3609,7 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can remove tiles from the track from the end 1`] = `
+exports[`TrackModel can remove tiles from the track using identifier from the end 1`] = `
 TrackModel {
   "builder": TrackBuilder {
     "builder": [Function],
@@ -3368,7 +3685,7 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can remove tiles from the track from the middle 1`] = `
+exports[`TrackModel can remove tiles from the track using identifier from the middle 1`] = `
 TrackModel {
   "builder": TrackBuilder {
     "builder": [Function],
@@ -3444,7 +3761,7 @@ TrackModel {
 }
 `;
 
-exports[`TrackModel can remove tiles from the track from the start 1`] = `
+exports[`TrackModel can remove tiles from the track using identifier from the start 1`] = `
 TrackModel {
   "builder": TrackBuilder {
     "builder": [Function],

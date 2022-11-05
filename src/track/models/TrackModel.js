@@ -177,6 +177,17 @@ export class TrackModel {
     }
 
     /**
+     * Removes a tile from the given index.
+     * @param {number} index - The index from where remove the tile.
+     * @param {number} count - The number of tiles to remove from the index.
+     * @returns {number} - The number of deleted tiles.
+     * @fires remove
+     */
+    delete(index, count = 1) {
+        return this.tiles.delete(index, count);
+    }
+
+    /**
      * Removes a tile from the track.
      * @param {string} id - The unique identifier of the tile to remove.
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
