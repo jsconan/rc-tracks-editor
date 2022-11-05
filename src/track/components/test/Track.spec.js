@@ -19,6 +19,7 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
+import { FOCUS_DELAY_CONTEXT_ID } from '../../../tile/components';
 import Track from '../Track.svelte';
 import TrackWithSlot from './TrackWithSlot.svelte';
 import { TrackModel } from '../../models';
@@ -201,13 +202,16 @@ describe('Track', () => {
         const { container } = render(Context, {
             props: {
                 component: Track,
-                context: { [TileSpecifications.CONTEXT_ID]: specs },
+                context: {
+                    [TileSpecifications.CONTEXT_ID]: specs,
+                    [FOCUS_DELAY_CONTEXT_ID]: 0
+                },
                 props
             }
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
-        await wait(100);
+        await wait(1);
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));

@@ -1,8 +1,13 @@
-<script>
+<script context="module">
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { createEventDispatcher, getContext } from 'svelte';
+    export const FOCUS_DELAY_CONTEXT_ID = 'focusDelay';
+    export const FOCUS_DELAY_DEFAULT = 100;
+</script>
+
+<script>
+    import { createEventDispatcher, getContext, hasContext } from 'svelte';
     import { flattenAttributeList } from '../../core/helpers';
     import { DeferredAction } from '../../core/actions';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
@@ -13,13 +18,13 @@
 
     export let elements;
     export let selectedIndex = -1;
-    export let focusDelay = 100;
     export let x = void 0;
     export let y = void 0;
     export let width = void 0;
     export let height = void 0;
 
     const specs = getContext(TileSpecifications.CONTEXT_ID);
+    const focusDelay = hasContext(FOCUS_DELAY_CONTEXT_ID) ? getContext(FOCUS_DELAY_CONTEXT_ID) : FOCUS_DELAY_DEFAULT;
 
     let focusedOverlay = null;
     let hoveredOverlay = null;

@@ -20,7 +20,7 @@ import { fireEvent, render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT } from '../../helpers';
-import TileNavigator from '../TileNavigator.svelte';
+import TileNavigator, { FOCUS_DELAY_CONTEXT_ID } from '../TileNavigator.svelte';
 import TileNavigatorWithSlot from './TileNavigatorWithSlot.svelte';
 import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
@@ -208,11 +208,14 @@ describe('TileNavigator', () => {
     });
 
     it('can focus the container and blur it', async () => {
-        const props = { elements, focusDelay: 0, x: -10, y: -20, width: 200, height: 100 };
+        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
         const { container } = render(Context, {
             props: {
                 component: TileNavigator,
-                context: { [TileSpecifications.CONTEXT_ID]: specs },
+                context: {
+                    [TileSpecifications.CONTEXT_ID]: specs,
+                    [FOCUS_DELAY_CONTEXT_ID]: 0
+                },
                 props
             }
         });
@@ -226,11 +229,14 @@ describe('TileNavigator', () => {
     });
 
     it('can focus the container and change its size', async () => {
-        const props = { elements, focusDelay: 0, x: -10, y: -20, width: 200, height: 100 };
+        const props = { elements, x: -10, y: -20, width: 200, height: 100 };
         const { container, component } = render(Context, {
             props: {
                 component: TileNavigator,
-                context: { [TileSpecifications.CONTEXT_ID]: specs },
+                context: {
+                    [TileSpecifications.CONTEXT_ID]: specs,
+                    [FOCUS_DELAY_CONTEXT_ID]: 0
+                },
                 props
             }
         });

@@ -19,6 +19,7 @@
 import { fireEvent, render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
+import { FOCUS_DELAY_CONTEXT_ID } from '../../../tile/components';
 import { CurvedTileEnlargedModel, CurvedTileModel, StraightTileModel } from '../../../tile/models';
 import { TileSet } from '../../models';
 import { TileSpecifications } from '../../../tile/config';
@@ -182,13 +183,16 @@ describe('TileSelector', () => {
         const { container } = render(Context, {
             props: {
                 component: TileSelector,
-                context: { [TileSpecifications.CONTEXT_ID]: specs },
+                context: {
+                    [TileSpecifications.CONTEXT_ID]: specs,
+                    [FOCUS_DELAY_CONTEXT_ID]: 0
+                },
                 props
             }
         });
 
         await fireEvent.focus(container.querySelector('[role=menu]'));
-        await wait(100);
+        await wait(1);
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
