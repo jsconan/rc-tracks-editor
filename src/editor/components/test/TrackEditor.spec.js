@@ -97,7 +97,7 @@ describe('TrackEditor', () => {
         ).toThrow('The object must be an instance of TrackEditorModel!');
     });
 
-    it('add tile to the track', async () => {
+    it('add a tile to the track at the end', async () => {
         const editor = new TrackEditorModel(specs);
         editor.limit(tiles);
         editor.load(track);
@@ -109,7 +109,7 @@ describe('TrackEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('flip tile in the track', async () => {
+    it('add a tile to the track at a particular position', async () => {
         const editor = new TrackEditorModel(specs);
         editor.limit(tiles);
         editor.load(track);
@@ -117,6 +117,21 @@ describe('TrackEditor', () => {
         const { container } = render(TrackEditor, { props });
 
         await fireEvent.mouseOver(container.querySelector('.track [data-id=id-15]'));
+        await fireEvent.click(container.querySelector('.hover'));
+
+        await fireEvent.mouseOver(container.querySelector('[data-id=straight-tile-1]'));
+        await fireEvent.click(container.querySelector('.hover'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('flip a tile in the track', async () => {
+        const editor = new TrackEditorModel(specs);
+        editor.limit(tiles);
+        editor.load(track);
+        const props = { editor };
+        const { container } = render(TrackEditor, { props });
+
+        await fireEvent.mouseOver(container.querySelector('.track [data-id=id-20]'));
         await fireEvent.click(container.querySelector('.hover'));
         expect(container).toMatchSnapshot();
     });

@@ -1,6 +1,711 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TrackEditor add tile to the track 1`] = `
+exports[`TrackEditor add a tile to the track at a particular position 1`] = `
+<body>
+  <div />
+  <div>
+    <article
+      class="editor svelte-1fjynid"
+    >
+      <aside
+        class="tiles svelte-1fjynid"
+      >
+        <svg
+          height="100%"
+          width="100%"
+        >
+          
+          <svg
+            viewBox="-70 -10 120 120"
+            x="0"
+            y="0"
+          >
+            
+            <g
+              class="navigator svelte-rodoie"
+              role="menu"
+              tabindex="0"
+            >
+              <g
+                data-id="curved-tile-enlarged-1"
+                role="menuitem"
+                tabindex="-1"
+              >
+                <g
+                  class="tile curved-tile-enlarged"
+                  transform="rotate(270 -60 45)"
+                >
+                  <path
+                    d="M -105 45 A 10 10 0 0 1 -115 55 L -115 145 L -60 145 A 45 45 0 0 0 -15 100 L -15 45 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                  />
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M -105 45 A 10 10 0 0 1 -107.92893218813452 52.071067811865476 L -104.39339828220179 55.60660171779821 A 15 15 0 0 0 -100 45 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M -107.92893218813452 52.071067811865476 A 10 10 0 0 1 -115 55 L -115 60 A 15 15 0 0 0 -104.39339828220179 55.60660171779821 Z"
+                      fill="var(--color-odd)"
+                    />
+                  </g>
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M -20 100 A 40 40 0 0 1 -31.715728752538098 128.2842712474619 L -28.18019484660536 131.81980515339464 A 45 45 0 0 0 -15 100 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M -31.715728752538098 128.2842712474619 A 40 40 0 0 1 -60 140 L -60 145 A 45 45 0 0 0 -28.18019484660536 131.81980515339464 Z"
+                      fill="var(--color-even)"
+                    />
+                  </g>
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="5"
+                      width="27.5"
+                      x="-115"
+                      y="140"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="5"
+                      width="27.5"
+                      x="-87.5"
+                      y="140"
+                    />
+                  </g>
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="-20"
+                      y="45"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="-20"
+                      y="72.5"
+                    />
+                  </g>
+                </g>
+                
+                <text
+                  class="svelte-uqimmx"
+                  dominant-baseline="middle"
+                  fill="var(--color-fg)"
+                  font-size="30px"
+                  text-anchor="middle"
+                  x="-10"
+                  y="50"
+                >
+                  2
+                </text>
+              </g>
+              
+              
+              <g
+                class="tile curved-tile-enlarged"
+                transform="rotate(270 -60 45)"
+              >
+                <path
+                  d="M -105 45 A 10 10 0 0 1 -115 55 L -115 145 L -60 145 A 45 45 0 0 0 -15 100 L -15 45 Z"
+                  fill="var(--color-ground)"
+                  stroke="var(--color-separator)"
+                  stroke-width="var(--stroke-width-tile)"
+                />
+                <g
+                  class="barrier curved-barrier"
+                >
+                  
+                  <path
+                    d="M -105 45 A 10 10 0 0 1 -107.92893218813452 52.071067811865476 L -104.39339828220179 55.60660171779821 A 15 15 0 0 0 -100 45 Z"
+                    fill="var(--color-even)"
+                  />
+                  
+                  <path
+                    d="M -107.92893218813452 52.071067811865476 A 10 10 0 0 1 -115 55 L -115 60 A 15 15 0 0 0 -104.39339828220179 55.60660171779821 Z"
+                    fill="var(--color-odd)"
+                  />
+                </g>
+                <g
+                  class="barrier curved-barrier"
+                >
+                  
+                  <path
+                    d="M -20 100 A 40 40 0 0 1 -31.715728752538098 128.2842712474619 L -28.18019484660536 131.81980515339464 A 45 45 0 0 0 -15 100 Z"
+                    fill="var(--color-odd)"
+                  />
+                  
+                  <path
+                    d="M -31.715728752538098 128.2842712474619 A 40 40 0 0 1 -60 140 L -60 145 A 45 45 0 0 0 -28.18019484660536 131.81980515339464 Z"
+                    fill="var(--color-even)"
+                  />
+                </g>
+                <g
+                  class="barrier straight-barrier"
+                >
+                  
+                  <rect
+                    fill="var(--color-even)"
+                    height="5"
+                    width="27.5"
+                    x="-115"
+                    y="140"
+                  />
+                  
+                  <rect
+                    fill="var(--color-odd)"
+                    height="5"
+                    width="27.5"
+                    x="-87.5"
+                    y="140"
+                  />
+                </g>
+                <g
+                  class="barrier straight-barrier"
+                >
+                  
+                  <rect
+                    fill="var(--color-odd)"
+                    height="27.5"
+                    width="5"
+                    x="-20"
+                    y="45"
+                  />
+                  
+                  <rect
+                    fill="var(--color-even)"
+                    height="27.5"
+                    width="5"
+                    x="-20"
+                    y="72.5"
+                  />
+                </g>
+              </g>
+              
+              
+              <g
+                class="hover svelte-rodoie"
+                pointer-events="all"
+              >
+                <path
+                  d="M -105 45 A 10 10 0 0 1 -115 55 L -115 145 L -60 145 A 45 45 0 0 0 -15 100 L -15 45 Z"
+                  fill="var(--color-bg-hovered)"
+                  stroke="var(--color-fg-hovered)"
+                  stroke-width="var(--stroke-width-hovered)"
+                  transform="rotate(270 -60 45)"
+                />
+                
+              </g>
+              
+            </g>
+          </svg>
+        </svg>
+      </aside>
+       
+      <article
+        class="track svelte-1fjynid"
+      >
+        <aside
+          class="stats svelte-1fjynid"
+        >
+          <svg
+            height="100%"
+            width="100%"
+          >
+            
+            <svg
+              viewBox="-10 -75 230 130"
+              x="0"
+              y="0"
+            >
+              
+              <g
+                class="model svelte-1l7llm0"
+                data-id="straight-tile-1"
+              >
+                <g
+                  class="tile straight-tile"
+                  transform=""
+                >
+                  <rect
+                    fill="var(--color-ground)"
+                    height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                    width="90"
+                    x="0"
+                    y="-65"
+                  />
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="0"
+                      y="-65"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="0"
+                      y="-37.5"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="0"
+                      y="-10"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="0"
+                      y="17.5"
+                    />
+                  </g>
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="85"
+                      y="-65"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="85"
+                      y="-37.5"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="85"
+                      y="-10"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="85"
+                      y="17.5"
+                    />
+                  </g>
+                </g>
+                
+                <text
+                  class="svelte-1l7llm0"
+                  dominant-baseline="middle"
+                  fill="var(--color-fg)"
+                  font-size="30px"
+                  text-anchor="middle"
+                  x="45"
+                  y="-10"
+                >
+                  2
+                </text>
+              </g>
+              <g
+                class="model svelte-1l7llm0"
+                data-id="curved-tile-1"
+              >
+                <g
+                  class="tile curved-tile"
+                  transform=""
+                >
+                  <path
+                    d="M 120 -60 A 10 10 0 0 1 110 -50 L 110 40 A 100 100 0 0 0 210 -60 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                  />
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M 120 -60 A 10 10 0 0 1 117.07106781186548 -52.928932188134524 L 120.60660171779821 -49.39339828220179 A 15 15 0 0 0 125 -60 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M 117.07106781186548 -52.928932188134524 A 10 10 0 0 1 110 -50 L 110 -45 A 15 15 0 0 0 120.60660171779821 -49.39339828220179 Z"
+                      fill="var(--color-odd)"
+                    />
+                  </g>
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M 205 -60 A 95 95 0 0 1 197.76855558857224 -23.645073925316474 L 202.3879532511287 -21.731656763491024 A 100 100 0 0 0 210 -60 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M 197.76855558857224 -23.645073925316474 A 95 95 0 0 1 177.17514421272202 7.175144212722003 L 180.71067811865476 10.71067811865474 A 100 100 0 0 0 202.3879532511287 -21.731656763491024 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M 177.17514421272202 7.175144212722003 A 95 95 0 0 1 146.35492607468353 27.76855558857224 L 148.268343236509 32.38795325112868 A 100 100 0 0 0 180.71067811865476 10.71067811865474 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M 146.35492607468353 27.76855558857224 A 95 95 0 0 1 110 35 L 110 40 A 100 100 0 0 0 148.268343236509 32.38795325112868 Z"
+                      fill="var(--color-even)"
+                    />
+                  </g>
+                </g>
+                
+                <text
+                  class="svelte-1l7llm0"
+                  dominant-baseline="middle"
+                  fill="var(--color-fg)"
+                  font-size="30px"
+                  text-anchor="middle"
+                  x="160"
+                  y="-10"
+                >
+                  2
+                </text>
+              </g>
+              
+            </svg>
+          </svg>
+        </aside>
+         
+        <article
+          class="canvas svelte-1fjynid"
+        >
+          <svg
+            height="100%"
+            width="100%"
+          >
+            
+            <svg
+              viewBox="-385 -10 440 120.00000000000001"
+              x="0"
+              y="0"
+            >
+              <defs>
+                
+                <g
+                  class="tile straight-tile"
+                  id="id-18-straight-tile-1"
+                  transform=""
+                >
+                  <rect
+                    fill="var(--color-ground)"
+                    height="110"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                    width="90"
+                    x="-45"
+                    y="0"
+                  />
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="-45"
+                      y="0"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="-45"
+                      y="27.5"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="-45"
+                      y="55"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="-45"
+                      y="82.5"
+                    />
+                  </g>
+                  <g
+                    class="barrier straight-barrier"
+                  >
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="40"
+                      y="0"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="40"
+                      y="27.5"
+                    />
+                    
+                    <rect
+                      fill="var(--color-odd)"
+                      height="27.5"
+                      width="5"
+                      x="40"
+                      y="55"
+                    />
+                    
+                    <rect
+                      fill="var(--color-even)"
+                      height="27.5"
+                      width="5"
+                      x="40"
+                      y="82.5"
+                    />
+                  </g>
+                </g>
+                
+                
+                <g
+                  class="tile curved-tile"
+                  id="id-18-curved-tile-1"
+                  transform=""
+                >
+                  <path
+                    d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                  />
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
+                    />
+                  </g>
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
+                    />
+                  </g>
+                </g>
+                
+                 
+              </defs>
+              
+              <g
+                class="navigator svelte-rodoie"
+                role="menu"
+                tabindex="0"
+              >
+                <use
+                  data-id="id-15"
+                  href="#id-18-curved-tile-1"
+                  role="menuitem"
+                  tabindex="-1"
+                  transform=""
+                  x="0"
+                  y="0"
+                />
+                <use
+                  data-id="id-19"
+                  href="#id-18-straight-tile-1"
+                  role="menuitem"
+                  tabindex="-1"
+                  transform="rotate(90 -55 55)"
+                  x="-55"
+                  y="55"
+                />
+                <use
+                  data-id="id-16"
+                  href="#id-18-straight-tile-1"
+                  role="menuitem"
+                  tabindex="-1"
+                  transform="rotate(90 -165 55.00000000000001)"
+                  x="-165"
+                  y="55.00000000000001"
+                />
+                <use
+                  data-id="id-17"
+                  href="#id-18-curved-tile-1"
+                  role="menuitem"
+                  tabindex="-1"
+                  transform="rotate(90 -275 55.000000000000014)"
+                  x="-275"
+                  y="55.000000000000014"
+                />
+                
+                
+                <g
+                  class="tile curved-tile"
+                  transform=""
+                >
+                  <path
+                    d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-ground)"
+                    stroke="var(--color-separator)"
+                    stroke-width="var(--stroke-width-tile)"
+                  />
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M -45 0 A 10 10 0 0 1 -47.928932188134524 7.071067811865475 L -44.39339828220179 10.606601717798211 A 15 15 0 0 0 -40 0 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M -47.928932188134524 7.071067811865475 A 10 10 0 0 1 -55 10 L -55 15 A 15 15 0 0 0 -44.39339828220179 10.606601717798211 Z"
+                      fill="var(--color-odd)"
+                    />
+                  </g>
+                  <g
+                    class="barrier curved-barrier"
+                  >
+                    
+                    <path
+                      d="M 40 0 A 95 95 0 0 1 32.76855558857224 36.354926074683526 L 37.38795325112868 38.268343236508976 A 100 100 0 0 0 45 0 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M 32.76855558857224 36.354926074683526 A 95 95 0 0 1 12.175144212722017 67.175144212722 L 15.710678118654755 70.71067811865474 A 100 100 0 0 0 37.38795325112868 38.268343236508976 Z"
+                      fill="var(--color-even)"
+                    />
+                    
+                    <path
+                      d="M 12.175144212722017 67.175144212722 A 95 95 0 0 1 -18.645073925316467 87.76855558857224 L -16.731656763491017 92.38795325112868 A 100 100 0 0 0 15.710678118654755 70.71067811865474 Z"
+                      fill="var(--color-odd)"
+                    />
+                    
+                    <path
+                      d="M -18.645073925316467 87.76855558857224 A 95 95 0 0 1 -54.99999999999999 95 L -54.99999999999999 100 A 100 100 0 0 0 -16.731656763491017 92.38795325112868 Z"
+                      fill="var(--color-even)"
+                    />
+                  </g>
+                </g>
+                
+                
+                <g
+                  class="hover svelte-rodoie"
+                  pointer-events="all"
+                >
+                  <path
+                    d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+                    fill="var(--color-bg-hovered)"
+                    stroke="var(--color-fg-hovered)"
+                    stroke-width="var(--stroke-width-hovered)"
+                    transform=""
+                  />
+                  
+                </g>
+                
+              </g>
+               
+              <rect
+                fill="var(--color-bg-selected)"
+                height="110"
+                stroke="var(--color-fg-selected)"
+                stroke-width="var(--stroke-width-selected)"
+                transform="rotate(90 -55 55)"
+                width="90"
+                x="-100"
+                y="55"
+              />
+              
+              
+            </svg>
+          </svg>
+        </article>
+      </article>
+    </article>
+  </div>
+</body>
+`;
+
+exports[`TrackEditor add a tile to the track at the end 1`] = `
 <body>
   <div />
   <div>
@@ -631,7 +1336,7 @@ exports[`TrackEditor add tile to the track 1`] = `
 </body>
 `;
 
-exports[`TrackEditor flip tile in the track 1`] = `
+exports[`TrackEditor flip a tile in the track 1`] = `
 <body>
   <div />
   <div>
@@ -1075,7 +1780,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 
                 <g
                   class="tile straight-tile"
-                  id="id-18-straight-tile-1"
+                  id="id-23-straight-tile-1"
                   transform=""
                 >
                   <rect
@@ -1164,7 +1869,7 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 
                 <g
                   class="tile curved-tile"
-                  id="id-18-curved-tile-1"
+                  id="id-23-curved-tile-1"
                   transform=""
                 >
                   <path
@@ -1222,8 +1927,8 @@ exports[`TrackEditor flip tile in the track 1`] = `
                 tabindex="0"
               >
                 <use
-                  data-id="id-15"
-                  href="#id-18-curved-tile-1"
+                  data-id="id-20"
+                  href="#id-23-curved-tile-1"
                   role="menuitem"
                   tabindex="-1"
                   transform=""
@@ -1231,8 +1936,8 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   y="0"
                 />
                 <use
-                  data-id="id-16"
-                  href="#id-18-straight-tile-1"
+                  data-id="id-21"
+                  href="#id-23-straight-tile-1"
                   role="menuitem"
                   tabindex="-1"
                   transform="rotate(90 -55 55)"
@@ -1240,8 +1945,8 @@ exports[`TrackEditor flip tile in the track 1`] = `
                   y="55"
                 />
                 <use
-                  data-id="id-17"
-                  href="#id-18-curved-tile-1"
+                  data-id="id-22"
+                  href="#id-23-curved-tile-1"
                   role="menuitem"
                   tabindex="-1"
                   transform="rotate(90 -165 55.00000000000001)"
