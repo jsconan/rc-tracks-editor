@@ -4,10 +4,26 @@
 
     export const FOCUS_DELAY_CONTEXT_ID = 'focusDelay';
     export const FOCUS_DELAY_DEFAULT = 100;
+
+    const instances = new Set();
+
+    const findElementIndex = (navigator, id) => navigator.findIndex(element => element.id === id);
+
+    export const focusElement = id => {
+        instances.forEach(instance => {
+            const { navigator, container } = instance;
+            const index = findElementIndex(navigator, id);
+            if (index > -1) {
+                container.focus();
+                navigator.defaultFocusedIndex = index;
+                navigator.focus();
+            }
+        });
+    };
 </script>
 
 <script>
-    import { createEventDispatcher, getContext, hasContext } from 'svelte';
+    import { createEventDispatcher, getContext, hasContext, onDestroy, onMount } from 'svelte';
     import { flattenAttributeList } from '../../core/helpers';
     import { DeferredAction } from '../../core/actions';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
@@ -48,19 +64,19 @@
         return { type, direction, ratio, angle, x, y };
     };
 
-    const menuNavigator = new MenuNavigator();
-    const hoverFocused = () => menuNavigator.hoverFocused();
+    const navigator = new MenuNavigator();
+    const hoverFocused = () => navigator.hoverFocused();
     const enterElement = event => {
         const target = event.target.closest('[data-id]');
         const targetId = target && target.dataset.id;
 
         if (targetId) {
-            menuNavigator.hoveredIndex = menuNavigator.findIndex(element => element.id === targetId);
+            navigator.hoveredIndex = findElementIndex(navigator, targetId);
         }
     };
-    const leaveElement = () => (menuNavigator.hoveredIndex = -1);
+    const leaveElement = () => (navigator.hoveredIndex = -1);
     const blurElement = () => {
-        menuNavigator.focused = null;
+        navigator.focused = null;
     };
 
     const focusContainer = () => {
@@ -84,10 +100,10 @@
 
     const click = () => {
         blurContainer();
-        if (menuNavigator.focused) {
-            menuNavigator.focusHovered();
+        if (navigator.focused) {
+            navigator.focusHovered();
         }
-        select(menuNavigator.hovered, menuNavigator.hoveredIndex);
+        select(navigator.hovered, navigator.hoveredIndex);
     };
 
     const keyNavigator = new KeyNavigator(direction);
@@ -96,24 +112,24 @@
 
     keyNavigator
         .on('next', () => {
-            menuNavigator.focusNext();
+            navigator.focusNext();
         })
         .on('previous', () => {
-            menuNavigator.focusPrevious();
+            navigator.focusPrevious();
         })
         .on('validate', () => {
-            select(menuNavigator.focused, menuNavigator.focusedIndex);
+            select(navigator.focused, navigator.focusedIndex);
         })
         .on('cancel', () => {
             blurElement();
             focusContainer();
         });
 
-    menuNavigator
+    navigator
         .on('focus', (focused, index) => {
             focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
             focusedOverlay.d = specs.barrierWidth;
-            containerFocused = null;
+            blurContainer();
             dispatchEvent('focus', focused, index);
         })
         .on('blur', (focused, index) => {
@@ -129,12 +145,24 @@
             dispatchEvent('leave', hovered, index);
         });
 
-    $: menuNavigator.elements = elements;
-    $: menuNavigator.defaultFocusedIndex = selectedIndex;
+    let container = null;
+    const instance = { navigator, container };
+    onMount(() => {
+        instance.container = container;
+        instances.add(instance);
+    });
+    onDestroy(() => {
+        instances.delete(instance);
+        instance.container = null;
+    });
+
+    $: navigator.elements = elements;
+    $: navigator.defaultFocusedIndex = selectedIndex;
     $: selected = focusedOverlay || hoveredOverlay;
 </script>
 
 <g
+    bind:this={container}
     on:click={click}
     on:mouseover={enterElement}
     on:keydown={keyDown}

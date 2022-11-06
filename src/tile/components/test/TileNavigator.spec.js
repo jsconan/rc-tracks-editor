@@ -21,7 +21,7 @@ import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT } from '../../helpers';
 import { KeyNavigator } from '../../../core/navigators';
-import TileNavigator, { FOCUS_DELAY_CONTEXT_ID } from '../TileNavigator.svelte';
+import TileNavigator, { focusElement, FOCUS_DELAY_CONTEXT_ID } from '../TileNavigator.svelte';
 import TileNavigatorWithSlot from './TileNavigatorWithSlot.svelte';
 import { TileSpecifications } from '../../config';
 import { wait } from '../../../core/helpers';
@@ -382,6 +382,21 @@ describe('TileNavigator', () => {
         });
 
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('can focus an element by its id', async () => {
+        const props = { elements };
+        const { container } = render(Context, {
+            props: {
+                component: TileNavigator,
+                context: { [TileSpecifications.CONTEXT_ID]: specs },
+                props
+            }
+        });
+
+        focusElement('id-1');
+        await tick();
         expect(container).toMatchSnapshot();
     });
 });
