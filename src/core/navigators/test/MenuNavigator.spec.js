@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { eventEmitterMixin } from '../../mixins';
 import { MenuNavigator } from '../MenuNavigator.js';
 
 const source = [{ name: 'Bob' }, { name: 'Alice' }, { name: 'Foo' }, { name: 'Bar' }];
@@ -23,6 +24,10 @@ const source = [{ name: 'Bob' }, { name: 'Alice' }, { name: 'Foo' }, { name: 'Ba
 describe('MenuNavigator', () => {
     it('is a class', () => {
         expect(MenuNavigator).toEqual(expect.any(Function));
+    });
+
+    it('is an event emitter', () => {
+        expect(eventEmitterMixin.isEventEmitter(new MenuNavigator())).toBeTruthy();
     });
 
     it('can be initialized with a source', () => {

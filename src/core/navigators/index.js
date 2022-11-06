@@ -16,5 +16,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+export { KeyNavigator } from './KeyNavigator.js';
 export { ListNavigator } from './ListNavigator.js';
 export { MenuNavigator } from './MenuNavigator.js';
