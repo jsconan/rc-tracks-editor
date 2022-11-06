@@ -20,6 +20,7 @@ import { fireEvent, render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
 import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_LEFT } from '../../helpers';
+import { KeyNavigator } from '../../../core/navigators';
 import TileNavigator, { FOCUS_DELAY_CONTEXT_ID } from '../TileNavigator.svelte';
 import TileNavigatorWithSlot from './TileNavigatorWithSlot.svelte';
 import { TileSpecifications } from '../../config';
@@ -166,46 +167,49 @@ describe('TileNavigator', () => {
         expect(onEvent).toHaveBeenCalledTimes(2);
     });
 
-    it('can navigate', async () => {
-        const props = { elements };
-        const { container } = render(Context, {
-            props: {
-                component: TileNavigator,
-                context: { [TileSpecifications.CONTEXT_ID]: specs },
-                props
-            }
-        });
+    it.each([KeyNavigator.MODE_BOTH, KeyNavigator.MODE_HORIZONTAL, KeyNavigator.MODE_VERTICAL])(
+        'can navigate using "%s" mode',
+        async direction => {
+            const props = { elements, direction };
+            const { container } = render(Context, {
+                props: {
+                    component: TileNavigator,
+                    context: { [TileSpecifications.CONTEXT_ID]: specs },
+                    props
+                }
+            });
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Right' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Right' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Down' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Down' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Left' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Left' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Up' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Up' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
-        expect(container).toMatchSnapshot();
+            await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
+            expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
-        expect(container).toMatchSnapshot();
-    });
+            await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
+            expect(container).toMatchSnapshot();
+        }
+    );
 
     it('can focus the container and blur it', async () => {
         const props = { elements, x: -10, y: -20, width: 200, height: 100 };

@@ -5,6 +5,7 @@
     import { createEventDispatcher } from 'svelte';
     import { buildList } from '../../track/helpers';
     import { getRect } from '../../core/helpers';
+    import { KeyNavigator } from '../../core/navigators';
     import { Sketch } from '../../track/elements';
     import { Tile, TileNavigator } from '../../tile/components';
     import { TileSet } from '../models';
@@ -20,6 +21,7 @@
     const counterStore = tiles.counterStore;
     const modelsStore = tiles.modelsStore;
     const specs = tiles.specs;
+    const direction = KeyNavigator.MODE_VERTICAL;
 
     const getTextX = (x, rect) => x + rect.x + rect.width / 2;
     const getTextY = (y, rect) => y + rect.y + rect.height / 2;
@@ -43,7 +45,7 @@
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
-    <TileNavigator elements={models.tiles} {...rect} bind:selectedIndex on:select={select}>
+    <TileNavigator elements={models.tiles} {direction} {...rect} bind:selectedIndex on:select={select}>
         {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
             <g data-id={id} role="menuitem" tabindex="-1">
                 <Tile {type} {direction} {ratio} {angle} {x} {y} />

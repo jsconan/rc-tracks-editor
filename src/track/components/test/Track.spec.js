@@ -149,7 +149,7 @@ describe('Track', () => {
         component.$on('select', onEvent);
         await fireEvent.mouseOver(container.querySelector(`[data-id=id-1]`));
         await fireEvent.click(container.querySelector('.hover'));
-        await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('.hover'), { key: 'ArrowLeft' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: ' ' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Spacebar' });
         await fireEvent.keyUp(container.querySelector('.hover'), { key: 'Enter' });
@@ -166,31 +166,13 @@ describe('Track', () => {
             }
         });
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Right' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Down' });
-        expect(container).toMatchSnapshot();
-
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Left' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Up' });
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
@@ -242,7 +224,7 @@ describe('Track', () => {
         component.$on('focus', onFocus);
         component.$on('blur', onBlur);
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.blur(container.querySelector('[role=menu]'));
@@ -296,7 +278,7 @@ describe('Track', () => {
             }
         });
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
+        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
         await fireEvent.mouseEnter(container.querySelector('.focus'));
         expect(container).toMatchSnapshot();
     });

@@ -2,10 +2,11 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { getRect, uid } from '../../core/helpers';
+    import { KeyNavigator } from '../../core/navigators';
     import { Sketch } from '../elements';
     import { Tile, TileNavigator } from '../../tile/components';
     import { TrackModel } from '../models';
-    import { getRect, uid } from '../../core/helpers';
 
     export let track;
     export let x = 0;
@@ -19,6 +20,7 @@
     const tilesStore = track.tilesStore;
     const modelsStore = track.modelsStore;
 
+    const direction = KeyNavigator.MODE_HORIZONTAL;
     const trackId = uid();
     const getId = id => `${trackId}-${id}`;
 
@@ -37,6 +39,7 @@
 >
     <TileNavigator
         elements={$tilesStore.tiles}
+        {direction}
         {...rect}
         bind:selectedIndex
         on:select

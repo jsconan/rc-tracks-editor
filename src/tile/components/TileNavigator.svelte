@@ -11,12 +11,13 @@
     import { flattenAttributeList } from '../../core/helpers';
     import { DeferredAction } from '../../core/actions';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
-    import { MenuNavigator } from '../../core/navigators';
+    import { KeyNavigator, MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
     import { TileSpecifications } from '../config';
     import Tile from './Tile.svelte';
 
     export let elements;
+    export let direction = KeyNavigator.MODE_BOTH;
     export let selectedIndex = -1;
     export let x = void 0;
     export let y = void 0;
@@ -47,19 +48,19 @@
         return { type, direction, ratio, angle, x, y };
     };
 
-    const navigator = new MenuNavigator();
-    const hoverFocused = () => navigator.hoverFocused();
+    const menuNavigator = new MenuNavigator();
+    const hoverFocused = () => menuNavigator.hoverFocused();
     const enterElement = event => {
         const target = event.target.closest('[data-id]');
         const targetId = target && target.dataset.id;
 
         if (targetId) {
-            navigator.hoveredIndex = navigator.findIndex(element => element.id === targetId);
+            menuNavigator.hoveredIndex = menuNavigator.findIndex(element => element.id === targetId);
         }
     };
-    const leaveElement = () => (navigator.hoveredIndex = -1);
+    const leaveElement = () => (menuNavigator.hoveredIndex = -1);
     const blurElement = () => {
-        navigator.focused = null;
+        menuNavigator.focused = null;
     };
 
     const focusContainer = () => {
@@ -83,59 +84,32 @@
 
     const click = () => {
         blurContainer();
-        if (navigator.focused) {
-            navigator.focusHovered();
+        if (menuNavigator.focused) {
+            menuNavigator.focusHovered();
         }
-        select(navigator.hovered, navigator.hoveredIndex);
+        select(menuNavigator.hovered, menuNavigator.hoveredIndex);
     };
 
-    const keyDown = event => {
-        if (event.defaultPrevented) {
-            return;
-        }
+    const keyNavigator = new KeyNavigator(direction);
+    const keyDown = event => keyNavigator.processEvent(event, KeyNavigator.TYPE_MOVE);
+    const keyUp = event => keyNavigator.processEvent(event, KeyNavigator.TYPE_CONTROL);
 
-        switch (event.key) {
-            case 'Right':
-            case 'Down':
-            case 'ArrowRight':
-            case 'ArrowDown':
-                event.preventDefault();
-                navigator.focusNext();
-                break;
+    keyNavigator
+        .on('next', () => {
+            menuNavigator.focusNext();
+        })
+        .on('previous', () => {
+            menuNavigator.focusPrevious();
+        })
+        .on('validate', () => {
+            select(menuNavigator.focused, menuNavigator.focusedIndex);
+        })
+        .on('cancel', () => {
+            blurElement();
+            focusContainer();
+        });
 
-            case 'Left':
-            case 'Up':
-            case 'ArrowLeft':
-            case 'ArrowUp':
-                event.preventDefault();
-                navigator.focusPrevious();
-                break;
-        }
-    };
-
-    const keyUp = event => {
-        if (event.defaultPrevented) {
-            return;
-        }
-
-        switch (event.key) {
-            case ' ':
-            case 'Spacebar':
-            case 'Enter':
-                event.preventDefault();
-                select(navigator.focused, navigator.focusedIndex);
-                break;
-
-            case 'Esc':
-            case 'Escape':
-                event.preventDefault();
-                blurElement();
-                focusContainer();
-                break;
-        }
-    };
-
-    navigator
+    menuNavigator
         .on('focus', (focused, index) => {
             focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
             focusedOverlay.d = specs.barrierWidth;
@@ -155,8 +129,8 @@
             dispatchEvent('leave', hovered, index);
         });
 
-    $: navigator.elements = elements;
-    $: navigator.defaultFocusedIndex = selectedIndex;
+    $: menuNavigator.elements = elements;
+    $: menuNavigator.defaultFocusedIndex = selectedIndex;
     $: selected = focusedOverlay || hoveredOverlay;
 </script>
 

@@ -147,28 +147,10 @@ describe('TileSelector', () => {
             }
         });
 
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Right' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Down' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowRight' });
-        expect(container).toMatchSnapshot();
-
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowDown' });
         expect(container).toMatchSnapshot();
 
-        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Esc' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Left' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'Up' });
-        expect(container).toMatchSnapshot();
-
-        await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowLeft' });
+        await fireEvent.keyUp(container.querySelector('[role=menu]'), { key: 'Escape' });
         expect(container).toMatchSnapshot();
 
         await fireEvent.keyDown(container.querySelector('[role=menu]'), { key: 'ArrowUp' });
