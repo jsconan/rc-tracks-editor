@@ -249,11 +249,13 @@ export class KeyNavigator {
     /**
      * Identifies a keystroke with respect to the selected mode.
      * If the keystroke is not valid for the selected mode, it will not be identified.
+     * When the allowed type is specified, the keystroke will be identified only if its type matches.
      * @param {string} key - The key to identify.
+     * @param {string} allowedType - The allowed type of action.
      * @returns {managedKeystroke} - The descriptor of the managed keystroke, or `null`.
      */
-    identify(key) {
-        const managedKeystroke = KeyNavigator.identify(key);
+    identify(key, allowedType = null) {
+        const managedKeystroke = KeyNavigator.identify(key, allowedType);
         if (!managedKeystroke) {
             return null;
         }
@@ -268,7 +270,9 @@ export class KeyNavigator {
 
     /**
      * Processes a keystroke with respect to the selected mode.
+     * When the allowed type is specified, the keystroke will be processed only if its type matches.
      * @param {string} key - The key identifier to process.
+     * @param {string} allowedType - The allowed type of action.
      * @returns {boolean} - Returns `true` if the keystroke was managed; otherwise returns `false`.
      * @fires action
      * @fires next
@@ -277,8 +281,8 @@ export class KeyNavigator {
      * @fires cancel
      * @fires delete
      */
-    process(key) {
-        const managedKeystroke = this.identify(key);
+    process(key, allowedType = null) {
+        const managedKeystroke = this.identify(key, allowedType);
         if (!managedKeystroke) {
             return false;
         }
@@ -293,7 +297,9 @@ export class KeyNavigator {
 
     /**
      * Processes a keyboard event with respect to the selected mode.
+     * When the allowed type is specified, the keystroke will be processed only if its type matches.
      * @param {KeyboardEvent} event - The event to process.
+     * @param {string} allowedType - The allowed type of action.
      * @returns {boolean} - Returns `true` if the keystroke was managed; otherwise returns `false`.
      * @fires action
      * @fires next
@@ -302,8 +308,8 @@ export class KeyNavigator {
      * @fires cancel
      * @fires delete
      */
-    processEvent(event) {
-        if (!this.process(event && event.key)) {
+    processEvent(event, allowedType = null) {
+        if (!this.process(event && event.key, allowedType)) {
             return false;
         }
 
@@ -428,16 +434,23 @@ export class KeyNavigator {
 
     /**
      * Identifies a keystroke.
+     * When the allowed type is specified, the keystroke will be identified only if its type matches.
      * @param {string} key - The key to identify.
+     * @param {string} allowedType - The allowed type of action.
      * @returns {managedKeystroke} - The descriptor of the managed keystroke, or `null`.
      */
-    static identify(key) {
-        const keystroke = this.key(key);
+    static identify(key, allowedType) {
+        const keystroke = this.keystroke(key);
         if (!keystroke) {
             return null;
         }
 
         const { type, mode, action } = actions[keystroke];
+
+        if (allowedType && type !== allowedType) {
+            return null;
+        }
+
         return { keystroke, type, mode, action };
     }
 
@@ -446,89 +459,8 @@ export class KeyNavigator {
      * @param {string} key - The key identifier to check.
      * @returns {string} - Returns the keystroke of the key, or `undefined`.
      */
-    static key(key) {
+    static keystroke(key) {
         return keystrokes[key];
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Up` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Up` key;  otherwise returns `false`.
-     */
-    static keyUp(key) {
-        return this.key(key) === KEYSTROKE_UP;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Down` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Down` key; otherwise returns `false`.
-     */
-    static keyDown(key) {
-        return this.key(key) === KEYSTROKE_DOWN;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Left` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Left` key; otherwise returns `false`.
-     */
-    static keyLeft(key) {
-        return this.key(key) === KEYSTROKE_LEFT;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Right` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Right` key; otherwise returns `false`.
-     */
-    static keyRight(key) {
-        return this.key(key) === KEYSTROKE_RIGHT;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Spacebar` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Spacebar` key; otherwise returns `false`.
-     */
-    static keySpacebar(key) {
-        return this.key(key) === KEYSTROKE_SPACEBAR;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Enter` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Enter` key; otherwise returns `false`.
-     */
-    static keyEnter(key) {
-        return this.key(key) === KEYSTROKE_ENTER;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Escape` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Escape` key; otherwise returns `false`.
-     */
-    static keyEscape(key) {
-        return this.key(key) === KEYSTROKE_ESCAPE;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Delete` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Delete` key; otherwise returns `false`.
-     */
-    static keyDelete(key) {
-        return this.key(key) === KEYSTROKE_DELETE;
-    }
-
-    /**
-     * Checks if a keystroke relates to the `Backspace` key.
-     * @param {string} key - The key identifier to check.
-     * @returns {boolean} - Returns `true` if this is the `Backspace` key; otherwise returns `false`.
-     */
-    static keyBackspace(key) {
-        return this.key(key) === KEYSTROKE_BACKSPACE;
     }
 }
 

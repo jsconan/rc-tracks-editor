@@ -44,261 +44,557 @@ describe('KeyNavigator', () => {
         expect(navigator.mode).toBe(KeyNavigator.MODE_HORIZONTAL);
     });
 
-    it.each([
-        ['Up', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowUp', KeyNavigator.MODE_HORIZONTAL],
-        ['Down', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowDown', KeyNavigator.MODE_HORIZONTAL],
-        ['Left', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowLeft', KeyNavigator.MODE_HORIZONTAL],
-        ['Right', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowRight', KeyNavigator.MODE_HORIZONTAL],
-        [' ', KeyNavigator.MODE_HORIZONTAL],
-        ['Spacebar', KeyNavigator.MODE_HORIZONTAL],
-        ['Enter', KeyNavigator.MODE_HORIZONTAL],
-        ['Esc', KeyNavigator.MODE_HORIZONTAL],
-        ['Escape', KeyNavigator.MODE_HORIZONTAL],
-        ['Del', KeyNavigator.MODE_HORIZONTAL],
-        ['Delete', KeyNavigator.MODE_HORIZONTAL],
-        ['Backspace', KeyNavigator.MODE_HORIZONTAL],
-        ['Insert', KeyNavigator.MODE_HORIZONTAL],
-        ['A', KeyNavigator.MODE_HORIZONTAL],
-
-        ['Up', KeyNavigator.MODE_VERTICAL],
-        ['ArrowUp', KeyNavigator.MODE_VERTICAL],
-        ['Down', KeyNavigator.MODE_VERTICAL],
-        ['ArrowDown', KeyNavigator.MODE_VERTICAL],
-        ['Left', KeyNavigator.MODE_VERTICAL],
-        ['ArrowLeft', KeyNavigator.MODE_VERTICAL],
-        ['Right', KeyNavigator.MODE_VERTICAL],
-        ['ArrowRight', KeyNavigator.MODE_VERTICAL],
-        [' ', KeyNavigator.MODE_VERTICAL],
-        ['Spacebar', KeyNavigator.MODE_VERTICAL],
-        ['Enter', KeyNavigator.MODE_VERTICAL],
-        ['Esc', KeyNavigator.MODE_VERTICAL],
-        ['Escape', KeyNavigator.MODE_VERTICAL],
-        ['Del', KeyNavigator.MODE_VERTICAL],
-        ['Delete', KeyNavigator.MODE_VERTICAL],
-        ['Backspace', KeyNavigator.MODE_VERTICAL],
-        ['Insert', KeyNavigator.MODE_VERTICAL],
-        ['A', KeyNavigator.MODE_VERTICAL],
-
-        ['Up', KeyNavigator.MODE_BOTH],
-        ['ArrowUp', KeyNavigator.MODE_BOTH],
-        ['Down', KeyNavigator.MODE_BOTH],
-        ['ArrowDown', KeyNavigator.MODE_BOTH],
-        ['Left', KeyNavigator.MODE_BOTH],
-        ['ArrowLeft', KeyNavigator.MODE_BOTH],
-        ['Right', KeyNavigator.MODE_BOTH],
-        ['ArrowRight', KeyNavigator.MODE_BOTH],
-        [' ', KeyNavigator.MODE_BOTH],
-        ['Spacebar', KeyNavigator.MODE_BOTH],
-        ['Enter', KeyNavigator.MODE_BOTH],
-        ['Esc', KeyNavigator.MODE_BOTH],
-        ['Escape', KeyNavigator.MODE_BOTH],
-        ['Del', KeyNavigator.MODE_BOTH],
-        ['Delete', KeyNavigator.MODE_BOTH],
-        ['Backspace', KeyNavigator.MODE_BOTH],
-        ['Insert', KeyNavigator.MODE_BOTH],
-        ['A', KeyNavigator.MODE_BOTH]
-    ])('identifies the keystroke from the key "%s" when being in mode "%s"', (key, mode) => {
-        const navigator = new KeyNavigator(mode);
-        expect(navigator.identify(key)).toMatchSnapshot();
+    describe.each([
+        'Up',
+        'ArrowUp',
+        'Down',
+        'ArrowDown',
+        'Left',
+        'ArrowLeft',
+        'Right',
+        'ArrowRight',
+        ' ',
+        'Spacebar',
+        'Enter',
+        'Esc',
+        'Escape',
+        'Del',
+        'Delete',
+        'Backspace',
+        'Insert',
+        'A'
+    ])('identifies the keystroke from the key "%s"', key => {
+        describe.each([KeyNavigator.MODE_HORIZONTAL, KeyNavigator.MODE_VERTICAL, KeyNavigator.MODE_BOTH])(
+            'when being in mode "%s"',
+            mode => {
+                it.each([KeyNavigator.TYPE_CONTROL, KeyNavigator.TYPE_MOVE, void 0])(
+                    'and when the allowed type is "%s"',
+                    type => {
+                        const navigator = new KeyNavigator(mode);
+                        expect(navigator.identify(key, type)).toMatchSnapshot();
+                    }
+                );
+            }
+        );
     });
 
     it.each([
-        ['Left', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['ArrowLeft', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['Right', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        ['ArrowRight', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        [' ', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE],
+        [
+            'Left',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_LEFT
+        ],
+        [
+            'ArrowLeft',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_LEFT
+        ],
+        [
+            'Right',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_RIGHT
+        ],
+        [
+            'ArrowRight',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_RIGHT
+        ],
+        [
+            ' ',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Spacebar',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Enter',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_ENTER
+        ],
+        [
+            'Esc',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Escape',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Del',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Delete',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Backspace',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_BACKSPACE
+        ],
 
-        ['Up', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['ArrowUp', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['Down', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['ArrowDown', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        [' ', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE],
+        [
+            'Up',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_UP
+        ],
+        [
+            'ArrowUp',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_UP
+        ],
+        [
+            'Down',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_DOWN
+        ],
+        [
+            'ArrowDown',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_DOWN
+        ],
+        [
+            ' ',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Spacebar',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Enter',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_ENTER
+        ],
+        [
+            'Esc',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Escape',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Del',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Delete',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Backspace',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_BACKSPACE
+        ],
 
-        ['Up', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['ArrowUp', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['Down', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['ArrowDown', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['Left', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['ArrowLeft', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['Right', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        ['ArrowRight', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        [' ', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE]
-    ])('processes the keystroke from the key "%s" when being in mode "%s"', (key, mode, action, keystroke) => {
-        const navigator = new KeyNavigator(mode);
-        const actionEvent = jest.fn().mockImplementation((eventAction, eventKeystroke, eventKey) => {
-            expect(eventAction).toBe(action);
-            expect(eventKeystroke).toBe(keystroke);
-            expect(eventKey).toBe(key);
-        });
-        const contextEvent = jest.fn().mockImplementation((eventKeystroke, eventKey) => {
-            expect(eventKeystroke).toBe(keystroke);
-            expect(eventKey).toBe(key);
-        });
+        ['Up', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
+        ['ArrowUp', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
+        ['Down', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
+        ['ArrowDown', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
+        ['Left', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
+        ['ArrowLeft', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
+        ['Right', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
+        ['ArrowRight', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
+        [' ', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
+        ['Spacebar', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
+        ['Enter', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
+        ['Esc', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
+        ['Escape', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
+        ['Del', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
+        ['Delete', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
+        ['Backspace', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE]
+    ])(
+        'processes the keystroke from the key "%s" when being in mode "%s" and when the allowed type is "%s"',
+        (key, mode, type, action, keystroke) => {
+            const navigator = new KeyNavigator(mode);
+            const actionEvent = jest.fn().mockImplementation((eventAction, eventKeystroke, eventKey) => {
+                expect(eventAction).toBe(action);
+                expect(eventKeystroke).toBe(keystroke);
+                expect(eventKey).toBe(key);
+            });
+            const contextEvent = jest.fn().mockImplementation((eventKeystroke, eventKey) => {
+                expect(eventKeystroke).toBe(keystroke);
+                expect(eventKey).toBe(key);
+            });
 
-        navigator.on('action', actionEvent);
-        navigator.on(action, contextEvent);
+            navigator.on('action', actionEvent);
+            navigator.on(action, contextEvent);
 
-        expect(navigator.process(key)).toBeTruthy();
+            expect(navigator.process(key, type)).toBeTruthy();
 
-        expect(actionEvent).toHaveBeenCalledTimes(1);
-        expect(contextEvent).toHaveBeenCalledTimes(1);
-    });
+            expect(actionEvent).toHaveBeenCalledTimes(1);
+            expect(contextEvent).toHaveBeenCalledTimes(1);
+        }
+    );
 
     it.each([
-        ['Up', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowUp', KeyNavigator.MODE_HORIZONTAL],
-        ['Down', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowDown', KeyNavigator.MODE_HORIZONTAL],
-        ['Insert', KeyNavigator.MODE_HORIZONTAL],
-        ['A', KeyNavigator.MODE_HORIZONTAL],
+        ['Up', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowUp', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['Down', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowDown', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
 
-        ['Left', KeyNavigator.MODE_VERTICAL],
-        ['ArrowLeft', KeyNavigator.MODE_VERTICAL],
-        ['Right', KeyNavigator.MODE_VERTICAL],
-        ['ArrowRight', KeyNavigator.MODE_VERTICAL],
-        ['Insert', KeyNavigator.MODE_VERTICAL],
-        ['A', KeyNavigator.MODE_VERTICAL],
+        ['Left', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowLeft', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['Right', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowRight', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
 
-        ['Insert', KeyNavigator.MODE_BOTH],
-        ['A', KeyNavigator.MODE_BOTH]
-    ])('does not processes the keystroke from the key "%s" when being in mode "%s"', (key, mode) => {
-        const navigator = new KeyNavigator(mode);
-        const actionEvent = jest.fn();
-        const contextEvent = jest.fn();
+        ['Up', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowUp', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['Down', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowDown', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
 
-        navigator.on('action', actionEvent);
+        ['Left', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowLeft', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['Right', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowRight', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
 
-        expect(navigator.process(key)).toBeFalsy();
+        ['Insert', KeyNavigator.MODE_HORIZONTAL, void 0],
+        ['A', KeyNavigator.MODE_HORIZONTAL, void 0],
 
-        expect(actionEvent).not.toHaveBeenCalled();
-        expect(contextEvent).not.toHaveBeenCalled();
-    });
+        ['Insert', KeyNavigator.MODE_VERTICAL, void 0],
+        ['A', KeyNavigator.MODE_VERTICAL, void 0],
 
-    it.each([
-        ['Left', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['ArrowLeft', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['Right', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        ['ArrowRight', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        [' ', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE],
+        ['Insert', KeyNavigator.MODE_BOTH, void 0],
+        ['A', KeyNavigator.MODE_BOTH, void 0]
+    ])(
+        'does not processes the keystroke from the key "%s" when being in mode "%s" and when the allowed type is "%s"',
+        (key, mode, type) => {
+            const navigator = new KeyNavigator(mode);
+            const actionEvent = jest.fn();
+            const contextEvent = jest.fn();
 
-        ['Up', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['ArrowUp', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['Down', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['ArrowDown', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        [' ', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_VERTICAL, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE],
+            navigator.on('action', actionEvent);
 
-        ['Up', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['ArrowUp', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
-        ['Down', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['ArrowDown', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
-        ['Left', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['ArrowLeft', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
-        ['Right', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        ['ArrowRight', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
-        [' ', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Spacebar', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
-        ['Enter', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
-        ['Esc', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Escape', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
-        ['Del', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Delete', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
-        ['Backspace', KeyNavigator.MODE_BOTH, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE]
-    ])('processes the keyboard event from the key "%s" when being in mode "%s"', (key, mode, action, keystroke) => {
-        const navigator = new KeyNavigator(mode);
-        const actionEvent = jest.fn().mockImplementation((eventAction, eventKeystroke, eventKey) => {
-            expect(eventAction).toBe(action);
-            expect(eventKeystroke).toBe(keystroke);
-            expect(eventKey).toBe(key);
-        });
-        const contextEvent = jest.fn().mockImplementation((eventKeystroke, eventKey) => {
-            expect(eventKeystroke).toBe(keystroke);
-            expect(eventKey).toBe(key);
-        });
-        const preventDefault = jest.fn();
+            expect(navigator.process(key, type)).toBeFalsy();
 
-        navigator.on('action', actionEvent);
-        navigator.on(action, contextEvent);
-
-        const event = { key, preventDefault };
-        expect(navigator.processEvent(event)).toBeTruthy();
-
-        expect(actionEvent).toHaveBeenCalledTimes(1);
-        expect(contextEvent).toHaveBeenCalledTimes(1);
-        expect(preventDefault).toHaveBeenCalledTimes(1);
-    });
+            expect(actionEvent).not.toHaveBeenCalled();
+            expect(contextEvent).not.toHaveBeenCalled();
+        }
+    );
 
     it.each([
-        ['Up', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowUp', KeyNavigator.MODE_HORIZONTAL],
-        ['Down', KeyNavigator.MODE_HORIZONTAL],
-        ['ArrowDown', KeyNavigator.MODE_HORIZONTAL],
-        ['Insert', KeyNavigator.MODE_HORIZONTAL],
-        ['A', KeyNavigator.MODE_HORIZONTAL],
+        [
+            'Left',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_LEFT
+        ],
+        [
+            'ArrowLeft',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_LEFT
+        ],
+        [
+            'Right',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_RIGHT
+        ],
+        [
+            'ArrowRight',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_RIGHT
+        ],
+        [
+            ' ',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Spacebar',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Enter',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_ENTER
+        ],
+        [
+            'Esc',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Escape',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Del',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Delete',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Backspace',
+            KeyNavigator.MODE_HORIZONTAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_BACKSPACE
+        ],
 
-        ['Left', KeyNavigator.MODE_VERTICAL],
-        ['ArrowLeft', KeyNavigator.MODE_VERTICAL],
-        ['Right', KeyNavigator.MODE_VERTICAL],
-        ['ArrowRight', KeyNavigator.MODE_VERTICAL],
-        ['Insert', KeyNavigator.MODE_VERTICAL],
-        ['A', KeyNavigator.MODE_VERTICAL],
+        [
+            'Up',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_UP
+        ],
+        [
+            'ArrowUp',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_PREVIOUS,
+            KeyNavigator.KEYSTROKE_UP
+        ],
+        [
+            'Down',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_DOWN
+        ],
+        [
+            'ArrowDown',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_MOVE,
+            KeyNavigator.ACTION_NEXT,
+            KeyNavigator.KEYSTROKE_DOWN
+        ],
+        [
+            ' ',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Spacebar',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_SPACEBAR
+        ],
+        [
+            'Enter',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_VALIDATE,
+            KeyNavigator.KEYSTROKE_ENTER
+        ],
+        [
+            'Esc',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Escape',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_CANCEL,
+            KeyNavigator.KEYSTROKE_ESCAPE
+        ],
+        [
+            'Del',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Delete',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_DELETE
+        ],
+        [
+            'Backspace',
+            KeyNavigator.MODE_VERTICAL,
+            KeyNavigator.TYPE_CONTROL,
+            KeyNavigator.ACTION_DELETE,
+            KeyNavigator.KEYSTROKE_BACKSPACE
+        ],
 
-        ['Insert', KeyNavigator.MODE_BOTH],
-        ['A', KeyNavigator.MODE_BOTH]
-    ])('does not processes the keyboard event from the key "%s" when being in mode "%s"', (key, mode) => {
-        const navigator = new KeyNavigator(mode);
-        const actionEvent = jest.fn();
-        const contextEvent = jest.fn();
+        ['Up', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
+        ['ArrowUp', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_UP],
+        ['Down', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
+        ['ArrowDown', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_DOWN],
+        ['Left', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
+        ['ArrowLeft', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_PREVIOUS, KeyNavigator.KEYSTROKE_LEFT],
+        ['Right', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
+        ['ArrowRight', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_NEXT, KeyNavigator.KEYSTROKE_RIGHT],
+        [' ', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
+        ['Spacebar', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_SPACEBAR],
+        ['Enter', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_VALIDATE, KeyNavigator.KEYSTROKE_ENTER],
+        ['Esc', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
+        ['Escape', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_CANCEL, KeyNavigator.KEYSTROKE_ESCAPE],
+        ['Del', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
+        ['Delete', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_DELETE],
+        ['Backspace', KeyNavigator.MODE_BOTH, void 0, KeyNavigator.ACTION_DELETE, KeyNavigator.KEYSTROKE_BACKSPACE]
+    ])(
+        'processes the keyboard event from the key "%s" when being in mode "%s" and when the allowed type is "%s"',
+        (key, mode, type, action, keystroke) => {
+            const navigator = new KeyNavigator(mode);
+            const actionEvent = jest.fn().mockImplementation((eventAction, eventKeystroke, eventKey) => {
+                expect(eventAction).toBe(action);
+                expect(eventKeystroke).toBe(keystroke);
+                expect(eventKey).toBe(key);
+            });
+            const contextEvent = jest.fn().mockImplementation((eventKeystroke, eventKey) => {
+                expect(eventKeystroke).toBe(keystroke);
+                expect(eventKey).toBe(key);
+            });
+            const preventDefault = jest.fn();
 
-        navigator.on('action', actionEvent);
+            navigator.on('action', actionEvent);
+            navigator.on(action, contextEvent);
 
-        expect(navigator.processEvent({ key })).toBeFalsy();
+            const event = { key, preventDefault };
+            expect(navigator.processEvent(event, type)).toBeTruthy();
 
-        expect(actionEvent).not.toHaveBeenCalled();
-        expect(contextEvent).not.toHaveBeenCalled();
-    });
+            expect(actionEvent).toHaveBeenCalledTimes(1);
+            expect(contextEvent).toHaveBeenCalledTimes(1);
+            expect(preventDefault).toHaveBeenCalledTimes(1);
+        }
+    );
+
+    it.each([
+        ['Up', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowUp', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['Down', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowDown', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_MOVE],
+
+        ['Left', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowLeft', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['Right', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+        ['ArrowRight', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_MOVE],
+
+        ['Up', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowUp', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['Down', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowDown', KeyNavigator.MODE_VERTICAL, KeyNavigator.TYPE_CONTROL],
+
+        ['Left', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowLeft', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['Right', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+        ['ArrowRight', KeyNavigator.MODE_HORIZONTAL, KeyNavigator.TYPE_CONTROL],
+
+        ['Insert', KeyNavigator.MODE_HORIZONTAL, void 0],
+        ['A', KeyNavigator.MODE_HORIZONTAL, void 0],
+
+        ['Insert', KeyNavigator.MODE_VERTICAL, void 0],
+        ['A', KeyNavigator.MODE_VERTICAL, void 0],
+
+        ['Insert', KeyNavigator.MODE_BOTH, void 0],
+        ['A', KeyNavigator.MODE_BOTH, void 0]
+    ])(
+        'does not processes the keyboard event from the key "%s" when being in mode "%s" and when the allowed type is "%s"',
+        (key, mode, type) => {
+            const navigator = new KeyNavigator(mode);
+            const actionEvent = jest.fn();
+            const contextEvent = jest.fn();
+
+            navigator.on('action', actionEvent);
+
+            expect(navigator.processEvent({ key }, type)).toBeFalsy();
+
+            expect(actionEvent).not.toHaveBeenCalled();
+            expect(contextEvent).not.toHaveBeenCalled();
+        }
+    );
 
     describe('has a static method which', () => {
-        it.each([
+        describe.each([
             'Up',
             'ArrowUp',
             'Down',
@@ -318,7 +614,12 @@ describe('KeyNavigator', () => {
             'Insert',
             'A'
         ])('identifies the keystroke from the key "%s"', key => {
-            expect(KeyNavigator.identify(key)).toMatchSnapshot();
+            it.each([KeyNavigator.TYPE_CONTROL, KeyNavigator.TYPE_MOVE, void 0])(
+                'when the allowed type is "%s"',
+                type => {
+                    expect(KeyNavigator.identify(key, type)).toMatchSnapshot();
+                }
+            );
         });
 
         it.each([
@@ -341,59 +642,7 @@ describe('KeyNavigator', () => {
             ['Insert', void 0],
             ['A', void 0]
         ])('gets the keystroke for the key "%s"', (key, keystroke) => {
-            expect(KeyNavigator.key(key)).toBe(keystroke);
-        });
-
-        it('tells if a key is the "up" keystroke', () => {
-            expect(KeyNavigator.keyUp('Down')).toBeFalsy();
-            expect(KeyNavigator.keyUp('Up')).toBeTruthy();
-            expect(KeyNavigator.keyUp('ArrowUp')).toBeTruthy();
-        });
-
-        it('tells if a key is the "down" keystroke', () => {
-            expect(KeyNavigator.keyDown('Up')).toBeFalsy();
-            expect(KeyNavigator.keyDown('Down')).toBeTruthy();
-            expect(KeyNavigator.keyDown('ArrowDown')).toBeTruthy();
-        });
-
-        it('tells if a key is the "left" keystroke', () => {
-            expect(KeyNavigator.keyLeft('Right')).toBeFalsy();
-            expect(KeyNavigator.keyLeft('Left')).toBeTruthy();
-            expect(KeyNavigator.keyLeft('ArrowLeft')).toBeTruthy();
-        });
-
-        it('tells if a key is the "right" keystroke', () => {
-            expect(KeyNavigator.keyRight('Left')).toBeFalsy();
-            expect(KeyNavigator.keyRight('Right')).toBeTruthy();
-            expect(KeyNavigator.keyRight('ArrowRight')).toBeTruthy();
-        });
-
-        it('tells if a key is the "spacebar" keystroke', () => {
-            expect(KeyNavigator.keySpacebar('Enter')).toBeFalsy();
-            expect(KeyNavigator.keySpacebar(' ')).toBeTruthy();
-            expect(KeyNavigator.keySpacebar('Spacebar')).toBeTruthy();
-        });
-
-        it('tells if a key is the "enter" keystroke', () => {
-            expect(KeyNavigator.keyEnter('Spacebar')).toBeFalsy();
-            expect(KeyNavigator.keyEnter('Enter')).toBeTruthy();
-        });
-
-        it('tells if a key is the "escape" keystroke', () => {
-            expect(KeyNavigator.keyEscape('Enter')).toBeFalsy();
-            expect(KeyNavigator.keyEscape('Esc')).toBeTruthy();
-            expect(KeyNavigator.keyEscape('Escape')).toBeTruthy();
-        });
-
-        it('tells if a key is the "delete" keystroke', () => {
-            expect(KeyNavigator.keyDelete('Backspace')).toBeFalsy();
-            expect(KeyNavigator.keyDelete('Del')).toBeTruthy();
-            expect(KeyNavigator.keyDelete('Delete')).toBeTruthy();
-        });
-
-        it('tells if a key is the "backspace" keystroke', () => {
-            expect(KeyNavigator.keyBackspace('Delete')).toBeFalsy();
-            expect(KeyNavigator.keyBackspace('Backspace')).toBeTruthy();
+            expect(KeyNavigator.keystroke(key)).toBe(keystroke);
         });
     });
 });

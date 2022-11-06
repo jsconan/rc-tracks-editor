@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key " " 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key " " when the allowed type is "control" 1`] = `
 {
   "action": "validate",
   "keystroke": "spacebar",
@@ -9,9 +9,26 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "A" 1`] = `null`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key " " when the allowed type is "move" 1`] = `null`;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowDown" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key " " when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "A" when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "A" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "A" when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowDown" when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowDown" when the allowed type is "move" 1`] = `
 {
   "action": "next",
   "keystroke": "down",
@@ -20,7 +37,18 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowLeft" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowDown" when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowLeft" when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowLeft" when the allowed type is "move" 1`] = `
 {
   "action": "previous",
   "keystroke": "left",
@@ -29,7 +57,18 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowRight" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowLeft" when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowRight" when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowRight" when the allowed type is "move" 1`] = `
 {
   "action": "next",
   "keystroke": "right",
@@ -38,7 +77,18 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowUp" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowRight" when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowUp" when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowUp" when the allowed type is "move" 1`] = `
 {
   "action": "previous",
   "keystroke": "up",
@@ -47,7 +97,16 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Backspace" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "ArrowUp" when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Backspace" when the allowed type is "control" 1`] = `
 {
   "action": "delete",
   "keystroke": "backspace",
@@ -56,212 +115,9 @@ exports[`KeyNavigator has a static method which identifies the keystroke from th
 }
 `;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Del" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "delete",
-  "mode": "both",
-  "type": "control",
-}
-`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Backspace" when the allowed type is "move" 1`] = `null`;
 
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Delete" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "delete",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Down" 1`] = `
-{
-  "action": "next",
-  "keystroke": "down",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Enter" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "enter",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Esc" 1`] = `
-{
-  "action": "cancel",
-  "keystroke": "escape",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Escape" 1`] = `
-{
-  "action": "cancel",
-  "keystroke": "escape",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Insert" 1`] = `null`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Left" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "left",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Right" 1`] = `
-{
-  "action": "next",
-  "keystroke": "right",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Spacebar" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "spacebar",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator has a static method which identifies the keystroke from the key "Up" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "up",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "both" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "spacebar",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "horizontal" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "spacebar",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "vertical" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "spacebar",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "both" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "horizontal" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "vertical" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "both" 1`] = `
-{
-  "action": "next",
-  "keystroke": "down",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "horizontal" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "vertical" 1`] = `
-{
-  "action": "next",
-  "keystroke": "down",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "both" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "left",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "horizontal" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "left",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "vertical" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "both" 1`] = `
-{
-  "action": "next",
-  "keystroke": "right",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "horizontal" 1`] = `
-{
-  "action": "next",
-  "keystroke": "right",
-  "mode": "horizontal",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "vertical" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "both" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "up",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "horizontal" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "vertical" 1`] = `
-{
-  "action": "previous",
-  "keystroke": "up",
-  "mode": "vertical",
-  "type": "move",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Backspace" when the allowed type is "undefined" 1`] = `
 {
   "action": "delete",
   "keystroke": "backspace",
@@ -270,25 +126,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Backspace" when bei
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "horizontal" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "backspace",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "vertical" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "backspace",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Del" when the allowed type is "control" 1`] = `
 {
   "action": "delete",
   "keystroke": "delete",
@@ -297,7 +135,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Del" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Del" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Del" when the allowed type is "undefined" 1`] = `
 {
   "action": "delete",
   "keystroke": "delete",
@@ -306,7 +146,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Del" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "vertical" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Delete" when the allowed type is "control" 1`] = `
 {
   "action": "delete",
   "keystroke": "delete",
@@ -315,7 +155,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Del" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Delete" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Delete" when the allowed type is "undefined" 1`] = `
 {
   "action": "delete",
   "keystroke": "delete",
@@ -324,25 +166,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Delete" when being 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "horizontal" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "delete",
-  "mode": "both",
-  "type": "control",
-}
-`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Down" when the allowed type is "control" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "vertical" 1`] = `
-{
-  "action": "delete",
-  "keystroke": "delete",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Down" when the allowed type is "move" 1`] = `
 {
   "action": "next",
   "keystroke": "down",
@@ -351,9 +177,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Down" when being in
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "horizontal" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "vertical" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Down" when the allowed type is "undefined" 1`] = `
 {
   "action": "next",
   "keystroke": "down",
@@ -362,7 +186,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Down" when being in
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Enter" when the allowed type is "control" 1`] = `
 {
   "action": "validate",
   "keystroke": "enter",
@@ -371,7 +195,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Enter" when being i
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Enter" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Enter" when the allowed type is "undefined" 1`] = `
 {
   "action": "validate",
   "keystroke": "enter",
@@ -380,16 +206,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Enter" when being i
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "vertical" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "enter",
-  "mode": "both",
-  "type": "control",
-}
-`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Esc" when the allowed type is "control" 1`] = `
 {
   "action": "cancel",
   "keystroke": "escape",
@@ -398,7 +215,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Esc" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Esc" when the allowed type is "undefined" 1`] = `
 {
   "action": "cancel",
   "keystroke": "escape",
@@ -407,7 +226,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "vertical" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Escape" when the allowed type is "control" 1`] = `
 {
   "action": "cancel",
   "keystroke": "escape",
@@ -416,7 +235,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Escape" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Escape" when the allowed type is "undefined" 1`] = `
 {
   "action": "cancel",
   "keystroke": "escape",
@@ -425,31 +246,15 @@ exports[`KeyNavigator identifies the keystroke from the key "Escape" when being 
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "horizontal" 1`] = `
-{
-  "action": "cancel",
-  "keystroke": "escape",
-  "mode": "both",
-  "type": "control",
-}
-`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Insert" when the allowed type is "control" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "vertical" 1`] = `
-{
-  "action": "cancel",
-  "keystroke": "escape",
-  "mode": "both",
-  "type": "control",
-}
-`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Insert" when the allowed type is "move" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "both" 1`] = `null`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Insert" when the allowed type is "undefined" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "horizontal" 1`] = `null`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Left" when the allowed type is "control" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "vertical" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Left" when the allowed type is "move" 1`] = `
 {
   "action": "previous",
   "keystroke": "left",
@@ -458,7 +263,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Left" when being in
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Left" when the allowed type is "undefined" 1`] = `
 {
   "action": "previous",
   "keystroke": "left",
@@ -467,9 +272,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Left" when being in
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "vertical" 1`] = `null`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Right" when the allowed type is "control" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Right" when the allowed type is "move" 1`] = `
 {
   "action": "next",
   "keystroke": "right",
@@ -478,7 +283,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Right" when being i
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Right" when the allowed type is "undefined" 1`] = `
 {
   "action": "next",
   "keystroke": "right",
@@ -487,9 +292,7 @@ exports[`KeyNavigator identifies the keystroke from the key "Right" when being i
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "vertical" 1`] = `null`;
-
-exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Spacebar" when the allowed type is "control" 1`] = `
 {
   "action": "validate",
   "keystroke": "spacebar",
@@ -498,7 +301,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when bein
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "horizontal" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Spacebar" when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Spacebar" when the allowed type is "undefined" 1`] = `
 {
   "action": "validate",
   "keystroke": "spacebar",
@@ -507,16 +312,9 @@ exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when bein
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "vertical" 1`] = `
-{
-  "action": "validate",
-  "keystroke": "spacebar",
-  "mode": "both",
-  "type": "control",
-}
-`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Up" when the allowed type is "control" 1`] = `null`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "both" 1`] = `
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Up" when the allowed type is "move" 1`] = `
 {
   "action": "previous",
   "keystroke": "up",
@@ -525,9 +323,891 @@ exports[`KeyNavigator identifies the keystroke from the key "Up" when being in m
 }
 `;
 
-exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "horizontal" 1`] = `null`;
+exports[`KeyNavigator has a static method which identifies the keystroke from the key "Up" when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
 
-exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "vertical" 1`] = `
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key " " when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "both" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "A" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "vertical" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowDown" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "horizontal" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowLeft" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "horizontal" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowRight" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "vertical" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "ArrowUp" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Backspace" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "backspace",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Del" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Delete" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "delete",
+  "keystroke": "delete",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "vertical" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Down" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "down",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Enter" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "enter",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Esc" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Escape" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "cancel",
+  "keystroke": "escape",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "both" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Insert" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "horizontal" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "left",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Left" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "horizontal" and when the allowed type is "move" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "next",
+  "keystroke": "right",
+  "mode": "horizontal",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Right" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "both" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "both" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "horizontal" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "vertical" and when the allowed type is "control" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "vertical" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Spacebar" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "validate",
+  "keystroke": "spacebar",
+  "mode": "both",
+  "type": "control",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "both" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "both" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "both" and when the allowed type is "undefined" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "horizontal" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "horizontal" and when the allowed type is "move" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "horizontal" and when the allowed type is "undefined" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "vertical" and when the allowed type is "control" 1`] = `null`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "vertical" and when the allowed type is "move" 1`] = `
+{
+  "action": "previous",
+  "keystroke": "up",
+  "mode": "vertical",
+  "type": "move",
+}
+`;
+
+exports[`KeyNavigator identifies the keystroke from the key "Up" when being in mode "vertical" and when the allowed type is "undefined" 1`] = `
 {
   "action": "previous",
   "keystroke": "up",
