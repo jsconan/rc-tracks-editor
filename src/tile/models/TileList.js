@@ -115,15 +115,6 @@ export class TileList extends List {
     }
 
     /**
-     * Gets a tile from a particular position.
-     * @param {number} index - The position of the tile.
-     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
-     */
-    get(index) {
-        return super.get(index) || null;
-    }
-
-    /**
      * Replace a tile in the list.
      * If the tile does not exist, it does nothing.
      * @param {string} id - The unique identifier of the tile to replace.
@@ -140,6 +131,31 @@ export class TileList extends List {
         }
 
         return this;
+    }
+
+    /**
+     * Removes a tile from the list.
+     * @param {string} id - The unique identifier of the tile to remove.
+     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
+     * @fires delete
+     */
+    deleteById(id) {
+        const index = this.getIndex(id);
+
+        if (index < 0) {
+            return false;
+        }
+
+        return this.delete(index) > 0;
+    }
+
+    /**
+     * Gets a tile from a particular position.
+     * @param {number} index - The position of the tile.
+     * @returns {TileModel} - The referenced tile, or `null` if it does not exist.
+     */
+    get(index) {
+        return super.get(index) || null;
     }
 
     /**
@@ -188,19 +204,69 @@ export class TileList extends List {
     }
 
     /**
-     * Removes a tile from the list.
-     * @param {string} id - The unique identifier of the tile to remove.
-     * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
-     * @fires delete
+     * Add a tile to the list, at the last position.
+     * @param {string} type - The type of tile to add.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
+     * @returns {TileModel} - Returns the added tile.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
      */
-    remove(id) {
-        const index = this.getIndex(id);
+    addTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        const tile = TileList.createTile(this.specs, type, direction, ratio);
 
-        if (index < 0) {
-            return false;
+        this.add(tile);
+
+        return tile;
+    }
+
+    /**
+     * Inserts a tile at a particular index.
+     * If the index is below 0, it does nothing.
+     * @param {number} index - The index where to insert the tile.
+     * @param {string} type - The type of tile to add.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
+     * @returns {TileModel} - Returns the added tile.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     * @fires add
+     */
+    insertTile(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        if (index >= 0) {
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
+
+            this.insert(index, tile);
+
+            return tile;
         }
 
-        return this.delete(index) > 0;
+        return null;
+    }
+
+    /**
+     * Replace a tile in the list.
+     * If the index does not exist, it does nothing.
+     * @param {number} index - The index of the tile to replace.
+     * @param {string} type - The type of tile to add.
+     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
+     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
+     * @returns {TileModel} - Returns the added tile.
+     * @throws {TypeError} - If the given type is not valid.
+     * @throws {TypeError} - If the given direction is not valid.
+     * @fires set
+     */
+    replaceTile(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        if (index >= 0 && index < this.length) {
+            const tile = TileList.createTile(this.specs, type, direction, ratio);
+
+            this.set(index, tile);
+
+            return tile;
+        }
+
+        return null;
     }
 
     /**
@@ -225,132 +291,6 @@ export class TileList extends List {
         this.emit('load');
 
         return this;
-    }
-
-    /**
-     * Add a tile to the list, at the last position.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-        this.add(tile);
-
-        return tile;
-    }
-
-    /**
-     * Add a tile to the list, at the first position.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.insertAt(0, type, direction, ratio);
-    }
-
-    /**
-     * Replace a tile in the list.
-     * If the tile does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile to replace.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires set
-     */
-    replace(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getIndex(id);
-
-        if (index >= 0) {
-            const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-            this.set(index, tile);
-
-            return tile;
-        }
-
-        return null;
-    }
-
-    /**
-     * Inserts a tile at a particular index.
-     * If the index is below 0, it does nothing.
-     * @param {number} index - The index where to insert the tile.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    insertAt(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        if (index >= 0) {
-            const tile = TileList.createTile(this.specs, type, direction, ratio);
-
-            this.insert(index, tile);
-
-            return tile;
-        }
-
-        return null;
-    }
-
-    /**
-     * Insert a tile in the list before a particular position.
-     * If the position does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile before which add another tile.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getIndex(id);
-
-        if (index >= 0) {
-            return this.insertAt(index, type, direction, ratio);
-        }
-
-        return null;
-    }
-
-    /**
-     * Insert a tile in the list after a particular position.
-     * If the position does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile after which add another tile.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        const index = this.getIndex(id);
-
-        if (index >= 0) {
-            return this.insertAt(index + 1, type, direction, ratio);
-        }
-
-        return null;
     }
 
     /**

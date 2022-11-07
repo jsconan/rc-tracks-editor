@@ -94,9 +94,9 @@ describe('Track', () => {
         });
 
         await tick();
-        const tile = track.append();
+        track.addTile();
         await tick();
-        track.replace(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, 2);
+        track.replaceTile(3, CURVED_TILE_TYPE, TILE_DIRECTION_RIGHT, 2);
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });

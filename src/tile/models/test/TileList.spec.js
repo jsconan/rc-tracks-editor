@@ -155,23 +155,19 @@ describe('TileList', () => {
 
         it('when trying to add a tile with an invalid type', () => {
             const list = new TileList(specs);
-            const tile = list.append();
-            expect(() => list.append('')).toThrow('A valid type of tile is needed!');
-            expect(() => list.prepend('')).toThrow('A valid type of tile is needed!');
-            expect(() => list.replace(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => list.insertBefore(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => list.insertAfter(tile.id, '')).toThrow('A valid type of tile is needed!');
+            list.addTile();
+            expect(() => list.addTile('')).toThrow('A valid type of tile is needed!');
+            expect(() => list.insertTile(0, '')).toThrow('A valid type of tile is needed!');
+            expect(() => list.replaceTile(0, '')).toThrow('A valid type of tile is needed!');
             expect(() => list.import([{ type: '' }])).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
             const list = new TileList(specs);
-            const tile = list.append();
-            expect(() => list.append(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => list.prepend(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => list.replace(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => list.insertBefore(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => list.insertAfter(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            list.addTile();
+            expect(() => list.addTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.insertTile(0, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => list.replaceTile(0, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
             expect(() => list.import([{ type: CURVED_TILE_TYPE, direction: '' }])).toThrow(
                 'A valid direction is needed!'
             );
@@ -194,7 +190,7 @@ describe('TileList', () => {
 
         list.on('specs', callback);
 
-        list.append();
+        list.addTile();
 
         expect(list.specs).toBeInstanceOf(TileSpecifications);
         expect(list.specs).not.toBe(newSpecs);
@@ -464,7 +460,7 @@ describe('TileList', () => {
             const list = new TileList(specs, source);
             const tile = source[0];
 
-            expect(list.remove(tile.id)).toBeTruthy();
+            expect(list.deleteById(tile.id)).toBeTruthy();
             expect(list).toMatchSnapshot();
         });
 
@@ -472,7 +468,7 @@ describe('TileList', () => {
             const list = new TileList(specs, source);
             const tile = source[1];
 
-            expect(list.remove(tile.id)).toBeTruthy();
+            expect(list.deleteById(tile.id)).toBeTruthy();
             expect(list).toMatchSnapshot();
         });
 
@@ -480,14 +476,14 @@ describe('TileList', () => {
             const list = new TileList(specs, source);
             const tile = source[2];
 
-            expect(list.remove(tile.id)).toBeTruthy();
+            expect(list.deleteById(tile.id)).toBeTruthy();
             expect(list).toMatchSnapshot();
         });
 
         it('at inexistent position', () => {
             const list = new TileList(specs, source);
 
-            expect(list.remove('id')).toBeFalsy();
+            expect(list.deleteById('id')).toBeFalsy();
             expect(list).toMatchSnapshot();
         });
 
@@ -502,7 +498,7 @@ describe('TileList', () => {
 
             list.on('delete', callback);
 
-            list.remove(tile.id);
+            list.deleteById(tile.id);
             expect(callback).toHaveBeenCalledTimes(1);
         });
     });
@@ -564,7 +560,7 @@ describe('TileList', () => {
             it('with the default specifications', () => {
                 const list = new TileList(specs);
 
-                const tile = list.append();
+                const tile = list.addTile();
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(list).toMatchSnapshot();
@@ -573,7 +569,7 @@ describe('TileList', () => {
             it('with a particular type', () => {
                 const list = new TileList(specs);
 
-                const tile = list.append(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                const tile = list.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(list).toMatchSnapshot();
@@ -589,7 +585,7 @@ describe('TileList', () => {
 
                 list.on('add', callback);
 
-                list.append();
+                list.addTile();
                 expect(callback).toHaveBeenCalledTimes(1);
             });
         });
@@ -598,10 +594,10 @@ describe('TileList', () => {
             it('with a tile having default specifications', () => {
                 const list = new TileList(specs);
 
-                list.append();
-                const tile = list.append();
-                list.append();
-                const newTile = list.replace(tile.id);
+                list.addTile();
+                const tile = list.addTile();
+                list.addTile();
+                const newTile = list.replaceTile(1);
 
                 expect(newTile).toBeInstanceOf(TileModel);
                 expect(newTile).not.toBe(tile);
@@ -612,10 +608,10 @@ describe('TileList', () => {
             it('with a tile having a particular type', () => {
                 const list = new TileList(specs);
 
-                list.append();
-                list.append();
-                const tile = list.append();
-                const newTile = list.replace(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                list.addTile();
+                list.addTile();
+                const tile = list.addTile();
+                const newTile = list.replaceTile(2, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(newTile).toBeInstanceOf(TileModel);
                 expect(newTile).not.toBe(tile);
@@ -626,14 +622,14 @@ describe('TileList', () => {
             it('at inexistent position', () => {
                 const list = new TileList(specs);
 
-                list.append();
-                expect(list.replace('id')).toBeNull();
+                list.addTile();
+                expect(list.replaceTile(2)).toBeNull();
                 expect(list).toMatchSnapshot();
             });
 
             it('emits an event when replacing a tile', () => {
                 const list = new TileList(specs);
-                const tile = list.append();
+                const tile = list.addTile();
 
                 const callback = jest.fn().mockImplementation((index, newTile, oldTile) => {
                     expect(index).toBe(0);
@@ -644,43 +640,7 @@ describe('TileList', () => {
 
                 list.on('set', callback);
 
-                list.replace(tile.id);
-                expect(callback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('at the first position', () => {
-            it('with the default specifications', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.prepend();
-
-                expect(tile).toBeInstanceOf(TileModel);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.prepend(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(tile).toBeInstanceOf(TileModel);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('emits an event when adding a tile', () => {
-                const list = new TileList(specs);
-
-                const callback = jest.fn().mockImplementation((index, tile) => {
-                    expect(index).toBe(0);
-                    expect(tile).toBeInstanceOf(TileModel);
-                });
-
-                list.on('add', callback);
-
-                list.prepend();
+                list.replaceTile(0);
                 expect(callback).toHaveBeenCalledTimes(1);
             });
         });
@@ -689,9 +649,9 @@ describe('TileList', () => {
             it('with the default specifications', () => {
                 const list = new TileList(specs);
 
-                list.append();
-                list.append();
-                const tile = list.insertAt(1);
+                list.addTile();
+                list.addTile();
+                const tile = list.insertTile(1);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(list).toMatchSnapshot();
@@ -700,9 +660,9 @@ describe('TileList', () => {
             it('with a particular type', () => {
                 const list = new TileList(specs);
 
-                list.append();
-                list.append();
-                const tile = list.insertAt(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                list.addTile();
+                list.addTile();
+                const tile = list.insertTile(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(list).toMatchSnapshot();
@@ -711,7 +671,7 @@ describe('TileList', () => {
             it('if the index is valid', () => {
                 const list = new TileList(specs);
 
-                const tile = list.insertAt(-1);
+                const tile = list.insertTile(-1);
                 expect(tile).toBeNull();
                 expect(list).toMatchSnapshot();
             });
@@ -726,165 +686,7 @@ describe('TileList', () => {
 
                 list.on('add', callback);
 
-                list.insertAt(0);
-                expect(callback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('before', () => {
-            it('an inexistent position', () => {
-                const list = new TileList(specs);
-
-                list.append();
-
-                expect(list.insertBefore('id')).toBeNull();
-                expect(list).toMatchSnapshot();
-            });
-
-            it('the first position', () => {
-                const list = new TileList(specs);
-
-                const tile = list.append();
-                list.append();
-                const newTile = list.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('the last position', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.append();
-                const newTile = list.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('a position in the middle', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.append();
-                list.append();
-                const newTile = list.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const list = new TileList(specs);
-
-                const tile = list.append();
-                const newTile = list.insertBefore(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('emits an event when inserting a tile', () => {
-                const list = new TileList(specs);
-                const tile = list.append();
-
-                const callback = jest.fn().mockImplementation((index, newTile) => {
-                    expect(index).toBe(0);
-                    expect(newTile).toBeInstanceOf(TileModel);
-                    expect(newTile).not.toBe(tile);
-                });
-
-                list.on('add', callback);
-
-                list.insertBefore(tile.id);
-                expect(callback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('after', () => {
-            it('an inexistent position', () => {
-                const list = new TileList(specs);
-
-                list.append();
-
-                expect(list.insertAfter('id')).toBeNull();
-                expect(list).toMatchSnapshot();
-            });
-
-            it('the first position', () => {
-                const list = new TileList(specs);
-
-                const tile = list.append();
-                list.append();
-                const newTile = list.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('the last position', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.append();
-                const newTile = list.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('a position in the middle', () => {
-                const list = new TileList(specs);
-
-                list.append();
-                const tile = list.append();
-                list.append();
-                const newTile = list.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const list = new TileList(specs);
-
-                const tile = list.append();
-                const newTile = list.insertAfter(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(list).toMatchSnapshot();
-            });
-
-            it('emits an event when inserting a tile', () => {
-                const list = new TileList(specs);
-                const tile = list.append();
-
-                const callback = jest.fn().mockImplementation((index, newTile) => {
-                    expect(index).toBe(1);
-                    expect(newTile).toBeInstanceOf(TileModel);
-                    expect(newTile).not.toBe(tile);
-                });
-
-                list.on('add', callback);
-
-                list.insertAfter(tile.id);
+                list.insertTile(0);
                 expect(callback).toHaveBeenCalledTimes(1);
             });
         });
@@ -892,7 +694,7 @@ describe('TileList', () => {
 
     it('can export to an object', () => {
         const list = new TileList(specs);
-        list.append(CURVED_TILE_TYPE);
+        list.addTile(CURVED_TILE_TYPE);
 
         expect(list.export()).toMatchSnapshot();
     });
@@ -916,7 +718,7 @@ describe('TileList', () => {
         const callback = jest.fn();
         list.on('load', callback);
 
-        list.append();
+        list.addTile();
 
         expect(list.import({})).toBe(list);
         expect(list).toMatchSnapshot();

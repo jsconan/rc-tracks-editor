@@ -94,7 +94,7 @@ describe('SimpleTrack', () => {
         });
 
         await tick();
-        tileList.append();
+        tileList.addTile();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });

@@ -241,7 +241,7 @@ describe('TrackEditorModel', () => {
         const editor = new TrackEditorModel(specs);
         editor.limit(limitedTiles);
 
-        editor.track.append();
+        editor.track.addTile();
         expect([...editor.tiles]).toMatchSnapshot();
     });
 
@@ -250,7 +250,7 @@ describe('TrackEditorModel', () => {
         editor.limit(limitedTiles);
         editor.load(track);
 
-        editor.track.remove(editor.track.last().id);
+        editor.track.deleteById(editor.track.last().id);
         expect([...editor.tiles]).toMatchSnapshot();
     });
 

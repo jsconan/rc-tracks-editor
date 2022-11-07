@@ -70,8 +70,8 @@ describe('tileListStore', () => {
 
         store.subscribe(callback);
 
-        const tile = list.append();
-        list.remove(tile.id);
+        list.addTile();
+        list.delete(0);
         list.update();
 
         expect(callback).toHaveBeenCalledTimes(4);
@@ -233,12 +233,10 @@ describe('tileListStore', () => {
         const unsubscribe = store.subscribe(callback); // callback called
 
         list.setSpecs(specs);
-        const tile1 = list.append(CURVED_TILE_TYPE); // callback called
-        const tile2 = list.prepend(CURVED_TILE_TYPE); // callback called
-        list.remove(tile1.id); // callback called
-        const tile3 = list.replace(tile2.id); // callback called
-        list.insertBefore(tile3.id); // callback called
-        list.insertAfter(tile3.id); // callback called
+        list.addTile(CURVED_TILE_TYPE); // callback called
+        list.insertTile(0, CURVED_TILE_TYPE); // callback called
+        list.delete(0); // callback called
+        list.replaceTile(0); // callback called
         const data = list.export();
         list.clear(); // callback called
         list.import(data); // callback called
@@ -247,8 +245,8 @@ describe('tileListStore', () => {
         list.update(); // callback called
 
         unsubscribe();
-        list.append();
+        list.addTile();
 
-        expect(callback).toHaveBeenCalledTimes(11);
+        expect(callback).toHaveBeenCalledTimes(9);
     });
 });

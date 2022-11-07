@@ -193,8 +193,8 @@ export class TrackModel {
      * @returns {boolean} - Returns `true` if the deletion succeeds. Otherwise, returns `false`.
      * @fires remove
      */
-    remove(id) {
-        return this.tiles.remove(id);
+    deleteById(id) {
+        return this.tiles.deleteById(id);
     }
 
     /**
@@ -207,39 +207,8 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      * @fires add
      */
-    append(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.append(type, direction, ratio);
-    }
-
-    /**
-     * Add a tile to the track, at the first position.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    prepend(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.prepend(type, direction, ratio);
-    }
-
-    /**
-     * Replace a tile in the track.
-     * If the tile does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile to replace.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires remove
-     * @fires add
-     */
-    replace(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.replace(id, type, direction, ratio);
+    addTile(type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        return this.tiles.addTile(type, direction, ratio);
     }
 
     /**
@@ -254,40 +223,25 @@ export class TrackModel {
      * @throws {TypeError} - If the given direction is not valid.
      * @fires add
      */
-    insertAt(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.insertAt(index, type, direction, ratio);
+    insertTile(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        return this.tiles.insertTile(index, type, direction, ratio);
     }
 
     /**
-     * Insert a tile in the track before a particular position.
-     * If the position does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile before which add another tile.
+     * Replace a tile in the track.
+     * If the index does not exist, it does nothing.
+     * @param {number} index - The index of the tile to replace.
      * @param {string} type - The type of tile to add.
      * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
      * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
      * @returns {TileModel} - Returns the added tile.
      * @throws {TypeError} - If the given type is not valid.
      * @throws {TypeError} - If the given direction is not valid.
+     * @fires remove
      * @fires add
      */
-    insertBefore(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.insertBefore(id, type, direction, ratio);
-    }
-
-    /**
-     * Insert a tile in the track after a particular position.
-     * If the position does not exist, it does nothing.
-     * @param {string} id - The unique identifier of the tile after which add another tile.
-     * @param {string} type - The type of tile to add.
-     * @param {string} direction - The direction of the tile, can be either TILE_DIRECTION_RIGHT or TILE_DIRECTION_LEFT.
-     * @param {number} ratio - The size ratio. Usually, it is included in the range [1-4].
-     * @returns {TileModel} - Returns the added tile.
-     * @throws {TypeError} - If the given type is not valid.
-     * @throws {TypeError} - If the given direction is not valid.
-     * @fires add
-     */
-    insertAfter(id, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
-        return this.tiles.insertAfter(id, type, direction, ratio);
+    replaceTile(index, type = STRAIGHT_TILE_TYPE, direction = TILE_DIRECTION_RIGHT, ratio = 1) {
+        return this.tiles.replaceTile(index, type, direction, ratio);
     }
 
     /**

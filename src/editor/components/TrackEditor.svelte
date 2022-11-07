@@ -43,7 +43,7 @@
             selectedIndex = length - 1;
         }
 
-        track.insertAt(selectedIndex + 1, type, direction, ratio);
+        track.insertTile(selectedIndex + 1, type, direction, ratio);
         selectedIndex = selectedIndex + 1;
 
         if (selected) {

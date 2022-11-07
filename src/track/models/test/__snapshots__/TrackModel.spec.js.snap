@@ -41,418 +41,6 @@ exports[`TrackModel can be initialized with a source 1`] = `
 ]
 `;
 
-exports[`TrackModel can create tiles after a position in the middle 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 4,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-54",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-55",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-57",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-56",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles after an inexistent position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 1,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-47",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles after the first position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 3,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-48",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-50",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-49",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles after the last position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 3,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-51",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-52",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-53",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles after with a particular type 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 1,
-    "curved-tile-2" => 1,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-58",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      CurvedTileModel {
-        "direction": "left",
-        "id": "id-59",
-        "ratio": 2,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
 exports[`TrackModel can create tiles at a given position if the index is valid 1`] = `
 TrackModel {
   "builder": TrackBuilder {
@@ -538,7 +126,7 @@ TrackModel {
     "list": [
       StraightTileModel {
         "direction": "right",
-        "id": "id-28",
+        "id": "id-23",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -550,7 +138,7 @@ TrackModel {
       },
       CurvedTileModel {
         "direction": "left",
-        "id": "id-30",
+        "id": "id-25",
         "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -562,7 +150,7 @@ TrackModel {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-29",
+        "id": "id-24",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -625,96 +213,8 @@ TrackModel {
     "list": [
       StraightTileModel {
         "direction": "right",
-        "id": "id-25",
+        "id": "id-20",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-27",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-26",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles at the first position with a particular type 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 1,
-    "curved-tile-2" => 1,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      CurvedTileModel {
-        "direction": "left",
-        "id": "id-23",
-        "ratio": 2,
         "specs": TileSpecifications {
           "barrierChunks": 4,
           "barrierWidth": 5,
@@ -735,72 +235,9 @@ TrackModel {
           "unlockRatio": false,
         },
       },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles at the first position with the default specifications 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 2,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
       StraightTileModel {
         "direction": "right",
         "id": "id-21",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-20",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -927,418 +364,6 @@ TrackModel {
       StraightTileModel {
         "direction": "right",
         "id": "id-6",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles before a position in the middle 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 4,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-39",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-42",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-40",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-41",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles before an inexistent position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 1,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-32",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles before the first position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 3,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-35",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-33",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-34",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles before the last position 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 3,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-36",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-38",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-37",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-    ],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
-  },
-  "tilesStore": TileListStore {},
-}
-`;
-
-exports[`TrackModel can create tiles before with a particular type 1`] = `
-TrackModel {
-  "builder": TrackBuilder {
-    "builder": [Function],
-    "delegate": [Function],
-    "emit": [Function],
-    "listens": [Function],
-    "off": [Function],
-    "on": [Function],
-    "once": [Function],
-    "options": {},
-  },
-  "counter": Map {
-    "straight-tile-1" => 1,
-    "curved-tile-2" => 1,
-  },
-  "counterStore": TileCounterStore {},
-  "delegate": [Function],
-  "emit": [Function],
-  "listens": [Function],
-  "modelsStore": TileModelsStore {},
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-  "tiles": TileList {
-    "delegate": [Function],
-    "emit": [Function],
-    "list": [
-      CurvedTileModel {
-        "direction": "left",
-        "id": "id-44",
-        "ratio": 2,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      StraightTileModel {
-        "direction": "right",
-        "id": "id-43",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -1966,7 +991,7 @@ TrackModel {
     "list": [
       StraightTileModel {
         "direction": "right",
-        "id": "id-63",
+        "id": "id-28",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2030,7 +1055,7 @@ TrackModel {
     "list": [
       CurvedTileModel {
         "direction": "left",
-        "id": "id-64",
+        "id": "id-29",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2042,7 +1067,7 @@ TrackModel {
       },
       StraightTileModel {
         "direction": "right",
-        "id": "id-65",
+        "id": "id-30",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2054,7 +1079,7 @@ TrackModel {
       },
       CurvedTileModel {
         "direction": "right",
-        "id": "id-66",
+        "id": "id-31",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2169,54 +1194,12 @@ exports[`TrackModel can notify changes through the counterStore 6`] = `
 ]
 `;
 
-exports[`TrackModel can notify changes through the counterStore 7`] = `
-[
-  {
-    "count": 2,
-    "model": StraightTileModel {
-      "direction": "right",
-      "id": "straight-tile-1",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "modelId": "straight-tile-1",
-  },
-]
-`;
+exports[`TrackModel can notify changes through the counterStore 7`] = `[]`;
 
 exports[`TrackModel can notify changes through the counterStore 8`] = `
 [
   {
-    "count": 3,
-    "model": StraightTileModel {
-      "direction": "right",
-      "id": "straight-tile-1",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    "modelId": "straight-tile-1",
-  },
-]
-`;
-
-exports[`TrackModel can notify changes through the counterStore 9`] = `[]`;
-
-exports[`TrackModel can notify changes through the counterStore 10`] = `
-[
-  {
-    "count": 3,
+    "count": 1,
     "model": StraightTileModel {
       "direction": "right",
       "id": "straight-tile-1",
@@ -2308,10 +1291,10 @@ exports[`TrackModel can notify changes through the tilesStore 2`] = `
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-67",
+      "id": "id-32",
       "model": CurvedTileModel {
         "direction": "right",
-        "id": "id-67",
+        "id": "id-32",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2356,10 +1339,10 @@ exports[`TrackModel can notify changes through the tilesStore 3`] = `
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-68",
+      "id": "id-33",
       "model": CurvedTileModel {
         "direction": "right",
-        "id": "id-68",
+        "id": "id-33",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2393,10 +1376,10 @@ exports[`TrackModel can notify changes through the tilesStore 3`] = `
     {
       "angle": 90,
       "direction": "right",
-      "id": "id-67",
+      "id": "id-32",
       "model": CurvedTileModel {
         "direction": "right",
-        "id": "id-67",
+        "id": "id-32",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2441,10 +1424,10 @@ exports[`TrackModel can notify changes through the tilesStore 4`] = `
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-68",
+      "id": "id-32",
       "model": CurvedTileModel {
         "direction": "right",
-        "id": "id-68",
+        "id": "id-32",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2489,10 +1472,10 @@ exports[`TrackModel can notify changes through the tilesStore 5`] = `
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-69",
+      "id": "id-34",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-69",
+        "id": "id-34",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2532,100 +1515,25 @@ exports[`TrackModel can notify changes through the tilesStore 5`] = `
 
 exports[`TrackModel can notify changes through the tilesStore 6`] = `
 {
-  "height": 220,
-  "tiles": [
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-70",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-70",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 110,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 0,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 0,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-69",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-69",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 110,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 220,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 110,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 110,
-    },
-  ],
-  "width": 90,
-  "x": -45,
+  "height": 0,
+  "tiles": [],
+  "width": 0,
+  "x": 0,
   "y": 0,
 }
 `;
 
 exports[`TrackModel can notify changes through the tilesStore 7`] = `
 {
-  "height": 330,
+  "height": 110,
   "tiles": [
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-70",
+      "id": "id-35",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-70",
+        "id": "id-35",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 4,
@@ -2655,80 +1563,6 @@ exports[`TrackModel can notify changes through the tilesStore 7`] = `
       "type": "straight-tile",
       "x": 0,
       "y": 0,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-69",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-69",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 110,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 220,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 110,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 110,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-71",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-71",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 220,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 330,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 220,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 220,
     },
   ],
   "width": 90,
@@ -2739,37 +1573,75 @@ exports[`TrackModel can notify changes through the tilesStore 7`] = `
 
 exports[`TrackModel can notify changes through the tilesStore 8`] = `
 {
-  "height": 0,
-  "tiles": [],
-  "width": 0,
-  "x": 0,
+  "height": 14.5,
+  "tiles": [
+    {
+      "angle": 0,
+      "direction": "right",
+      "id": "id-35",
+      "model": StraightTileModel {
+        "direction": "right",
+        "id": "id-35",
+        "ratio": 1,
+        "specs": TileSpecifications {
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
+          "maxRatio": 4,
+          "unlockRatio": false,
+        },
+      },
+      "ratio": 1,
+      "rect": {
+        "height": 14.5,
+        "input": {
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+        },
+        "output": {
+          "angle": 0,
+          "x": 0,
+          "y": 14.5,
+        },
+        "width": 12,
+        "x": -6,
+        "y": 0,
+      },
+      "type": "straight-tile",
+      "x": 0,
+      "y": 0,
+    },
+  ],
+  "width": 12,
+  "x": -6,
   "y": 0,
 }
 `;
 
 exports[`TrackModel can notify changes through the tilesStore 9`] = `
 {
-  "height": 330,
+  "height": 14.5,
   "tiles": [
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-72",
+      "id": "id-35",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-72",
+        "id": "id-35",
         "ratio": 1,
         "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
+          "barrierChunks": 2,
+          "barrierWidth": 1,
+          "laneWidth": 10,
           "maxRatio": 4,
           "unlockRatio": false,
         },
       },
       "ratio": 1,
       "rect": {
-        "height": 110,
+        "height": 14.5,
         "input": {
           "angle": 0,
           "x": 0,
@@ -2778,352 +1650,34 @@ exports[`TrackModel can notify changes through the tilesStore 9`] = `
         "output": {
           "angle": 0,
           "x": 0,
-          "y": 110,
+          "y": 14.5,
         },
-        "width": 90,
-        "x": -45,
+        "width": 12,
+        "x": -6,
         "y": 0,
       },
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 110,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 220,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 110,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 110,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 110,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 220,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 330,
-        },
-        "width": 90,
-        "x": -45,
-        "y": 220,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 220,
-    },
   ],
-  "width": 90,
-  "x": -45,
+  "width": 12,
+  "x": -6,
   "y": 0,
 }
 `;
 
 exports[`TrackModel can notify changes through the tilesStore 10`] = `
 {
-  "height": 43.5,
-  "tiles": [
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-72",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-72",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 0,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 0,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 29,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 14.5,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 14.5,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 29,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 43.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 29,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 29,
-    },
-  ],
-  "width": 12,
-  "x": -6,
-  "y": 0,
-}
-`;
-
-exports[`TrackModel can notify changes through the tilesStore 11`] = `
-{
-  "height": 43.5,
-  "tiles": [
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-72",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-72",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 0,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 0,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 29,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 14.5,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 14.5,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 29,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 43.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 29,
-      },
-      "type": "straight-tile",
-      "x": 0,
-      "y": 29,
-    },
-  ],
-  "width": 12,
-  "x": -6,
-  "y": 0,
-}
-`;
-
-exports[`TrackModel can notify changes through the tilesStore 12`] = `
-{
-  "height": 12.000000000000002,
+  "height": 12,
   "tiles": [
     {
       "angle": 90,
       "direction": "right",
-      "id": "id-72",
+      "id": "id-35",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-72",
+        "id": "id-35",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -3154,98 +1708,24 @@ exports[`TrackModel can notify changes through the tilesStore 12`] = `
       "x": 0,
       "y": 0,
     },
-    {
-      "angle": 90,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 12,
-        "input": {
-          "angle": 90,
-          "x": -14.5,
-          "y": 8.878689293818311e-16,
-        },
-        "output": {
-          "angle": 90,
-          "x": -29,
-          "y": 1.7757378587636622e-15,
-        },
-        "width": 14.5,
-        "x": -29,
-        "y": -5.999999999999999,
-      },
-      "type": "straight-tile",
-      "x": -14.5,
-      "y": 8.878689293818311e-16,
-    },
-    {
-      "angle": 90,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 12,
-        "input": {
-          "angle": 90,
-          "x": -29,
-          "y": 1.7757378587636622e-15,
-        },
-        "output": {
-          "angle": 90,
-          "x": -43.5,
-          "y": 2.6636067881454934e-15,
-        },
-        "width": 14.5,
-        "x": -43.5,
-        "y": -5.999999999999998,
-      },
-      "type": "straight-tile",
-      "x": -29,
-      "y": 1.7757378587636622e-15,
-    },
   ],
-  "width": 43.5,
-  "x": -43.5,
+  "width": 14.5,
+  "x": -14.5,
   "y": -6,
 }
 `;
 
-exports[`TrackModel can notify changes through the tilesStore 13`] = `
+exports[`TrackModel can notify changes through the tilesStore 11`] = `
 {
-  "height": 53.5,
+  "height": 24.5,
   "tiles": [
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-72",
+      "id": "id-35",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-72",
+        "id": "id-35",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -3276,80 +1756,6 @@ exports[`TrackModel can notify changes through the tilesStore 13`] = `
       "x": 10,
       "y": 10,
     },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 10,
-          "y": 24.5,
-        },
-        "output": {
-          "angle": 0,
-          "x": 10,
-          "y": 39,
-        },
-        "width": 12,
-        "x": 4,
-        "y": 24.5,
-      },
-      "type": "straight-tile",
-      "x": 10,
-      "y": 24.5,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 10,
-          "y": 39,
-        },
-        "output": {
-          "angle": 0,
-          "x": 10,
-          "y": 53.5,
-        },
-        "width": 12,
-        "x": 4,
-        "y": 39,
-      },
-      "type": "straight-tile",
-      "x": 10,
-      "y": 39,
-    },
   ],
   "width": 16,
   "x": 0,
@@ -3357,17 +1763,17 @@ exports[`TrackModel can notify changes through the tilesStore 13`] = `
 }
 `;
 
-exports[`TrackModel can notify changes through the tilesStore 14`] = `
+exports[`TrackModel can notify changes through the tilesStore 12`] = `
 {
   "height": 24.5,
   "tiles": [
     {
       "angle": 0,
       "direction": "right",
-      "id": "id-72",
+      "id": "id-35",
       "model": StraightTileModel {
         "direction": "right",
-        "id": "id-72",
+        "id": "id-35",
         "ratio": 1,
         "specs": TileSpecifications {
           "barrierChunks": 2,
@@ -3398,82 +1804,8 @@ exports[`TrackModel can notify changes through the tilesStore 14`] = `
       "x": 16,
       "y": 10,
     },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-73",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-73",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 0,
-      },
-      "type": "straight-tile",
-      "x": 28,
-      "y": 10,
-    },
-    {
-      "angle": 0,
-      "direction": "right",
-      "id": "id-74",
-      "model": StraightTileModel {
-        "direction": "right",
-        "id": "id-74",
-        "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 2,
-          "barrierWidth": 1,
-          "laneWidth": 10,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
-      },
-      "ratio": 1,
-      "rect": {
-        "height": 14.5,
-        "input": {
-          "angle": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "output": {
-          "angle": 0,
-          "x": 0,
-          "y": 14.5,
-        },
-        "width": 12,
-        "x": -6,
-        "y": 0,
-      },
-      "type": "straight-tile",
-      "x": 40,
-      "y": 10,
-    },
   ],
-  "width": 46,
+  "width": 22,
   "x": 0,
   "y": 0,
 }

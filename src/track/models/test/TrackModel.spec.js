@@ -98,23 +98,19 @@ describe('TrackModel', () => {
 
         it('when trying to add a tile with an invalid type', () => {
             const track = new TrackModel(specs);
-            const tile = track.append();
-            expect(() => track.append('')).toThrow('A valid type of tile is needed!');
-            expect(() => track.prepend('')).toThrow('A valid type of tile is needed!');
-            expect(() => track.replace(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => track.insertBefore(tile.id, '')).toThrow('A valid type of tile is needed!');
-            expect(() => track.insertAfter(tile.id, '')).toThrow('A valid type of tile is needed!');
+            track.addTile();
+            expect(() => track.addTile('')).toThrow('A valid type of tile is needed!');
+            expect(() => track.insertTile(0, '')).toThrow('A valid type of tile is needed!');
+            expect(() => track.replaceTile(0, '')).toThrow('A valid type of tile is needed!');
             expect(() => track.import([{ type: '' }])).toThrow('A valid type of tile is needed!');
         });
 
         it('when trying to add a tile with an invalid direction', () => {
             const track = new TrackModel(specs);
-            const tile = track.append();
-            expect(() => track.append(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.prepend(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.replace(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.insertBefore(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
-            expect(() => track.insertAfter(tile.id, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            track.addTile();
+            expect(() => track.addTile(CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => track.insertTile(0, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
+            expect(() => track.replaceTile(0, CURVED_TILE_TYPE, '')).toThrow('A valid direction is needed!');
             expect(() => track.import([{ type: CURVED_TILE_TYPE, direction: '' }])).toThrow(
                 'A valid direction is needed!'
             );
@@ -130,7 +126,7 @@ describe('TrackModel', () => {
 
         track.on('specs', callback);
 
-        track.append();
+        track.addTile();
 
         expect(track.specs).toBeInstanceOf(TileSpecifications);
         expect(track.specs).not.toBe(newSpecs);
@@ -239,7 +235,7 @@ describe('TrackModel', () => {
             const track = new TrackModel(specs, source);
             const tile = source[0];
 
-            expect(track.remove(tile.id)).toBeTruthy();
+            expect(track.deleteById(tile.id)).toBeTruthy();
             expect(track).toMatchSnapshot();
         });
 
@@ -247,7 +243,7 @@ describe('TrackModel', () => {
             const track = new TrackModel(specs, source);
             const tile = source[1];
 
-            expect(track.remove(tile.id)).toBeTruthy();
+            expect(track.deleteById(tile.id)).toBeTruthy();
             expect(track).toMatchSnapshot();
         });
 
@@ -255,14 +251,14 @@ describe('TrackModel', () => {
             const track = new TrackModel(specs, source);
             const tile = source[2];
 
-            expect(track.remove(tile.id)).toBeTruthy();
+            expect(track.deleteById(tile.id)).toBeTruthy();
             expect(track).toMatchSnapshot();
         });
 
         it('at inexistent position', () => {
             const track = new TrackModel(specs, source);
 
-            expect(track.remove('id')).toBeFalsy();
+            expect(track.deleteById('id')).toBeFalsy();
             expect(track).toMatchSnapshot();
         });
 
@@ -276,7 +272,7 @@ describe('TrackModel', () => {
 
             track.on('remove', callback);
 
-            track.remove(tile.id);
+            track.deleteById(tile.id);
             expect(callback).toHaveBeenCalledTimes(1);
         });
     });
@@ -342,7 +338,7 @@ describe('TrackModel', () => {
             it('with the default specifications', () => {
                 const track = new TrackModel(specs);
 
-                const tile = track.append();
+                const tile = track.addTile();
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(track).toMatchSnapshot();
@@ -351,7 +347,7 @@ describe('TrackModel', () => {
             it('with a particular type', () => {
                 const track = new TrackModel(specs);
 
-                const tile = track.append(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                const tile = track.addTile(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(track).toMatchSnapshot();
@@ -366,7 +362,7 @@ describe('TrackModel', () => {
 
                 track.on('add', callback);
 
-                track.append();
+                track.addTile();
                 expect(callback).toHaveBeenCalledTimes(1);
             });
         });
@@ -375,10 +371,10 @@ describe('TrackModel', () => {
             it('with a tile having default specifications', () => {
                 const track = new TrackModel(specs);
 
-                track.append();
-                const tile = track.append();
-                track.append();
-                const newTile = track.replace(tile.id);
+                track.addTile();
+                const tile = track.addTile();
+                track.addTile();
+                const newTile = track.replaceTile(1);
 
                 expect(newTile).toBeInstanceOf(TileModel);
                 expect(newTile).not.toBe(tile);
@@ -389,10 +385,10 @@ describe('TrackModel', () => {
             it('with a tile having a particular type', () => {
                 const track = new TrackModel(specs);
 
-                track.append();
-                track.append();
-                const tile = track.append();
-                const newTile = track.replace(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                track.addTile();
+                track.addTile();
+                const tile = track.addTile();
+                const newTile = track.replaceTile(2, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(newTile).toBeInstanceOf(TileModel);
                 expect(newTile).not.toBe(tile);
@@ -403,14 +399,14 @@ describe('TrackModel', () => {
             it('at inexistent position', () => {
                 const track = new TrackModel(specs);
 
-                track.append();
-                expect(track.replace('id')).toBeNull();
+                track.addTile();
+                expect(track.replaceTile(2)).toBeNull();
                 expect(track).toMatchSnapshot();
             });
 
             it('and emits an event', () => {
                 const track = new TrackModel(specs);
-                const tile = track.append();
+                const tile = track.addTile();
 
                 const removeCallback = jest.fn().mockImplementation(oldTile => {
                     expect(oldTile).toBe(tile);
@@ -423,43 +419,8 @@ describe('TrackModel', () => {
                 track.on('remove', removeCallback);
                 track.on('add', addCallback);
 
-                track.replace(tile.id);
+                track.replaceTile(0);
                 expect(removeCallback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('at the first position', () => {
-            it('with the default specifications', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.prepend();
-
-                expect(tile).toBeInstanceOf(TileModel);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.prepend(CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(tile).toBeInstanceOf(TileModel);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('and emits an event', () => {
-                const track = new TrackModel(specs);
-
-                const callback = jest.fn().mockImplementation(tile => {
-                    expect(tile).toBeInstanceOf(TileModel);
-                });
-
-                track.on('add', callback);
-
-                track.prepend();
-                expect(callback).toHaveBeenCalledTimes(1);
             });
         });
 
@@ -467,9 +428,9 @@ describe('TrackModel', () => {
             it('with the default specifications', () => {
                 const track = new TrackModel(specs);
 
-                track.append();
-                track.append();
-                const tile = track.insertAt(1);
+                track.addTile();
+                track.addTile();
+                const tile = track.insertTile(1);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(track).toMatchSnapshot();
@@ -478,9 +439,9 @@ describe('TrackModel', () => {
             it('with a particular type', () => {
                 const track = new TrackModel(specs);
 
-                track.append();
-                track.append();
-                const tile = track.insertAt(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
+                track.addTile();
+                track.addTile();
+                const tile = track.insertTile(1, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
 
                 expect(tile).toBeInstanceOf(TileModel);
                 expect(track).toMatchSnapshot();
@@ -489,7 +450,7 @@ describe('TrackModel', () => {
             it('if the index is valid', () => {
                 const track = new TrackModel(specs);
 
-                const tile = track.insertAt(-1);
+                const tile = track.insertTile(-1);
                 expect(tile).toBeNull();
                 expect(track).toMatchSnapshot();
             });
@@ -503,163 +464,7 @@ describe('TrackModel', () => {
 
                 track.on('add', callback);
 
-                track.insertAt(0);
-                expect(callback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('before', () => {
-            it('an inexistent position', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-
-                expect(track.insertBefore('id')).toBeNull();
-                expect(track).toMatchSnapshot();
-            });
-
-            it('the first position', () => {
-                const track = new TrackModel(specs);
-
-                const tile = track.append();
-                track.append();
-                const newTile = track.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('the last position', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.append();
-                const newTile = track.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('a position in the middle', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.append();
-                track.append();
-                const newTile = track.insertBefore(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const track = new TrackModel(specs);
-
-                const tile = track.append();
-                const newTile = track.insertBefore(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('and emits an event', () => {
-                const track = new TrackModel(specs);
-                const tile = track.append();
-
-                const callback = jest.fn().mockImplementation(newTile => {
-                    expect(newTile).toBeInstanceOf(TileModel);
-                    expect(newTile).not.toBe(tile);
-                });
-
-                track.on('add', callback);
-
-                track.insertBefore(tile.id);
-                expect(callback).toHaveBeenCalledTimes(1);
-            });
-        });
-
-        describe('after', () => {
-            it('an inexistent position', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-
-                expect(track.insertAfter('id')).toBeNull();
-                expect(track).toMatchSnapshot();
-            });
-
-            it('the first position', () => {
-                const track = new TrackModel(specs);
-
-                const tile = track.append();
-                track.append();
-                const newTile = track.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('the last position', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.append();
-                const newTile = track.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('a position in the middle', () => {
-                const track = new TrackModel(specs);
-
-                track.append();
-                const tile = track.append();
-                track.append();
-                const newTile = track.insertAfter(tile.id);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('with a particular type', () => {
-                const track = new TrackModel(specs);
-
-                const tile = track.append();
-                const newTile = track.insertAfter(tile.id, CURVED_TILE_TYPE, TILE_DIRECTION_LEFT, 2);
-
-                expect(newTile).toBeInstanceOf(TileModel);
-                expect(newTile).not.toBe(tile);
-                expect(newTile.id).not.toBe(tile.id);
-                expect(track).toMatchSnapshot();
-            });
-
-            it('and emits an event', () => {
-                const track = new TrackModel(specs);
-                const tile = track.append();
-
-                const callback = jest.fn().mockImplementation(newTile => {
-                    expect(newTile).toBeInstanceOf(TileModel);
-                    expect(newTile).not.toBe(tile);
-                });
-
-                track.on('add', callback);
-
-                track.insertAfter(tile.id);
+                track.insertTile(0);
                 expect(callback).toHaveBeenCalledTimes(1);
             });
         });
@@ -667,7 +472,7 @@ describe('TrackModel', () => {
 
     it('can export to an object', () => {
         const track = new TrackModel(specs);
-        track.append(CURVED_TILE_TYPE);
+        track.addTile(CURVED_TILE_TYPE);
 
         expect(track.export()).toMatchSnapshot();
     });
@@ -691,7 +496,7 @@ describe('TrackModel', () => {
         const callback = jest.fn();
         track.on('load', callback);
 
-        track.append();
+        track.addTile();
 
         expect(track.import({})).toBe(track);
         expect(track).toMatchSnapshot();
@@ -750,9 +555,9 @@ describe('TrackModel', () => {
 
     describe('can notify changes', () => {
         it.each([
-            ['tilesStore', 14],
+            ['tilesStore', 12],
             ['modelsStore', 6],
-            ['counterStore', 10]
+            ['counterStore', 8]
         ])('through the %s', (name, count) => {
             const track = new TrackModel(specs);
             const store = track[name];
@@ -764,12 +569,10 @@ describe('TrackModel', () => {
             const unsubscribe = store.subscribe(callback); // callback called
 
             track.setSpecs(specs);
-            const tile1 = track.append(CURVED_TILE_TYPE); // event: add (add) / (addtile, addmodel)
-            const tile2 = track.prepend(CURVED_TILE_TYPE); // event: add (add) / (addtile)
-            track.remove(tile1.id); // event: delete (remove) / (removetile)
-            const tile3 = track.replace(tile2.id); // event: set (add, remove) / (removetile, removemodel, addtile, addmodel)
-            track.insertBefore(tile3.id); // event: add (add) / (addtile)
-            track.insertAfter(tile3.id); // event: add (add) / (addtile)
+            track.addTile(CURVED_TILE_TYPE); // event: add (add) / (addtile, addmodel)
+            track.insertTile(0, CURVED_TILE_TYPE); // event: add (add) / (addtile)
+            track.delete(0); // event: delete (remove) / (removetile)
+            track.replaceTile(0); // event: set (add, remove) / (removetile, removemodel, addtile, addmodel)
             const data = track.export();
             track.clear(); // event: clear (clear) / (rebuild)
             track.import(data); // event: load (load) / (rebuild)
@@ -780,7 +583,7 @@ describe('TrackModel', () => {
             track.setBuilder(buildList); // event: builder (rebuild) / (none)
 
             unsubscribe();
-            track.append();
+            track.addTile();
 
             expect(callback).toHaveBeenCalledTimes(count);
         });

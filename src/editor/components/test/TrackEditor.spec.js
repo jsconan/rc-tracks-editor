@@ -78,7 +78,7 @@ describe('TrackEditor', () => {
         const rendered = render(TrackEditor, { props });
 
         await tick();
-        editor.track.append();
+        editor.track.addTile();
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });

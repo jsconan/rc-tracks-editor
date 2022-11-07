@@ -70,262 +70,6 @@ exports[`TileList can be initialized with a source 1`] = `
 ]
 `;
 
-exports[`TileList can create tiles after a position in the middle 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-74",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-75",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-77",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-76",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles after an inexistent position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-67",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles after the first position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-68",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-70",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-69",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles after the last position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-71",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-72",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-73",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles after with a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-78",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    CurvedTileModel {
-      "direction": "left",
-      "id": "id-79",
-      "ratio": 2,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
 exports[`TileList can create tiles at a given position if the index is valid 1`] = `
 TileList {
   "delegate": [Function],
@@ -352,7 +96,7 @@ TileList {
   "list": [
     StraightTileModel {
       "direction": "right",
-      "id": "id-48",
+      "id": "id-43",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -364,7 +108,7 @@ TileList {
     },
     CurvedTileModel {
       "direction": "left",
-      "id": "id-50",
+      "id": "id-45",
       "ratio": 2,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -376,7 +120,7 @@ TileList {
     },
     StraightTileModel {
       "direction": "right",
-      "id": "id-49",
+      "id": "id-44",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -408,64 +152,8 @@ TileList {
   "list": [
     StraightTileModel {
       "direction": "right",
-      "id": "id-45",
+      "id": "id-40",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-47",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-46",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles at the first position with a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    CurvedTileModel {
-      "direction": "left",
-      "id": "id-43",
-      "ratio": 2,
       "specs": TileSpecifications {
         "barrierChunks": 4,
         "barrierWidth": 5,
@@ -486,41 +174,9 @@ TileList {
         "unlockRatio": false,
       },
     },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles at the first position with the default specifications 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
     StraightTileModel {
       "direction": "right",
       "id": "id-41",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-40",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -585,262 +241,6 @@ TileList {
     StraightTileModel {
       "direction": "right",
       "id": "id-26",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles before a position in the middle 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-59",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-62",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-60",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-61",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles before an inexistent position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-52",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles before the first position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-55",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-53",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-54",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles before the last position 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-56",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-58",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-57",
-      "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-  ],
-  "listens": [Function],
-  "off": [Function],
-  "on": [Function],
-  "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
-}
-`;
-
-exports[`TileList can create tiles before with a particular type 1`] = `
-TileList {
-  "delegate": [Function],
-  "emit": [Function],
-  "list": [
-    CurvedTileModel {
-      "direction": "left",
-      "id": "id-64",
-      "ratio": 2,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
-    },
-    StraightTileModel {
-      "direction": "right",
-      "id": "id-63",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -1026,7 +426,7 @@ TileList {
   "list": [
     StraightTileModel {
       "direction": "right",
-      "id": "id-83",
+      "id": "id-48",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -1058,7 +458,7 @@ TileList {
   "list": [
     CurvedTileModel {
       "direction": "left",
-      "id": "id-84",
+      "id": "id-49",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -1070,7 +470,7 @@ TileList {
     },
     StraightTileModel {
       "direction": "right",
-      "id": "id-85",
+      "id": "id-50",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,
@@ -1082,7 +482,7 @@ TileList {
     },
     CurvedTileModel {
       "direction": "right",
-      "id": "id-86",
+      "id": "id-51",
       "ratio": 1,
       "specs": TileSpecifications {
         "barrierChunks": 4,

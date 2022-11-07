@@ -90,8 +90,8 @@ describe('TrackStats', () => {
         });
 
         await tick();
-        track.append();
-        track.append(CURVED_TILE_ENLARGED_TYPE);
+        track.addTile();
+        track.addTile(CURVED_TILE_ENLARGED_TYPE);
         await tick();
         expect(rendered.container).toMatchSnapshot();
     });
