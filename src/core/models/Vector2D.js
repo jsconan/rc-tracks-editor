@@ -602,15 +602,25 @@ export class Vector2D {
 
     /**
      * Creates a vector from the given polar coordinates.
-     * @param {number} radius - The radius coordinate.
+     * @param {number|Vector2D} radius - The radius coordinate.
+     * Elliptic polar coordinates can be given through a vector.
      * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {Vector2D} - A new vector with the given coordinates.
      */
     static polar(radius = 0, angle = 0, center = Vector2D.ORIGIN) {
+        let rx, ry;
+        if (radius instanceof Vector2D) {
+            rx = radius.x;
+            ry = radius.y;
+        } else {
+            rx = radius;
+            ry = radius;
+        }
+
         const rad = toRadians(angle);
-        const x = center.x + Math.cos(rad) * radius;
-        const y = center.y + Math.sin(rad) * radius;
+        const x = center.x + Math.cos(rad) * rx;
+        const y = center.y + Math.sin(rad) * ry;
 
         return new Vector2D(x, y);
     }

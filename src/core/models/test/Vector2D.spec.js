@@ -786,6 +786,15 @@ describe('Vector2D', () => {
                     expect(v.y).toBeCloseTo(0, 5);
                 });
 
+                it('at the given polar coordinates using multiple radius', () => {
+                    const r = Vector2D.vector(10, 20);
+                    const v = Vector2D.polar(r, 45);
+
+                    expect(v).toBeInstanceOf(Vector2D);
+                    expect(v.x).toBe(7.0710678118654755);
+                    expect(v.y).toBe(14.14213562373095);
+                });
+
                 it('at the given polar coordinates around the given center', () => {
                     const c = new Vector2D(10, 10);
                     const v = Vector2D.polar(10, 90, c);
