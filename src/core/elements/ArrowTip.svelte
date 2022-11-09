@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList, lineTo, moveTo } from '../../core/helpers';
-    import { Vector2D } from '../../core/models';
+    import { attributeList, lineTo, moveTo } from '../helpers';
+    import { Vector2D } from '../models';
 
     export let x = 0;
     export let y = 0;
