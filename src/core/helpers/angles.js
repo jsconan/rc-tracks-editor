@@ -128,10 +128,10 @@ export const quadrantRange = (start, end) => {
  */
 export const enlargeArc = (angle, radius, addition) => {
     if (!addition) {
-        return angle;
+        return degrees(angle);
     }
 
     const circum = Math.PI * radius * 2;
-    const length = (circum * angle) / CIRCLE + addition;
+    const length = (circum * degrees(angle)) / CIRCLE + addition;
     return Math.min((length * CIRCLE) / circum, CIRCLE);
 };
