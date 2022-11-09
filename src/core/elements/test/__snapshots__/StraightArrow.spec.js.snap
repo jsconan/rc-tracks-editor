@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StraightArrow renders with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -0.5 0.16666666666666666 L -0.5 0.16666666666666666 L -0.5 0.5 L 0.5 0 L -0.5 -0.5 L -0.5 -0.16666666666666666 L -0.5 -0.16666666666666666 Z"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow renders with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter angle is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 64.17468245269451 112.94872981077808 L 89.17468245269451 156.25 L 78.34936490538904 162.5 L 125 193.30127018922192 L 121.65063509461096 137.5 L 110.82531754730549 143.75 L 85.82531754730547 100.44872981077808 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="blue"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter height is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="red"
+      stroke="blue"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter stroke-width is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="red"
+      stroke-width="3"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter thickness is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 44.19872981077806 146.65063509461098 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 69.19872981077806 103.34936490538904 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter transform is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 135.82531754730547 L 93.75 160.82531754730547 L 87.5 171.65063509461098 L 143.30127018922195 175 L 112.5 128.34936490538902 L 106.25 139.17468245269453 L 62.94872981077806 114.17468245269453 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(180)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter width is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 72.09936490538902 148.32531754730547 L 72.09936490538902 148.32531754730547 L 65.84936490538902 159.15063509461098 L 121.65063509461098 162.5 L 90.84936490538902 115.84936490538902 L 84.59936490538902 126.67468245269453 L 84.59936490538902 126.67468245269453 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter x is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M -9.551270189221938 135.82531754730547 L 33.75 160.82531754730547 L 27.5 171.65063509461098 L 83.30127018922194 175 L 52.5 128.34936490538902 L 46.25 139.17468245269453 L 2.9487298107780617 114.17468245269453 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`StraightArrow updates when the parameter y is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 50.44872981077806 25.825317547305488 L 93.75 50.82531754730549 L 87.5 61.65063509461097 L 143.30127018922195 65 L 112.5 18.34936490538903 L 106.25 29.174682452694515 L 62.94872981077806 4.174682452694519 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
