@@ -42,5 +42,40 @@ export const lineTo = v => `L ${v.x} ${v.y}`;
 export const arcTo = (r, v, l = 0, s = 0, a = 0) => `A ${r} ${r} ${a} ${l} ${s} ${v.x} ${v.y}`;
 
 /**
+ * Renders path commands for drawing a polyline.
+ * @param {Vector2D[]} points - The list of points defining the polyline.
+ * @param {boolean} open - A flag to open the polyline using the MoveTo command instead of LineTo.
+ * @param {boolean} close - A flag to close the polyline.
+ * @returns {string} - Returns the SVG path.
+ */
+export const pathLine = (points, open = true, close = true) => {
+    let path = '';
+
+    if (!Array.isArray(points) || !points.length) {
+        return path;
+    }
+
+    let i = 0;
+    const len = points.length;
+    if (open && len > 1) {
+        path = moveTo(points[0]);
+        i++;
+    }
+
+    while (i < len) {
+        const point = points[i++];
+        if (point) {
+            path = `${path} ${lineTo(point)}`;
+        }
+    }
+
+    if (close && len > 1) {
+        path = `${path} Z`;
+    }
+
+    return path.trim();
+};
+
+/**
  * @typedef {import('../models').Vector2D} Vector2D
  */

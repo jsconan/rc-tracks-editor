@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList, lineTo, moveTo } from '../helpers';
+    import { attributeList, pathLine } from '../helpers';
     import { Vector2D } from '../models';
 
     export let x = 0;
@@ -27,12 +27,14 @@
         const sideV = arrowHeight / 2;
         const center = new Vector2D(centerX, centerY);
 
-        const edge0 = new Vector2D(-sideH / 2, 0).rotate(rotation).add(center);
-        const edge1 = new Vector2D(-sideH, -sideV).rotate(rotation).add(center);
-        const edge2 = new Vector2D(sideH, 0).rotate(rotation).add(center);
-        const edge3 = new Vector2D(-sideH, sideV).rotate(rotation).add(center);
+        const points = [
+            new Vector2D(-sideH / 2, 0).rotate(rotation).add(center),
+            new Vector2D(-sideH, -sideV).rotate(rotation).add(center),
+            new Vector2D(sideH, 0).rotate(rotation).add(center),
+            new Vector2D(-sideH, sideV).rotate(rotation).add(center)
+        ];
 
-        return `${moveTo(edge0)} ${lineTo(edge1)} ${lineTo(edge2)} ${lineTo(edge3)} Z`;
+        return pathLine(points);
     }
 </script>
 
