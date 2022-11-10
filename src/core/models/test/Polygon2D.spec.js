@@ -19,7 +19,13 @@
 import { Polygon2D } from '../Polygon2D.js';
 import { Vector2D } from '../Vector2D.js';
 
-const points = [new Vector2D(10, 4), new Vector2D(10, 10), new Vector2D(4, 10), new Vector2D(0, 0)];
+const p1 = new Vector2D(10, 4);
+const p2 = new Vector2D(10, 10);
+const p3 = new Vector2D(4, 10);
+const p4 = new Vector2D(0, 0);
+const p5 = new Vector2D(-5, -6);
+const p6 = new Vector2D(-10, 7);
+const points = [p1, p2, p3, p4, p5, p6];
 
 describe('Polygon2D', () => {
     it('is a class', () => {
@@ -28,38 +34,46 @@ describe('Polygon2D', () => {
 
     describe('can build a polygon', () => {
         it('from an empty list of points', () => {
-            const p = new Polygon2D();
+            const polygon = new Polygon2D();
 
-            expect(p).toBeInstanceOf(Polygon2D);
-            expect(p.points).toStrictEqual([]);
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual([]);
         });
 
         it('from a list of points given in an array', () => {
-            const p = new Polygon2D(points);
+            const polygon = new Polygon2D(points);
 
-            expect(p).toBeInstanceOf(Polygon2D);
-            expect(p.points).toStrictEqual(points);
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual(points);
         });
 
         it('from a list of points given as separated parameters', () => {
-            const p = new Polygon2D(...points);
+            const polygon = new Polygon2D(...points);
 
-            expect(p).toBeInstanceOf(Polygon2D);
-            expect(p.points).toStrictEqual(points);
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual(points);
+        });
+
+        it('from a list of points given as a mix of Vector2D and Polygon2D', () => {
+            const p = new Polygon2D(p3, p4, p5);
+            const polygon = new Polygon2D(p1, p2, p, p6);
+
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual(points);
         });
 
         it('from a list of points given as separated arrays', () => {
-            const p = new Polygon2D(points.slice(0, 2), points.slice(2));
+            const polygon = new Polygon2D(points.slice(0, 2), points.slice(2));
 
-            expect(p).toBeInstanceOf(Polygon2D);
-            expect(p.points).toStrictEqual(points);
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual(points);
         });
 
         it('from a list of points given as arrays and separated parameters', () => {
-            const p = new Polygon2D(points.slice(0, 2), ...points.slice(2));
+            const polygon = new Polygon2D(points.slice(0, 2), ...points.slice(2));
 
-            expect(p).toBeInstanceOf(Polygon2D);
-            expect(p.points).toStrictEqual(points);
+            expect(polygon).toBeInstanceOf(Polygon2D);
+            expect(polygon.points).toStrictEqual(points);
         });
     });
 
@@ -79,7 +93,7 @@ describe('Polygon2D', () => {
         it('if a point is attempted to be set at a wrong index', () => {
             const polygon = new Polygon2D(points);
             expect(() => polygon.set(-1, new Vector2D())).toThrow('The list index is out of bounds!');
-            expect(() => polygon.set(4, new Vector2D())).toThrow('The list index is out of bounds!');
+            expect(() => polygon.set(6, new Vector2D())).toThrow('The list index is out of bounds!');
         });
 
         it('if a point to insert is not a Vector2D', () => {
@@ -99,7 +113,7 @@ describe('Polygon2D', () => {
 
     it('has a length', () => {
         expect(new Polygon2D().length).toBe(0);
-        expect(new Polygon2D(points).length).toBe(4);
+        expect(new Polygon2D(points).length).toBe(6);
     });
 
     it('implements the iteration protocol', () => {
@@ -176,7 +190,9 @@ describe('Polygon2D', () => {
         expect(polygon.get(1)).toBe(points[1]);
         expect(polygon.get(2)).toBe(points[2]);
         expect(polygon.get(3)).toBe(points[3]);
-        expect(polygon.get(4)).toBeUndefined();
+        expect(polygon.get(4)).toBe(points[4]);
+        expect(polygon.get(5)).toBe(points[5]);
+        expect(polygon.get(6)).toBeUndefined();
     });
 
     it('can set a point to a particular index', () => {
@@ -191,41 +207,125 @@ describe('Polygon2D', () => {
     });
 
     describe('can insert points', () => {
-        it('at a particular index', () => {
-            const polygon = new Polygon2D(points);
+        describe('from existing vectors', () => {
+            it('at a particular index', () => {
+                const polygon = new Polygon2D(points);
 
-            expect(polygon.insert).toEqual(expect.any(Function));
+                expect(polygon.insert).toEqual(expect.any(Function));
 
-            expect(polygon.insert(1, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
-            expect([...polygon]).toMatchSnapshot();
+                expect(polygon.insert(1, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the beginning', () => {
+                const polygon = new Polygon2D(points);
+
+                expect(polygon.insert).toEqual(expect.any(Function));
+
+                expect(polygon.insert(0, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the end', () => {
+                const polygon = new Polygon2D(points);
+
+                expect(polygon.insert).toEqual(expect.any(Function));
+
+                expect(polygon.insert(6, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
         });
 
-        it('at the beginning', () => {
-            const polygon = new Polygon2D(points);
+        describe('from polygons', () => {
+            it('at a particular index', () => {
+                const p = new Polygon2D(p4, p5);
+                const polygon = new Polygon2D(p1, p2, p3);
 
-            expect(polygon.insert).toEqual(expect.any(Function));
+                expect(polygon.insert).toEqual(expect.any(Function));
 
-            expect(polygon.insert(0, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
-            expect([...polygon]).toMatchSnapshot();
+                expect(polygon.insert(1, p, p6)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the beginning', () => {
+                const p = new Polygon2D(p4, p5);
+                const polygon = new Polygon2D(p1, p2, p3);
+
+                expect(polygon.insert).toEqual(expect.any(Function));
+
+                expect(polygon.insert(0, p, p6)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the end', () => {
+                const p = new Polygon2D(p4, p5);
+                const polygon = new Polygon2D(p1, p2, p3);
+
+                expect(polygon.insert).toEqual(expect.any(Function));
+
+                expect(polygon.insert(3, p, p6)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
         });
 
-        it('at the end', () => {
-            const polygon = new Polygon2D(points);
+        describe('from coordinates', () => {
+            it('at a particular index', () => {
+                const polygon = new Polygon2D(points);
 
-            expect(polygon.insert).toEqual(expect.any(Function));
+                expect(polygon.insertPoint).toEqual(expect.any(Function));
 
-            expect(polygon.insert(4, new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
-            expect([...polygon]).toMatchSnapshot();
+                expect(polygon.insertPoint(1, 1, 2)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the beginning', () => {
+                const polygon = new Polygon2D(points);
+
+                expect(polygon.insertPoint).toEqual(expect.any(Function));
+
+                expect(polygon.insertPoint(0, 1, 2)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
+
+            it('at the end', () => {
+                const polygon = new Polygon2D(points);
+
+                expect(polygon.insertPoint).toEqual(expect.any(Function));
+
+                expect(polygon.insertPoint(4, 1, 2)).toBe(polygon);
+                expect([...polygon]).toMatchSnapshot();
+            });
         });
     });
 
-    it('can add points to the polygon', () => {
-        const polygon = new Polygon2D(points);
+    describe('can add points to the polygon', () => {
+        it('from existing vectors', () => {
+            const polygon = new Polygon2D(points);
 
-        expect(polygon.add).toEqual(expect.any(Function));
+            expect(polygon.add).toEqual(expect.any(Function));
 
-        expect(polygon.add(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
-        expect([...polygon]).toMatchSnapshot();
+            expect(polygon.add(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(polygon);
+            expect([...polygon]).toMatchSnapshot();
+        });
+
+        it('from polygon', () => {
+            const p = new Polygon2D(p4, p5);
+            const polygon = new Polygon2D(p1, p2, p3);
+
+            expect(polygon.add).toEqual(expect.any(Function));
+
+            expect(polygon.add(p, p6)).toBe(polygon);
+            expect([...polygon]).toMatchSnapshot();
+        });
+
+        it('from coordinates', () => {
+            const polygon = new Polygon2D(points);
+
+            expect(polygon.addPoint).toEqual(expect.any(Function));
+
+            expect(polygon.addPoint(1, 2)).toBe(polygon);
+            expect([...polygon]).toMatchSnapshot();
+        });
     });
 
     it('can remove points from a particular index', () => {
@@ -233,8 +333,8 @@ describe('Polygon2D', () => {
 
         expect(polygon.delete).toEqual(expect.any(Function));
 
-        expect(polygon.delete(2, 2)).toBe(2);
-        expect(polygon.delete(2)).toBe(0);
+        expect(polygon.delete(4, 2)).toBe(2);
+        expect(polygon.delete(4)).toBe(0);
         expect([...polygon]).toMatchSnapshot();
     });
 
@@ -258,6 +358,36 @@ describe('Polygon2D', () => {
 
         expect(polygon.load(points)).toBe(polygon);
         expect([...polygon]).toEqual(points);
+
+        const p = new Polygon2D();
+        expect(p.load(polygon)).toBe(p);
+        expect([...p]).toEqual(points);
+    });
+
+    it('can move the points', () => {
+        const polygon = new Polygon2D(points);
+
+        expect(polygon.move).toEqual(expect.any(Function));
+
+        expect(polygon.move(new Vector2D(5, 8))).toMatchSnapshot();
+    });
+
+    describe('can rotate the points', () => {
+        it('around the origin', () => {
+            const polygon = new Polygon2D(points);
+
+            expect(polygon.rotate).toEqual(expect.any(Function));
+
+            expect(polygon.rotate(30)).toMatchSnapshot();
+        });
+
+        it('around the given center', () => {
+            const polygon = new Polygon2D(points);
+
+            expect(polygon.rotateAround).toEqual(expect.any(Function));
+
+            expect(polygon.rotateAround(30, new Vector2D(5, 8))).toMatchSnapshot();
+        });
     });
 
     describe('can export the points', () => {
@@ -265,7 +395,7 @@ describe('Polygon2D', () => {
             const polygon = new Polygon2D(points);
 
             expect(polygon.toString).toEqual(expect.any(Function));
-            expect(polygon.toString()).toBe('10,4 10,10 4,10 0,0');
+            expect(polygon.toString()).toMatchSnapshot();
         });
 
         it('to an array', () => {
@@ -274,6 +404,17 @@ describe('Polygon2D', () => {
             expect(polygon.toArray).toEqual(expect.any(Function));
             expect(polygon.toArray()).toEqual(points);
         });
+    });
+
+    it('extracts points from an iterator', () => {
+        const polygon = new Polygon2D(p3, p4, p5);
+
+        expect(Polygon2D.extractPoints([])).toStrictEqual([]);
+        expect(Polygon2D.extractPoints([p1, p2, p3])).toStrictEqual([p1, p2, p3]);
+        expect(Polygon2D.extractPoints([p1, p2, polygon, p6])).toStrictEqual([p1, p2, p3, p4, p5, p6]);
+
+        expect(() => Polygon2D.extractPoints({})).toThrow('points is not iterable');
+        expect(() => Polygon2D.extractPoints([{}])).toThrow('The object must be an instance of Vector2D!');
     });
 
     it('can validate a list contains valid points', () => {

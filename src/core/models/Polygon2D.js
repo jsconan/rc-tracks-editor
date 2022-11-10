@@ -116,30 +116,47 @@ export class Polygon2D {
     /**
      * Inserts points at a particular index.
      * @param {number} index - The index where to insert the points.
-     * @param {...Vector2D} points - The points to insert at the index.
+     * @param {...Vector2D|...Polygon2D} points - The points to insert at the index.
      * @returns {Polygon2D} - Chains the instance.
      * @throws {TypeError} - If the given point is not a Vector2D.
      */
     insert(index, ...points) {
-        Polygon2D.validatePoints(points);
-
-        this.points.splice(index, 0, ...points);
+        this.points.splice(index, 0, ...Polygon2D.extractPoints(points));
 
         return this;
     }
 
     /**
+     * Inserts a point at a particular index from the given coordinates.
+     * @param {number} index - The index where to insert the point.
+     * @param {number} x - The X-coordinate of the point to insert.
+     * @param {number} y - The Y-coordinate  of the point to insert.
+     * @returns {Polygon2D} - Chains the instance.
+     */
+    insertPoint(index, x, y) {
+        return this.insert(index, new Vector2D(x, y));
+    }
+
+    /**
      * Adds points at the end of the polygon.
-     * @param {...Vector2D} points - The points to add.
+     * @param {...Vector2D|...Polygon2D} points - The points to add.
      * @returns {Polygon2D} - Chains the instance.
      * @throws {TypeError} - If the given point is not a Vector2D.
      */
     add(...points) {
-        Polygon2D.validatePoints(points);
-
-        this.points.push(...points);
+        this.points.push(...Polygon2D.extractPoints(points));
 
         return this;
+    }
+
+    /**
+     * Inserts a point at the end of the polygon from the given coordinates.
+     * @param {number} x - The X-coordinate of the point to insert.
+     * @param {number} y - The Y-coordinate  of the point to insert.
+     * @returns {Polygon2D} - Chains the instance.
+     */
+    addPoint(x, y) {
+        return this.add(new Vector2D(x, y));
     }
 
     /**
@@ -176,9 +193,41 @@ export class Polygon2D {
             return this;
         }
 
-        Polygon2D.validatePoints(iterator);
+        this.points = Polygon2D.extractPoints(iterator);
 
-        this.points = [...iterator];
+        return this;
+    }
+
+    /**
+     * Move the polygon by the given vector.
+     * @param {Vector2D} vector - The move to apply to the each point of the polygon.
+     * @returns {Polygon2D} - Chains the instance.
+     */
+    move(vector) {
+        this.points = this.points.map(point => point.add(vector));
+
+        return this;
+    }
+
+    /**
+     * Rotate the polygon by the given angle around the origin (0, 0).
+     * @param {number} angle - The rotation angle.
+     * @returns {Polygon2D} - Chains the instance.
+     */
+    rotate(angle) {
+        this.points = this.points.map(point => point.rotate(angle));
+
+        return this;
+    }
+
+    /**
+     * Rotate the polygon by the given angle around the given center.
+     * @param {number} angle - The rotation angle.
+     * @param {Vector2D} center - The rotation center.
+     * @returns {Polygon2D} - Chains the instance.
+     */
+    rotateAround(angle, center) {
+        this.points = this.points.map(point => point.rotateAround(angle, center));
 
         return this;
     }
@@ -197,6 +246,28 @@ export class Polygon2D {
      */
     toArray() {
         return [...this.points];
+    }
+
+    /**
+     * Extracts points from an iterator. It allows instances of Vector2D and Polygon2D.
+     * Other values throw an error.
+     * @param {*} points - An iterable object for listing the points.
+     * @returns {Vector2D[]} - Returns a list of points.
+     * @throws {TypeError} - If a point is not a Vector2D.
+     */
+    static extractPoints(points) {
+        let list = [];
+        for (const p of points) {
+            if (p instanceof this) {
+                list = [...list, ...p.points];
+                continue;
+            }
+
+            Vector2D.validateInstance(p);
+            list.push(p);
+        }
+
+        return list;
     }
 
     /**

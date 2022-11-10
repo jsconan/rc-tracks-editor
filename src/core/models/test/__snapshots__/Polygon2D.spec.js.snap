@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Polygon2D can add points to the polygon 1`] = `
+exports[`Polygon2D can add points to the polygon from coordinates 1`] = `
 [
   Vector2D {
     "x": 10,
@@ -17,6 +17,47 @@ exports[`Polygon2D can add points to the polygon 1`] = `
   Vector2D {
     "x": 0,
     "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+]
+`;
+
+exports[`Polygon2D can add points to the polygon from existing vectors 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
   },
   Vector2D {
     "x": 1,
@@ -29,18 +70,10 @@ exports[`Polygon2D can add points to the polygon 1`] = `
 ]
 `;
 
-exports[`Polygon2D can insert points at a particular index 1`] = `
+exports[`Polygon2D can add points to the polygon from polygon 1`] = `
 [
   Vector2D {
     "x": 10,
-    "y": 4,
-  },
-  Vector2D {
-    "x": 1,
-    "y": 2,
-  },
-  Vector2D {
-    "x": 3,
     "y": 4,
   },
   Vector2D {
@@ -54,23 +87,29 @@ exports[`Polygon2D can insert points at a particular index 1`] = `
   Vector2D {
     "x": 0,
     "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
   },
 ]
 `;
 
-exports[`Polygon2D can insert points at the beginning 1`] = `
+exports[`Polygon2D can export the points to a string 1`] = `"10,4 10,10 4,10 0,0 -5,-6 -10,7"`;
+
+exports[`Polygon2D can insert points from coordinates at a particular index 1`] = `
 [
-  Vector2D {
-    "x": 1,
-    "y": 2,
-  },
-  Vector2D {
-    "x": 3,
-    "y": 4,
-  },
   Vector2D {
     "x": 10,
     "y": 4,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
   },
   Vector2D {
     "x": 10,
@@ -83,11 +122,52 @@ exports[`Polygon2D can insert points at the beginning 1`] = `
   Vector2D {
     "x": 0,
     "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
   },
 ]
 `;
 
-exports[`Polygon2D can insert points at the end 1`] = `
+exports[`Polygon2D can insert points from coordinates at the beginning 1`] = `
+[
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from coordinates at the end 1`] = `
 [
   Vector2D {
     "x": 10,
@@ -110,8 +190,210 @@ exports[`Polygon2D can insert points at the end 1`] = `
     "y": 2,
   },
   Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from existing vectors at a particular index 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
     "x": 3,
     "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from existing vectors at the beginning 1`] = `
+[
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from existing vectors at the end 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+  Vector2D {
+    "x": 1,
+    "y": 2,
+  },
+  Vector2D {
+    "x": 3,
+    "y": 4,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from polygons at a particular index 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from polygons at the beginning 1`] = `
+[
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+]
+`;
+
+exports[`Polygon2D can insert points from polygons at the end 1`] = `
+[
+  Vector2D {
+    "x": 10,
+    "y": 4,
+  },
+  Vector2D {
+    "x": 10,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
   },
 ]
 `;
@@ -134,7 +416,46 @@ exports[`Polygon2D can map its points 1`] = `
     "x": 0,
     "y": 0,
   },
+  Vector2D {
+    "x": -50,
+    "y": -60,
+  },
+  Vector2D {
+    "x": -100,
+    "y": 70,
+  },
 ]
+`;
+
+exports[`Polygon2D can move the points 1`] = `
+Polygon2D {
+  "points": [
+    Vector2D {
+      "x": 15,
+      "y": 12,
+    },
+    Vector2D {
+      "x": 15,
+      "y": 18,
+    },
+    Vector2D {
+      "x": 9,
+      "y": 18,
+    },
+    Vector2D {
+      "x": 5,
+      "y": 8,
+    },
+    Vector2D {
+      "x": 0,
+      "y": 2,
+    },
+    Vector2D {
+      "x": -5,
+      "y": 15,
+    },
+  ],
+}
 `;
 
 exports[`Polygon2D can remove points from a particular index 1`] = `
@@ -147,7 +468,77 @@ exports[`Polygon2D can remove points from a particular index 1`] = `
     "x": 10,
     "y": 10,
   },
+  Vector2D {
+    "x": 4,
+    "y": 10,
+  },
+  Vector2D {
+    "x": 0,
+    "y": 0,
+  },
 ]
+`;
+
+exports[`Polygon2D can rotate the points around the given center 1`] = `
+Polygon2D {
+  "points": [
+    Vector2D {
+      "x": 11.330127018922195,
+      "y": 7.035898384862245,
+    },
+    Vector2D {
+      "x": 8.330127018922195,
+      "y": 12.232050807568877,
+    },
+    Vector2D {
+      "x": 3.1339745962155616,
+      "y": 9.232050807568877,
+    },
+    Vector2D {
+      "x": 4.6698729810778055,
+      "y": -1.4282032302755088,
+    },
+    Vector2D {
+      "x": 3.339745962155612,
+      "y": -9.124355652982143,
+    },
+    Vector2D {
+      "x": -7.49038105676658,
+      "y": -0.3660254037844375,
+    },
+  ],
+}
+`;
+
+exports[`Polygon2D can rotate the points around the origin 1`] = `
+Polygon2D {
+  "points": [
+    Vector2D {
+      "x": 6.660254037844387,
+      "y": 8.464101615137753,
+    },
+    Vector2D {
+      "x": 3.660254037844388,
+      "y": 13.660254037844386,
+    },
+    Vector2D {
+      "x": -1.5358983848622443,
+      "y": 10.660254037844387,
+    },
+    Vector2D {
+      "x": 0,
+      "y": 0,
+    },
+    Vector2D {
+      "x": -1.330127018922194,
+      "y": -7.696152422706632,
+    },
+    Vector2D {
+      "x": -12.160254037844387,
+      "y": 1.0621778264910722,
+    },
+  ],
+}
 `;
 
 exports[`Polygon2D can set a point to a particular index 1`] = `
@@ -167,6 +558,14 @@ exports[`Polygon2D can set a point to a particular index 1`] = `
   Vector2D {
     "x": 0,
     "y": 0,
+  },
+  Vector2D {
+    "x": -5,
+    "y": -6,
+  },
+  Vector2D {
+    "x": -10,
+    "y": 7,
   },
 ]
 `;
