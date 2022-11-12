@@ -41,100 +41,185 @@ describe('Vector2D', () => {
         });
     });
 
-    describe('can get', () => {
-        it('the coordinates of the vector', () => {
-            const v = new Vector2D(1, 2);
-
-            expect(v.get(3, 4)).toStrictEqual({ x: 1, y: 2 });
-        });
-
-        it('the X-coordinate of the vector', () => {
-            const v = new Vector2D(1, 2);
-
-            expect(v.getY()).toBe(2);
-        });
-
-        it('the Y-coordinate of the vector', () => {
-            const v = new Vector2D(1, 2);
-
-            expect(v.getX()).toBe(1);
-        });
-    });
-
     describe('can set', () => {
-        it('the coordinates of the vector', () => {
+        it('the coordinates from another vector', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = new Vector2D(3, 4);
+
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(1);
+            expect(v1.set(v2)).toBe(v1);
+            expect(v1.x).toBe(3);
+            expect(v1.y).toBe(4);
+        });
+
+        it('the X-coordinate from another vector', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = new Vector2D(3, 4);
+
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(1);
+            expect(v1.setX(v2)).toBe(v1);
+            expect(v1.x).toBe(3);
+            expect(v1.y).toBe(1);
+        });
+
+        it('the Y-coordinate from another vector', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = new Vector2D(3, 4);
+
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(1);
+            expect(v1.setY(v2)).toBe(v1);
+            expect(v1.x).toBe(1);
+            expect(v1.y).toBe(4);
+        });
+
+        it('the coordinates x and y', () => {
             const v = new Vector2D(1, 1);
 
             expect(v.x).toBe(1);
             expect(v.y).toBe(1);
-            expect(v.set(3, 4)).toBe(v);
+            expect(v.setCoord(3, 4)).toBe(v);
             expect(v.x).toBe(3);
             expect(v.y).toBe(4);
         });
 
-        it('the X-coordinate of the vector', () => {
+        it('the coordinates of the vector from a scalar value', () => {
             const v = new Vector2D(1, 1);
 
             expect(v.x).toBe(1);
             expect(v.y).toBe(1);
-            expect(v.setX(3)).toBe(v);
+            expect(v.setScalar(3)).toBe(v);
+            expect(v.x).toBe(3);
+            expect(v.y).toBe(3);
+        });
+
+        it('the X-coordinate of the vector from a scalar value', () => {
+            const v = new Vector2D(1, 1);
+
+            expect(v.x).toBe(1);
+            expect(v.y).toBe(1);
+            expect(v.setScalarX(3)).toBe(v);
             expect(v.x).toBe(3);
             expect(v.y).toBe(1);
         });
 
-        it('the Y-coordinate of the vector', () => {
+        it('the Y-coordinate of the vector from a scalar value', () => {
             const v = new Vector2D(1, 1);
 
             expect(v.x).toBe(1);
             expect(v.y).toBe(1);
-            expect(v.setY(4)).toBe(v);
+            expect(v.setScalarY(4)).toBe(v);
             expect(v.x).toBe(1);
             expect(v.y).toBe(4);
         });
     });
 
     describe('can copy', () => {
-        it('the coordinates of another vector', () => {
+        it('the coordinates from another vector', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = new Vector2D(3, 4);
 
             expect(v1.x).toBe(1);
             expect(v1.y).toBe(1);
-            expect(v1.copy(v2)).toBe(v1);
-            expect(v1.x).toBe(3);
-            expect(v1.y).toBe(4);
+
+            const v3 = v1.copy(v2);
+
+            expect(v3).not.toBe(v1);
+            expect(v3).not.toBe(v2);
+            expect(v3.x).toBe(3);
+            expect(v3.y).toBe(4);
         });
 
-        it('the X-coordinate of another vector', () => {
+        it('the X-coordinate from another vector', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = new Vector2D(3, 4);
 
-            expect(v1.x).toBe(1);
-            expect(v1.y).toBe(1);
-            expect(v1.copyX(v2)).toBe(v1);
-            expect(v1.x).toBe(3);
-            expect(v1.y).toBe(1);
+            const v3 = v1.copyX(v2);
+
+            expect(v3).not.toBe(v1);
+            expect(v3).not.toBe(v2);
+            expect(v3.x).toBe(3);
+            expect(v3.y).toBe(1);
         });
 
-        it('the Y-coordinate of another vector', () => {
+        it('the Y-coordinate from another vector', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = new Vector2D(3, 4);
 
-            expect(v1.x).toBe(1);
-            expect(v1.y).toBe(1);
-            expect(v1.copyY(v2)).toBe(v1);
-            expect(v1.x).toBe(1);
-            expect(v1.y).toBe(4);
+            const v3 = v1.copyY(v2);
+
+            expect(v3).not.toBe(v1);
+            expect(v3).not.toBe(v2);
+            expect(v3.x).toBe(1);
+            expect(v3.y).toBe(4);
+        });
+
+        it('the coordinates x and y', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.copyCoord(3, 4);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(3);
+            expect(v2.y).toBe(4);
+        });
+
+        it('the coordinates of the vector from a scalar value', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.copyScalar(3);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(3);
+            expect(v2.y).toBe(3);
+        });
+
+        it('the X-coordinate from a scalar value', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.copyScalarX(3);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(3);
+            expect(v2.y).toBe(1);
+        });
+
+        it('the Y-coordinate from a scalar value', () => {
+            const v1 = new Vector2D(1, 1);
+            const v2 = v1.copyScalarY(3);
+
+            expect(v2).not.toBe(v1);
+            expect(v2.x).toBe(1);
+            expect(v2.y).toBe(3);
         });
     });
 
-    it('can create a copy of itself', () => {
-        const v = new Vector2D(1, 2);
-        const copy = v.clone();
+    describe('can clone', () => {
+        it('the vector', () => {
+            const v = new Vector2D(1, 2);
+            const copy = v.clone();
 
-        expect(copy).toBeInstanceOf(Vector2D);
-        expect(copy.x).toBe(1);
-        expect(copy.y).toBe(2);
+            expect(copy).toBeInstanceOf(Vector2D);
+            expect(copy.x).toBe(1);
+            expect(copy.y).toBe(2);
+        });
+
+        it('the X-coordinate', () => {
+            const v = new Vector2D(1, 2);
+            const copy = v.cloneX();
+
+            expect(copy).toBeInstanceOf(Vector2D);
+            expect(copy.x).toBe(1);
+            expect(copy.y).toBe(0);
+        });
+
+        it('the Y-coordinate', () => {
+            const v = new Vector2D(1, 2);
+            const copy = v.cloneY();
+
+            expect(copy).toBeInstanceOf(Vector2D);
+            expect(copy.x).toBe(0);
+            expect(copy.y).toBe(2);
+        });
     });
 
     describe('can add', () => {
@@ -177,7 +262,7 @@ describe('Vector2D', () => {
             expect(v3.y).toBe(3);
         });
 
-        it('the coordinates x an y', () => {
+        it('the coordinates x and y', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = v1.addCoord(2, 2);
 
@@ -266,7 +351,7 @@ describe('Vector2D', () => {
             expect(v3.y).toBe(-1);
         });
 
-        it('the coordinates x an y', () => {
+        it('the coordinates x and y', () => {
             const v1 = new Vector2D(1, 1);
             const v2 = v1.subCoord(2, 2);
 
@@ -355,7 +440,7 @@ describe('Vector2D', () => {
             expect(v3.y).toBe(8);
         });
 
-        it('by the coordinates x an y', () => {
+        it('by the coordinates x and y', () => {
             const v1 = new Vector2D(3, 4);
             const v2 = v1.mulCoord(2, 2);
 
@@ -444,7 +529,7 @@ describe('Vector2D', () => {
             expect(v3.y).toBe(4);
         });
 
-        it('by the coordinates x an y', () => {
+        it('by the coordinates x and y', () => {
             const v1 = new Vector2D(6, 8);
             const v2 = v1.divCoord(2, 2);
 

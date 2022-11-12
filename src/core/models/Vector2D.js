@@ -33,35 +33,37 @@ export class Vector2D {
     }
 
     /**
-     * Creates a copy of the current vector.
-     * @returns {Vector2D} - A new vector at the same coordinates.
+     * Sets the coordinates from another vector.
+     * @param {Vector2D} vector - The other vector from which set the coordinates.
+     * @returns {Vector2D} - Chains the instance.
      */
-    clone() {
-        return new Vector2D(this.x, this.y);
+    set(vector) {
+        this.x = vector.x;
+        this.y = vector.y;
+
+        return this;
     }
 
     /**
-     * Gets the coordinates of the vector.
-     * @returns {coord} - The coordinates of the vector.
+     * Sets the X-coordinate from another vector.
+     * @param {Vector2D} vector - The other vector from which set the X-coordinate.
+     * @returns {Vector2D} - Chains the instance.
      */
-    get() {
-        return this.toObject();
+    setX(vector) {
+        this.x = vector.x;
+
+        return this;
     }
 
     /**
-     * Gets the X-coordinate of the vector.
-     * @returns {number} - The X-coordinate of the vector.
+     * Sets the Y-coordinate from another vector.
+     * @param {Vector2D} vector - The other vector from which set the Y-coordinate.
+     * @returns {Vector2D} - Chains the instance.
      */
-    getX() {
-        return this.x;
-    }
+    setY(vector) {
+        this.y = vector.y;
 
-    /**
-     * Gets the Y-coordinate of the vector.
-     * @returns {number} - The Y-coordinate of the vector.
-     */
-    getY() {
-        return this.y;
+        return this;
     }
 
     /**
@@ -70,7 +72,7 @@ export class Vector2D {
      * @param {number} y - The Y-coordinate of the vector.
      * @returns {Vector2D} - Chains the instance.
      */
-    set(x, y) {
+    setCoord(x, y) {
         this.x = x;
         this.y = y;
 
@@ -78,59 +80,125 @@ export class Vector2D {
     }
 
     /**
-     * Sets the X-coordinate of the vector.
-     * @param {number} x - The X-coordinate of the vector.
+     * Sets the coordinates of the vector from a scalar value.
+     * @param {number} scalar - The scalar value to set as coordinates of the vector.
      * @returns {Vector2D} - Chains the instance.
      */
-    setX(x) {
-        this.x = x;
+    setScalar(scalar) {
+        this.x = scalar;
+        this.y = scalar;
 
         return this;
     }
 
     /**
-     * Sets the Y-coordinate of the vector.
-     * @param {number} y - The Y-coordinate of the vector.
+     * Sets the X-coordinate of the vector from a scalar value.
+     * @param {number} scalar - The scalar value to set as the X-coordinate of the vector.
      * @returns {Vector2D} - Chains the instance.
      */
-    setY(y) {
-        this.y = y;
+    setScalarX(scalar) {
+        this.x = scalar;
 
         return this;
     }
 
     /**
-     * Copies the coordinates of another vector.
-     * @param {Vector2D} vector
+     * Sets the Y-coordinate of the vector from a scalar value.
+     * @param {number} scalar -  The scalar value to set as the Y-coordinate of the vector.
      * @returns {Vector2D} - Chains the instance.
+     */
+    setScalarY(scalar) {
+        this.y = scalar;
+
+        return this;
+    }
+
+    /**
+     * Creates a copy of the vector.
+     * @returns {Vector2D} - A new vector at the same coordinates.
+     */
+    clone() {
+        return new Vector2D(this.x, this.y);
+    }
+
+    /**
+     * Creates a copy of the vector with thw same X-coordinate.
+     * @returns {Vector2D} - A new vector at the same X-coordinates.
+     */
+    cloneX() {
+        return new Vector2D(this.x, 0);
+    }
+
+    /**
+     * Creates a copy of the vector with thw same Y-coordinate.
+     * @returns {Vector2D} - A new vector at the same Y-coordinates.
+     */
+    cloneY() {
+        return new Vector2D(0, this.y);
+    }
+
+    /**
+     * Creates a new vector having the coordinates of the given vector.
+     * @param {Vector2D} vector - The target vector to copy the coordinates from.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
      */
     copy(vector) {
-        this.x = vector.x;
-        this.y = vector.y;
-
-        return this;
+        return new Vector2D(vector.x, vector.y);
     }
 
     /**
-     * Copies the X-coordinate of another vector.
-     * @param {Vector2D} vector
-     * @returns {Vector2D} - Chains the instance.
+     * Creates a new vector having the X-coordinate of the given vector and the Y-coordinate of the current vector.
+     * @param {Vector2D} vector - The target vector to copy the coordinates from.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
      */
     copyX(vector) {
-        this.x = vector.x;
-
-        return this;
+        return new Vector2D(vector.x, this.y);
     }
 
     /**
-     * Copies the Y-coordinate of another vector.
-     * @param {Vector2D} vector
-     * @returns {Vector2D} - Chains the instance.
+     * Creates a new vector having the X-coordinate of the current vector and the Y-coordinate of the given vector.
+     * @param {Vector2D} vector - The target vector to copy the coordinates from.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
      */
     copyY(vector) {
-        this.y = vector.y;
+        return new Vector2D(this.x, vector.y);
+    }
 
-        return this;
+    /**
+     * Creates a new vector having the given coordinates.
+     * @param {number} x - The X-coordinate of the vector.
+     * @param {number} y - The Y-coordinate of the vector.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
+     */
+    copyCoord(x, y) {
+        return new Vector2D(x, y);
+    }
+
+    /**
+     * Creates a new vector having the coordinates set from the given scalar value.
+     * @param {number} scalar - The scalar value to set as coordinates of the vector.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
+     */
+    copyScalar(scalar) {
+        return new Vector2D(scalar, scalar);
+    }
+
+    /**
+     * Creates a new vector having the X-coordinate set from the given scalar value and the Y-coordinate of the current vector.
+     * @param {number} scalar - The scalar value to set as the X-coordinate of the vector.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
+     */
+    copyScalarX(scalar) {
+        return new Vector2D(scalar, this.y);
+    }
+
+    /**
+     * Creates a new vector having the the X-coordinate of the current vector and the Y-coordinate set from the given scalar value.
+     * @param {number} scalar - The scalar value to set as the Y-coordinate of the vector.
+     * @returns {Vector2D} - A new vector with the copied coordinates.
+     */
+    copyScalarY(scalar) {
+        return new Vector2D(this.x, scalar);
     }
 
     /**
