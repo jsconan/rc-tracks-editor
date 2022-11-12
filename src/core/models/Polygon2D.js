@@ -237,7 +237,7 @@ export class Polygon2D {
      * @returns {string} - The string representation of the polygon.
      */
     toString() {
-        return this.points.map(p => p.toString()).join(' ');
+        return this.points.join(' ');
     }
 
     /**
