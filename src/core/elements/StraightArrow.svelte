@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList, pathLine } from '../helpers';
-    import { Vector2D } from '../models';
+    import { attributeList } from '../helpers';
+    import { Polygon2D, SVGPath, Vector2D } from '../models';
 
     export let x = 0;
     export let y = 0;
@@ -31,17 +31,17 @@
         const arrowStart = halfH - arrowHeight;
         const center = new Vector2D(centerX, centerY);
 
-        const points = [
-            new Vector2D(-halfH, halfB).rotate(rotation).add(center),
-            halfB - halfV && new Vector2D(arrowStart, halfB).rotate(rotation).add(center),
-            new Vector2D(arrowStart, halfV).rotate(rotation).add(center),
-            new Vector2D(halfH, 0).rotate(rotation).add(center),
-            new Vector2D(arrowStart, -halfV).rotate(rotation).add(center),
-            halfB - halfV && new Vector2D(arrowStart, -halfB).rotate(rotation).add(center),
-            new Vector2D(-halfH, -halfB).rotate(rotation).add(center)
-        ];
-
-        return pathLine(points);
+        const polygon = new Polygon2D([
+            new Vector2D(-halfH, halfB),
+            new Vector2D(arrowStart, halfB),
+            new Vector2D(arrowStart, halfV),
+            new Vector2D(halfH, 0),
+            new Vector2D(arrowStart, -halfV),
+            new Vector2D(arrowStart, -halfB),
+            new Vector2D(-halfH, -halfB)
+        ]);
+        polygon.rotate(rotation).move(center);
+        return SVGPath.fromPolygon(polygon).toString();
     }
 
     $: if ('undefined' === typeof thickness) {
