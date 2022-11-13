@@ -257,10 +257,14 @@ export class Polygon2D {
      */
     static extractPoints(points) {
         let list = [];
-        for (const p of points) {
+        for (let p of points) {
             if (p instanceof this) {
                 list = [...list, ...p.points];
                 continue;
+            }
+
+            if (Array.isArray(p)) {
+                p = Vector2D.fromArray(p);
             }
 
             Vector2D.validateInstance(p);

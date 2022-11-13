@@ -356,6 +356,14 @@ describe('Polygon2D', () => {
         expect(polygon.load({})).toBe(polygon);
         expect([...polygon]).toEqual([]);
 
+        expect(
+            polygon.load([
+                [1, 2],
+                [3, 4]
+            ])
+        ).toBe(polygon);
+        expect([...polygon]).toMatchSnapshot();
+
         expect(polygon.load(points)).toBe(polygon);
         expect([...polygon]).toEqual(points);
 
