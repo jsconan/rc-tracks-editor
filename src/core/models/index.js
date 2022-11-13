@@ -23,5 +23,7 @@ export { MultiMap } from './MultiMap.js';
 export { Polygon2D } from './Polygon2D.js';
 export { SortedMap } from './SortedMap.js';
 export { SortedSet } from './SortedSet.js';
+export { SVGPath } from './SVGPath.js';
+export { SVGPathCommand } from './SVGPathCommand.js';
 export { TreeNode } from './TreeNode.js';
 export { Vector2D } from './Vector2D.js';
