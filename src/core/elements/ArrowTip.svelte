@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList, pathLine } from '../helpers';
-    import { Vector2D } from '../models';
+    import { attributeList } from '../helpers';
+    import { Polygon2D, SVGPath, Vector2D } from '../models';
 
     export let x = 0;
     export let y = 0;
@@ -27,14 +27,14 @@
         const sideV = arrowHeight / 2;
         const center = new Vector2D(centerX, centerY);
 
-        const points = [
-            new Vector2D(-sideH / 2, 0).rotate(rotation).add(center),
-            new Vector2D(-sideH, -sideV).rotate(rotation).add(center),
-            new Vector2D(sideH, 0).rotate(rotation).add(center),
-            new Vector2D(-sideH, sideV).rotate(rotation).add(center)
-        ];
-
-        return pathLine(points);
+        const polygon = new Polygon2D([
+            new Vector2D(-sideH / 2, 0),
+            new Vector2D(-sideH, -sideV),
+            new Vector2D(sideH, 0),
+            new Vector2D(-sideH, sideV)
+        ]);
+        polygon.rotate(rotation).move(center);
+        return SVGPath.fromPolygon(polygon).toString();
     }
 </script>
 
