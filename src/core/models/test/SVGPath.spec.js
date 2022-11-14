@@ -836,6 +836,212 @@ describe('SVGPath', () => {
         });
     });
 
+    describe('adds an elliptical arc curve using angles', () => {
+        it('when the radius is given as a number', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(5, 30, 60)).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 0 0 6.8301270189221945,6.830127018922193');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(6.8301270189221945);
+            expect(path.current.y).toBe(6.830127018922193);
+        });
+
+        it('when the radius is given as a 2D vector', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(new Vector2D(5, 6), 30, 60)).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 0 6.8301270189221945,8.196152422706632');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(6.8301270189221945);
+            expect(path.current.y).toBe(8.196152422706632);
+        });
+
+        it('when the angle is positive and lower than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(5, 30, 60)).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 0 0 6.8301270189221945,6.830127018922193');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(6.8301270189221945);
+            expect(path.current.y).toBe(6.830127018922193);
+        });
+
+        it('when the angle is positive and greater than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(5, 30, 230)).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 1 0 1.116188970489496,-1.33022221559489');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(1.116188970489496);
+            expect(path.current.y).toBe(-1.33022221559489);
+        });
+
+        it('when the angle is negative and lower than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(5, 60, 30)).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 0 1 6.8301270189221945,6.830127018922193');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(6.8301270189221945);
+            expect(path.current.y).toBe(6.830127018922193);
+        });
+
+        it('when the angle is negative and greater than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurve(5, 230, 30)).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 1 1 1.116188970489496,-1.33022221559489');
+
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(1.116188970489496);
+            expect(path.current.y).toBe(-1.33022221559489);
+        });
+
+        it('it needs 2D vectors', () => {
+            const path = new SVGPath();
+
+            expect(() => path.arcCurve({}, 0, 1)).toThrow('The object must be an instance of Vector2D!');
+        });
+
+        it('if the path is not closed', () => {
+            const path = new SVGPath();
+            path.close();
+
+            expect(path.toString()).toBe('Z');
+
+            expect(() => path.arcCurve(5, 30, 50)).toThrow('The path is closed and cannot accept more commands!');
+
+            expect(path.toString()).toBe('Z');
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(0);
+        });
+    });
+
+    describe('adds an elliptical arc curve using angle and point', () => {
+        it('when the coordinate is given as a number', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(5, 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 0 0 3,4');
+
+            expect(path.arcCurveBy(5, 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,5 0 0 0 3,4 A 5,5 0 0 0 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('when the coordinate is given as a 2D vector', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(new Vector2D(5, 6), 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 0 3,4');
+
+            expect(path.arcCurveBy(new Vector2D(5, 6), 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 0 3,4 A 5,6 0 0 0 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('when the angle is positive and lower than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(new Vector2D(5, 6), 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 0 3,4');
+
+            expect(path.arcCurveBy(new Vector2D(5, 6), 60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 0 3,4 A 5,6 0 0 0 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('when the angle is positive and greater than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(new Vector2D(5, 6), 260, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 1 0 3,4');
+
+            expect(path.arcCurveBy(new Vector2D(5, 6), 260, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 1 0 3,4 A 5,6 0 1 0 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('when the angle is negative and lower than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(new Vector2D(5, 6), -60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 1 3,4');
+
+            expect(path.arcCurveBy(new Vector2D(5, 6), -60, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 0 1 3,4 A 5,6 0 0 1 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('when the angle is negative and greater than 180', () => {
+            const path = new SVGPath();
+
+            expect(path.arcCurveTo(new Vector2D(5, 6), -260, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 1 1 3,4');
+
+            expect(path.arcCurveBy(new Vector2D(5, 6), -260, new Vector2D(3, 4))).toBe(path);
+            expect(path.toString()).toBe('A 5,6 0 1 1 3,4 A 5,6 0 1 1 6,8');
+
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(6);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('it needs 2D vectors', () => {
+            const path = new SVGPath();
+
+            expect(() => path.arcCurveTo({}, 90, new Vector2D(3, 4))).toThrow(
+                'The object must be an instance of Vector2D!'
+            );
+            expect(() => path.arcCurveTo(5, 90, {})).toThrow('The object must be an instance of Vector2D!');
+            expect(() => path.arcCurveBy({}, 90, new Vector2D(3, 4))).toThrow(
+                'The object must be an instance of Vector2D!'
+            );
+            expect(() => path.arcCurveBy(5, 90, {})).toThrow('The object must be an instance of Vector2D!');
+        });
+
+        it('if the path is not closed', () => {
+            const path = new SVGPath();
+            path.close();
+
+            expect(path.toString()).toBe('Z');
+
+            expect(() => path.arcCurveTo(5, 90, new Vector2D(3, 4))).toThrow(
+                'The path is closed and cannot accept more commands!'
+            );
+            expect(() => path.arcCurveBy(5, 90, new Vector2D(3, 4))).toThrow(
+                'The path is closed and cannot accept more commands!'
+            );
+
+            expect(path.toString()).toBe('Z');
+            expect(path.length).toBe(1);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(0);
+        });
+    });
+
     describe('import points from a polygon', () => {
         it('to an empty path', () => {
             const path = new SVGPath();

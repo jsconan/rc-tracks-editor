@@ -16,6 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { STRAIGHT_ANGLE } from '../helpers';
 import { Polygon2D } from './Polygon2D.js';
 import { SVGPathCommand } from './SVGPathCommand.js';
 import { Vector2D } from './Vector2D.js';
@@ -548,6 +549,92 @@ export class SVGPath {
 
         this.#current = this.#current.add(point);
         this.#commands.push(new SVGPathCommand('A', radius, angle, largeArc, sweep, this.#current));
+
+        return this;
+    }
+
+    /**
+     * Adds an Elliptical Arc Curve command using the given radius and angles.
+     * @param {number|Vector2D} radius - The radii of the ellipse.
+     * @param {number} startAngle - The start angle of the arc.
+     * @param {number} endAngle - The end angle of the arc.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     * @throws {TypeError} - If a point is not a Vector2D.
+     */
+    arcCurve(radius, startAngle, endAngle) {
+        this.#acceptCommand();
+
+        if ('number' === typeof radius) {
+            radius = new Vector2D(radius, radius);
+        }
+
+        Vector2D.validateInstance(radius);
+
+        const angle = endAngle - startAngle;
+        const center = this.#current.add(Vector2D.polar(radius, startAngle));
+        this.#current = center.add(Vector2D.polar(radius, endAngle));
+
+        const largeArc = Math.abs(angle) > STRAIGHT_ANGLE ? 1 : 0;
+        const sweep = angle < 0 ? 1 : 0;
+
+        this.#commands.push(new SVGPathCommand('A', radius, 0, largeArc, sweep, this.#current));
+
+        return this;
+    }
+
+    /**
+     * Adds an Elliptical Arc Curve command using the given radius and angle and absolute coordinates.
+     * @param {number|Vector2D} radius - The radii of the ellipse.
+     * @param {number} angle - The angle of the arc.
+     * @param {Vector2D} point - The end coordinates for the arc.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     * @throws {TypeError} - If a point is not a Vector2D.
+     */
+    arcCurveTo(radius, angle, point) {
+        this.#acceptCommand();
+
+        if ('number' === typeof radius) {
+            radius = new Vector2D(radius, radius);
+        }
+
+        Vector2D.validateInstance(radius);
+        Vector2D.validateInstance(point);
+
+        const largeArc = Math.abs(angle) > STRAIGHT_ANGLE ? 1 : 0;
+        const sweep = angle < 0 ? 1 : 0;
+
+        this.#current = point;
+        this.#commands.push(new SVGPathCommand('A', radius, 0, largeArc, sweep, this.#current));
+
+        return this;
+    }
+
+    /**
+     * Adds an Elliptical Arc Curve command using the given radius and angle and relative coordinates.
+     * @param {number|Vector2D} radius - The radii of the ellipse.
+     * @param {number} angle - The angle of the arc.
+     * @param {Vector2D} point - The end coordinates for the arc.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     * @throws {TypeError} - If a point is not a Vector2D.
+     */
+    arcCurveBy(radius, angle, point) {
+        this.#acceptCommand();
+
+        if ('number' === typeof radius) {
+            radius = new Vector2D(radius, radius);
+        }
+
+        Vector2D.validateInstance(radius);
+        Vector2D.validateInstance(point);
+
+        const largeArc = Math.abs(angle) > STRAIGHT_ANGLE ? 1 : 0;
+        const sweep = angle < 0 ? 1 : 0;
+
+        this.#current = this.#current.add(point);
+        this.#commands.push(new SVGPathCommand('A', radius, 0, largeArc, sweep, this.#current));
 
         return this;
     }
