@@ -121,6 +121,14 @@ export class SVGPath {
     }
 
     /**
+     * The number of commands in the path.
+     * @type {number}
+     */
+    get length() {
+        return this.#commands.length;
+    }
+
+    /**
      * The list of path commands.
      * @type {SVGPathCommand[]}
      */
@@ -545,6 +553,29 @@ export class SVGPath {
     }
 
     /**
+     * Adds a polygon to the path.
+     * @param {Polygon2D} polygon - The polygon from which takes the points.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     * @throws {TypeError} - If the polygon is not a Polygon2D.
+     */
+    addPolygon(polygon) {
+        this.#acceptCommand();
+        Polygon2D.validateInstance(polygon);
+
+        const points = polygon.points;
+        if (!points.length) {
+            return this;
+        }
+
+        if (!this.#commands.length) {
+            this.moveTo(points[0]);
+        }
+
+        return this.lineTo(...points);
+    }
+
+    /**
      * Renders the SVG path.
      * @returns {string} - The rendered SVG path.
      */
@@ -559,17 +590,7 @@ export class SVGPath {
      * @throws {TypeError} - If the polygon is not a Polygon2D.
      */
     static fromPolygon(polygon) {
-        Polygon2D.validateInstance(polygon);
         const path = new this();
-
-        const points = polygon.points;
-        const len = points.length;
-        if (len > 1) {
-            path.moveTo(points[0]);
-        }
-
-        path.lineTo(...points);
-
-        return path.close();
+        return path.addPolygon(polygon).close();
     }
 }

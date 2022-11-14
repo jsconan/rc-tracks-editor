@@ -29,6 +29,7 @@ describe('SVGPath', () => {
         const path = new SVGPath();
 
         it('is empty', () => {
+            expect(path.length).toBe(0);
             expect(path.commands).toStrictEqual([]);
             expect(path.toString()).toBe('');
         });
@@ -50,7 +51,7 @@ describe('SVGPath', () => {
             path.moveTo(4, 2).lineTo(9, 1);
 
             expect(path.close()).toBe(path);
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.toString()).toBe('M 4,2 L 9,1 Z');
         });
 
@@ -58,7 +59,7 @@ describe('SVGPath', () => {
             const path = new SVGPath();
 
             expect(path.close()).toBe(path);
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.toString()).toBe('Z');
         });
 
@@ -67,7 +68,7 @@ describe('SVGPath', () => {
             path.lineTo(4, 2).close();
 
             expect(() => path.close()).toThrow('The path is closed and cannot accept more commands!');
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.toString()).toBe('L 4,2 Z');
         });
     });
@@ -87,7 +88,7 @@ describe('SVGPath', () => {
             expect(() => path.moveTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.moveBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -101,7 +102,7 @@ describe('SVGPath', () => {
             expect(path.moveBy(3, 4)).toBe(path);
             expect(path.toString()).toBe('M 4,6');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -115,7 +116,7 @@ describe('SVGPath', () => {
             expect(path.moveBy(new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('M 4,6');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -129,7 +130,7 @@ describe('SVGPath', () => {
             expect(path.moveBy(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('M 7,10');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(10);
         });
@@ -144,7 +145,7 @@ describe('SVGPath', () => {
             expect(path.moveBy(5, 7)).toBe(path);
             expect(path.toString()).toBe('M 8,9');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(8);
             expect(path.current.y).toBe(9);
         });
@@ -159,7 +160,7 @@ describe('SVGPath', () => {
             expect(() => path.moveBy(3, 2)).toThrow('The path is closed and cannot accept more commands!');
 
             expect(path.toString()).toBe('M 5,8 Z');
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(8);
         });
@@ -180,7 +181,7 @@ describe('SVGPath', () => {
             expect(() => path.lineTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.lineBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -194,7 +195,7 @@ describe('SVGPath', () => {
             expect(path.lineBy(3, 4)).toBe(path);
             expect(path.toString()).toBe('L 1,2 L 4,6');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -208,7 +209,7 @@ describe('SVGPath', () => {
             expect(path.lineBy(new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('L 1,2 L 4,6');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -222,7 +223,7 @@ describe('SVGPath', () => {
             expect(path.lineBy(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('L 1,2 3,4 L 4,6 7,10');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(10);
         });
@@ -237,7 +238,7 @@ describe('SVGPath', () => {
             expect(path.moveBy(0, 0)).toBe(path);
             expect(path.toString()).toBe('M 5,8');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(8);
         });
@@ -251,7 +252,7 @@ describe('SVGPath', () => {
             expect(() => path.lineTo(3, 2)).toThrow('The path is closed and cannot accept more commands!');
             expect(() => path.lineBy(3, 2)).toThrow('The path is closed and cannot accept more commands!');
 
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(3);
         });
@@ -269,7 +270,7 @@ describe('SVGPath', () => {
             expect(path.horizontalLineBy()).toBe(path);
             expect(path.toString()).toBe('');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -283,7 +284,7 @@ describe('SVGPath', () => {
             expect(path.horizontalLineBy(3)).toBe(path);
             expect(path.toString()).toBe('H 4');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(0);
         });
@@ -297,7 +298,7 @@ describe('SVGPath', () => {
             expect(path.horizontalLineBy(new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('H 4');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(0);
         });
@@ -312,7 +313,7 @@ describe('SVGPath', () => {
             expect(path.horizontalLineBy(5)).toBe(path);
             expect(path.toString()).toBe('H 8');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(8);
             expect(path.current.y).toBe(0);
         });
@@ -327,7 +328,7 @@ describe('SVGPath', () => {
             expect(() => path.horizontalLineBy(3)).toThrow('The path is closed and cannot accept more commands!');
 
             expect(path.toString()).toBe('H 5 Z');
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(0);
         });
@@ -345,7 +346,7 @@ describe('SVGPath', () => {
             expect(path.verticalLineBy()).toBe(path);
             expect(path.toString()).toBe('');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -359,7 +360,7 @@ describe('SVGPath', () => {
             expect(path.verticalLineBy(3)).toBe(path);
             expect(path.toString()).toBe('V 4');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(4);
         });
@@ -373,7 +374,7 @@ describe('SVGPath', () => {
             expect(path.verticalLineBy(new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('V 6');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(6);
         });
@@ -388,7 +389,7 @@ describe('SVGPath', () => {
             expect(path.verticalLineBy(5)).toBe(path);
             expect(path.toString()).toBe('V 8');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(8);
         });
@@ -403,7 +404,7 @@ describe('SVGPath', () => {
             expect(() => path.verticalLineBy(3)).toThrow('The path is closed and cannot accept more commands!');
 
             expect(path.toString()).toBe('V 5 Z');
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(5);
         });
@@ -421,7 +422,7 @@ describe('SVGPath', () => {
             expect(path.current.x).toBe(x);
             expect(path.current.y).toBe(y);
 
-            expect(path.commands.length).toBe(count);
+            expect(path.length).toBe(count);
             expect(path.toString()).toBe(expected);
         });
     });
@@ -441,7 +442,7 @@ describe('SVGPath', () => {
             expect(() => path.cubicBezierCurveTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.cubicBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -455,7 +456,7 @@ describe('SVGPath', () => {
             expect(path.cubicBezierCurveBy(new Vector2D(1, 2), new Vector2D(3, 4), new Vector2D(5, 6))).toBe(path);
             expect(path.toString()).toBe('C 1,2 3,4 5,6 C 6,8 8,10 10,12');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(10);
             expect(path.current.y).toBe(12);
         });
@@ -487,7 +488,7 @@ describe('SVGPath', () => {
             ).toBe(path);
             expect(path.toString()).toBe('C 1,2 3,4 5,6 11,12 13,14 15,16 C 16,18 18,20 20,22 31,34 33,36 35,38');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(35);
             expect(path.current.y).toBe(38);
         });
@@ -505,7 +506,7 @@ describe('SVGPath', () => {
                 'The path is closed and cannot accept more commands!'
             );
 
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(3);
         });
@@ -526,7 +527,7 @@ describe('SVGPath', () => {
             expect(() => path.smoothBezierCurveTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.smoothBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -540,7 +541,7 @@ describe('SVGPath', () => {
             expect(path.smoothBezierCurveBy(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('S 1,2 3,4 S 4,6 6,8');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(6);
             expect(path.current.y).toBe(8);
         });
@@ -568,7 +569,7 @@ describe('SVGPath', () => {
             ).toBe(path);
             expect(path.toString()).toBe('S 1,2 3,4 11,12 13,14 S 14,16 16,18 27,30 29,32');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(29);
             expect(path.current.y).toBe(32);
         });
@@ -586,7 +587,7 @@ describe('SVGPath', () => {
                 'The path is closed and cannot accept more commands!'
             );
 
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(3);
         });
@@ -607,7 +608,7 @@ describe('SVGPath', () => {
             expect(() => path.quadraticBezierCurveTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.quadraticBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -621,7 +622,7 @@ describe('SVGPath', () => {
             expect(path.quadraticBezierCurveBy(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('Q 1,2 3,4 Q 4,6 6,8');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(6);
             expect(path.current.y).toBe(8);
         });
@@ -649,7 +650,7 @@ describe('SVGPath', () => {
             ).toBe(path);
             expect(path.toString()).toBe('Q 1,2 3,4 11,12 13,14 Q 14,16 16,18 27,30 29,32');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(29);
             expect(path.current.y).toBe(32);
         });
@@ -667,7 +668,7 @@ describe('SVGPath', () => {
                 'The path is closed and cannot accept more commands!'
             );
 
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(3);
         });
@@ -688,7 +689,7 @@ describe('SVGPath', () => {
             expect(() => path.smoothQuadraticBezierCurveTo({})).toThrow('The object must be an instance of Vector2D!');
             expect(() => path.smoothQuadraticBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
-            expect(path.commands.length).toBe(0);
+            expect(path.length).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -702,7 +703,7 @@ describe('SVGPath', () => {
             expect(path.smoothQuadraticBezierCurveBy(3, 4)).toBe(path);
             expect(path.toString()).toBe('T 1,2 T 4,6');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -716,7 +717,7 @@ describe('SVGPath', () => {
             expect(path.smoothQuadraticBezierCurveBy(new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('T 1,2 T 4,6');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(4);
             expect(path.current.y).toBe(6);
         });
@@ -730,7 +731,7 @@ describe('SVGPath', () => {
             expect(path.smoothQuadraticBezierCurveBy(new Vector2D(1, 2), new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('T 1,2 3,4 T 4,6 7,10');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(10);
         });
@@ -745,7 +746,7 @@ describe('SVGPath', () => {
             expect(path.smoothQuadraticBezierCurveBy(0, 0)).toBe(path);
             expect(path.toString()).toBe('M 5,8');
 
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(8);
         });
@@ -763,7 +764,7 @@ describe('SVGPath', () => {
                 'The path is closed and cannot accept more commands!'
             );
 
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(5);
             expect(path.current.y).toBe(3);
         });
@@ -779,7 +780,7 @@ describe('SVGPath', () => {
             expect(path.ellipticalArcCurveBy(5, 0, 1, 1, new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('A 5,5 0 1 1 3,4 A 5,5 0 1 1 6,8');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(6);
             expect(path.current.y).toBe(8);
         });
@@ -793,7 +794,7 @@ describe('SVGPath', () => {
             expect(path.ellipticalArcCurveBy(new Vector2D(5, 6), 0, 1, 1, new Vector2D(3, 4))).toBe(path);
             expect(path.toString()).toBe('A 5,6 0 1 1 3,4 A 5,6 0 1 1 6,8');
 
-            expect(path.commands.length).toBe(2);
+            expect(path.length).toBe(2);
             expect(path.current.x).toBe(6);
             expect(path.current.y).toBe(8);
         });
@@ -829,13 +830,88 @@ describe('SVGPath', () => {
             );
 
             expect(path.toString()).toBe('Z');
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
     });
 
-    describe('import a path from a polygon', () => {
+    describe('import points from a polygon', () => {
+        it('to an empty path', () => {
+            const path = new SVGPath();
+            const polygon = new Polygon2D();
+            polygon.load([
+                [1, 2],
+                [3, 4],
+                [5, 6],
+                [7, 8]
+            ]);
+
+            expect(path.addPolygon(polygon)).toBe(path);
+            expect(path.toString()).toBe('M 1,2 L 3,4 5,6 7,8');
+            expect(path.closed).toBeFalsy();
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(7);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('to an existing path', () => {
+            const path = new SVGPath();
+            path.moveTo(10, 8).lineTo(15, 6);
+
+            const polygon = new Polygon2D();
+            polygon.load([
+                [1, 2],
+                [3, 4],
+                [5, 6],
+                [7, 8]
+            ]);
+
+            expect(path.addPolygon(polygon)).toBe(path);
+            expect(path.toString()).toBe('M 10,8 L 15,6 L 1,2 3,4 5,6 7,8');
+            expect(path.closed).toBeFalsy();
+            expect(path.length).toBe(3);
+            expect(path.current.x).toBe(7);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('using an empty polygon', () => {
+            const path = new SVGPath();
+            const polygon = new Polygon2D();
+
+            expect(path.addPolygon(polygon)).toBe(path);
+            expect(path.toString()).toBe('');
+            expect(path.closed).toBeFalsy();
+            expect(path.length).toBe(0);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(0);
+
+            path.moveTo(10, 8).lineTo(15, 6);
+            expect(path.addPolygon(polygon)).toBe(path);
+            expect(path.toString()).toBe('M 10,8 L 15,6');
+            expect(path.closed).toBeFalsy();
+            expect(path.length).toBe(2);
+            expect(path.current.x).toBe(15);
+            expect(path.current.y).toBe(6);
+        });
+
+        it('throws error if a wrong polygon is given', () => {
+            const path = new SVGPath();
+            const polygon = new Polygon2D();
+            path.moveTo(10, 8).lineTo(15, 6).close();
+
+            expect(() => path.addPolygon(polygon)).toThrow('The path is closed and cannot accept more commands!');
+        });
+
+        it('throws error if the path is already closed', () => {
+            const path = new SVGPath();
+
+            expect(() => path.addPolygon()).toThrow('The object must be an instance of Polygon2D!');
+            expect(() => path.addPolygon({})).toThrow('The object must be an instance of Polygon2D!');
+        });
+    });
+
+    describe('creates a path from a polygon', () => {
         it('using a filled polygon', () => {
             const polygon = new Polygon2D();
             polygon.load([
@@ -849,7 +925,7 @@ describe('SVGPath', () => {
 
             expect(path.toString()).toBe('M 1,2 L 3,4 5,6 7,8 Z');
             expect(path.closed).toBeTruthy();
-            expect(path.commands.length).toBe(3);
+            expect(path.length).toBe(3);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(8);
         });
@@ -860,7 +936,7 @@ describe('SVGPath', () => {
 
             expect(path.toString()).toBe('Z');
             expect(path.closed).toBeTruthy();
-            expect(path.commands.length).toBe(1);
+            expect(path.length).toBe(1);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
