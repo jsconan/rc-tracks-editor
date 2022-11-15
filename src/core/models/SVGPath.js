@@ -640,6 +640,66 @@ export class SVGPath {
     }
 
     /**
+     * Adds a MoveTo command using absolute polar coordinates.
+     * @param {number|Vector2D} radius - The radius coordinate.
+     * Elliptic polar coordinates can be given through a vector.
+     * @param {number} angle - The angle coordinate, given in degrees.
+     * @param {Vector2D} center - The coordinates of the center.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     */
+    polarMoveTo(radius, angle, center = Vector2D.ORIGIN) {
+        return this.moveTo(Vector2D.polar(radius, angle, center));
+    }
+
+    /**
+     * Adds a MoveTo command using relative polar coordinates.
+     * @param {number|Vector2D} radius - The radius coordinate.
+     * Elliptic polar coordinates can be given through a vector.
+     * @param {number} angle - The angle coordinate, given in degrees.
+     * @param {Vector2D} center - The coordinates of the center.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     */
+    polarMoveBy(radius, angle, center = Vector2D.ORIGIN) {
+        return this.moveBy(Vector2D.polar(radius, angle, center));
+    }
+
+    /**
+     * Adds a LineTo command using absolute polar coordinates.
+     * @param {number|Vector2D} radius - The radius coordinate.
+     * Elliptic polar coordinates can be given through a vector.
+     * @param {number} angle - The angle coordinate, given in degrees.
+     * @param {Vector2D} center - The coordinates of the center.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     */
+    polarLineTo(radius, angle, center = Vector2D.ORIGIN) {
+        return this.lineTo(Vector2D.polar(radius, angle, center));
+    }
+
+    /**
+     * Adds a LineTo command using relative polar coordinates.
+     * @param {number|Vector2D} radius - The radius coordinate.
+     * Elliptic polar coordinates can be given through a vector.
+     * @param {number} angle - The angle coordinate, given in degrees.
+     * @param {Vector2D} center - The coordinates of the center.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {Error} - If the path is already closed.
+     */
+    polarLineBy(radius, angle, center = Vector2D.ORIGIN) {
+        return this.lineBy(Vector2D.polar(radius, angle, center));
+    }
+
+    /**
+     * Renders the SVG path.
+     * @returns {string} - The rendered SVG path.
+     */
+    toString() {
+        return this.#commands.join(' ').trim();
+    }
+
+    /**
      * Adds a polygon to the path.
      * @param {Polygon2D} polygon - The polygon from which takes the points.
      * @returns {SVGPath} - Chains the instance.
@@ -660,14 +720,6 @@ export class SVGPath {
         }
 
         return this.lineTo(...points);
-    }
-
-    /**
-     * Renders the SVG path.
-     * @returns {string} - The rendered SVG path.
-     */
-    toString() {
-        return this.#commands.join(' ').trim();
     }
 
     /**
