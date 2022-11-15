@@ -4,7 +4,7 @@ exports[`TileElement renders a curved-tile element with default values 1`] = `
 <body>
   <div>
     <path
-      d="M -45 0 A 10 10 0 0 1 -55 10 L -54.99999999999999 100 A 100 100 0 0 0 45 0 Z"
+      d="M -45,0 A 10,10 0 0 1 -55,10 L -54.99999999999999,100 A 100,100 0 0 0 45,0 Z"
       transform=""
     />
     
@@ -17,7 +17,7 @@ exports[`TileElement renders a curved-tile element with the given parameters 1`]
 <body>
   <div>
     <path
-      d="M 55 200 A 10 10 0 0 1 45 210 L 45.00000000000001 300 A 100 100 0 0 0 145 200 Z"
+      d="M 55,200 A 10,10 0 0 1 45,210 L 45.00000000000001,300 A 100,100 0 0 0 145,200 Z"
       fill="red"
       stroke="green"
       stroke-width="2"
@@ -33,7 +33,7 @@ exports[`TileElement renders a curved-tile-enlarged element with default values 
 <body>
   <div>
     <path
-      d="M -45 0 A 10 10 0 0 1 -55 10 L -55 100 L 0 100 A 45 45 0 0 0 45 55 L 45 0 Z"
+      d="M -45,0 A 10,10 0 0 1 -55,10 V 100 H 0 A 45,45 0 0 0 45,55 V 0 Z"
       transform=""
     />
     
@@ -46,7 +46,7 @@ exports[`TileElement renders a curved-tile-enlarged element with the given param
 <body>
   <div>
     <path
-      d="M 55 200 A 10 10 0 0 1 45 210 L 45 300 L 100 300 A 45 45 0 0 0 145 255 L 145 200 Z"
+      d="M 55,200 A 10,10 0 0 1 45,210 V 300 H 100 A 45,45 0 0 0 145,255 V 200 Z"
       fill="red"
       stroke="green"
       stroke-width="2"
@@ -244,7 +244,7 @@ exports[`TileElement updates when the parameter type is modified 1`] = `
 <body>
   <div>
     <path
-      d="M 55 200 A 10 10 0 0 1 45 210 L 45.00000000000001 300 A 100 100 0 0 0 145 200 Z"
+      d="M 55,200 A 10,10 0 0 1 45,210 L 45.00000000000001,300 A 100,100 0 0 0 145,200 Z"
       fill="red"
       stroke="green"
       stroke-width="2"

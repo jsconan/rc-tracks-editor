@@ -23,6 +23,7 @@
      * @param {number} arrowHeight - The height of the arrow.
      * @param {number} arrowThickness - The thickness of the arrow.
      * @param {number} rotation - The rotation angle.
+     * @returns {SVGPath} - Returns the path for the shape.
      */
     function straightArrowPath(centerX, centerY, arrowWidth, arrowHeight, arrowThickness, rotation) {
         const halfH = arrowWidth / 2;
@@ -41,7 +42,7 @@
             new Vector2D(-halfH, -halfB)
         ]);
         polygon.rotate(rotation).move(center);
-        return SVGPath.fromPolygon(polygon).toString();
+        return SVGPath.fromPolygon(polygon);
     }
 
     $: if ('undefined' === typeof thickness) {

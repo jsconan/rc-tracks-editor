@@ -21,6 +21,7 @@
      * @param {number} arrowWidth - The width of the arrow.
      * @param {number} arrowHeight - The height of the arrow.
      * @param {number} rotation - The rotation angle.
+     * @returns {SVGPath} - Returns the path for the shape.
      */
     function arrowElementPath(centerX, centerY, arrowWidth, arrowHeight, rotation) {
         const sideH = arrowWidth / 2;
@@ -34,7 +35,7 @@
             new Vector2D(-sideH, sideV)
         ]);
         polygon.rotate(rotation).move(center);
-        return SVGPath.fromPolygon(polygon).toString();
+        return SVGPath.fromPolygon(polygon);
     }
 </script>
 

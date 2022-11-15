@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { Vector2D } from '../../core/models';
-    import { arcTo, attributeList, enlargeArc, lineTo, moveTo, RIGHT_ANGLE } from '../../core/helpers';
+    import { SVGPath, Vector2D } from '../../core/models';
+    import { attributeList, enlargeArc, RIGHT_ANGLE } from '../../core/helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -25,6 +25,7 @@
      * @param {number} centerX - The X-coordinate of the center of the curve.
      * @param {number} centerY - The Y-coordinate of the center of the curve.
      * @param {number} addition - An additional distance added to the outline.
+     * @returns {SVGPath} - Returns the path for the curve.
      * @private
      */
     function curvedElementPath(curveRadius, curveWidth, curveAngle, startAngle, centerX, centerY, addition) {
@@ -53,12 +54,12 @@
         const outerEnd = outerStart + outerAngle;
         const outerCenter = center;
 
-        const p1 = Vector2D.polar(innerRadius, innerStart, innerCenter);
-        const p2 = Vector2D.polar(innerRadius, innerEnd, innerCenter);
-        const p3 = Vector2D.polar(outerRadius, outerEnd, outerCenter);
-        const p4 = Vector2D.polar(outerRadius, outerStart, outerCenter);
-
-        return `${moveTo(p1)} ${arcTo(innerRadius, p2, 0, 1, 0)} ${lineTo(p3)} ${arcTo(outerRadius, p4, 0, 0, 0)} Z`;
+        return new SVGPath()
+            .polarMoveTo(innerRadius, innerStart, innerCenter)
+            .arcCurveTo(innerRadius, -innerAngle, Vector2D.polar(innerRadius, innerEnd, innerCenter))
+            .polarLineTo(outerRadius, outerEnd, outerCenter)
+            .arcCurveTo(outerRadius, outerAngle, Vector2D.polar(outerRadius, outerStart, outerCenter))
+            .close();
     }
 </script>
 

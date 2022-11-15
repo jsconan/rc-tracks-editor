@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { Vector2D } from '../../core/models';
-    import { arcTo, attributeList, lineTo, moveTo } from '../../core/helpers';
+    import { SVGPath, Vector2D } from '../../core/models';
+    import { attributeList } from '../../core/helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -23,6 +23,7 @@
      * @param {number} centerX - The X-coordinate of the center of the curve.
      * @param {number} centerY - The Y-coordinate of the center of the curve.
      * @param {number} addition - An additional distance added to the outline.
+     * @returns {SVGPath} - Returns the path for the curve.
      * @private
      */
     function curvedElementPath(innerRadius, curveWidth, curveSide, centerX, centerY, addition) {
@@ -31,17 +32,14 @@
         const outerRadius = innerRadius + curveWidth - curveSide + addition;
         const center = new Vector2D(centerX, centerY).subScalar(addition);
 
-        const p1 = center.addScalarX(innerRadius);
-        const p2 = center.addScalarY(innerRadius);
-        const p3 = p2.addScalarY(curveWidth + addition * 2);
-        const p4 = p3.addScalarX(curveSide + addition);
-        const p5 = p4.addCoord(outerRadius, -outerRadius);
-        const p6 = p5.subScalarY(curveSide + addition);
-
-        const innerCurve = arcTo(innerRadius, p2, 0, 1, 0);
-        const outerCurve = arcTo(outerRadius, p5, 0, 0, 0);
-
-        return `${moveTo(p1)} ${innerCurve} ${lineTo(p3)} ${lineTo(p4)} ${outerCurve} ${lineTo(p6)} Z`;
+        return new SVGPath()
+            .moveTo(center.addScalarX(innerRadius))
+            .ellipticalArcCurveTo(innerRadius, 0, 0, 1, center.addScalarY(innerRadius))
+            .verticalLineBy(curveWidth + addition * 2)
+            .horizontalLineBy(curveSide + addition)
+            .ellipticalArcCurveBy(outerRadius, 0, 0, 0, new Vector2D(outerRadius, -outerRadius))
+            .verticalLineBy(-curveSide - addition)
+            .close();
     }
 </script>
 
