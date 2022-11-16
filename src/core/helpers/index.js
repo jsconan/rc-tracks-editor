@@ -33,7 +33,6 @@ export * from './angles.js';
 export * from './attributes.js';
 export * from './compare.js';
 export * from './coord.js';
-export * from './svg.js';
 export * from './transform.js';
 export * from './values.js';
 /* c8 ignore end */
