@@ -25,7 +25,7 @@ import {
     getTypeRank,
     getDirectionRank
 } from '../helpers';
-import { degrees, rotate, STRAIGHT_ANGLE } from '../../core/helpers';
+import { absDegrees, rotate, STRAIGHT_ANGLE } from '../../core/helpers';
 import { TileSpecifications } from '../config';
 import { Vector2D } from '../../core/models';
 
@@ -287,7 +287,7 @@ export class TileModel {
      * @returns {number}
      */
     getOutputAngle(angle = 0) {
-        return degrees(angle);
+        return absDegrees(angle);
     }
 
     /**
@@ -343,7 +343,7 @@ export class TileModel {
             input: {
                 x: inputCoord.x,
                 y: inputCoord.y,
-                angle: degrees(angle)
+                angle: absDegrees(angle)
             },
             output: {
                 x: outputCoord.x,
@@ -363,7 +363,7 @@ export class TileModel {
     getRotateTransform(x = 0, y = 0, angle = 0) {
         const center = this.getCenterCoord(x, y);
         const directionAngle = this.getDirectionAngle();
-        const rotationAngle = degrees(angle);
+        const rotationAngle = absDegrees(angle);
         const orientation = directionAngle ? rotate(directionAngle, center.x, center.y) : '';
         const rotation = rotationAngle ? rotate(rotationAngle, x, y) : '';
 

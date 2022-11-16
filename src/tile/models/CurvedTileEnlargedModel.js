@@ -17,7 +17,7 @@
  */
 
 import { CURVED_TILE_ENLARGED_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
-import { degrees, quadrantRange, RIGHT_ANGLE } from '../../core/helpers';
+import { absDegrees, quadrantRange, RIGHT_ANGLE } from '../../core/helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -144,10 +144,10 @@ export class CurvedTileEnlargedModel extends TileModel {
      */
     getOutputAngle(angle = 0) {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return degrees(angle - RIGHT_ANGLE);
+            return absDegrees(angle - RIGHT_ANGLE);
         }
 
-        return degrees(angle + RIGHT_ANGLE);
+        return absDegrees(angle + RIGHT_ANGLE);
     }
 
     /**
@@ -188,7 +188,7 @@ export class CurvedTileEnlargedModel extends TileModel {
         const edges = [p0, p1, p2];
 
         const rotatedCenter = curveCenter.rotateAround(angle, start);
-        const rotatedStartAngle = degrees(p2.sub(rotatedCenter).angle());
+        const rotatedStartAngle = absDegrees(p2.sub(rotatedCenter).angle());
         const rotatedEndAngle = rotatedStartAngle + RIGHT_ANGLE;
 
         const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);

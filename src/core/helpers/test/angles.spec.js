@@ -16,7 +16,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { degrees, enlargeArc, quadrant, quadrantAngle, quadrantRange, toDegrees, toRadians } from '../angles.js';
+import {
+    absDegrees,
+    degrees,
+    enlargeArc,
+    quadrant,
+    quadrantAngle,
+    quadrantRange,
+    toDegrees,
+    toRadians
+} from '../angles.js';
 
 describe('toRadians', () => {
     it('is a function', () => {
@@ -44,9 +53,9 @@ describe('toDegrees', () => {
     });
 });
 
-describe('degrees', () => {
+describe('absDegrees', () => {
     it('is a function', () => {
-        expect(degrees).toEqual(expect.any(Function));
+        expect(absDegrees).toEqual(expect.any(Function));
     });
 
     it.each([
@@ -58,6 +67,25 @@ describe('degrees', () => {
         [-400, 320],
         [-360, 0],
         [-720, 0]
+    ])('adjusts angles in degrees [%s => %s]', (angle, expected) => {
+        expect(absDegrees(angle)).toBe(expected);
+    });
+});
+
+describe('degrees', () => {
+    it('is a function', () => {
+        expect(absDegrees).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [60, 60],
+        [400, 40],
+        [360, 360],
+        [720, 0],
+        [-60, -60],
+        [-400, -40],
+        [-360, -360],
+        [-720, -0]
     ])('adjusts angles in degrees [%s => %s]', (angle, expected) => {
         expect(degrees(angle)).toBe(expected);
     });

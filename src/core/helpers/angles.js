@@ -57,18 +57,31 @@ export const toRadians = angle => angle / DEGREES_PER_RADIANS;
 export const toDegrees = angle => angle * DEGREES_PER_RADIANS;
 
 /**
- * Adjusts an angle given in degrees so that it remains within the domain.
+ * Adjusts an angle given in degrees so that it remains within the domain [0..360[.
  * @param {number} angle - The angle given in degrees.
  * @returns {number} - The angle adjusted in degrees.
  */
-export const degrees = angle => ((angle % CIRCLE) + CIRCLE) % CIRCLE;
+export const absDegrees = angle => ((angle % CIRCLE) + CIRCLE) % CIRCLE;
+
+/**
+ * Adjusts an angle given in degrees so that it remains within the domain [-360..360].
+ * @param {number} angle - The angle given in degrees.
+ * @returns {number} - The angle adjusted in degrees.
+ */
+export const degrees = angle => {
+    if (Math.abs(angle) <= CIRCLE) {
+        return angle;
+    }
+
+    return angle % CIRCLE;
+};
 
 /**
  * Gets the quadrant in which the given angle is contained.
  * @param {number} angle - The angle given in degrees.
  * @returns {number} - The quadrant containing the given angle.
  */
-export const quadrant = angle => Math.floor(degrees(angle) / RIGHT_ANGLE);
+export const quadrant = angle => Math.floor(absDegrees(angle) / RIGHT_ANGLE);
 
 /**
  * The angle of the last quadrant.

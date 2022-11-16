@@ -17,7 +17,7 @@
  */
 
 import { CURVED_TILE_TYPE, TILE_DIRECTION_LEFT } from '../helpers';
-import { degrees, quadrantRange, RIGHT_ANGLE, STRAIGHT_ANGLE } from '../../core/helpers';
+import { absDegrees, quadrantRange, RIGHT_ANGLE, STRAIGHT_ANGLE } from '../../core/helpers';
 import { TileModel } from './TileModel.js';
 import { Vector2D } from '../../core/models';
 
@@ -128,10 +128,10 @@ export class CurvedTileModel extends TileModel {
      */
     getOutputAngle(angle = 0) {
         if (this.direction === TILE_DIRECTION_LEFT) {
-            return degrees(angle - this.getCurveAngle());
+            return absDegrees(angle - this.getCurveAngle());
         }
 
-        return degrees(angle + this.getCurveAngle());
+        return absDegrees(angle + this.getCurveAngle());
     }
 
     /**
@@ -166,7 +166,7 @@ export class CurvedTileModel extends TileModel {
         const edges = [p0, p1];
 
         const rotatedCenter = center.rotateAround(angle, start);
-        const rotatedStartAngle = degrees(p1.sub(rotatedCenter).angle());
+        const rotatedStartAngle = absDegrees(p1.sub(rotatedCenter).angle());
         const rotatedEndAngle = rotatedStartAngle + this.getCurveAngle();
 
         const edgeAngle = quadrantRange(rotatedStartAngle, rotatedEndAngle);
