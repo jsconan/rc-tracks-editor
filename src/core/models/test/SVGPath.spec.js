@@ -1042,66 +1042,66 @@ describe('SVGPath', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(5, 30, 60)).toBe(path);
-                expect(path.toString()).toBe('A 5,5 0 0 0 6.8301270189221945,6.830127018922193');
+                expect(path.toString()).toBe('A 5,5 0 0 1 -1.830127018922194,1.830127018922194');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(6.8301270189221945);
-                expect(path.current.y).toBe(6.830127018922193);
+                expect(path.current.x).toBe(-1.830127018922194);
+                expect(path.current.y).toBe(1.830127018922194);
             });
 
             it('when the radius is given as a 2D vector', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(new Vector2D(5, 6), 30, 60)).toBe(path);
-                expect(path.toString()).toBe('A 5,6 0 0 0 6.8301270189221945,8.196152422706632');
+                expect(path.toString()).toBe('A 5,6 0 0 1 -1.830127018922194,2.196152422706634');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(6.8301270189221945);
-                expect(path.current.y).toBe(8.196152422706632);
+                expect(path.current.x).toBe(-1.830127018922194);
+                expect(path.current.y).toBe(2.196152422706634);
             });
 
             it('when the angle is positive and lower than 180', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(5, 30, 60)).toBe(path);
-                expect(path.toString()).toBe('A 5,5 0 0 0 6.8301270189221945,6.830127018922193');
+                expect(path.toString()).toBe('A 5,5 0 0 1 -1.830127018922194,1.830127018922194');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(6.8301270189221945);
-                expect(path.current.y).toBe(6.830127018922193);
+                expect(path.current.x).toBe(-1.830127018922194);
+                expect(path.current.y).toBe(1.830127018922194);
             });
 
             it('when the angle is positive and greater than 180', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(5, 30, 230)).toBe(path);
-                expect(path.toString()).toBe('A 5,5 0 1 0 1.116188970489496,-1.33022221559489');
+                expect(path.toString()).toBe('A 5,5 0 1 1 -7.544065067354892,-6.330222215594889');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(1.116188970489496);
-                expect(path.current.y).toBe(-1.33022221559489);
+                expect(path.current.x).toBe(-7.544065067354892);
+                expect(path.current.y).toBe(-6.330222215594889);
             });
 
             it('when the angle is negative and lower than 180', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(5, 60, 30)).toBe(path);
-                expect(path.toString()).toBe('A 5,5 0 0 1 6.8301270189221945,6.830127018922193');
+                expect(path.toString()).toBe('A 5,5 0 0 0 1.8301270189221914,-1.8301270189221932');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(6.8301270189221945);
-                expect(path.current.y).toBe(6.830127018922193);
+                expect(path.current.x).toBe(1.8301270189221914);
+                expect(path.current.y).toBe(-1.8301270189221932);
             });
 
             it('when the angle is negative and greater than 180', () => {
                 const path = new SVGPath();
 
                 expect(path.arcCurve(5, 230, 30)).toBe(path);
-                expect(path.toString()).toBe('A 5,5 0 1 1 1.116188970489496,-1.33022221559489');
+                expect(path.toString()).toBe('A 5,5 0 1 0 7.544065067354891,6.330222215594889');
 
                 expect(path.length).toBe(1);
-                expect(path.current.x).toBe(1.116188970489496);
-                expect(path.current.y).toBe(-1.33022221559489);
+                expect(path.current.x).toBe(7.544065067354891);
+                expect(path.current.y).toBe(6.330222215594889);
             });
 
             it('it needs 2D vectors', () => {

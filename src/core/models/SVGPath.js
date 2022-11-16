@@ -572,11 +572,11 @@ export class SVGPath {
         Vector2D.validateInstance(radius);
 
         const angle = endAngle - startAngle;
-        const center = this.#current.add(Vector2D.polar(radius, startAngle));
+        const center = this.#current.add(Vector2D.polar(radius, startAngle + STRAIGHT_ANGLE));
         this.#current = center.add(Vector2D.polar(radius, endAngle));
 
         const largeArc = Math.abs(angle) > STRAIGHT_ANGLE ? 1 : 0;
-        const sweep = angle < 0 ? 1 : 0;
+        const sweep = angle < 0 ? 0 : 1;
 
         this.#commands.push(new SVGPathCommand('A', radius, 0, largeArc, sweep, this.#current));
 
