@@ -7,37 +7,37 @@
 
     export let cx = 0;
     export let cy = 0;
+    export let rotation = 0;
+    export let radius = 1;
+    export let angle = 1;
     export let width = 1;
     export let thickness = void 0;
     export let clockwise = true;
-    export let radius = 1;
-    export let angle = 1;
-    export let start = 0;
     export let fill = void 0;
     export let stroke = void 0;
     export let transform = void 0;
 
     /**
      * Builds the SVG path for rendering a curved arrow.
+     * @param {number} centerX - The X-coordinate of the center of the curve.
+     * @param {number} centerY - The Y-coordinate of the center of the curve.
      * @param {number} arrowWidth - The width of the arrow.
      * @param {number} arrowThickness - The thickness of the arrow.
      * @param {boolean} arrowClockwise - Is the arrow clockwise or counter-clockwise?
      * @param {number} curveRadius - The radius of the curve.
      * @param {number} curveAngle - Tha angle of the curve.
      * @param {number} startAngle - The start angle of the curve.
-     * @param {number} centerX - The X-coordinate of the center of the curve.
-     * @param {number} centerY - The Y-coordinate of the center of the curve.
      * @private
      */
     function curvedArrowPath(
+        centerX,
+        centerY,
         arrowWidth,
         arrowThickness,
         arrowClockwise,
         curveRadius,
         curveAngle,
-        startAngle,
-        centerX,
-        centerY
+        startAngle
     ) {
         const center = new Vector2D(centerX, centerY);
 
@@ -93,7 +93,7 @@
 </script>
 
 <path
-    d={curvedArrowPath(width, thickness, clockwise, radius, angle, start, cx, cy)}
+    d={curvedArrowPath(cx, cy, width, thickness, clockwise, radius, angle, rotation)}
     {...attributeList(fill, 'fill')}
     {...attributeList(stroke, 'stroke')}
     {transform}

@@ -29,12 +29,12 @@ describe('StraightArrow', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            x: 100,
-            y: 150,
+            cx: 100,
+            cy: 150,
+            rotation: 30,
             width: 100,
             height: 50,
             thickness: 25,
-            angle: 30,
             fill: 'red',
             stroke: {
                 stroke: 'green',
@@ -48,24 +48,24 @@ describe('StraightArrow', () => {
     });
 
     it.each([
-        ['x', { x: 40 }],
-        ['y', { y: 40 }],
+        ['cx', { cx: 40 }],
+        ['cy', { cy: 40 }],
+        ['rotation', { rotation: 60 }],
         ['width', { width: 50 }],
         ['height', { height: 50 }],
         ['thickness', { thickness: 50 }],
-        ['angle', { angle: 60 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['stroke-width', { stroke: { 'stroke-width': 3 } }],
         ['transform', { transform: 'rotate(180)' }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
-            x: 100,
-            y: 150,
+            cx: 100,
+            cy: 150,
+            rotation: 30,
             width: 100,
             height: 50,
             thickness: 25,
-            angle: 30,
             fill: 'red',
             stroke: {
                 stroke: 'green',

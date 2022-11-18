@@ -5,11 +5,11 @@
     import { attributeList } from '../helpers';
     import { Polygon2D, SVGPath, Vector2D } from '../models';
 
-    export let x = 0;
-    export let y = 0;
+    export let cx = 0;
+    export let cy = 0;
+    export let rotation = 0;
     export let width = 1;
     export let height = 1;
-    export let angle = 0;
     export let fill = void 0;
     export let stroke = void 0;
     export let transform = void 0;
@@ -20,10 +20,10 @@
      * @param {number} centerY - The Y-coordinate of the center of the arrow.
      * @param {number} arrowWidth - The width of the arrow.
      * @param {number} arrowHeight - The height of the arrow.
-     * @param {number} rotation - The rotation angle.
+     * @param {number} rotationAngle - The rotation angle.
      * @returns {SVGPath} - Returns the path for the shape.
      */
-    function arrowElementPath(centerX, centerY, arrowWidth, arrowHeight, rotation) {
+    function arrowElementPath(centerX, centerY, arrowWidth, arrowHeight, rotationAngle) {
         const sideH = arrowWidth / 2;
         const sideV = arrowHeight / 2;
         const center = new Vector2D(centerX, centerY);
@@ -34,13 +34,13 @@
             new Vector2D(sideH, 0),
             new Vector2D(-sideH, sideV)
         ]);
-        polygon.rotate(rotation).move(center);
+        polygon.rotate(rotationAngle).move(center);
         return SVGPath.fromPolygon(polygon);
     }
 </script>
 
 <path
-    d={arrowElementPath(x, y, width, height, angle)}
+    d={arrowElementPath(cx, cy, width, height, rotation)}
     {...attributeList(fill, 'fill')}
     {...attributeList(stroke, 'stroke')}
     {transform}

@@ -5,12 +5,12 @@
     import { attributeList } from '../helpers';
     import { Polygon2D, SVGPath, Vector2D } from '../models';
 
-    export let x = 0;
-    export let y = 0;
+    export let cx = 0;
+    export let cy = 0;
+    export let rotation = 0;
     export let width = 1;
     export let height = 1;
     export let thickness = void 0;
-    export let angle = 0;
     export let fill = void 0;
     export let stroke = void 0;
     export let transform = void 0;
@@ -22,10 +22,10 @@
      * @param {number} arrowWidth - The width of the arrow.
      * @param {number} arrowHeight - The height of the arrow.
      * @param {number} arrowThickness - The thickness of the arrow.
-     * @param {number} rotation - The rotation angle.
+     * @param {number} rotationAngle - The rotation angle.
      * @returns {SVGPath} - Returns the path for the shape.
      */
-    function straightArrowPath(centerX, centerY, arrowWidth, arrowHeight, arrowThickness, rotation) {
+    function straightArrowPath(centerX, centerY, arrowWidth, arrowHeight, arrowThickness, rotationAngle) {
         const halfH = arrowWidth / 2;
         const halfV = arrowHeight / 2;
         const halfB = arrowThickness / 2;
@@ -41,7 +41,7 @@
             new Vector2D(arrowStart, -halfB),
             new Vector2D(-halfH, -halfB)
         ]);
-        polygon.rotate(rotation).move(center);
+        polygon.rotate(rotationAngle).move(center);
         return SVGPath.fromPolygon(polygon);
     }
 
@@ -51,7 +51,7 @@
 </script>
 
 <path
-    d={straightArrowPath(x, y, width, height, thickness, angle)}
+    d={straightArrowPath(cx, cy, width, height, thickness, rotation)}
     {...attributeList(fill, 'fill')}
     {...attributeList(stroke, 'stroke')}
     {transform}

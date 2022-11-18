@@ -29,11 +29,11 @@ describe('ArrowTip', () => {
 
     it('renders with the given parameters', () => {
         const props = {
-            x: 100,
-            y: 150,
+            cx: 100,
+            cy: 150,
+            rotation: 30,
             width: 80,
             height: 100,
-            angle: 30,
             fill: 'red',
             stroke: {
                 stroke: 'green',
@@ -47,22 +47,22 @@ describe('ArrowTip', () => {
     });
 
     it.each([
-        ['x', { x: 40 }],
-        ['y', { y: 40 }],
+        ['cx', { cx: 40 }],
+        ['cy', { cy: 40 }],
+        ['rotation', { rotation: 60 }],
         ['width', { width: 40 }],
         ['height', { height: 40 }],
-        ['angle', { angle: 60 }],
         ['fill', { fill: 'blue' }],
         ['stroke', { stroke: 'blue' }],
         ['stroke-width', { stroke: { 'stroke-width': 3 } }],
         ['transform', { transform: 'rotate(180)' }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
-            x: 100,
-            y: 150,
+            cx: 100,
+            cy: 150,
+            rotation: 30,
             width: 80,
             height: 100,
-            angle: 30,
             fill: 'red',
             stroke: {
                 stroke: 'green',

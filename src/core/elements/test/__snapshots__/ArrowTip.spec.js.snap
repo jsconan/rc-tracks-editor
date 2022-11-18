@@ -24,11 +24,25 @@ exports[`ArrowTip renders with the given parameters 1`] = `
 </body>
 `;
 
-exports[`ArrowTip updates when the parameter angle is modified 1`] = `
+exports[`ArrowTip updates when the parameter cx is modified 1`] = `
 <body>
   <div>
     <path
-      d="M 90,132.67949192431124 L 123.30127018922192,90.35898384862244 120,184.64101615137753 36.69872981077806,140.35898384862247 Z"
+      d="M 22.679491924311225,140 L 30.358983848622447,86.69872981077806 74.64101615137756,170 -19.641016151377542,173.30127018922195 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`ArrowTip updates when the parameter cy is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 82.67949192431122,30 L 90.35898384862244,-23.30127018922194 134.64101615137756,60 40.35898384862246,63.30127018922194 Z"
       fill="red"
       stroke="green"
       stroke-width="2"
@@ -57,6 +71,20 @@ exports[`ArrowTip updates when the parameter height is modified 1`] = `
   <div>
     <path
       d="M 82.67949192431122,140 L 75.35898384862244,112.67949192431124 134.64101615137756,170 55.35898384862245,147.3205080756888 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`ArrowTip updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 90,132.67949192431124 L 123.30127018922192,90.35898384862244 120,184.64101615137753 36.69872981077806,140.35898384862247 Z"
       fill="red"
       stroke="green"
       stroke-width="2"
@@ -111,34 +139,6 @@ exports[`ArrowTip updates when the parameter width is modified 1`] = `
   <div>
     <path
       d="M 91.33974596215562,145 L 107.67949192431122,96.69872981077806 117.32050807568878,160 57.67949192431123,183.30127018922195 Z"
-      fill="red"
-      stroke="green"
-      stroke-width="2"
-      transform="rotate(90)"
-    />
-  </div>
-</body>
-`;
-
-exports[`ArrowTip updates when the parameter x is modified 1`] = `
-<body>
-  <div>
-    <path
-      d="M 22.679491924311225,140 L 30.358983848622447,86.69872981077806 74.64101615137756,170 -19.641016151377542,173.30127018922195 Z"
-      fill="red"
-      stroke="green"
-      stroke-width="2"
-      transform="rotate(90)"
-    />
-  </div>
-</body>
-`;
-
-exports[`ArrowTip updates when the parameter y is modified 1`] = `
-<body>
-  <div>
-    <path
-      d="M 82.67949192431122,30 L 90.35898384862244,-23.30127018922194 134.64101615137756,60 40.35898384862246,63.30127018922194 Z"
       fill="red"
       stroke="green"
       stroke-width="2"
