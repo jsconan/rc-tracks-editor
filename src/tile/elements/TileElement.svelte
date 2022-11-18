@@ -13,7 +13,7 @@
     export let type = STRAIGHT_TILE_TYPE;
     export let direction = TILE_DIRECTION_RIGHT;
     export let ratio = 1;
-    export let angle = 0;
+    export let rotation = 0;
     export let x = 0;
     export let y = 0;
     export let d = 0;
@@ -30,7 +30,7 @@
 
     $: model = TileList.createTile(specs, type, direction, ratio);
     $: parameters = model.getShapeParameters(x, y).ground;
-    $: transform = model.getRotateTransform(x, y, angle);
+    $: transform = model.getRotateTransform(x, y, rotation);
     $: component = componentsMap[type];
 </script>
 

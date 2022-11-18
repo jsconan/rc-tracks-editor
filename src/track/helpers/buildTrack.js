@@ -42,7 +42,7 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
 
     const tiles = list.map(model => {
         const rect = model.getBoundingRect(inputX, inputY, inputAngle);
-        const { x, y, angle } = rect.input;
+        const { x, y, angle: rotation } = rect.input;
         const { id, type, direction, ratio } = model;
 
         inputX = rect.output.x;
@@ -55,7 +55,7 @@ export default (list, { startX = 0, startY = 0, startAngle = 0, hPadding = 0, vP
         bottomRight.x = Math.max(bottomRight.x, rect.x + rect.width);
         bottomRight.y = Math.max(bottomRight.y, rect.y + rect.height);
 
-        return { id, type, direction, ratio, x, y, angle, rect, model };
+        return { id, type, direction, ratio, x, y, rotation, rect, model };
     });
 
     const { x, y } = topLeft.subCoord(hPadding, vPadding);

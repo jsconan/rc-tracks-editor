@@ -109,25 +109,6 @@ exports[`TileElement renders a undefined element with default values 1`] = `
 </body>
 `;
 
-exports[`TileElement updates when the parameter angle is modified 1`] = `
-<body>
-  <div>
-    <rect
-      fill="red"
-      height="110"
-      stroke="green"
-      stroke-width="2"
-      transform="rotate(45 100 200)"
-      width="90"
-      x="55"
-      y="200"
-    />
-    
-    
-  </div>
-</body>
-`;
-
 exports[`TileElement updates when the parameter d is modified 1`] = `
 <body>
   <div>
@@ -194,6 +175,25 @@ exports[`TileElement updates when the parameter ratio is modified 1`] = `
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)"
+      width="90"
+      x="55"
+      y="200"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileElement updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <rect
+      fill="red"
+      height="110"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(45 100 200)"
       width="90"
       x="55"
       y="200"

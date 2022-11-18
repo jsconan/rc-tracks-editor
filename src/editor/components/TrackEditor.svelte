@@ -24,8 +24,8 @@
         const tile = track.get(index);
         if (tile) {
             const { type, direction, ratio } = tile;
-            const { angle, x, y } = $tilesStore.tiles[index];
-            selected = extendTileWithStyle(TILE_STYLE_SELECTED, { type, direction, ratio, angle, x, y });
+            const { rotation, x, y } = $tilesStore.tiles[index];
+            selected = extendTileWithStyle(TILE_STYLE_SELECTED, { type, direction, ratio, rotation, x, y });
         }
     };
 

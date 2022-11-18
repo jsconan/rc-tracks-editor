@@ -32,9 +32,9 @@ const barrierChunks = 4;
 const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
 const elements = [
-    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-0' },
-    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-1' },
-    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, angle: 0, x: 0, y: 0, id: 'id-2' }
+    { type: STRAIGHT_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, rotation: 0, x: 0, y: 0, id: 'id-0' },
+    { type: CURVED_TILE_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, rotation: 0, x: 0, y: 0, id: 'id-1' },
+    { type: CURVED_TILE_ENLARGED_TYPE, direction: TILE_DIRECTION_LEFT, ratio: 1, rotation: 0, x: 0, y: 0, id: 'id-2' }
 ];
 
 function mockTarget(id) {

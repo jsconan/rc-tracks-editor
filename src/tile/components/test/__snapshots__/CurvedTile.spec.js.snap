@@ -536,64 +536,6 @@ exports[`CurvedTile renders with the given parameters for a tile oriented to the
 </body>
 `;
 
-exports[`CurvedTile updates when the parameter angle is modified 1`] = `
-<body>
-  <div>
-    <g
-      class="tile curved-tile"
-      id="tile"
-      transform="rotate(45 100 150)"
-    >
-      <path
-        d="M 55,150 A 10,10 0 0 1 45,160 L 45.00000000000001,250 A 100,100 0 0 0 145,150 Z"
-        fill="var(--color-ground)"
-        stroke="var(--color-separator)"
-        stroke-width="var(--stroke-width-tile)"
-      />
-      <g
-        class="barrier curved-barrier"
-      >
-        
-        <path
-          d="M 55,150 A 10,10 0 0 1 52.071067811865476,157.07106781186548 L 55.60660171779821,160.6066017177982 A 15,15 0 0 0 60,150 Z"
-          fill="var(--color-even)"
-        />
-        
-        <path
-          d="M 52.071067811865476,157.07106781186548 A 10,10 0 0 1 45,160 L 45,165 A 15,15 0 0 0 55.60660171779821,160.6066017177982 Z"
-          fill="var(--color-odd)"
-        />
-      </g>
-      <g
-        class="barrier curved-barrier"
-      >
-        
-        <path
-          d="M 140,150 A 95,95 0 0 1 132.76855558857224,186.35492607468353 L 137.3879532511287,188.26834323650897 A 100,100 0 0 0 145,150 Z"
-          fill="var(--color-odd)"
-        />
-        
-        <path
-          d="M 132.76855558857224,186.35492607468353 A 95,95 0 0 1 112.17514421272202,217.175144212722 L 115.71067811865476,220.71067811865476 A 100,100 0 0 0 137.3879532511287,188.26834323650897 Z"
-          fill="var(--color-even)"
-        />
-        
-        <path
-          d="M 112.17514421272202,217.175144212722 A 95,95 0 0 1 81.35492607468353,237.76855558857224 L 83.26834323650898,242.3879532511287 A 100,100 0 0 0 115.71067811865476,220.71067811865476 Z"
-          fill="var(--color-odd)"
-        />
-        
-        <path
-          d="M 81.35492607468353,237.76855558857224 A 95,95 0 0 1 45.00000000000001,245 L 45.00000000000001,250 A 100,100 0 0 0 83.26834323650898,242.3879532511287 Z"
-          fill="var(--color-even)"
-        />
-      </g>
-    </g>
-    
-  </div>
-</body>
-`;
-
 exports[`CurvedTile updates when the parameter direction is modified 1`] = `
 <body>
   <div>
@@ -711,6 +653,64 @@ exports[`CurvedTile updates when the parameter ratio is modified 1`] = `
         
         <path
           d="M 105.45127052202179,263.89189776901844 A 205,205 0 0 1 79.95689014324225,294.9568901432422 L 83.49242404917499,298.49242404917493 A 210,210 0 0 0 109.60861858353451,266.66974893411646 Z"
+          fill="var(--color-even)"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`CurvedTile updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile curved-tile"
+      id="tile"
+      transform="rotate(45 100 150)"
+    >
+      <path
+        d="M 55,150 A 10,10 0 0 1 45,160 L 45.00000000000001,250 A 100,100 0 0 0 145,150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="var(--stroke-width-tile)"
+      />
+      <g
+        class="barrier curved-barrier"
+      >
+        
+        <path
+          d="M 55,150 A 10,10 0 0 1 52.071067811865476,157.07106781186548 L 55.60660171779821,160.6066017177982 A 15,15 0 0 0 60,150 Z"
+          fill="var(--color-even)"
+        />
+        
+        <path
+          d="M 52.071067811865476,157.07106781186548 A 10,10 0 0 1 45,160 L 45,165 A 15,15 0 0 0 55.60660171779821,160.6066017177982 Z"
+          fill="var(--color-odd)"
+        />
+      </g>
+      <g
+        class="barrier curved-barrier"
+      >
+        
+        <path
+          d="M 140,150 A 95,95 0 0 1 132.76855558857224,186.35492607468353 L 137.3879532511287,188.26834323650897 A 100,100 0 0 0 145,150 Z"
+          fill="var(--color-odd)"
+        />
+        
+        <path
+          d="M 132.76855558857224,186.35492607468353 A 95,95 0 0 1 112.17514421272202,217.175144212722 L 115.71067811865476,220.71067811865476 A 100,100 0 0 0 137.3879532511287,188.26834323650897 Z"
+          fill="var(--color-even)"
+        />
+        
+        <path
+          d="M 112.17514421272202,217.175144212722 A 95,95 0 0 1 81.35492607468353,237.76855558857224 L 83.26834323650898,242.3879532511287 A 100,100 0 0 0 115.71067811865476,220.71067811865476 Z"
+          fill="var(--color-odd)"
+        />
+        
+        <path
+          d="M 81.35492607468353,237.76855558857224 A 95,95 0 0 1 45.00000000000001,245 L 45.00000000000001,250 A 100,100 0 0 0 83.26834323650898,242.3879532511287 Z"
           fill="var(--color-even)"
         />
       </g>

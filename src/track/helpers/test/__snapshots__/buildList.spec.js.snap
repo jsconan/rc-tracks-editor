@@ -5,7 +5,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -37,12 +36,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -74,12 +73,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -111,12 +110,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -148,12 +147,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -185,12 +184,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -222,12 +221,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -259,12 +258,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -296,12 +295,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -333,12 +332,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -370,12 +369,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -407,12 +406,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -444,6 +443,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": 0,
@@ -460,7 +460,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 167.7776769338703,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -492,12 +491,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -529,12 +528,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -566,12 +565,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": -22.5,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -603,12 +602,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -41.5745789630079,
         "y": -17.22075445642904,
       },
+      "rotation": -22.5,
       "type": "curved-tile",
       "x": 331.5745789630079,
       "y": 17.22075445642904,
     },
     {
-      "angle": -15,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -640,12 +639,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -43.466662183008076,
         "y": -11.646857029613432,
       },
+      "rotation": -15,
       "type": "curved-tile",
       "x": 432.60111828165367,
       "y": 11.646857029613432,
     },
     {
-      "angle": -11.25,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -677,12 +676,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -44.13533761814541,
         "y": -8.779064490725771,
       },
+      "rotation": -11.25,
       "type": "curved-tile",
       "x": 531.1068536703053,
       "y": 8.779064490725771,
     },
     {
-      "angle": -360,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -714,12 +713,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45.00000000000003,
         "y": -1.1021821192326179e-14,
       },
+      "rotation": -360,
       "type": "straight-tile",
       "x": 628.5045207150616,
       "y": 1.1021821192326179e-14,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -751,12 +750,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 718.5045207150616,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -788,12 +787,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 818.5045207150616,
       "y": 0,
     },
     {
-      "angle": -337.5,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -825,12 +824,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -57.55987713563766,
         "y": -17.220754456429006,
       },
+      "rotation": -337.5,
       "type": "curved-tile",
       "x": 931.0643978506993,
       "y": 17.220754456429006,
     },
     {
-      "angle": -345,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -862,12 +861,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -54.3703977705062,
         "y": -11.646857029613393,
       },
+      "rotation": -345,
       "type": "curved-tile",
       "x": 1027.0093745842134,
       "y": 11.646857029613393,
     },
     {
-      "angle": -348.75,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -899,6 +898,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -52.397667044756304,
         "y": -8.779064490725741,
       },
+      "rotation": -348.75,
       "type": "curved-tile",
       "x": 1122.873703811978,
       "y": 8.779064490725741,
@@ -915,7 +915,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -947,12 +946,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -984,12 +983,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -1021,12 +1020,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1058,12 +1057,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -1095,12 +1094,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -1132,12 +1131,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -1169,12 +1168,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -1206,12 +1205,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -1243,12 +1242,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -1280,12 +1279,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -1317,12 +1316,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -1354,6 +1353,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": 0,
@@ -1370,7 +1370,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -1402,12 +1401,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": -55,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -1439,12 +1438,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -1476,12 +1475,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1513,12 +1512,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": -74.24621202458748,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -1550,12 +1549,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": -79.99999999999999,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -1587,12 +1586,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": -82.2769379584943,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -1624,12 +1623,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": -55,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -1661,12 +1660,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -1698,12 +1697,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -1735,12 +1734,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": -74.24621202458749,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -1772,12 +1771,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": -79.99999999999999,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -1809,6 +1808,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": -82.27693795849433,
@@ -1825,7 +1825,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 1566.0925999323272,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -1857,12 +1856,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -1894,12 +1893,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 5,
       "y": 110,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -1931,12 +1930,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 5,
       "y": 210,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1968,12 +1967,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 17.573593128807147,
       "y": 310,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -2005,12 +2004,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 15.407078564789543,
       "y": 458.49242404917493,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -2042,12 +2041,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 12.940479473081268,
       "y": 618.4924240491749,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -2079,12 +2078,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 783.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -2116,12 +2115,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": -5,
       "y": 893.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -2153,12 +2152,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": -5,
       "y": 993.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -2190,12 +2189,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": -17.573593128807154,
       "y": 1093.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -2227,12 +2226,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": -15.407078564789543,
       "y": 1241.5387240153386,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -2264,6 +2263,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": -12.940479473081268,
       "y": 1401.5387240153386,
@@ -2280,7 +2280,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 184.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -2312,12 +2311,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -2349,12 +2348,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 185,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -2386,12 +2385,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 325,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -2423,12 +2422,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -2460,12 +2459,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 650.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -2497,12 +2496,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 806.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -2534,12 +2533,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 936.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -2571,12 +2570,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 1066.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -2608,12 +2607,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1206.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -2645,12 +2644,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1346.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -2682,12 +2681,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1511.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -2719,6 +2718,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1672.8036457205494,
       "y": 0,
@@ -2735,7 +2735,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 1806.0925999323272,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -2767,12 +2766,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -2804,12 +2803,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 55,
       "y": 130,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -2841,12 +2840,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 55,
       "y": 250,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -2878,12 +2877,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 80.1471862576143,
       "y": 370,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -2915,12 +2914,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 75.81415712957909,
       "y": 538.4924240491749,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -2952,12 +2951,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 70.88095894616254,
       "y": 718.4924240491749,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -2989,12 +2988,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 903.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -3026,12 +3025,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 45,
       "y": 1033.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -3063,12 +3062,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1153.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -3100,12 +3099,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1273.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -3137,12 +3136,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1441.5387240153386,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -3174,6 +3173,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1621.5387240153386,
@@ -3190,7 +3190,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 264.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -3222,12 +3221,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 145,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -3259,12 +3258,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 245,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -3296,12 +3295,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 345,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -3333,12 +3332,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 470.1471862576143,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -3370,12 +3369,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 590.9613433871934,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -3407,12 +3406,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 706.842302333356,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -3444,12 +3443,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 796.842302333356,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -3481,12 +3480,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 886.842302333356,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -3518,12 +3517,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -3555,12 +3554,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1086.842302333356,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -3592,12 +3591,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1211.9894885909703,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -3629,6 +3628,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1332.8036457205494,
       "y": 100,
@@ -3645,7 +3645,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 273.94354890608497,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -3677,12 +3676,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -3714,12 +3713,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 351.02290732122435,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -3751,12 +3750,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 492.44426355853386,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -3788,12 +3787,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -116.67261889578033,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 640.9366876077089,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -3825,12 +3824,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -134.92598445272077,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 807.6824772138243,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -3862,12 +3861,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -142.1237437526903,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 981.6260261199093,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -3899,12 +3898,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 1123.0473823572188,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -3936,12 +3935,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -83.89087296526012,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 1238.7580604758734,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -3973,12 +3972,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -61.109127034739885,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1331.6869926640081,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -4010,12 +4009,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -93.32738110421964,
         "y": -31.81980515339462,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1456.8341789216224,
       "y": 131.8198051533946,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -4047,12 +4046,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -114.64189958620128,
         "y": -31.819805153394608,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1603.2958836612183,
       "y": 131.8198051533946,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -4084,6 +4083,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -125.03208822303255,
         "y": -31.8198051533946,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1760.1477770376455,
       "y": 131.8198051533946,
@@ -4100,7 +4100,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 1791.96758219104,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -4132,12 +4131,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 209.60155108391484,
       "y": 131.81980515339464,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -4169,12 +4168,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 209.60155108391484,
       "y": 273.2411613907041,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -4206,12 +4205,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 209.60155108391484,
       "y": 388.9518395093589,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -4243,12 +4242,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -116.67261889578033,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 216.67261889578032,
       "y": 481.8807716974934,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -4280,12 +4279,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -134.92598445272077,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 234.92598445272077,
       "y": 607.0279579551078,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -4317,12 +4316,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -142.1237437526903,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 242.1237437526903,
       "y": 753.4896626947037,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -4354,12 +4353,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 209.60155108391484,
       "y": 910.3415560711309,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -4391,12 +4390,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -83.89087296526012,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 183.89087296526012,
       "y": 1051.7629123084403,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -4428,12 +4427,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -61.109127034739885,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 161.10912703473988,
       "y": 1193.1842685457498,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -4465,12 +4464,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -93.32738110421964,
         "y": -31.81980515339462,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 193.32738110421963,
       "y": 1334.6056247830593,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -4502,12 +4501,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -114.64189958620128,
         "y": -31.819805153394608,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 214.64189958620128,
       "y": 1483.0980488322343,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -4539,6 +4538,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -125.03208822303255,
         "y": -31.8198051533946,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 225.03208822303253,
       "y": 1649.8438384383496,
@@ -4555,7 +4555,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 173.94354890608494,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -4587,12 +4586,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 109.60155108391486,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -4624,12 +4623,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 251.02290732122435,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -4661,12 +4660,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391484,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 392.44426355853386,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -4698,12 +4697,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -116.67261889578033,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 540.9366876077089,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -4735,12 +4734,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -134.92598445272077,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 707.6824772138243,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -4772,12 +4771,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -142.1237437526903,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 881.6260261199093,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -4809,12 +4808,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 1023.0473823572188,
       "y": 31.819805153394636,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -4846,12 +4845,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -83.89087296526012,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile-enlarged",
       "x": 1138.7580604758734,
       "y": 31.81980515339463,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -4883,12 +4882,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -61.109127034739885,
         "y": -31.81980515339463,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1231.6869926640081,
       "y": 31.81980515339463,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -4920,12 +4919,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -93.32738110421964,
         "y": -31.81980515339462,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1356.8341789216224,
       "y": 31.81980515339462,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -4957,12 +4956,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -114.64189958620128,
         "y": -31.819805153394608,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1503.2958836612183,
       "y": 31.819805153394608,
     },
     {
-      "angle": 45,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -4994,6 +4993,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -125.03208822303255,
         "y": -31.8198051533946,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 1660.1477770376455,
       "y": 31.8198051533946,
@@ -5010,7 +5010,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 200,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -5042,12 +5041,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -5079,12 +5078,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 255,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -5116,12 +5115,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 455,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -5153,12 +5152,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 680.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -5190,12 +5189,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 875.8141571295791,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -5227,12 +5226,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1070.8809589461625,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -5264,12 +5263,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 1245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -5301,12 +5300,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 1445,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -5338,12 +5337,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1645,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -5375,12 +5374,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1845,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -5412,12 +5411,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 2045,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -5449,6 +5448,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 2245,
       "y": 0,
@@ -5465,7 +5465,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 200,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -5497,12 +5496,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 100,
       "y": -55,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -5534,12 +5533,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 305,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -5571,12 +5570,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 505,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -5608,12 +5607,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 717.5735931288071,
       "y": -74.24621202458748,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -5645,12 +5644,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 915.4070785647896,
       "y": -79.99999999999999,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -5682,12 +5681,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1112.9404794730813,
       "y": -82.2769379584943,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -5719,12 +5718,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 1300,
       "y": -55,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -5756,12 +5755,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 1495,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -5793,12 +5792,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1695,
       "y": -50,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -5830,12 +5829,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1882.4264068711927,
       "y": -74.24621202458749,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -5867,12 +5866,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 2084.5929214352104,
       "y": -79.99999999999999,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -5904,6 +5903,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 2287.0595205269187,
       "y": -82.27693795849433,
@@ -5920,7 +5920,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -5952,12 +5951,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -5989,12 +5988,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -6026,12 +6025,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -6063,12 +6062,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -6100,12 +6099,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -6137,12 +6136,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -6174,12 +6173,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -6211,12 +6210,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -6248,12 +6247,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -6285,12 +6284,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -6322,12 +6321,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -6359,6 +6358,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": 0,
@@ -6375,7 +6375,6 @@ exports[`buildList process a list of tiles for rendering using config options { 
   "height": 1566.0925999323272,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -6407,12 +6406,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -6444,12 +6443,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 55,
       "y": 110,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -6481,12 +6480,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 55,
       "y": 210,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -6518,12 +6517,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 80.1471862576143,
       "y": 310,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -6555,12 +6554,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 75.81415712957909,
       "y": 458.49242404917493,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -6592,12 +6591,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 70.88095894616254,
       "y": 618.4924240491749,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -6629,12 +6628,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 783.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -6666,12 +6665,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 45,
       "y": 893.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -6703,12 +6702,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 993.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -6740,12 +6739,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1093.0462999661636,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -6777,12 +6776,12 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1241.5387240153386,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -6814,6 +6813,7 @@ exports[`buildList process a list of tiles for rendering using config options { 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 45,
       "y": 1401.5387240153386,
@@ -6830,7 +6830,6 @@ exports[`buildList process a list of tiles for rendering using config options {}
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -6862,12 +6861,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -6899,12 +6898,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -6936,12 +6935,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -6973,12 +6972,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -7010,12 +7009,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -7047,12 +7046,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -7084,12 +7083,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -7121,12 +7120,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -7158,12 +7157,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -7195,12 +7194,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -7232,12 +7231,12 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -7269,6 +7268,7 @@ exports[`buildList process a list of tiles for rendering using config options {}
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": 0,
@@ -7285,7 +7285,6 @@ exports[`buildList process a list of tiles for rendering using default position 
   "height": 164.55387591698866,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -7317,12 +7316,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 45,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileEnlargedModel {
@@ -7354,12 +7353,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 145,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-2",
       "model": CurvedTileModel {
@@ -7391,12 +7390,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 245,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -7428,12 +7427,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -80.1471862576143,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 370.1471862576143,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-4",
       "model": CurvedTileModel {
@@ -7465,12 +7464,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -75.81415712957909,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 490.9613433871934,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -7502,12 +7501,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -70.88095894616254,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 606.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-6",
       "model": StraightTileModel {
@@ -7539,12 +7538,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 696.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-7",
       "model": CurvedTileEnlargedModel {
@@ -7576,12 +7575,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile-enlarged",
       "x": 786.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-8",
       "model": CurvedTileModel {
@@ -7613,12 +7612,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 886.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-9",
       "model": CurvedTileModel {
@@ -7650,12 +7649,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 986.842302333356,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-10",
       "model": CurvedTileModel {
@@ -7687,12 +7686,12 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1111.9894885909703,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "left",
       "id": "id-11",
       "model": CurvedTileModel {
@@ -7724,6 +7723,7 @@ exports[`buildList process a list of tiles for rendering using default position 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 1232.8036457205494,
       "y": 0,

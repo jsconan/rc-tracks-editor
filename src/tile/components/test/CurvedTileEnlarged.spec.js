@@ -51,11 +51,11 @@ describe('CurvedTileEnlarged', () => {
         [TILE_DIRECTION_RIGHT, 0, 4]
     ])(
         'renders with the given parameters for a tile oriented to the %s with an angle of %s˚ and a ratio of %s',
-        (direction, angle, ratio) => {
+        (direction, rotation, ratio) => {
             const props = {
                 direction,
                 ratio,
-                angle,
+                rotation,
                 x: 100,
                 y: 150,
                 id: 'tile'
@@ -75,14 +75,14 @@ describe('CurvedTileEnlarged', () => {
     it.each([
         ['direction', { direction: TILE_DIRECTION_LEFT }],
         ['ratio', { ratio: 2 }],
-        ['angle', { angle: 45 }],
+        ['rotation', { rotation: 45 }],
         ['x', { x: 40 }],
         ['y', { y: 40 }]
     ])('updates when the parameter %s is modified', async (title, update) => {
         const props = {
             direction: TILE_DIRECTION_RIGHT,
             ratio: 1,
-            angle: 0,
+            rotation: 0,
             x: 100,
             y: 150,
             id: 'tile'

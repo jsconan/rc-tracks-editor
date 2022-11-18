@@ -145,7 +145,7 @@ export class TrackBuilder {
  * @property {number} ratio - The size ratio of the tile.
  * @property {number} x - The left coordinate of the tile.
  * @property {number} y - The top coordinate of the tile.
- * @property {number} angle - The rotation angle of the tile.
+ * @property {number} rotation - The rotation angle of the tile.
  * @property {tileRect} rect - The bounding rectangle of the tile.
  * @property {TileModel} model - A reference to the tile model.
  */

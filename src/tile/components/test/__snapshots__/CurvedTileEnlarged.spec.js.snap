@@ -791,94 +791,6 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
 </body>
 `;
 
-exports[`CurvedTileEnlarged updates when the parameter angle is modified 1`] = `
-<body>
-  <div>
-    <g
-      class="tile curved-tile-enlarged"
-      id="tile"
-      transform="rotate(45 100 150)"
-    >
-      <path
-        d="M 55,150 A 10,10 0 0 1 45,160 V 250 H 100 A 45,45 0 0 0 145,205 V 150 Z"
-        fill="var(--color-ground)"
-        stroke="var(--color-separator)"
-        stroke-width="var(--stroke-width-tile)"
-      />
-      <g
-        class="barrier curved-barrier"
-      >
-        
-        <path
-          d="M 55,150 A 10,10 0 0 1 52.071067811865476,157.07106781186548 L 55.60660171779821,160.6066017177982 A 15,15 0 0 0 60,150 Z"
-          fill="var(--color-even)"
-        />
-        
-        <path
-          d="M 52.071067811865476,157.07106781186548 A 10,10 0 0 1 45,160 L 45,165 A 15,15 0 0 0 55.60660171779821,160.6066017177982 Z"
-          fill="var(--color-odd)"
-        />
-      </g>
-      <g
-        class="barrier curved-barrier"
-      >
-        
-        <path
-          d="M 140,205 A 40,40 0 0 1 128.2842712474619,233.2842712474619 L 131.81980515339464,236.81980515339464 A 45,45 0 0 0 145,205 Z"
-          fill="var(--color-odd)"
-        />
-        
-        <path
-          d="M 128.2842712474619,233.2842712474619 A 40,40 0 0 1 100,245 L 100,250 A 45,45 0 0 0 131.81980515339464,236.81980515339464 Z"
-          fill="var(--color-even)"
-        />
-      </g>
-      <g
-        class="barrier straight-barrier"
-      >
-        
-        <rect
-          fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
-        />
-        
-        <rect
-          fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
-        />
-      </g>
-      <g
-        class="barrier straight-barrier"
-      >
-        
-        <rect
-          fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
-        />
-        
-        <rect
-          fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
-        />
-      </g>
-    </g>
-    
-  </div>
-</body>
-`;
-
 exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`] = `
 <body>
   <div>
@@ -974,6 +886,94 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
       class="tile curved-tile-enlarged"
       id="tile"
       transform=""
+    >
+      <path
+        d="M 55,150 A 10,10 0 0 1 45,160 V 250 H 100 A 45,45 0 0 0 145,205 V 150 Z"
+        fill="var(--color-ground)"
+        stroke="var(--color-separator)"
+        stroke-width="var(--stroke-width-tile)"
+      />
+      <g
+        class="barrier curved-barrier"
+      >
+        
+        <path
+          d="M 55,150 A 10,10 0 0 1 52.071067811865476,157.07106781186548 L 55.60660171779821,160.6066017177982 A 15,15 0 0 0 60,150 Z"
+          fill="var(--color-even)"
+        />
+        
+        <path
+          d="M 52.071067811865476,157.07106781186548 A 10,10 0 0 1 45,160 L 45,165 A 15,15 0 0 0 55.60660171779821,160.6066017177982 Z"
+          fill="var(--color-odd)"
+        />
+      </g>
+      <g
+        class="barrier curved-barrier"
+      >
+        
+        <path
+          d="M 140,205 A 40,40 0 0 1 128.2842712474619,233.2842712474619 L 131.81980515339464,236.81980515339464 A 45,45 0 0 0 145,205 Z"
+          fill="var(--color-odd)"
+        />
+        
+        <path
+          d="M 128.2842712474619,233.2842712474619 A 40,40 0 0 1 100,245 L 100,250 A 45,45 0 0 0 131.81980515339464,236.81980515339464 Z"
+          fill="var(--color-even)"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          fill="var(--color-even)"
+          height="5"
+          width="27.5"
+          x="45"
+          y="245"
+        />
+        
+        <rect
+          fill="var(--color-odd)"
+          height="5"
+          width="27.5"
+          x="72.5"
+          y="245"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          fill="var(--color-odd)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        
+        <rect
+          fill="var(--color-even)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`CurvedTileEnlarged updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile curved-tile-enlarged"
+      id="tile"
+      transform="rotate(45 100 150)"
     >
       <path
         d="M 55,150 A 10,10 0 0 1 45,160 V 250 H 100 A 45,45 0 0 0 145,205 V 150 Z"

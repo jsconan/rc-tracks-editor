@@ -5549,7 +5549,6 @@ exports[`TileSelector can navigate 4`] = `
 
 exports[`TileSelector fires select 1`] = `
 {
-  "angle": -90,
   "direction": "right",
   "id": "curved-tile-1",
   "index": 2,
@@ -5582,6 +5581,7 @@ exports[`TileSelector fires select 1`] = `
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
+  "rotation": -90,
   "type": "curved-tile",
   "x": -60,
   "y": 275,
@@ -5590,7 +5590,6 @@ exports[`TileSelector fires select 1`] = `
 
 exports[`TileSelector fires select 2`] = `
 {
-  "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
   "index": 0,
@@ -5623,6 +5622,7 @@ exports[`TileSelector fires select 2`] = `
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
+  "rotation": -90,
   "type": "straight-tile",
   "x": -65,
   "y": 45,
@@ -5631,7 +5631,6 @@ exports[`TileSelector fires select 2`] = `
 
 exports[`TileSelector fires select 3`] = `
 {
-  "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
   "index": 0,
@@ -5664,6 +5663,7 @@ exports[`TileSelector fires select 3`] = `
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
+  "rotation": -90,
   "type": "straight-tile",
   "x": -65,
   "y": 45,
@@ -5672,7 +5672,6 @@ exports[`TileSelector fires select 3`] = `
 
 exports[`TileSelector fires select 4`] = `
 {
-  "angle": -90,
   "direction": "right",
   "id": "straight-tile-1",
   "index": 0,
@@ -5705,6 +5704,7 @@ exports[`TileSelector fires select 4`] = `
     "x": -2.7554552980815448e-15,
     "y": -45,
   },
+  "rotation": -90,
   "type": "straight-tile",
   "x": -65,
   "y": 45,

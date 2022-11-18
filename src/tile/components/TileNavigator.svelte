@@ -60,8 +60,8 @@
     };
 
     const getTile = tile => {
-        const { type, direction, ratio, angle, x, y } = tile;
-        return { type, direction, ratio, angle, x, y };
+        const { type, direction, ratio, rotation, x, y } = tile;
+        return { type, direction, ratio, rotation, x, y };
     };
 
     const navigator = new MenuNavigator();

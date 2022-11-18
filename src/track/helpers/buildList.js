@@ -64,8 +64,8 @@ export default (
         const { id, type, direction, ratio } = model;
         const alignedAngle = curveAngle / 2;
         const directionAngle = direction === TILE_DIRECTION_LEFT ? STRAIGHT_ANGLE * 2 - alignedAngle : alignedAngle;
-        const angle = tileAngle - (aligned && curveAngle < RIGHT_ANGLE ? directionAngle : 0);
-        const rect = model.getBoundingRect(0, 0, angle);
+        const rotation = tileAngle - (aligned && curveAngle < RIGHT_ANGLE ? directionAngle : 0);
+        const rect = model.getBoundingRect(0, 0, rotation);
         const width = Math.max(tileWidth, rect.width) + hPadding * 2;
         const height = Math.max(tileHeight, rect.height) + vPadding * 2;
         const dx = centered ? Math.max(0, tileWidth - rect.width) / 2 : 0;
@@ -87,7 +87,7 @@ export default (
             tileX += width;
         }
 
-        return { id, type, direction, ratio, x, y, angle, rect, model };
+        return { id, type, direction, ratio, x, y, rotation, rect, model };
     });
 
     const { x, y } = topLeft;

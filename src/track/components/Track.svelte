@@ -48,13 +48,13 @@
         on:enter
         on:leave
     >
-        {#each $tilesStore.tiles as { id, x, y, angle, model } (id)}
+        {#each $tilesStore.tiles as { id, x, y, rotation, model } (id)}
             <use
                 data-id={id}
                 {x}
                 {y}
                 href="#{getId(model.modelId)}"
-                transform={model.getRotateTransform(x, y, angle)}
+                transform={model.getRotateTransform(x, y, rotation)}
                 role="menuitem"
                 tabindex="-1"
             />

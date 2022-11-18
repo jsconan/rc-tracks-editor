@@ -16,7 +16,7 @@
     export let type = STRAIGHT_TILE_TYPE;
     export let direction = TILE_DIRECTION_RIGHT;
     export let ratio = 1;
-    export let angle = 0;
+    export let rotation = 0;
     export let x = 0;
     export let y = 0;
     export let id = void 0;
@@ -32,4 +32,4 @@
     $: component = componentsMap[type];
 </script>
 
-<svelte:component this={component} {direction} {ratio} {angle} {x} {y} {id} />
+<svelte:component this={component} {direction} {ratio} {rotation} {x} {y} {id} />

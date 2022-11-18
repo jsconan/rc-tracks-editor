@@ -2,11 +2,11 @@
 
 exports[`TileNavigator can focus an element and blur it 1`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -136,11 +136,11 @@ exports[`TileNavigator can focus an element and blur it 2`] = `
 
 exports[`TileNavigator can focus an element and blur it 3`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -429,11 +429,11 @@ exports[`TileNavigator can focus the default element 1`] = `
 
 exports[`TileNavigator can hover an element and leave it 1`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-1",
   "index": 1,
   "ratio": 1,
+  "rotation": 0,
   "type": "curved-tile",
   "x": 0,
   "y": 0,
@@ -522,11 +522,11 @@ exports[`TileNavigator can hover an element and leave it 2`] = `
 
 exports[`TileNavigator can hover an element and leave it 3`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-1",
   "index": 1,
   "ratio": 1,
+  "rotation": 0,
   "type": "curved-tile",
   "x": 0,
   "y": 0,
@@ -3404,11 +3404,11 @@ exports[`TileNavigator can navigate using "vertical" mode 10`] = `
 
 exports[`TileNavigator fires select 1`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -3417,11 +3417,11 @@ exports[`TileNavigator fires select 1`] = `
 
 exports[`TileNavigator fires select 2`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -3430,11 +3430,11 @@ exports[`TileNavigator fires select 2`] = `
 
 exports[`TileNavigator fires select 3`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -3443,11 +3443,11 @@ exports[`TileNavigator fires select 3`] = `
 
 exports[`TileNavigator fires select 4`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-0",
   "index": 0,
   "ratio": 1,
+  "rotation": 0,
   "type": "straight-tile",
   "x": 0,
   "y": 0,
@@ -3456,11 +3456,11 @@ exports[`TileNavigator fires select 4`] = `
 
 exports[`TileNavigator fires select, keeping selection 1`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-1",
   "index": 1,
   "ratio": 1,
+  "rotation": 0,
   "type": "curved-tile",
   "x": 0,
   "y": 0,
@@ -3469,11 +3469,11 @@ exports[`TileNavigator fires select, keeping selection 1`] = `
 
 exports[`TileNavigator fires select, keeping selection 2`] = `
 {
-  "angle": 0,
   "direction": "left",
   "id": "id-1",
   "index": 1,
   "ratio": 1,
+  "rotation": 0,
   "type": "curved-tile",
   "x": 0,
   "y": 0,

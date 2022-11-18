@@ -60,7 +60,7 @@ describe('Tile', () => {
                 ratio: 1,
                 x: 100,
                 y: 200,
-                angle: 90,
+                rotation: 90,
                 id: 'tile'
             };
             const { container } = render(Context, {
@@ -79,7 +79,7 @@ describe('Tile', () => {
         ['type', { type: CURVED_TILE_TYPE }],
         ['direction', { direction: TILE_DIRECTION_LEFT }],
         ['ratio', { ratio: 2 }],
-        ['angle', { angle: 45 }],
+        ['rotation', { rotation: 45 }],
         ['x', { x: 40 }],
         ['y', { y: 40 }]
     ])('updates when the parameter %s is modified', async (title, update) => {
@@ -89,7 +89,7 @@ describe('Tile', () => {
             ratio: 1,
             x: 100,
             y: 200,
-            angle: 90,
+            rotation: 90,
             id: 'tile'
         };
         const rendered = render(Context, {

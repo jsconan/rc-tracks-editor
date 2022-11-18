@@ -34,9 +34,9 @@
 </script>
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
-    {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
+    {#each models.tiles as { id, type, direction, ratio, x, y, rotation, rect }, i (id)}
         <g class={modelClass} data-id={id}>
-            <Tile {type} {direction} {ratio} {angle} {x} {y} />
+            <Tile {type} {direction} {ratio} {rotation} {x} {y} />
             <text
                 x={getTextX(x, rect)}
                 y={getTextY(y, rect)}

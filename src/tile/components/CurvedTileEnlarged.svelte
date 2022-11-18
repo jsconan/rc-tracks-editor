@@ -10,7 +10,7 @@
 
     export let direction = CurvedTileEnlargedModel.DIRECTION_RIGHT;
     export let ratio = 1;
-    export let angle = 0;
+    export let rotation = 0;
     export let x = 0;
     export let y = 0;
     export let id = void 0;
@@ -19,7 +19,7 @@
 
     $: model = new CurvedTileEnlargedModel(specs, direction, ratio);
     $: parameters = model.getShapeParameters(x, y);
-    $: transform = model.getRotateTransform(x, y, angle);
+    $: transform = model.getRotateTransform(x, y, rotation);
 </script>
 
 <g class="tile curved-tile-enlarged" {transform} {id}>

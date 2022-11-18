@@ -5,15 +5,15 @@
     import { TileModel } from '../models';
 
     export let model;
-    export let angle = 0;
+    export let rotation = 0;
     export let x = 0;
     export let y = 0;
     export let r = 5;
 
     TileModel.validateInstance(model);
 
-    const output = model.getOutputCoord(x, y, angle);
-    const center = model.getCenterCoord(x, y, angle);
+    const output = model.getOutputCoord(x, y, rotation);
+    const center = model.getCenterCoord(x, y, rotation);
 </script>
 
 <g class="control">

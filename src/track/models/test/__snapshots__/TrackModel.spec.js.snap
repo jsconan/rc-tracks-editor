@@ -1289,7 +1289,6 @@ exports[`TrackModel can notify changes through the tilesStore 2`] = `
   "height": 100,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-32",
       "model": CurvedTileModel {
@@ -1321,6 +1320,7 @@ exports[`TrackModel can notify changes through the tilesStore 2`] = `
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 0,
@@ -1337,7 +1337,6 @@ exports[`TrackModel can notify changes through the tilesStore 3`] = `
   "height": 100,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-33",
       "model": CurvedTileModel {
@@ -1369,12 +1368,12 @@ exports[`TrackModel can notify changes through the tilesStore 3`] = `
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-32",
       "model": CurvedTileModel {
@@ -1406,6 +1405,7 @@ exports[`TrackModel can notify changes through the tilesStore 3`] = `
         "x": -155,
         "y": 0,
       },
+      "rotation": 90,
       "type": "curved-tile",
       "x": -55,
       "y": 55,
@@ -1422,7 +1422,6 @@ exports[`TrackModel can notify changes through the tilesStore 4`] = `
   "height": 100,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-32",
       "model": CurvedTileModel {
@@ -1454,6 +1453,7 @@ exports[`TrackModel can notify changes through the tilesStore 4`] = `
         "x": -55,
         "y": 0,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 0,
@@ -1470,7 +1470,6 @@ exports[`TrackModel can notify changes through the tilesStore 5`] = `
   "height": 110,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-34",
       "model": StraightTileModel {
@@ -1502,6 +1501,7 @@ exports[`TrackModel can notify changes through the tilesStore 5`] = `
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -1528,7 +1528,6 @@ exports[`TrackModel can notify changes through the tilesStore 7`] = `
   "height": 110,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1560,6 +1559,7 @@ exports[`TrackModel can notify changes through the tilesStore 7`] = `
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -1576,7 +1576,6 @@ exports[`TrackModel can notify changes through the tilesStore 8`] = `
   "height": 14.5,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1608,6 +1607,7 @@ exports[`TrackModel can notify changes through the tilesStore 8`] = `
         "x": -6,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -1624,7 +1624,6 @@ exports[`TrackModel can notify changes through the tilesStore 9`] = `
   "height": 14.5,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1656,6 +1655,7 @@ exports[`TrackModel can notify changes through the tilesStore 9`] = `
         "x": -6,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -1672,7 +1672,6 @@ exports[`TrackModel can notify changes through the tilesStore 10`] = `
   "height": 12,
   "tiles": [
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1704,6 +1703,7 @@ exports[`TrackModel can notify changes through the tilesStore 10`] = `
         "x": -14.5,
         "y": -6,
       },
+      "rotation": 90,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
@@ -1720,7 +1720,6 @@ exports[`TrackModel can notify changes through the tilesStore 11`] = `
   "height": 24.5,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1752,6 +1751,7 @@ exports[`TrackModel can notify changes through the tilesStore 11`] = `
         "x": 4,
         "y": 10,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 10,
       "y": 10,
@@ -1768,7 +1768,6 @@ exports[`TrackModel can notify changes through the tilesStore 12`] = `
   "height": 24.5,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-35",
       "model": StraightTileModel {
@@ -1800,6 +1799,7 @@ exports[`TrackModel can notify changes through the tilesStore 12`] = `
         "x": -6,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 16,
       "y": 10,

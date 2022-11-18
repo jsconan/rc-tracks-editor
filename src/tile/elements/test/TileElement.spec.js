@@ -60,7 +60,7 @@ describe('TileElement', () => {
                 ratio: 1,
                 x: 100,
                 y: 200,
-                angle: 90,
+                rotation: 90,
                 fill: 'red',
                 stroke: {
                     stroke: 'green',
@@ -83,7 +83,7 @@ describe('TileElement', () => {
         ['type', { type: CURVED_TILE_TYPE }],
         ['direction', { direction: TILE_DIRECTION_LEFT }],
         ['ratio', { ratio: 2 }],
-        ['angle', { angle: 45 }],
+        ['rotation', { rotation: 45 }],
         ['x', { x: 40 }],
         ['y', { y: 40 }],
         ['d', { d: 10 }],
@@ -97,7 +97,7 @@ describe('TileElement', () => {
             ratio: 1,
             x: 100,
             y: 200,
-            angle: 90,
+            rotation: 90,
             fill: 'red',
             stroke: {
                 stroke: 'green',

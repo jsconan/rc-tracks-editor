@@ -822,101 +822,6 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
 </body>
 `;
 
-exports[`StraightTile updates when the parameter angle is modified 1`] = `
-<body>
-  <div>
-    <g
-      class="tile straight-tile"
-      id="tile"
-      transform="rotate(45 100 150)"
-    >
-      <rect
-        fill="var(--color-ground)"
-        height="110"
-        stroke="var(--color-separator)"
-        stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
-      />
-      <g
-        class="barrier straight-barrier"
-      >
-        
-        <rect
-          fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
-        />
-        
-        <rect
-          fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
-        />
-        
-        <rect
-          fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
-        />
-        
-        <rect
-          fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
-        />
-      </g>
-      <g
-        class="barrier straight-barrier"
-      >
-        
-        <rect
-          fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
-        />
-        
-        <rect
-          fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
-        />
-        
-        <rect
-          fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
-        />
-        
-        <rect
-          fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
-        />
-      </g>
-    </g>
-    
-  </div>
-</body>
-`;
-
 exports[`StraightTile updates when the parameter direction is modified 1`] = `
 <body>
   <div>
@@ -1019,6 +924,101 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
       class="tile straight-tile"
       id="tile"
       transform=""
+    >
+      <rect
+        fill="var(--color-ground)"
+        height="110"
+        stroke="var(--color-separator)"
+        stroke-width="var(--stroke-width-tile)"
+        width="90"
+        x="55"
+        y="150"
+      />
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          fill="var(--color-even)"
+          height="27.5"
+          width="5"
+          x="55"
+          y="150"
+        />
+        
+        <rect
+          fill="var(--color-odd)"
+          height="27.5"
+          width="5"
+          x="55"
+          y="177.5"
+        />
+        
+        <rect
+          fill="var(--color-even)"
+          height="27.5"
+          width="5"
+          x="55"
+          y="205"
+        />
+        
+        <rect
+          fill="var(--color-odd)"
+          height="27.5"
+          width="5"
+          x="55"
+          y="232.5"
+        />
+      </g>
+      <g
+        class="barrier straight-barrier"
+      >
+        
+        <rect
+          fill="var(--color-odd)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="150"
+        />
+        
+        <rect
+          fill="var(--color-even)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="177.5"
+        />
+        
+        <rect
+          fill="var(--color-odd)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="205"
+        />
+        
+        <rect
+          fill="var(--color-even)"
+          height="27.5"
+          width="5"
+          x="140"
+          y="232.5"
+        />
+      </g>
+    </g>
+    
+  </div>
+</body>
+`;
+
+exports[`StraightTile updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="tile straight-tile"
+      id="tile"
+      transform="rotate(45 100 150)"
     >
       <rect
         fill="var(--color-ground)"

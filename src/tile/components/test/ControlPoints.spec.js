@@ -54,7 +54,7 @@ describe('ControlPoints', () => {
         const model = new Model(specs, direction);
         const props = {
             model,
-            angle: 45,
+            rotation: 45,
             x: 100,
             y: 150,
             r: 8

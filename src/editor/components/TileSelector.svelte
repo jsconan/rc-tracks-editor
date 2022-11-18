@@ -46,9 +46,9 @@
 
 <Sketch {x} {y} {width} {height} viewX={models.x} viewY={models.y} viewWidth={models.width} viewHeight={models.height}>
     <TileNavigator elements={models.tiles} {direction} {...rect} bind:selectedIndex on:select={select}>
-        {#each models.tiles as { id, type, direction, ratio, x, y, angle, rect }, i (id)}
+        {#each models.tiles as { id, type, direction, ratio, x, y, rotation, rect }, i (id)}
             <g data-id={id} role="menuitem" tabindex="-1">
-                <Tile {type} {direction} {ratio} {angle} {x} {y} />
+                <Tile {type} {direction} {ratio} {rotation} {x} {y} />
                 {#if $counterStore[i].count !== Number.POSITIVE_INFINITY}
                     <text
                         x={getTextX(x, rect)}

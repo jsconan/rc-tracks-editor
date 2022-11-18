@@ -2,7 +2,6 @@
 
 exports[`Track can focus a tile and blur it 1`] = `
 {
-  "angle": 270,
   "direction": "right",
   "id": "id-7",
   "index": 3,
@@ -35,6 +34,7 @@ exports[`Track can focus a tile and blur it 1`] = `
     "x": -110.00000000000001,
     "y": -155,
   },
+  "rotation": 270,
   "type": "curved-tile",
   "x": -110,
   "y": -110,
@@ -468,7 +468,6 @@ exports[`Track can focus a tile and blur it 2`] = `
 
 exports[`Track can focus a tile and blur it 3`] = `
 {
-  "angle": 270,
   "direction": "right",
   "id": "id-7",
   "index": 3,
@@ -501,6 +500,7 @@ exports[`Track can focus a tile and blur it 3`] = `
     "x": -110.00000000000001,
     "y": -155,
   },
+  "rotation": 270,
   "type": "curved-tile",
   "x": -110,
   "y": -110,
@@ -1573,7 +1573,6 @@ exports[`Track can focus the container and blur it 2`] = `
 
 exports[`Track can hover a tile and leave it 1`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -1606,6 +1605,7 @@ exports[`Track can hover a tile and leave it 1`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,
@@ -2028,7 +2028,6 @@ exports[`Track can hover a tile and leave it 2`] = `
 
 exports[`Track can hover a tile and leave it 3`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -2061,6 +2060,7 @@ exports[`Track can hover a tile and leave it 3`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,
@@ -4462,7 +4462,6 @@ exports[`Track can navigate 4`] = `
 
 exports[`Track fires select 1`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -4495,6 +4494,7 @@ exports[`Track fires select 1`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,
@@ -4503,7 +4503,6 @@ exports[`Track fires select 1`] = `
 
 exports[`Track fires select 2`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -4536,6 +4535,7 @@ exports[`Track fires select 2`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,
@@ -4544,7 +4544,6 @@ exports[`Track fires select 2`] = `
 
 exports[`Track fires select 3`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -4577,6 +4576,7 @@ exports[`Track fires select 3`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,
@@ -4585,7 +4585,6 @@ exports[`Track fires select 3`] = `
 
 exports[`Track fires select 4`] = `
 {
-  "angle": 90,
   "direction": "right",
   "id": "id-1",
   "index": 1,
@@ -4618,6 +4617,7 @@ exports[`Track fires select 4`] = `
     "x": -210,
     "y": -54.99999999999999,
   },
+  "rotation": 90,
   "type": "curved-tile",
   "x": -110,
   "y": 6.735557395310443e-15,

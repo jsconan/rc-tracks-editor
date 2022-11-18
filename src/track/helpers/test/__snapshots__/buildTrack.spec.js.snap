@@ -11,7 +11,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 395.56349186104046,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -43,12 +42,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -9.601551083914856,
         "y": 68.18019484660536,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 100,
       "y": 100,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -80,12 +79,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -87.38329701443506,
         "y": 145.9619407771256,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -117,12 +116,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165.1650429449553,
         "y": 68.18019484660537,
       },
+      "rotation": 135,
       "type": "straight-tile",
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -154,12 +153,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -194.45436482630058,
         "y": -9.601551083914842,
       },
+      "rotation": 135,
       "type": "curved-tile",
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -191,12 +190,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165.16504294495533,
         "y": -87.38329701443509,
       },
+      "rotation": 225,
       "type": "straight-tile",
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -228,12 +227,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -87.38329701443513,
         "y": -116.67261889578035,
       },
+      "rotation": 225,
       "type": "curved-tile",
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -265,12 +264,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -9.601551083914874,
         "y": -87.3832970144351,
       },
+      "rotation": 315,
       "type": "straight-tile",
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -302,6 +301,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": 68.18019484660537,
         "y": -9.601551083914906,
       },
+      "rotation": 315,
       "type": "curved-tile",
       "x": 100,
       "y": 22.21825406947974,
@@ -318,7 +318,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 350,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -350,12 +349,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -387,12 +386,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -55,
         "y": 110,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 110,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -424,12 +423,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": 120,
       },
+      "rotation": 90,
       "type": "straight-tile",
       "x": -55,
       "y": 165,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -461,12 +460,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": 110,
       },
+      "rotation": 90,
       "type": "curved-tile",
       "x": -165,
       "y": 165,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -498,12 +497,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": 0,
       },
+      "rotation": 180,
       "type": "straight-tile",
       "x": -220,
       "y": 110,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -535,12 +534,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": -100,
       },
+      "rotation": 180,
       "type": "curved-tile",
       "x": -220,
       "y": 0,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -572,12 +571,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -609,6 +608,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -55.00000000000001,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "curved-tile",
       "x": -55,
       "y": -55.00000000000003,
@@ -625,7 +625,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 355.56349186104046,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -657,12 +656,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -109.60155108391486,
         "y": -31.819805153394636,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -694,12 +693,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -187.38329701443507,
         "y": 45.961940777125584,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": -77.78174593052022,
       "y": 77.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -731,12 +730,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265.1650429449553,
         "y": -31.819805153394626,
       },
+      "rotation": 135,
       "type": "straight-tile",
       "x": -155.56349186104046,
       "y": 77.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -768,12 +767,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -294.45436482630055,
         "y": -109.60155108391484,
       },
+      "rotation": 135,
       "type": "curved-tile",
       "x": -233.3452377915607,
       "y": 1.4210854715202004e-14,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -805,12 +804,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265.16504294495536,
         "y": -187.3832970144351,
       },
+      "rotation": 225,
       "type": "straight-tile",
       "x": -233.3452377915607,
       "y": -77.78174593052022,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -842,12 +841,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -187.3832970144351,
         "y": -216.67261889578035,
       },
+      "rotation": 225,
       "type": "curved-tile",
       "x": -155.56349186104046,
       "y": -155.56349186104046,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -879,12 +878,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -109.60155108391486,
         "y": -187.3832970144351,
       },
+      "rotation": 315,
       "type": "straight-tile",
       "x": -77.78174593052023,
       "y": -155.56349186104046,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -916,6 +915,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -31.819805153394615,
         "y": -109.6015510839149,
       },
+      "rotation": 315,
       "type": "curved-tile",
       "x": 1.4210854715202004e-14,
       "y": -77.78174593052026,
@@ -932,7 +932,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 310,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -964,12 +963,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": 55,
         "y": 100,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 100,
       "y": 100,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -1001,12 +1000,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": 45,
         "y": 210,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 100,
       "y": 210,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -1038,12 +1037,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -65,
         "y": 220,
       },
+      "rotation": 90,
       "type": "straight-tile",
       "x": 45,
       "y": 265,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1075,12 +1074,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": 210,
       },
+      "rotation": 90,
       "type": "curved-tile",
       "x": -65,
       "y": 265,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -1112,12 +1111,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": 100,
       },
+      "rotation": 180,
       "type": "straight-tile",
       "x": -120,
       "y": 210,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -1149,12 +1148,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165.00000000000003,
         "y": 0,
       },
+      "rotation": 180,
       "type": "curved-tile",
       "x": -120.00000000000001,
       "y": 100,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -1186,12 +1185,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -65.00000000000004,
         "y": -2.842170943040401e-14,
       },
+      "rotation": 270,
       "type": "straight-tile",
       "x": -65.00000000000003,
       "y": 44.99999999999999,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -1223,6 +1222,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": 44.999999999999964,
         "y": -2.842170943040401e-14,
       },
+      "rotation": 270,
       "type": "curved-tile",
       "x": 44.99999999999997,
       "y": 44.99999999999997,
@@ -1239,7 +1239,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 355.56349186104046,
   "tiles": [
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -1271,12 +1270,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -9.601551083914856,
         "y": 68.18019484660536,
       },
+      "rotation": 45,
       "type": "straight-tile",
       "x": 100,
       "y": 100,
     },
     {
-      "angle": 45,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -1308,12 +1307,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -87.38329701443506,
         "y": 145.9619407771256,
       },
+      "rotation": 45,
       "type": "curved-tile",
       "x": 22.218254069479784,
       "y": 177.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -1345,12 +1344,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165.1650429449553,
         "y": 68.18019484660537,
       },
+      "rotation": 135,
       "type": "straight-tile",
       "x": -55.56349186104045,
       "y": 177.78174593052023,
     },
     {
-      "angle": 135,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1382,12 +1381,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -194.45436482630058,
         "y": -9.601551083914842,
       },
+      "rotation": 135,
       "type": "curved-tile",
       "x": -133.3452377915607,
       "y": 100.00000000000001,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -1419,12 +1418,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165.16504294495533,
         "y": -87.38329701443509,
       },
+      "rotation": 225,
       "type": "straight-tile",
       "x": -133.3452377915607,
       "y": 22.218254069479798,
     },
     {
-      "angle": 225,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -1456,12 +1455,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -87.38329701443513,
         "y": -116.67261889578035,
       },
+      "rotation": 225,
       "type": "curved-tile",
       "x": -55.563491861040475,
       "y": -55.56349186104045,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -1493,12 +1492,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -9.601551083914874,
         "y": -87.3832970144351,
       },
+      "rotation": 315,
       "type": "straight-tile",
       "x": 22.218254069479755,
       "y": -55.56349186104046,
     },
     {
-      "angle": 315,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -1530,6 +1529,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": 68.18019484660537,
         "y": -9.601551083914906,
       },
+      "rotation": 315,
       "type": "curved-tile",
       "x": 100,
       "y": 22.21825406947974,
@@ -1546,7 +1546,6 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
   "height": 310,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -1578,12 +1577,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -1615,12 +1614,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -55,
         "y": 110,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 110,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -1652,12 +1651,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": 120,
       },
+      "rotation": 90,
       "type": "straight-tile",
       "x": -55,
       "y": 165,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1689,12 +1688,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": 110,
       },
+      "rotation": 90,
       "type": "curved-tile",
       "x": -165,
       "y": 165,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -1726,12 +1725,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": 0,
       },
+      "rotation": 180,
       "type": "straight-tile",
       "x": -220,
       "y": 110,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -1763,12 +1762,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -265,
         "y": -100,
       },
+      "rotation": 180,
       "type": "curved-tile",
       "x": -220,
       "y": 0,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -1800,12 +1799,12 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -165,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -1837,6 +1836,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "x": -55.00000000000001,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "curved-tile",
       "x": -55,
       "y": -55.00000000000003,
@@ -1853,7 +1853,6 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
   "height": 310,
   "tiles": [
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-0",
       "model": StraightTileModel {
@@ -1885,12 +1884,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -45,
         "y": 0,
       },
+      "rotation": 0,
       "type": "straight-tile",
       "x": 0,
       "y": 0,
     },
     {
-      "angle": 0,
       "direction": "right",
       "id": "id-1",
       "model": CurvedTileModel {
@@ -1922,12 +1921,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -55,
         "y": 110,
       },
+      "rotation": 0,
       "type": "curved-tile",
       "x": 0,
       "y": 110,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-2",
       "model": StraightTileModel {
@@ -1959,12 +1958,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -165,
         "y": 120,
       },
+      "rotation": 90,
       "type": "straight-tile",
       "x": -55,
       "y": 165,
     },
     {
-      "angle": 90,
       "direction": "right",
       "id": "id-3",
       "model": CurvedTileModel {
@@ -1996,12 +1995,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -265,
         "y": 110,
       },
+      "rotation": 90,
       "type": "curved-tile",
       "x": -165,
       "y": 165,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-4",
       "model": StraightTileModel {
@@ -2033,12 +2032,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -265,
         "y": 0,
       },
+      "rotation": 180,
       "type": "straight-tile",
       "x": -220,
       "y": 110,
     },
     {
-      "angle": 180,
       "direction": "right",
       "id": "id-5",
       "model": CurvedTileModel {
@@ -2070,12 +2069,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -265,
         "y": -100,
       },
+      "rotation": 180,
       "type": "curved-tile",
       "x": -220,
       "y": 0,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-6",
       "model": StraightTileModel {
@@ -2107,12 +2106,12 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -165,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "straight-tile",
       "x": -165,
       "y": -55.00000000000001,
     },
     {
-      "angle": 270,
       "direction": "right",
       "id": "id-7",
       "model": CurvedTileModel {
@@ -2144,6 +2143,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "x": -55.00000000000001,
         "y": -100.00000000000003,
       },
+      "rotation": 270,
       "type": "curved-tile",
       "x": -55,
       "y": -55.00000000000003,
