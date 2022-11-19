@@ -40,7 +40,7 @@ export const CIRCLE = 360;
  * The number of degrees per radian.
  * @type {number}
  */
-export const DEGREES_PER_RADIANS = 180 / Math.PI;
+export const DEGREES_PER_RADIANS = STRAIGHT_ANGLE / Math.PI;
 
 /**
  * Converts an angle given in degrees to radians.
@@ -148,3 +148,54 @@ export const enlargeArc = (angle, radius, addition) => {
     const length = (circum * degrees(angle)) / CIRCLE + addition;
     return Math.min((length * CIRCLE) / circum, CIRCLE);
 };
+
+/**
+ * Gets the width of an arc given the radius and the angle.
+ * @param {number} angle - The angle of the arc, given in degrees
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The width of the arc.
+ */
+export const getArcWidth = (angle, radius) => (Math.PI * radius * 2 * degrees(angle)) / CIRCLE;
+
+/**
+ * Gets the angle of an arc given the radius and the width.
+ * @param {number} width - The width of the arc.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The angle of the arc, given in degrees
+ */
+export const getArcAngle = (width, radius) => (radius ? (width * CIRCLE) / (Math.PI * radius * 2) : 0);
+
+/**
+ * Gets the width of a chord given the radius and the angle.
+ * @param {number} angle - The angle of the chord, given in degrees.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The width of the chord.
+ */
+export const getChordWidth = (angle, radius) => radius * 2 * Math.sin(toRadians(degrees(angle) / 2));
+
+/**
+ * Gets the distance to a chord given the radius and the angle.
+ *
+ * @param {number} angle - The angle of the chord, given in degrees.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The distance to the chord.
+ */
+export const getChordDistance = (angle, radius) => radius * Math.cos(toRadians(degrees(angle) / 2));
+
+/**
+ * Gets the height of a chord given the radius and the angle.
+ *
+ * @param {number} angle - The angle of the chord, given in degrees.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The height of the chord.
+ */
+export const getChordHeight = (angle, radius) => radius - getChordDistance(angle, radius);
+
+/**
+ * Gets the angle of a chord given the radius and the width.
+ *
+ * @param {number} width - The width of the chord.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The angle of the chord, given in degrees
+ */
+export const getChordAngle = (width, radius) => (radius ? toDegrees(Math.asin(width / (radius * 2)) * 2) : 0);

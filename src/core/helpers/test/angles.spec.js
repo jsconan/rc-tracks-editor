@@ -20,6 +20,12 @@ import {
     absDegrees,
     degrees,
     enlargeArc,
+    getArcAngle,
+    getArcWidth,
+    getChordAngle,
+    getChordDistance,
+    getChordHeight,
+    getChordWidth,
     quadrant,
     quadrantAngle,
     quadrantRange,
@@ -176,5 +182,97 @@ describe('enlargeArc', () => {
         [45, 10, 100, 360]
     ])('enlarges an arc defined by an angle (%s) and a radius (%s) to %s', (angle, radius, addition, expected) => {
         expect(enlargeArc(angle, radius, addition)).toEqual(expected);
+    });
+});
+
+describe('getArcWidth', () => {
+    it('is a function', () => {
+        expect(getArcWidth).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 157.07963267948966],
+        [450, 100, 157.07963267948966],
+        [45, 100, 78.53981633974483],
+        [-60, 100, -104.71975511965977]
+    ])('gets the width of the arc defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
+        expect(getArcWidth(angle, radius)).toEqual(expected);
+    });
+});
+
+describe('getArcAngle', () => {
+    it('is a function', () => {
+        expect(getArcAngle).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [0, 100, 0],
+        [100, 0, 0],
+        [157.07963267948966, 100, 90],
+        [78.53981633974483, 100, 45],
+        [-104.71975511965977, 100, -59.99999999999999]
+    ])('gets the angle of the arc defined by a width (%s) and a radius (%s)', (width, radius, expected) => {
+        expect(getArcAngle(width, radius)).toEqual(expected);
+    });
+});
+
+describe('getChordWidth', () => {
+    it('is a function', () => {
+        expect(getChordWidth).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 141.42135623730948],
+        [450, 100, 141.42135623730948],
+        [45, 100, 76.53668647301795],
+        [-60, 100, -99.99999999999999]
+    ])('gets the width of the chord defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
+        expect(getChordWidth(angle, radius)).toEqual(expected);
+    });
+});
+
+describe('getChordDistance', () => {
+    it('is a function', () => {
+        expect(getChordWidth).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 70.71067811865476],
+        [450, 100, 70.71067811865476],
+        [45, 100, 92.38795325112868],
+        [-60, 100, 86.60254037844388]
+    ])('gets the distance to the chord defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
+        expect(getChordDistance(angle, radius)).toEqual(expected);
+    });
+});
+
+describe('getChordHeight', () => {
+    it('is a function', () => {
+        expect(getChordWidth).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 29.289321881345245],
+        [450, 100, 29.289321881345245],
+        [45, 100, 7.612046748871322],
+        [-60, 100, 13.397459621556123]
+    ])('gets the height of the chord defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
+        expect(getChordHeight(angle, radius)).toEqual(expected);
+    });
+});
+
+describe('getChordAngle', () => {
+    it('is a function', () => {
+        expect(getArcAngle).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [0, 100, 0],
+        [100, 0, 0],
+        [141.42135623730948, 100, 89.99999999999999],
+        [76.53668647301795, 100, 45],
+        [-99.99999999999999, 100, -59.99999999999999]
+    ])('gets the angle of the chord defined by a width (%s) and a radius (%s)', (width, radius, expected) => {
+        expect(getChordAngle(width, radius)).toEqual(expected);
     });
 });
