@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileDirection renders a curved-tile element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -7.3360641990076445,18.833792075917152 A 51.25,51.25 0 0 1 -21.363636326850354,38.667267020667744 L -26.286031010725914,33.008642578618804 L -34.78812557706451,51.151540859601546 L -11.518846959099243,49.984515904765615 L -16.441241642974795,44.325891462716676 A 58.75,58.75 0 0 0 -0.36085408178925604,21.589956769953808 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a curved-tile element with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 92.66393580099236,218.83379207591716 A 51.25,51.25 0 0 1 78.63636367314965,238.66726702066774 L 73.7139689892741,233.0086425786188 L 65.2118744229355,251.15154085960154 L 88.48115304090075,249.9845159047656 L 83.5587583570252,244.32589146271667 A 58.75,58.75 0 0 0 99.63914591821074,221.5899567699538 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a curved-tile-enlarged element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -7.3360641990076445,18.833792075917152 A 51.25,51.25 0 0 1 -21.363636326850354,38.667267020667744 L -26.286031010725914,33.008642578618804 L -34.78812557706451,51.151540859601546 L -11.518846959099243,49.984515904765615 L -16.441241642974795,44.325891462716676 A 58.75,58.75 0 0 0 -0.36085408178925604,21.589956769953808 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a curved-tile-enlarged element with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 92.66393580099236,218.83379207591716 A 51.25,51.25 0 0 1 78.63636367314965,238.66726702066774 L 73.7139689892741,233.0086425786188 L 65.2118744229355,251.15154085960154 L 88.48115304090075,249.9845159047656 L 83.5587583570252,244.32589146271667 A 58.75,58.75 0 0 0 99.63914591821074,221.5899567699538 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a straight-tile element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -3.7500000000000013,32.5 L -3.75,55 -11.25,55 1.3777276490407724e-15,77.5 11.25,55 3.75,55 3.7499999999999987,32.5 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a straight-tile element with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection renders a undefined element with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M -3.7500000000000013,32.5 L -3.75,55 -11.25,55 1.3777276490407724e-15,77.5 11.25,55 3.75,55 3.7499999999999987,32.5 Z"
+      transform=""
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter direction is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 103.75,277.5 L 103.75,255 111.25,255 100,232.5 88.75,255 96.25,255 96.25,277.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)rotate(180 100 255)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="blue"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter ratio is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter rotation is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(45 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="red"
+      stroke="blue"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter stroke-width is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,232.5 L 96.25,255 88.75,255 100,277.5 111.25,255 103.75,255 103.75,232.5 Z"
+      fill="red"
+      stroke-width="3"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter type is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 92.66393580099236,218.83379207591716 A 51.25,51.25 0 0 1 78.63636367314965,238.66726702066774 L 73.7139689892741,233.0086425786188 L 65.2118744229355,251.15154085960154 L 88.48115304090075,249.9845159047656 L 83.5587583570252,244.32589146271667 A 58.75,58.75 0 0 0 99.63914591821074,221.5899567699538 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter x is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 36.25,232.5 L 36.25,255 28.75,255 40,277.5 51.25,255 43.75,255 43.75,232.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 40 200)"
+    />
+    
+    
+  </div>
+</body>
+`;
+
+exports[`TileDirection updates when the parameter y is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 96.25,72.5 L 96.25,95 88.75,95 100,117.5 111.25,95 103.75,95 103.75,72.5 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90 100 40)"
+    />
+    
+    
+  </div>
+</body>
+`;
