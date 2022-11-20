@@ -3,14 +3,15 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { SVGPath, Vector2D } from '../models';
-    import { attributeList, enlargeArc } from '../helpers';
+    import { attributeList, enlargeArc, getArcAngle } from '../helpers';
 
     export let cx = 0;
     export let cy = 0;
     export let rotation = 0;
-    export let radius = 1;
-    export let angle = 1;
     export let width = 1;
+    export let height = 1;
+    export let radius = 1;
+    export let angle = 0;
     export let thickness = void 0;
     export let clockwise = true;
     export let fill = void 0;
@@ -22,6 +23,7 @@
      * @param {number} centerX - The X-coordinate of the center of the curve.
      * @param {number} centerY - The Y-coordinate of the center of the curve.
      * @param {number} arrowWidth - The width of the arrow.
+     * @param {number} arrowHeight - The height of the arrow.
      * @param {number} arrowThickness - The thickness of the arrow.
      * @param {boolean} arrowClockwise - Is the arrow clockwise or counter-clockwise?
      * @param {number} curveRadius - The radius of the curve.
@@ -33,6 +35,7 @@
         centerX,
         centerY,
         arrowWidth,
+        arrowHeight,
         arrowThickness,
         arrowClockwise,
         curveRadius,
@@ -41,12 +44,16 @@
     ) {
         const center = new Vector2D(centerX, centerY);
 
+        if (!curveAngle) {
+            curveAngle = getArcAngle(arrowWidth, curveRadius);
+        }
+
         const tipEdgeRadius = curveRadius;
-        const tipInnerRadius = tipEdgeRadius - arrowWidth / 2;
-        const tipOuterRadius = tipInnerRadius + arrowWidth;
+        const tipInnerRadius = tipEdgeRadius - arrowHeight / 2;
+        const tipOuterRadius = tipInnerRadius + arrowHeight;
         const innerRadius = tipEdgeRadius - arrowThickness / 2;
         const outerRadius = innerRadius + arrowThickness;
-        const bodyAngle = enlargeArc(curveAngle, tipOuterRadius, -arrowWidth);
+        const bodyAngle = enlargeArc(curveAngle, tipOuterRadius, -arrowHeight);
 
         let bodyStart, bodyEnd, tipStart, tipEnd;
 
@@ -88,12 +95,12 @@
     }
 
     $: if ('undefined' === typeof thickness) {
-        thickness = width / 3;
+        thickness = height / 3;
     }
 </script>
 
 <path
-    d={curvedArrowPath(cx, cy, width, thickness, clockwise, radius, angle, rotation)}
+    d={curvedArrowPath(cx, cy, width, height, thickness, clockwise, radius, angle, rotation)}
     {...attributeList(fill, 'fill')}
     {...attributeList(stroke, 'stroke')}
     {transform}
