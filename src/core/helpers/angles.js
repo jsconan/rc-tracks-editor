@@ -133,21 +133,11 @@ export const quadrantRange = (start, end) => {
 };
 
 /**
- * Adds a length to an arc represented by an angle and a radius.
- * @param {number} angle - The angle of the arc, given in degrees.
- * @param {number} radius - The radius of the arc.
- * @param {number} addition - The length to add to the arc.
- * @returns {number} - The adjusted angle of the arc
+ * Gets the circumference of a circle given the radius.
+ * @param {number} radius - The radius of the circle.
+ * @returns {number} - The circumference
  */
-export const enlargeArc = (angle, radius, addition) => {
-    if (!addition) {
-        return degrees(angle);
-    }
-
-    const circum = Math.PI * radius * 2;
-    const length = (circum * degrees(angle)) / CIRCLE + addition;
-    return Math.min((length * CIRCLE) / circum, CIRCLE);
-};
+export const circumference = radius => Math.PI * radius * 2;
 
 /**
  * Gets the width of an arc given the radius and the angle.
@@ -155,7 +145,7 @@ export const enlargeArc = (angle, radius, addition) => {
  * @param {number} radius - The radius of the circle.
  * @returns {number} - The width of the arc.
  */
-export const getArcWidth = (angle, radius) => (Math.PI * radius * 2 * degrees(angle)) / CIRCLE;
+export const getArcWidth = (angle, radius) => Math.abs((circumference(radius) * degrees(angle)) / CIRCLE);
 
 /**
  * Gets the angle of an arc given the radius and the width.
@@ -163,7 +153,19 @@ export const getArcWidth = (angle, radius) => (Math.PI * radius * 2 * degrees(an
  * @param {number} radius - The radius of the circle.
  * @returns {number} - The angle of the arc, given in degrees
  */
-export const getArcAngle = (width, radius) => (radius ? (width * CIRCLE) / (Math.PI * radius * 2) : 0);
+export const getArcAngle = (width, radius) => {
+    if (!radius) {
+        return 0;
+    }
+
+    const circum = circumference(radius);
+
+    if (Math.abs(width) >= circum) {
+        return CIRCLE;
+    }
+
+    return (width * CIRCLE) / circum;
+};
 
 /**
  * Gets the width of a chord given the radius and the angle.
@@ -171,7 +173,7 @@ export const getArcAngle = (width, radius) => (radius ? (width * CIRCLE) / (Math
  * @param {number} radius - The radius of the circle.
  * @returns {number} - The width of the chord.
  */
-export const getChordWidth = (angle, radius) => radius * 2 * Math.sin(toRadians(degrees(angle) / 2));
+export const getChordWidth = (angle, radius) => Math.abs(radius * 2 * Math.sin(toRadians(degrees(angle) / 2)));
 
 /**
  * Gets the distance to a chord given the radius and the angle.
@@ -198,4 +200,66 @@ export const getChordHeight = (angle, radius) => radius - getChordDistance(angle
  * @param {number} radius - The radius of the circle.
  * @returns {number} - The angle of the chord, given in degrees
  */
-export const getChordAngle = (width, radius) => (radius ? toDegrees(Math.asin(width / (radius * 2)) * 2) : 0);
+export const getChordAngle = (width, radius) => {
+    if (!radius) {
+        return 0;
+    }
+
+    const diameter = radius * 2;
+
+    if (Math.abs(width) >= diameter) {
+        return STRAIGHT_ANGLE;
+    }
+
+    return toDegrees(Math.asin(width / diameter) * 2);
+};
+
+/**
+ * Adds a length to an arc represented by an angle and a radius.
+ * @param {number} angle - The angle of the arc, given in degrees.
+ * @param {number} radius - The radius of the arc.
+ * @param {number} addition - The length to add to the arc.
+ * @returns {number} - The adjusted angle of the arc
+ */
+export const enlargeArc = (angle, radius, addition) => {
+    if (!addition) {
+        return degrees(angle);
+    }
+
+    const circum = circumference(radius);
+    const length = Math.abs((circum * degrees(angle)) / CIRCLE) + addition;
+
+    if (length <= 0) {
+        return 0;
+    }
+
+    if (length >= circum) {
+        return CIRCLE;
+    }
+
+    return (length * CIRCLE) / circum;
+};
+
+/**
+ * Adds a length to a chord represented by an angle and a radius.
+ * @param {number} angle - The angle of the arc, given in degrees.
+ * @param {number} radius - The radius of the arc.
+ * @param {number} addition - The length to add to the arc.
+ * @returns {number} - The adjusted angle of the arc
+ */
+export const enlargeChord = (angle, radius, addition) => {
+    if (!addition) {
+        return degrees(angle);
+    }
+
+    if (addition <= -radius) {
+        return 0;
+    }
+
+    if (addition >= radius) {
+        return STRAIGHT_ANGLE;
+    }
+
+    const width = getChordWidth(angle, radius);
+    return getChordAngle(width + addition, radius);
+};

@@ -18,8 +18,10 @@
 
 import {
     absDegrees,
+    circumference,
     degrees,
     enlargeArc,
+    enlargeChord,
     getArcAngle,
     getArcWidth,
     getChordAngle,
@@ -168,20 +170,19 @@ describe('quadrantRange', () => {
     });
 });
 
-describe('enlargeArc', () => {
+describe('circumference', () => {
     it('is a function', () => {
-        expect(enlargeArc).toEqual(expect.any(Function));
+        expect(circumference).toEqual(expect.any(Function));
     });
 
     it.each([
-        [90, 100, 0, 90],
-        [90, 100, 10, 95.72957795130823],
-        [450, 100, 10, 95.72957795130823],
-        [45, 100, 0, 45],
-        [45, 100, 10, 50.72957795130823],
-        [45, 10, 100, 360]
-    ])('enlarges an arc defined by an angle (%s) and a radius (%s) to %s', (angle, radius, addition, expected) => {
-        expect(enlargeArc(angle, radius, addition)).toEqual(expected);
+        [0, 0],
+        [100, 628.3185307179587],
+        [50, 314.1592653589793],
+        [-100, -628.3185307179587],
+        [-50, -314.1592653589793]
+    ])('gets the circumference of the circle having a radius (%s)', (radius, expected) => {
+        expect(circumference(radius)).toEqual(expected);
     });
 });
 
@@ -194,7 +195,8 @@ describe('getArcWidth', () => {
         [90, 100, 157.07963267948966],
         [450, 100, 157.07963267948966],
         [45, 100, 78.53981633974483],
-        [-60, 100, -104.71975511965977]
+        [60, 100, 104.71975511965977],
+        [-60, 100, 104.71975511965977]
     ])('gets the width of the arc defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
         expect(getArcWidth(angle, radius)).toEqual(expected);
     });
@@ -210,7 +212,9 @@ describe('getArcAngle', () => {
         [100, 0, 0],
         [157.07963267948966, 100, 90],
         [78.53981633974483, 100, 45],
-        [-104.71975511965977, 100, -59.99999999999999]
+        [-104.71975511965977, 100, -59.99999999999999],
+        [700, 100, 360],
+        [-700, 100, 360]
     ])('gets the angle of the arc defined by a width (%s) and a radius (%s)', (width, radius, expected) => {
         expect(getArcAngle(width, radius)).toEqual(expected);
     });
@@ -225,7 +229,8 @@ describe('getChordWidth', () => {
         [90, 100, 141.42135623730948],
         [450, 100, 141.42135623730948],
         [45, 100, 76.53668647301795],
-        [-60, 100, -99.99999999999999]
+        [60, 100, 99.99999999999999],
+        [-60, 100, 99.99999999999999]
     ])('gets the width of the chord defined by an angle (%s) and a radius (%s)', (angle, radius, expected) => {
         expect(getChordWidth(angle, radius)).toEqual(expected);
     });
@@ -271,8 +276,55 @@ describe('getChordAngle', () => {
         [100, 0, 0],
         [141.42135623730948, 100, 89.99999999999999],
         [76.53668647301795, 100, 45],
-        [-99.99999999999999, 100, -59.99999999999999]
+        [-99.99999999999999, 100, -59.99999999999999],
+        [100, 100, 60.00000000000001],
+        [200, 100, 180],
+        [-200, 100, 180],
+        [350, 100, 180],
+        [-350, 100, 180]
     ])('gets the angle of the chord defined by a width (%s) and a radius (%s)', (width, radius, expected) => {
         expect(getChordAngle(width, radius)).toEqual(expected);
+    });
+});
+
+describe('enlargeArc', () => {
+    it('is a function', () => {
+        expect(enlargeArc).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 0, 90],
+        [90, 100, -10, 84.27042204869177],
+        [90, 100, 10, 95.72957795130823],
+        [450, 100, 10, 95.72957795130823],
+        [45, 100, 0, 45],
+        [45, 100, 10, 50.72957795130823],
+        [-45, 100, 10, 50.72957795130823],
+        [45, 10, 100, 360],
+        [45, 10, -100, 0],
+        [-45, 10, 100, 360]
+    ])('enlarges an arc defined by an angle (%s) and a radius (%s) to %s', (angle, radius, addition, expected) => {
+        expect(enlargeArc(angle, radius, addition)).toEqual(expected);
+    });
+});
+
+describe('enlargeChord', () => {
+    it('is a function', () => {
+        expect(enlargeChord).toEqual(expect.any(Function));
+    });
+
+    it.each([
+        [90, 100, 0, 90],
+        [90, 100, -10, 82.15918193491969],
+        [90, 100, 10, 98.41959545122378],
+        [450, 100, 10, 98.41959545122378],
+        [45, 100, 0, 45],
+        [45, 100, 10, 51.27595686739886],
+        [-45, 100, 10, 51.27595686739886],
+        [45, 10, 100, 180],
+        [45, 10, -100, 0],
+        [-45, 10, 100, 180]
+    ])('enlarges a chord defined by an angle (%s) and a radius (%s) to %s', (angle, radius, addition, expected) => {
+        expect(enlargeChord(angle, radius, addition)).toEqual(expected);
     });
 });
