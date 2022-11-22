@@ -4,7 +4,7 @@
 
     import { getRect, uid } from '../../core/helpers';
     import { KeyNavigator } from '../../core/navigators';
-    import { Sketch } from '../elements';
+    import { Sketch } from '../../core/elements';
     import { Tile, TileNavigator } from '../../tile/components';
     import { TrackModel } from '../models';
 

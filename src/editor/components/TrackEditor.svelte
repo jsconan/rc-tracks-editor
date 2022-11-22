@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { setContext } from 'svelte';
-    import { Sketch } from '../../track/elements';
+    import { Sketch } from '../../core/elements';
     import { TileElement } from '../../tile/elements';
     import TileSelector from './TileSelector.svelte';
     import { TrackEditorModel } from '../models';

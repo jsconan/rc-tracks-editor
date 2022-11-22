@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { Sketch } from '../elements';
+    import { Sketch } from '../../core/elements';
     import { Tile } from '../../tile/components';
 
     export let track;

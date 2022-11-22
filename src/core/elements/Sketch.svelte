@@ -2,7 +2,7 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { defined } from '../../core/helpers';
+    import { defined } from '../helpers';
 
     let cls = void 0;
     export { cls as class };

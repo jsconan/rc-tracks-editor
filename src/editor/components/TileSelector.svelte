@@ -6,7 +6,7 @@
     import { buildList } from '../../track/helpers';
     import { getRect } from '../../core/helpers';
     import { KeyNavigator } from '../../core/navigators';
-    import { Sketch } from '../../track/elements';
+    import { Sketch } from '../../core/elements';
     import { Tile, TileNavigator } from '../../tile/components';
     import { TileSet } from '../models';
 
