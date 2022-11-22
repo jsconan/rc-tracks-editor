@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { Shape } from '../../core/elements';
     import { SVGPath, Vector2D } from '../../core/models';
-    import { attributeList } from '../../core/helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -43,9 +43,4 @@
     }
 </script>
 
-<path
-    d={curvedElementPath(radius, width, side, cx, cy, d)}
-    {...attributeList(fill, 'fill')}
-    {...attributeList(stroke, 'stroke')}
-    {transform}
-/>
+<Shape path={curvedElementPath(radius, width, side, cx, cy, d)} {fill} {stroke} {transform} />

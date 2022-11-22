@@ -2,8 +2,9 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
+    import { enlargeArc, getArcAngle } from '../helpers';
+    import Shape from './Shape.svelte';
     import { SVGPath, Vector2D } from '../models';
-    import { attributeList, enlargeArc, getArcAngle } from '../helpers';
 
     export let cx = 0;
     export let cy = 0;
@@ -99,9 +100,9 @@
     }
 </script>
 
-<path
-    d={curvedArrowPath(cx, cy, width, height, thickness, clockwise, radius, angle, rotation)}
-    {...attributeList(fill, 'fill')}
-    {...attributeList(stroke, 'stroke')}
+<Shape
+    path={curvedArrowPath(cx, cy, width, height, thickness, clockwise, radius, angle, rotation)}
+    {fill}
+    {stroke}
     {transform}
 />

@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList } from '../helpers';
     import { Polygon2D, SVGPath, Vector2D } from '../models';
+    import Shape from './Shape.svelte';
 
     export let cx = 0;
     export let cy = 0;
@@ -50,9 +50,4 @@
     }
 </script>
 
-<path
-    d={straightArrowPath(cx, cy, width, height, thickness, rotation)}
-    {...attributeList(fill, 'fill')}
-    {...attributeList(stroke, 'stroke')}
-    {transform}
-/>
+<Shape path={straightArrowPath(cx, cy, width, height, thickness, rotation)} {fill} {stroke} {transform} />
