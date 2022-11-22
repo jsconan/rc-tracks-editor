@@ -23,6 +23,10 @@ describe('attributeList', () => {
         expect(attributeList).toEqual(expect.any(Function));
     });
 
+    it('returns nothing if no parameter is given', () => {
+        expect(attributeList()).toStrictEqual({});
+    });
+
     it('returns a key/value map form a single attribute', () => {
         expect(attributeList(10, 'value')).toStrictEqual({ value: 10 });
     });
@@ -40,6 +44,10 @@ describe('attributeList', () => {
 describe('flattenAttributeList', () => {
     it('is a function', () => {
         expect(flattenAttributeList).toEqual(expect.any(Function));
+    });
+
+    it('returns nothing if no parameter is given', () => {
+        expect(flattenAttributeList()).toStrictEqual({});
     });
 
     it('returns a key/value map form a single attribute', () => {

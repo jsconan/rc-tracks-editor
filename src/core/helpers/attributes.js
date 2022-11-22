@@ -23,7 +23,13 @@
  * @returns {object} - The key/value map of attributes.
  */
 export const attributeList = (attributes, name) => {
-    if ('object' !== typeof attributes) {
+    const type = typeof attributes;
+
+    if ('undefined' === type) {
+        return {};
+    }
+
+    if ('object' !== type) {
         return { [name]: attributes };
     }
 
@@ -36,6 +42,10 @@ export const attributeList = (attributes, name) => {
  * @returns {object} - The list of attributes as a key/value map.
  */
 export const flattenAttributeList = attributes => {
+    if ('object' !== typeof attributes) {
+        return {};
+    }
+
     let list = {};
     Object.keys(attributes).forEach(name => {
         list = { ...list, ...attributeList(attributes[name], name) };
