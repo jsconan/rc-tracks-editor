@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shape renders with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape renders with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+      fill="blue"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape updates when the parameter path is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 6,10 A 6 4 10 1 0 14,10"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+      fill="red"
+      stroke="blue"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape updates when the parameter stroke-width is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+      fill="red"
+      stroke-width="3"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`Shape updates when the parameter transform is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 10,10 L 5,0, L 0,5 L 0,0 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(180)"
+    />
+  </div>
+</body>
+`;

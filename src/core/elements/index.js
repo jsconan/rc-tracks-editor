@@ -18,4 +18,5 @@
 
 export { default as ArrowTip } from './ArrowTip.svelte';
 export { default as CurvedArrow } from './CurvedArrow.svelte';
+export { default as Shape } from './Shape.svelte';
 export { default as StraightArrow } from './StraightArrow.svelte';
