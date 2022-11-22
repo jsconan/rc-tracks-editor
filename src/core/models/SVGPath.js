@@ -40,13 +40,6 @@ export class SVGPath {
     #current = null;
 
     /**
-     * Whether the path is closed or not.
-     * @type {boolean}
-     * @private
-     */
-    #closed = false;
-
-    /**
      * Extracts a list of points.
      * It supports either a single point given by separate coordinates X and Y, or a list of Vector2D.
      * @param {*} points - The list of points.
@@ -105,16 +98,6 @@ export class SVGPath {
     }
 
     /**
-     * Checks if the path accept more commands.
-     * @throws {Error} - If the path is already closed.
-     */
-    #acceptCommand() {
-        if (this.#closed) {
-            throw new Error('The path is closed and cannot accept more commands!');
-        }
-    }
-
-    /**
      * Creates a SVG path.
      */
     constructor() {
@@ -146,23 +129,11 @@ export class SVGPath {
     }
 
     /**
-     * Tells if the path is closed.
-     * @returns {boolean} - Returns `true` if the path is closed; otherwise returns `false`.
-     */
-    get closed() {
-        return this.#closed;
-    }
-
-    /**
      * Closes the path. No more commands will be accepted.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     close() {
-        this.#acceptCommand();
-
-        this.#commands.push(new SVGPathCommand('Z'));
-        this.#closed = true;
+        this.#addOrReplaceCommand(new SVGPathCommand('Z'));
 
         return this;
     }
@@ -171,12 +142,9 @@ export class SVGPath {
      * Adds a MoveTo command using absolute coordinates.
      * @param {...number|...Vector2D} points - The absolute coordinates for each point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     moveTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points);
         if (!points.length) {
             return this;
@@ -192,12 +160,9 @@ export class SVGPath {
      * Adds a MoveTo command using relative coordinates.
      * @param {...number|...Vector2D} points - The relative coordinates for each point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     moveBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, false, true);
         if (!points.length) {
             return this;
@@ -213,12 +178,9 @@ export class SVGPath {
      * Adds a LineTo command using absolute coordinates.
      * @param {...number|...Vector2D} points - The absolute coordinates for each point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     lineTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, true);
         if (!points.length) {
             return this;
@@ -234,12 +196,9 @@ export class SVGPath {
      * Adds a LineTo command using relative coordinates.
      * @param {...number|...Vector2D} points - The relative coordinates for each point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     lineBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, true, true);
         if (!points.length) {
             return this;
@@ -255,11 +214,8 @@ export class SVGPath {
      * Adds an horizontal LineTo command using absolute coordinates.
      * @param {number|Vector2D} x - The X-coordinate, or a vector containing the coordinate.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     horizontalLineTo(x = 0) {
-        this.#acceptCommand();
-
         const [point] = this.#extractPoints([x, x]);
         if (point.x === this.#current.x) {
             return this;
@@ -275,11 +231,8 @@ export class SVGPath {
      * Adds an horizontal LineTo command using relative coordinates.
      * @param {number|Vector2D} x - The X-coordinate, or a vector containing the coordinate.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     horizontalLineBy(x = 0) {
-        this.#acceptCommand();
-
         const [point] = this.#extractPoints([x, x]);
         if (!point.x) {
             return this;
@@ -295,11 +248,8 @@ export class SVGPath {
      * Adds a vertical LineTo command using absolute coordinates.
      * @param {number|Vector2D} y - The Y-coordinate, or a vector containing the coordinate.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     verticalLineTo(y = 0) {
-        this.#acceptCommand();
-
         const [point] = this.#extractPoints([y, y]);
         if (point.y === this.#current.y) {
             return this;
@@ -315,11 +265,8 @@ export class SVGPath {
      * Adds a vertical LineTo command using relative coordinates.
      * @param {number|Vector2D} y - The Y-coordinate, or a vector containing the coordinate.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     verticalLineBy(y = 0) {
-        this.#acceptCommand();
-
         const [point] = this.#extractPoints([y, y]);
         if (!point.y) {
             return this;
@@ -335,12 +282,9 @@ export class SVGPath {
      * Adds a Cubic Bezier Curve command using absolute coordinates.
      * @param {...Vector2D} points - The absolute coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     cubicBezierCurveTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points);
         if (!points.length) {
             return this;
@@ -356,12 +300,9 @@ export class SVGPath {
      * Adds a Cubic Bezier Curve command using relative coordinates.
      * @param {...Vector2D} points - The relative coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     cubicBezierCurveBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, false, 3);
         if (!points.length) {
             return this;
@@ -377,12 +318,9 @@ export class SVGPath {
      * Adds a Smooth Bezier Curve command using absolute coordinates.
      * @param {...Vector2D} points - The absolute coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     smoothBezierCurveTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points);
         if (!points.length) {
             return this;
@@ -398,12 +336,9 @@ export class SVGPath {
      * Adds a Smooth Bezier Curve command using relative coordinates.
      * @param {...Vector2D} points - The relative coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     smoothBezierCurveBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, false, 2);
         if (!points.length) {
             return this;
@@ -419,12 +354,9 @@ export class SVGPath {
      * Adds a Quadratic Bezier Curve command using absolute coordinates.
      * @param {...Vector2D} points - The absolute coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     quadraticBezierCurveTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points);
         if (!points.length) {
             return this;
@@ -440,12 +372,9 @@ export class SVGPath {
      * Adds a Quadratic Bezier Curve command using relative coordinates.
      * @param {...Vector2D} points - The relative coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     quadraticBezierCurveBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, false, 2);
         if (!points.length) {
             return this;
@@ -461,12 +390,9 @@ export class SVGPath {
      * Adds a Smooth Quadratic Bezier Curve command using absolute coordinates.
      * @param {...Vector2D} points - The absolute coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     smoothQuadraticBezierCurveTo(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, true);
         if (!points.length) {
             return this;
@@ -482,12 +408,9 @@ export class SVGPath {
      * Adds a Smooth Quadratic Bezier Curve command using relative coordinates.
      * @param {...Vector2D} points - The relative coordinates for each control point.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     smoothQuadraticBezierCurveBy(...points) {
-        this.#acceptCommand();
-
         points = this.#extractPoints(points, true, true);
         if (!points.length) {
             return this;
@@ -507,12 +430,9 @@ export class SVGPath {
      * @param {number} sweep - Allows to chose one of the clockwise turning arc (1) or counterclockwise turning arc (0).
      * @param {Vector2D} point - The end coordinates for the arc.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     ellipticalArcCurveTo(radius, angle, largeArc, sweep, point) {
-        this.#acceptCommand();
-
         if ('number' === typeof radius) {
             radius = new Vector2D(radius, radius);
         }
@@ -534,12 +454,9 @@ export class SVGPath {
      * @param {number} sweep - Allows to chose one of the clockwise turning arc (1) or counterclockwise turning arc (0).
      * @param {Vector2D} point - The end coordinates for the arc.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     ellipticalArcCurveBy(radius, angle, largeArc, sweep, point) {
-        this.#acceptCommand();
-
         if ('number' === typeof radius) {
             radius = new Vector2D(radius, radius);
         }
@@ -559,12 +476,9 @@ export class SVGPath {
      * @param {number} startAngle - The start angle of the arc.
      * @param {number} endAngle - The end angle of the arc.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     arcCurve(radius, startAngle, endAngle) {
-        this.#acceptCommand();
-
         if ('number' === typeof radius) {
             radius = new Vector2D(radius, radius);
         }
@@ -589,12 +503,9 @@ export class SVGPath {
      * @param {number} angle - The angle of the arc.
      * @param {Vector2D} point - The end coordinates for the arc.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     arcCurveTo(radius, angle, point) {
-        this.#acceptCommand();
-
         if ('number' === typeof radius) {
             radius = new Vector2D(radius, radius);
         }
@@ -617,12 +528,9 @@ export class SVGPath {
      * @param {number} angle - The angle of the arc.
      * @param {Vector2D} point - The end coordinates for the arc.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If a point is not a Vector2D.
      */
     arcCurveBy(radius, angle, point) {
-        this.#acceptCommand();
-
         if ('number' === typeof radius) {
             radius = new Vector2D(radius, radius);
         }
@@ -646,7 +554,6 @@ export class SVGPath {
      * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     polarMoveTo(radius, angle, center = Vector2D.ORIGIN) {
         return this.moveTo(Vector2D.polar(radius, angle, center));
@@ -659,7 +566,6 @@ export class SVGPath {
      * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     polarMoveBy(radius, angle, center = Vector2D.ORIGIN) {
         return this.moveBy(Vector2D.polar(radius, angle, center));
@@ -672,7 +578,6 @@ export class SVGPath {
      * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     polarLineTo(radius, angle, center = Vector2D.ORIGIN) {
         return this.lineTo(Vector2D.polar(radius, angle, center));
@@ -685,7 +590,6 @@ export class SVGPath {
      * @param {number} angle - The angle coordinate, given in degrees.
      * @param {Vector2D} center - The coordinates of the center.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      */
     polarLineBy(radius, angle, center = Vector2D.ORIGIN) {
         return this.lineBy(Vector2D.polar(radius, angle, center));
@@ -703,11 +607,9 @@ export class SVGPath {
      * Adds a polygon to the path.
      * @param {Polygon2D} polygon - The polygon from which takes the points.
      * @returns {SVGPath} - Chains the instance.
-     * @throws {Error} - If the path is already closed.
      * @throws {TypeError} - If the polygon is not a Polygon2D.
      */
     addPolygon(polygon) {
-        this.#acceptCommand();
         Polygon2D.validateInstance(polygon);
 
         const points = polygon.points;
