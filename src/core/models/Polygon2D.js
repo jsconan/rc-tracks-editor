@@ -199,18 +199,18 @@ export class Polygon2D {
     }
 
     /**
-     * Move the polygon by the given vector.
+     * Translates the polygon by the given vector.
      * @param {Vector2D} vector - The move to apply to the each point of the polygon.
      * @returns {Polygon2D} - Chains the instance.
      */
-    move(vector) {
+    translate(vector) {
         this.points = this.points.map(point => point.add(vector));
 
         return this;
     }
 
     /**
-     * Rotate the polygon by the given angle around the origin (0, 0).
+     * Rotates the polygon by the given angle around the origin (0, 0).
      * @param {number} angle - The rotation angle.
      * @returns {Polygon2D} - Chains the instance.
      */
@@ -221,7 +221,7 @@ export class Polygon2D {
     }
 
     /**
-     * Rotate the polygon by the given angle around the given center.
+     * Rotates the polygon by the given angle around the given center.
      * @param {number} angle - The rotation angle.
      * @param {Vector2D} center - The rotation center.
      * @returns {Polygon2D} - Chains the instance.

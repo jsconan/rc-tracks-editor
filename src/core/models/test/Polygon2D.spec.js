@@ -372,12 +372,12 @@ describe('Polygon2D', () => {
         expect([...p]).toEqual(points);
     });
 
-    it('can move the points', () => {
+    it('can translate the points', () => {
         const polygon = new Polygon2D(points);
 
-        expect(polygon.move).toEqual(expect.any(Function));
+        expect(polygon.translate).toEqual(expect.any(Function));
 
-        expect(polygon.move(new Vector2D(5, 8))).toMatchSnapshot();
+        expect(polygon.translate(new Vector2D(5, 8))).toMatchSnapshot();
     });
 
     describe('can rotate the points', () => {

@@ -41,7 +41,7 @@
             new Vector2D(arrowStart, -halfB),
             new Vector2D(-halfH, -halfB)
         ]);
-        polygon.rotate(rotationAngle).move(center);
+        polygon.rotate(rotationAngle).translate(center);
         return SVGPath.fromPolygon(polygon);
     }
 
