@@ -6,9 +6,7 @@
     import { CURVED_TILE_ENLARGED_TYPE, CURVED_TILE_TYPE, STRAIGHT_TILE_TYPE, TILE_DIRECTION_RIGHT } from '../helpers';
     import { TileList } from '../models';
     import { TileSpecifications } from '../config';
-    import CurvedElement from './CurvedElement.svelte';
-    import CurvedElementEnlarged from './CurvedElementEnlarged.svelte';
-    import StraightElement from './StraightElement.svelte';
+    import { CurvedElement, CurvedElementEnlarged, StraightElement } from '../../core/elements';
 
     export let type = STRAIGHT_TILE_TYPE;
     export let direction = TILE_DIRECTION_RIGHT;

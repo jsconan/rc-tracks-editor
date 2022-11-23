@@ -5,7 +5,8 @@
     import { getContext } from 'svelte';
     import { extendTileWithStyle, TILE_STYLE_GROUND } from '../helpers';
     import { TileSpecifications } from '../config';
-    import { StraightBarrier, StraightElement } from '../elements';
+    import { StraightBarrier } from '../elements';
+    import { StraightElement } from '../../core/elements';
     import { StraightTileModel } from '../models';
 
     export let direction = StraightTileModel.DIRECTION_RIGHT;

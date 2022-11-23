@@ -3,7 +3,7 @@
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
     import { getTileStyleBarrier } from '../helpers';
-    import StraightElement from './StraightElement.svelte';
+    import { StraightElement } from '../../core/elements';
 
     export let chunks;
     export let width;

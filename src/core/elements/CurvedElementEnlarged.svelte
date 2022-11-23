@@ -2,8 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { curvedElementEnlargedPath } from '../../core/fragments';
-    import { Shape } from '../../core/elements';
+    import { curvedElementEnlargedPath } from '../fragments';
+    import Shape from './Shape.svelte';
 
     export let cx = 0;
     export let cy = 0;

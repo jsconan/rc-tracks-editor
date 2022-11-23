@@ -17,9 +17,6 @@
  */
 
 export { default as CurvedBarrier } from './CurvedBarrier.svelte';
-export { default as CurvedElement } from './CurvedElement.svelte';
-export { default as CurvedElementEnlarged } from './CurvedElementEnlarged.svelte';
 export { default as StraightBarrier } from './StraightBarrier.svelte';
-export { default as StraightElement } from './StraightElement.svelte';
 export { default as TileDirection } from './TileDirection.svelte';
 export { default as TileElement } from './TileElement.svelte';

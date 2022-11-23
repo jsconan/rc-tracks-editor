@@ -5,7 +5,8 @@
     import { getContext } from 'svelte';
     import { extendTileWithStyle, TILE_STYLE_GROUND } from '../helpers';
     import { TileSpecifications } from '../config';
-    import { CurvedBarrier, CurvedElement } from '../elements';
+    import { CurvedBarrier } from '../elements';
+    import { CurvedElement } from '../../core/elements';
     import { CurvedTileModel } from '../models';
 
     export let direction = CurvedTileModel.DIRECTION_RIGHT;
