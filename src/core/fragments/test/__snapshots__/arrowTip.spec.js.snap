@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrowTipPath draws an arrow tip at 100,100 having width=60 and height=50, rotated by 30 1`] = `"M 87.00961894323342,92.5 L 86.51923788646684,63.34936490538903 125.98076211353316,115 61.51923788646684,106.65063509461098 Z"`;
+
+exports[`arrowTipPath draws an arrow tip at 100,100 having width=60 and height=50, rotated by undefined 1`] = `"M 85,100 L 70,75 130,100 70,125 Z"`;

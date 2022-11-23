@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`curvedElementEnlargedPath draws a curved arrow tip at 100,100 having width=60, radius=50 and side=20, with 5 added 1`] = `"M 145,95 A 50,50 0 0 1 95,145 V 215 H 120 A 95,95 0 0 0 215,120 V 95 Z"`;
+
+exports[`curvedElementEnlargedPath draws a curved arrow tip at 100,100 having width=60, radius=50 and side=20, with undefined added 1`] = `"M 150,100 A 50,50 0 0 1 100,150 V 210 H 120 A 90,90 0 0 0 210,120 V 100 Z"`;

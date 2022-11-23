@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`straightArrowPath draws an arrow tip at 100,100 having width=60 and height=50, thickness=0, rotated by 30 1`] = `"M 74.01923788646684,85 L 82.67949192431122,90 70.17949192431124,111.65063509461098 125.98076211353316,115 95.17949192431122,68.34936490538902 82.67949192431122,90 74.01923788646684,85 Z"`;
+
+exports[`straightArrowPath draws an arrow tip at 100,100 having width=60 and height=50, thickness=0, rotated by undefined 1`] = `"M 70,100 L 80,100 80,125 130,100 80,75 80,100 70,100 Z"`;
+
+exports[`straightArrowPath draws an arrow tip at 100,100 having width=60 and height=50, thickness=10, rotated by 30 1`] = `"M 71.51923788646684,89.3301270189222 L 80.17949192431122,94.3301270189222 70.17949192431124,111.65063509461098 125.98076211353316,115 95.17949192431122,68.34936490538902 85.17949192431122,85.66987298107782 76.51923788646684,80.66987298107782 Z"`;
+
+exports[`straightArrowPath draws an arrow tip at 100,100 having width=60 and height=50, thickness=10, rotated by undefined 1`] = `"M 70,105 L 80,105 80,125 130,100 80,75 80,95 70,95 Z"`;
+
+exports[`straightArrowPath draws an arrow tip at 100,100 having width=60 and height=50, thickness=undefined, rotated by undefined 1`] = `"M 70,108.33333333333333 L 80,108.33333333333333 80,125 130,100 80,75 80,91.66666666666667 70,91.66666666666667 Z"`;

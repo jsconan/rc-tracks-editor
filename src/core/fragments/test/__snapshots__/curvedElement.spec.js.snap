@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`curvedElementPath draws a curved arrow tip at 100,100 having width=60, radius=50 and angle=60, rotated by 0, with undefined added 1`] = `"M 150,100 A 50,50 0 0 1 125,143.30127018922192 L 155,195.26279441628824 A 110,110 0 0 0 210,100 Z"`;
+
+exports[`curvedElementPath draws a curved arrow tip at 100,100 having width=60, radius=50 and angle=60, rotated by 30, with 5 added 1`] = `"M 141.2256870901844,118.04003115136453 A 45,45 0 0 1 95.01028171705212,144.72250788425015 L 95.00157515041948,214.89132146956575 A 115,115 0 0 0 201.9980154917987,153.11689783613872 Z"`;
+
+exports[`curvedElementPath draws a curved arrow tip at 100,100 having width=60, radius=50 and angle=60, rotated by 30, with undefined added 1`] = `"M 143.30127018922195,125 A 50,50 0 0 1 100,150 L 100,210 A 110,110 0 0 0 195.26279441628827,155 Z"`;
+
+exports[`curvedElementPath draws a curved arrow tip at 100,100 having width=60, radius=50 and angle=60, rotated by undefined, with undefined added 1`] = `"M 150,100 A 50,50 0 0 1 125,143.30127018922192 L 155,195.26279441628824 A 110,110 0 0 0 210,100 Z"`;
