@@ -300,10 +300,6 @@ export class Polygon2D {
 }
 
 /**
- * @typedef {import("./Vector2D.js").Vector2D} Vector2D
- */
-
-/**
  * Callback called from the iteration algorithms.
  * @param {Vector2D} point - The current point being traversed.
  * @param {number} index - The index of the current point being traversed.
