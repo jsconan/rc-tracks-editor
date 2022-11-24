@@ -22,6 +22,13 @@ import { SVGPathCommand } from './SVGPathCommand.js';
 import { Vector2D } from './Vector2D.js';
 
 /**
+ * A list of commands that can be replaced when a similar command is pushed.
+ * @type {string[]}
+ * @private
+ */
+const replaceableCommands = ['M', 'Z'];
+
+/**
  * Represents a SVG path.
  */
 export class SVGPath {
@@ -31,6 +38,13 @@ export class SVGPath {
      * @private
      */
     #commands = [];
+
+    /**
+     * The start coordinates.
+     * @type {Vector2D}
+     * @private
+     */
+    #start = null;
 
     /**
      * The current coordinates.
@@ -90,7 +104,7 @@ export class SVGPath {
      */
     #addOrReplaceCommand(command) {
         const last = this.#commands.length - 1;
-        if (last > -1 && this.#commands[last].command === command.command) {
+        if (last > -1 && this.#commands[last].name === command.name) {
             this.#commands[last] = command;
         } else {
             this.#commands.push(command);
@@ -101,7 +115,8 @@ export class SVGPath {
      * Creates a SVG path.
      */
     constructor() {
-        this.#current = new Vector2D(0, 0);
+        this.#start = new Vector2D(0, 0);
+        this.#current = this.#start;
     }
 
     /**
@@ -121,6 +136,14 @@ export class SVGPath {
     }
 
     /**
+     * The start coordinates.
+     * @type {Vector2D}
+     */
+    get start() {
+        return this.#start;
+    }
+
+    /**
      * The current coordinates.
      * @type {Vector2D}
      */
@@ -134,6 +157,7 @@ export class SVGPath {
      */
     close() {
         this.#addOrReplaceCommand(new SVGPathCommand('Z'));
+        this.#current = this.#start;
 
         return this;
     }
@@ -150,8 +174,14 @@ export class SVGPath {
             return this;
         }
 
+        const initial = this.#start === this.#current;
+
         this.#current = points[points.length - 1];
         this.#addOrReplaceCommand(new SVGPathCommand('M', this.#current));
+
+        if (initial) {
+            this.#start = this.#current;
+        }
 
         return this;
     }
@@ -168,8 +198,14 @@ export class SVGPath {
             return this;
         }
 
+        const initial = this.#start === this.#current;
+
         this.#current = points[points.length - 1];
         this.#addOrReplaceCommand(new SVGPathCommand('M', this.#current));
+
+        if (initial) {
+            this.#start = this.#current;
+        }
 
         return this;
     }
@@ -604,6 +640,54 @@ export class SVGPath {
     }
 
     /**
+     * Adds commands from another path.
+     * @param {SVGPath} path - The path from which takes the commands.
+     * @returns {SVGPath} - Chains the instance.
+     * @throws {TypeError} - If the path is not a SVGPath.
+     */
+    addPath(path) {
+        SVGPath.validateInstance(path);
+
+        if (!path.#commands.length) {
+            return this;
+        }
+
+        let start = this.#start;
+        let current = this.#current;
+        let head = this.#commands.length - 1;
+        let previous = this.#commands[head];
+
+        for (const command of path.#commands) {
+            const { name } = command;
+            if (previous && previous.name === name && replaceableCommands.includes(name)) {
+                this.#commands[head] = command;
+            } else {
+                this.#commands.push(command);
+                head++;
+            }
+
+            previous = command;
+
+            if (name === 'Z') {
+                current = start;
+            } else {
+                const initial = start === current;
+                const { parameters } = command;
+                current = parameters[parameters.length - 1];
+
+                if (initial && name === 'M') {
+                    start = current;
+                }
+            }
+        }
+
+        this.#start = start;
+        this.#current = current;
+
+        return this;
+    }
+
+    /**
      * Adds a polygon to the path.
      * @param {Polygon2D} polygon - The polygon from which takes the points.
      * @returns {SVGPath} - Chains the instance.
@@ -633,5 +717,17 @@ export class SVGPath {
     static fromPolygon(polygon) {
         const path = new this();
         return path.addPolygon(polygon).close();
+    }
+
+    /**
+     * Validates that the given object is an instance of the class.
+     * Otherwise, an error is thrown.
+     * @param {object} object - The instance to validate.
+     * @throws {TypeError} - If the given object is not a valid instance.
+     */
+    static validateInstance(object) {
+        if (!(object instanceof this)) {
+            throw new TypeError(`The object must be an instance of ${this.name}!`);
+        }
     }
 }

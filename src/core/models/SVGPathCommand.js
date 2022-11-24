@@ -25,7 +25,7 @@ export class SVGPathCommand {
      * @type {string}
      * @private
      */
-    #command;
+    #name;
 
     /**
      * A list of parameters for the command.
@@ -40,7 +40,7 @@ export class SVGPathCommand {
      * @param {...*} parameters - A list of parameters for the command.
      */
     constructor(command, ...parameters) {
-        this.#command = `${command}`;
+        this.#name = `${command}`;
         this.#parameters = parameters;
     }
 
@@ -48,8 +48,8 @@ export class SVGPathCommand {
      * The represented path command.
      * @type {string}
      */
-    get command() {
-        return this.#command;
+    get name() {
+        return this.#name;
     }
 
     /**
@@ -66,9 +66,9 @@ export class SVGPathCommand {
      */
     toString() {
         if (!this.#parameters.length) {
-            return this.#command;
+            return this.#name;
         }
 
-        return `${this.#command} ${this.#parameters.join(' ')}`;
+        return `${this.#name} ${this.#parameters.join(' ')}`;
     }
 }

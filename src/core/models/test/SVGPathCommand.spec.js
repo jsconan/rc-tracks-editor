@@ -26,7 +26,7 @@ describe('SVGPathCommand', () => {
 
     it('represents a command', () => {
         const command = new SVGPathCommand('C');
-        expect(command.command).toEqual('C');
+        expect(command.name).toEqual('C');
     });
 
     it('accepts to not have parameters', () => {

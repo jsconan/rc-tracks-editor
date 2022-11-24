@@ -35,6 +35,10 @@ describe('SVGPath', () => {
         });
 
         it('starts at the origin', () => {
+            expect(path.start).toBeInstanceOf(Vector2D);
+            expect(path.start.x).toBe(0);
+            expect(path.start.y).toBe(0);
+
             expect(path.current).toBeInstanceOf(Vector2D);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
@@ -49,6 +53,11 @@ describe('SVGPath', () => {
             expect(path.close()).toBe(path);
             expect(path.length).toBe(3);
             expect(path.toString()).toBe('M 4,2 L 9,1 Z');
+
+            expect(path.start.x).toBe(4);
+            expect(path.start.y).toBe(2);
+            expect(path.current.x).toBe(4);
+            expect(path.current.y).toBe(2);
         });
 
         it('even if it is empty', () => {
@@ -57,6 +66,11 @@ describe('SVGPath', () => {
             expect(path.close()).toBe(path);
             expect(path.length).toBe(1);
             expect(path.toString()).toBe('Z');
+
+            expect(path.start.x).toBe(0);
+            expect(path.start.y).toBe(0);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(0);
         });
 
         it('only once', () => {
@@ -66,6 +80,11 @@ describe('SVGPath', () => {
             expect(path.close()).toBe(path);
             expect(path.length).toBe(2);
             expect(path.toString()).toBe('L 4,2 Z');
+
+            expect(path.start.x).toBe(0);
+            expect(path.start.y).toBe(0);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(0);
         });
     });
 
@@ -86,6 +105,8 @@ describe('SVGPath', () => {
                 expect(() => path.moveBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -100,6 +121,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 4,6');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(4);
+                expect(path.start.y).toBe(6);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -114,6 +137,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 4,6');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(4);
+                expect(path.start.y).toBe(6);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -128,6 +153,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 7,10');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(7);
+                expect(path.start.y).toBe(10);
                 expect(path.current.x).toBe(7);
                 expect(path.current.y).toBe(10);
             });
@@ -143,6 +170,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 8,9');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(8);
+                expect(path.start.y).toBe(9);
                 expect(path.current.x).toBe(8);
                 expect(path.current.y).toBe(9);
             });
@@ -164,6 +193,8 @@ describe('SVGPath', () => {
                 expect(() => path.moveBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -178,6 +209,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 5.464101615137755,5.464101615137754');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(5.464101615137755);
+                expect(path.start.y).toBe(5.464101615137754);
                 expect(path.current.x).toBe(5.464101615137755);
                 expect(path.current.y).toBe(5.464101615137754);
             });
@@ -192,6 +225,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 14.098076211353316,21.464101615137753');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(14.098076211353316);
+                expect(path.start.y).toBe(21.464101615137753);
                 expect(path.current.x).toBe(14.098076211353316);
                 expect(path.current.y).toBe(21.464101615137753);
             });
@@ -206,6 +241,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 4.098076211353316,5.464101615137754');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(4.098076211353316);
+                expect(path.start.y).toBe(5.464101615137754);
                 expect(path.current.x).toBe(4.098076211353316);
                 expect(path.current.y).toBe(5.464101615137754);
             });
@@ -221,6 +258,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 4.098076211353316,5.464101615137754');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(4.098076211353316);
+                expect(path.start.y).toBe(5.464101615137754);
                 expect(path.current.x).toBe(4.098076211353316);
                 expect(path.current.y).toBe(5.464101615137754);
             });
@@ -244,6 +283,8 @@ describe('SVGPath', () => {
                 expect(() => path.lineBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -258,6 +299,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('L 1,2 L 4,6');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -272,6 +315,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('L 1,2 L 4,6');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -286,6 +331,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('L 1,2 3,4 L 4,6 7,10');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(7);
                 expect(path.current.y).toBe(10);
             });
@@ -301,6 +348,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 5,8');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(5);
+                expect(path.start.y).toBe(8);
                 expect(path.current.x).toBe(5);
                 expect(path.current.y).toBe(8);
             });
@@ -323,6 +372,8 @@ describe('SVGPath', () => {
                 expect(() => path.lineBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(5);
+                expect(path.start.y).toBe(8);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -339,6 +390,8 @@ describe('SVGPath', () => {
                 );
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(5.464101615137755);
                 expect(path.current.y).toBe(5.464101615137754);
             });
@@ -355,6 +408,8 @@ describe('SVGPath', () => {
                 );
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4.098076211353316);
                 expect(path.current.y).toBe(5.464101615137754);
             });
@@ -369,6 +424,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('L 7.598076211353316,10 L 14.098076211353316,21.464101615137753');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(14.098076211353316);
                 expect(path.current.y).toBe(21.464101615137753);
             });
@@ -384,6 +441,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 3.464101615137755,1.9999999999999998');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(3.464101615137755);
+                expect(path.start.y).toBe(1.9999999999999998);
                 expect(path.current.x).toBe(3.464101615137755);
                 expect(path.current.y).toBe(1.9999999999999998);
             });
@@ -402,6 +461,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -416,6 +477,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('H 4');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(0);
             });
@@ -430,6 +493,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('H 4');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(0);
             });
@@ -445,6 +510,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('H 8');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(8);
                 expect(path.current.y).toBe(0);
             });
@@ -463,6 +530,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -477,6 +546,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('V 4');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(4);
             });
@@ -491,6 +562,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('V 6');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(6);
             });
@@ -506,25 +579,10 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('V 8');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(8);
-            });
-
-            it.each([
-                [[], 2, 0, 2, 'M 2,3 V 0'],
-                [[3], 2, 3, 1, 'M 2,3'],
-                [[8], 2, 8, 2, 'M 2,3 V 8'],
-                [[new Vector2D(3, 2)], 2, 2, 2, 'M 2,3 V 2']
-            ])('to absolute coordinates using the parameters %s', (parameters, x, y, count, expected) => {
-                const path = new SVGPath();
-                path.moveTo(2, 3);
-
-                expect(path.verticalLineTo(...parameters)).toBe(path);
-                expect(path.current.x).toBe(x);
-                expect(path.current.y).toBe(y);
-
-                expect(path.length).toBe(count);
-                expect(path.toString()).toBe(expected);
             });
         });
     });
@@ -546,6 +604,8 @@ describe('SVGPath', () => {
                 expect(() => path.cubicBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -560,6 +620,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('C 1,2 3,4 5,6 C 6,8 8,10 10,12');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(10);
                 expect(path.current.y).toBe(12);
             });
@@ -592,6 +654,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('C 1,2 3,4 5,6 11,12 13,14 15,16 C 16,18 18,20 20,22 31,34 33,36 35,38');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(35);
                 expect(path.current.y).toBe(38);
             });
@@ -613,6 +677,8 @@ describe('SVGPath', () => {
                 expect(() => path.smoothBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -627,6 +693,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('S 1,2 3,4 S 4,6 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -655,6 +723,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('S 1,2 3,4 11,12 13,14 S 14,16 16,18 27,30 29,32');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(29);
                 expect(path.current.y).toBe(32);
             });
@@ -676,6 +746,8 @@ describe('SVGPath', () => {
                 expect(() => path.quadraticBezierCurveBy({})).toThrow('The object must be an instance of Vector2D!');
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -690,6 +762,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('Q 1,2 3,4 Q 4,6 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -718,6 +792,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('Q 1,2 3,4 11,12 13,14 Q 14,16 16,18 27,30 29,32');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(29);
                 expect(path.current.y).toBe(32);
             });
@@ -743,6 +819,8 @@ describe('SVGPath', () => {
                 );
 
                 expect(path.length).toBe(0);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(0);
                 expect(path.current.y).toBe(0);
             });
@@ -757,6 +835,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('T 1,2 T 4,6');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -771,6 +851,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('T 1,2 T 4,6');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(4);
                 expect(path.current.y).toBe(6);
             });
@@ -785,6 +867,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('T 1,2 3,4 T 4,6 7,10');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(7);
                 expect(path.current.y).toBe(10);
             });
@@ -800,6 +884,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('M 5,8');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(5);
+                expect(path.start.y).toBe(8);
                 expect(path.current.x).toBe(5);
                 expect(path.current.y).toBe(8);
             });
@@ -818,6 +904,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 30 1 1 3,4 A 5,5 30 1 1 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -832,6 +920,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 1 1 3,4 A 5,6 0 1 1 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -862,6 +952,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 0 1 -1.830127018922194,1.830127018922194');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(-1.830127018922194);
                 expect(path.current.y).toBe(1.830127018922194);
             });
@@ -873,6 +965,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 0 1 -1.830127018922194,2.196152422706634');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(-1.830127018922194);
                 expect(path.current.y).toBe(2.196152422706634);
             });
@@ -884,6 +978,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 0 1 -1.830127018922194,1.830127018922194');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(-1.830127018922194);
                 expect(path.current.y).toBe(1.830127018922194);
             });
@@ -895,6 +991,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 1 1 -7.544065067354892,-6.330222215594889');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(-7.544065067354892);
                 expect(path.current.y).toBe(-6.330222215594889);
             });
@@ -906,6 +1004,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 0 0 1.8301270189221914,-1.8301270189221932');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(1.8301270189221914);
                 expect(path.current.y).toBe(-1.8301270189221932);
             });
@@ -917,6 +1017,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 1 0 7.544065067354891,6.330222215594889');
 
                 expect(path.length).toBe(1);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(7.544065067354891);
                 expect(path.current.y).toBe(6.330222215594889);
             });
@@ -939,6 +1041,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,5 0 0 0 3,4 A 5,5 0 0 0 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -953,6 +1057,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 0 0 3,4 A 5,6 0 0 0 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -967,6 +1073,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 0 0 3,4 A 5,6 0 0 0 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -981,6 +1089,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 1 0 3,4 A 5,6 0 1 0 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -995,6 +1105,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 0 1 3,4 A 5,6 0 0 1 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -1009,6 +1121,8 @@ describe('SVGPath', () => {
                 expect(path.toString()).toBe('A 5,6 0 1 1 3,4 A 5,6 0 1 1 6,8');
 
                 expect(path.length).toBe(2);
+                expect(path.start.x).toBe(0);
+                expect(path.start.y).toBe(0);
                 expect(path.current.x).toBe(6);
                 expect(path.current.y).toBe(8);
             });
@@ -1028,6 +1142,110 @@ describe('SVGPath', () => {
         });
     });
 
+    describe('add commands from another path', () => {
+        it('to an empty path', () => {
+            const from = new SVGPath();
+            from.moveTo(10, 10).lineTo(20, 10).lineTo(5, 8).lineTo(0, 8);
+
+            let path = new SVGPath();
+            expect(path.addPath(from)).toBe(path);
+            expect(path.toString()).toBe('M 10,10 L 20,10 L 5,8 L 0,8');
+
+            expect(path.length).toBe(4);
+            expect(path.start.x).toBe(10);
+            expect(path.start.y).toBe(10);
+            expect(path.current.x).toBe(0);
+            expect(path.current.y).toBe(8);
+
+            from.close();
+            path = new SVGPath();
+            expect(path.addPath(from)).toBe(path);
+            expect(path.toString()).toBe('M 10,10 L 20,10 L 5,8 L 0,8 Z');
+
+            expect(path.length).toBe(5);
+            expect(path.start.x).toBe(10);
+            expect(path.start.y).toBe(10);
+            expect(path.current.x).toBe(10);
+            expect(path.current.y).toBe(10);
+        });
+
+        it('to an existing path', () => {
+            const path = new SVGPath();
+            path.moveTo(5, 3).lineTo(15, 6).lineTo(-4, 5).lineTo(-2, 8).close();
+            path.moveTo(10, 10);
+
+            const path2 = new SVGPath();
+            path2.moveTo(10, 10).lineTo(20, 10).lineTo(5, 8).lineTo(0, 8).close();
+
+            expect(path.addPath(path2)).toBe(path);
+            expect(path.toString()).toBe('M 5,3 L 15,6 L -4,5 L -2,8 Z M 10,10 L 20,10 L 5,8 L 0,8 Z');
+
+            expect(path.length).toBe(10);
+            expect(path.start.x).toBe(10);
+            expect(path.start.y).toBe(10);
+            expect(path.current.x).toBe(10);
+            expect(path.current.y).toBe(10);
+
+            const path3 = new SVGPath();
+            path3.moveTo(1, 2).lineTo(4, 1).lineTo(5, 8);
+
+            expect(path3.addPath(path)).toBe(path3);
+            expect(path3.toString()).toBe(
+                'M 1,2 L 4,1 L 5,8 M 5,3 L 15,6 L -4,5 L -2,8 Z M 10,10 L 20,10 L 5,8 L 0,8 Z'
+            );
+
+            expect(path3.length).toBe(13);
+            expect(path3.start.x).toBe(10);
+            expect(path3.start.y).toBe(10);
+            expect(path3.current.x).toBe(10);
+            expect(path3.current.y).toBe(10);
+        });
+
+        it('chaining paths', () => {
+            const path = new SVGPath();
+            path.moveTo(5, 3).lineTo(15, 6).lineTo(-4, 5).lineTo(-2, 8);
+
+            const from1 = new SVGPath();
+            from1.lineTo(20, 10).lineTo(5, 8).lineTo(0, 8);
+
+            const from2 = new SVGPath();
+            from2.lineTo(7, 9).lineTo(1, -3).lineTo(6, 2).close();
+
+            expect(path.addPath(from1)).toBe(path);
+            expect(path.addPath(from2)).toBe(path);
+            expect(path.toString()).toBe('M 5,3 L 15,6 L -4,5 L -2,8 L 20,10 L 5,8 L 0,8 L 7,9 L 1,-3 L 6,2 Z');
+
+            expect(path.length).toBe(11);
+            expect(path.start.x).toBe(5);
+            expect(path.start.y).toBe(3);
+            expect(path.current.x).toBe(5);
+            expect(path.current.y).toBe(3);
+        });
+
+        it('using an empty path', () => {
+            const path = new SVGPath();
+            path.moveTo(5, 3).lineTo(15, 6).lineTo(-4, 5).lineTo(-2, 8);
+
+            const from = new SVGPath();
+
+            expect(path.addPath(from)).toBe(path);
+            expect(path.toString()).toBe('M 5,3 L 15,6 L -4,5 L -2,8');
+
+            expect(path.length).toBe(4);
+            expect(path.start.x).toBe(5);
+            expect(path.start.y).toBe(3);
+            expect(path.current.x).toBe(-2);
+            expect(path.current.y).toBe(8);
+        });
+
+        it('throws error if a wrong path is given', () => {
+            const path = new SVGPath();
+
+            expect(() => path.addPath()).toThrow('The object must be an instance of SVGPath!');
+            expect(() => path.addPath({})).toThrow('The object must be an instance of SVGPath!');
+        });
+    });
+
     describe('add points from a polygon', () => {
         it('to an empty path', () => {
             const path = new SVGPath();
@@ -1041,7 +1259,10 @@ describe('SVGPath', () => {
 
             expect(path.addPolygon(polygon)).toBe(path);
             expect(path.toString()).toBe('M 1,2 L 3,4 5,6 7,8');
+
             expect(path.length).toBe(2);
+            expect(path.start.x).toBe(1);
+            expect(path.start.y).toBe(2);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(8);
         });
@@ -1060,7 +1281,10 @@ describe('SVGPath', () => {
 
             expect(path.addPolygon(polygon)).toBe(path);
             expect(path.toString()).toBe('M 10,8 L 15,6 L 1,2 3,4 5,6 7,8');
+
             expect(path.length).toBe(3);
+            expect(path.start.x).toBe(10);
+            expect(path.start.y).toBe(8);
             expect(path.current.x).toBe(7);
             expect(path.current.y).toBe(8);
         });
@@ -1071,14 +1295,20 @@ describe('SVGPath', () => {
 
             expect(path.addPolygon(polygon)).toBe(path);
             expect(path.toString()).toBe('');
+
             expect(path.length).toBe(0);
+            expect(path.start.x).toBe(0);
+            expect(path.start.y).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
 
             path.moveTo(10, 8).lineTo(15, 6);
             expect(path.addPolygon(polygon)).toBe(path);
             expect(path.toString()).toBe('M 10,8 L 15,6');
+
             expect(path.length).toBe(2);
+            expect(path.start.x).toBe(10);
+            expect(path.start.y).toBe(8);
             expect(path.current.x).toBe(15);
             expect(path.current.y).toBe(6);
         });
@@ -1104,9 +1334,12 @@ describe('SVGPath', () => {
             const path = SVGPath.fromPolygon(polygon);
 
             expect(path.toString()).toBe('M 1,2 L 3,4 5,6 7,8 Z');
+
             expect(path.length).toBe(3);
-            expect(path.current.x).toBe(7);
-            expect(path.current.y).toBe(8);
+            expect(path.start.x).toBe(1);
+            expect(path.start.y).toBe(2);
+            expect(path.current.x).toBe(1);
+            expect(path.current.y).toBe(2);
         });
 
         it('using an empty polygon', () => {
@@ -1114,7 +1347,10 @@ describe('SVGPath', () => {
             const path = SVGPath.fromPolygon(polygon);
 
             expect(path.toString()).toBe('Z');
+
             expect(path.length).toBe(1);
+            expect(path.start.x).toBe(0);
+            expect(path.start.y).toBe(0);
             expect(path.current.x).toBe(0);
             expect(path.current.y).toBe(0);
         });
@@ -1123,5 +1359,11 @@ describe('SVGPath', () => {
             expect(() => SVGPath.fromPolygon()).toThrow('The object must be an instance of Polygon2D!');
             expect(() => SVGPath.fromPolygon({})).toThrow('The object must be an instance of Polygon2D!');
         });
+    });
+
+    it('can validate an object is an instance of the class', () => {
+        const path = new SVGPath();
+        expect(() => SVGPath.validateInstance(path)).not.toThrow();
+        expect(() => SVGPath.validateInstance({})).toThrow('The object must be an instance of SVGPath!');
     });
 });
