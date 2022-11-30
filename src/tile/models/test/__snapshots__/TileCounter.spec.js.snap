@@ -13,13 +13,7 @@ StraightTileModel {
   "direction": "right",
   "id": "straight-tile-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -28,13 +22,7 @@ CurvedTileEnlargedModel {
   "direction": "right",
   "id": "curved-tile-enlarged-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -43,13 +31,7 @@ CurvedTileModel {
   "direction": "right",
   "id": "curved-tile-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -59,37 +41,19 @@ exports[`TileCounter can list the counted tile models 1`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   CurvedTileEnlargedModel {
     "direction": "right",
     "id": "curved-tile-enlarged-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   CurvedTileModel {
     "direction": "right",
     "id": "curved-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
 ]
 `;
@@ -102,13 +66,7 @@ exports[`TileCounter can list the counters 1`] = `
       "direction": "right",
       "id": "straight-tile-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
     "modelId": "straight-tile-1",
   },
@@ -118,13 +76,7 @@ exports[`TileCounter can list the counters 1`] = `
       "direction": "right",
       "id": "curved-tile-enlarged-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
     "modelId": "curved-tile-enlarged-1",
   },
@@ -134,13 +86,7 @@ exports[`TileCounter can list the counters 1`] = `
       "direction": "right",
       "id": "curved-tile-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
     "modelId": "curved-tile-1",
   },
@@ -161,37 +107,19 @@ exports[`TileCounter can set the specifications of the tile models 1`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 2,
-      "barrierWidth": 1,
-      "laneWidth": 10,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   CurvedTileEnlargedModel {
     "direction": "right",
     "id": "curved-tile-enlarged-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 2,
-      "barrierWidth": 1,
-      "laneWidth": 10,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   CurvedTileModel {
     "direction": "right",
     "id": "curved-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 2,
-      "barrierWidth": 1,
-      "laneWidth": 10,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
 ]
 `;

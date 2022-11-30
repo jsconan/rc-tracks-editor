@@ -26,7 +26,9 @@ const barrierLength = 27.5;
 const barrierWidth = 5;
 const barrierChunks = 4;
 const maxRatio = 4;
+const unlockRatio = true;
 const contextId = 'tileSpecifications';
+const config = { laneWidth, barrierWidth, barrierChunks, maxRatio, unlockRatio };
 
 describe('TileSpecifications', () => {
     it('is a class', () => {
@@ -36,86 +38,73 @@ describe('TileSpecifications', () => {
     it('defines default specifications for the tiles', () => {
         const specs = new TileSpecifications();
 
-        expect(specs).toBeInstanceOf(TileSpecifications);
         expect(specs.laneWidth).toBe(20);
         expect(specs.barrierWidth).toBe(1);
         expect(specs.barrierChunks).toBe(4);
-        expect(specs.length).toBe(27);
+        expect(specs.height).toBe(27);
         expect(specs.width).toBe(22);
         expect(specs.padding).toBe(2.5);
-        expect(specs.barrierLength).toBe(6.75);
+        expect(specs.barrierHeight).toBe(6.75);
         expect(specs.maxRatio).toBe(4);
         expect(specs.unlockRatio).toBeFalsy();
         expect(specs.contextId).toBe(contextId);
     });
 
     it('defines the specifications for the tiles', () => {
-        const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, maxRatio, unlockRatio: true });
+        const specs = new TileSpecifications(config);
 
-        expect(specs).toBeInstanceOf(TileSpecifications);
         expect(specs.laneWidth).toBe(laneWidth);
         expect(specs.barrierWidth).toBe(barrierWidth);
         expect(specs.barrierChunks).toBe(barrierChunks);
-        expect(specs.length).toBe(tileLength);
+        expect(specs.height).toBe(tileLength);
         expect(specs.width).toBe(tileWidth);
         expect(specs.padding).toBe(tilePadding);
-        expect(specs.barrierLength).toBe(barrierLength);
+        expect(specs.barrierHeight).toBe(barrierLength);
         expect(specs.maxRatio).toBe(maxRatio);
         expect(specs.unlockRatio).toBeTruthy();
         expect(specs.contextId).toBe(contextId);
     });
 
-    describe('can set', () => {
-        it.each([
-            [50, 50],
-            [-60, 60]
-        ])('the width of the track lane as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
+    it('imports the specifications for the tiles', () => {
+        const specs = new TileSpecifications();
 
-            expect(specs.setLaneWidth(value)).toBe(specs);
-            expect(specs.laneWidth).toBe(expected);
-        });
+        expect(specs.import(config)).toBe(specs);
+        expect(specs.laneWidth).toBe(laneWidth);
+        expect(specs.barrierWidth).toBe(barrierWidth);
+        expect(specs.barrierChunks).toBe(barrierChunks);
+        expect(specs.height).toBe(tileLength);
+        expect(specs.width).toBe(tileWidth);
+        expect(specs.padding).toBe(tilePadding);
+        expect(specs.barrierHeight).toBe(barrierLength);
+        expect(specs.maxRatio).toBe(maxRatio);
+        expect(specs.unlockRatio).toBeTruthy();
+        expect(specs.contextId).toBe(contextId);
+    });
 
-        it.each([
-            [3, 3],
-            [-4, 4]
-        ])('the width of a barrier as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
-            expect(specs.setBarrierWidth(value)).toBe(specs);
-            expect(specs.barrierWidth).toBe(expected);
-        });
+    it('exports the specifications for the tiles', () => {
+        const specs = new TileSpecifications(config);
 
-        it.each([
-            [1, 1],
-            [-1, 1],
-            [0, 1],
-            [0.1, 1],
-            [1.8, 2],
-            [2.1, 2]
-        ])('the number of a barrier chunks as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
-            expect(specs.setBarrierChunks(value)).toBe(specs);
-            expect(specs.barrierChunks).toBe(expected);
-        });
+        expect(specs.export()).toStrictEqual(config);
+    });
 
-        it.each([
-            [1, 1],
-            [-1, 1],
-            [0, 1],
-            [0.1, 1],
-            [1.8, 2],
-            [2.1, 2]
-        ])('the maximum value for size ratio as %s, actually %s', (value, expected) => {
-            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
-            expect(specs.setMaxRatio(value)).toBe(specs);
-            expect(specs.maxRatio).toBe(expected);
-        });
+    it('adjusts the specifications for the tiles', () => {
+        const input = {
+            laneWidth: -60,
+            barrierWidth: -5,
+            barrierChunks: 0.2,
+            maxRatio: 0.2,
+            unlockRatio: 0
+        };
+        const output = {
+            laneWidth: 60,
+            barrierWidth: 5,
+            barrierChunks: 1,
+            maxRatio: 1,
+            unlockRatio: false
+        };
+        const specs = new TileSpecifications(input);
 
-        it.each([false, true])('the ratio unlocking as %s', value => {
-            const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks, unlockRatio: !value });
-            expect(specs.setUnlockRatio(value)).toBe(specs);
-            expect(specs.unlockRatio).toBe(value);
-        });
+        expect(specs.export()).toStrictEqual(output);
     });
 
     it('can validate an object is an instance of the class', () => {

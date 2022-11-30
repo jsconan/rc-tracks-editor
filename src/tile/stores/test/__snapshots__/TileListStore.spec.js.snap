@@ -9,13 +9,7 @@ TileList {
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -28,26 +22,14 @@ TileList {
       "direction": "right",
       "id": "id-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -60,38 +42,20 @@ TileList {
       "direction": "right",
       "id": "id-2",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
     CurvedTileModel {
       "direction": "right",
       "id": "id-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -104,26 +68,14 @@ TileList {
       "direction": "right",
       "id": "id-1",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -136,26 +88,14 @@ TileList {
       "direction": "right",
       "id": "id-3",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -168,13 +108,7 @@ TileList {
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -187,26 +121,14 @@ TileList {
       "direction": "right",
       "id": "id-4",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 4,
-        "barrierWidth": 5,
-        "laneWidth": 80,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -219,26 +141,14 @@ TileList {
       "direction": "right",
       "id": "id-4",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 2,
-    "barrierWidth": 1,
-    "laneWidth": 10,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -251,25 +161,13 @@ TileList {
       "direction": "right",
       "id": "id-4",
       "ratio": 1,
-      "specs": TileSpecifications {
-        "barrierChunks": 2,
-        "barrierWidth": 1,
-        "laneWidth": 10,
-        "maxRatio": 4,
-        "unlockRatio": false,
-      },
+      "specs": TileSpecifications {},
     },
   ],
   "listens": [Function],
   "off": [Function],
   "on": [Function],
   "once": [Function],
-  "specs": TileSpecifications {
-    "barrierChunks": 2,
-    "barrierWidth": 1,
-    "laneWidth": 10,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;

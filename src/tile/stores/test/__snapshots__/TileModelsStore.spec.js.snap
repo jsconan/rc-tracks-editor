@@ -8,13 +8,7 @@ exports[`tileModelsStore can notify changes applied to the counter 2`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
 ]
 `;
@@ -27,13 +21,7 @@ exports[`tileModelsStore can notify changes applied to the counter 4`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
 ]
 `;
@@ -46,13 +34,7 @@ exports[`tileModelsStore can notify changes applied to the counter 6`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
 ]
 `;

@@ -26,19 +26,19 @@ import { Vector2D } from '../../core/models';
  */
 export class CurvedTileModel extends TileModel {
     /**
-     * The actual length of the tile with respect to the ratio.
-     * @type {number}
-     */
-    get length() {
-        return this.specs.length;
-    }
-
-    /**
      * The actual width of the tile with respect to the ratio.
      * @type {number}
      */
     get width() {
         return this.specs.width;
+    }
+
+    /**
+     * The actual height of the tile with respect to the ratio.
+     * @type {number}
+     */
+    get height() {
+        return this.specs.height;
     }
 
     /**

@@ -17,13 +17,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -54,13 +48,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -91,13 +79,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -128,13 +110,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -165,13 +141,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -202,13 +172,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -239,13 +203,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -276,13 +234,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -324,13 +276,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -361,13 +307,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -398,13 +338,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -435,13 +369,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -472,13 +400,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -509,13 +431,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -546,13 +462,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -583,13 +493,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -631,13 +535,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -668,13 +566,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -705,13 +597,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -742,13 +628,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -779,13 +659,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -816,13 +690,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -853,13 +721,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -890,13 +752,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -938,13 +794,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -975,13 +825,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1012,13 +856,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1049,13 +887,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1086,13 +918,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1123,13 +949,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1160,13 +980,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1197,13 +1011,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1245,13 +1053,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1282,13 +1084,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1319,13 +1115,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1356,13 +1146,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1393,13 +1177,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1430,13 +1208,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1467,13 +1239,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1504,13 +1270,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1552,13 +1312,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1589,13 +1343,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1626,13 +1374,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1663,13 +1405,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1700,13 +1436,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1737,13 +1467,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1774,13 +1498,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1811,13 +1529,7 @@ exports[`buildTrack process a list of tiles for rendering a track using config o
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1859,13 +1571,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-0",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1896,13 +1602,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-1",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1933,13 +1633,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-2",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -1970,13 +1664,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-3",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -2007,13 +1695,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-4",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -2044,13 +1726,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-5",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -2081,13 +1757,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-6",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {
@@ -2118,13 +1788,7 @@ exports[`buildTrack process a list of tiles for rendering a track using default 
         "direction": "right",
         "id": "id-7",
         "ratio": 1,
-        "specs": TileSpecifications {
-          "barrierChunks": 4,
-          "barrierWidth": 5,
-          "laneWidth": 80,
-          "maxRatio": 4,
-          "unlockRatio": false,
-        },
+        "specs": TileSpecifications {},
       },
       "ratio": 1,
       "rect": {

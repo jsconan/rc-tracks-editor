@@ -90,7 +90,7 @@ describe('TileModel', () => {
             expect(tile.type).toBe(TileModel.TYPE);
             expect(tile.modelId).toBe(modelId);
             expect(tile.id).toBe(modelId);
-            expect(tile.length).toBe(tileLength);
+            expect(tile.height).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
             expect(tile.minRatio).toBe(minRatio);
             expect(tile.maxRatio).toBe(maxRatio);
@@ -105,7 +105,7 @@ describe('TileModel', () => {
             expect(tile.type).toBe(TileModel.TYPE);
             expect(tile.modelId).toBe(modelId);
             expect(tile.id).toBe(modelId);
-            expect(tile.length).toBe(tileLength);
+            expect(tile.height).toBe(tileLength);
             expect(tile.width).toBe(tileWidth);
             expect(tile.minRatio).toBe(minRatio);
             expect(tile.maxRatio).toBe(maxRatio);
@@ -120,7 +120,7 @@ describe('TileModel', () => {
             expect(tile.type).toBe(TileModel.TYPE);
             expect(tile.modelId).toBe(modelId);
             expect(tile.id).toBe(modelId);
-            expect(tile.length).toBe(tileLength * ratio);
+            expect(tile.height).toBe(tileLength * ratio);
             expect(tile.width).toBe(tileWidth * ratio);
             expect(tile.minRatio).toBe(minRatio);
             expect(tile.maxRatio).toBe(maxRatio);

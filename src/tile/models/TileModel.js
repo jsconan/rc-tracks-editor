@@ -73,19 +73,19 @@ export class TileModel {
     }
 
     /**
-     * The actual length of the tile with respect to the ratio.
-     * @type {number}
-     */
-    get length() {
-        return this.specs.length * this.ratio;
-    }
-
-    /**
      * The actual width of the tile with respect to the ratio.
      * @type {number}
      */
     get width() {
         return this.specs.width * this.ratio;
+    }
+
+    /**
+     * The actual height of the tile with respect to the ratio.
+     * @type {number}
+     */
+    get height() {
+        return this.specs.height * this.ratio;
     }
 
     /**
@@ -197,7 +197,7 @@ export class TileModel {
      * @returns {Vector2D}
      */
     getCurveCenter(x = 0, y = 0) {
-        const offset = this.specs.padding - this.getInnerRadius() - this.specs.length / 2;
+        const offset = this.specs.padding - this.getInnerRadius() - this.specs.height / 2;
 
         return new Vector2D(x + offset, y);
     }
@@ -208,7 +208,7 @@ export class TileModel {
      */
     getInnerRadius() {
         const ratio = Math.max(1, this.ratio) - 1;
-        return this.specs.length * ratio + this.specs.padding;
+        return this.specs.height * ratio + this.specs.padding;
     }
 
     /**
@@ -265,7 +265,7 @@ export class TileModel {
     getCenterCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        return start.addScalarY(this.length / 2).rotateAround(angle, start);
+        return start.addScalarY(this.height / 2).rotateAround(angle, start);
     }
 
     /**
@@ -278,7 +278,7 @@ export class TileModel {
     getOutputCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        return start.addScalarY(this.length).rotateAround(angle, start);
+        return start.addScalarY(this.height).rotateAround(angle, start);
     }
 
     /**
@@ -300,14 +300,14 @@ export class TileModel {
     getEdgesCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
 
-        const length = this.length;
+        const height = this.height;
         const width = this.width / 2;
 
         return [
             start.subScalarX(width).rotateAround(angle, start),
             start.addScalarX(width).rotateAround(angle, start),
-            start.addCoord(width, length).rotateAround(angle, start),
-            start.addCoord(-width, length).rotateAround(angle, start)
+            start.addCoord(width, height).rotateAround(angle, start),
+            start.addCoord(-width, height).rotateAround(angle, start)
         ];
     }
 
@@ -377,7 +377,7 @@ export class TileModel {
      * @returns {object} - Returns a set of parameters for rendering the tile shapes.
      */
     getShapeParameters(x = 0, y = 0) {
-        const barrierLength = this.specs.barrierLength;
+        const barrierHeight = this.specs.barrierHeight;
         const barrierWidth = this.specs.barrierWidth;
 
         const chunks = this.getSideBarrierChunks();
@@ -395,12 +395,12 @@ export class TileModel {
             x: leftX,
             y: leftY,
             width: this.width,
-            height: this.length
+            height: this.height
         };
         const leftBarrier = {
             chunks,
             width: barrierWidth,
-            length: barrierLength,
+            height: barrierHeight,
             left: leftX,
             top: leftY,
             shift: 0,
@@ -409,7 +409,7 @@ export class TileModel {
         const rightBarrier = {
             chunks,
             width: barrierWidth,
-            length: barrierLength,
+            height: barrierHeight,
             left: rightX,
             top: rightY,
             shift: 1,

@@ -301,6 +301,49 @@ exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
 </body>
 `;
 
+exports[`StraightBarrier updates when the parameter height is modified 1`] = `
+<body>
+  <div>
+    <g
+      class="barrier straight-barrier"
+    >
+      
+      <rect
+        fill="var(--color-even)"
+        height="6"
+        width="20"
+        x="100"
+        y="100"
+      />
+      
+      <rect
+        fill="var(--color-odd)"
+        height="6"
+        width="20"
+        x="120"
+        y="100"
+      />
+      
+      <rect
+        fill="var(--color-even)"
+        height="6"
+        width="20"
+        x="140"
+        y="100"
+      />
+      
+      <rect
+        fill="var(--color-odd)"
+        height="6"
+        width="20"
+        x="160"
+        y="100"
+      />
+    </g>
+  </div>
+</body>
+`;
+
 exports[`StraightBarrier updates when the parameter left is modified 1`] = `
 <body>
   <div>
@@ -337,49 +380,6 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
         height="6"
         width="25"
         x="115"
-        y="100"
-      />
-    </g>
-  </div>
-</body>
-`;
-
-exports[`StraightBarrier updates when the parameter length is modified 1`] = `
-<body>
-  <div>
-    <g
-      class="barrier straight-barrier"
-    >
-      
-      <rect
-        fill="var(--color-even)"
-        height="6"
-        width="20"
-        x="100"
-        y="100"
-      />
-      
-      <rect
-        fill="var(--color-odd)"
-        height="6"
-        width="20"
-        x="120"
-        y="100"
-      />
-      
-      <rect
-        fill="var(--color-even)"
-        height="6"
-        width="20"
-        x="140"
-        y="100"
-      />
-      
-      <rect
-        fill="var(--color-odd)"
-        height="6"
-        width="20"
-        x="160"
         y="100"
       />
     </g>

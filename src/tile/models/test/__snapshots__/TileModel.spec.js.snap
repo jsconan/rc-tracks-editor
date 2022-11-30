@@ -5,13 +5,7 @@ TileModel {
   "direction": "right",
   "id": "tile-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -20,13 +14,7 @@ TileModel {
   "direction": "left",
   "id": "tile-0.5",
   "ratio": 0.5,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -35,13 +23,7 @@ TileModel {
   "direction": "left",
   "id": "tile-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -50,13 +32,7 @@ TileModel {
   "direction": "left",
   "id": "tile-2",
   "ratio": 2,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -65,13 +41,7 @@ TileModel {
   "direction": "left",
   "id": "tile-3",
   "ratio": 3,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -80,13 +50,7 @@ TileModel {
   "direction": "left",
   "id": "tile-4",
   "ratio": 4,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -95,13 +59,7 @@ TileModel {
   "direction": "left",
   "id": "tile-1",
   "ratio": 1,
-  "specs": TileSpecifications {
-    "barrierChunks": 4,
-    "barrierWidth": 5,
-    "laneWidth": 80,
-    "maxRatio": 4,
-    "unlockRatio": false,
-  },
+  "specs": TileSpecifications {},
 }
 `;
 
@@ -475,8 +433,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 55,
-    "length": 27.5,
     "shift": 0,
     "top": 100,
     "vertical": true,
@@ -484,8 +442,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 140,
-    "length": 27.5,
     "shift": 1,
     "top": 100,
     "vertical": true,
@@ -504,8 +462,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": -45,
-    "length": 27.5,
     "shift": 0,
     "top": 0,
     "vertical": true,
@@ -513,8 +471,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 40,
-    "length": 27.5,
     "shift": 1,
     "top": 0,
     "vertical": true,
@@ -533,8 +491,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": -45,
-    "length": 27.5,
     "shift": 0,
     "top": 0,
     "vertical": true,
@@ -542,8 +500,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 40,
-    "length": 27.5,
     "shift": 1,
     "top": 0,
     "vertical": true,
@@ -562,8 +520,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 55,
-    "length": 27.5,
     "shift": 0,
     "top": 100,
     "vertical": true,
@@ -571,8 +529,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 140,
-    "length": 27.5,
     "shift": 1,
     "top": 100,
     "vertical": true,
@@ -591,8 +549,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 55,
-    "length": 27.5,
     "shift": 0,
     "top": 100,
     "vertical": true,
@@ -600,8 +558,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 140,
-    "length": 27.5,
     "shift": 1,
     "top": 100,
     "vertical": true,
@@ -620,8 +578,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": -45,
-    "length": 27.5,
     "shift": 0,
     "top": 0,
     "vertical": true,
@@ -629,8 +587,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 4,
+    "height": 27.5,
     "left": 40,
-    "length": 27.5,
     "shift": 1,
     "top": 0,
     "vertical": true,
@@ -649,8 +607,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": -45,
-    "length": 27.5,
     "shift": 0,
     "top": 0,
     "vertical": true,
@@ -658,8 +616,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 40,
-    "length": 27.5,
     "shift": 1,
     "top": 0,
     "vertical": true,
@@ -678,8 +636,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "leftBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 55,
-    "length": 27.5,
     "shift": 0,
     "top": 100,
     "vertical": true,
@@ -687,8 +645,8 @@ exports[`TileModel can compute the parameters for rendering the shapes oriented 
   },
   "rightBarrier": {
     "chunks": 8,
+    "height": 27.5,
     "left": 140,
-    "length": 27.5,
     "shift": 1,
     "top": 100,
     "vertical": true,

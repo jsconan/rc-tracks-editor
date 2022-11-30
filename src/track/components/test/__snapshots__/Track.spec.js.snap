@@ -9,13 +9,7 @@ exports[`Track can focus a tile and blur it 1`] = `
     "direction": "right",
     "id": "id-7",
     "ratio": 2,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 2,
   "rect": {
@@ -475,13 +469,7 @@ exports[`Track can focus a tile and blur it 3`] = `
     "direction": "right",
     "id": "id-7",
     "ratio": 2,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 2,
   "rect": {
@@ -1580,13 +1568,7 @@ exports[`Track can hover a tile and leave it 1`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -2035,13 +2017,7 @@ exports[`Track can hover a tile and leave it 3`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -4469,13 +4445,7 @@ exports[`Track fires select 1`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -4510,13 +4480,7 @@ exports[`Track fires select 2`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -4551,13 +4515,7 @@ exports[`Track fires select 3`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -4592,13 +4550,7 @@ exports[`Track fires select 4`] = `
     "direction": "right",
     "id": "id-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {

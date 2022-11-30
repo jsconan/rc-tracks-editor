@@ -25,7 +25,7 @@ describe('StraightBarrier', () => {
         const props = {
             chunks: 4,
             width: 6,
-            length: 25
+            height: 25
         };
         const { container } = render(StraightBarrier, { props });
 
@@ -41,7 +41,7 @@ describe('StraightBarrier', () => {
         const props = {
             chunks: 4,
             width: 6,
-            length: 25,
+            height: 25,
             left: 100,
             top: 100,
             shift,
@@ -56,7 +56,7 @@ describe('StraightBarrier', () => {
         ['chunks', { chunks: '5' }],
         ['chunks', { chunks: '3' }],
         ['width', { width: 4 }],
-        ['length', { length: 20 }],
+        ['height', { height: 20 }],
         ['left', { left: 40 }],
         ['top', { top: 40 }],
         ['shift', { shift: 1 }],
@@ -65,7 +65,7 @@ describe('StraightBarrier', () => {
         const props = {
             chunks: 4,
             width: 6,
-            length: 25,
+            height: 25,
             left: 100,
             top: 100,
             shift: 0,

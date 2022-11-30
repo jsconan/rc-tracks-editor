@@ -21,21 +21,74 @@
  */
 export class TileSpecifications {
     /**
-     * Defines the specifications for the track tiles from the given constraints.
-     * @param {object} config - A set of config options.
-     * @param {number} laneWidth - The width of the track lane (the distance between the barriers).
-     * @param {number} barrierWidth - The width of the barriers.
-     * @param {number} barrierChunks - The number of barrier chunks per tile.
-     * @param {number} maxRatio - The maximum value for size ratios.
-     * @param {boolean} unlockRatio - Unlock the maximum size ratio some tiles are applying.
+     * The width of a tile.
+     * @type {number}
+     * @private
      */
+    #width;
 
-    constructor({ laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4, unlockRatio = false } = {}) {
-        this.setLaneWidth(laneWidth);
-        this.setBarrierWidth(barrierWidth);
-        this.setBarrierChunks(barrierChunks);
-        this.setMaxRatio(maxRatio);
-        this.setUnlockRatio(unlockRatio);
+    /**
+     * The height of a tile.
+     * @type {number}
+     * @private
+     */
+    #height;
+
+    /**
+     * The width of a barrier.
+     * @type {number}
+     * @private
+     */
+    #barrierWidth;
+
+    /**
+     * The height of a barrier.
+     * @type {number}
+     * @private
+     */
+    #barrierHeight;
+
+    /**
+     * The number of barrier chunks per tile's side.
+     * @type {number}
+     * @private
+     */
+    #barrierChunks;
+
+    /**
+     * The padding around the width of the tile to align with its height.
+     * @type {number}
+     * @private
+     */
+    #padding;
+
+    /**
+     * The width of the track lane (the distance between the barriers).
+     * @type {number}
+     * @private
+     */
+    #laneWidth;
+
+    /**
+     * The maximum value for size ratios.
+     * @type {number}
+     * @private
+     */
+    #maxRatio;
+
+    /**
+     * Whether or not unlock the size ratio.
+     * @type {number}
+     * @private
+     */
+    #unlockRatio;
+
+    /**
+     * Defines the specifications for the track tiles from the given constraints.
+     * @param {tileSpecificationsConfig} config - The set of constraints defining the specifications.
+     */
+    constructor(config) {
+        this.import(config);
     }
 
     /**
@@ -47,11 +100,35 @@ export class TileSpecifications {
     }
 
     /**
-     * The length of a tile with respect to the initial constraints.
+     * The width of the track lane (the distance between the barriers).
      * @type {number}
      */
-    get length() {
-        return this.laneWidth * 1.25 + this.barrierWidth * 2;
+    get laneWidth() {
+        return this.#laneWidth;
+    }
+
+    /**
+     * The width of the barriers.
+     * @type {number}
+     */
+    get barrierWidth() {
+        return this.#barrierWidth;
+    }
+
+    /**
+     * The height of a barrier chunk.
+     * @type {number}
+     */
+    get barrierHeight() {
+        return this.#barrierHeight;
+    }
+
+    /**
+     * The number of barrier chunks per tile's side.
+     * @type {number}
+     */
+    get barrierChunks() {
+        return this.#barrierChunks;
     }
 
     /**
@@ -59,79 +136,76 @@ export class TileSpecifications {
      * @type {number}
      */
     get width() {
-        return this.laneWidth + this.barrierWidth * 2;
+        return this.#width;
     }
 
     /**
-     * The length of a barrier chunk with respect to the initial constraints.
+     * The height of a tile with respect to the initial constraints.
      * @type {number}
      */
-    get barrierLength() {
-        return this.length / this.barrierChunks;
+    get height() {
+        return this.#height;
     }
 
     /**
-     * The padding around the width of the tile to align with its length.
+     * The padding around the width of the tile to align with its height.
      * Note: tiles must fit in a square so that they can be flipped and rotated indifferently.
      * @type {number}
      */
     get padding() {
-        return this.laneWidth / 8;
+        return this.#padding;
     }
 
     /**
-     * Sets the width of the track lane (the distance between the barriers).
-     * @param {number} laneWidth - The width of the track lane.
+     * The maximum value for size ratios.
+     * @type {number}
+     */
+    get maxRatio() {
+        return this.#maxRatio;
+    }
+
+    /**
+     * Whether or not unlock the size ratio.
+     * @type {boolean}
+     */
+    get unlockRatio() {
+        return this.#unlockRatio;
+    }
+
+    /**
+     * Imports the specifications for the track tiles from the given constraints.
+     * @param {tileSpecificationsConfig} config - The set of constraints defining the specifications.
      * @returns {TileSpecifications} - Chains the instance.
      */
-    setLaneWidth(laneWidth) {
-        this.laneWidth = Math.abs(laneWidth);
+    import({ laneWidth = 20, barrierWidth = 1, barrierChunks = 4, maxRatio = 4, unlockRatio = false } = {}) {
+        // capture the constraints
+        this.#laneWidth = Math.abs(laneWidth);
+        this.#barrierWidth = Math.abs(barrierWidth);
+        this.#barrierChunks = Math.abs(Math.round(barrierChunks) || 1);
+        this.#maxRatio = Math.abs(Math.round(maxRatio) || 1);
+        this.#unlockRatio = !!unlockRatio;
+
+        // compute the specs
+        this.#height = this.#laneWidth * 1.25 + this.#barrierWidth * 2;
+        this.#width = this.#laneWidth + this.#barrierWidth * 2;
+        this.#barrierHeight = this.#height / this.#barrierChunks;
+        this.#padding = this.#laneWidth / 8;
 
         return this;
     }
 
     /**
-     * Sets the width of the barriers.
-     * @param {number} barrierWidth - The width of the barriers.
-     * @returns {TileSpecifications} - Chains the instance.
+     * Exports the specifications constraints.
+     * @returns {tileSpecificationsConfig}
      */
-    setBarrierWidth(barrierWidth) {
-        this.barrierWidth = Math.abs(barrierWidth);
-
-        return this;
-    }
-
-    /**
-     * Sets the number of barrier chunks per tile.
-     * @param {number} barrierChunks - The number of barrier chunks per tile.
-     * @returns {TileSpecifications} - Chains the instance.
-     */
-    setBarrierChunks(barrierChunks) {
-        this.barrierChunks = Math.abs(Math.round(barrierChunks) || 1);
-
-        return this;
-    }
-
-    /**
-     * Sets the maximum value for size ratios.
-     * @param {number} maxRatio - The maximum value for size ratios.
-     * @returns {TileSpecifications} - Chains the instance.
-     */
-    setMaxRatio(maxRatio) {
-        this.maxRatio = Math.abs(Math.round(maxRatio) || 1);
-
-        return this;
-    }
-
-    /**
-     * Locks or unlocks the maximum size ratio some tiles are applying.
-     * @param {boolean} unlockRatio - Whether or not unlock the size ratio.
-     * @returns {TileSpecifications} - Chains the instance.
-     */
-    setUnlockRatio(unlockRatio) {
-        this.unlockRatio = !!unlockRatio;
-
-        return this;
+    export() {
+        return {
+            barrierChunks: this.#barrierChunks,
+            barrierWidth: this.#barrierWidth,
+            laneWidth: this.#laneWidth,
+            maxRatio: this.#maxRatio,
+            unlockRatio: this.#unlockRatio
+        };
     }
 
     /**
@@ -157,3 +231,13 @@ Object.defineProperty(TileSpecifications, 'CONTEXT_ID', {
     enumerable: true,
     configurable: true
 });
+
+/**
+ * Defines the constraints properties used to define the specifications for the track tiles.
+ * @typedef {object} tileSpecificationsConfig
+ * @property {number} laneWidth - The width of the track lane (the distance between the barriers).
+ * @property {number} barrierWidth - The width of the barriers.
+ * @property {number} barrierChunks - The number of barrier chunks per tile's side.
+ * @property {number} maxRatio - The maximum value for size ratios.
+ * @property {boolean} unlockRatio - Unlock the maximum size ratio some tiles are applying.
+ */

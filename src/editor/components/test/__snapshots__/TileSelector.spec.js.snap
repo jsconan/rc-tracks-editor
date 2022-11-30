@@ -5556,13 +5556,7 @@ exports[`TileSelector fires select 1`] = `
     "direction": "right",
     "id": "curved-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -5597,13 +5591,7 @@ exports[`TileSelector fires select 2`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -5638,13 +5626,7 @@ exports[`TileSelector fires select 3`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {
@@ -5679,13 +5661,7 @@ exports[`TileSelector fires select 4`] = `
     "direction": "right",
     "id": "straight-tile-1",
     "ratio": 1,
-    "specs": TileSpecifications {
-      "barrierChunks": 4,
-      "barrierWidth": 5,
-      "laneWidth": 80,
-      "maxRatio": 4,
-      "unlockRatio": false,
-    },
+    "specs": TileSpecifications {},
   },
   "ratio": 1,
   "rect": {

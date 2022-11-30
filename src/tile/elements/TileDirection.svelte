@@ -27,13 +27,13 @@
     const specs = getContext(TileSpecifications.CONTEXT_ID);
 
     function straightTile(model, x, y) {
-        const length = specs.length;
+        const height = specs.height;
         const width = specs.width;
 
         const component = StraightArrow;
         const parameters = {
             cx: x,
-            cy: y + length / 2,
+            cy: y + height / 2,
             width: width / 2,
             height: width / 4,
             rotation: RIGHT_ANGLE + model.getDirectionAngle()

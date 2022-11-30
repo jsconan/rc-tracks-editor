@@ -69,7 +69,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      * @returns {number}
      */
     getCurveSide() {
-        return this.length / 2;
+        return this.height / 2;
     }
 
     /**
@@ -109,7 +109,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      */
     getCenterCoord(x = 0, y = 0, angle = 0) {
         const start = new Vector2D(x, y);
-        const center = start.addScalarY(this.specs.length * (this.ratio - 0.5));
+        const center = start.addScalarY(this.specs.height * (this.ratio - 0.5));
 
         return center.rotateAround(angle, start);
     }
@@ -209,7 +209,7 @@ export class CurvedTileEnlargedModel extends TileModel {
      */
     getShapeParameters(x = 0, y = 0) {
         const width = this.specs.width;
-        const barrierLength = this.specs.barrierLength;
+        const barrierHeight = this.specs.barrierHeight;
         const barrierWidth = this.specs.barrierWidth;
 
         const side = this.getCurveSide();
@@ -258,7 +258,7 @@ export class CurvedTileEnlargedModel extends TileModel {
         const horizontalBarrier = {
             chunks: sideChunks,
             width: barrierWidth,
-            length: barrierLength,
+            height: barrierHeight,
             left: horizontalX,
             top: horizontalY,
             shift: 0,
@@ -267,7 +267,7 @@ export class CurvedTileEnlargedModel extends TileModel {
         const verticalBarrier = {
             chunks: sideChunks,
             width: barrierWidth,
-            length: barrierLength,
+            height: barrierHeight,
             left: verticalX,
             top: verticalY,
             shift: 1,
