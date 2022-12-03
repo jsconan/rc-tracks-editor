@@ -104,7 +104,7 @@ describe('TrackEditor', () => {
         const props = { editor };
         const { container } = render(TrackEditor, { props });
 
-        await fireEvent.mouseOver(container.querySelector('[data-id=straight-tile-1]'));
+        await fireEvent.mouseOver(container.querySelector('.tiles [data-id=straight-tile-1]'));
         await fireEvent.click(container.querySelector('.hover'));
         expect(container).toMatchSnapshot();
     });
@@ -116,23 +116,82 @@ describe('TrackEditor', () => {
         const props = { editor };
         const { container } = render(TrackEditor, { props });
 
-        await fireEvent.mouseOver(container.querySelector('.track [data-id=id-15]'));
+        await fireEvent.mouseOver(container.querySelector('.canvas [data-id=id-15]'));
         await fireEvent.click(container.querySelector('.hover'));
 
-        await fireEvent.mouseOver(container.querySelector('[data-id=straight-tile-1]'));
+        await fireEvent.mouseOver(container.querySelector('.tiles [data-id=straight-tile-1]'));
         await fireEvent.click(container.querySelector('.hover'));
         expect(container).toMatchSnapshot();
     });
 
-    it('flip a tile in the track', async () => {
+    it('select a tile in the track using the mouse', async () => {
         const editor = new TrackEditorModel(specs);
         editor.limit(tiles);
         editor.load(track);
         const props = { editor };
         const { container } = render(TrackEditor, { props });
 
-        await fireEvent.mouseOver(container.querySelector('.track [data-id=id-20]'));
+        await fireEvent.mouseOver(container.querySelector('.canvas [data-id=id-20]'));
         await fireEvent.click(container.querySelector('.hover'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('select a tile in the track using the keyboard', async () => {
+        const editor = new TrackEditorModel(specs);
+        editor.limit(tiles);
+        editor.load(track);
+        const props = { editor };
+        const { container } = render(TrackEditor, { props });
+
+        await fireEvent.focus(container.querySelector('.canvas [role=menu]'));
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyUp(container.querySelector('.canvas [role=menu]'), { key: ' ' });
+        expect(container).toMatchSnapshot();
+        await fireEvent.keyUp(container.querySelector('.canvas .overlay'), { key: 'Escape' });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('flip a tile in the track using the mouse', async () => {
+        const editor = new TrackEditorModel(specs);
+        editor.limit(tiles);
+        editor.load(track);
+        const props = { editor };
+        const { container } = render(TrackEditor, { props });
+
+        await fireEvent.mouseOver(container.querySelector('.canvas [data-id=id-30]'));
+        await fireEvent.click(container.querySelector('.hover'));
+        await fireEvent.click(container.querySelector('.overlay'));
+        expect(container).toMatchSnapshot();
+    });
+
+    it('flip a tile in the track using the keyboard', async () => {
+        const editor = new TrackEditorModel(specs);
+        editor.limit(tiles);
+        editor.load(track);
+        const props = { editor };
+        const { container } = render(TrackEditor, { props });
+
+        await fireEvent.focus(container.querySelector('.canvas [role=menu]'));
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyUp(container.querySelector('.canvas [role=menu]'), { key: ' ' });
+        await fireEvent.keyUp(container.querySelector('.canvas .overlay'), { key: ' ' });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('delete a tile in the track using the keyboard', async () => {
+        const editor = new TrackEditorModel(specs);
+        editor.limit(tiles);
+        editor.load(track);
+        const props = { editor };
+        const { container } = render(TrackEditor, { props });
+
+        await fireEvent.focus(container.querySelector('.canvas [role=menu]'));
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyDown(container.querySelector('.canvas [role=menu]'), { key: 'ArrowRight' });
+        await fireEvent.keyUp(container.querySelector('.canvas [role=menu]'), { key: ' ' });
+        await fireEvent.keyUp(container.querySelector('.canvas .overlay'), { key: 'Backspace' });
         expect(container).toMatchSnapshot();
     });
 });
