@@ -45,40 +45,28 @@ exports[`CurvedTileEnlarged renders with default values 1`] = `
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M -55,95 H -27.5 V 100 H -55 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="-55"
-          y="95"
         />
         
-        <rect
+        <path
+          d="M -27.5,95 H 0 V 100 H -27.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="-27.5"
-          y="95"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 40,0 H 45 V 27.5 H 40 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="0"
         />
         
-        <rect
+        <path
+          d="M 40,27.5 H 45 V 55 H 40 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="27.5"
         />
       </g>
     </g>
@@ -133,40 +121,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -221,40 +197,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -309,40 +273,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -397,40 +349,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -485,40 +425,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -573,40 +501,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -661,40 +577,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -749,40 +653,28 @@ exports[`CurvedTileEnlarged renders with the given parameters for a tile oriente
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -837,40 +729,28 @@ exports[`CurvedTileEnlarged updates when the parameter direction is modified 1`]
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -925,40 +805,28 @@ exports[`CurvedTileEnlarged updates when the parameter ratio is modified 1`] = `
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -1013,40 +881,28 @@ exports[`CurvedTileEnlarged updates when the parameter rotation is modified 1`] 
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,245 H 72.5 V 250 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 72.5,245 H 100 V 250 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -1101,40 +957,28 @@ exports[`CurvedTileEnlarged updates when the parameter x is modified 1`] = `
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M -15,245 H 12.5 V 250 H -15 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="-15"
-          y="245"
         />
         
-        <rect
+        <path
+          d="M 12.5,245 H 40 V 250 H 12.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="12.5"
-          y="245"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 80,150 H 85 V 177.5 H 80 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 80,177.5 H 85 V 205 H 80 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="177.5"
         />
       </g>
     </g>
@@ -1189,40 +1033,28 @@ exports[`CurvedTileEnlarged updates when the parameter y is modified 1`] = `
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 45,135 H 72.5 V 140 H 45 Z"
           fill="var(--color-even)"
-          height="5"
-          width="27.5"
-          x="45"
-          y="135"
         />
         
-        <rect
+        <path
+          d="M 72.5,135 H 100 V 140 H 72.5 Z"
           fill="var(--color-odd)"
-          height="5"
-          width="27.5"
-          x="72.5"
-          y="135"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,40 H 145 V 67.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="40"
         />
         
-        <rect
+        <path
+          d="M 140,67.5 H 145 V 95 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="67.5"
         />
       </g>
     </g>

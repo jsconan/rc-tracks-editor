@@ -61,12 +61,9 @@ exports[`TileElement renders a curved-tile-enlarged element with the given param
 exports[`TileElement renders a straight-tile element with default values 1`] = `
 <body>
   <div>
-    <rect
-      height="110"
+    <path
+      d="M -45,0 H 45 V 110 H -45 Z"
       transform=""
-      width="90"
-      x="-45"
-      y="0"
     />
     
     
@@ -77,15 +74,12 @@ exports[`TileElement renders a straight-tile element with default values 1`] = `
 exports[`TileElement renders a straight-tile element with the given parameters 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -96,12 +90,9 @@ exports[`TileElement renders a straight-tile element with the given parameters 1
 exports[`TileElement renders a undefined element with default values 1`] = `
 <body>
   <div>
-    <rect
-      height="110"
+    <path
+      d="M -45,0 H 45 V 110 H -45 Z"
       transform=""
-      width="90"
-      x="-45"
-      y="0"
     />
     
     
@@ -112,15 +103,12 @@ exports[`TileElement renders a undefined element with default values 1`] = `
 exports[`TileElement updates when the parameter d is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 45,190 H 155 V 320 H 45 Z"
       fill="red"
-      height="130"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)"
-      width="110"
-      x="45"
-      y="190"
     />
     
     
@@ -131,15 +119,12 @@ exports[`TileElement updates when the parameter d is modified 1`] = `
 exports[`TileElement updates when the parameter direction is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)rotate(180 100 255)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -150,15 +135,12 @@ exports[`TileElement updates when the parameter direction is modified 1`] = `
 exports[`TileElement updates when the parameter fill is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="blue"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -169,15 +151,12 @@ exports[`TileElement updates when the parameter fill is modified 1`] = `
 exports[`TileElement updates when the parameter ratio is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -188,15 +167,12 @@ exports[`TileElement updates when the parameter ratio is modified 1`] = `
 exports[`TileElement updates when the parameter rotation is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(45 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -207,14 +183,11 @@ exports[`TileElement updates when the parameter rotation is modified 1`] = `
 exports[`TileElement updates when the parameter stroke is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke="blue"
       transform="rotate(90 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -225,14 +198,11 @@ exports[`TileElement updates when the parameter stroke is modified 1`] = `
 exports[`TileElement updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,200 H 145 V 310 H 55 Z"
       fill="red"
-      height="110"
       stroke-width="3"
       transform="rotate(90 100 200)"
-      width="90"
-      x="55"
-      y="200"
     />
     
     
@@ -259,15 +229,12 @@ exports[`TileElement updates when the parameter type is modified 1`] = `
 exports[`TileElement updates when the parameter x is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M -5,200 H 85 V 310 H -5 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 40 200)"
-      width="90"
-      x="-5"
-      y="200"
     />
     
     
@@ -278,15 +245,12 @@ exports[`TileElement updates when the parameter x is modified 1`] = `
 exports[`TileElement updates when the parameter y is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 55,40 H 145 V 150 H 55 Z"
       fill="red"
-      height="110"
       stroke="green"
       stroke-width="2"
       transform="rotate(90 100 40)"
-      width="90"
-      x="55"
-      y="40"
     />
     
     

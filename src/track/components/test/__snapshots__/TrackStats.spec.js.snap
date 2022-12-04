@@ -17,85 +17,58 @@ exports[`TrackStats renders with default values 1`] = `
           class="tile straight-tile"
           transform=""
         >
-          <rect
+          <path
+            d="M 0,-65 H 90 V 45 H 0 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="0"
-            y="-65"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 0,-65 H 5 V -37.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 0,-37.5 H 5 V -10 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 0,-10 H 5 V 17.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 0,17.5 H 5 V 45 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="17.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 85,-65 H 90 V -37.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 85,-37.5 H 90 V -10 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 85,-10 H 90 V 17.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 85,17.5 H 90 V 45 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="17.5"
             />
           </g>
         </g>
@@ -204,85 +177,58 @@ exports[`TrackStats renders with the given parameters 1`] = `
           class="tile straight-tile"
           transform=""
         >
-          <rect
+          <path
+            d="M 0,-65 H 90 V 45 H 0 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="0"
-            y="-65"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 0,-65 H 5 V -37.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 0,-37.5 H 5 V -10 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 0,-10 H 5 V 17.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 0,17.5 H 5 V 45 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="17.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 85,-65 H 90 V -37.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 85,-37.5 H 90 V -10 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 85,-10 H 90 V 17.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 85,17.5 H 90 V 45 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="17.5"
             />
           </g>
         </g>
@@ -391,85 +337,58 @@ exports[`TrackStats updates when the model is modified 1`] = `
           class="tile straight-tile"
           transform=""
         >
-          <rect
+          <path
+            d="M 0,-65 H 90 V 45 H 0 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="0"
-            y="-65"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 0,-65 H 5 V -37.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 0,-37.5 H 5 V -10 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 0,-10 H 5 V 17.5 H 0 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 0,17.5 H 5 V 45 H 0 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="0"
-              y="17.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 85,-65 H 90 V -37.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-65"
             />
             
-            <rect
+            <path
+              d="M 85,-37.5 H 90 V -10 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-37.5"
             />
             
-            <rect
+            <path
+              d="M 85,-10 H 90 V 17.5 H 85 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="-10"
             />
             
-            <rect
+            <path
+              d="M 85,17.5 H 90 V 45 H 85 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="85"
-              y="17.5"
             />
           </g>
         </g>
@@ -532,40 +451,28 @@ exports[`TrackStats updates when the model is modified 1`] = `
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 110,35 H 137.5 V 40 H 110 Z"
               fill="var(--color-even)"
-              height="5"
-              width="27.5"
-              x="110"
-              y="35"
             />
             
-            <rect
+            <path
+              d="M 137.5,35 H 165 V 40 H 137.5 Z"
               fill="var(--color-odd)"
-              height="5"
-              width="27.5"
-              x="137.5"
-              y="35"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M 205,-60 H 210 V -32.5 H 205 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="205"
-              y="-60"
             />
             
-            <rect
+            <path
+              d="M 205,-32.5 H 210 V -5 H 205 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="205"
-              y="-32.5"
             />
           </g>
         </g>

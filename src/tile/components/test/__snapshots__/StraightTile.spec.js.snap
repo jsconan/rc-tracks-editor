@@ -7,85 +7,58 @@ exports[`StraightTile renders with default values 1`] = `
       class="tile straight-tile"
       transform=""
     >
-      <rect
+      <path
+        d="M -45,0 H 45 V 110 H -45 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="-45"
-        y="0"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M -45,0 H -40 V 27.5 H -45 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="-45"
-          y="0"
         />
         
-        <rect
+        <path
+          d="M -45,27.5 H -40 V 55 H -45 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="-45"
-          y="27.5"
         />
         
-        <rect
+        <path
+          d="M -45,55 H -40 V 82.5 H -45 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="-45"
-          y="55"
         />
         
-        <rect
+        <path
+          d="M -45,82.5 H -40 V 110 H -45 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="-45"
-          y="82.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 40,0 H 45 V 27.5 H 40 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="0"
         />
         
-        <rect
+        <path
+          d="M 40,27.5 H 45 V 55 H 40 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="27.5"
         />
         
-        <rect
+        <path
+          d="M 40,55 H 45 V 82.5 H 40 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="55"
         />
         
-        <rect
+        <path
+          d="M 40,82.5 H 45 V 110 H 40 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="40"
-          y="82.5"
         />
       </g>
     </g>
@@ -102,85 +75,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform="rotate(180 100 205)"
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -197,85 +143,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform="rotate(45 100 150)rotate(180 100 205)"
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -292,53 +211,38 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 205 H 55 Z"
         fill="var(--color-ground)"
-        height="55"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
       </g>
     </g>
@@ -355,85 +259,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -450,85 +327,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -545,85 +395,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -640,85 +463,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -735,85 +531,58 @@ exports[`StraightTile renders with the given parameters for a tile oriented to t
       id="tile"
       transform="rotate(45 100 150)"
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -830,85 +599,58 @@ exports[`StraightTile updates when the parameter direction is modified 1`] = `
       id="tile"
       transform="rotate(180 100 205)"
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -925,85 +667,58 @@ exports[`StraightTile updates when the parameter ratio is modified 1`] = `
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -1020,85 +735,58 @@ exports[`StraightTile updates when the parameter rotation is modified 1`] = `
       id="tile"
       transform="rotate(45 100 150)"
     >
-      <rect
+      <path
+        d="M 55,150 H 145 V 260 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,150 H 60 V 177.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 55,177.5 H 60 V 205 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 55,205 H 60 V 232.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 55,232.5 H 60 V 260 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,150 H 145 V 177.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 140,177.5 H 145 V 205 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 140,205 H 145 V 232.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 140,232.5 H 145 V 260 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="232.5"
         />
       </g>
     </g>
@@ -1115,85 +803,58 @@ exports[`StraightTile updates when the parameter x is modified 1`] = `
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M -5,150 H 85 V 260 H -5 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="-5"
-        y="150"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M -5,150 H 0 V 177.5 H -5 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="-5"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M -5,177.5 H 0 V 205 H -5 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="-5"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M -5,205 H 0 V 232.5 H -5 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="-5"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M -5,232.5 H 0 V 260 H -5 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="-5"
-          y="232.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 80,150 H 85 V 177.5 H 80 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="150"
         />
         
-        <rect
+        <path
+          d="M 80,177.5 H 85 V 205 H 80 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="177.5"
         />
         
-        <rect
+        <path
+          d="M 80,205 H 85 V 232.5 H 80 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="205"
         />
         
-        <rect
+        <path
+          d="M 80,232.5 H 85 V 260 H 80 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="80"
-          y="232.5"
         />
       </g>
     </g>
@@ -1210,85 +871,58 @@ exports[`StraightTile updates when the parameter y is modified 1`] = `
       id="tile"
       transform=""
     >
-      <rect
+      <path
+        d="M 55,40 H 145 V 150 H 55 Z"
         fill="var(--color-ground)"
-        height="110"
         stroke="var(--color-separator)"
         stroke-width="var(--stroke-width-tile)"
-        width="90"
-        x="55"
-        y="40"
       />
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 55,40 H 60 V 67.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="40"
         />
         
-        <rect
+        <path
+          d="M 55,67.5 H 60 V 95 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="67.5"
         />
         
-        <rect
+        <path
+          d="M 55,95 H 60 V 122.5 H 55 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="95"
         />
         
-        <rect
+        <path
+          d="M 55,122.5 H 60 V 150 H 55 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="55"
-          y="122.5"
         />
       </g>
       <g
         class="barrier straight-barrier"
       >
         
-        <rect
+        <path
+          d="M 140,40 H 145 V 67.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="40"
         />
         
-        <rect
+        <path
+          d="M 140,67.5 H 145 V 95 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="67.5"
         />
         
-        <rect
+        <path
+          d="M 140,95 H 145 V 122.5 H 140 Z"
           fill="var(--color-odd)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="95"
         />
         
-        <rect
+        <path
+          d="M 140,122.5 H 145 V 150 H 140 Z"
           fill="var(--color-even)"
-          height="27.5"
-          width="5"
-          x="140"
-          y="122.5"
         />
       </g>
     </g>

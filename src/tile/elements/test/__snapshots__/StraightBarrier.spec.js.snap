@@ -7,36 +7,24 @@ exports[`StraightBarrier renders with default values 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 0,0 H 25 V 6 H 0 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="0"
-        y="0"
       />
       
-      <rect
+      <path
+        d="M 25,0 H 50 V 6 H 25 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="25"
-        y="0"
       />
       
-      <rect
+      <path
+        d="M 50,0 H 75 V 6 H 50 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="50"
-        y="0"
       />
       
-      <rect
+      <path
+        d="M 75,0 H 100 V 6 H 75 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="75"
-        y="0"
       />
     </g>
   </div>
@@ -50,36 +38,24 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 106 H 100 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 106 H 125 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 106 H 150 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="150"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 175,100 H 200 V 106 H 175 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="175"
-        y="100"
       />
     </g>
   </div>
@@ -93,36 +69,24 @@ exports[`StraightBarrier renders with the given parameters and shift=0 and verti
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 106 V 125 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 100,125 H 106 V 150 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="125"
       />
       
-      <rect
+      <path
+        d="M 100,150 H 106 V 175 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="150"
       />
       
-      <rect
+      <path
+        d="M 100,175 H 106 V 200 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="175"
       />
     </g>
   </div>
@@ -136,36 +100,24 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 106 H 100 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 106 H 125 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 106 H 150 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="150"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 175,100 H 200 V 106 H 175 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="175"
-        y="100"
       />
     </g>
   </div>
@@ -179,36 +131,24 @@ exports[`StraightBarrier renders with the given parameters and shift=1 and verti
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 106 V 125 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 100,125 H 106 V 150 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="125"
       />
       
-      <rect
+      <path
+        d="M 100,150 H 106 V 175 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="150"
       />
       
-      <rect
+      <path
+        d="M 100,175 H 106 V 200 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="175"
       />
     </g>
   </div>
@@ -222,44 +162,29 @@ exports[`StraightBarrier updates when the parameter chunks is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 106 H 100 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 106 H 125 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 106 H 150 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="150"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 175,100 H 200 V 106 H 175 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="175"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 200,100 H 225 V 106 H 200 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="200"
-        y="100"
       />
     </g>
   </div>
@@ -273,28 +198,19 @@ exports[`StraightBarrier updates when the parameter chunks is modified 2`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 106 H 100 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 106 H 125 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 106 H 150 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="150"
-        y="100"
       />
     </g>
   </div>
@@ -308,36 +224,24 @@ exports[`StraightBarrier updates when the parameter height is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 120 V 106 H 100 Z"
         fill="var(--color-even)"
-        height="6"
-        width="20"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 120,100 H 140 V 106 H 120 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="20"
-        x="120"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 140,100 H 160 V 106 H 140 Z"
         fill="var(--color-even)"
-        height="6"
-        width="20"
-        x="140"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 160,100 H 180 V 106 H 160 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="20"
-        x="160"
-        y="100"
       />
     </g>
   </div>
@@ -351,36 +255,24 @@ exports[`StraightBarrier updates when the parameter left is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 40,100 H 65 V 106 H 40 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="40"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 65,100 H 90 V 106 H 65 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="65"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 90,100 H 115 V 106 H 90 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="90"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 115,100 H 140 V 106 H 115 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="115"
-        y="100"
       />
     </g>
   </div>
@@ -394,36 +286,24 @@ exports[`StraightBarrier updates when the parameter shift is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 106 H 100 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 106 H 125 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 106 H 150 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="150"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 175,100 H 200 V 106 H 175 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="175"
-        y="100"
       />
     </g>
   </div>
@@ -437,36 +317,24 @@ exports[`StraightBarrier updates when the parameter top is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,40 H 125 V 46 H 100 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="100"
-        y="40"
       />
       
-      <rect
+      <path
+        d="M 125,40 H 150 V 46 H 125 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="125"
-        y="40"
       />
       
-      <rect
+      <path
+        d="M 150,40 H 175 V 46 H 150 Z"
         fill="var(--color-even)"
-        height="6"
-        width="25"
-        x="150"
-        y="40"
       />
       
-      <rect
+      <path
+        d="M 175,40 H 200 V 46 H 175 Z"
         fill="var(--color-odd)"
-        height="6"
-        width="25"
-        x="175"
-        y="40"
       />
     </g>
   </div>
@@ -480,36 +348,24 @@ exports[`StraightBarrier updates when the parameter vertical is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 106 V 125 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 100,125 H 106 V 150 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="125"
       />
       
-      <rect
+      <path
+        d="M 100,150 H 106 V 175 H 100 Z"
         fill="var(--color-even)"
-        height="25"
-        width="6"
-        x="100"
-        y="150"
       />
       
-      <rect
+      <path
+        d="M 100,175 H 106 V 200 H 100 Z"
         fill="var(--color-odd)"
-        height="25"
-        width="6"
-        x="100"
-        y="175"
       />
     </g>
   </div>
@@ -523,36 +379,24 @@ exports[`StraightBarrier updates when the parameter width is modified 1`] = `
       class="barrier straight-barrier"
     >
       
-      <rect
+      <path
+        d="M 100,100 H 125 V 104 H 100 Z"
         fill="var(--color-even)"
-        height="4"
-        width="25"
-        x="100"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 125,100 H 150 V 104 H 125 Z"
         fill="var(--color-odd)"
-        height="4"
-        width="25"
-        x="125"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 150,100 H 175 V 104 H 150 Z"
         fill="var(--color-even)"
-        height="4"
-        width="25"
-        x="150"
-        y="100"
       />
       
-      <rect
+      <path
+        d="M 175,100 H 200 V 104 H 175 Z"
         fill="var(--color-odd)"
-        height="4"
-        width="25"
-        x="175"
-        y="100"
       />
     </g>
   </div>

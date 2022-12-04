@@ -2,7 +2,8 @@
     // Licensed under GNU Public License version 3
     // Copyright (c) 2022 Jean-Sébastien CONAN
 
-    import { attributeList } from '../helpers';
+    import { straightElementPath } from '../fragments';
+    import Shape from './Shape.svelte';
 
     export let x = 0;
     export let y = 0;
@@ -14,12 +15,4 @@
     export let transform = void 0;
 </script>
 
-<rect
-    x={x - d}
-    y={y - d}
-    width={width + d * 2}
-    height={height + d * 2}
-    {...attributeList(fill, 'fill')}
-    {...attributeList(stroke, 'stroke')}
-    {transform}
-/>
+<Shape path={straightElementPath(x, y, width, height, d)} {fill} {stroke} {transform} />

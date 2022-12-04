@@ -3,11 +3,8 @@
 exports[`StraightElement renders with default values 1`] = `
 <body>
   <div>
-    <rect
-      height="1"
-      width="1"
-      x="0"
-      y="0"
+    <path
+      d="M 0,0 H 1 V 1 H 0 Z"
     />
   </div>
 </body>
@@ -16,15 +13,12 @@ exports[`StraightElement renders with default values 1`] = `
 exports[`StraightElement renders with the given parameters 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 250 H 100 Z"
       fill="red"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -33,15 +27,12 @@ exports[`StraightElement renders with the given parameters 1`] = `
 exports[`StraightElement updates when the parameter d is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 90,140 H 190 V 260 H 90 Z"
       fill="red"
-      height="120"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="100"
-      x="90"
-      y="140"
     />
   </div>
 </body>
@@ -50,15 +41,12 @@ exports[`StraightElement updates when the parameter d is modified 1`] = `
 exports[`StraightElement updates when the parameter fill is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 250 H 100 Z"
       fill="blue"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -67,15 +55,12 @@ exports[`StraightElement updates when the parameter fill is modified 1`] = `
 exports[`StraightElement updates when the parameter height is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 190 H 100 Z"
       fill="red"
-      height="40"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -84,14 +69,11 @@ exports[`StraightElement updates when the parameter height is modified 1`] = `
 exports[`StraightElement updates when the parameter stroke is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 250 H 100 Z"
       fill="red"
-      height="100"
       stroke="blue"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -100,14 +82,11 @@ exports[`StraightElement updates when the parameter stroke is modified 1`] = `
 exports[`StraightElement updates when the parameter stroke-width is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 250 H 100 Z"
       fill="red"
-      height="100"
       stroke-width="3"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -116,15 +95,12 @@ exports[`StraightElement updates when the parameter stroke-width is modified 1`]
 exports[`StraightElement updates when the parameter transform is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 180 V 250 H 100 Z"
       fill="red"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(180)"
-      width="80"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -133,15 +109,12 @@ exports[`StraightElement updates when the parameter transform is modified 1`] = 
 exports[`StraightElement updates when the parameter width is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,150 H 140 V 250 H 100 Z"
       fill="red"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="40"
-      x="100"
-      y="150"
     />
   </div>
 </body>
@@ -150,15 +123,12 @@ exports[`StraightElement updates when the parameter width is modified 1`] = `
 exports[`StraightElement updates when the parameter x is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 40,150 H 120 V 250 H 40 Z"
       fill="red"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="80"
-      x="40"
-      y="150"
     />
   </div>
 </body>
@@ -167,15 +137,12 @@ exports[`StraightElement updates when the parameter x is modified 1`] = `
 exports[`StraightElement updates when the parameter y is modified 1`] = `
 <body>
   <div>
-    <rect
+    <path
+      d="M 100,40 H 180 V 140 H 100 Z"
       fill="red"
-      height="100"
       stroke="green"
       stroke-width="2"
       transform="rotate(90)"
-      width="80"
-      x="100"
-      y="40"
     />
   </div>
 </body>

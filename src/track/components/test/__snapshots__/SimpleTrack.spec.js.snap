@@ -15,85 +15,58 @@ exports[`SimpleTrack renders with default values 1`] = `
         class="tile straight-tile"
         transform="rotate(90 0 0)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -192,40 +165,28 @@ exports[`SimpleTrack renders with default values 1`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -220,40.00000000000001 H -192.5 V 45.00000000000001 H -220 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-220"
-            y="40.00000000000001"
           />
           
-          <rect
+          <path
+            d="M -192.5,40.00000000000001 H -165 V 45.00000000000001 H -192.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-192.5"
-            y="40.00000000000001"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -125,-54.99999999999999 H -120 V -27.499999999999993 H -125 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-54.99999999999999"
           />
           
-          <rect
+          <path
+            d="M -125,-27.499999999999993 H -120 V 7.105427357601002e-15 H -125 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-27.499999999999993"
           />
         </g>
       </g>
@@ -261,85 +222,58 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         class="tile straight-tile"
         transform="rotate(90 0 0)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -438,40 +372,28 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -220,40.00000000000001 H -192.5 V 45.00000000000001 H -220 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-220"
-            y="40.00000000000001"
           />
           
-          <rect
+          <path
+            d="M -192.5,40.00000000000001 H -165 V 45.00000000000001 H -192.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-192.5"
-            y="40.00000000000001"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -125,-54.99999999999999 H -120 V -27.499999999999993 H -125 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-54.99999999999999"
           />
           
-          <rect
+          <path
+            d="M -125,-27.499999999999993 H -120 V 7.105427357601002e-15 H -125 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-27.499999999999993"
           />
         </g>
       </g>
@@ -481,85 +403,58 @@ exports[`SimpleTrack renders with the given element in slots 1`] = `
         class="tile straight-tile"
         transform="rotate(270 -110 -110)"
       >
-        <rect
+        <path
+          d="M -155,-110 H -65 V 0 H -155 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-155"
-          y="-110"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -155,-110 H -150 V -82.5 H -155 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-110"
           />
           
-          <rect
+          <path
+            d="M -155,-82.5 H -150 V -55 H -155 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-82.5"
           />
           
-          <rect
+          <path
+            d="M -155,-55 H -150 V -27.5 H -155 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-55"
           />
           
-          <rect
+          <path
+            d="M -155,-27.5 H -150 V 0 H -155 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-27.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -70,-110 H -65 V -82.5 H -70 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-110"
           />
           
-          <rect
+          <path
+            d="M -70,-82.5 H -65 V -55 H -70 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-82.5"
           />
           
-          <rect
+          <path
+            d="M -70,-55 H -65 V -27.5 H -70 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-55"
           />
           
-          <rect
+          <path
+            d="M -70,-27.5 H -65 V 0 H -70 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-27.5"
           />
         </g>
       </g>
@@ -595,85 +490,58 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
         class="tile straight-tile"
         transform="rotate(90 0 0)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -772,40 +640,28 @@ exports[`SimpleTrack renders with the given parameters 1`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -220,40.00000000000001 H -192.5 V 45.00000000000001 H -220 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-220"
-            y="40.00000000000001"
           />
           
-          <rect
+          <path
+            d="M -192.5,40.00000000000001 H -165 V 45.00000000000001 H -192.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-192.5"
-            y="40.00000000000001"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -125,-54.99999999999999 H -120 V -27.499999999999993 H -125 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-54.99999999999999"
           />
           
-          <rect
+          <path
+            d="M -125,-27.499999999999993 H -120 V 7.105427357601002e-15 H -125 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-27.499999999999993"
           />
         </g>
       </g>
@@ -834,85 +690,58 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         class="tile straight-tile"
         transform="rotate(90 0 0)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -1011,40 +840,28 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -220,40.00000000000001 H -192.5 V 45.00000000000001 H -220 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-220"
-            y="40.00000000000001"
           />
           
-          <rect
+          <path
+            d="M -192.5,40.00000000000001 H -165 V 45.00000000000001 H -192.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-192.5"
-            y="40.00000000000001"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -125,-54.99999999999999 H -120 V -27.499999999999993 H -125 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-54.99999999999999"
           />
           
-          <rect
+          <path
+            d="M -125,-27.499999999999993 H -120 V 7.105427357601002e-15 H -125 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-125"
-            y="-27.499999999999993"
           />
         </g>
       </g>
@@ -1054,85 +871,58 @@ exports[`SimpleTrack updates when the store is modified 1`] = `
         class="tile straight-tile"
         transform="rotate(270 -110 -110)"
       >
-        <rect
+        <path
+          d="M -155,-110 H -65 V 0 H -155 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-155"
-          y="-110"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -155,-110 H -150 V -82.5 H -155 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-110"
           />
           
-          <rect
+          <path
+            d="M -155,-82.5 H -150 V -55 H -155 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-82.5"
           />
           
-          <rect
+          <path
+            d="M -155,-55 H -150 V -27.5 H -155 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-55"
           />
           
-          <rect
+          <path
+            d="M -155,-27.5 H -150 V 0 H -155 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-155"
-            y="-27.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -70,-110 H -65 V -82.5 H -70 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-110"
           />
           
-          <rect
+          <path
+            d="M -70,-82.5 H -65 V -55 H -70 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-82.5"
           />
           
-          <rect
+          <path
+            d="M -70,-55 H -65 V -27.5 H -70 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-55"
           />
           
-          <rect
+          <path
+            d="M -70,-27.5 H -65 V 0 H -70 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-70"
-            y="-27.5"
           />
         </g>
       </g>

@@ -26,85 +26,58 @@ exports[`TileNavigator can focus an element and blur it 2`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -115,16 +88,13 @@ exports[`TileNavigator can focus an element and blur it 2`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -563,85 +533,58 @@ exports[`TileNavigator can hover an element then focus it 1`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -651,15 +594,12 @@ exports[`TileNavigator can hover an element then focus it 1`] = `
         class="hover svelte-rodoie"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-bg-hovered)"
-          height="110"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="90"
-          x="-45"
-          y="0"
         />
         
       </g>
@@ -668,16 +608,13 @@ exports[`TileNavigator can hover an element then focus it 1`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -700,85 +637,58 @@ exports[`TileNavigator can hover the focused element 1`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -788,15 +698,12 @@ exports[`TileNavigator can hover the focused element 1`] = `
         class="hover svelte-rodoie"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-bg-hovered)"
-          height="110"
           stroke="var(--color-fg-hovered)"
           stroke-width="var(--stroke-width-hovered)"
           transform="rotate(180 0 55)"
-          width="90"
-          x="-45"
-          y="0"
         />
         
       </g>
@@ -805,16 +712,13 @@ exports[`TileNavigator can hover the focused element 1`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -837,85 +741,58 @@ exports[`TileNavigator can hover the focused element then leave it 1`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -926,16 +803,13 @@ exports[`TileNavigator can hover the focused element then leave it 1`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -958,85 +832,58 @@ exports[`TileNavigator can navigate using "both" mode 1`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -1047,16 +894,13 @@ exports[`TileNavigator can navigate using "both" mode 1`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -1198,40 +1042,28 @@ exports[`TileNavigator can navigate using "both" mode 3`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -1271,85 +1103,58 @@ exports[`TileNavigator can navigate using "both" mode 4`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -1360,16 +1165,13 @@ exports[`TileNavigator can navigate using "both" mode 4`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -1454,40 +1256,28 @@ exports[`TileNavigator can navigate using "both" mode 6`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -1608,85 +1398,58 @@ exports[`TileNavigator can navigate using "both" mode 8`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -1697,16 +1460,13 @@ exports[`TileNavigator can navigate using "both" mode 8`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -1767,40 +1527,28 @@ exports[`TileNavigator can navigate using "both" mode 9`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -1864,85 +1612,58 @@ exports[`TileNavigator can navigate using "horizontal" mode 1`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -1953,16 +1674,13 @@ exports[`TileNavigator can navigate using "horizontal" mode 1`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -1985,85 +1703,58 @@ exports[`TileNavigator can navigate using "horizontal" mode 2`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -2074,16 +1765,13 @@ exports[`TileNavigator can navigate using "horizontal" mode 2`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -2330,40 +2018,28 @@ exports[`TileNavigator can navigate using "horizontal" mode 6`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -2441,40 +2117,28 @@ exports[`TileNavigator can navigate using "horizontal" mode 7`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -2717,85 +2381,58 @@ exports[`TileNavigator can navigate using "vertical" mode 2`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -2806,16 +2443,13 @@ exports[`TileNavigator can navigate using "vertical" mode 2`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -2838,85 +2472,58 @@ exports[`TileNavigator can navigate using "vertical" mode 3`] = `
         class="tile straight-tile"
         transform="rotate(180 0 55)"
       >
-        <rect
+        <path
+          d="M -45,0 H 45 V 110 H -45 Z"
           fill="var(--color-ground)"
-          height="110"
           stroke="var(--color-separator)"
           stroke-width="var(--stroke-width-tile)"
-          width="90"
-          x="-45"
-          y="0"
         />
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -45,0 H -40 V 27.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M -45,27.5 H -40 V 55 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M -45,55 H -40 V 82.5 H -45 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M -45,82.5 H -40 V 110 H -45 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="-45"
-            y="82.5"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
           
-          <rect
+          <path
+            d="M 40,55 H 45 V 82.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="55"
           />
           
-          <rect
+          <path
+            d="M 40,82.5 H 45 V 110 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="82.5"
           />
         </g>
       </g>
@@ -2927,16 +2534,13 @@ exports[`TileNavigator can navigate using "vertical" mode 3`] = `
         class="focus"
         pointer-events="all"
       >
-        <rect
+        <path
+          d="M -50,-5 H 50 V 115 H -50 Z"
           fill="var(--color-bg-focused)"
-          height="120"
           stroke="var(--color-fg-focused)"
           stroke-dasharray="var(--stroke-dasharray-focused)"
           stroke-width="var(--stroke-width-focused)"
           transform="rotate(180 0 55)"
-          width="100"
-          x="-50"
-          y="-5"
         />
         
       </g>
@@ -3126,40 +2730,28 @@ exports[`TileNavigator can navigate using "vertical" mode 7`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>
@@ -3237,40 +2829,28 @@ exports[`TileNavigator can navigate using "vertical" mode 8`] = `
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M -55,95 H -27.5 V 100 H -55 Z"
             fill="var(--color-even)"
-            height="5"
-            width="27.5"
-            x="-55"
-            y="95"
           />
           
-          <rect
+          <path
+            d="M -27.5,95 H 0 V 100 H -27.5 Z"
             fill="var(--color-odd)"
-            height="5"
-            width="27.5"
-            x="-27.5"
-            y="95"
           />
         </g>
         <g
           class="barrier straight-barrier"
         >
           
-          <rect
+          <path
+            d="M 40,0 H 45 V 27.5 H 40 Z"
             fill="var(--color-odd)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="0"
           />
           
-          <rect
+          <path
+            d="M 40,27.5 H 45 V 55 H 40 Z"
             fill="var(--color-even)"
-            height="27.5"
-            width="5"
-            x="40"
-            y="27.5"
           />
         </g>
       </g>

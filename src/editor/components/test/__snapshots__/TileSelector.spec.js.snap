@@ -24,85 +24,58 @@ exports[`TileSelector can focus a tile and blur it 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -155,40 +128,28 @@ exports[`TileSelector can focus a tile and blur it 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -454,85 +415,58 @@ exports[`TileSelector can focus a tile and blur it 1`] = `
           class="tile straight-tile"
           transform="rotate(270 -65 45)"
         >
-          <rect
+          <path
+            d="M -110,45 H -20 V 155 H -110 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="-110"
-            y="45"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -110,45 H -105 V 72.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -110,72.5 H -105 V 100 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -110,100 H -105 V 127.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -110,127.5 H -105 V 155 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="127.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -25,45 H -20 V 72.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -25,72.5 H -20 V 100 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -25,100 H -20 V 127.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -25,127.5 H -20 V 155 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="127.5"
             />
           </g>
         </g>
@@ -543,16 +477,13 @@ exports[`TileSelector can focus a tile and blur it 1`] = `
           class="focus"
           pointer-events="all"
         >
-          <rect
+          <path
+            d="M -115,40 H -15 V 160 H -115 Z"
             fill="var(--color-bg-focused)"
-            height="120"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="100"
-            x="-115"
-            y="40"
           />
           
         </g>
@@ -587,85 +518,58 @@ exports[`TileSelector can focus a tile and blur it 2`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -718,40 +622,28 @@ exports[`TileSelector can focus a tile and blur it 2`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -1046,85 +938,58 @@ exports[`TileSelector can focus the container and blur it 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -1177,40 +1042,28 @@ exports[`TileSelector can focus the container and blur it 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -1516,85 +1369,58 @@ exports[`TileSelector can focus the container and blur it 2`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -1647,40 +1473,28 @@ exports[`TileSelector can focus the container and blur it 2`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -1975,85 +1789,58 @@ exports[`TileSelector can hover a tile and leave it 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -2106,40 +1893,28 @@ exports[`TileSelector can hover a tile and leave it 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -2497,85 +2272,58 @@ exports[`TileSelector can hover a tile and leave it 2`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -2628,40 +2376,28 @@ exports[`TileSelector can hover a tile and leave it 2`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -2956,85 +2692,58 @@ exports[`TileSelector can hover the focused element 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -3087,40 +2796,28 @@ exports[`TileSelector can hover the focused element 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -3386,85 +3083,58 @@ exports[`TileSelector can hover the focused element 1`] = `
           class="tile straight-tile"
           transform="rotate(270 -65 45)"
         >
-          <rect
+          <path
+            d="M -110,45 H -20 V 155 H -110 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="-110"
-            y="45"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -110,45 H -105 V 72.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -110,72.5 H -105 V 100 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -110,100 H -105 V 127.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -110,127.5 H -105 V 155 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="127.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -25,45 H -20 V 72.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -25,72.5 H -20 V 100 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -25,100 H -20 V 127.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -25,127.5 H -20 V 155 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="127.5"
             />
           </g>
         </g>
@@ -3474,15 +3144,12 @@ exports[`TileSelector can hover the focused element 1`] = `
           class="hover svelte-rodoie"
           pointer-events="all"
         >
-          <rect
+          <path
+            d="M -110,45 H -20 V 155 H -110 Z"
             fill="var(--color-bg-hovered)"
-            height="110"
             stroke="var(--color-fg-hovered)"
             stroke-width="var(--stroke-width-hovered)"
             transform="rotate(270 -65 45)"
-            width="90"
-            x="-110"
-            y="45"
           />
           
         </g>
@@ -3491,16 +3158,13 @@ exports[`TileSelector can hover the focused element 1`] = `
           class="focus"
           pointer-events="all"
         >
-          <rect
+          <path
+            d="M -115,40 H -15 V 160 H -115 Z"
             fill="var(--color-bg-focused)"
-            height="120"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="100"
-            x="-115"
-            y="40"
           />
           
         </g>
@@ -3535,85 +3199,58 @@ exports[`TileSelector can navigate 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -3666,40 +3303,28 @@ exports[`TileSelector can navigate 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -3965,85 +3590,58 @@ exports[`TileSelector can navigate 1`] = `
           class="tile straight-tile"
           transform="rotate(270 -65 45)"
         >
-          <rect
+          <path
+            d="M -110,45 H -20 V 155 H -110 Z"
             fill="var(--color-ground)"
-            height="110"
             stroke="var(--color-separator)"
             stroke-width="var(--stroke-width-tile)"
-            width="90"
-            x="-110"
-            y="45"
           />
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -110,45 H -105 V 72.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -110,72.5 H -105 V 100 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -110,100 H -105 V 127.5 H -110 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -110,127.5 H -105 V 155 H -110 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-110"
-              y="127.5"
             />
           </g>
           <g
             class="barrier straight-barrier"
           >
             
-            <rect
+            <path
+              d="M -25,45 H -20 V 72.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="45"
             />
             
-            <rect
+            <path
+              d="M -25,72.5 H -20 V 100 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="72.5"
             />
             
-            <rect
+            <path
+              d="M -25,100 H -20 V 127.5 H -25 Z"
               fill="var(--color-odd)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="100"
             />
             
-            <rect
+            <path
+              d="M -25,127.5 H -20 V 155 H -25 Z"
               fill="var(--color-even)"
-              height="27.5"
-              width="5"
-              x="-25"
-              y="127.5"
             />
           </g>
         </g>
@@ -4054,16 +3652,13 @@ exports[`TileSelector can navigate 1`] = `
           class="focus"
           pointer-events="all"
         >
-          <rect
+          <path
+            d="M -115,40 H -15 V 160 H -115 Z"
             fill="var(--color-bg-focused)"
-            height="120"
             stroke="var(--color-fg-focused)"
             stroke-dasharray="var(--stroke-dasharray-focused)"
             stroke-width="var(--stroke-width-focused)"
             transform="rotate(270 -65 45)"
-            width="100"
-            x="-115"
-            y="40"
           />
           
         </g>
@@ -4098,85 +3693,58 @@ exports[`TileSelector can navigate 2`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -4229,40 +3797,28 @@ exports[`TileSelector can navigate 2`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -4568,85 +4124,58 @@ exports[`TileSelector can navigate 3`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -4699,40 +4228,28 @@ exports[`TileSelector can navigate 3`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -5101,85 +4618,58 @@ exports[`TileSelector can navigate 4`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -5232,40 +4722,28 @@ exports[`TileSelector can navigate 4`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -5710,85 +5188,58 @@ exports[`TileSelector renders with default values 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -5841,40 +5292,28 @@ exports[`TileSelector renders with default values 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -6170,85 +5609,58 @@ exports[`TileSelector renders with the given parameters 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -6312,40 +5724,28 @@ exports[`TileSelector renders with the given parameters 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
@@ -6465,85 +5865,58 @@ exports[`TileSelector updates when the model is modified 1`] = `
             class="tile straight-tile"
             transform="rotate(270 -65 45)"
           >
-            <rect
+            <path
+              d="M -110,45 H -20 V 155 H -110 Z"
               fill="var(--color-ground)"
-              height="110"
               stroke="var(--color-separator)"
               stroke-width="var(--stroke-width-tile)"
-              width="90"
-              x="-110"
-              y="45"
             />
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -110,45 H -105 V 72.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -110,72.5 H -105 V 100 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -110,100 H -105 V 127.5 H -110 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -110,127.5 H -105 V 155 H -110 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-110"
-                y="127.5"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -25,45 H -20 V 72.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="45"
               />
               
-              <rect
+              <path
+                d="M -25,72.5 H -20 V 100 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="72.5"
               />
               
-              <rect
+              <path
+                d="M -25,100 H -20 V 127.5 H -25 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="100"
               />
               
-              <rect
+              <path
+                d="M -25,127.5 H -20 V 155 H -25 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-25"
-                y="127.5"
               />
             </g>
           </g>
@@ -6607,40 +5980,28 @@ exports[`TileSelector updates when the model is modified 1`] = `
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -115,250 H -87.5 V 255 H -115 Z"
                 fill="var(--color-even)"
-                height="5"
-                width="27.5"
-                x="-115"
-                y="250"
               />
               
-              <rect
+              <path
+                d="M -87.5,250 H -60 V 255 H -87.5 Z"
                 fill="var(--color-odd)"
-                height="5"
-                width="27.5"
-                x="-87.5"
-                y="250"
               />
             </g>
             <g
               class="barrier straight-barrier"
             >
               
-              <rect
+              <path
+                d="M -20,155 H -15 V 182.5 H -20 Z"
                 fill="var(--color-odd)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="155"
               />
               
-              <rect
+              <path
+                d="M -20,182.5 H -15 V 210 H -20 Z"
                 fill="var(--color-even)"
-                height="27.5"
-                width="5"
-                x="-20"
-                y="182.5"
               />
             </g>
           </g>
