@@ -22,4 +22,5 @@ export * from './curvedArrow.js';
 export * from './curvedElement.js';
 export * from './curvedElementEnlarged.js';
 export * from './straightArrow.js';
+export * from './straightElement.js';
 /* c8 ignore end */

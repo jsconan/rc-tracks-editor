@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`straightElementPath draws a straight element at 100,100 having width=80 and height=120, rotated by 0, with %s added 1`] = `"M 100,100 H 180 V 220 H 100 Z"`;
+
+exports[`straightElementPath draws a straight element at 100,100 having width=80 and height=120, rotated by 10, with %s added 1`] = `"M 90,90 H 190 V 230 H 90 Z"`;
+
+exports[`straightElementPath draws a straight element at 100,100 having width=80 and height=120, rotated by undefined, with %s added 1`] = `"M 100,100 H 180 V 220 H 100 Z"`;
