@@ -17,9 +17,11 @@
  */
 
 export { default as ArrowTip } from './ArrowTip.svelte';
+export { default as Cross } from './Cross.svelte';
 export { default as CurvedArrow } from './CurvedArrow.svelte';
 export { default as CurvedElement } from './CurvedElement.svelte';
 export { default as CurvedElementEnlarged } from './CurvedElementEnlarged.svelte';
+export { default as RoundElement } from './RoundElement.svelte';
 export { default as Shape } from './Shape.svelte';
 export { default as Sketch } from './Sketch.svelte';
 export { default as StraightArrow } from './StraightArrow.svelte';

@@ -16,13 +16,22 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* c8 ignore start */
-export * from './arrowTip.js';
-export * from './cross.js';
-export * from './curvedArrow.js';
-export * from './curvedElement.js';
-export * from './curvedElementEnlarged.js';
-export * from './roundElement.js';
-export * from './straightArrow.js';
-export * from './straightElement.js';
-/* c8 ignore end */
+import { roundElementPath } from '../roundElement.js';
+import { SVGPath } from '../../models';
+
+describe('roundElementPath', () => {
+    it('is a function', () => {
+        expect(roundElementPath).toEqual(expect.any(Function));
+    });
+
+    it('returns a SVG path', () => {
+        expect(roundElementPath(0, 0, 10, 5)).toBeInstanceOf(SVGPath);
+    });
+
+    it.each([
+        [100, 100, 50, void 0],
+        [100, 100, 50, 5]
+    ])('draws a curved arrow tip at %s,%s having radius=%s, with %s added', (x, y, radius, addition) => {
+        expect(roundElementPath(x, y, radius, addition).toString()).toMatchSnapshot();
+    });
+});

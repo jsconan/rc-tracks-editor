@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoundElement renders with default values 1`] = `
+<body>
+  <div>
+    <path
+      d="M 1,0 A 1,1 0 0 0 -1,0 A 1,1 0 0 0 1,0 Z"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement renders with the given parameters 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,150 A 50,50 0 0 0 50,150 A 50,50 0 0 0 150,150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter cx is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 90,150 A 50,50 0 0 0 -10,150 A 50,50 0 0 0 90,150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter cy is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,40 A 50,50 0 0 0 50,40 A 50,50 0 0 0 150,40 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter d is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 160,150 A 60,60 0 0 0 40,150 A 60,60 0 0 0 160,150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter fill is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,150 A 50,50 0 0 0 50,150 A 50,50 0 0 0 150,150 Z"
+      fill="blue"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter radius is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 140,150 A 40,40 0 0 0 60,150 A 40,40 0 0 0 140,150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter stroke is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,150 A 50,50 0 0 0 50,150 A 50,50 0 0 0 150,150 Z"
+      fill="red"
+      stroke="blue"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter stroke-width is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,150 A 50,50 0 0 0 50,150 A 50,50 0 0 0 150,150 Z"
+      fill="red"
+      stroke-width="3"
+      transform="rotate(90)"
+    />
+  </div>
+</body>
+`;
+
+exports[`RoundElement updates when the parameter transform is modified 1`] = `
+<body>
+  <div>
+    <path
+      d="M 150,150 A 50,50 0 0 0 50,150 A 50,50 0 0 0 150,150 Z"
+      fill="red"
+      stroke="green"
+      stroke-width="2"
+      transform="rotate(180)"
+    />
+  </div>
+</body>
+`;

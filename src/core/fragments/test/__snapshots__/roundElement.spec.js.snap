@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`roundElementPath draws a curved arrow tip at 100,100 having radius=50, with 5 added 1`] = `"M 155,100 A 55,55 0 0 0 45,100 A 55,55 0 0 0 155,100 Z"`;
+
+exports[`roundElementPath draws a curved arrow tip at 100,100 having radius=50, with undefined added 1`] = `"M 150,100 A 50,50 0 0 0 50,100 A 50,50 0 0 0 150,100 Z"`;

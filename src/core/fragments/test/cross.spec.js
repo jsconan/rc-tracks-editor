@@ -16,16 +16,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { straightArrowPath } from '../straightArrow.js';
+import { crossPath } from '../cross.js';
 import { SVGPath } from '../../models';
 
-describe('straightArrowPath', () => {
+describe('crossPath', () => {
     it('is a function', () => {
-        expect(straightArrowPath).toEqual(expect.any(Function));
+        expect(crossPath).toEqual(expect.any(Function));
     });
 
     it('returns a SVG path', () => {
-        expect(straightArrowPath()).toBeInstanceOf(SVGPath);
+        expect(crossPath()).toBeInstanceOf(SVGPath);
     });
 
     it.each([
@@ -35,9 +35,9 @@ describe('straightArrowPath', () => {
         [100, 100, 60, 50, 10, 30],
         [100, 100, 60, 50, 0, 30]
     ])(
-        'draws a straight arrow at %s,%s having width=%s and height=%s, thickness=%s, rotated by %s',
+        'draws a cross at %s,%s having width=%s and height=%s, thickness=%s, rotated by %s',
         (x, y, width, height, thickness, rotation) => {
-            expect(straightArrowPath(x, y, width, height, thickness, rotation).toString()).toMatchSnapshot();
+            expect(crossPath(x, y, width, height, thickness, rotation).toString()).toMatchSnapshot();
         }
     );
 });
