@@ -19,7 +19,7 @@
 import { render } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { Context } from '../../../core/components';
-import TileDirection from '../TileDirection.svelte';
+import TileDelete from '../TileDelete.svelte';
 import { TileSpecifications } from '../../../tile/config';
 import {
     CURVED_TILE_ENLARGED_TYPE,
@@ -34,14 +34,14 @@ const barrierWidth = 5;
 const barrierChunks = 4;
 const specs = new TileSpecifications({ laneWidth, barrierWidth, barrierChunks });
 
-describe('TileDirection', () => {
+describe('TileDelete', () => {
     it.each([void 0, STRAIGHT_TILE_TYPE, CURVED_TILE_TYPE, CURVED_TILE_ENLARGED_TYPE])(
         'renders a %s element with default values',
         type => {
             const props = { type };
             const { container } = render(Context, {
                 props: {
-                    component: TileDirection,
+                    component: TileDelete,
                     context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
@@ -69,7 +69,7 @@ describe('TileDirection', () => {
             };
             const { container } = render(Context, {
                 props: {
-                    component: TileDirection,
+                    component: TileDelete,
                     context: { [TileSpecifications.CONTEXT_ID]: specs },
                     props
                 }
@@ -105,7 +105,7 @@ describe('TileDirection', () => {
         };
         const rendered = render(Context, {
             props: {
-                component: TileDirection,
+                component: TileDelete,
                 context: { [TileSpecifications.CONTEXT_ID]: specs },
                 props
             }
@@ -119,6 +119,6 @@ describe('TileDirection', () => {
 
     it('needs a valid type', () => {
         const props = { type: 'tile' };
-        expect(() => render(TileDirection, { props })).toThrow('A valid type of tile is needed!');
+        expect(() => render(TileDelete, { props })).toThrow('A valid type of tile is needed!');
     });
 });
