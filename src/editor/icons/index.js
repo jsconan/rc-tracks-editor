@@ -16,6 +16,4 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export { default as CurvedBarrier } from './CurvedBarrier.svelte';
-export { default as StraightBarrier } from './StraightBarrier.svelte';
-export { default as TileElement } from './TileElement.svelte';
+export { default as TileDirection } from './TileDirection.svelte';

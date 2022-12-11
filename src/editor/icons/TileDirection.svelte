@@ -10,9 +10,9 @@
         STRAIGHT_TILE_TYPE,
         TILE_DIRECTION_LEFT,
         TILE_DIRECTION_RIGHT
-    } from '../helpers';
-    import { TileList } from '../models';
-    import { TileSpecifications } from '../config';
+    } from '../../tile/helpers';
+    import { TileList } from '../../tile/models';
+    import { TileSpecifications } from '../../tile/config';
     import { CurvedArrow, StraightArrow } from '../../core/elements';
 
     export let type = STRAIGHT_TILE_TYPE;
