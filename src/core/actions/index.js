@@ -17,3 +17,5 @@
  */
 
 export { DeferredAction } from './DeferredAction.js';
+export { DelayedPromise } from './DelayedPromise.js';
+export { ManagedPromise } from './ManagedPromise.js';
