@@ -18,4 +18,5 @@
 
 export { DeferredAction } from './DeferredAction.js';
 export { DelayedPromise } from './DelayedPromise.js';
+export { FocusManager } from './FocusManager.js';
 export { ManagedPromise } from './ManagedPromise.js';
