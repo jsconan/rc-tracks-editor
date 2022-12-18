@@ -25,7 +25,7 @@
 <script>
     import { createEventDispatcher, getContext, hasContext, onDestroy, onMount } from 'svelte';
     import { flattenAttributeList } from '../../core/helpers';
-    import { DeferredAction } from '../../core/actions';
+    import { FocusManager } from '../../core/actions';
     import { extendTileWithStyle, getTileStyle, TILE_STYLE_FOCUSED, TILE_STYLE_HOVERED } from '../helpers';
     import { KeyNavigator, MenuNavigator } from '../../core/navigators';
     import { TileElement } from '../elements';
@@ -78,33 +78,32 @@
     const blurElement = () => {
         navigator.focused = null;
     };
-
-    const focusContainer = () => {
-        const focusedStyle = getTileStyle(TILE_STYLE_FOCUSED);
-        containerFocused = { x, y, width, height, ...flattenAttributeList(focusedStyle) };
-    };
-    const focusDeferrer = new DeferredAction(focusDelay);
-    focusDeferrer.register(focusContainer);
-    const blurContainer = () => {
-        focusDeferrer.cancel();
-        containerFocused = null;
-    };
-
-    const focus = () => {
-        focusDeferrer.defer();
-    };
-    const blur = () => {
-        blurElement();
-        blurContainer();
-    };
-
-    const click = () => {
-        blurContainer();
+    const clickElement = () => {
         if (navigator.focused) {
             navigator.focusHovered();
         }
         select(navigator.hovered, navigator.hoveredIndex);
     };
+
+    const focusContainer = () => {
+        const focusedStyle = getTileStyle(TILE_STYLE_FOCUSED);
+        containerFocused = { x, y, width, height, ...flattenAttributeList(focusedStyle) };
+    };
+    const blurContainer = () => {
+        containerFocused = null;
+    };
+
+    const focusManager = new FocusManager(focusDelay)
+        .on('focus', focusContainer)
+        .on('blur click', blurContainer)
+        .on('click', clickElement);
+
+    const focus = () => focusManager.focus();
+    const blur = () => {
+        blurElement();
+        focusManager.blur();
+    };
+    const click = () => focusManager.click();
 
     const keyNavigator = new KeyNavigator(direction);
     const keyDown = event => keyNavigator.processEvent(event, KeyNavigator.TYPE_MOVE);
@@ -129,7 +128,7 @@
         .on('focus', (focused, index) => {
             focusedOverlay = extendTileWithStyle(TILE_STYLE_FOCUSED, getTile(focused));
             focusedOverlay.d = specs.barrierWidth;
-            blurContainer();
+            focusManager.blur();
             dispatchEvent('focus', focused, index);
         })
         .on('blur', (focused, index) => {
